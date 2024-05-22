@@ -1,0 +1,142 @@
+// Использование модулей SASS
+@use "sass:math";
+// Использование модулей SASS
+// ======================================МИКСИНЫ==============================================
+@import "mixins";
+// ======================================МИКСИНЫ==============================================
+
+// ======================================ШРИФТЫ===============================================
+
+// &display=swap&subset=cyrillic-ext
+@import "fonts";
+
+// ======================================ШРИФТЫ===============================================
+// ======================================ИКОНОЧНЫЙ ШРИФТ======================================
+@import "icons";
+
+// ======================================ИКОНОЧНЫЙ ШРИФТ======================================
+
+// Шрифт по умолчанию
+$fontfamily: "RedHatDisplay";
+$font-tanker: "Tanker";
+
+// Шрифт по умолчанию
+
+$md0: 1659.98px;
+$md1: 1483.98px;
+$md2: 1199.98px;
+$md3: 991.98px;
+$md4: 766.98px;
+$md5: 575.98px;
+$md6: 389.98px;
+
+// ПЕРЕМЕННЫЕ
+$minWidth: 320; // Минимальная ширина страницы
+$maxWidth: 1920; // Ширина макета
+$maxWidthContainer: rem(1495); // Максимальная ширина ограничивающего контейнера
+$containerPadding: 30;
+
+$text: #1f2b32;
+$accent: #4770ff;
+$orange: #ff6b18;
+$gray: #d6d6d6;
+
+// Z-Index
+$ui-index-1: 1; // Для наполняющих элементов в общем потоке
+$ui-index-2: 2; // Для наполняющих элементов в общем потоке
+$ui-index-3: 3; // Для масок
+$ui-index-4: 4; // Для сайдбаров
+$ui-index-5: 5; // Для модалок
+$ui-index-6: 6; // Для элементов, перекрывающих все
+
+:root {
+	--lock-padding: 0px;
+}
+
+html {
+	font-size: vwm(16);
+	@media (min-width: $md5) {
+		font-size: vwt(16);
+	}
+	@media (min-width: $md3) {
+		font-size: vwd(16);
+	}
+	@media (min-width: $md2) {
+		font-size: vw(16);
+	}
+	@media (min-width: 1708px) {
+		font-size: 1rem;
+	}
+}
+
+//ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ
+body {
+	font-family: $fontfamily, sans-serif;
+	color: $text;
+	font-size: 1rem;
+	min-width: 320px;
+	min-height: 100%;
+	line-height: normal;
+	background: #142356;
+	color: #fff;
+	&.lock {
+		overflow: hidden;
+		@media (min-width: $md2) {
+			overflow: visible;
+		}
+	}
+}
+// ==================ОБОЛОЧКА==============================
+.wrapper {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	// padding-right: var(--lock-padding, 0);
+}
+
+//================== ОБОЛОЧКА==================================
+
+//=============== ОСНОВНАЯ СЕТКА===============================
+
+// Отзывчивая
+[class*="__container"] {
+	margin: 0 auto;
+	box-sizing: content-box;
+	max-width: 100%;
+	max-width: $maxWidthContainer;
+	padding: 0 1rem;
+	@media (min-width: $md5) {
+		padding: 0 2rem;
+	}
+	&.container-sm {
+		@media (min-width: $md2) {
+			max-width: rem(1120);
+		}
+	}
+}
+
+//=============== ОСНОВНАЯ СЕТКА===============================
+
+//=================Подключаем файлы стилей
+//================Общий файл для элементов страницы
+@import "ui";
+@import "forms";
+//================Общий файл для элементов страницы
+@import "header";
+@import "footer";
+//=======================================
+
+// =======================ОСНОВНОЙ БЛОК==================
+.page {
+	flex: 1 1 auto;
+}
+// ========================================================
+
+@import "./pages/home";
+@import "./pages/rules";
+@import "./pages/contacts";
+@import "./pages/about";
+@import "./pages/error";

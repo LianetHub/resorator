@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', { 'title': 'Shockwave' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "color": "",
+            "active": 1
+            })
+            <main class="page">
+                <section class="error">
+                    <div class="error__container">
+                        <div class="error__status">
+                            <img src="@img/404.svg" alt="404">
+                        </div>
+                        <h1 class="error__title">Page not found</h1>
+                        <p class="error__subtitle">The page you're trying does not exist or has been deleted.</p>
+                        <a href="/" class="error__btn btn btn-primary">Go to home page</a>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {"gift": false})
+        @@include('html/_js.html', { "map": false})
+    </body>
+</html>

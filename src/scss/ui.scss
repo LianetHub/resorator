@@ -1,0 +1,403 @@
+//============ МОДУЛИ ====================
+@import "modules/popup";
+@import "modules/breadcrumbs";
+@import "modules/datepicker";
+@import "modules/select";
+@import "modules/animation";
+
+//============ МОДУЛИ ====================
+
+.title-xl {
+	font-family: $font-tanker;
+	line-height: 110%;
+	text-transform: uppercase;
+	font-size: 2.625rem;
+	@media (min-width: $md5) {
+		font-size: 4.5rem;
+	}
+	@media (min-width: $md2) {
+		font-size: 7rem;
+	}
+}
+.title {
+	font-family: $font-tanker;
+	line-height: 120%;
+	font-size: 2rem;
+	@media (min-width: $md5) {
+		font-size: 3rem;
+	}
+	@media (min-width: $md3) {
+		font-size: 3.75rem;
+	}
+	@media (min-width: $md2) {
+		font-size: 5.625rem;
+	}
+}
+
+.title-md {
+	font-family: $font-tanker;
+	line-height: 120%;
+	font-size: 2.5rem;
+	@media (min-width: $md5) {
+		font-size: 3.75rem;
+	}
+}
+
+.title-sm {
+	font-family: $font-tanker;
+	line-height: 120%;
+	font-size: 2rem;
+	@media (min-width: $md5) {
+		font-size: 2.5rem;
+	}
+}
+
+.socials {
+	display: flex;
+	gap: 0.31rem;
+	font-size: 2.3125rem;
+	@media (min-width: $md2) {
+		font-size: 2.5rem;
+		gap: 0.5rem;
+	}
+	// .socials__item
+	&__item {
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #1b3385;
+			}
+		}
+	}
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	position: static;
+	top: auto;
+	left: auto;
+	margin: 0;
+	transform: none;
+	transition: color 0.3s ease 0s;
+	color: inherit;
+	border-radius: 50%;
+	border: rem(1.5) solid currentColor;
+	width: 3.75rem;
+	height: 3.75rem;
+	font-size: 1.75rem;
+	transition: color 0.3s ease 0s, opacity 0.3s ease 0s, background-color 0.3s ease 0s, border-color 0.3s ease 0s;
+	@extend %ic, .icon-arrow;
+	z-index: 2;
+	&::before {
+		color: currentColor;
+	}
+	&::after {
+		display: none;
+	}
+	&:disabled,
+	&[aria-disabled="true"] {
+		opacity: 0.5;
+		color: $text;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			color: #4770ff;
+		}
+	}
+}
+
+.swiper-button-prev {
+	&::before {
+		transform: rotate(180deg);
+	}
+}
+
+.swiper-pagination {
+	margin-top: 1.25rem;
+	@media (min-width: $md5) {
+		margin-top: 0.75rem;
+	}
+	position: static;
+	bottom: auto;
+	padding: 0.75rem 0;
+	display: flex;
+	justify-content: center;
+	.swiper-pagination-bullet {
+		position: relative;
+		width: rem(5);
+		height: rem(5);
+		opacity: 1;
+		color: #737474;
+		transition: color 0.3s ease 0s;
+		background: currentColor;
+		--swiper-pagination-bullet-horizontal-gap: 0.625rem;
+		color: #737474;
+		display: block;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: scale(0) translate(-50%, -50%);
+			border: 1px solid currentColor;
+			width: rem(21);
+			height: rem(21);
+			border-radius: 50%;
+			transition: transform 0.2s linear 0s;
+			transform-origin: 0 0;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			width: rem(21);
+			height: rem(21);
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		&.swiper-pagination-bullet-active {
+			color: #1371d5;
+			&::before {
+				transform: scale(1) translate(-50%, -50%);
+			}
+		}
+	}
+}
+
+.pc-only {
+	@media (max-width: $md4) {
+		display: none;
+	}
+}
+
+.desktop-only {
+	@media (max-width: $md2) {
+		display: none;
+	}
+}
+
+.mobile-only {
+	@media (min-width: $md4) {
+		display: none;
+	}
+}
+
+.tablet-only {
+	@media (min-width: $md2) {
+		display: none;
+	}
+}
+
+.banner {
+	display: none;
+	@media (min-width: $md5) {
+		display: block;
+	}
+	position: fixed;
+	z-index: $ui-index-4;
+	bottom: rem(30);
+	right: rem(30);
+	width: rem(586);
+	// transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+	padding: rem(35) rem(37);
+	border-radius: 1.3125rem;
+	overflow: hidden;
+	box-shadow: 0 rem(-55) rem(141.7) 0 rgba(0, 0, 0, 0.25);
+	color: #fff;
+	background: $text;
+	transition-delay: 2s;
+	&.banner-hidden {
+		transition-delay: 0s;
+		opacity: 0;
+		visibility: hidden;
+	}
+	// .banner__title
+	&__title {
+	}
+	// .banner__desc
+	&__desc {
+		margin-top: 0.94rem;
+		font-size: 1.75rem;
+		font-weight: 600;
+		line-height: 120%;
+	}
+	// .banner__btn
+	&__btn {
+		margin-top: 0.94rem;
+	}
+	// .banner__image
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.68) 100%);
+		}
+	}
+	// .banner__close
+	&__close {
+		position: absolute;
+		top: 1rem;
+		font-size: 1.5rem;
+		font-weight: 900;
+		right: rem(18);
+		transition: color 0.3s ease 0s;
+		background: none;
+		& svg {
+			pointer-events: none;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
+}
+
+.media-socials {
+	display: flex;
+	gap: 0.5rem;
+	// .media-socials__item
+	&__item {
+		& svg {
+			width: rem(25);
+			height: rem(25);
+		}
+	}
+}
+
+// .fw-normal {
+// 	font-weight: 400;
+// }
+
+// .interline-sm {
+// 	line-height: 140%;
+// }
+
+// .map {
+// 	margin-top: 7.5rem;
+// 	@media (min-width: $md2) {
+// 		margin-top: 8.75rem;
+// 	}
+// 	background: $beige;
+// 	height: rem(500);
+// }
+
+[data-form-succes] {
+	&:not(.visible) {
+		display: none;
+	}
+}
+
+._loading {
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: inherit;
+		background: inherit;
+		z-index: 2;
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 20px;
+		height: 20px;
+		border: 3px solid currentColor;
+		border-bottom-color: transparent;
+		border-radius: 50%;
+		transform-origin: center;
+		animation: rotation 1s linear infinite;
+		z-index: 3;
+	}
+}
+
+@keyframes rotation {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+//============ ОБЩИЕ ЭЛЕМЕНТЫ ============
+
+// Стилизация селекта
+// $selectBg: $orange;
+// $selectColor: $text;
+
+// ::-moz-selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	box-shadow: none;
+// }
+// ::selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	-webkit-box-shadow: none;
+// 	box-shadow: none;
+// }
+// ::-moz-selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	box-shadow: none;
+// }
+
+// Стилизация скролла
+
+$scrollbarColor: $accent;
+$scrollbarHover: darken(
+	$color: $scrollbarColor,
+	$amount: 10,
+);
+
+::-webkit-scrollbar {
+	width: rem(8);
+}
+::-webkit-scrollbar-track {
+	background: #fff;
+}
+::-webkit-scrollbar-thumb {
+	background: $scrollbarColor;
+	border-radius: rem(8);
+	@media (any-hover: hover) {
+		&:hover {
+			background: $scrollbarHover;
+		}
+	}
+}
+
+//============ ОБЩИЕ ЭЛЕМЕНТЫ ============
+
+// ========== ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ ======
+.hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+.cover-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+// ========== ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ ======

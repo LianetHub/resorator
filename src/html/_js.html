@@ -1,0 +1,274 @@
+<!-- plugnis -->
+<script src="js/libs/swiper-bundle.min.js"></script>
+<script src="js/libs/vanillajs-datepicker.min.js"></script>
+<script src="js/libs/fancybox.umd.js"></script>@@if(map===true){
+<script>
+    function initMap() {
+        var location = { lat: 34.69422049788922, lng: 33.090224000005264 };
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
+            center: location,
+            mapTypeControl: false
+        });
+
+        var iconSize = window.innerWidth < 768 ? new google.maps.Size(56, 70) : new google.maps.Size(112, 140);
+
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            icon: {
+                url: '@img/pin.svg',
+                scaledSize: iconSize
+            }
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9oE206Oq5bRaYFiLrcjHOjdutrrgyrWI&callback=initMap"></script>}
+<!-- plugnis -->
+
+<script src="js/app.min.js"></script>
+<script src="js/formsubmit.js"></script>
+<script>
+    const dateItems = document.querySelectorAll('.form__date');
+
+    if (dateItems.length > 0) {
+        dateItems.forEach(dateItem => {
+
+            const datepicker = new Datepicker(dateItem, {
+                minDate: Date.now(),
+                startView: true,
+                format: 'dd.mm.yyyy',
+                todayHighlight: true,
+                inline: true,
+            });
+
+
+            const today = new Date();
+            const formattedToday = formatDate(today);
+            dateItem.value = formattedToday;
+
+            datepicker.setDate(today);
+
+
+            dateItem.addEventListener('keydown', function (e) {
+                if (e.key === "Enter") {
+                    datepicker.hide();
+                }
+            });
+
+            function formatDate(date) {
+                const day = date.getDate().toString().padStart(2, '0');
+                const month = (date.getMonth() + 1).toString().padStart(2, '0');
+                const year = date.getFullYear();
+                return `${day}.${month}.${year}`;
+            }
+        })
+    }
+</script>
+<script>
+
+    const spollersArray = document.querySelectorAll("[data-spollers]");
+    if (spollersArray.length > 0) {
+
+        const spollersRegular = Array.from(spollersArray).filter(function (
+            item,
+            index,
+            self
+        ) {
+            return !item.dataset.spollers.split(",")[0];
+        });
+
+        if (spollersRegular.length > 0) {
+            initSpollers(spollersRegular);
+        }
+
+        const spollersMedia = Array.from(spollersArray).filter(function (
+            item,
+            index,
+            self
+        ) {
+            return item.dataset.spollers.split(",")[0];
+        });
+
+        if (spollersMedia.length > 0) {
+            const breakpointsArray = [];
+            spollersMedia.forEach((item) => {
+                const params = item.dataset.spollers;
+                const breakpoint = {};
+                const paramsArray = params.split(",");
+                breakpoint.value = paramsArray[0];
+                breakpoint.type = paramsArray[1] ? paramsArray[1].trim() : "max";
+                breakpoint.item = item;
+                breakpointsArray.push(breakpoint);
+            });
+
+
+            let mediaQueries = breakpointsArray.map(function (item) {
+                return (
+                    "(" +
+                    item.type +
+                    "-width: " +
+                    item.value +
+                    "px)," +
+                    item.value +
+                    "," +
+                    item.type
+                );
+            });
+            mediaQueries = mediaQueries.filter(function (item, index, self) {
+                return self.indexOf(item) === index;
+            });
+
+
+            mediaQueries.forEach((breakpoint) => {
+                const paramsArray = breakpoint.split(",");
+                const mediaBreakpoint = paramsArray[1];
+                const mediaType = paramsArray[2];
+                const matchMedia = window.matchMedia(paramsArray[0]);
+
+                const spollersArray = breakpointsArray.filter(function (item) {
+                    if (item.value === mediaBreakpoint && item.type === mediaType) {
+                        return true;
+                    }
+                });
+
+                matchMedia.addListener(function () {
+                    initSpollers(spollersArray, matchMedia);
+                });
+                initSpollers(spollersArray, matchMedia);
+            });
+        }
+
+
+        function initSpollers(spollersArray, matchMedia = false) {
+            spollersArray.forEach((spollersBlock) => {
+                spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
+                if (matchMedia.matches || !matchMedia) {
+                    spollersBlock.classList.add("_init");
+                    initSpollerBody(spollersBlock);
+                    spollersBlock.addEventListener("click", setSpollerAction);
+                } else {
+                    spollersBlock.classList.remove("_init");
+                    initSpollerBody(spollersBlock, false);
+                    spollersBlock.removeEventListener("click", setSpollerAction);
+                }
+            });
+        }
+
+        function initSpollerBody(spollersBlock, hideSpollerBody = true) {
+            const spollerTitles = spollersBlock.querySelectorAll("[data-spoller]");
+            if (spollerTitles.length > 0) {
+                spollerTitles.forEach((spollerTitle) => {
+                    if (hideSpollerBody) {
+                        spollerTitle.removeAttribute("tabindex");
+                        if (!spollerTitle.classList.contains("_active")) {
+                            spollerTitle.nextElementSibling.hidden = true;
+                        }
+                    } else {
+                        spollerTitle.setAttribute("tabindex", "-1");
+                        spollerTitle.nextElementSibling.hidden = false;
+                    }
+                });
+            }
+        }
+
+        function setSpollerAction(e) {
+            const el = e.target;
+            if (el.hasAttribute("data-spoller") || el.closest("[data-spoller]")) {
+                const spollerTitle = el.hasAttribute("data-spoller")
+                    ? el
+                    : el.closest("[data-spoller]");
+                const spollersBlock = spollerTitle.closest("[data-spollers]");
+                const oneSpoller = spollersBlock.hasAttribute("data-one-spoller")
+                    ? true
+                    : false;
+                if (!spollersBlock.querySelectorAll("._slide").length) {
+                    if (oneSpoller && !spollerTitle.classList.contains("_active")) {
+                        hideSpollersBody(spollersBlock);
+                    }
+                    spollerTitle.classList.toggle("_active");
+                    spollerTitle.nextElementSibling.slideToggle(300);
+                }
+                e.preventDefault();
+            }
+        }
+
+        function hideSpollersBody(spollersBlock) {
+            const spollerActiveTitle = spollersBlock.querySelector(
+                "[data-spoller]._active"
+            );
+            if (spollerActiveTitle) {
+                spollerActiveTitle.classList.remove("_active");
+                spollerActiveTitle.nextElementSibling.slideUp(300);
+            }
+        }
+    }
+</script>
+<script>
+    const toggleDropdown = (dropdown, isOpen) => {
+        const btn = dropdown.querySelector('.dropdown__button');
+        const list = dropdown.querySelector('.dropdown__list');
+        btn.setAttribute('aria-expanded', isOpen);
+        list.setAttribute('aria-hidden', !isOpen);
+        if (isOpen) {
+            dropdown.classList.add('visible');
+            btn.classList.add('active');
+        } else {
+            dropdown.classList.remove('visible');
+            btn.classList.remove('active');
+        }
+    };
+
+    const setupDropdown = dropdown => {
+        const dropdownBtn = dropdown.querySelector('.dropdown__button');
+        const dropdownList = dropdown.querySelector('.dropdown__list');
+        const dropdownItems = dropdownList.querySelectorAll('.dropdown__list-item');
+        const dropdownInput = dropdown.querySelector('.dropdown__input');
+
+        // Setting ARIA attributes
+        dropdown.setAttribute('role', 'listbox');
+        dropdownItems.forEach(item => item.setAttribute('role', 'option'));
+
+        dropdownBtn.addEventListener('click', () => {
+            const isOpen = dropdownBtn.getAttribute('aria-expanded') === 'true';
+            toggleDropdown(dropdown, !isOpen);
+        });
+
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', e => {
+                dropdownItems.forEach(el => {
+                    el.classList.remove('active');
+                    el.removeAttribute('aria-checked');
+                });
+                item.classList.add('active');
+                item.setAttribute('aria-checked', 'true');
+                dropdownBtn.innerHTML = item.innerHTML;
+                dropdownInput.value = item.dataset.value;
+                toggleDropdown(dropdown, false);
+                dropdownInput.dispatchEvent(new Event('change'));
+            });
+        });
+    };
+
+    const closeAllDropdownsOnClickOutside = e => {
+        document.querySelectorAll('.dropdown.visible').forEach(dropdown => {
+            if (!dropdown.contains(e.target)) {
+                toggleDropdown(dropdown, false);
+            }
+        });
+    };
+
+    const closeAllDropdownsOnEscape = e => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.dropdown.visible').forEach(dropdown => {
+                toggleDropdown(dropdown, false);
+            });
+        }
+    };
+
+    // Initialization
+    document.querySelectorAll('.dropdown').forEach(setupDropdown);
+    document.addEventListener('click', closeAllDropdownsOnClickOutside);
+    document.addEventListener('keydown', closeAllDropdownsOnEscape);
+</script>
