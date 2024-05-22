@@ -1,0 +1,83 @@
+<div class="col-2">
+    <div class="product@@className">
+        @@if(labels===true) {
+        <div class="product__labels">
+            @@if(sale===true) {
+            <div class="product__label red">Распродажа</div>
+            }
+            @@if("new"===true) {
+            <div class="product__label yellow">Новинка</div>
+            }
+            @@if(hit===true) {
+            <div class="product__label green">Хит продаж</div>
+            }
+        </div>
+        }
+        <div class="product__header">
+            <a href="" class="product__image">
+                <img src="@img/goods/@@index.png" alt="@@name">
+            </a>
+            <div class="product__actions">
+                <button type="button" class="product__action icon-eye">
+                    <span>Быстрый просмотр</span>
+                </button>
+                <button type="button" class="product__action icon-star">
+                    <span>Добавить в избранное</span>
+                </button>
+                <button type="button" class="product__action icon-compare">
+                    <span>Сравнить товар</span>
+                </button>
+            </div>
+        </div>
+        <div class="product__price">
+            <div class="product__price-value">@@price ₽ </div>
+            @@if('oldPrice'===true) {
+            <div class="product__price-old">
+                @@oldPriceValue ₽
+            </div>
+            }
+        </div>
+        <a href="" class="product__name">
+            <small>Пароконвектомат</small>
+            @@name
+        </a>
+        <ul class="product__props">
+            <li class="product__props-row">
+                <div class="product__props-name">
+                    Цвет
+                </div>
+                <div class="product__props-value">
+                    Серый металлик
+                </div>
+            </li>
+            <li class="product__props-row">
+                <div class="product__props-name">
+                    Мощность
+                </div>
+                <div class="product__props-value">
+                    10.5 кВт
+                </div>
+            </li>
+            <li class="product__props-row">
+                <div class="product__props-name">
+                    Цвет
+                </div>
+                <div class="product__props-value">
+                    Серый металлик
+                </div>
+            </li>
+            <li class="product__props-row">
+                <div class="product__props-name">
+                    Цвет
+                </div>
+                <div class="product__props-value">
+                    Серый металлик
+                </div>
+            </li>
+        </ul>
+        <div class="product__footer">
+            <div class="product__avaibility">В наличии</div>
+            <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+        </div>
+    </div>
+</div>

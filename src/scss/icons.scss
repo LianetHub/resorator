@@ -17,6 +17,10 @@
 		display: block;
 	}
 }
+
+.icon-eye:before {
+	content: "\e909";
+}
 .icon-arrow:before {
 	content: "\e900";
 }

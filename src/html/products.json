@@ -1,0 +1,14 @@
+[
+    {
+        "className": " example-class",
+        "labels": true,
+        "sale": true,
+        "hit": false,
+        "new": false,
+        "index": "01",
+        "name": "UNOX XB693",
+        "price": "231 501",
+        "oldPrice": true,
+        "oldPriceValue": "322 703"
+    }
+]

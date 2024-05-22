@@ -793,14 +793,23 @@
 			color: $darkBlue;
 		}
 	}
-	&.btn-sm {
-		font-size: 1rem;
-		padding: 1.1rem 1rem;
-		min-width: em(140, 16);
-		@media (min-width: $md5) {
-			min-width: em(151, 16);
-			padding: 1.34rem 1rem;
+	&.btn-secondary {
+		background: $white;
+		color: $dark;
+		border: rem(1) solid $yellow;
+		&:hover {
+			background: $yellow;
 		}
+		&:disabled,
+		&[aria-disabled="true"] {
+			background: $lightGray;
+			border-color: $lightGray;
+			color: $darkBlue;
+		}
+	}
+	&.btn-sm {
+		padding: 0.62rem 1rem;
+		font-size: 0.75rem;
 	}
 	&:active {
 		transform: scale(0.975);

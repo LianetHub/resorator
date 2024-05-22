@@ -1,6 +1,7 @@
 "use strict";
 
 
+// import Swiper from 'swiper';
 import * as devFunctions from './modules/functions.js';
 
 //  init Fancybox
@@ -60,6 +61,28 @@ $(function () {
 
 
     // sliders 
+    if ($(".companies__slider").length > 0) {
+        $(".companies__slider").each((function (index, slider) {
+
+            new Swiper(slider, {
+                slidesPerView: "auto",
+                spaceBetween: 30,
+                loop: true,
+                speed: 10000,
+                autoplay: {
+                    delay: 1,
+                    stopOnLastSlide: false,
+                },
+
+            })
+        }));
+
+
+
+
+
+    }
+
     if ($(".promo__slider").length > 0) {
         new Swiper('.promo__slider', {
             slidesPerView: 1,
