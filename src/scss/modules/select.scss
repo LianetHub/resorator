@@ -32,7 +32,7 @@
 			transition: transform 0.3s ease 0s;
 			@extend %ic, .icon-chevron;
 			order: 1;
-			color: $accent;
+			color: $yellow;
 			font-size: 1.5rem;
 		}
 		&:not(.active) {
@@ -76,13 +76,13 @@
 				width: 1.5rem;
 				height: 1.5rem;
 				flex-shrink: 0;
-				color: $accent;
+				color: $yellow;
 				transition: visibility 0.3s ease 0s;
 			}
 			&:not(.active) {
 				@media (any-hover: hover) {
 					&:hover {
-						color: $accent;
+						color: $yellow;
 					}
 				}
 			}

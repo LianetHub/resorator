@@ -43,7 +43,7 @@
 		width: 1.5rem;
 		height: 1.5rem;
 		font-size: 1.5rem;
-		color: $accent;
+		color: $yellow;
 		flex-shrink: 0;
 		display: flex;
 		justify-content: center;
@@ -177,7 +177,6 @@
 		font-size: 0.75rem;
 		line-height: 1.4;
 		&::before {
-			@extend %ic, .icon-close-sm;
 			font-size: 0.5rem;
 			width: 1rem;
 			height: 1rem;
@@ -204,7 +203,7 @@
 			.form__checkbox-content {
 				&::before {
 					border-color: #fff;
-					color: $text;
+					color: $dark;
 				}
 			}
 		}
@@ -333,7 +332,7 @@
 	}
 	// .form__title
 	&__title {
-		font-family: $font-tanker;
+		font-family: $font-din;
 		line-height: 120%;
 		font-size: 1.5rem;
 		@media (min-width: $md5) {
@@ -411,7 +410,6 @@
 		&:not(:last-child) {
 			margin-bottom: 2rem;
 		}
-		
 	}
 	// .form__section-title
 	&__section-title {
@@ -434,11 +432,11 @@
 		}
 	}
 	&__price {
-		font-family: $font-tanker;
+		font-family: $font-din;
 		font-size: 2rem;
 		line-height: 120%;
 		& span {
-			color: $accent;
+			color: $yellow;
 		}
 	}
 	// .form__boat
@@ -526,7 +524,7 @@
 		line-height: 160%;
 		@media (any-hover: hover) {
 			&:hover {
-				color: $accent;
+				color: $yellow;
 			}
 		}
 	}
@@ -541,7 +539,6 @@
 	// .form__spollers
 	&__spollers {
 		margin-top: 1rem;
-		
 	}
 	// .form__spoller
 	&__spoller {
@@ -567,7 +564,6 @@
 			}
 		}
 		&::before {
-			@extend %ic, .icon-chevron;
 			width: 1.5rem;
 			height: 1.5rem;
 			border-radius: 50%;
@@ -588,20 +584,20 @@
 	&__spoller-body {
 		margin-top: 1rem;
 		&.pending {
-		position: relative;
-		&::before {
-			content: '';
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			width: calc(100% + rem(10));
-			height: calc(100% + rem(10));
-			backdrop-filter: blur(rem(3));
-			-webkit-backdrop-filter: blur(rem(3));
-			z-index: 2;
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: calc(100% + rem(10));
+				height: calc(100% + rem(10));
+				backdrop-filter: blur(rem(3));
+				-webkit-backdrop-filter: blur(rem(3));
+				z-index: 2;
+			}
 		}
-	}
 	}
 	// .form__spoller-list
 	&__spoller-list {
@@ -646,7 +642,7 @@
 	&__online-price {
 		color: #4770ff;
 		font-size: 1.5rem;
-		font-family: $font-tanker;
+		font-family: $font-din;
 		line-height: 120%;
 	}
 }
@@ -703,19 +699,18 @@
 }
 
 .option {
-	
 	// .option__input
 	&__input {
 		&:checked {
 			& + .option__content {
 				&::before {
-					border-color: $accent;
-					background: $accent;
+					border-color: $yellow;
+					background: $yellow;
 					box-shadow: inset 0 0 0 rem(5) #fff;
 				}
 			}
 			& + .option__btn {
-				background: $accent;
+				background: $yellow;
 				color: #fff;
 			}
 		}
@@ -778,90 +773,24 @@
 	align-items: center;
 	text-align: center;
 	user-select: none;
-
-	font-weight: 600;
-	line-height: 120%;
-	aspect-ratio: math.div(223, 101);
+	transition: all 0.3s ease 0s;
+	border-radius: 0.3125rem;
 	font-size: 1rem;
-	padding: 1.34rem 1rem;
-	min-width: em(223, 24);
-	max-width: em(400, 24);
-	@media (min-width: $md3) {
-		padding: 2.14rem 1rem;
-		font-size: 1.5rem;
-	}
-	cursor: pointer;
-	border: none;
-	transition: background-color 0.3s, border-color 0.3s, color 0.3s;
-	&:hover {
-		&::before,
-		&::after {
-			background-color: var(--hoverBackgroundColor);
-		}
-	}
+	font-weight: 600;
+	padding: 1.09rem 1.88rem;
 
-	&:active {
-		&::before,
-		&::after {
-			background-color: var(--activeBackgroundColor);
-		}
-	}
-	&.pending {
-		&::before {
-			z-index: 1;
-		}
-	}
-	&:disabled,
-	&[aria-disabled="true"] {
-	}
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='223' height='101' viewBox='0 0 223 101' fill='none'%3E%3Cpath d='M0 23.1458C0 13.7497 7.23508 5.92642 16.6059 5.23681C88.4946 -0.0535865 130.96 -0.589513 206.068 3.52797C215.578 4.04929 223 11.9324 223 21.4563V77.2815C223 86.4991 216.032 94.2379 206.858 95.1316C131.99 102.426 88.8165 102.5 16.497 96.8443C7.17108 96.1149 0 88.3096 0 78.9552V23.1458Z' fill='%232757FF'/%3E%3C/svg%3E");
-		mask-position: 0 center;
-		mask-repeat: no-repeat;
-		mask-size: 100% 100%;
-		background-color: var(--backgroundColor);
-		z-index: -1;
-		transition: background-color 0.3s ease 0s;
-	}
 	&.btn-primary {
-		--backgroundColor: #4770ff;
-		--hoverBackgroundColor: #2757ff;
-		--activeBackgroundColor: #0f3ad5;
-		color: #fff;
-	}
-
-	&.btn-secondary {
-		--backgroundColor: #ff6b18;
-		--hoverBackgroundColor: #ee5600;
-		--activeBackgroundColor: #cb4900;
-		color: #fff;
-	}
-
-	&.btn-primary-outline {
-		--backgroundColor: #fff;
-		color: #1f2b32;
-		@include drop-border(2, #4770ff);
-
+		background: $yellow;
+		color: $dark;
+		border: rem(1) solid $yellow;
 		&:hover {
-			&::before {
-				background: #fff;
-			}
-			@include drop-border(2, #2757ff);
+			background: $white;
 		}
-		&:active {
-			@include drop-border(2, #0f3ad5);
-		}
-
 		&:disabled,
 		&[aria-disabled="true"] {
-			border-color: lighten(#4770ff, 20%);
-			color: lighten(#1f2b32, 20%);
+			background: $lightGray;
+			border-color: $lightGray;
+			color: $darkBlue;
 		}
 	}
 	&.btn-sm {
@@ -872,6 +801,9 @@
 			min-width: em(151, 16);
 			padding: 1.34rem 1rem;
 		}
+	}
+	&:active {
+		transform: scale(0.975);
 	}
 	&:disabled,
 	&[aria-disabled="true"] {
@@ -893,7 +825,6 @@
 				&::before {
 					background: #4770ff;
 					border-color: #4770ff;
-					@extend %ic, .icon-check;
 				}
 			}
 		}
@@ -922,7 +853,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			color: $text;
+			color: $dark;
 			border: rem(2) solid #b6bbc0;
 			width: 1.125rem;
 			height: 1.125rem;

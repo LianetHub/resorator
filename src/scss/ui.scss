@@ -1,74 +1,20 @@
 //============ МОДУЛИ ====================
-@import "modules/popup";
-@import "modules/breadcrumbs";
-@import "modules/datepicker";
-@import "modules/select";
-@import "modules/animation";
+// @import "modules/popup";
+// @import "modules/breadcrumbs";
+// @import "modules/datepicker";
+// @import "modules/select";
+// @import "modules/animation";
 
 //============ МОДУЛИ ====================
 
-.title-xl {
-	font-family: $font-tanker;
-	line-height: 110%;
-	text-transform: uppercase;
-	font-size: 2.625rem;
-	@media (min-width: $md5) {
-		font-size: 4.5rem;
-	}
-	@media (min-width: $md2) {
-		font-size: 7rem;
-	}
-}
 .title {
-	font-family: $font-tanker;
-	line-height: 120%;
-	font-size: 2rem;
-	@media (min-width: $md5) {
-		font-size: 3rem;
-	}
-	@media (min-width: $md3) {
-		font-size: 3.75rem;
-	}
-	@media (min-width: $md2) {
-		font-size: 5.625rem;
-	}
+	font-size: 2.1875rem;
+	font-weight: 600;
 }
 
-.title-md {
-	font-family: $font-tanker;
-	line-height: 120%;
-	font-size: 2.5rem;
-	@media (min-width: $md5) {
-		font-size: 3.75rem;
-	}
-}
-
-.title-sm {
-	font-family: $font-tanker;
-	line-height: 120%;
-	font-size: 2rem;
-	@media (min-width: $md5) {
-		font-size: 2.5rem;
-	}
-}
-
-.socials {
-	display: flex;
-	gap: 0.31rem;
-	font-size: 2.3125rem;
-	@media (min-width: $md2) {
-		font-size: 2.5rem;
-		gap: 0.5rem;
-	}
-	// .socials__item
-	&__item {
-		transition: color 0.3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				color: #1b3385;
-			}
-		}
-	}
+.title-lg {
+	font-size: 3.75rem;
+	font-weight: 600;
 }
 
 .swiper-button-next,
@@ -97,7 +43,7 @@
 	&:disabled,
 	&[aria-disabled="true"] {
 		opacity: 0.5;
-		color: $text;
+		color: $dark;
 	}
 	@media (any-hover: hover) {
 		&:hover {
@@ -188,93 +134,6 @@
 	}
 }
 
-.banner {
-	display: none;
-	@media (min-width: $md5) {
-		display: block;
-	}
-	position: fixed;
-	z-index: $ui-index-4;
-	bottom: rem(30);
-	right: rem(30);
-	width: rem(586);
-	// transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
-	padding: rem(35) rem(37);
-	border-radius: 1.3125rem;
-	overflow: hidden;
-	box-shadow: 0 rem(-55) rem(141.7) 0 rgba(0, 0, 0, 0.25);
-	color: #fff;
-	background: $text;
-	transition-delay: 2s;
-	&.banner-hidden {
-		transition-delay: 0s;
-		opacity: 0;
-		visibility: hidden;
-	}
-	// .banner__title
-	&__title {
-	}
-	// .banner__desc
-	&__desc {
-		margin-top: 0.94rem;
-		font-size: 1.75rem;
-		font-weight: 600;
-		line-height: 120%;
-	}
-	// .banner__btn
-	&__btn {
-		margin-top: 0.94rem;
-	}
-	// .banner__image
-	&__image {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		&::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: linear-gradient(0deg, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.68) 100%);
-		}
-	}
-	// .banner__close
-	&__close {
-		position: absolute;
-		top: 1rem;
-		font-size: 1.5rem;
-		font-weight: 900;
-		right: rem(18);
-		transition: color 0.3s ease 0s;
-		background: none;
-		& svg {
-			pointer-events: none;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				color: $accent;
-			}
-		}
-	}
-}
-
-.media-socials {
-	display: flex;
-	gap: 0.5rem;
-	// .media-socials__item
-	&__item {
-		& svg {
-			width: rem(25);
-			height: rem(25);
-		}
-	}
-}
-
 // .fw-normal {
 // 	font-weight: 400;
 // }
@@ -291,12 +150,6 @@
 // 	background: $beige;
 // 	height: rem(500);
 // }
-
-[data-form-succes] {
-	&:not(.visible) {
-		display: none;
-	}
-}
 
 ._loading {
 	&::after {
@@ -340,7 +193,7 @@
 
 // Стилизация селекта
 // $selectBg: $orange;
-// $selectColor: $text;
+// $selectColor: $dark;
 
 // ::-moz-selection {
 // 	color: $selectColor;
@@ -361,7 +214,7 @@
 
 // Стилизация скролла
 
-$scrollbarColor: $accent;
+$scrollbarColor: $yellow;
 $scrollbarHover: darken(
 	$color: $scrollbarColor,
 	$amount: 10,

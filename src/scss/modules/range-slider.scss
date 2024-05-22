@@ -77,18 +77,18 @@
 		background: $white;
 		transition: color 0.3s ease 0s;
 		&:focus {
-			color: $text;
+			color: $dark;
 			& + .range-filter__value {
 				&::before {
-					color: $text;
+					color: $dark;
 				}
 			}
 		}
 		&.active {
-			color: $text;
+			color: $dark;
 			& + .range-filter__value {
 				&::before {
-					color: $text;
+					color: $dark;
 				}
 			}
 		}

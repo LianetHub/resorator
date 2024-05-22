@@ -17,8 +17,8 @@
 // ======================================ИКОНОЧНЫЙ ШРИФТ======================================
 
 // Шрифт по умолчанию
-$fontfamily: "RedHatDisplay";
-$font-tanker: "Tanker";
+$fontfamily: "Inter";
+$font-din: "DinPro";
 
 // Шрифт по умолчанию
 
@@ -33,13 +33,24 @@ $md6: 389.98px;
 // ПЕРЕМЕННЫЕ
 $minWidth: 320; // Минимальная ширина страницы
 $maxWidth: 1920; // Ширина макета
-$maxWidthContainer: rem(1495); // Максимальная ширина ограничивающего контейнера
+$maxWidthContainer: rem(1480); // Максимальная ширина ограничивающего контейнера
 $containerPadding: 30;
 
-$text: #1f2b32;
-$accent: #4770ff;
-$orange: #ff6b18;
-$gray: #d6d6d6;
+$black: #000;
+$dark: #1d1d1d;
+$darkBg: #2b2b2b;
+$darkStroke: #4b4b4b;
+$darkBlue: #475569;
+$lightBlue: #94a3b8;
+$lightGray: #f1f2f4;
+$grayStroke: #e8e8e8;
+$lightBg: #f2f5f9;
+$white: #fff;
+$yellow: #f7ce46;
+$yellowSecond: #fbe59c;
+$red: #ef4444;
+$green: #10b981;
+$blue: #1e6ba3;
 
 // Z-Index
 $ui-index-1: 1; // Для наполняющих элементов в общем потоке
@@ -49,36 +60,15 @@ $ui-index-4: 4; // Для сайдбаров
 $ui-index-5: 5; // Для модалок
 $ui-index-6: 6; // Для элементов, перекрывающих все
 
-:root {
-	--lock-padding: 0px;
-}
-
-html {
-	font-size: vwm(16);
-	@media (min-width: $md5) {
-		font-size: vwt(16);
-	}
-	@media (min-width: $md3) {
-		font-size: vwd(16);
-	}
-	@media (min-width: $md2) {
-		font-size: vw(16);
-	}
-	@media (min-width: 1708px) {
-		font-size: 1rem;
-	}
-}
-
 //ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ
+
 body {
 	font-family: $fontfamily, sans-serif;
-	color: $text;
+	color: $dark;
 	font-size: 1rem;
 	min-width: 320px;
 	min-height: 100%;
 	line-height: normal;
-	background: #142356;
-	color: #fff;
 	&.lock {
 		overflow: hidden;
 		@media (min-width: $md2) {
@@ -94,7 +84,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	// padding-right: var(--lock-padding, 0);
 }
 
 //================== ОБОЛОЧКА==================================
@@ -135,8 +124,4 @@ body {
 }
 // ========================================================
 
-@import "./pages/home";
-@import "./pages/rules";
-@import "./pages/contacts";
-@import "./pages/about";
-@import "./pages/error";
+@import "pages/home";

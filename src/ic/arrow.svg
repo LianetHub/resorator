@@ -1,4 +1,43 @@
-<svg width="65" height="24" viewBox="0 0 65 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M55.43 4.93005L61.5 11.0001L55.43 17.0701" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9 11.0001H61.33" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="65"
+   height="24"
+   viewBox="0 0 65 24"
+   fill="none"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="arrow.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="16.707692"
+     inkscape:cx="32.470074"
+     inkscape:cy="12.00046"
+     inkscape:window-width="3440"
+     inkscape:window-height="1369"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <path
+     style="color:#000000;fill:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;-inkscape-stroke:none"
+     d="m 55.429687,4.1796875 a 0.75,0.75 0 0 0 -0.529296,0.2207031 0.75,0.75 0 0 0 0,1.0605469 L 60.439453,11 54.900391,16.539062 a 0.75,0.75 0 0 0 0,1.060547 0.75,0.75 0 0 0 1.060546,0 L 62.03125,11.53125 a 0.750075,0.750075 0 0 0 0,-1.060547 L 55.960937,4.4003906 a 0.75,0.75 0 0 0 -0.53125,-0.2207031 z"
+     id="path2" />
+  <path
+     style="color:#000000;fill:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;-inkscape-stroke:none"
+     d="M 9,10.25 A 0.75,0.75 0 0 0 8.25,11 0.75,0.75 0 0 0 9,11.75 h 52.330078 a 0.75,0.75 0 0 0 0.75,-0.75 0.75,0.75 0 0 0 -0.75,-0.75 z"
+     id="path4" />
 </svg>

@@ -115,10 +115,9 @@ $dp-one-seventh: math.percentage(math.div(1, 7));
 	background-color: $dp-background-color;
 	padding: 0.75rem 0.25rem;
 	border-radius: 1rem;
-	@media (min-width:$md5) {
+	@media (min-width: $md5) {
 		border-radius: $dp-border-radius;
 		padding: 1rem 1.75rem;
-	
 	}
 	.datepicker-dropdown & {
 		box-shadow: $dp-dropdown-shadow;
@@ -256,7 +255,7 @@ $dp-one-seventh: math.percentage(math.div(1, 7));
 		&::before {
 			@extend %ic, .icon-chevron;
 			font-size: 1.5rem;
-			color: $accent;
+			color: $yellow;
 			height: 1.5rem;
 			display: flex;
 			justify-content: center;
@@ -288,9 +287,8 @@ $dp-one-seventh: math.percentage(math.div(1, 7));
 	margin-top: 1.13rem;
 	align-items: stretch;
 	width: math.div($dp-view-width, 1.05);
-	@media (min-width:$md5) {
+	@media (min-width: $md5) {
 		width: $dp-view-width;
-	
 	}
 }
 
@@ -359,9 +357,8 @@ $dp-one-seventh: math.percentage(math.div(1, 7));
 	@extend %flex-basis-day;
 
 	height: math.div($dp-cell-size-base, 1.05);
-	@media (min-width:$md5) {
+	@media (min-width: $md5) {
 		height: $dp-cell-size-base;
-	
 	}
 
 	&:not(.day) {
@@ -420,7 +417,7 @@ $dp-one-seventh: math.percentage(math.div(1, 7));
 	&.today {
 		&:not(.selected) {
 			&:not(.disabled) {
-				color: $accent;
+				color: $yellow;
 				background: #fff;
 			}
 		}

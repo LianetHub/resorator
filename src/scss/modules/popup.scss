@@ -77,7 +77,7 @@
 		width: 100%;
 		background: #ffffff;
 		border-radius: 1.5rem;
-		color: $text;
+		color: $dark;
 		padding: rem(30) rem(16);
 		@media (min-width: $md5) {
 			padding: 2.5rem;
@@ -133,7 +133,7 @@
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				color: $accent;
+				color: $yellow;
 			}
 		}
 	}

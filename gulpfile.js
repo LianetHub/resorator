@@ -38,6 +38,7 @@ function watcher() {
     gulp.watch(path.watch.json, json);
     gulp.watch(path.watch.images, images);
     gulp.watch(path.watch.php, php);
+    gulp.watch(path.watch.fonts, fonts);
 }
 
 const fonts = gulp.series(otf2ttf, ttfToWoff, copyWoff, fontsStyle);
