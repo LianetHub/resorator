@@ -19,6 +19,7 @@ $(function () {
     // devFunctions.floatingLabels();
     // devFunctions.formSubmit();
     // devFunctions.intInputMask();
+    devFunctions.mask();
 
 
 
@@ -76,18 +77,14 @@ $(function () {
 
             })
         }));
-
-
-
-
-
     }
+
+
 
     if ($(".promo__slider").length > 0) {
         new Swiper('.promo__slider', {
             slidesPerView: 1,
             speed: 800,
-            autoHeight: true,
             effect: "fade",
             loop: true,
             autoplay: {

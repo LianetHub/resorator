@@ -18,33 +18,39 @@
 	}
 }
 
-.icon-eye:before {
-	content: "\e909";
+.icon-arrow-short:before {
+	content: "\e90b";
 }
-.icon-arrow:before {
+.icon-chevron:before {
 	content: "\e900";
 }
-.icon-cart:before {
+.icon-arrow:before {
 	content: "\e901";
 }
-.icon-compare:before {
+.icon-cart:before {
 	content: "\e902";
 }
-.icon-currency:before {
+.icon-compare:before {
 	content: "\e903";
 }
-.icon-globe:before {
+.icon-currency:before {
 	content: "\e904";
 }
-.icon-location:before {
+.icon-eye:before {
 	content: "\e905";
 }
-.icon-search:before {
+.icon-globe:before {
 	content: "\e906";
 }
-.icon-star:before {
+.icon-location:before {
 	content: "\e907";
 }
-.icon-user:before {
+.icon-search:before {
 	content: "\e908";
+}
+.icon-star:before {
+	content: "\e909";
+}
+.icon-user:before {
+	content: "\e90a";
 }

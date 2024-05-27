@@ -1,0 +1,26 @@
+.auth {
+	min-height: 100%;
+	padding: 4.75rem 0;
+	height: calc(100vh - rem(600));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// .auth__container
+	&__container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .auth__form
+	&__form {
+		display: flex;
+		width: 25rem;
+		padding: 2.5rem;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		border-radius: 0.3125rem;
+		border: rem(1) solid $grayStroke;
+	}
+}

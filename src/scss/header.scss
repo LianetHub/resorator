@@ -32,10 +32,20 @@
 			justify-content: center;
 			align-items: center;
 		}
-		transition: color 0.3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				color: $yellow;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 0;
+			height: rem(1);
+			background: currentColor;
+			transition: width 0.3s ease 0s;
+		}
+		&:hover {
+			&::after {
+				width: 100%;
 			}
 		}
 	}
@@ -52,10 +62,20 @@
 			justify-content: center;
 			align-items: center;
 		}
-		transition: color 0.3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				color: $yellow;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 0;
+			height: rem(1);
+			background: currentColor;
+			transition: width 0.3s ease 0s;
+		}
+		&:hover {
+			&::after {
+				width: 100%;
 			}
 		}
 	}

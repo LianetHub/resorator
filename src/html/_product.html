@@ -1,11 +1,13 @@
-<div class="col-2">
-    <div class="product@@className">
+@@if(wrapper==true){ <div class="@@className"> }
+
+    <div class="product">
+
         @@if(labels===true) {
         <div class="product__labels">
             @@if(sale===true) {
             <div class="product__label red">Распродажа</div>
             }
-            @@if("new"===true) {
+            @@if(novinka===true) {
             <div class="product__label yellow">Новинка</div>
             }
             @@if(hit===true) {
@@ -13,6 +15,7 @@
             }
         </div>
         }
+
         <div class="product__header">
             <a href="" class="product__image">
                 <img src="@img/goods/@@index.png" alt="@@name">
@@ -60,10 +63,10 @@
             </li>
             <li class="product__props-row">
                 <div class="product__props-name">
-                    Цвет
+                    Температура нагрева
                 </div>
                 <div class="product__props-value">
-                    Серый металлик
+                    50 °С
                 </div>
             </li>
             <li class="product__props-row">
@@ -80,4 +83,5 @@
             <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
         </div>
     </div>
-</div>
+    @@if(wrapper==true){
+</div> }

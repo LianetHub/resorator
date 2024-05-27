@@ -447,8 +447,348 @@
                 <div class="products">
                     <div class="products__container">
                         <div class="row">
-                            @@loop('./html/_product.html', './html/products.json')
+                            <div class="col-8">
+                                <div class="row">
+                                    @@loop('./html/_product.html', './html/products.json')
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="products__selection">
+                                    <div class="products__selection-header">
+                                        <div class="products__selection-caption">
+                                            Подборка для вас
+                                        </div>
+                                        <a href="" class="products__selection-btn icon-arrow-short">Вся подборка</a>
+                                    </div>
+                                    <div class="products__selection-title">
+                                        Сервировка стола с нами? Легко!
+                                    </div>
+                                    <div class="products__selection-list row">
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/01.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Стекло и посуда</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/02.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Столовые приборы</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/03.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Фарфоровая посуда</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/04.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Ножи и аксессуары</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/05.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Для кондитеров</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/06.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Наплитная посуда</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="products__selection products__selection_yellow">
+                                    <div class="products__selection-header">
+                                        <div class="products__selection-caption">
+                                            Подборка для вас
+                                        </div>
+                                        <a href="" class="products__selection-btn icon-arrow-short">Вся подборка</a>
+                                    </div>
+                                    <div class="products__selection-title">
+                                        Сервировка стола с нами? Легко!
+                                    </div>
+                                    <div class="products__selection-list row">
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/01.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Стекло и посуда</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/02.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Столовые приборы</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/03.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Фарфоровая посуда</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/04.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Ножи и аксессуары</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/05.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Для кондитеров</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/06.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Наплитная посуда</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="row">
+                                    @@loop('./html/_product.html', './html/products.json')
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="banners">
+                    <div class="banners__container">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="banners__item">
+                                    <div class="banners__item-body">
+                                        <div class="banners__item-caption">
+                                            Покупка онлайн
+                                        </div>
+                                        <div class="banners__item-desc">
+                                            Наш магазин настроен на удобную работу с онлайн
+                                        </div>
+                                    </div>
+                                    <div class="banners__item-image">
+                                        <img src="@img/banners/01.png" alt="Баннер">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="banners__item banners__item_yellow">
+                                    <div class="banners__item-body">
+                                        <div class="banners__item-caption">
+                                            Доставка
+                                            за&nbsp;10&nbsp;дней
+                                        </div>
+                                        <div class="banners__item-desc">
+                                            Подборка товаров для тех,
+                                            кто не хочет ждать
+                                        </div>
+                                    </div>
+                                    <div class="banners__item-image">
+                                        <img src="@img/banners/02.png" alt="Баннер">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="banners__item banners__item_green">
+                                    <div class="banners__item-body">
+                                        <div class="banners__item-caption">
+                                            Проверка
+                                            качества
+                                        </div>
+                                        <div class="banners__item-desc">
+                                            Все товары проверены и у вас
+                                            есть 14 дней для их оценки
+                                        </div>
+                                    </div>
+                                    <div class="banners__item-image">
+                                        <img src="@img/banners/03.png" alt="Баннер">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="products__container">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="row">
+                                    @@loop('./html/_product.html', './html/products.json')
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="products__selection">
+                                    <div class="products__selection-header">
+                                        <div class="products__selection-caption">
+                                            Подборка для вас
+                                        </div>
+                                        <a href="" class="products__selection-btn icon-arrow-short">Вся подборка</a>
+                                    </div>
+                                    <div class="products__selection-title">
+                                        Сервировка стола с нами? Легко!
+                                    </div>
+                                    <div class="products__selection-list row">
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/01.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Стекло и посуда</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/02.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Столовые приборы</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/03.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Фарфоровая посуда</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/04.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Ножи и аксессуары</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/05.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Для кондитеров</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/06.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Наплитная посуда</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="products__selection products__selection_yellow">
+                                    <div class="products__selection-header">
+                                        <div class="products__selection-caption">
+                                            Подборка для вас
+                                        </div>
+                                        <a href="" class="products__selection-btn icon-arrow-short">Вся подборка</a>
+                                    </div>
+                                    <div class="products__selection-title">
+                                        Сервировка стола с нами? Легко!
+                                    </div>
+                                    <div class="products__selection-list row">
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/01.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Стекло и посуда</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/02.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Столовые приборы</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/03.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Фарфоровая посуда</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/04.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Ножи и аксессуары</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/05.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Для кондитеров</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="products__selection-item">
+                                                <span class="products__selection-image">
+                                                    <img src="@img/selection/06.jpg" class="cover-image" alt="Фото подборки">
+                                                </span>
+                                                <span class="products__selection-subtitle">Наплитная посуда</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="row">
+                                    @@loop('./html/_product.html', './html/products.json')
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
             </main>
