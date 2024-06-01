@@ -1,6 +1,7 @@
 "use strict";
 
 
+// import { Fancybox } from '@fancyapps/ui';
 // import Swiper from 'swiper';
 import * as devFunctions from './modules/functions.js';
 
@@ -31,6 +32,27 @@ $(function () {
     //     dragToClose: false,
     //     closeButton: false
     // })
+
+    $('#language-form').on('submit', function (e) {
+        e.preventDefault();
+
+        $('.header__language').text($('#language-select').val());
+        Fancybox.getInstance().close();
+
+        //submit handler
+
+    });
+
+    $('#location-form').on('submit', function (e) {
+        e.preventDefault();
+
+        $('.header__location').text($('#location-select option:selected').text());
+        Fancybox.getInstance().close();
+
+        //submit handler
+
+    })
+
 
     // custom select
     function initCustomSelect($select) {
