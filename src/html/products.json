@@ -9,6 +9,7 @@
         "index": "01",
         "name": "UNOX XB693",
         "price": "231 501",
+        "аvailability": "yes",
         "oldPrice": true,
         "oldPriceValue": "322 703"
     },
@@ -22,6 +23,7 @@
         "index": "02",
         "name": "Abat ПКА 6-2/3П",
         "price": "149 729",
+        "аvailability": "no",
         "oldPrice": true,
         "oldPriceValue": "270 380"
     },
@@ -35,6 +37,7 @@
         "index": "03",
         "name": "UNOX XFT 133",
         "price": "70 061",
+        "аvailability": "stock",
         "oldPrice": true,
         "oldPriceValue": "82 370"
     },
@@ -48,6 +51,7 @@
         "index": "04",
         "name": "UNOX XEBC-06EU-E1RM",
         "price": "366 900",
+        "аvailability": "yes",
         "oldPrice": true,
         "oldPriceValue": "544 910"
     },
@@ -61,6 +65,7 @@
         "index": "05",
         "name": "UNOX XF 023 Anna",
         "price": "54 922",
+        "аvailability": "yes",
         "oldPrice": true,
         "oldPriceValue": "83 198"
     },
@@ -74,6 +79,7 @@
         "index": "06",
         "name": "Steba DG 40",
         "price": "39 212",
+        "аvailability": "yes",
         "oldPrice": true,
         "oldPriceValue": "54 990"
     },
@@ -87,6 +93,7 @@
         "index": "07",
         "name": "Steba DG 40",
         "price": "442 692 ",
+        "аvailability": "yes",
         "oldPrice": false,
         "oldPriceValue": ""
     },
@@ -100,6 +107,7 @@
         "index": "08",
         "name": "436 040",
         "price": "436 040",
+        "аvailability": "yes",
         "oldPrice": true,
         "oldPriceValue": "322 703"
     }

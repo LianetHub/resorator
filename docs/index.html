@@ -44,14 +44,15 @@
   <!-- Twitter -->
 
   <!-- plugnis -->
-  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240528004708">
-  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240528004708">
-  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240528004708">
+  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240601141804">
+  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240601141804">
+  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240601141804">
+  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240601141804">
   <!-- plugnis -->
 
 
-  <link rel="stylesheet" href="css/reset.min.css?_v=20240528004708">
-  <link rel="stylesheet" href="css/style.min.css?_v=20240528004708">
+  <link rel="stylesheet" href="css/reset.min.css?_v=20240601141804">
+  <link rel="stylesheet" href="css/style.min.css?_v=20240601141804">
 
 </head>
 
@@ -60,10 +61,10 @@
     <header class="header">
       <div class="header__container">
         <div class="header__top">
-          <a href="" class="header__language icon-globe">
+          <a href="#select-language" data-fancybox class="header__language icon-globe">
             RU
           </a>
-          <a href="" class="header__location icon-location">
+          <a href="#select-location" data-fancybox class="header__location icon-location">
             Приморский край
           </a>
           <div class="header__currency icon-currency">
@@ -117,7 +118,7 @@
           </a>
           <form action="#" role="search" class="header__search search">
             <input type="text" autocomplete="off" name="search" class="search__form-input" placeholder="Поиск по товарам и брендам">
-            <button type="submit" class="search__btn icon-search"></button>
+            <button type="submit" aria-label="Искать товары" data-tooltip title="Сравнение" class="search__btn icon-search"></button>
           </form>
           <div class="header__actions">
             <a href="" aria-label="Сравнение товаров" class="header__action icon-compare"></a>
@@ -653,7 +654,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -732,7 +737,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+
+                      <div class="product__avaibility product__avaibility_red">Товар закончился</div>
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -811,7 +820,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+
+
+                      <div class="product__avaibility">Есть на&nbsp;складе</div>
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -892,7 +905,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -971,7 +988,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -1050,7 +1071,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -1121,7 +1146,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -1200,7 +1229,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -1221,51 +1254,51 @@
                 </div>
                 <div class="products__selection-list row">
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card card_lg">
+                      <span class="card__image">
                         <img src="img/selection/01.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Стекло и посуда</span>
+                      <span class="card__desc">Стекло и посуда</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card card_lg">
+                      <span class="card__image">
                         <img src="img/selection/02.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Столовые приборы</span>
+                      <span class="card__desc">Столовые приборы</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card card_lg">
+                      <span class="card__image">
                         <img src="img/selection/03.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Фарфоровая посуда</span>
+                      <span class="card__desc">Фарфоровая посуда</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card card_lg">
+                      <span class="card__image">
                         <img src="img/selection/04.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Ножи и аксессуары</span>
+                      <span class="card__desc">Ножи и аксессуары</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card card_lg">
+                      <span class="card__image">
                         <img src="img/selection/05.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Для кондитеров</span>
+                      <span class="card__desc">Для кондитеров</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card card_lg">
+                      <span class="card__image">
                         <img src="img/selection/06.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Наплитная посуда</span>
+                      <span class="card__desc">Наплитная посуда</span>
                     </a>
                   </div>
                 </div>
@@ -1286,51 +1319,51 @@
                 </div>
                 <div class="products__selection-list row">
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card">
+                      <span class="card__image">
                         <img src="img/selection/01.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Стекло и посуда</span>
+                      <span class="card__desc">Стекло и посуда</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card">
+                      <span class="card__image">
                         <img src="img/selection/02.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Столовые приборы</span>
+                      <span class="card__desc">Столовые приборы</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card">
+                      <span class="card__image">
                         <img src="img/selection/03.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Фарфоровая посуда</span>
+                      <span class="card__desc">Фарфоровая посуда</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card">
+                      <span class="card__image">
                         <img src="img/selection/04.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Ножи и аксессуары</span>
+                      <span class="card__desc">Ножи и аксессуары</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card">
+                      <span class="card__image">
                         <img src="img/selection/05.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Для кондитеров</span>
+                      <span class="card__desc">Для кондитеров</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card">
+                      <span class="card__image">
                         <img src="img/selection/06.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Наплитная посуда</span>
+                      <span class="card__desc">Наплитная посуда</span>
                     </a>
                   </div>
                 </div>
@@ -1411,7 +1444,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -1490,7 +1527,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+
+                      <div class="product__avaibility product__avaibility_red">Товар закончился</div>
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -1569,7 +1610,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+
+
+                      <div class="product__avaibility">Есть на&nbsp;складе</div>
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -1650,7 +1695,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -1729,7 +1778,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -1808,7 +1861,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -1879,7 +1936,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -1958,7 +2019,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -2104,7 +2169,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -2183,7 +2252,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+
+                      <div class="product__avaibility product__avaibility_red">Товар закончился</div>
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -2262,7 +2335,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+
+
+                      <div class="product__avaibility">Есть на&nbsp;складе</div>
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -2343,7 +2420,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -2422,7 +2503,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -2501,7 +2586,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -2572,7 +2661,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -2651,7 +2744,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -2672,51 +2769,51 @@
                 </div>
                 <div class="products__selection-list row">
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card card_lg">
+                      <span class="card__image">
                         <img src="img/selection/01.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Стекло и посуда</span>
+                      <span class="card__desc">Стекло и посуда</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card card_lg">
+                      <span class="card__image">
                         <img src="img/selection/02.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Столовые приборы</span>
+                      <span class="card__desc">Столовые приборы</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card card_lg">
+                      <span class="card__image">
                         <img src="img/selection/03.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Фарфоровая посуда</span>
+                      <span class="card__desc">Фарфоровая посуда</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card card_lg">
+                      <span class="card__image">
                         <img src="img/selection/04.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Ножи и аксессуары</span>
+                      <span class="card__desc">Ножи и аксессуары</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card card_lg">
+                      <span class="card__image">
                         <img src="img/selection/05.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Для кондитеров</span>
+                      <span class="card__desc">Для кондитеров</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card card_lg">
+                      <span class="card__image">
                         <img src="img/selection/06.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Наплитная посуда</span>
+                      <span class="card__desc">Наплитная посуда</span>
                     </a>
                   </div>
                 </div>
@@ -2737,51 +2834,51 @@
                 </div>
                 <div class="products__selection-list row">
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card card_lg">
+                      <span class="card__image">
                         <img src="img/selection/01.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Стекло и посуда</span>
+                      <span class="card__desc">Стекло и посуда</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card card_lg">
+                      <span class="card__image">
                         <img src="img/selection/02.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Столовые приборы</span>
+                      <span class="card__desc">Столовые приборы</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card card_lg">
+                      <span class="card__image">
                         <img src="img/selection/03.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Фарфоровая посуда</span>
+                      <span class="card__desc">Фарфоровая посуда</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card card_lg">
+                      <span class="card__image">
                         <img src="img/selection/04.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Ножи и аксессуары</span>
+                      <span class="card__desc">Ножи и аксессуары</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card card_lg">
+                      <span class="card__image">
                         <img src="img/selection/05.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Для кондитеров</span>
+                      <span class="card__desc">Для кондитеров</span>
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="" class="products__selection-item">
-                      <span class="products__selection-image">
+                    <a href="" class="card card_lg">
+                      <span class="card__image">
                         <img src="img/selection/06.jpg" class="cover-image" alt="Фото подборки">
                       </span>
-                      <span class="products__selection-subtitle">Наплитная посуда</span>
+                      <span class="card__desc">Наплитная посуда</span>
                     </a>
                   </div>
                 </div>
@@ -2862,7 +2959,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -2941,7 +3042,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+
+                      <div class="product__avaibility product__avaibility_red">Товар закончился</div>
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -3020,7 +3125,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+
+
+                      <div class="product__avaibility">Есть на&nbsp;складе</div>
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -3101,7 +3210,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -3180,7 +3293,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -3259,7 +3376,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -3330,7 +3451,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -3409,7 +3534,11 @@
                       </li>
                     </ul>
                     <div class="product__footer">
-                      <div class="product__avaibility">В наличии</div>
+
+                      <div class="product__avaibility product__avaibility_green">В наличии</div>
+
+
+
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
                   </div>
@@ -3556,16 +3685,61 @@
       </div>
     </footer>
   </div>
-
+  <div id="select-language" class="popup">
+    <div class="popup__header">
+      <h3 class="popup__title title-sm">Выбор языка</h3>
+      <button type="button" class="popup__close" data-fancybox-close></button>
+    </div>
+    <p class="popup__subtitle">
+      Язык отображения интерфейса сайта, определен автоматически как Русский.
+    </p>
+    <form action="#" class="popup__form form">
+      <label for="language-select" class="form__label" tabindex="-1">Язык</label>
+      <select name="language" id="language-select" class="select" data-list-mobile>
+        <option value="rus" data-img-src="img/icons/flag-ru.svg">Русский</option>
+        <option value="eng" data-img-src="img/icons/flag-usa.svg">English</option>
+        <option value="chi" data-img-src="img/icons/flag-china.svg">中文</option>
+      </select>
+      <button type="submit" class="form__btn btn btn-primary">Выбрать</button>
+    </form>
+  </div>
+  <div id="select-location" class="popup">
+    <div class="popup__header">
+      <h3 class="popup__title title-sm">Выбор локации</h3>
+      <button type="button" class="popup__close" data-fancybox-close></button>
+    </div>
+    <p class="popup__subtitle">
+      Ваше местоположение определено автоматически. Вы можете изменить его вручную.
+    </p>
+    <form action="#" class="popup__form form">
+      <label for="location-select" class="form__label" tabindex="-1">Ваше местоположение</label>
+      <select name="location" id="location-select">
+        <option value="msk">Москва</option>
+        <option value="spb">Санкт-Петербург</option>
+        <option value="perm">Пермь</option>
+      </select>
+      <button type="submit" class="form__btn btn btn-primary">Выбрать</button>
+    </form>
+  </div>
+  <div id="success" class="popup">
+    <div class="popup__body">
+      <div class="popup__title title-sm">Thank you! </div>
+      <p class="popup__subtitle">
+        Our consultant will contact you and answer all your questions!
+      </p>
+      <button type="button" data-fancybox-close class="popup__btn btn btn-primary btn-sm">Okay</button>
+    </div>
+  </div>
   <!-- plugnis -->
-  <script src="js/libs/jquery-3.7.1.min.js?_v=20240528004708"></script>
-  <script src="js/libs/swiper-bundle.min.js?_v=20240528004708"></script>
-  <script src="js/libs/fancybox.umd.js?_v=20240528004708"></script>
-  <script src="js/libs/nouislider.min.js?_v=20240528004708"></script>
+  <script src="js/libs/jquery-3.7.1.min.js?_v=20240601141804"></script>
+  <script src="js/libs/swiper-bundle.min.js?_v=20240601141804"></script>
+  <script src="js/libs/fancybox.umd.js?_v=20240601141804"></script>
+  <script src="js/libs/nouislider.min.js?_v=20240601141804"></script>
+  <script src="js/libs/select2.full.min.js?_v=20240601141804"></script>
   <!-- plugnis -->
 
 
-  <script src="js/app.min.js?_v=20240528004708"></script>
+  <script src="js/app.min.js?_v=20240601141804"></script>
 </body>
 
 </html>

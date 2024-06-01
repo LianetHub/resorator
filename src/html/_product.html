@@ -79,7 +79,15 @@
             </li>
         </ul>
         <div class="product__footer">
-            <div class="product__avaibility">В наличии</div>
+            @@if(аvailability==='yes') {
+            <div class="product__avaibility product__avaibility_green">В наличии</div>
+            }
+            @@if(аvailability==='no') {
+            <div class="product__avaibility product__avaibility_red">Товар закончился</div>
+            }
+            @@if(аvailability==='stock') {
+            <div class="product__avaibility">Есть на&nbsp;складе</div>
+            }
             <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
         </div>
     </div>

@@ -1,77 +1,38 @@
-<div id="modal" class="popup">
-    <div class="popup__body">
+<div id="select-language" class="popup">
+    <div class="popup__header">
+        <h3 class="popup__title title-sm">Выбор языка</h3>
         <button type="button" class="popup__close" data-fancybox-close></button>
-        <div class="popup__title">Order form</div>
-        <form action="#" class="popup__form form">
-            <div class="form__row">
-                <label class="form__field">
-                    <input type="text" name="name" data-required class="form__input" placeholder="">
-                    <span class="form__field-placeholder">Name and Surname</span>
-                </label>
-                <span class="form__error">Enter correct name</span>
-            </div>
-            <div class="form__row">
-                <label class="form__field">
-                    <input type="tel" name="phone" data-required class="form__input" placeholder="">
-                    <span class="form__field-placeholder">Your phone number</span>
-                </label>
-                <span class="form__error">Enter correct phone number</span>
-            </div>
-            <div class="form__row">
-                <label class="form__field">
-                    <input type="number" name="sert" data-required class="form__input" placeholder="">
-                    <span class="form__field-placeholder">
-                        Certificate sum
-                    </span>
-                </label>
-                <span class="form__error">Enter correct sum</span>
-            </div>
-            <div class="form__row">
-                <label class="form__field">
-                    <input type="text" name="friend-name" data-required class="form__input" placeholder="">
-                    <span class="form__field-placeholder">Friend’s name and surname</span>
-                </label>
-                <span class="form__error">Enter correct name</span>
-            </div>
-            <div class="form__row">
-                <label class="form__field">
-                    <input type="tel" name="friend-phone" data-required class="form__input" placeholder="">
-                    <span class="form__field-placeholder">Friend’s phone number</span>
-                </label>
-                <span class="form__error">Enter correct phone number</span>
-            </div>
-            <div class="form__delivery">
-                <div class="form__delivery-header">
-                    <div class="form__delivery-caption">Delivery</div>
-                    <div class="form__delivery-options">
-                        <label class="option">
-                            <input type="radio" name="delivery" value="yes" class="option__input hidden" hidden>
-                            <span class="option__content">
-                                Yes
-                            </span>
-                        </label>
-                        <label class="option">
-                            <input type="radio" name="delivery" checked value="yes" class="option__input hidden" hidden>
-                            <span class="option__content">
-                                No
-                            </span>
-                        </label>
-                    </div>
-                </div>
-                <div class="form__delivery-subtitle">
-                    Please note that delivery sum is not included into gift card sum
-                </div>
-            </div>
-            <div class="form__row">
-                <label class="form__field">
-                    <input type="email" name="email" data-required class="form__input" placeholder="">
-                    <span class="form__field-placeholder">Email for sending gift card</span>
-                </label>
-                <span class="form__error">Enter correct email address</span>
-            </div>
-            <button type="submit" class="form__btn btn btn-primary btn-sm">Buy</button>
-        </form>
     </div>
+    <p class="popup__subtitle">
+        Язык отображения интерфейса сайта, определен автоматически как Русский.
+    </p>
+    <form action="#" class="popup__form form">
+        <label for="language-select" class="form__label" tabindex="-1">Язык</label>
+        <select name="language" id="language-select" class="select" data-list-mobile>
+            <option value="rus" data-img-src="@img/icons/flag-ru.svg">Русский</option>
+            <option value="eng" data-img-src="@img/icons/flag-usa.svg">English</option>
+            <option value="chi" data-img-src="@img/icons/flag-china.svg">中文</option>
+        </select>
+        <button type="submit" class="form__btn btn btn-primary">Выбрать</button>
+    </form>
+</div>
+<div id="select-location" class="popup">
+    <div class="popup__header">
+        <h3 class="popup__title title-sm">Выбор локации</h3>
+        <button type="button" class="popup__close" data-fancybox-close></button>
+    </div>
+    <p class="popup__subtitle">
+        Ваше местоположение определено автоматически. Вы можете изменить его вручную.
+    </p>
+    <form action="#" class="popup__form form">
+        <label for="location-select" class="form__label" tabindex="-1">Ваше местоположение</label>
+        <select name="location" id="location-select">
+            <option value="msk">Москва</option>
+            <option value="spb">Санкт-Петербург</option>
+            <option value="perm">Пермь</option>
+        </select>
+        <button type="submit" class="form__btn btn btn-primary">Выбрать</button>
+    </form>
 </div>
 <div id="success" class="popup">
     <div class="popup__body">

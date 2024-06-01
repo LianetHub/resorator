@@ -18,39 +18,42 @@
 	}
 }
 
-.icon-arrow-short:before {
+.icon-chevron:before {
 	content: "\e90b";
 }
-.icon-chevron:before {
-	content: "\e900";
+.icon-close:before {
+	content: "\e90a";
 }
-.icon-arrow:before {
-	content: "\e901";
-}
-.icon-cart:before {
-	content: "\e902";
-}
-.icon-compare:before {
-	content: "\e903";
-}
-.icon-currency:before {
-	content: "\e904";
+.icon-arrow-short:before {
+	content: "\e90c";
 }
 .icon-eye:before {
-	content: "\e905";
-}
-.icon-globe:before {
-	content: "\e906";
-}
-.icon-location:before {
-	content: "\e907";
-}
-.icon-search:before {
-	content: "\e908";
-}
-.icon-star:before {
 	content: "\e909";
 }
+.icon-arrow:before {
+	content: "\e900";
+}
+.icon-cart:before {
+	content: "\e901";
+}
+.icon-compare:before {
+	content: "\e902";
+}
+.icon-currency:before {
+	content: "\e903";
+}
+.icon-globe:before {
+	content: "\e904";
+}
+.icon-location:before {
+	content: "\e905";
+}
+.icon-search:before {
+	content: "\e906";
+}
+.icon-star:before {
+	content: "\e907";
+}
 .icon-user:before {
-	content: "\e90a";
+	content: "\e908";
 }

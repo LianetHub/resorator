@@ -24,42 +24,129 @@ $(function () {
 
 
 
-    // const dateItems = document.querySelectorAll('.form__date');
+    // Fancybox.show([{
+    //     src: "#select-language"
 
-    // if (dateItems.length > 0) {
-    //     dateItems.forEach(dateItem => {
+    // }], {
+    //     dragToClose: false,
+    //     closeButton: false
+    // })
 
-    //         const datepicker = new Datepicker(dateItem, {
-    //             minDate: Date.now(),
-    //             startView: true,
-    //             format: 'dd.mm.yyyy',
-    //             todayHighlight: true,
-    //             inline: true,
-    //         });
+    // custom select
+    function initCustomSelect($select) {
+        // Создание кастомного списка
+        var $customSelectContainer = $('<div>', { class: 'custom-select-container' });
+        var $customSelect = $('<ul>', { id: 'custom-select-' + $select.attr('id') });
+        $customSelectContainer.append($customSelect);
+        $select.after($customSelectContainer);
+
+        function renderCustomSelect() {
+            if ($(window).width() < 576) {
+                $customSelect.empty();
+                $customSelectContainer.show();
+                $select.hide();
+                $select.find('option').each(function () {
+                    var imgSrc = $(this).data('img-src');
+                    var text = $(this).text();
+                    var value = $(this).val();
+
+                    var $li = $('<li>').attr('data-value', value).html('<img src="' + imgSrc + '" class="img-flag" /> ' + text);
+                    $li.on('click', function () {
+                        $select.val(value).trigger('change');
+                    });
+                    $customSelect.append($li);
+                });
+            } else {
+                $customSelectContainer.hide();
+                $select.show();
+            }
+        }
+
+        // Первичная отрисовка
+        renderCustomSelect();
+
+        // Обработка ресайза окна
+        $(window).one('resize', function () {
+            renderCustomSelect();
+        });
+    }
+
+    // Инициализация Select2 и кастомного селекта
+    $('select').each(function () {
+        var $select = $(this);
+        var searchEnabled = $select.data('search') !== undefined;
+
+        // Инициализация Select2
+        $select.select2({
+            templateResult: formatState,
+            templateSelection: formatState,
+            minimumResultsForSearch: searchEnabled ? 0 : Infinity // Отключение поиска если data-search отсутствует
+        });
+
+        // Инициализация кастомного селекта если data-list-mobile="true"
+        if ($select[0].hasAttribute('data-list-mobile')) {
+            initCustomSelect($select);
+        }
+    });
+
+    function formatState(opt) {
+        if (!opt.id) {
+            return opt.text;
+        }
+
+        var optimage = $(opt.element).attr('data-img-src');
+        if (!optimage) {
+            return opt.text;
+        } else {
+            var $opt = $(
+                '<span><img src="' + optimage + '" class="img-flag" /> ' + opt.text + '</span>'
+            );
+            return $opt;
+        }
+    };
+
+    // tooltip
+    $('[data-tooltip]').on('mouseenter', function () {
+        var $this = $(this);
+        var title = $this.attr('title');
+
+        $this.data('title', title).removeAttr('title');
+
+        var $tooltip = $('<div class="tooltip"></div>').text(title);
+        $('body').append($tooltip);
+
+        var offset = $this.offset();
+        var tooltipWidth = $tooltip.outerWidth();
+        var tooltipHeight = $tooltip.outerHeight();
+        var elementWidth = $this.outerWidth();
+        var elementHeight = $this.outerHeight();
 
 
-    //         const today = new Date();
-    //         const formattedToday = formatDate(today);
-    //         dateItem.value = formattedToday;
-
-    //         datepicker.setDate(today);
+        var top = offset.top + elementHeight + 5;
+        var left = offset.left + (elementWidth / 2) - (tooltipWidth / 2);
 
 
-    //         dateItem.addEventListener('keydown', function (e) {
-    //             if (e.key === "Enter") {
-    //                 datepicker.hide();
-    //             }
-    //         });
+        if (top + tooltipHeight > $(window).scrollTop() + $(window).height()) {
+            top = offset.top - tooltipHeight - 5;
+            $tooltip.addClass('open-top');
+        } else {
+            $tooltip.addClass('open-bottom');
+        }
 
-    //         function formatDate(date) {
-    //             const day = date.getDate().toString().padStart(2, '0');
-    //             const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    //             const year = date.getFullYear();
-    //             return `${day}.${month}.${year}`;
-    //         }
-    //     })
-    // }
+        if (left < 0) {
+            left = 0;
+        } else if (left + tooltipWidth > $(window).width()) {
+            left = $(window).width() - tooltipWidth;
+        }
 
+        $tooltip.css({ top: top, left: left });
+    }).on('mouseleave', function () {
+
+        $('.tooltip').remove();
+        var $this = $(this);
+        var title = $this.data('title');
+        $this.attr('title', title);
+    });
 
     // sliders 
     if ($(".companies__slider").length > 0) {
@@ -78,8 +165,6 @@ $(function () {
             })
         }));
     }
-
-
 
     if ($(".promo__slider").length > 0) {
         new Swiper('.promo__slider', {
@@ -110,6 +195,56 @@ $(function () {
 
 
 });
+
+
+
+
+
+
+
+
+
+
+
+// const dateItems = document.querySelectorAll('.form__date');
+
+// if (dateItems.length > 0) {
+//     dateItems.forEach(dateItem => {
+
+//         const datepicker = new Datepicker(dateItem, {
+//             minDate: Date.now(),
+//             startView: true,
+//             format: 'dd.mm.yyyy',
+//             todayHighlight: true,
+//             inline: true,
+//         });
+
+
+//         const today = new Date();
+//         const formattedToday = formatDate(today);
+//         dateItem.value = formattedToday;
+
+//         datepicker.setDate(today);
+
+
+//         dateItem.addEventListener('keydown', function (e) {
+//             if (e.key === "Enter") {
+//                 datepicker.hide();
+//             }
+//         });
+
+//         function formatDate(date) {
+//             const day = date.getDate().toString().padStart(2, '0');
+//             const month = (date.getMonth() + 1).toString().padStart(2, '0');
+//             const year = date.getFullYear();
+//             return `${day}.${month}.${year}`;
+//         }
+//     })
+// }
+
+
+
+
 // document.addEventListener('DOMContentLoaded', () => {
 
 
