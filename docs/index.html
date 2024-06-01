@@ -44,15 +44,15 @@
   <!-- Twitter -->
 
   <!-- plugnis -->
-  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240601160123">
-  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240601160123">
-  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240601160123">
-  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240601160123">
+  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240602003903">
+  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240602003903">
+  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240602003903">
+  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240602003903">
   <!-- plugnis -->
 
 
-  <link rel="stylesheet" href="css/reset.min.css?_v=20240601160123">
-  <link rel="stylesheet" href="css/style.min.css?_v=20240601160123">
+  <link rel="stylesheet" href="css/reset.min.css?_v=20240602003903">
+  <link rel="stylesheet" href="css/style.min.css?_v=20240602003903">
 
 </head>
 
@@ -121,14 +121,26 @@
             <input type="text" autocomplete="off" name="search" class="search__form-input" placeholder="Поиск по товарам и брендам">
             <button type="submit" aria-label="Искать товары" data-tooltip title="Искать товар" class="search__btn icon-search"></button>
           </form>
-          <div class="header__actions">
-            <button type="button" aria-label="Показать форму поиска" class="header__action search-btn-toggler icon-search"></button>
-            <a href="" aria-label="Сравнение товаров" data-tooltip title="Сравнение" class="header__action icon-compare"></a>
-            <a href="" aria-label="Избранное" data-tooltip title="Избранное" class="header__action icon-star"></a>
-            <a href="" aria-label="Корзина" data-tooltip title="Корзина" class="header__action icon-cart">
-              <span class="header__action-quantity">12</span>
+          <div class="header__actions actions">
+            <button type="button" class="actions__item search-btn-toggler icon-search">
+              <span class="actions__item-desc">Поиск</span>
+            </button>
+            <!-- <a href="" data-tooltip title="Сравнение" class="actions__item icon-grid">
+                    <span class="actions__item-desc">Каталог</span>
+                </a> -->
+            <a href="" data-tooltip title="Сравнение" class="actions__item icon-compare">
+              <span class="actions__item-desc">Сравнение</span>
             </a>
-            <a href="" aria-label="Личный кабинет" data-tooltip title="Личный кабинет" class="header__action icon-user"></a>
+            <a href="" data-tooltip title="Избранное" class="actions__item icon-star">
+              <span class="actions__item-desc">Избранное</span>
+            </a>
+            <a href="" data-tooltip title="Корзина" class="actions__item icon-cart">
+              <span class="actions__item-desc">Корзина</span>
+              <span class="actions__item-quantity">12</span>
+            </a>
+            <a href="" data-tooltip title="Личный кабинет" class="actions__item icon-user">
+              <span class="actions__item-desc">Пользователь</span>
+            </a>
           </div>
           <a href="tel:88003551555" class="header__phone">8 (800) 355-15-55</a>
         </div>
@@ -183,120 +195,122 @@
           </div>
         </div>
       </section>
-      <nav aria-label="Основная навигация" class="navigation">
+      <nav aria-label="Основная навигация" class="navigation tablet-only">
         <div class="navigation__container">
+          <div class="navigation__main">
+            <div class="navigation__main-image">
+              <img src="img/articles/main.png" class="cover-image" alt="Фотография нашего офиса">
+            </div>
+            <ul class="navigation__main-list">
+              <li class="navigation__main-item">
+                <a href="" class="more-link icon-arrow">
+                  <span class="more-link__caption">
+                    О компании
+                  </span>
+                  <span class="more-link__subtitle">
+                    Больше информации
+                  </span>
+                </a>
+              </li>
+              <li class="navigation__main-item">
+                <a href="" class="more-link icon-arrow">
+                  <span class="more-link__caption">
+                    Комплексное оснащение
+                  </span>
+                  <span class="more-link__subtitle">
+                    Больше информации
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="" class="card">
+                <span class="card__image">
+                  <img src="img/articles/01.png" class="cover-image" alt="Описание">
+                </span>
+                <span class="card__desc">
+                  Производство
+                  <br>
+                  нейтрального оборудования
+                </span>
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a href="" class="card">
+                <span class="card__image">
+                  <img src="img/articles/02.png" class="cover-image" alt="Описание">
+                </span>
+                <span class="card__desc">
+                  Собственная
+                  <br>
+                  торговая марка
+                </span>
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a href="" class="card">
+                <picture class="card__image">
+                  <source media="(min-width: 1400px)" srcset="img/articles/03.png">
+                  <img src="img/articles/03-tablet.png" class="cover-image" alt="Описание">
+                </picture>
+
+                <span class="card__desc">
+                  Всегда
+                  <br>
+                  на связи с клиентом
+                </span>
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a href="" class="card">
+                <span class="card__image">
+                  <img src="img/articles/04.png" class="cover-image" alt="Описание">
+                </span>
+                <span class="card__desc">
+                  Лизинг
+                  <br>
+                  для вашего бизнеса
+                </span>
+              </a>
+            </li>
+            <li class="navigation__item navigation__item_lg-tablet">
+              <a href="" class="card">
+                <span class="card__image">
+                  <img src="img/articles/05.png" class="cover-image" alt="Описание">
+                </span>
+                <span class="card__desc">
+                  Запасные
+                  <br>
+                  части и аксессуары
+                </span>
+              </a>
+            </li>
+            <li class="navigation__item navigation__item_lg-tablet order-1">
+              <a href="" class="card">
+                <span class="card__image">
+                  <img src="img/articles/06.png" class="cover-image" alt="Описание">
+                </span>
+                <span class="card__desc">
+                  Скидки
+                  <br>
+                  на товары и услуги
+                </span>
+              </a>
+            </li>
+          </ul>
           <div class="row">
             <div class="col-4">
-              <div class="navigation__main">
-                <div class="navigation__main-image">
-                  <img src="img/articles/main.png" class="cover-image" alt="Фотография нашего офиса">
-                </div>
-                <ul class="navigation__main-list">
-                  <li class="navigation__main-item">
-                    <a href="" class="more-link icon-arrow">
-                      <span class="more-link__caption">
-                        О компании
-                      </span>
-                      <span class="more-link__subtitle">
-                        Больше информации
-                      </span>
-                    </a>
-                  </li>
-                  <li class="navigation__main-item">
-                    <a href="" class="more-link icon-arrow">
-                      <span class="more-link__caption">
-                        Комплексное оснащение
-                      </span>
-                      <span class="more-link__subtitle">
-                        Больше информации
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+
             </div>
             <div class="col-8">
-              <ul class="navigation__list row">
-                <li class="navigation__item col-4">
-                  <a href="" class="card">
-                    <span class="card__image">
-                      <img src="img/articles/01.png" class="cover-image" alt="Описание">
-                    </span>
-                    <span class="card__desc">
-                      Производство
-                      <br>
-                      нейтрального оборудования
-                    </span>
-                  </a>
-                </li>
-                <li class="navigation__item col-4">
-                  <a href="" class="card">
-                    <span class="card__image">
-                      <img src="img/articles/02.png" class="cover-image" alt="Описание">
-                    </span>
-                    <span class="card__desc">
-                      Собственная
-                      <br>
-                      торговая марка
-                    </span>
-                  </a>
-                </li>
-                <li class="navigation__item col-4">
-                  <a href="" class="card">
-                    <span class="card__image">
-                      <img src="img/articles/03.png" class="cover-image" alt="Описание">
-                    </span>
-                    <span class="card__desc">
-                      Всегда
-                      <br>
-                      на связи с клиентом
-                    </span>
-                  </a>
-                </li>
-                <li class="navigation__item col-4">
-                  <a href="" class="card">
-                    <span class="card__image">
-                      <img src="img/articles/04.png" class="cover-image" alt="Описание">
-                    </span>
-                    <span class="card__desc">
-                      Лизинг
-                      <br>
-                      для вашего бизнеса
-                    </span>
-                  </a>
-                </li>
-                <li class="navigation__item col-4">
-                  <a href="" class="card">
-                    <span class="card__image">
-                      <img src="img/articles/05.png" class="cover-image" alt="Описание">
-                    </span>
-                    <span class="card__desc">
-                      Запасные
-                      <br>
-                      части и аксессуары
-                    </span>
-                  </a>
-                </li>
-                <li class="navigation__item col-4">
-                  <a href="" class="card">
-                    <span class="card__image">
-                      <img src="img/articles/06.png" class="cover-image" alt="Описание">
-                    </span>
-                    <span class="card__desc">
-                      Скидки
-                      <br>
-                      на товары и услуги
-                    </span>
-                  </a>
-                </li>
-              </ul>
+
             </div>
           </div>
-
-
         </div>
       </nav>
-      <section class="companies">
+      <section class="companies tablet-only">
         <div class="companies__container">
           <div class="companies__side">
             <h2 class="companies__title title">
@@ -346,7 +360,7 @@
           </div>
         </div>
       </section>
-      <section class="products">
+      <section class="products tablet-sm-only">
         <div class="products__container">
           <h2 class="products__title title">
             Товары по видам направления
@@ -528,7 +542,7 @@
           </div>
         </div>
       </section>
-      <section class="companies">
+      <section class="companies tablet-only">
         <div class="companies__container">
           <div class="companies__side">
             <h2 class="companies__title title">
@@ -581,9 +595,9 @@
       <div class="products">
         <div class="products__container">
           <div class="row">
-            <div class="col-8">
+            <div class="col-xxl-8">
               <div class="row">
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -615,6 +629,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">231 501 ₽ </div>
+
+                      <div class="product__price-old">
+                        322 703 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -666,7 +684,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -698,6 +716,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">149 729 ₽ </div>
+
+                      <div class="product__price-old">
+                        270 380 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -749,7 +771,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -781,6 +803,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">70 061 ₽ </div>
+
+                      <div class="product__price-old">
+                        82 370 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -832,7 +858,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -866,6 +892,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">366 900 ₽ </div>
+
+                      <div class="product__price-old">
+                        544 910 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -917,7 +947,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -949,6 +979,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">54 922 ₽ </div>
+
+                      <div class="product__price-old">
+                        83 198 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -1000,7 +1034,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -1032,6 +1066,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">39 212 ₽ </div>
+
+                      <div class="product__price-old">
+                        54 990 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -1083,7 +1121,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -1158,7 +1196,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -1190,6 +1228,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">436 040 ₽ </div>
+
+                      <div class="product__price-old">
+                        322 703 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -1241,9 +1283,96 @@
                   </div>
 
                 </div>
+                <div class="col-lg-3 col-md-4 col-6 d-lg-none tablet-only">
+
+                  <div class="product">
+
+
+                    <div class="product__labels">
+
+
+
+                      <div class="product__label label green">Хит продаж</div>
+
+                    </div>
+
+
+                    <div class="product__header">
+                      <a href="/product.html" class="product__image">
+                        <img src="img/goods/06.png" alt="Steba DG 40">
+                      </a>
+                      <div class="product__actions">
+                        <button type="button" class="product__action icon-eye">
+                          <span>Быстрый просмотр</span>
+                        </button>
+                        <button type="button" class="product__action icon-star">
+                          <span>Добавить в избранное</span>
+                        </button>
+                        <button type="button" class="product__action icon-compare">
+                          <span>Сравнить товар</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="product__price">
+                      <div class="product__price-value">39 212 ₽ </div>
+
+                      <div class="product__price-old">
+                        54 990 ₽
+                      </div>
+
+                    </div>
+                    <a href="/product.html" class="product__name">
+                      <small>Пароконвектомат</small>
+                      Steba DG 40
+                    </a>
+                    <ul class="product__props">
+                      <li class="product__props-row">
+                        <div class="product__props-name">
+                          Цвет
+                        </div>
+                        <div class="product__props-value">
+                          Серый металлик
+                        </div>
+                      </li>
+                      <li class="product__props-row">
+                        <div class="product__props-name">
+                          Мощность
+                        </div>
+                        <div class="product__props-value">
+                          10.5 кВт
+                        </div>
+                      </li>
+                      <li class="product__props-row">
+                        <div class="product__props-name">
+                          Температура нагрева
+                        </div>
+                        <div class="product__props-value">
+                          50 °С
+                        </div>
+                      </li>
+                      <li class="product__props-row">
+                        <div class="product__props-name">
+                          Цвет
+                        </div>
+                        <div class="product__props-value">
+                          Серый металлик
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="product__footer">
+
+                      <div class="product__avaibility green-color">В наличии</div>
+
+
+
+                      <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+                    </div>
+                  </div>
+
+                </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-xxl-4 pc-only">
               <div class="products__selection">
                 <div class="products__selection-header">
                   <div class="products__selection-caption">
@@ -1255,7 +1384,7 @@
                   Сервировка стола с нами? Легко!
                 </div>
                 <div class="products__selection-list row">
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/01.jpg" class="cover-image" alt="Фото подборки">
@@ -1263,7 +1392,7 @@
                       <span class="card__desc">Стекло и посуда</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/02.jpg" class="cover-image" alt="Фото подборки">
@@ -1271,7 +1400,7 @@
                       <span class="card__desc">Столовые приборы</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/03.jpg" class="cover-image" alt="Фото подборки">
@@ -1279,7 +1408,7 @@
                       <span class="card__desc">Фарфоровая посуда</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/04.jpg" class="cover-image" alt="Фото подборки">
@@ -1287,7 +1416,7 @@
                       <span class="card__desc">Ножи и аксессуары</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/05.jpg" class="cover-image" alt="Фото подборки">
@@ -1295,7 +1424,7 @@
                       <span class="card__desc">Для кондитеров</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/06.jpg" class="cover-image" alt="Фото подборки">
@@ -1307,8 +1436,8 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-4">
+          <div class="row pc-only">
+            <div class="col-xxl-4">
               <div class="products__selection products__selection_yellow">
                 <div class="products__selection-header">
                   <div class="products__selection-caption">
@@ -1320,7 +1449,7 @@
                   Сервировка стола с нами? Легко!
                 </div>
                 <div class="products__selection-list row">
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/01.jpg" class="cover-image" alt="Фото подборки">
@@ -1328,7 +1457,7 @@
                       <span class="card__desc">Стекло и посуда</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/02.jpg" class="cover-image" alt="Фото подборки">
@@ -1336,7 +1465,7 @@
                       <span class="card__desc">Столовые приборы</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/03.jpg" class="cover-image" alt="Фото подборки">
@@ -1344,7 +1473,7 @@
                       <span class="card__desc">Фарфоровая посуда</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/04.jpg" class="cover-image" alt="Фото подборки">
@@ -1352,7 +1481,7 @@
                       <span class="card__desc">Ножи и аксессуары</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/05.jpg" class="cover-image" alt="Фото подборки">
@@ -1360,7 +1489,7 @@
                       <span class="card__desc">Для кондитеров</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/06.jpg" class="cover-image" alt="Фото подборки">
@@ -1371,9 +1500,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-8">
+            <div class="col-xxl-8">
               <div class="row">
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -1405,6 +1534,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">231 501 ₽ </div>
+
+                      <div class="product__price-old">
+                        322 703 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -1456,7 +1589,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -1488,6 +1621,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">149 729 ₽ </div>
+
+                      <div class="product__price-old">
+                        270 380 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -1539,7 +1676,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -1571,6 +1708,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">70 061 ₽ </div>
+
+                      <div class="product__price-old">
+                        82 370 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -1622,7 +1763,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -1656,6 +1797,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">366 900 ₽ </div>
+
+                      <div class="product__price-old">
+                        544 910 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -1707,7 +1852,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -1739,6 +1884,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">54 922 ₽ </div>
+
+                      <div class="product__price-old">
+                        83 198 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -1790,7 +1939,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -1822,6 +1971,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">39 212 ₽ </div>
+
+                      <div class="product__price-old">
+                        54 990 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -1873,7 +2026,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -1948,7 +2101,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -1980,6 +2133,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">436 040 ₽ </div>
+
+                      <div class="product__price-old">
+                        322 703 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -2031,21 +2188,107 @@
                   </div>
 
                 </div>
+                <div class="col-lg-3 col-md-4 col-6 d-lg-none tablet-only">
+
+                  <div class="product">
+
+
+                    <div class="product__labels">
+
+
+
+                      <div class="product__label label green">Хит продаж</div>
+
+                    </div>
+
+
+                    <div class="product__header">
+                      <a href="/product.html" class="product__image">
+                        <img src="img/goods/06.png" alt="Steba DG 40">
+                      </a>
+                      <div class="product__actions">
+                        <button type="button" class="product__action icon-eye">
+                          <span>Быстрый просмотр</span>
+                        </button>
+                        <button type="button" class="product__action icon-star">
+                          <span>Добавить в избранное</span>
+                        </button>
+                        <button type="button" class="product__action icon-compare">
+                          <span>Сравнить товар</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="product__price">
+                      <div class="product__price-value">39 212 ₽ </div>
+
+                      <div class="product__price-old">
+                        54 990 ₽
+                      </div>
+
+                    </div>
+                    <a href="/product.html" class="product__name">
+                      <small>Пароконвектомат</small>
+                      Steba DG 40
+                    </a>
+                    <ul class="product__props">
+                      <li class="product__props-row">
+                        <div class="product__props-name">
+                          Цвет
+                        </div>
+                        <div class="product__props-value">
+                          Серый металлик
+                        </div>
+                      </li>
+                      <li class="product__props-row">
+                        <div class="product__props-name">
+                          Мощность
+                        </div>
+                        <div class="product__props-value">
+                          10.5 кВт
+                        </div>
+                      </li>
+                      <li class="product__props-row">
+                        <div class="product__props-name">
+                          Температура нагрева
+                        </div>
+                        <div class="product__props-value">
+                          50 °С
+                        </div>
+                      </li>
+                      <li class="product__props-row">
+                        <div class="product__props-name">
+                          Цвет
+                        </div>
+                        <div class="product__props-value">
+                          Серый металлик
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="product__footer">
+
+                      <div class="product__avaibility green-color">В наличии</div>
+
+
+
+                      <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+                    </div>
+                  </div>
+
+                </div>
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
       <div class="banners">
         <div class="banners__container">
           <div class="row">
-            <div class="col-4">
+            <div class="col-xxl-4 col-lg-6">
               <div class="banners__item">
                 <div class="banners__item-body">
                   <div class="banners__item-caption">
-                    Покупка онлайн
+                    Покупка
+                    <br> онлайн
                   </div>
                   <div class="banners__item-desc">
                     Наш магазин настроен на удобную работу с онлайн
@@ -2056,7 +2299,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-xxl-4 col-lg-6 pc-only">
               <div class="banners__item banners__item_yellow">
                 <div class="banners__item-body">
                   <div class="banners__item-caption">
@@ -2073,7 +2316,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-xxl-4 pc-only">
               <div class="banners__item banners__item_green">
                 <div class="banners__item-body">
                   <div class="banners__item-caption">
@@ -2096,9 +2339,9 @@
       <div class="products">
         <div class="products__container">
           <div class="row">
-            <div class="col-8">
+            <div class="col-xxl-8">
               <div class="row">
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -2130,6 +2373,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">231 501 ₽ </div>
+
+                      <div class="product__price-old">
+                        322 703 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -2181,7 +2428,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -2213,6 +2460,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">149 729 ₽ </div>
+
+                      <div class="product__price-old">
+                        270 380 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -2264,7 +2515,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -2296,6 +2547,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">70 061 ₽ </div>
+
+                      <div class="product__price-old">
+                        82 370 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -2347,7 +2602,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -2381,6 +2636,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">366 900 ₽ </div>
+
+                      <div class="product__price-old">
+                        544 910 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -2432,7 +2691,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -2464,6 +2723,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">54 922 ₽ </div>
+
+                      <div class="product__price-old">
+                        83 198 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -2515,7 +2778,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -2547,6 +2810,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">39 212 ₽ </div>
+
+                      <div class="product__price-old">
+                        54 990 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -2598,7 +2865,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -2673,7 +2940,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -2705,6 +2972,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">436 040 ₽ </div>
+
+                      <div class="product__price-old">
+                        322 703 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -2756,9 +3027,96 @@
                   </div>
 
                 </div>
+                <div class="col-lg-3 col-md-4 col-6 d-lg-none tablet-only">
+
+                  <div class="product">
+
+
+                    <div class="product__labels">
+
+
+
+                      <div class="product__label label green">Хит продаж</div>
+
+                    </div>
+
+
+                    <div class="product__header">
+                      <a href="/product.html" class="product__image">
+                        <img src="img/goods/06.png" alt="Steba DG 40">
+                      </a>
+                      <div class="product__actions">
+                        <button type="button" class="product__action icon-eye">
+                          <span>Быстрый просмотр</span>
+                        </button>
+                        <button type="button" class="product__action icon-star">
+                          <span>Добавить в избранное</span>
+                        </button>
+                        <button type="button" class="product__action icon-compare">
+                          <span>Сравнить товар</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="product__price">
+                      <div class="product__price-value">39 212 ₽ </div>
+
+                      <div class="product__price-old">
+                        54 990 ₽
+                      </div>
+
+                    </div>
+                    <a href="/product.html" class="product__name">
+                      <small>Пароконвектомат</small>
+                      Steba DG 40
+                    </a>
+                    <ul class="product__props">
+                      <li class="product__props-row">
+                        <div class="product__props-name">
+                          Цвет
+                        </div>
+                        <div class="product__props-value">
+                          Серый металлик
+                        </div>
+                      </li>
+                      <li class="product__props-row">
+                        <div class="product__props-name">
+                          Мощность
+                        </div>
+                        <div class="product__props-value">
+                          10.5 кВт
+                        </div>
+                      </li>
+                      <li class="product__props-row">
+                        <div class="product__props-name">
+                          Температура нагрева
+                        </div>
+                        <div class="product__props-value">
+                          50 °С
+                        </div>
+                      </li>
+                      <li class="product__props-row">
+                        <div class="product__props-name">
+                          Цвет
+                        </div>
+                        <div class="product__props-value">
+                          Серый металлик
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="product__footer">
+
+                      <div class="product__avaibility green-color">В наличии</div>
+
+
+
+                      <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+                    </div>
+                  </div>
+
+                </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-xxl-4 pc-only">
               <div class="products__selection">
                 <div class="products__selection-header">
                   <div class="products__selection-caption">
@@ -2770,7 +3128,7 @@
                   Сервировка стола с нами? Легко!
                 </div>
                 <div class="products__selection-list row">
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/01.jpg" class="cover-image" alt="Фото подборки">
@@ -2778,7 +3136,7 @@
                       <span class="card__desc">Стекло и посуда</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/02.jpg" class="cover-image" alt="Фото подборки">
@@ -2786,7 +3144,7 @@
                       <span class="card__desc">Столовые приборы</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/03.jpg" class="cover-image" alt="Фото подборки">
@@ -2794,7 +3152,7 @@
                       <span class="card__desc">Фарфоровая посуда</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/04.jpg" class="cover-image" alt="Фото подборки">
@@ -2802,7 +3160,7 @@
                       <span class="card__desc">Ножи и аксессуары</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/05.jpg" class="cover-image" alt="Фото подборки">
@@ -2810,7 +3168,7 @@
                       <span class="card__desc">Для кондитеров</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/06.jpg" class="cover-image" alt="Фото подборки">
@@ -2822,8 +3180,8 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-4">
+          <div class="row pc-only">
+            <div class="col-xxl-4">
               <div class="products__selection products__selection_yellow">
                 <div class="products__selection-header">
                   <div class="products__selection-caption">
@@ -2835,7 +3193,7 @@
                   Сервировка стола с нами? Легко!
                 </div>
                 <div class="products__selection-list row">
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/01.jpg" class="cover-image" alt="Фото подборки">
@@ -2843,7 +3201,7 @@
                       <span class="card__desc">Стекло и посуда</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/02.jpg" class="cover-image" alt="Фото подборки">
@@ -2851,7 +3209,7 @@
                       <span class="card__desc">Столовые приборы</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/03.jpg" class="cover-image" alt="Фото подборки">
@@ -2859,7 +3217,7 @@
                       <span class="card__desc">Фарфоровая посуда</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/04.jpg" class="cover-image" alt="Фото подборки">
@@ -2867,7 +3225,7 @@
                       <span class="card__desc">Ножи и аксессуары</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/05.jpg" class="cover-image" alt="Фото подборки">
@@ -2875,7 +3233,7 @@
                       <span class="card__desc">Для кондитеров</span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <div class="col-xxl-6 col-md-4 col-sm-6">
                     <a href="" class="card card_lg">
                       <span class="card__image">
                         <img src="img/selection/06.jpg" class="cover-image" alt="Фото подборки">
@@ -2886,9 +3244,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-8">
+            <div class="col-xxl-8">
               <div class="row">
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -2920,6 +3278,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">231 501 ₽ </div>
+
+                      <div class="product__price-old">
+                        322 703 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -2971,7 +3333,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -3003,6 +3365,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">149 729 ₽ </div>
+
+                      <div class="product__price-old">
+                        270 380 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -3054,7 +3420,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -3086,6 +3452,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">70 061 ₽ </div>
+
+                      <div class="product__price-old">
+                        82 370 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -3137,7 +3507,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -3171,6 +3541,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">366 900 ₽ </div>
+
+                      <div class="product__price-old">
+                        544 910 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -3222,7 +3596,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -3254,6 +3628,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">54 922 ₽ </div>
+
+                      <div class="product__price-old">
+                        83 198 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -3305,7 +3683,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -3337,6 +3715,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">39 212 ₽ </div>
+
+                      <div class="product__price-old">
+                        54 990 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -3388,7 +3770,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -3463,7 +3845,7 @@
                   </div>
 
                 </div>
-                <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-6">
 
                   <div class="product">
 
@@ -3495,6 +3877,10 @@
                     </div>
                     <div class="product__price">
                       <div class="product__price-value">436 040 ₽ </div>
+
+                      <div class="product__price-old">
+                        322 703 ₽
+                      </div>
 
                     </div>
                     <a href="/product.html" class="product__name">
@@ -3546,23 +3932,108 @@
                   </div>
 
                 </div>
+                <div class="col-lg-3 col-md-4 col-6 d-lg-none tablet-only">
+
+                  <div class="product">
+
+
+                    <div class="product__labels">
+
+
+
+                      <div class="product__label label green">Хит продаж</div>
+
+                    </div>
+
+
+                    <div class="product__header">
+                      <a href="/product.html" class="product__image">
+                        <img src="img/goods/06.png" alt="Steba DG 40">
+                      </a>
+                      <div class="product__actions">
+                        <button type="button" class="product__action icon-eye">
+                          <span>Быстрый просмотр</span>
+                        </button>
+                        <button type="button" class="product__action icon-star">
+                          <span>Добавить в избранное</span>
+                        </button>
+                        <button type="button" class="product__action icon-compare">
+                          <span>Сравнить товар</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="product__price">
+                      <div class="product__price-value">39 212 ₽ </div>
+
+                      <div class="product__price-old">
+                        54 990 ₽
+                      </div>
+
+                    </div>
+                    <a href="/product.html" class="product__name">
+                      <small>Пароконвектомат</small>
+                      Steba DG 40
+                    </a>
+                    <ul class="product__props">
+                      <li class="product__props-row">
+                        <div class="product__props-name">
+                          Цвет
+                        </div>
+                        <div class="product__props-value">
+                          Серый металлик
+                        </div>
+                      </li>
+                      <li class="product__props-row">
+                        <div class="product__props-name">
+                          Мощность
+                        </div>
+                        <div class="product__props-value">
+                          10.5 кВт
+                        </div>
+                      </li>
+                      <li class="product__props-row">
+                        <div class="product__props-name">
+                          Температура нагрева
+                        </div>
+                        <div class="product__props-value">
+                          50 °С
+                        </div>
+                      </li>
+                      <li class="product__props-row">
+                        <div class="product__props-name">
+                          Цвет
+                        </div>
+                        <div class="product__props-value">
+                          Серый металлик
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="product__footer">
+
+                      <div class="product__avaibility green-color">В наличии</div>
+
+
+
+                      <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+                    </div>
+                  </div>
+
+                </div>
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
     </main>
     <footer class="footer">
       <div class="footer__container">
         <div class="row">
-          <div class="col-2">
+          <div class="col-xl-2 ">
             <a href="/" class="footer__logo">
               <img src="img/logo-white.svg" alt="Логотип">
             </a>
           </div>
-          <div class="col-2">
+          <div class="col-xl-2 col-md-4 col-6">
             <div class="footer__caption">Каталог</div>
             <nav class="footer__menu">
               <ul class="footer__menu-list">
@@ -3587,7 +4058,7 @@
               </ul>
             </nav>
           </div>
-          <div class="col-2">
+          <div class="col-xl-2 col-md-4 col-6">
             <div class="footer__caption">Услуги</div>
             <nav class="footer__menu">
               <ul class="footer__menu-list">
@@ -3609,7 +4080,7 @@
               </ul>
             </nav>
           </div>
-          <div class="col-2">
+          <div class="col-xl-2 col-md-4 col-6">
             <div class="footer__caption">О компании</div>
             <nav class="footer__menu">
               <ul class="footer__menu-list">
@@ -3637,7 +4108,7 @@
               </ul>
             </nav>
           </div>
-          <div class="col-2">
+          <div class="col-xl-2 col-md-4 col-6">
             <div class="footer__caption">Документы</div>
             <nav class="footer__menu">
               <ul class="footer__menu-list">
@@ -3653,7 +4124,7 @@
               </ul>
             </nav>
           </div>
-          <div class="col-2">
+          <div class="col-xl-2 col-md-4 col-6">
             <div class="footer__caption">Контакты</div>
             <div class="footer__contacts">
               <div class="footer__worktime">
@@ -3734,15 +4205,15 @@
     </div>
   </div>
   <!-- plugnis -->
-  <script src="js/libs/jquery-3.7.1.min.js?_v=20240601160123"></script>
-  <script src="js/libs/swiper-bundle.min.js?_v=20240601160123"></script>
-  <script src="js/libs/fancybox.umd.js?_v=20240601160123"></script>
-  <script src="js/libs/nouislider.min.js?_v=20240601160123"></script>
-  <script src="js/libs/select2.full.min.js?_v=20240601160123"></script>
+  <script src="js/libs/jquery-3.7.1.min.js?_v=20240602003903"></script>
+  <script src="js/libs/swiper-bundle.min.js?_v=20240602003903"></script>
+  <script src="js/libs/fancybox.umd.js?_v=20240602003903"></script>
+  <script src="js/libs/nouislider.min.js?_v=20240602003903"></script>
+  <script src="js/libs/select2.full.min.js?_v=20240602003903"></script>
   <!-- plugnis -->
 
 
-  <script src="js/app.min.js?_v=20240601160123"></script>
+  <script src="js/app.min.js?_v=20240602003903"></script>
 </body>
 
 </html>

@@ -1,5 +1,8 @@
 .header {
-	padding: rem(30) 0;
+	padding: rem(20) 0;
+	@media (min-width: $md5) {
+		padding: rem(30) 0;
+	}
 	background: $white;
 	&.header_shadow {
 		box-shadow: 0 rem(4) rem(15) 0 rgba(0, 0, 0, 0.05);
@@ -11,18 +14,19 @@
 	&__top {
 		display: flex;
 		align-items: center;
-		flex-wrap: wrap;
 		color: $darkBlue;
-		font-size: 0.875rem;
-		gap: 0.63rem;
 		row-gap: 1rem;
-		&::before {
-			width: 1rem;
-			height: 1rem;
-			flex-shrink: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+		justify-content: space-between;
+		font-weight: 600;
+		font-size: 0.75rem;
+		gap: 0.63rem;
+		@media (min-width: $md5) {
+			font-weight: 400;
+			font-size: 0.875rem;
+			justify-content: flex-start;
+		}
+		@media (min-width: $md3) {
+			flex-wrap: wrap;
 		}
 	}
 	// .header__language
@@ -57,18 +61,25 @@
 	}
 	// .header__location
 	&__location {
-		display: flex;
+		position: relative;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 1;
+		text-overflow: ellipsis;
 		align-items: center;
+		overflow: hidden;
 		gap: 0.5rem;
+		padding-left: 1.5rem;
 		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
 			width: 1rem;
 			height: 1rem;
-			flex-shrink: 0;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 		}
-		position: relative;
 		&::after {
 			content: "";
 			position: absolute;
@@ -90,40 +101,65 @@
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
-		margin-right: auto;
+		white-space: nowrap;
+		&::before {
+			width: 1rem;
+			height: 1rem;
+			flex-shrink: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		@media (min-width: $md5) {
+			margin-right: auto;
+		}
 	}
 	// .header__menu
 	&__menu {
 	}
 	// .header__menu-btn
 	&__menu-btn {
+		&.icon-menu {
+			@media (min-width: $md3) {
+				display: none;
+			}
+			@media (max-width: $md5) {
+				display: none;
+			}
+		}
 	}
 	// .header__body
 	&__body {
 		position: relative;
-		margin-top: rem(34);
 		display: flex;
 		align-items: center;
 		gap: rem(20);
+		margin-top: rem(24);
+		@media (min-width: $md3) {
+			margin-top: rem(34);
+		}
 	}
 	// .header__logo
 	&__logo {
 	}
 	// .header__catalog
 	&__catalog {
-		border-radius: 0.3125rem;
-		background: $yellow;
-		color: $dark;
-		display: flex;
-		align-items: center;
-		text-align: center;
-		gap: 0.62rem;
-		font-size: 0.875rem;
-		font-weight: 600;
-		padding: 0.69rem 1rem;
-		transition: background-color 0.3s ease 0s;
-		&::before {
-			font-size: 1rem;
+		display: none;
+		@media (min-width: $md4) {
+			border-radius: 0.3125rem;
+			background: $yellow;
+			color: $dark;
+			display: flex;
+			align-items: center;
+			text-align: center;
+			gap: 0.62rem;
+			font-size: 0.875rem;
+			font-weight: 600;
+			padding: 0.69rem 1rem;
+			transition: background-color 0.3s ease 0s;
+			&::before {
+				font-size: 1rem;
+			}
 		}
 		@media (any-hover: hover) {
 			&:hover {
@@ -136,24 +172,88 @@
 	}
 	// .header__actions
 	&__actions {
-		margin-left: auto;
-		display: flex;
-		gap: 0.63rem;
 	}
 	// .header__action
 	&__action {
-		flex-shrink: 0;
+	}
+	// .header__action-quantity
+	&__action-quantity {
+	}
+	// .header__phone
+	&__phone {
+		margin-left: auto;
+		@media (min-width: $md5) {
+			margin-left: 0;
+		}
+		font-family: $font-din;
+		font-weight: 700;
+		white-space: nowrap;
+		line-height: 100%;
+		transition: color 0.3s ease 0s;
+		font-size: 1.125rem;
+		@media (min-width: $md1) {
+			font-size: 1.5rem;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellow;
+			}
+		}
+	}
+}
+
+.actions {
+	border-top: rem(1) solid $darkStroke;
+	display: flex;
+	justify-content: space-between;
+	gap: 0.63rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 6;
+	background: $darkBg;
+	color: $grayStroke;
+	padding: 0.69rem 1rem;
+
+	@media (min-width: $md5) {
+		position: static;
+		margin-left: auto;
+		border-top: 0;
+		bottom: auto;
+		left: auto;
+		width: auto;
+		z-index: 0;
+		color: inherit;
+		background: transparent;
+		padding: 0;
+	}
+	// .actions__item
+	&__item {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 2.375rem;
-		height: 2.375rem;
-		border-radius: 0.3125rem;
-		border: rem(1) solid $yellow;
-		background: $white;
-		color: $darkBlue;
-		position: relative;
-		transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+		flex-direction: column;
+		gap: rem(10);
+		&::before {
+			color: $yellow;
+			font-size: 2rem;
+			@media (min-width: $md5) {
+				font-size: 1rem;
+				color: $darkBlue;
+			}
+		}
+		@media (min-width: $md5) {
+			flex-shrink: 0;
+			width: 2.375rem;
+			height: 2.375rem;
+			border-radius: 0.3125rem;
+			border: rem(1) solid $yellow;
+			background: $white;
+			color: $darkBlue;
+			position: relative;
+			transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				background: $yellow;
@@ -169,11 +269,18 @@
 			}
 		}
 	}
-	// .header__action-quantity
-	&__action-quantity {
+	// .actions__item-quantity
+	&__item-quantity {
 		position: absolute;
-		bottom: -0.56rem;
-		right: -0.56rem;
+		top: -0.66rem;
+		right: -0.66rem;
+		padding: em(0.37, 0.625);
+		@media (min-width: $md5) {
+			padding: em(0.19, 0.625);
+			bottom: -0.56rem;
+			right: -0.56rem;
+			top: auto;
+		}
 		color: $white;
 		text-align: center;
 		border-radius: 0.3125rem;
@@ -181,23 +288,14 @@
 		font-size: 0.625rem;
 		font-weight: 500;
 		text-transform: uppercase;
-		padding: em(0.19, 0.625);
 	}
-	// .header__phone
-	&__phone {
-		font-family: $font-din;
-		font-weight: 700;
-		white-space: nowrap;
-		line-height: 100%;
-		transition: color 0.3s ease 0s;
-		font-size: 1.125rem;
-		@media (min-width: $md1) {
-			font-size: 1.5rem;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				color: $yellow;
-			}
+	// .actions__item-desc
+	&__item-desc {
+		color: $grayStroke;
+		font-size: 0.75rem;
+		font-weight: 600;
+		@media (min-width: $md5) {
+			display: none;
 		}
 	}
 }
@@ -351,9 +449,7 @@
 	@media (min-width: $md5) {
 		margin-left: 1.5rem;
 	}
-	@media (min-width: $md3) {
-		display: none;
-	}
+
 	& span {
 		display: block;
 		padding: rem(2) rem(0);

@@ -1,12 +1,24 @@
 .footer {
 	background: $darkBg;
 	color: $white;
-	padding: 2rem 0;
+	padding: 2.5rem 0 1.88rem;
+	display: none;
+	@media (min-width: $md5) {
+		display: block;
+	}
+	@media (min-width: $md2) {
+		padding: 2rem 0;
+	}
 	// .footer__container
 	&__container {
 	}
 	// .footer__logo
 	&__logo {
+		display: block;
+		margin-bottom: 0.45rem;
+		@media (min-width: $md2) {
+			margin-bottom: 0;
+		}
 	}
 	// .footer__caption
 	&__caption {
@@ -61,7 +73,10 @@
 	&__bottom {
 		margin-top: 1.25rem;
 		display: flex;
-		gap: 4rem;
+		gap: 2rem;
+		@media (min-width: $md2) {
+			gap: 4rem;
+		}
 	}
 	// .footer__hint
 	&__hint {

@@ -1,6 +1,7 @@
 "use strict";
 
 
+// import Swiper from 'swiper';
 // import { Fancybox } from '@fancyapps/ui';
 // import Swiper from 'swiper';
 import * as devFunctions from './modules/functions.js';
@@ -208,10 +209,10 @@ $(function () {
             speed: 800,
             effect: "fade",
             loop: true,
-            autoplay: {
-                delay: 8000,
-                stopOnLastSlide: false,
-            },
+            // autoplay: {
+            //     delay: 8000,
+            //     stopOnLastSlide: false,
+            // },
             fadeEffect: {
                 crossFade: true
             },
@@ -227,6 +228,33 @@ $(function () {
                 }
             }
         })
+    }
+
+    if ($(".product-card__slider").length > 0) {
+
+
+
+        let thumbsSlider = new Swiper('.product-card__thumbs', {
+            slidesPerView: 3,
+            spaceBetween: 20
+        });
+
+        let mainSlider = new Swiper('.product-card__slider-main', {
+            slidesPerView: 1,
+
+            pagination: {
+                el: '.product-card__slider-pagination',
+                clickable: true
+            },
+            thumbs: {
+                swiper: thumbsSlider
+            }
+
+        });
+
+
+
+
     }
 
 

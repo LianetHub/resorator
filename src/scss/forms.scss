@@ -460,9 +460,13 @@
 	user-select: none;
 	transition: all 0.3s ease 0s;
 	border-radius: 0.3125rem;
-	font-size: 1rem;
 	font-weight: 600;
-	padding: 1rem 1.88rem;
+	font-size: 0.875rem;
+	padding: 1em 1.25rem;
+	@media (min-width: $md3) {
+		padding: 1em 1.88em;
+		font-size: 1rem;
+	}
 
 	&.btn-primary {
 		background: $yellow;

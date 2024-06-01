@@ -10,9 +10,9 @@
 
 .title {
 	font-family: $font-din;
-	font-size: 2.5625rem;
 	font-weight: 700;
 	line-height: 100%;
+	font-size: 2.5625rem;
 }
 
 .title-lg {
@@ -33,17 +33,23 @@
 }
 
 .blue-color {
-	color: $blue;
+	color: $blue !important;
 }
 .green-color {
-	color: $green;
+	color: $green !important;
 }
 .red-color {
-	color: $red;
+	color: $red !important;
 }
 
 .text-uppercase {
 	text-transform: uppercase;
+}
+
+.d-lg-none {
+	@media (min-width: $md3) {
+		display: none;
+	}
 }
 
 .label {
@@ -93,8 +99,12 @@
 	&__image {
 		position: relative;
 		height: 0;
-		padding-bottom: 56.25%;
-		min-height: 11.25rem;
+		padding-bottom: 100%;
+		min-height: 10.4375rem;
+		@media (min-width: $md2) {
+			padding-bottom: 56.25%;
+			min-height: 11.25rem;
+		}
 		overflow: hidden;
 		border-radius: 0.3125rem;
 		width: 100%;
@@ -111,7 +121,7 @@
 	&__desc {
 		color: $darkBlue;
 		margin-top: 0.25rem;
-		font-size: 1.125rem;
+
 		line-height: 1.2;
 		text-decoration: none;
 		background-image: linear-gradient(currentColor, currentColor);
@@ -122,6 +132,10 @@
 		box-decoration-break: clone;
 		-webkit-box-decoration-break: clone;
 		padding: rem(5) 0;
+		font-size: 1rem;
+		@media (min-width: $md2) {
+			font-size: 1.125rem;
+		}
 	}
 }
 
@@ -152,11 +166,14 @@
 	&__caption {
 		color: $yellow;
 		font-family: $font-din;
-		font-size: 1.5rem;
 		font-weight: 700;
 		line-height: 1;
 		text-transform: uppercase;
 		transition: color 0.3s ease 0s;
+		font-size: 1.125rem;
+		@media (min-width: $md2) {
+			font-size: 1.5rem;
+		}
 	}
 	// .more-link__subtitle
 	&__subtitle {
@@ -219,48 +236,33 @@
 	justify-content: center;
 	.swiper-pagination-bullet {
 		position: relative;
-		width: rem(5);
-		height: rem(5);
+		width: 0.75rem;
+		height: 0.75rem;
 		opacity: 1;
-		color: #737474;
-		transition: color 0.3s ease 0s;
-		background: currentColor;
-		--swiper-pagination-bullet-horizontal-gap: 0.625rem;
-		color: #737474;
+		background: $lightGray;
+		--swiper-pagination-bullet-horizontal-gap: 0.315rem;
+
 		display: block;
-		&::before {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: scale(0) translate(-50%, -50%);
-			border: 1px solid currentColor;
-			width: rem(21);
-			height: rem(21);
-			border-radius: 50%;
-			transition: transform 0.2s linear 0s;
-			transform-origin: 0 0;
-		}
-		&::after {
-			content: "";
-			position: absolute;
-			width: rem(21);
-			height: rem(21);
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
+
 		&.swiper-pagination-bullet-active {
-			color: #1371d5;
-			&::before {
-				transform: scale(1) translate(-50%, -50%);
-			}
+			background: $yellow;
 		}
 	}
 }
 
 .pc-only {
+	@media (max-width: $md3) {
+		display: none;
+	}
+}
+
+.tablet-only {
 	@media (max-width: $md4) {
+		display: none;
+	}
+}
+.tablet-sm-only {
+	@media (max-width: $md5) {
 		display: none;
 	}
 }
