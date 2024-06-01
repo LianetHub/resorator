@@ -492,7 +492,15 @@
 		&[aria-disabled="true"] {
 			border-color: $lightGray;
 			color: $lightBlue;
-			border-radius: 0.3125rem;
+		}
+	}
+	&.btn-gray-outline {
+		border: rem(1) solid $lightBlue;
+		color: $lightBlue;
+		&:hover,
+		&:active {
+			background: $lightBlue;
+			color: $white;
 		}
 	}
 	&.btn-sm {
@@ -506,7 +514,6 @@
 	&[aria-disabled="true"] {
 		cursor: default;
 		pointer-events: none;
-		opacity: 0.5;
 	}
 }
 

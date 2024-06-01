@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор | Страница товара'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "shadow": true
+            })
+            <main class="page">
+                <section class="product-card">
+                    <div class="product-card__container">
+                        <div class="product-card__header row">
+                            <div class="col-9">
+                                <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                                    <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                                        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                            <a href="/" class="breadcrumbs__link" itemprop="item">
+                                                <span itemprop="name">Главная</span>
+                                            </a>
+                                            <meta itemprop="position" content="1">
+                                        </li>
+                                        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                            <a href="/" class="breadcrumbs__link" itemprop="item">
+                                                <span itemprop="name">Тепловое оборудование</span>
+                                            </a>
+                                            <meta itemprop="position" content="2">
+                                        </li>
+                                        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                            <a class="breadcrumbs__link active" itemprop="item">
+                                                <span itemprop="name">Название оборудования</span>
+                                            </a>
+                                            <meta itemprop="position" content="3">
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="col-3">
+                                <div class="product-card__actions">
+                                    <a href="" class="product-card__action btn btn-gray-outline btn-sm icon-edit">Редактировать</a>
+                                    <a href="" class="product-card__action btn btn-gray-outline btn-sm icon-box">Предложения</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__body">
+                            <div class="product-card__content">
+                                <div class="product-card__heading">
+                                    <h1 class="product-card__title title-md">
+                                        Печь конвекционная UNOX XB693, пароконвектомат
+                                    </h1>
+                                    <div class="product-card__labels">
+                                        <div class="product-card__label label yellow">Новинка</div>
+                                        <div class="product-card__label label red">Распродажа</div>
+                                        <div class="product-card__label label green">Хит продаж</div>
+                                    </div>
+                                </div>
+                                <div class="product-card__main">
+                                    <div class="product-card__slider">
+                                        <div class="product-card__slider-main swiper">
+                                            <div class="product-card__slide">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <aside class="product-card__side">
+                                <div class="product-card__side-caption">Состояние товара</div>
+                                <ul class="product-card__side-labels">
+                                    <li class="product-card__side-label product-card__side-label_active">Новый</li>
+                                    <li class="product-card__side-label">Уценка</li>
+                                    <li class="product-card__side-label">Распродажа</li>
+                                </ul>
+                                <ul class="product-card__characteristics">
+                                    <li class="product-card__characteristics-item">
+                                        <div class="product-card__characteristics-name">Бренд</div>
+                                        <strong class="product-card__characteristics-value blue-color">UNOX</strong>
+                                    </li>
+                                    <li class="product-card__characteristics-item">
+                                        <div class="product-card__characteristics-name">Артикул товара</div>
+                                        <div class="product-card__characteristics-value">000000</div>
+                                    </li>
+                                    <li class="product-card__characteristics-item">
+                                        <div class="product-card__characteristics-name">Доставка по Москве и МО</div>
+                                        <div class="product-card__characteristics-value">Бесплатно</div>
+                                    </li>
+                                    <li class="product-card__characteristics-item">
+                                        <div class="product-card__characteristics-name">Онлайн просмотр</div>
+                                        <div class="product-card__characteristics-value">Да</div>
+                                    </li>
+                                    <li class="product-card__characteristics-item">
+                                        <div class="product-card__characteristics-name">Наличие на складе ПВЗ</div>
+                                        <div class="product-card__characteristics-value blue-color">Краснодар</div>
+                                    </li>
+                                    <li class="product-card__characteristics-item">
+                                        <div class="product-card__characteristics-name">Наличие на складе</div>
+                                        <div class="product-card__characteristics-value green-color text-uppercase">В наличии</div>
+                                    </li>
+                                </ul>
+                                <div class="product-card__price">
+                                    <div class="product-card__price-old">322 703 ₽</div>
+                                    <div class="product-card__price-saving">
+                                        Экономия 91 202 ₽
+                                    </div>
+                                    <div class="product-card__price-current">
+                                        <strong>231 501</strong> ₽
+                                    </div>
+                                </div>
+                                <div class="product-card__more">
+                                    <a href="" class="product-card__more-btn icon-whatsapp"></a>
+                                    <a href="" class="product-card__more-btn icon-telegram"></a>
+                                    <a href="" class="product-card__more-btn">Написать менеджеру</a>
+                                </div>
+                                <button type="button" class="product-card__cart btn btn-primary">
+                                    Добавить товар в корзину
+                                </button>
+                            </aside>
+                        </div>
+                        <div class="product-card__tags">
+                            <a href="" class="product-card__tag">Печь конвекционная</a>
+                            <a href="" class="product-card__tag">UNOX</a>
+                            <a href="" class="product-card__tag">10 Уровней</a>
+                            <a href="" class="product-card__tag">Печи профессиональные для ресторанов</a>
+                            <a href="" class="product-card__tag">Профессиональная техника</a>
+                            <a href="" class="product-card__tag">Печь конвекционная</a>
+                            <a href="" class="product-card__tag">Печь конвекционная</a>
+                            <a href="" class="product-card__tag">UNOX</a>
+                            <a href="" class="product-card__tag">10 Уровней</a>
+                            <a href="" class="product-card__tag">Печи профессиональные для ресторанов</a>
+                            <a href="" class="product-card__tag">Профессиональная техника</a>
+                            <a href="" class="product-card__tag">Печь конвекционная</a>
+                        </div>
+                    </div>
+                </section>
+
+
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header@@if(shadow===true){ header_shadow}">
     <div class="header__container">
         <div class="header__top">
             <a href="#select-language" data-fancybox class="header__language icon-globe">
@@ -10,18 +10,24 @@
             <div class="header__currency icon-currency">
                 97.8 USD / 99.05 EUR
             </div>
-            <nav aria-label="Меню в шапке" class="header__menu menu">
-                <ul class="menu__list">
-                    <li class="menu__item"><a href="" class="menu__link">О компании</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">Доставка и оплата</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">Гарантия и сервис</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">Прайс-лист</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">Блог</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">Производство</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">Наш бренд</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
-                </ul>
-            </nav>
+            <div class="header__menu menu">
+                <a href="/" class="menu__logo">
+                    <img src="@img/logo-white.svg" alt="Логотип">
+                </a>
+                <a href="tel:88003551555" class="menu__phone">8 (800) 355-15-55</a>
+                <nav aria-label="Меню в шапке" class="menu__navbar">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="" class="menu__link">О компании</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Доставка и оплата</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Гарантия и сервис</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Прайс-лист</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Блог</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Производство</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Наш бренд</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
             <button type="button" aria-label="Открыть мобильное меню" class="header__menu-btn icon-menu">
                 <span></span>
                 <span></span>
@@ -30,27 +36,23 @@
         </div>
         <div class="header__body">
             <a href="/index.html" class="header__logo">
-                <img src="@img/logo.svg" alt="logo">
+                <img src="@img/logo.svg" alt="Логотип">
             </a>
-            <a href="" class="header__catalog">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M14 8H2" stroke="#1D1D1D" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M14 3H2" stroke="#1D1D1D" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M14 13H2" stroke="#1D1D1D" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+            <a href="" class="header__catalog icon-burger">
                 Каталог
             </a>
             <form action="#" role="search" class="header__search search">
                 <input type="text" autocomplete="off" name="search" class="search__form-input" placeholder="Поиск по товарам и брендам">
-                <button type="submit" aria-label="Искать товары" data-tooltip title="Сравнение" class="search__btn icon-search"></button>
+                <button type="submit" aria-label="Искать товары" data-tooltip title="Искать товар" class="search__btn icon-search"></button>
             </form>
             <div class="header__actions">
-                <a href="" aria-label="Сравнение товаров" class="header__action icon-compare"></a>
-                <a href="" aria-label="Избранное" class="header__action icon-star"></a>
-                <a href="" aria-label="Корзина" class="header__action icon-cart">
+                <button type="button" aria-label="Показать форму поиска" class="header__action search-btn-toggler icon-search"></button>
+                <a href="" aria-label="Сравнение товаров" data-tooltip title="Сравнение" class="header__action icon-compare"></a>
+                <a href="" aria-label="Избранное" data-tooltip title="Избранное" class="header__action icon-star"></a>
+                <a href="" aria-label="Корзина" data-tooltip title="Корзина" class="header__action icon-cart">
                     <span class="header__action-quantity">12</span>
                 </a>
-                <a href="" aria-label="Личный кабинет" class="header__action icon-user"></a>
+                <a href="" aria-label="Личный кабинет" data-tooltip title="Личный кабинет" class="header__action icon-user"></a>
             </div>
             <a href="tel:88003551555" class="header__phone">8 (800) 355-15-55</a>
         </div>

@@ -97,13 +97,13 @@ body {
 	box-sizing: content-box;
 	max-width: 100%;
 	padding: 0 1rem;
-	@media (min-width: $md4) {
+	@media (min-width: $md5) {
 		max-width: rem(576);
 	}
-	@media (min-width: $md3) {
+	@media (min-width: $md4) {
 		max-width: rem(720);
 	}
-	@media (min-width: $md2) {
+	@media (min-width: $md3) {
 		max-width: rem(960);
 	}
 	@media (min-width: $md1) {
@@ -134,3 +134,4 @@ body {
 
 @import "pages/home";
 @import "pages/auth";
+@import "pages/product-card";

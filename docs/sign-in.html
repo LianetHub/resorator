@@ -44,21 +44,21 @@
   <!-- Twitter -->
 
   <!-- plugnis -->
-  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240601142816">
-  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240601142816">
-  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240601142816">
-  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240601142816">
+  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240601160123">
+  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240601160123">
+  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240601160123">
+  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240601160123">
   <!-- plugnis -->
 
 
-  <link rel="stylesheet" href="css/reset.min.css?_v=20240601142816">
-  <link rel="stylesheet" href="css/style.min.css?_v=20240601142816">
+  <link rel="stylesheet" href="css/reset.min.css?_v=20240601160123">
+  <link rel="stylesheet" href="css/style.min.css?_v=20240601160123">
 
 </head>
 
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header header_shadow">
       <div class="header__container">
         <div class="header__top">
           <a href="#select-language" data-fancybox class="header__language icon-globe">
@@ -70,34 +70,40 @@
           <div class="header__currency icon-currency">
             97.8 USD / 99.05 EUR
           </div>
-          <nav aria-label="Меню в шапке" class="header__menu menu">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a href="" class="menu__link">О компании</a>
-              </li>
-              <li class="menu__item">
-                <a href="" class="menu__link">Доставка и оплата</a>
-              </li>
-              <li class="menu__item">
-                <a href="" class="menu__link">Гарантия и сервис</a>
-              </li>
-              <li class="menu__item">
-                <a href="" class="menu__link">Прайс-лист</a>
-              </li>
-              <li class="menu__item">
-                <a href="" class="menu__link">Блог</a>
-              </li>
-              <li class="menu__item">
-                <a href="" class="menu__link">Производство</a>
-              </li>
-              <li class="menu__item">
-                <a href="" class="menu__link">Наш бренд</a>
-              </li>
-              <li class="menu__item">
-                <a href="" class="menu__link">Контакты</a>
-              </li>
-            </ul>
-          </nav>
+          <div class="header__menu menu">
+            <a href="/" class="menu__logo">
+              <img src="img/logo-white.svg" alt="Логотип">
+            </a>
+            <a href="tel:88003551555" class="menu__phone">8 (800) 355-15-55</a>
+            <nav aria-label="Меню в шапке" class="menu__navbar">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="" class="menu__link">О компании</a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">Доставка и оплата</a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">Гарантия и сервис</a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">Прайс-лист</a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">Блог</a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">Производство</a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">Наш бренд</a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
           <button type="button" aria-label="Открыть мобильное меню" class="header__menu-btn icon-menu">
             <span></span>
             <span></span>
@@ -106,27 +112,23 @@
         </div>
         <div class="header__body">
           <a href="/index.html" class="header__logo">
-            <img src="img/logo.svg" alt="logo">
+            <img src="img/logo.svg" alt="Логотип">
           </a>
-          <a href="" class="header__catalog">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M14 8H2" stroke="#1D1D1D" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M14 3H2" stroke="#1D1D1D" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M14 13H2" stroke="#1D1D1D" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
+          <a href="" class="header__catalog icon-burger">
             Каталог
           </a>
           <form action="#" role="search" class="header__search search">
             <input type="text" autocomplete="off" name="search" class="search__form-input" placeholder="Поиск по товарам и брендам">
-            <button type="submit" aria-label="Искать товары" data-tooltip title="Сравнение" class="search__btn icon-search"></button>
+            <button type="submit" aria-label="Искать товары" data-tooltip title="Искать товар" class="search__btn icon-search"></button>
           </form>
           <div class="header__actions">
-            <a href="" aria-label="Сравнение товаров" class="header__action icon-compare"></a>
-            <a href="" aria-label="Избранное" class="header__action icon-star"></a>
-            <a href="" aria-label="Корзина" class="header__action icon-cart">
+            <button type="button" aria-label="Показать форму поиска" class="header__action search-btn-toggler icon-search"></button>
+            <a href="" aria-label="Сравнение товаров" data-tooltip title="Сравнение" class="header__action icon-compare"></a>
+            <a href="" aria-label="Избранное" data-tooltip title="Избранное" class="header__action icon-star"></a>
+            <a href="" aria-label="Корзина" data-tooltip title="Корзина" class="header__action icon-cart">
               <span class="header__action-quantity">12</span>
             </a>
-            <a href="" aria-label="Личный кабинет" class="header__action icon-user"></a>
+            <a href="" aria-label="Личный кабинет" data-tooltip title="Личный кабинет" class="header__action icon-user"></a>
           </div>
           <a href="tel:88003551555" class="header__phone">8 (800) 355-15-55</a>
         </div>
@@ -300,17 +302,62 @@
       </div>
     </footer>
   </div>
-
+  <div id="select-language" class="popup">
+    <div class="popup__header">
+      <h3 class="popup__title title-sm">Выбор языка</h3>
+      <button type="button" class="popup__close" data-fancybox-close></button>
+    </div>
+    <p class="popup__subtitle">
+      Язык отображения интерфейса сайта, определен автоматически как Русский.
+    </p>
+    <form action="#" class="popup__form form" id="language-form">
+      <label for="language-select" class="form__label" tabindex="-1">Язык</label>
+      <select name="language" id="language-select" class="select" data-list-mobile>
+        <option value="RU" selected data-img-src="img/icons/flag-ru.svg">Русский</option>
+        <option value="EN" data-img-src="img/icons/flag-usa.svg">English</option>
+        <option value="CH" data-img-src="img/icons/flag-china.svg">中文</option>
+      </select>
+      <button type="submit" class="form__btn btn btn-primary">Выбрать</button>
+    </form>
+  </div>
+  <div id="select-location" class="popup">
+    <div class="popup__header">
+      <h3 class="popup__title title-sm">Выбор локации</h3>
+      <button type="button" class="popup__close" data-fancybox-close></button>
+    </div>
+    <p class="popup__subtitle">
+      Ваше местоположение определено автоматически. Вы можете изменить его вручную.
+    </p>
+    <form action="#" class="popup__form form" id="location-form">
+      <label for="location-select" class="form__label" tabindex="-1">Ваше местоположение</label>
+      <select name="location" id="location-select">
+        <option selected value="PK">Приморский край</option>
+        <option value="MSK">Москва</option>
+        <option value="SPB">Санкт-Петербург</option>
+        <option value="PERM">Пермь</option>
+      </select>
+      <button type="submit" class="form__btn btn btn-primary">Выбрать</button>
+    </form>
+  </div>
+  <div id="success" class="popup">
+    <div class="popup__body">
+      <div class="popup__title title-sm">Thank you! </div>
+      <p class="popup__subtitle">
+        Our consultant will contact you and answer all your questions!
+      </p>
+      <button type="button" data-fancybox-close class="popup__btn btn btn-primary btn-sm">Okay</button>
+    </div>
+  </div>
   <!-- plugnis -->
-  <script src="js/libs/jquery-3.7.1.min.js?_v=20240601142816"></script>
-  <script src="js/libs/swiper-bundle.min.js?_v=20240601142816"></script>
-  <script src="js/libs/fancybox.umd.js?_v=20240601142816"></script>
-  <script src="js/libs/nouislider.min.js?_v=20240601142816"></script>
-  <script src="js/libs/select2.full.min.js?_v=20240601142816"></script>
+  <script src="js/libs/jquery-3.7.1.min.js?_v=20240601160123"></script>
+  <script src="js/libs/swiper-bundle.min.js?_v=20240601160123"></script>
+  <script src="js/libs/fancybox.umd.js?_v=20240601160123"></script>
+  <script src="js/libs/nouislider.min.js?_v=20240601160123"></script>
+  <script src="js/libs/select2.full.min.js?_v=20240601160123"></script>
   <!-- plugnis -->
 
 
-  <script src="js/app.min.js?_v=20240601142816"></script>
+  <script src="js/app.min.js?_v=20240601160123"></script>
 </body>
 
 </html>

@@ -30,7 +30,7 @@
 		height: 0;
 		border-left: rem(5) solid transparent;
 		border-right: rem(5) solid transparent;
-		left: 50%;
+		left: calc(50%);
 		transform: translateX(-50%);
 	}
 }

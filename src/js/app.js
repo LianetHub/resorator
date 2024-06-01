@@ -23,6 +23,20 @@ $(function () {
     devFunctions.mask();
 
 
+    // event handlers
+    $(document).on('click', function (e) {
+        let $target = $(e.target);
+
+        if ($target.hasClass('search-btn-toggler')) {
+            $target.toggleClass('active');
+            $(".search").toggleClass('search_visible')
+        }
+
+        if ($target.hasClass('icon-menu')) {
+            $('.header').toggleClass('open-menu');
+        }
+    })
+
 
 
     // Fancybox.show([{
