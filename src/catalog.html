@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор | Каталог'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "shadow": true
+            })
+            <main class="page">
+                <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                    <div class="breadcrumbs__container">
+                        <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a href="/" class="breadcrumbs__link" itemprop="item">
+                                    <span itemprop="name">Главная</span>
+                                </a>
+                                <meta itemprop="position" content="1">
+                            </li>
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a href="/" class="breadcrumbs__link" itemprop="item">
+                                    <span itemprop="name">Категория</span>
+                                </a>
+                                <meta itemprop="position" content="2">
+                            </li>
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a class="breadcrumbs__link active" itemprop="item">
+                                    <span itemprop="name">Пароконвектоматы</span>
+                                </a>
+                                <meta itemprop="position" content="3">
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <section class="catalog">
+                    <div class="catalog__container">
+                        <div class="row">
+                            <div class="col-xxl-10 col-9">
+                                <div class="catalog__header">
+                                    <div class="catalog__title title-md">
+                                        Пароконвектоматы
+                                        <span class="catalog__quantity">
+                                            (51)
+                                        </span>
+                                    </div>
+                                    <div class="catalog__views">
+                                        <label class="catalog__views-item">
+                                            <input type="radio" checked name="views" value="grid" class="catalog__views-input hidden" hidden>
+                                            <span class="catalog__views-btn icon-grid"></span>
+                                        </label>
+                                        <label class="catalog__views-item">
+                                            <input type="radio" name="views" value="rows" class="catalog__views-input hidden" hidden>
+                                            <span class="catalog__views-btn icon-rows"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="catalog__grid">
+                                    @@loop('./html/_product.html', './html/products-catalog.json')
+                                </div>
+                            </div>
+                            <aside class="col-xxl-2 col-3 catalog__sidebar">
+                                <div class="catalog__sidebar-caption">Фильтр</div>
+                                <form action="#" class="catalog__filters">
+                                    <div class="catalog__filters-rows">
+                                        <div class="catalog__filters-row">
+                                            <button type="button" class="catalog__filters-spoller icon-chevron">Цена</button>
+                                            <div class="catalog__filters-content">
+                                                <div class="catalog__filters-price">
+                                                    <div class="catalog__filters-column">
+                                                        <span class="catalog__filters-unit">от</span>
+                                                        <input type="number" name="start" min="0" value="10000" class="form__input">
+                                                    </div>
+                                                    <div class="catalog__filters-column">
+                                                        <span class="catalog__filters-unit">от</span>
+                                                        <input type="number" name="start" min="0" value="30000" class="form__input">
+                                                    </div>
+                                                    <div class="catalog__filters-range"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalog__filters-row">
+                                            <button type="button" class="catalog__filters-spoller icon-chevron">Наличие товара</button>
+                                            <div class="catalog__filters-content">
+                                                <label class="catalog__filters-checkbox checkbox">
+                                                    <input type="checkbox" checked name="availability" value="availability" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content">
+                                                        <span class="checkbox__row">
+                                                            В наличии
+                                                            <span class="checkbox__quantity">(100)</span>
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                                <label class="catalog__filters-checkbox checkbox">
+                                                    <input type="checkbox" name="availability" value="order" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content">
+                                                        <span class="checkbox__row">
+                                                            Под заказ
+                                                            <span class="checkbox__quantity">(100)</span>
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="catalog__filters-row">
+                                            <button type="button" class="catalog__filters-spoller icon-chevron">Бренд</button>
+                                            <div class="catalog__filters-content">
+                                                <label class="catalog__filters-checkbox checkbox">
+                                                    <input type="checkbox" name="brand" value="Unox" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content">
+                                                        <span class="checkbox__row">
+                                                            Unox
+                                                            <span class="checkbox__quantity">(27)</span>
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                                <label class="catalog__filters-checkbox checkbox">
+                                                    <input type="checkbox" name="brand" value="Smeg" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content">
+                                                        <span class="checkbox__row">
+                                                            Smeg
+                                                            <span class="checkbox__quantity">(24)</span>
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                                <label class="catalog__filters-checkbox checkbox">
+                                                    <input type="checkbox" name="brand" value="Steba" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content">
+                                                        <span class="checkbox__row">
+                                                            Steba
+                                                            <span class="checkbox__quantity">(24)</span>
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                                <label class="catalog__filters-checkbox checkbox">
+                                                    <input type="checkbox" name="brand" value="Abat" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content">
+                                                        <span class="checkbox__row">
+                                                            Abat
+                                                            <span class="checkbox__quantity">(24)</span>
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                                <label class="catalog__filters-checkbox checkbox">
+                                                    <input type="checkbox" name="brand" value="Smeg" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content">
+                                                        <span class="checkbox__row">
+                                                            Smeg
+                                                            <span class="checkbox__quantity">(24)</span>
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="catalog__filters-row">
+                                            <button type="button" class="catalog__filters-spoller icon-chevron">
+                                                Габариты
+                                            </button>
+                                            <div class="catalog__filters-content">
+                                                <div class="form__field">
+                                                    <label for="filter-product-width" class="form__label" tabindex="-1">Ширина</label>
+                                                    <select name="width" id="filter-product-width">
+                                                        <option selected value="860">860 мм</option>
+                                                        <option value="1200">1200 мм</option>
+                                                        <option value="2400">2400 мм</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form__field">
+                                                    <label for="filter-product-height" class="form__label" tabindex="-1">Высота</label>
+                                                    <select name="height" id="filter-product-height">
+                                                        <option selected value="900">900 мм</option>
+                                                        <option value="1200">1200 мм</option>
+                                                        <option value="2400">2400 мм</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form__field">
+                                                    <label for="filter-product-deep" class="form__label" tabindex="-1">Глубина</label>
+                                                    <select name="deep" id="filter-product-deep">
+                                                        <option selected value="930">930 мм</option>
+                                                        <option value="1200">1200 мм</option>
+                                                        <option value="2400">2400 мм</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalog__filters-row">
+                                            <div class="catalog__filters-toggler">
+                                                Товары по акции
+                                                <label class="toggler">
+                                                    <input type="checkbox" name="promotions" class="toggler__input hidden" hidden>
+                                                    <span class="toggler__btn"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="catalog__filters-row">
+                                            <div class="catalog__filters-toggler">
+                                                Товары со скидкой
+                                                <label class="toggler">
+                                                    <input type="checkbox" checked name="sale" class="toggler__input hidden" hidden>
+                                                    <span class="toggler__btn"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="reset" class="catalog__filters-btn btn btn-secondary">Сбросить</button>
+                                    <button type="submit" class="catalog__filters-btn btn btn-primary">Показать</button>
+                                </form>
+                                <div class="banners__item banners__item_column">
+                                    <div class="banners__item-image">
+                                        <img src="@img/banners/01.png" alt="Баннер">
+                                    </div>
+                                    <div class="banners__item-body">
+                                        <div class="banners__item-caption">
+                                            Покупка <br> онлайн
+                                        </div>
+                                        <div class="banners__item-desc">
+                                            Наш магазин настроен на удобную работу с онлайн
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

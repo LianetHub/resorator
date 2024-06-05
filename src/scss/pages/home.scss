@@ -699,6 +699,9 @@
 		gap: 1.25rem;
 		background: #e4ecf7;
 		color: $darkBlue;
+		&.banners__item_column {
+			flex-direction: column;
+		}
 		&.banners__item_yellow {
 			background: #f4eed7;
 		}

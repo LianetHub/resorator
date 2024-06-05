@@ -296,7 +296,7 @@
                                     @@loop('./html/_product.html', './html/products-slider.json')
                                 </div>
                             </div>
-                            <a href="" class="product-card__more icon-chevron">Развернуть все аксессуары</a>
+                            <a href="" class="product-card__loadmore icon-chevron">Развернуть все аксессуары</a>
                         </div>
                         <div class="product-card__desc">
                             <h3 class="product-card__caption">
@@ -333,7 +333,7 @@
                                 <p>В комплекте идет тележка</p>
                             </div>
                             <button type="button" class="product-card__desc-more icon-chevron">Развернуть описание</button>
-                            <div class="product-card__more-block">
+                            <div class="product-card__more-block product-card__desc-text">
                                 <p>
                                     Паровая конвекционная печь UNOX XB 1083
                                     серии BakerLux предназначена для приготовления различных блюд,
@@ -434,13 +434,46 @@
                                         <span class="product-card__docs-format">PDF файл</span>
                                     </a>
                                 </li>
-                                <li class="product-card__docs-item">
-                                    <a href="" download class="product-card__docs-link icon-doc">
-                                        <span class="product-card__docs-name">Описание и характеристики</span>
-                                        <span class="product-card__docs-format">PDF файл</span>
-                                    </a>
-                                </li>
+
                             </ul>
+                        </div>
+                        <div class="product-card__products">
+                            <div class="product-card__products-header">
+                                <div class="product-card__caption">
+                                    С этим товаром покупают
+                                    <span class="product-card__quantity">(124)</span>
+                                </div>
+                                <div class="product-card__contorls">
+                                    <div class="product-card__prev swiper-button-prev"></div>
+                                    <div class="product-card__pagination"></div>
+                                    <div class="product-card__next swiper-button-next"></div>
+                                </div>
+                            </div>
+                            <div class="product-card__items swiper">
+                                <div class="swiper-wrapper">
+                                    @@loop('./html/_product.html', './html/products-slider.json')
+                                </div>
+                            </div>
+                            <a href="" class="product-card__loadmore">Смотреть все предложения</a>
+                        </div>
+                        <div class="product-card__products">
+                            <div class="product-card__products-header">
+                                <div class="product-card__caption">
+                                    Похожие товары
+                                    <span class="product-card__quantity">(124)</span>
+                                </div>
+                                <div class="product-card__contorls">
+                                    <div class="product-card__prev swiper-button-prev"></div>
+                                    <div class="product-card__pagination"></div>
+                                    <div class="product-card__next swiper-button-next"></div>
+                                </div>
+                            </div>
+                            <div class="product-card__items swiper">
+                                <div class="swiper-wrapper">
+                                    @@loop('./html/_product.html', './html/products-slider.json')
+                                </div>
+                            </div>
+                            <a href="" class="product-card__more">Смотреть все предложения</a>
                         </div>
                     </div>
                 </section>

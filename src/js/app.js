@@ -42,6 +42,21 @@ $(function () {
                 $target.text('Развернуть храктеристики');
             }
         }
+        if ($target.hasClass('product-card__desc-more')) {
+            $target.toggleClass('active');
+            $target.next().slideToggle()
+            if ($target.hasClass('active')) {
+                $target.text('Свернуть');
+            } else {
+                $target.text('Развернуть описание');
+            }
+        }
+
+        if ($target.hasClass('catalog__filters-spoller')) {
+            $target.toggleClass('active');
+            $target.next().slideToggle();
+        }
+
     })
 
 
@@ -286,6 +301,14 @@ $(function () {
                     nextEl: next[0],
                     prevEl: prev[0]
                 },
+                breakpoints: {
+                    1199.98: {
+                        slidesPerView: 4,
+                    },
+                    1399.98: {
+                        slidesPerView: 6,
+                    }
+                }
             });
 
 
@@ -299,6 +322,86 @@ $(function () {
 
 
     }
+
+    // range slider
+
+    // const rangeFilters = document.querySelectorAll('.catalog__filters-range');
+
+    // if (rangeFilters.length > 0) {
+    //     rangeFilters.forEach(rangeFilter => {
+
+    //         const rangeSlider = rangeFilter.querySelector('.catalog__filters-range');
+    //         const startInput = rangeFilter.querySelector('.range-filter__input_start');
+    //         const startInputValue = rangeFilter.querySelector('.range-filter__value_start');
+    //         const endInput = rangeFilter.querySelector('.range-filter__input_end');
+    //         const endInputValue = rangeFilter.querySelector('.range-filter__value_end');
+    //         const inputs = [startInput, endInput];
+    //         startInputValue.innerHTML = startInput.value;
+    //         endInputValue.innerHTML = endInput.value;
+
+
+    //         noUiSlider.create(rangeSlider, {
+    //             start: [startInput.value, endInput.value],
+    //             connect: true,
+    //             step: +startInput.getAttribute('step'),
+    //             range: {
+    //                 'min': [+startInput.getAttribute('min')],
+    //                 'max': [+endInput.getAttribute('max')]
+    //             }
+    //         });
+
+
+    //         rangeSlider.noUiSlider.on('update', function (values, handle) {
+    //             inputs[handle].value = Math.round(values[handle]);
+    //             updateValue(inputs[handle]);
+    //         });
+
+    //         rangeSlider.noUiSlider.on('start', function (values, handle) {
+    //             $(inputs[handle]).addClass('active');
+    //         });
+
+    //         const setRangeSlider = (i, value) => {
+    //             let arr = [null, null];
+    //             arr[i] = value;
+    //             rangeSlider.noUiSlider.set(arr);
+    //         };
+
+    //         inputs.forEach((el, index) => {
+
+    //             el.addEventListener('change', (e) => {
+    //                 setRangeSlider(index, e.currentTarget.value);
+
+    //             });
+    //         });
+
+    //         inputs.forEach(input => {
+    //             input.addEventListener('input', (e) => {
+    //                 updateValue(e.target);
+    //                 $(input).addClass('active');
+    //             })
+    //         });
+
+    //         function updateValue(input) {
+
+    //             if (input.value.length >= input.max.length) {
+    //                 input.value = input.value.slice(0, input.max.length);
+    //             }
+
+    //             if (input == startInput) {
+    //                 startInputValue.innerHTML = input.value;
+    //             }
+
+    //             if (input == endInput) {
+    //                 endInputValue.innerHTML = input.value;
+    //             }
+    //         }
+
+
+
+    //     })
+    // };
+
+
 
 
 });

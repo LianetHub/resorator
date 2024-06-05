@@ -18,7 +18,16 @@
 	}
 }
 
+.icon-check:before {
+	content: "\e918";
+}
 .icon-grid:before {
+	content: "\e916";
+}
+.icon-rows:before {
+	content: "\e917";
+}
+.icon-catalog:before {
 	content: "\e915";
 }
 .icon-play:before {
