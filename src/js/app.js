@@ -1,9 +1,7 @@
 "use strict";
 
 
-// import Swiper from 'swiper';
-// import { Fancybox } from '@fancyapps/ui';
-// import Swiper from 'swiper';
+
 import * as devFunctions from './modules/functions.js';
 
 //  init Fancybox

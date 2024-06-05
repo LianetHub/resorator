@@ -574,7 +574,9 @@
 		}
 		&:hover {
 			padding: 0.4375rem;
-			max-width: 100%;
+			@media (min-width: $md5) {
+				max-width: 100%;
+			}
 			span {
 				margin-right: 0;
 				margin-left: 0.625rem;

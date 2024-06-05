@@ -278,8 +278,10 @@
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				background: $yellow;
-				color: $dark;
+				@media (min-width: $md5) {
+					background: $yellow;
+					color: $dark;
+				}
 			}
 		}
 		&.search-btn-toggler {

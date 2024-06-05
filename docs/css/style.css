@@ -1,24 +1,16 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DinPro";
-  font-display: swap;
   src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "icons";
+  font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -39,6 +31,14 @@
 }
 
 @font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Inter";
   font-display: swap;
   src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
@@ -49,16 +49,16 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -2579,7 +2579,6 @@ body.lock-menu {
 
 .product__action:hover {
   padding: 0.4375rem;
-  max-width: 100%;
 }
 
 .product__action:hover span {
@@ -3286,6 +3285,10 @@ body.lock-menu {
   border-radius: 0.3125rem;
 }
 
+.product-card__tag.active {
+  background: #f7ce46;
+}
+
 @media (min-width: 575.98px) {
   [class*=__container] {
     max-width: 36rem;
@@ -3493,6 +3496,10 @@ body.lock-menu {
     font-weight: 600;
   }
 
+  .product__action:hover {
+    max-width: 100%;
+  }
+
   .product__price {
     margin-top: 0.69rem;
   }
@@ -3512,6 +3519,13 @@ body.lock-menu {
 
   .product__cart {
     margin-left: auto;
+  }
+}
+
+@media (any-hover: hover) and (min-width: 575.98px) {
+  .actions__item:hover {
+    background: #f7ce46;
+    color: #1d1d1d;
   }
 }
 
@@ -5315,11 +5329,6 @@ body.lock-menu {
 
   .header__phone:hover {
     color: #f7ce46;
-  }
-
-  .actions__item:hover {
-    background: #f7ce46;
-    color: #1d1d1d;
   }
 
   .search__btn:hover {
