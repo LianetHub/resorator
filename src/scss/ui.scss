@@ -186,14 +186,19 @@
 	transform: none;
 	transition: color 0.3s ease 0s;
 	color: inherit;
-	border-radius: 50%;
-	border: rem(1.5) solid currentColor;
-	width: 3.75rem;
-	height: 3.75rem;
-	font-size: 1.75rem;
-	transition: color 0.3s ease 0s, opacity 0.3s ease 0s, background-color 0.3s ease 0s, border-color 0.3s ease 0s;
-	@extend %ic, .icon-arrow;
+	border-radius: 0.3125rem;
+	border: rem(1) solid $grayStroke;
+	background: $white;
+	width: 2rem;
+	height: 2rem;
+	padding: 0.4375rem 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $lightBlue;
+	@extend %ic, .icon-arrow-short;
 	z-index: 2;
+	transition: background-color 0.3s ease 0s, color 0.3s ease 0;
 	&::before {
 		color: currentColor;
 	}
@@ -207,7 +212,8 @@
 	}
 	@media (any-hover: hover) {
 		&:hover {
-			color: #4770ff;
+			background: $yellow;
+			color: $dark;
 		}
 	}
 }

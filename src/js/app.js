@@ -1,7 +1,6 @@
 "use strict";
 
 
-
 import * as devFunctions from './modules/functions.js';
 
 //  init Fancybox
@@ -32,6 +31,16 @@ $(function () {
         if ($target.hasClass('menu__arrow')) {
             $target.toggleClass('active');
             $target.next().slideToggle()
+        }
+
+        if ($target.hasClass('product-card__info-more')) {
+            $target.toggleClass('active');
+            $target.prev().toggleClass('full');
+            if ($target.hasClass('active')) {
+                $target.text('Свернуть');
+            } else {
+                $target.text('Развернуть храктеристики');
+            }
         }
     })
 
@@ -248,6 +257,43 @@ $(function () {
             }
 
         });
+
+
+
+
+    }
+
+
+    if ($(".product-card__products").length > 0) {
+
+        $(".product-card__products").each(function (index, section) {
+            let slider = $(section).find('.product-card__items');
+            let prev = $(section).find('.product-card__prev');
+            let next = $(section).find('.product-card__next');
+            let pagination = $(section).find('.product-card__pagination');
+
+            new Swiper(slider[0], {
+                slidesPerView: 6,
+                spaceBetween: 20,
+                pagination: {
+                    el: pagination[0],
+                    type: "fraction",
+                    renderFraction: function (currentClass, totalClass) {
+                        return `Страница <span class="${currentClass}"></span> из <span class="${totalClass}"></span>`;
+                    }
+                },
+                navigation: {
+                    nextEl: next[0],
+                    prevEl: prev[0]
+                },
+            });
+
+
+
+        })
+
+
+
 
 
 

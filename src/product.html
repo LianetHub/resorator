@@ -142,7 +142,74 @@
                                                 <div class="product-card__info-name">Страна-изготовитель</div>
                                                 <div class="product-card__info-value">Италия</div>
                                             </li>
+                                            <li class="product-card__info-item">
+                                                <div class="product-card__info-name">Цвет / <a href="">Выбрать</a></div>
+                                                <div class="product-card__info-value">Серый металлик</div>
+                                            </li>
+                                            <li class="product-card__info-item">
+                                                <div class="product-card__info-name">Мощность</div>
+                                                <div class="product-card__info-value">10.5 кВт</div>
+                                            </li>
+                                            <li class="product-card__info-item">
+                                                <div class="product-card__info-name">Макс. температура нагрева</div>
+                                                <div class="product-card__info-value">260 °С</div>
+                                            </li>
+                                            <li class="product-card__info-item">
+                                                <div class="product-card__info-name">Мин. температура нагрева</div>
+                                                <div class="product-card__info-value">50 °С</div>
+                                            </li>
+                                            <li class="product-card__info-item">
+                                                <div class="product-card__info-name">Размеры / <a href="">Выбрать</a></div>
+                                                <div class="product-card__info-value">860х900х930 мм</div>
+                                            </li>
+                                            <li class="product-card__info-item">
+                                                <div class="product-card__info-name">Вес</div>
+                                                <div class="product-card__info-value">82.8 кг</div>
+                                            </li>
+                                            <li class="product-card__info-item">
+                                                <div class="product-card__info-name">Гарантийный срок</div>
+                                                <div class="product-card__info-value">12 мес</div>
+                                            </li>
+                                            <li class="product-card__info-item">
+                                                <div class="product-card__info-name">Страна-изготовитель</div>
+                                                <div class="product-card__info-value">Италия</div>
+                                            </li>
+                                            <li class="product-card__info-item">
+                                                <div class="product-card__info-name">Цвет / <a href="">Выбрать</a></div>
+                                                <div class="product-card__info-value">Серый металлик</div>
+                                            </li>
+                                            <li class="product-card__info-item">
+                                                <div class="product-card__info-name">Мощность</div>
+                                                <div class="product-card__info-value">10.5 кВт</div>
+                                            </li>
+                                            <li class="product-card__info-item">
+                                                <div class="product-card__info-name">Макс. температура нагрева</div>
+                                                <div class="product-card__info-value">260 °С</div>
+                                            </li>
+                                            <li class="product-card__info-item">
+                                                <div class="product-card__info-name">Мин. температура нагрева</div>
+                                                <div class="product-card__info-value">50 °С</div>
+                                            </li>
+                                            <li class="product-card__info-item">
+                                                <div class="product-card__info-name">Размеры / <a href="">Выбрать</a></div>
+                                                <div class="product-card__info-value">860х900х930 мм</div>
+                                            </li>
+                                            <li class="product-card__info-item">
+                                                <div class="product-card__info-name">Вес</div>
+                                                <div class="product-card__info-value">82.8 кг</div>
+                                            </li>
+                                            <li class="product-card__info-item">
+                                                <div class="product-card__info-name">Гарантийный срок</div>
+                                                <div class="product-card__info-value">12 мес</div>
+                                            </li>
+                                            <li class="product-card__info-item">
+                                                <div class="product-card__info-name">Страна-изготовитель</div>
+                                                <div class="product-card__info-value">Италия</div>
+                                            </li>
                                         </ul>
+                                        <button type="button" class="product-card__info-more icon-chevron">
+                                            Развернуть храктеристики
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -212,6 +279,25 @@
                             <a href="" class="product-card__tag">Профессиональная техника</a>
                             <a href="" class="product-card__tag">Печь конвекционная</a>
                         </div>
+                        <div class="product-card__products">
+                            <div class="product-card__products-header">
+                                <div class="product-card__filters">
+                                    <a href="" class="product-card__filter active">Аксессуары <span class="product-card__quantity">(124)</span></a>
+                                    <a href="" class="product-card__filter">Запасные части <span class="product-card__quantity">(8)</span></a>
+                                </div>
+                                <div class="product-card__contorls">
+                                    <div class="product-card__prev swiper-button-prev"></div>
+                                    <div class="product-card__pagination"></div>
+                                    <div class="product-card__next swiper-button-next"></div>
+                                </div>
+                            </div>
+                            <div class="product-card__items swiper">
+                                <div class="swiper-wrapper">
+                                    @@loop('./html/_product.html', './html/products-slider.json')
+                                </div>
+                            </div>
+                            <a href="" class="product-card__more icon-chevron">Развернуть все аксессуары</a>
+                        </div>
                         <div class="product-card__desc">
                             <h3 class="product-card__caption">
                                 Описание
@@ -243,7 +329,9 @@
                                 <li>Предварительный разогрев (максимальная температура): 260 С</li>
                             </ul>
                             <div class="product-card__desc-heading">Комплектация:</div>
-                            <p>В комплекте идет тележка</p>
+                            <div class="product-card__desc-text">
+                                <p>В комплекте идет тележка</p>
+                            </div>
                             <button type="button" class="product-card__desc-more icon-chevron">Развернуть описание</button>
                             <div class="product-card__more-block">
                                 <p>
