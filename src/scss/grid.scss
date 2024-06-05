@@ -1,6 +1,10 @@
 .row {
-	--gutter-x: 1.25rem;
-	--gutter-y: 1.25rem;
+	--gutter-x: 0.62rem;
+	--gutter-y: 0.62rem;
+	@media (min-width: $md5) {
+		--gutter-x: 1.25rem;
+		--gutter-y: 1.25rem;
+	}
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: calc(-1 * var(--gutter-y));

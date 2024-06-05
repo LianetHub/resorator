@@ -44,15 +44,15 @@
   <!-- Twitter -->
 
   <!-- plugnis -->
-  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240602003903">
-  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240602003903">
-  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240602003903">
-  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240602003903">
+  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240605135705">
+  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240605135705">
+  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240605135705">
+  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240605135705">
   <!-- plugnis -->
 
 
-  <link rel="stylesheet" href="css/reset.min.css?_v=20240602003903">
-  <link rel="stylesheet" href="css/style.min.css?_v=20240602003903">
+  <link rel="stylesheet" href="css/reset.min.css?_v=20240605135705">
+  <link rel="stylesheet" href="css/style.min.css?_v=20240605135705">
 
 </head>
 
@@ -82,18 +82,60 @@
                 </li>
                 <li class="menu__item">
                   <a href="" class="menu__link">Доставка и оплата</a>
+                  <button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
+                  <ul class="submenu">
+                    <li class="submenu__item">
+                      <a href="" class="submenu__link icon-chevron">Доставка</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="" class="submenu__link icon-chevron">Оплата</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="menu__item">
                   <a href="" class="menu__link">Гарантия и сервис</a>
                 </li>
                 <li class="menu__item">
                   <a href="" class="menu__link">Прайс-лист</a>
+                  <button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
+                  <ul class="submenu">
+                    <li class="submenu__item">
+                      <a href="" class="submenu__link icon-chevron">Пиццерия</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="" class="submenu__link icon-chevron">Пекарня</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="menu__item">
                   <a href="" class="menu__link">Блог</a>
+                  <button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
+                  <ul class="submenu">
+                    <li class="submenu__item">
+                      <a href="" class="submenu__link icon-chevron">Статья 1</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="" class="submenu__link icon-chevron">Статья 2</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="" class="submenu__link icon-chevron">Статья 3</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="menu__item">
                   <a href="" class="menu__link">Производство</a>
+                  <button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
+                  <ul class="submenu">
+                    <li class="submenu__item">
+                      <a href="" class="submenu__link icon-chevron">Статья 1</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="" class="submenu__link icon-chevron">Статья 2</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="" class="submenu__link icon-chevron">Статья 3</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="menu__item">
                   <a href="" class="menu__link">Наш бренд</a>
@@ -104,7 +146,7 @@
               </ul>
             </nav>
           </div>
-          <button type="button" aria-label="Открыть мобильное меню" class="header__menu-btn icon-menu">
+          <button type="button" aria-label="Открыть мобильное меню" class="header__menu-btn menu-toggler icon-menu">
             <span></span>
             <span></span>
             <span></span>
@@ -122,23 +164,31 @@
             <button type="submit" aria-label="Искать товары" data-tooltip title="Искать товар" class="search__btn icon-search"></button>
           </form>
           <div class="header__actions actions">
+            <button type="button" class="actions__item menu-toggler mobile-sm-only">
+              <span class="icon-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+              <span class="actions__item-desc">Меню</span>
+            </button>
+            <a href="" data-tooltip title="Каталог" class="actions__item icon-grid mobile-sm-only">
+              <span class="actions__item-desc">Каталог</span>
+            </a>
             <button type="button" class="actions__item search-btn-toggler icon-search">
               <span class="actions__item-desc">Поиск</span>
             </button>
-            <!-- <a href="" data-tooltip title="Сравнение" class="actions__item icon-grid">
-                    <span class="actions__item-desc">Каталог</span>
-                </a> -->
-            <a href="" data-tooltip title="Сравнение" class="actions__item icon-compare">
+            <a href="" data-tooltip title="Сравнение" class="actions__item icon-compare open-menu-mobile">
               <span class="actions__item-desc">Сравнение</span>
             </a>
-            <a href="" data-tooltip title="Избранное" class="actions__item icon-star">
+            <a href="" data-tooltip title="Избранное" class="actions__item icon-star open-menu-mobile">
               <span class="actions__item-desc">Избранное</span>
             </a>
             <a href="" data-tooltip title="Корзина" class="actions__item icon-cart">
               <span class="actions__item-desc">Корзина</span>
               <span class="actions__item-quantity">12</span>
             </a>
-            <a href="" data-tooltip title="Личный кабинет" class="actions__item icon-user">
+            <a href="" data-tooltip title="Личный кабинет" class="actions__item icon-user  open-menu-mobile">
               <span class="actions__item-desc">Пользователь</span>
             </a>
           </div>
@@ -594,6 +644,10 @@
       </section>
       <div class="products">
         <div class="products__container">
+          <form class="products__search search mobile-sm-only" role="search">
+            <input type="text" autocomplete="off" name="search" class="search__form-input" placeholder="Поиск по товарам и брендам">
+            <button type="submit" aria-label="Искать товары" data-tooltip title="Искать товар" class="search__btn icon-search"></button>
+          </form>
           <div class="row">
             <div class="col-xxl-8">
               <div class="row">
@@ -639,7 +693,7 @@
                       <small>Пароконвектомат</small>
                       UNOX XB693
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -726,7 +780,7 @@
                       <small>Пароконвектомат</small>
                       Abat ПКА 6-2/3П
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -813,7 +867,7 @@
                       <small>Пароконвектомат</small>
                       UNOX XFT 133
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -851,7 +905,7 @@
 
 
 
-                      <div class="product__avaibility">Есть на&nbsp;складе</div>
+                      <div class="product__avaibility">под заказ</div>
 
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
@@ -902,7 +956,7 @@
                       <small>Пароконвектомат</small>
                       UNOX XEBC-06EU-E1RM
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -989,7 +1043,7 @@
                       <small>Пароконвектомат</small>
                       UNOX XF 023 Anna
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -1076,7 +1130,7 @@
                       <small>Пароконвектомат</small>
                       Steba DG 40
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -1151,7 +1205,7 @@
                       <small>Пароконвектомат</small>
                       Steba DG 40
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -1238,7 +1292,7 @@
                       <small>Пароконвектомат</small>
                       436 040
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -1325,7 +1379,7 @@
                       <small>Пароконвектомат</small>
                       Steba DG 40
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -1544,7 +1598,7 @@
                       <small>Пароконвектомат</small>
                       UNOX XB693
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -1631,7 +1685,7 @@
                       <small>Пароконвектомат</small>
                       Abat ПКА 6-2/3П
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -1718,7 +1772,7 @@
                       <small>Пароконвектомат</small>
                       UNOX XFT 133
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -1756,7 +1810,7 @@
 
 
 
-                      <div class="product__avaibility">Есть на&nbsp;складе</div>
+                      <div class="product__avaibility">под заказ</div>
 
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
@@ -1807,7 +1861,7 @@
                       <small>Пароконвектомат</small>
                       UNOX XEBC-06EU-E1RM
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -1894,7 +1948,7 @@
                       <small>Пароконвектомат</small>
                       UNOX XF 023 Anna
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -1981,7 +2035,7 @@
                       <small>Пароконвектомат</small>
                       Steba DG 40
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -2056,7 +2110,7 @@
                       <small>Пароконвектомат</small>
                       Steba DG 40
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -2143,7 +2197,7 @@
                       <small>Пароконвектомат</small>
                       436 040
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -2230,7 +2284,7 @@
                       <small>Пароконвектомат</small>
                       Steba DG 40
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -2383,7 +2437,7 @@
                       <small>Пароконвектомат</small>
                       UNOX XB693
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -2470,7 +2524,7 @@
                       <small>Пароконвектомат</small>
                       Abat ПКА 6-2/3П
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -2557,7 +2611,7 @@
                       <small>Пароконвектомат</small>
                       UNOX XFT 133
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -2595,7 +2649,7 @@
 
 
 
-                      <div class="product__avaibility">Есть на&nbsp;складе</div>
+                      <div class="product__avaibility">под заказ</div>
 
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
@@ -2646,7 +2700,7 @@
                       <small>Пароконвектомат</small>
                       UNOX XEBC-06EU-E1RM
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -2733,7 +2787,7 @@
                       <small>Пароконвектомат</small>
                       UNOX XF 023 Anna
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -2820,7 +2874,7 @@
                       <small>Пароконвектомат</small>
                       Steba DG 40
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -2895,7 +2949,7 @@
                       <small>Пароконвектомат</small>
                       Steba DG 40
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -2982,7 +3036,7 @@
                       <small>Пароконвектомат</small>
                       436 040
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -3069,7 +3123,7 @@
                       <small>Пароконвектомат</small>
                       Steba DG 40
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -3288,7 +3342,7 @@
                       <small>Пароконвектомат</small>
                       UNOX XB693
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -3375,7 +3429,7 @@
                       <small>Пароконвектомат</small>
                       Abat ПКА 6-2/3П
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -3462,7 +3516,7 @@
                       <small>Пароконвектомат</small>
                       UNOX XFT 133
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -3500,7 +3554,7 @@
 
 
 
-                      <div class="product__avaibility">Есть на&nbsp;складе</div>
+                      <div class="product__avaibility">под заказ</div>
 
                       <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     </div>
@@ -3551,7 +3605,7 @@
                       <small>Пароконвектомат</small>
                       UNOX XEBC-06EU-E1RM
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -3638,7 +3692,7 @@
                       <small>Пароконвектомат</small>
                       UNOX XF 023 Anna
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -3725,7 +3779,7 @@
                       <small>Пароконвектомат</small>
                       Steba DG 40
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -3800,7 +3854,7 @@
                       <small>Пароконвектомат</small>
                       Steba DG 40
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -3887,7 +3941,7 @@
                       <small>Пароконвектомат</small>
                       436 040
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -3974,7 +4028,7 @@
                       <small>Пароконвектомат</small>
                       Steba DG 40
                     </a>
-                    <ul class="product__props">
+                    <ul class="product__props tablet-sm-only">
                       <li class="product__props-row">
                         <div class="product__props-name">
                           Цвет
@@ -4205,15 +4259,15 @@
     </div>
   </div>
   <!-- plugnis -->
-  <script src="js/libs/jquery-3.7.1.min.js?_v=20240602003903"></script>
-  <script src="js/libs/swiper-bundle.min.js?_v=20240602003903"></script>
-  <script src="js/libs/fancybox.umd.js?_v=20240602003903"></script>
-  <script src="js/libs/nouislider.min.js?_v=20240602003903"></script>
-  <script src="js/libs/select2.full.min.js?_v=20240602003903"></script>
+  <script src="js/libs/jquery-3.7.1.min.js?_v=20240605135705"></script>
+  <script src="js/libs/swiper-bundle.min.js?_v=20240605135705"></script>
+  <script src="js/libs/fancybox.umd.js?_v=20240605135705"></script>
+  <script src="js/libs/nouislider.min.js?_v=20240605135705"></script>
+  <script src="js/libs/select2.full.min.js?_v=20240605135705"></script>
   <!-- plugnis -->
 
 
-  <script src="js/app.min.js?_v=20240602003903"></script>
+  <script src="js/app.min.js?_v=20240605135705"></script>
 </body>
 
 </html>

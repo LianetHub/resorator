@@ -16,13 +16,6 @@ if (typeof Fancybox !== "undefined" && Fancybox !== null) {
 }
 
 $(function () {
-    // devFunctions.isWebp();
-    // devFunctions.OS();
-    // devFunctions.floatingLabels();
-    // devFunctions.formSubmit();
-    // devFunctions.intInputMask();
-    devFunctions.mask();
-
 
     // event handlers
     $(document).on('click', function (e) {
@@ -30,11 +23,17 @@ $(function () {
 
         if ($target.hasClass('search-btn-toggler')) {
             $target.toggleClass('active');
-            $(".search").toggleClass('search_visible')
+            $(".header__search").toggleClass('search_visible')
         }
 
-        if ($target.hasClass('icon-menu')) {
+        if ($target[0].closest('.menu-toggler')) {
             $('.header').toggleClass('open-menu');
+            $('body').toggleClass('lock-menu')
+        }
+
+        if ($target.hasClass('menu__arrow')) {
+            $target.toggleClass('active');
+            $target.next().slideToggle()
         }
     })
 
@@ -209,10 +208,10 @@ $(function () {
             speed: 800,
             effect: "fade",
             loop: true,
-            // autoplay: {
-            //     delay: 8000,
-            //     stopOnLastSlide: false,
-            // },
+            autoplay: {
+                delay: 8000,
+                stopOnLastSlide: false,
+            },
             fadeEffect: {
                 crossFade: true
             },

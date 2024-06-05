@@ -34,7 +34,12 @@
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
+		padding-left: 1.5rem;
+		position: relative;
 		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
 			width: 1rem;
 			height: 1rem;
 			flex-shrink: 0;
@@ -42,20 +47,9 @@
 			justify-content: center;
 			align-items: center;
 		}
-		position: relative;
-		&::after {
-			content: "";
-			position: absolute;
-			top: 100%;
-			left: 0;
-			width: 0;
-			height: rem(1);
-			background: currentColor;
-			transition: width 0.3s ease 0s;
-		}
-		&:hover {
-			&::after {
-				width: 100%;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 	}
@@ -80,19 +74,9 @@
 			justify-content: center;
 			align-items: center;
 		}
-		&::after {
-			content: "";
-			position: absolute;
-			top: 100%;
-			left: 0;
-			width: 0;
-			height: rem(1);
-			background: currentColor;
-			transition: width 0.3s ease 0s;
-		}
-		&:hover {
-			&::after {
-				width: 100%;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 	}
@@ -169,6 +153,29 @@
 	}
 	// .header__search
 	&__search {
+		flex: 1 1 auto;
+		position: absolute;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		z-index: 2;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s, top 0.3s ease 0s;
+		&.search_visible {
+			opacity: 1;
+			visibility: visible;
+			top: calc(100% + 0.75rem);
+		}
+		@media (min-width: $md3) {
+			transition: none;
+			position: static;
+			left: auto;
+			top: auto;
+			width: auto;
+			opacity: 1;
+			visibility: visible;
+		}
 	}
 	// .header__actions
 	&__actions {
@@ -206,7 +213,6 @@
 	border-top: rem(1) solid $darkStroke;
 	display: flex;
 	justify-content: space-between;
-	gap: 0.63rem;
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -214,9 +220,10 @@
 	z-index: 6;
 	background: $darkBg;
 	color: $grayStroke;
-	padding: 0.69rem 1rem;
+	padding: 1.3rem 1rem;
 
 	@media (min-width: $md5) {
+		gap: 0.63rem;
 		position: static;
 		margin-left: auto;
 		border-top: 0;
@@ -235,6 +242,21 @@
 		align-items: center;
 		flex-direction: column;
 		gap: rem(10);
+		&.menu-toggler {
+			order: -3;
+
+			color: $yellow;
+		}
+		&.icon-user {
+			@media (max-width: $md5) {
+				order: -2;
+			}
+		}
+		&.icon-star {
+			@media (max-width: $md5) {
+				order: -1;
+			}
+		}
 		&::before {
 			color: $yellow;
 			font-size: 2rem;
@@ -268,12 +290,26 @@
 				background: $yellow;
 			}
 		}
+		@media (max-width: $md5) {
+			flex: 0 0 25%;
+			&.open-menu-mobile {
+				display: none;
+			}
+			.header.open-menu & {
+				&.open-menu-mobile {
+					display: flex;
+				}
+				&:not(.open-menu-mobile, .menu-toggler) {
+					display: none;
+				}
+			}
+		}
 	}
 	// .actions__item-quantity
 	&__item-quantity {
 		position: absolute;
 		top: -0.66rem;
-		right: -0.66rem;
+		right: 0rem;
 		padding: em(0.37, 0.625);
 		@media (min-width: $md5) {
 			padding: em(0.19, 0.625);
@@ -311,7 +347,7 @@
 	visibility: hidden;
 	background: #2b2b2b;
 	color: $white;
-	padding: 2.5rem 1rem;
+	padding: 2.5rem 1rem rem(120);
 	z-index: 6;
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -388,24 +424,54 @@
 	}
 	// .menu__item
 	&__item {
+		@media (max-width: $md3) {
+			border-bottom: rem(1) solid $darkStroke;
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+	}
+	&__arrow {
+		width: 2.5rem;
+		height: 1.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (min-width: $md3) {
+			display: none;
+		}
+		&::before {
+			transition: transform 0.3s ease 0s;
+			transform: rotate(90deg);
+		}
+		&.active {
+			&::before {
+				transform: rotate(-90deg);
+			}
+		}
 	}
 	// .menu__link
 	&__link {
 		display: block;
 		position: relative;
 		padding: 1.25rem 0.63rem;
+		@media (max-width: $md3) {
+			flex: 0 0 calc(100% - 2.5rem);
+			&:last-child {
+				flex: 0 0 100%;
+			}
+		}
 		@media (min-width: $md3) {
 			padding: 0;
 		}
 		&::before {
-			content: "";
-			position: absolute;
-			top: 100%;
-			left: 0;
-			width: 100%;
-			height: rem(1);
-			background: $darkStroke;
 			@media (min-width: $md3) {
+				content: "";
+				position: absolute;
+				top: 100%;
+				left: 0;
+				width: 100%;
+				height: rem(1);
 				transition: width 0.3s ease 0s;
 				width: 0;
 				background: currentColor;
@@ -434,6 +500,29 @@
 	}
 }
 
+.submenu {
+	border-top: rem(1) solid $darkStroke;
+	display: none;
+	flex: 0 0 100%;
+	@media (min-width: $md3) {
+		display: none !important;
+	}
+	color: $lightBlue;
+	font-size: 0.875rem;
+	font-weight: 600;
+	// .submenu__item
+	&__item {
+		border-bottom: rem(1) solid $darkStroke;
+	}
+	// .submenu__link
+	&__link {
+		display: flex;
+		align-items: center;
+		gap: 0.62rem;
+		padding: 1.25rem 0.62rem;
+	}
+}
+
 .icon-menu {
 	flex-shrink: 0;
 	display: flex;
@@ -441,18 +530,21 @@
 	align-items: flex-end;
 	justify-content: center;
 	padding: 0;
-	order: 1;
 	min-width: rem(24);
-	height: rem(24);
 	z-index: 11;
-	margin-left: auto;
 	@media (min-width: $md5) {
+		height: rem(24);
+		margin-left: auto;
+		order: 1;
 		margin-left: 1.5rem;
 	}
 
 	& span {
 		display: block;
-		padding: rem(2) rem(0);
+		padding: rem(4) rem(0);
+		@media (min-width: $md5) {
+			padding: rem(2) rem(0);
+		}
 		width: 100%;
 		transition: transform 0.4s ease 0.4s, opacity 0.4s ease 0.4s;
 		will-change: transform;
@@ -473,11 +565,16 @@
 			transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
 			&::before {
 				transition: transform 0.45s ease 0.35s, width 0.3s ease 0s;
-				width: 90%;
-				background: $white;
+
+				@media (min-width: $md5) {
+					background: $white;
+				}
 			}
 			&:first-child {
-				transform: translateY(rem(6));
+				transform: translateY(rem(10));
+				@media (min-width: $md5) {
+					transform: translateY(rem(6));
+				}
 				&::before {
 					transform: rotate(-135deg);
 				}
@@ -486,7 +583,10 @@
 				opacity: 0;
 			}
 			&:nth-child(3) {
-				transform: translateY(rem(-6));
+				transform: translateY(rem(-10));
+				@media (min-width: $md5) {
+					transform: translateY(rem(-6));
+				}
 				&::before {
 					transform: rotate(-225deg);
 				}
@@ -496,30 +596,8 @@
 }
 
 .search {
-	flex: 1 1 auto;
 	display: flex;
-	position: absolute;
-	top: -100%;
-	left: 0;
-	width: 100%;
-	z-index: 2;
-	opacity: 0;
-	visibility: hidden;
-	transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s, top 0.3s ease 0s;
-	&.search_visible {
-		opacity: 1;
-		visibility: visible;
-		top: calc(100% + 0.75rem);
-	}
-	@media (min-width: $md3) {
-		transition: none;
-		position: static;
-		left: auto;
-		top: auto;
-		width: auto;
-		opacity: 1;
-		visibility: visible;
-	}
+
 	// .search__form-input
 	&__form-input {
 		text-overflow: ellipsis;

@@ -17,18 +17,76 @@
                 <a href="tel:88003551555" class="menu__phone">8 (800) 355-15-55</a>
                 <nav aria-label="Меню в шапке" class="menu__navbar">
                     <ul class="menu__list">
-                        <li class="menu__item"><a href="" class="menu__link">О компании</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Доставка и оплата</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Гарантия и сервис</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Прайс-лист</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Блог</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Производство</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Наш бренд</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">О компании</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">Доставка и оплата</a>
+                            <button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a href="" class="submenu__link icon-chevron">Доставка</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="" class="submenu__link icon-chevron">Оплата</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">Гарантия и сервис</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">Прайс-лист</a>
+                            <button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a href="" class="submenu__link icon-chevron">Пиццерия</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="" class="submenu__link icon-chevron">Пекарня</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">Блог</a>
+                            <button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a href="" class="submenu__link icon-chevron">Статья 1</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="" class="submenu__link icon-chevron">Статья 2</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="" class="submenu__link icon-chevron">Статья 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">Производство</a>
+                            <button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a href="" class="submenu__link icon-chevron">Статья 1</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="" class="submenu__link icon-chevron">Статья 2</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="" class="submenu__link icon-chevron">Статья 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">Наш бренд</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">Контакты</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
-            <button type="button" aria-label="Открыть мобильное меню" class="header__menu-btn icon-menu">
+            <button type="button" aria-label="Открыть мобильное меню" class="header__menu-btn menu-toggler icon-menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -46,23 +104,31 @@
                 <button type="submit" aria-label="Искать товары" data-tooltip title="Искать товар" class="search__btn icon-search"></button>
             </form>
             <div class="header__actions actions">
+                <button type="button" class="actions__item menu-toggler mobile-sm-only">
+                    <span class="icon-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <span class="actions__item-desc">Меню</span>
+                </button>
+                <a href="" data-tooltip title="Каталог" class="actions__item icon-grid mobile-sm-only">
+                    <span class="actions__item-desc">Каталог</span>
+                </a>
                 <button type="button" class="actions__item search-btn-toggler icon-search">
                     <span class="actions__item-desc">Поиск</span>
                 </button>
-                <!-- <a href="" data-tooltip title="Сравнение" class="actions__item icon-grid">
-                    <span class="actions__item-desc">Каталог</span>
-                </a> -->
-                <a href="" data-tooltip title="Сравнение" class="actions__item icon-compare">
+                <a href="" data-tooltip title="Сравнение" class="actions__item icon-compare open-menu-mobile">
                     <span class="actions__item-desc">Сравнение</span>
                 </a>
-                <a href="" data-tooltip title="Избранное" class="actions__item icon-star">
+                <a href="" data-tooltip title="Избранное" class="actions__item icon-star open-menu-mobile">
                     <span class="actions__item-desc">Избранное</span>
                 </a>
                 <a href="" data-tooltip title="Корзина" class="actions__item icon-cart">
                     <span class="actions__item-desc">Корзина</span>
                     <span class="actions__item-quantity">12</span>
                 </a>
-                <a href="" data-tooltip title="Личный кабинет" class="actions__item icon-user">
+                <a href="" data-tooltip title="Личный кабинет" class="actions__item icon-user  open-menu-mobile">
                     <span class="actions__item-desc">Пользователь</span>
                 </a>
             </div>

@@ -75,6 +75,12 @@ body {
 			overflow: visible;
 		}
 	}
+	&.lock-menu {
+		overflow: hidden;
+		@media (min-width: $md3) {
+			overflow: visible;
+		}
+	}
 }
 // ==================ОБОЛОЧКА==============================
 .wrapper {
@@ -129,6 +135,10 @@ body {
 // =======================ОСНОВНОЙ БЛОК==================
 .page {
 	flex: 1 1 auto;
+	padding-bottom: 6rem;
+	@media (min-width: $md5) {
+		padding-bottom: 0;
+	}
 }
 // ========================================================
 

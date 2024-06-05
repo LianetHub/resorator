@@ -83,7 +83,8 @@
 				transform: scale(1.015);
 			}
 			.card__desc {
-				background-size: 100% 1px;
+				text-decoration: underline;
+				// background-size: 100% 1px;
 			}
 		}
 	}
@@ -123,14 +124,7 @@
 		margin-top: 0.25rem;
 
 		line-height: 1.2;
-		text-decoration: none;
-		background-image: linear-gradient(currentColor, currentColor);
-		background-position: 0% 100%;
-		background-repeat: no-repeat;
-		background-size: 0% rem(1);
-		transition: background-size 0.3s;
-		box-decoration-break: clone;
-		-webkit-box-decoration-break: clone;
+
 		padding: rem(5) 0;
 		font-size: 1rem;
 		@media (min-width: $md2) {
@@ -278,10 +272,9 @@
 		display: none;
 	}
 }
-
-.tablet-only {
-	@media (min-width: $md2) {
-		display: none;
+.mobile-sm-only {
+	@media (min-width: $md5) {
+		display: none !important;
 	}
 }
 
