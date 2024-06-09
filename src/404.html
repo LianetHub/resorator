@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор | Страница не найдена'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "shadow": true
+            })
+            <main class="page">
+                <nav aria-label="Хлебные крошки" class="breadcrumbs tablet-sm-only">
+                    <div class="breadcrumbs__container">
+                        <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a href="/" class="breadcrumbs__link" itemprop="item">
+                                    <span itemprop="name">Главная</span>
+                                </a>
+                                <meta itemprop="position" content="1">
+                            </li>
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a class="breadcrumbs__link active" itemprop="item">
+                                    <span itemprop="name">Страница не найдена</span>
+                                </a>
+                                <meta itemprop="position" content="2">
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <section class="error-page">
+                    <div class="error-page__container">
+                        <div class="error-page__body">
+                            <div class="error-page__image">
+                                <img src="@img/404.svg" alt="404">
+                            </div>
+                            <div class="error-page__content">
+                                <div class="error-page__status title">
+                                    404
+                                </div>
+                                <h1 class="error-page__title title-md">
+                                    Такой страницы не существует
+                                </h1>
+                                <p class="error-page__subtitle">
+                                    Похоже ссылка на страницу изменилась. <br>
+                                    Для продолжения перейдите на главную страницу или вернитесь назад
+                                </p>
+                                <div class="error-page__btns">
+                                    <a href="/" class="error-page__btn btn btn-md btn-secondary icon-arrow-left">Вернуться</a>
+                                    <a href="/" class="error-page__btn btn btn-md btn-secondary icon-home">На главную</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

@@ -41,16 +41,16 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -86,6 +86,14 @@
 [class^=icon-]:before,
 [class*=" icon-"]:before {
   display: block;
+}
+
+.icon-arrow-left:before {
+  content: "\e919";
+}
+
+.icon-home:before {
+  content: "\e91a";
 }
 
 .icon-check:before,
@@ -1415,6 +1423,7 @@ body.lock-menu {
   font-weight: 600;
   font-size: 0.875rem;
   padding: 1em 1.25rem;
+  gap: 0.62rem;
 }
 
 .btn.btn-primary {
@@ -1469,10 +1478,9 @@ body.lock-menu {
   font-size: 0.75rem;
 }
 
-.btn:active {
-  -webkit-transform: scale(0.975);
-      -ms-transform: scale(0.975);
-          transform: scale(0.975);
+.btn.btn-md {
+  padding: 0.62rem 1rem;
+  font-size: 0.875rem;
 }
 
 .btn:disabled,
@@ -2662,6 +2670,7 @@ body.lock-menu {
   display: -ms-flexbox;
   display: flex;
   height: 2.5rem;
+  max-width: 2.5rem;
   font-size: 1.125rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -2674,8 +2683,8 @@ body.lock-menu {
   background: #fff;
   overflow: hidden;
   color: #475569;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.25s linear 0s;
+  transition: all 0.25s linear 0s;
   will-change: contents;
 }
 
@@ -2689,11 +2698,11 @@ body.lock-menu {
 
 .product__action:hover {
   padding: 0.4375rem;
-  width: auto;
+  max-width: 100%;
 }
 
 .product__action:hover span {
-  margin-left: 0.625rem;
+  margin-right: 0;
 }
 
 .product__action:active {
@@ -3943,6 +3952,72 @@ body.lock-menu {
           justify-content: space-between;
 }
 
+.error-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.25rem 0;
+}
+
+.error-page__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.error-page__body {
+  max-width: 28.125rem;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.error-page__image {
+  text-align: center;
+}
+
+.error-page__content {
+  margin-top: 1rem;
+}
+
+.error-page__title {
+  margin-top: 1.5rem;
+}
+
+.error-page__subtitle {
+  margin-top: 1.25rem;
+  color: #475569;
+  font-size: 0.8125rem;
+}
+
+.error-page__btns {
+  margin-top: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 @media (min-width: 575.98px) {
   [class*=__container] {
     max-width: 36rem;
@@ -4111,7 +4186,9 @@ body.lock-menu {
 
   .product__actions {
     margin: 0;
-    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -4122,11 +4199,13 @@ body.lock-menu {
     position: absolute;
     bottom: 0;
     right: 0;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
   }
 
   .product__action {
     font-size: 1rem;
-    width: 2rem;
+    max-width: 2rem;
     height: 2rem;
     padding: 0.4375rem 1rem;
   }
@@ -4136,11 +4215,13 @@ body.lock-menu {
     font-size: 0.75rem;
     overflow: hidden;
     pointer-events: none;
-    margin-left: 0;
+    margin-right: -0.625rem;
+    margin-left: 0.625rem;
     white-space: nowrap;
-    -webkit-transition: width 0.3s ease 0s, margin 0.3s ease 0s;
-    transition: width 0.3s ease 0s, margin 0.3s ease 0s;
+    will-change: contents;
     font-weight: 600;
+    -webkit-transition: all 0.25s linear 0s;
+    transition: all 0.25s linear 0s;
   }
 
   .product__price {
@@ -4180,6 +4261,18 @@ body.lock-menu {
             align-items: flex-start;
     border-radius: 0.3125rem;
     border: 0.0625rem solid #e8e8e8;
+  }
+
+  .error-page {
+    padding: 0 0 1.25rem 0;
+    min-height: calc(100vh - 40.625rem);
+  }
+
+  .error-page__btns {
+    gap: 1.25rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -4916,6 +5009,10 @@ body.lock-menu {
 
   .auth {
     padding: 4.75rem 0;
+  }
+
+  .error-page {
+    padding: 0 0 1.87rem 0;
   }
 }
 

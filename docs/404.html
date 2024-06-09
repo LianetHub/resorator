@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-  <title>Ресторатор | Логин</title>
+  <title>Ресторатор | Страница не найдена</title>
   <meta charset="UTF-8">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +24,7 @@
 
   <!-- Open Graph  -->
   <meta property="og:type" content="business.business">
-  <meta property="og:title" content="Ресторатор | Логин">
+  <meta property="og:title" content="Ресторатор | Страница не найдена">
   <meta property="og:description" content="">
   <meta property="og:url" content="">
   <meta property="og:image" content="/OG.png">
@@ -36,7 +36,7 @@
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Ресторатор | Логин">
+  <meta property="twitter:title" content="Ресторатор | Страница не найдена">
   <meta property="twitter:description" content="">
   <meta property="twitter:site" content="">
   <meta property="twitter:url" content="">
@@ -197,7 +197,7 @@
       </div>
     </header>
     <main class="page">
-      <nav aria-label="Хлебные крошки" class="breadcrumbs">
+      <nav aria-label="Хлебные крошки" class="breadcrumbs tablet-sm-only">
         <div class="breadcrumbs__container">
           <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
             <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
@@ -208,35 +208,39 @@
             </li>
             <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
               <a class="breadcrumbs__link active" itemprop="item">
-                <span itemprop="name">Регистрация</span>
+                <span itemprop="name">Страница не найдена</span>
               </a>
               <meta itemprop="position" content="2">
             </li>
           </ul>
         </div>
       </nav>
-      <div class="auth">
-        <div class="auth__container">
-          <form action="#" class="auth__form form" data-validation-form>
-            <h1 class="form__caption">СМС отправлено</h1>
-            <p class="form__subtitle">
-              На указанный номер телефона отправлено СМС сообщение с кодом для сброса пароля.
-            </p>
-            <p class="form__subtitle">
-              Введите код из СМС, чтобы сбросить пароль и назначить новый.
-            </p>
-            <div class="form__field">
-              <div class="form__label">Код из СМС</div>
-              <input type="text" maxlength="4" name="push" inputmode="numeric" placeholder="Введите код" class="form__input">
+      <section class="error-page">
+        <div class="error-page__container">
+          <div class="error-page__body">
+            <div class="error-page__image">
+              <img src="img/404.svg" alt="404">
             </div>
-            <a href="" class="form__link">Не приходит сообщение</a>
-            <button type="button" disabled class="form__repeat btn btn-secondary">
-              Повторная отправка 0:58
-            </button>
-            <button type="submit" disabled class="form__btn btn btn-primary">Подтвердить</button>
-          </form>
+            <div class="error-page__content">
+              <div class="error-page__status title">
+                404
+              </div>
+              <h1 class="error-page__title title-md">
+                Такой страницы не существует
+              </h1>
+              <p class="error-page__subtitle">
+                Похоже ссылка на страницу изменилась.
+                <br>
+                Для продолжения перейдите на главную страницу или вернитесь назад
+              </p>
+              <div class="error-page__btns">
+                <a href="/" class="error-page__btn btn btn-md btn-secondary icon-arrow-left">Вернуться</a>
+                <a href="/" class="error-page__btn btn btn-md btn-secondary icon-home">На главную</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__container">
