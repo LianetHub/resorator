@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
     @@include('html/_head.html', {
-    'title': 'Ресторатор | Страница не найдена'
+    'title': 'Ресторатор | Оплата прошла успешно'
     })
     <body>
         <div class="wrapper">
@@ -19,33 +19,39 @@
                                 <meta itemprop="position" content="1">
                             </li>
                             <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                <a class="breadcrumbs__link active" itemprop="item">
-                                    <span itemprop="name">Страница не найдена</span>
+                                <a href="/" class="breadcrumbs__link" itemprop="item">
+                                    <span itemprop="name">Личный кабинет</span>
                                 </a>
                                 <meta itemprop="position" content="2">
+                            </li>
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a class="breadcrumbs__link active" itemprop="item">
+                                    <span itemprop="name">Корзина</span>
+                                </a>
+                                <meta itemprop="position" content="3">
                             </li>
                         </ul>
                     </div>
                 </nav>
                 <section class="service-page">
                     <div class="service-page__container">
-                        <div class="service-page__body">
+                        <div class="service-page__body service-page__body_sm">
                             <div class="service-page__image">
-                                <img src="@img/404.svg" alt="404">
+                                <img src="@img/succes-payment.svg" alt="Успех">
                             </div>
                             <div class="service-page__content">
-                                <div class="service-page__status title">
-                                    404
-                                </div>
+
                                 <h1 class="service-page__title title-md">
-                                    Такой страницы не существует
+                                    Оплата прошла успешно
                                 </h1>
                                 <p class="service-page__subtitle">
-                                    Похоже ссылка на страницу изменилась. <br>
-                                    Для продолжения перейдите на главную страницу или вернитесь назад
+                                    Оплата товара прошла успешно. Вы можете продолжить покупки, перейдя на страницу с каталогом товаров или вернуться на главную страницу сайта.
                                 </p>
                                 <div class="service-page__btns">
-                                    <a href="/" class="service-page__btn btn btn-md btn-secondary icon-arrow-left">Вернуться</a>
+                                    <a href="/" class="service-page__btn btn btn-md btn-secondary icon-arrow-left">
+                                        <span class="tablet-sm-only">Продолжить покупки</span>
+                                        <span class="mobile-sm-only">Вернуться</span>
+                                    </a>
                                     <a href="/" class="service-page__btn btn btn-md btn-secondary icon-home">На главную</a>
                                 </div>
                             </div>

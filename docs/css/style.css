@@ -7,10 +7,42 @@
 }
 
 @font-face {
+  font-family: "DinPro";
+  font-display: swap;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Inter";
   font-display: swap;
   src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -25,40 +57,8 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DinPro";
-  font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
   font-style: normal;
 }
 
@@ -814,6 +814,60 @@ body.lock-menu {
   height: 1rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+
+.noUi-connect {
+  background-color: #f7ce46;
+  position: relative;
+}
+
+.noUi-connect::before,
+.noUi-connect::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0.5rem;
+  background: inherit;
+}
+
+.noUi-connect::before {
+  left: -0.5rem;
+}
+
+.noUi-connect::after {
+  right: -0.5rem;
+}
+
+.noUi-target {
+  height: 0.25rem;
+  background-color: #e8e8e8;
+  border: none;
+  border-radius: 0.125rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+  display: none;
+}
+
+.noUi-handle {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 50%;
+  background: #f7ce46;
+  border: 0;
+  outline: 0;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.noUi-handle.noUi-horizontal {
+  width: 1rem;
+  height: 1rem;
 }
 
 .title {
@@ -3078,10 +3132,20 @@ body.lock-menu {
 .product-card__thumb img {
   height: 100%;
   width: auto;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 
 .product-card__thumb.swiper-slide-thumb-active {
   border: 0.0625rem solid #94a3b8;
+}
+
+.product-card__thumb.swiper-slide-thumb-active img {
+  -webkit-transform: scale(1.075);
+      -ms-transform: scale(1.075);
+          transform: scale(1.075);
 }
 
 .product-card__info {
@@ -3924,7 +3988,7 @@ body.lock-menu {
 .catalog__filters-unit {
   position: absolute;
   left: 0.75rem;
-  top: calc(50% - 0.0625rem);
+  top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -3952,7 +4016,7 @@ body.lock-menu {
           justify-content: space-between;
 }
 
-.error-page {
+.service-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3965,7 +4029,7 @@ body.lock-menu {
   padding: 1.25rem 0;
 }
 
-.error-page__container {
+.service-page__container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3978,7 +4042,7 @@ body.lock-menu {
           align-items: center;
 }
 
-.error-page__body {
+.service-page__body {
   max-width: 28.125rem;
   margin: auto;
   display: -webkit-box;
@@ -3990,25 +4054,29 @@ body.lock-menu {
           flex-direction: column;
 }
 
-.error-page__image {
+.service-page__body.service-page__body_sm {
+  max-width: 22.9375rem;
+}
+
+.service-page__image {
   text-align: center;
 }
 
-.error-page__content {
-  margin-top: 1rem;
+.service-page__content {
+  margin-top: 1.25rem;
 }
 
-.error-page__title {
+.service-page__title:not(:first-child) {
   margin-top: 1.5rem;
 }
 
-.error-page__subtitle {
+.service-page__subtitle {
   margin-top: 1.25rem;
   color: #475569;
   font-size: 0.8125rem;
 }
 
-.error-page__btns {
+.service-page__btns {
   margin-top: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4263,12 +4331,12 @@ body.lock-menu {
     border: 0.0625rem solid #e8e8e8;
   }
 
-  .error-page {
+  .service-page {
     padding: 0 0 1.25rem 0;
     min-height: calc(100vh - 40.625rem);
   }
 
-  .error-page__btns {
+  .service-page__btns {
     gap: 1.25rem;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -5011,7 +5079,7 @@ body.lock-menu {
     padding: 4.75rem 0;
   }
 
-  .error-page {
+  .service-page {
     padding: 0 0 1.87rem 0;
   }
 }
@@ -6194,6 +6262,12 @@ body.lock-menu {
 
   .product-card__slider-video:hover::before {
     opacity: 1;
+  }
+
+  .product-card__thumb:hover:not(.swiper-slide-thumb-active) img {
+    -webkit-transform: scale(1.025);
+        -ms-transform: scale(1.025);
+            transform: scale(1.025);
   }
 
   .product-card__info-more:hover {

@@ -148,7 +148,7 @@
 	&__filters-unit {
 		position: absolute;
 		left: 0.75rem;
-		top: calc(50% - rem(1));
+		top: 50%;
 		transform: translateY(-50%);
 	}
 	// .catalog__filters-range

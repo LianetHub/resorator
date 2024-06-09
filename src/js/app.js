@@ -135,6 +135,7 @@ $(function () {
     //     closeButton: false
     // })
 
+
     $('#language-form').on('submit', function (e) {
         e.preventDefault();
 
@@ -273,6 +274,7 @@ $(function () {
     });
 
     // sliders 
+
     if ($(".companies__slider").length > 0) {
         $(".companies__slider").each((function (index, slider) {
 
@@ -331,8 +333,6 @@ $(function () {
     }
 
     if ($(".product-card__slider").length > 0) {
-
-
 
         let thumbsSlider = new Swiper('.product-card__thumbs', {
             slidesPerView: 3,
@@ -398,81 +398,92 @@ $(function () {
 
     // range slider
 
-    // const rangeFilters = document.querySelectorAll('.catalog__filters-range');
+    const rangeFilters = $('.catalog__filters-price');
 
-    // if (rangeFilters.length > 0) {
-    //     rangeFilters.forEach(rangeFilter => {
+    if (rangeFilters.length > 0) {
+        rangeFilters.each(function () {
+            const rangeSlider = $(this).find('.catalog__filters-range')[0];
+            const startInput = $(this).find('.form__input_start');
+            const endInput = $(this).find('.form__input_end');
+            const inputs = [startInput, endInput];
+            const form = $(this).closest('form');
+            const resetButton = form.find('button[type="reset"]');
 
-    //         const rangeSlider = rangeFilter.querySelector('.catalog__filters-range');
-    //         const startInput = rangeFilter.querySelector('.range-filter__input_start');
-    //         const startInputValue = rangeFilter.querySelector('.range-filter__value_start');
-    //         const endInput = rangeFilter.querySelector('.range-filter__input_end');
-    //         const endInputValue = rangeFilter.querySelector('.range-filter__value_end');
-    //         const inputs = [startInput, endInput];
-    //         startInputValue.innerHTML = startInput.value;
-    //         endInputValue.innerHTML = endInput.value;
+            function formatNumber(value) {
+                return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+            }
 
+            function parseNumber(value) {
+                return parseInt(value.replace(/\s/g, ''));
+            }
 
-    //         noUiSlider.create(rangeSlider, {
-    //             start: [startInput.value, endInput.value],
-    //             connect: true,
-    //             step: +startInput.getAttribute('step'),
-    //             range: {
-    //                 'min': [+startInput.getAttribute('min')],
-    //                 'max': [+endInput.getAttribute('max')]
-    //             }
-    //         });
+            function updateMaxLength(input) {
+                const maxLength = parseInt(input.attr('maxlength'));
+                const numLength = maxLength - Math.floor((maxLength - 1) / 4);
+                input.attr('maxlength', numLength);
+            }
 
+            updateMaxLength(startInput);
+            updateMaxLength(endInput);
 
-    //         rangeSlider.noUiSlider.on('update', function (values, handle) {
-    //             inputs[handle].value = Math.round(values[handle]);
-    //             updateValue(inputs[handle]);
-    //         });
+            startInput.val(formatNumber(startInput.val()));
+            endInput.val(formatNumber(endInput.val()));
 
-    //         rangeSlider.noUiSlider.on('start', function (values, handle) {
-    //             $(inputs[handle]).addClass('active');
-    //         });
+            noUiSlider.create(rangeSlider, {
+                start: [parseNumber(startInput.val()), parseNumber(endInput.val())],
+                connect: true,
+                step: 1000,
 
-    //         const setRangeSlider = (i, value) => {
-    //             let arr = [null, null];
-    //             arr[i] = value;
-    //             rangeSlider.noUiSlider.set(arr);
-    //         };
+                range: {
+                    'min': [parseInt(startInput.attr('min'))],
+                    'max': [parseInt(endInput.attr('max')) || 1000000]
+                }
+            });
 
-    //         inputs.forEach((el, index) => {
+            rangeSlider.noUiSlider.on('update', function (values, handle) {
+                inputs[handle].val(formatNumber(Math.round(values[handle])));
+            });
 
-    //             el.addEventListener('change', (e) => {
-    //                 setRangeSlider(index, e.currentTarget.value);
+            rangeSlider.noUiSlider.on('start', function (values, handle) {
+                inputs[handle].addClass('active');
+            });
 
-    //             });
-    //         });
+            const setRangeSlider = (i, value) => {
+                let arr = [null, null];
+                arr[i] = parseNumber(value);
+                rangeSlider.noUiSlider.set(arr);
+            };
 
-    //         inputs.forEach(input => {
-    //             input.addEventListener('input', (e) => {
-    //                 updateValue(e.target);
-    //                 $(input).addClass('active');
-    //             })
-    //         });
+            $.each(inputs, function (index, input) {
+                $(input).on('change', function (e) {
+                    setRangeSlider(index, $(this).val());
+                });
+            });
 
-    //         function updateValue(input) {
+            $.each(inputs, function (index, input) {
+                $(input).on('input', function (e) {
+                    let value = $(this).val();
+                    value = value.replace(/[^\d]/g, '');
+                    $(this).val(formatNumber(value));
+                    $(this).addClass('active');
+                });
+            });
 
-    //             if (input.value.length >= input.max.length) {
-    //                 input.value = input.value.slice(0, input.max.length);
-    //             }
+            if (resetButton.length > 0) {
+                resetButton.on('click', function () {
+                    setTimeout(function () {
 
-    //             if (input == startInput) {
-    //                 startInputValue.innerHTML = input.value;
-    //             }
+                        startInput.val(formatNumber(startInput[0].defaultValue));
+                        endInput.val(formatNumber(endInput[0].defaultValue));
 
-    //             if (input == endInput) {
-    //                 endInputValue.innerHTML = input.value;
-    //             }
-    //         }
+                        rangeSlider.noUiSlider.set([parseNumber(startInput[0].defaultValue), parseNumber(endInput[0].defaultValue)]);
 
+                    }, 0);
+                });
+            }
+        });
+    }
 
-
-    //     })
-    // };
 
 
 
