@@ -44,15 +44,15 @@
   <!-- Twitter -->
 
   <!-- plugnis -->
-  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240609123902">
-  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240609123902">
-  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240609123902">
-  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240609123902">
+  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240609125230">
+  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240609125230">
+  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240609125230">
+  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240609125230">
   <!-- plugnis -->
 
 
-  <link rel="stylesheet" href="css/reset.min.css?_v=20240609123902">
-  <link rel="stylesheet" href="css/style.min.css?_v=20240609123902">
+  <link rel="stylesheet" href="css/reset.min.css?_v=20240609125230">
+  <link rel="stylesheet" href="css/style.min.css?_v=20240609125230">
 
 </head>
 
@@ -217,7 +217,7 @@
       </nav>
       <div class="auth">
         <div class="auth__container">
-          <form action="#" class="auth__form form">
+          <form action="#" class="auth__form form" data-validation-form>
             <h1 class="form__caption">СМС отправлено</h1>
             <p class="form__subtitle">
               На указанный номер телефона отправлено СМС сообщение с кодом для сброса пароля.
@@ -227,13 +227,13 @@
             </p>
             <div class="form__field">
               <div class="form__label">Код из СМС</div>
-              <input type="text" maxlength="4" name="push" placeholder="Введите код" class="form__input">
+              <input type="text" maxlength="4" name="push" inputmode="numeric" placeholder="Введите код" class="form__input">
             </div>
             <a href="" class="form__link">Не приходит сообщение</a>
             <button type="button" disabled class="form__repeat btn btn-secondary">
               Повторная отправка 0:58
             </button>
-            <button type="submit" class="form__btn btn btn-primary">Подтвердить</button>
+            <button type="submit" disabled class="form__btn btn btn-primary">Подтвердить</button>
           </form>
         </div>
       </div>
@@ -371,19 +371,64 @@
       </div>
     </footer>
   </div>
-
+  <div id="select-language" class="popup">
+    <div class="popup__header">
+      <h3 class="popup__title title-sm">Выбор языка</h3>
+      <button type="button" class="popup__close" data-fancybox-close></button>
+    </div>
+    <p class="popup__subtitle">
+      Язык отображения интерфейса сайта, определен автоматически как Русский.
+    </p>
+    <form action="#" class="popup__form form" id="language-form">
+      <label for="language-select" class="form__label" tabindex="-1">Язык</label>
+      <select name="language" id="language-select" class="select" data-list-mobile>
+        <option value="RU" selected data-img-src="img/icons/flag-ru.svg">Русский</option>
+        <option value="EN" data-img-src="img/icons/flag-usa.svg">English</option>
+        <option value="CH" data-img-src="img/icons/flag-china.svg">中文</option>
+      </select>
+      <button type="submit" class="form__btn btn btn-primary">Выбрать</button>
+    </form>
+  </div>
+  <div id="select-location" class="popup">
+    <div class="popup__header">
+      <h3 class="popup__title title-sm">Выбор локации</h3>
+      <button type="button" class="popup__close" data-fancybox-close></button>
+    </div>
+    <p class="popup__subtitle">
+      Ваше местоположение определено автоматически. Вы можете изменить его вручную.
+    </p>
+    <form action="#" class="popup__form form" id="location-form">
+      <label for="location-select" class="form__label" tabindex="-1">Ваше местоположение</label>
+      <select name="location" id="location-select">
+        <option selected value="PK">Приморский край</option>
+        <option value="MSK">Москва</option>
+        <option value="SPB">Санкт-Петербург</option>
+        <option value="PERM">Пермь</option>
+      </select>
+      <button type="submit" class="form__btn btn btn-primary">Выбрать</button>
+    </form>
+  </div>
+  <div id="success" class="popup">
+    <div class="popup__body">
+      <div class="popup__title title-sm">Thank you! </div>
+      <p class="popup__subtitle">
+        Our consultant will contact you and answer all your questions!
+      </p>
+      <button type="button" data-fancybox-close class="popup__btn btn btn-primary btn-sm">Okay</button>
+    </div>
+  </div>
   <!-- plugnis -->
-  <script src="js/libs/jquery-3.7.1.min.js?_v=20240609123902"></script>
-  <script src="js/libs/swiper-bundle.min.js?_v=20240609123902"></script>
-  <script src="js/libs/fancybox.umd.js?_v=20240609123902"></script>
-  <script src="js/libs/nouislider.min.js?_v=20240609123902"></script>
-  <script src="js/libs/select2.full.min.js?_v=20240609123902"></script>
-  <script src="js/libs/jquery.validate.min.js?_v=20240609123902"></script>
-  <script src="js/libs/messages_ru.min.js?_v=20240609123902"></script>
+  <script src="js/libs/jquery-3.7.1.min.js?_v=20240609125230"></script>
+  <script src="js/libs/swiper-bundle.min.js?_v=20240609125230"></script>
+  <script src="js/libs/fancybox.umd.js?_v=20240609125230"></script>
+  <script src="js/libs/nouislider.min.js?_v=20240609125230"></script>
+  <script src="js/libs/select2.full.min.js?_v=20240609125230"></script>
+  <script src="js/libs/jquery.validate.min.js?_v=20240609125230"></script>
+  <script src="js/libs/messages_ru.min.js?_v=20240609125230"></script>
   <!-- plugnis -->
 
 
-  <script src="js/app.min.js?_v=20240609123902"></script>
+  <script src="js/app.min.js?_v=20240609125230"></script>
 </body>
 
 </html>

@@ -29,7 +29,7 @@
                 </nav>
                 <div class="auth">
                     <div class="auth__container">
-                        <form action="#" class="auth__form form">
+                        <form action="#" class="auth__form form" data-validation-form>
                             <h1 class="form__caption">СМС отправлено</h1>
                             <p class="form__subtitle">
                                 На указанный номер телефона отправлено СМС сообщение с кодом для сброса пароля.
@@ -39,20 +39,20 @@
                             </p>
                             <div class="form__field">
                                 <div class="form__label">Код из СМС</div>
-                                <input type="text" maxlength="4" name="push" placeholder="Введите код" class="form__input">
+                                <input type="text" maxlength="4" name="push" inputmode="numeric" placeholder="Введите код" class="form__input">
                             </div>
                             <a href="" class="form__link">Не приходит сообщение</a>
                             <button type="button" disabled class="form__repeat btn btn-secondary">
                                 Повторная отправка 0:58
                             </button>
-                            <button type="submit" class="form__btn btn btn-primary">Подтвердить</button>
+                            <button type="submit" disabled class="form__btn btn btn-primary">Подтвердить</button>
                         </form>
                     </div>
                 </div>
             </main>
             @@include('html/_footer.html', {})
         </div>
-        <!-- @@include('html/_modal.html', {}) -->
+        @@include('html/_modal.html', {})
         @@include('html/_js.html', {})
     </body>
 </html>

@@ -484,6 +484,11 @@ $(function () {
     //     return this.optional(element) || iti.isValidNumber();
     // }, "Пожалуйста, введите корректный номер телефона");
 
+    // push 
+    $('input[name="push"]').on('input', function () {
+        this.value = this.value.replace(/\D/g, '');
+    });
+
     $.validator.addMethod("phoneRU", function (value, element) {
         return this.optional(element) || /^(8|\+7) \(\d{3}\) \d{3}-\d{2}-\d{2}$/.test(value);
     }, "");
@@ -505,6 +510,12 @@ $(function () {
                         required: true,
                         phoneRU: true
                     },
+                    push: {
+                        required: true,
+                        minlength: 4,
+                        maxlength: 4,
+                        digits: true
+                    }
 
                 },
                 messages: {
@@ -514,6 +525,12 @@ $(function () {
                     },
                     phone: {
                         required: "Это поле необходимо заполнить."
+                    },
+                    push: {
+                        required: "Это поле необходимо заполнить.",
+                        minlength: "Код должен содержать 4 цифры.",
+                        maxlength: "Код должен содержать 4 цифры.",
+                        digits: "Пожалуйста, введите только цифры."
                     }
                 },
                 showErrors: function (errorMap, errorList) {
