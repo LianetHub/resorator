@@ -1,5 +1,7 @@
 "use strict";
 
+// const { default: Swiper } = require("swiper");
+
 //  init Fancybox
 if (typeof Fancybox !== "undefined" && Fancybox !== null) {
     Fancybox.bind("[data-fancybox]", {
@@ -248,6 +250,19 @@ $(function () {
         })
     }
 
+    if ($(".product__labels").length > 0) {
+        $(".product__labels").each((function (index, slider) {
+
+            new Swiper(slider, {
+                slidesPerView: "auto",
+                speed: 800,
+                grabCursor: true,
+                spaceBetween: 10,
+            })
+        }));
+
+    }
+
     if ($(".product-card__slider").length > 0) {
 
 
@@ -274,7 +289,6 @@ $(function () {
 
 
     }
-
 
     if ($(".product-card__products").length > 0) {
 

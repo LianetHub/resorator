@@ -147,7 +147,7 @@
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				background: darken($color: $yellow, $amount: 10);
+				background: $yellowSecond;
 			}
 		}
 	}
@@ -357,6 +357,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	scrollbar-gutter: stable;
 	.header.open-menu & {
 		opacity: 1;
 		visibility: visible;
@@ -549,7 +550,7 @@
 		}
 		width: 100%;
 		transition: transform 0.4s ease 0.4s, opacity 0.4s ease 0.4s;
-		will-change: transform;
+		will-change: contents;
 		pointer-events: none;
 		&::before {
 			content: "";
@@ -559,7 +560,7 @@
 			margin-left: auto;
 			background: currentColor;
 			transition: transform 0.3s ease 0s;
-			will-change: transform;
+			will-change: contents;
 		}
 	}
 	.header.open-menu & {
@@ -603,7 +604,10 @@
 	// .search__form-input
 	&__form-input {
 		text-overflow: ellipsis;
-		font-size: 0.875rem;
+		font-size: 1rem;
+		@media (min-width: $md5) {
+			font-size: 0.875rem;
+		}
 		border-radius: 0.3125rem 0 0 0.3125rem;
 		border: rem(1) solid $yellow;
 		background: $white;

@@ -74,7 +74,8 @@
 		@media (min-width: $md1) {
 			height: 30rem;
 		}
-		border: 1px solid $grayStroke;
+		border: rem(1) solid $grayStroke;
+		border-radius: rem(5);
 	}
 	// .product-card__slide
 	&__slide {
@@ -85,6 +86,7 @@
 		@media (min-width: $md1) {
 			height: 30rem;
 		}
+
 		padding: 1rem;
 		& img {
 			transition: transform 0.3s ease 0s;
@@ -109,13 +111,16 @@
 	// .product-card__slider-video
 	&__slider-video {
 		max-width: 6.5625rem;
-
+		border-radius: rem(5);
 		aspect-ratio: 1;
 		border: 1px solid $grayStroke;
 		flex-shrink: 0;
 		margin-right: 1.25rem;
 		display: block;
 		position: relative;
+		& img {
+			border-radius: rem(5);
+		}
 		&::before {
 			position: absolute;
 			top: 50%;
@@ -147,13 +152,14 @@
 		justify-content: center;
 		align-items: center;
 		padding: 0.5rem;
+		border-radius: rem(5);
 		cursor: pointer;
 		& img {
 			height: 100%;
 			width: auto;
 		}
 		&.swiper-slide-thumb-active {
-			border: rem(1) solid $dark;
+			border: rem(1) solid $lightBlue;
 		}
 	}
 	// .product-card__slider-pagination
@@ -361,6 +367,14 @@
 		&.text-uppercase {
 			font-size: 0.75rem;
 		}
+		&[href] {
+			text-decoration: underline;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
 	}
 	// .product-card__price
 	&__price {
@@ -376,7 +390,7 @@
 		color: $lightBlue;
 		font-size: 1rem;
 		font-weight: 600;
-		text-decoration-line: strikethrough;
+		text-decoration: line-through;
 	}
 	// .product-card__price-saving
 	&__price-saving {
@@ -473,9 +487,6 @@
 			&:hover {
 				background: $yellow;
 			}
-		}
-		&.active {
-			background: $yellow;
 		}
 	}
 	// .product-card__products
@@ -613,6 +624,11 @@
 				text-decoration: none;
 			}
 		}
+		&.active {
+			&::before {
+				transform: rotate(-90deg) translateX(50%);
+			}
+		}
 	}
 	// .product-card__more-block
 	&__more-block {
@@ -692,7 +708,9 @@
 			order: 1;
 			width: 1rem;
 			height: 1rem;
-			display: block;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 		@media (any-hover: hover) {
 			&:hover {

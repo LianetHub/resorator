@@ -3,16 +3,18 @@
         @@if(wrapper==false){ <div class="product @@className"> }
 
             @@if(labels===true) {
-            <div class="product__labels">
-                @@if(sale===true) {
-                <div class="product__label label red">Распродажа</div>
-                }
-                @@if(novinka===true) {
-                <div class="product__label label yellow">Новинка</div>
-                }
-                @@if(hit===true) {
-                <div class="product__label label green">Хит продаж</div>
-                }
+            <div class="product__labels swiper">
+                <div class="swiper-wrapper">
+                    @@if(sale===true) {
+                    <div class="swiper-slide product__label label red">Распродажа</div>
+                    }
+                    @@if(novinka===true) {
+                    <div class="swiper-slide product__label label yellow">Новинка</div>
+                    }
+                    @@if(hit===true) {
+                    <div class="swiper-slide product__label label green">Хит продаж</div>
+                    }
+                </div>
             </div>
             }
 
@@ -33,12 +35,12 @@
                 </div>
             </div>
             <div class="product__price">
-                <div class="product__price-value">@@price ₽ </div>
                 @@if(oldPrice===true) {
                 <div class="product__price-old">
                     @@oldPriceValue ₽
                 </div>
                 }
+                <div class="product__price-value">@@price ₽ </div>
             </div>
             <a href="/product.html" class="product__name">
                 <small>Пароконвектомат</small>
