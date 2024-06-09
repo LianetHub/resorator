@@ -565,12 +565,12 @@
 			justify-content: center;
 			align-items: center;
 			color: $dark;
-			border: rem(2) solid $lightBlue;
+			border: rem(1) solid $lightBlue;
 			width: 1.25rem;
 			height: 1.25rem;
-			font-size: 1rem;
-			padding: 0.1rem 0 0 0.1rem;
-			border-radius: 0.31rem;
+			font-size: 0.875rem;
+			font-weight: 100;
+			border-radius: rem(5);
 		}
 	}
 	// .checkbox__row

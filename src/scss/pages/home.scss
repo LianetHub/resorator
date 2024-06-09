@@ -458,6 +458,7 @@
 	position: relative;
 	border-radius: 0.3125rem;
 	border: rem(1) solid $grayStroke;
+	overflow: hidden;
 	padding: 0.62rem;
 	display: flex;
 	flex-direction: column;
@@ -480,7 +481,10 @@
 	// .product__labels
 	&__labels {
 		margin-left: 0;
-		max-width: calc(100% + 0.62rem);
+		margin-right: -0.62rem;
+		@media (min-width: $md4) {
+			max-width: calc(100% + 0.62rem);
+		}
 	}
 	// .product__label
 	&__label {
@@ -537,9 +541,9 @@
 			right: 0;
 			transition: all 0.3s ease 0s;
 			@media (hover: hover) {
-				// transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
-				// opacity: 0;
-				// visibility: hidden;
+				transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+				opacity: 0;
+				visibility: hidden;
 			}
 		}
 	}
@@ -549,10 +553,12 @@
 
 		height: 2.5rem;
 		max-width: 2.5rem;
+		width: 100%;
 		font-size: 1.125rem;
 		@media (min-width: $md5) {
 			font-size: 1rem;
 			max-width: 2rem;
+			width: auto;
 			height: 2rem;
 			padding: 0.4375rem 1rem;
 		}
@@ -572,7 +578,7 @@
 				font-size: 0.75rem;
 				overflow: hidden;
 				pointer-events: none;
-				// margin-left: 0;
+
 				margin-right: -0.625rem;
 				margin-left: 0.625rem;
 				white-space: nowrap;
@@ -636,6 +642,7 @@
 		font-weight: 600;
 		text-transform: uppercase;
 		transition: color 0.3s ease 0s;
+
 		& small {
 			text-transform: none;
 			font-size: 0.75rem;

@@ -67,6 +67,22 @@ $(function () {
             toggleAllProducts($productWrapper);
         }
 
+
+        if ($target.hasClass('catalog__filters-more')) {
+            $target.toggleClass('active');
+            $target.prev().slideToggle()
+            if ($target.hasClass('active')) {
+                $target.find('span').text('Скрыть все');
+            } else {
+                $target.find('span').text('Показать все');
+            }
+        }
+
+        if ($target.hasClass('catalog-filter-btn')) {
+            $('.catalog__sidebar').toggleClass('visible');
+            $('body').toggleClass('lock-catalog-filter')
+        }
+
     });
 
 
@@ -196,19 +212,18 @@ $(function () {
         });
     }
 
-    // Инициализация Select2 и кастомного селекта
+
     $('select').each(function () {
         var $select = $(this);
         var searchEnabled = $select.data('search') !== undefined;
 
-        // Инициализация Select2
+
         $select.select2({
             templateResult: formatState,
             templateSelection: formatState,
-            minimumResultsForSearch: searchEnabled ? 0 : Infinity // Отключение поиска если data-search отсутствует
+            minimumResultsForSearch: searchEnabled ? 0 : Infinity
         });
 
-        // Инициализация кастомного селекта если data-list-mobile="true"
         if ($select[0].hasAttribute('data-list-mobile')) {
             initCustomSelect($select);
         }
@@ -433,7 +448,7 @@ $(function () {
                 start: [parseNumber(startInput.val()), parseNumber(endInput.val())],
                 connect: true,
                 step: 1000,
-
+                // margin: 1000,
                 range: {
                     'min': [parseInt(startInput.attr('min'))],
                     'max': [parseInt(endInput.attr('max')) || 1000000]

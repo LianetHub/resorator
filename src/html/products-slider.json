@@ -1,7 +1,7 @@
 [
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": " swiper-slide",
         "labels": true,
         "sale": true,
         "hit": false,
@@ -15,7 +15,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": " swiper-slide",
         "labels": true,
         "sale": false,
         "hit": false,
@@ -29,7 +29,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": " swiper-slide",
         "labels": true,
         "sale": false,
         "hit": true,
@@ -43,7 +43,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": " swiper-slide",
         "labels": true,
         "sale": false,
         "hit": true,
@@ -57,7 +57,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": " swiper-slide",
         "labels": true,
         "sale": false,
         "hit": false,
@@ -71,7 +71,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": " swiper-slide",
         "labels": true,
         "sale": false,
         "hit": true,
@@ -85,7 +85,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": " swiper-slide",
         "labels": false,
         "sale": false,
         "hit": false,
@@ -99,7 +99,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": " swiper-slide",
         "labels": true,
         "sale": false,
         "hit": true,
@@ -113,7 +113,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide d-lg-none tablet-only",
+        "className": " swiper-slide d-lg-none tablet-only",
         "labels": true,
         "sale": false,
         "hit": true,

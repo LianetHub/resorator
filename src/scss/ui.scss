@@ -275,7 +275,7 @@
 
 .mobile-only {
 	@media (min-width: $md4) {
-		display: none;
+		display: none !important;
 	}
 }
 .mobile-sm-only {

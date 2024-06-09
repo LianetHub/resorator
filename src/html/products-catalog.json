@@ -1,7 +1,7 @@
 [
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": "",
         "labels": true,
         "sale": true,
         "hit": false,
@@ -15,7 +15,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": "",
         "labels": true,
         "sale": false,
         "hit": false,
@@ -29,7 +29,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": "",
         "labels": true,
         "sale": false,
         "hit": true,
@@ -43,7 +43,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": "",
         "labels": true,
         "sale": false,
         "hit": true,
@@ -57,7 +57,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": "",
         "labels": true,
         "sale": false,
         "hit": false,
@@ -71,7 +71,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": "",
         "labels": true,
         "sale": false,
         "hit": true,
@@ -85,7 +85,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": "",
         "labels": false,
         "sale": false,
         "hit": false,
@@ -99,7 +99,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": "",
         "labels": true,
         "sale": false,
         "hit": true,
@@ -113,7 +113,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide d-lg-none tablet-only",
+        "className": "",
         "labels": true,
         "sale": false,
         "hit": true,
@@ -127,7 +127,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": "",
         "labels": true,
         "sale": true,
         "hit": false,
@@ -141,7 +141,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": "",
         "labels": true,
         "sale": false,
         "hit": false,
@@ -155,7 +155,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": "",
         "labels": true,
         "sale": false,
         "hit": true,
@@ -169,7 +169,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": "",
         "labels": true,
         "sale": false,
         "hit": true,
@@ -183,7 +183,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": "",
         "labels": true,
         "sale": false,
         "hit": false,
@@ -197,7 +197,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": "",
         "labels": true,
         "sale": false,
         "hit": true,
@@ -211,7 +211,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": "",
         "labels": false,
         "sale": false,
         "hit": false,
@@ -225,7 +225,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": "",
         "labels": true,
         "sale": false,
         "hit": true,
@@ -239,7 +239,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide d-lg-none tablet-only",
+        "className": "",
         "labels": true,
         "sale": false,
         "hit": true,
@@ -253,7 +253,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": "",
         "labels": true,
         "sale": true,
         "hit": false,
@@ -267,7 +267,7 @@
     },
     {
         "wrapper": false,
-        "className": "swiper-slide",
+        "className": "",
         "labels": true,
         "sale": true,
         "hit": false,

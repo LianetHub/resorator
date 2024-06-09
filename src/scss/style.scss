@@ -81,6 +81,12 @@ body {
 			overflow: visible;
 		}
 	}
+	&.lock-catalog-filter {
+		overflow: hidden;
+		@media (min-width: $md4) {
+			overflow: visible;
+		}
+	}
 }
 // ==================ОБОЛОЧКА==============================
 .wrapper {

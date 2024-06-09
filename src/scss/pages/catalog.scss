@@ -1,8 +1,9 @@
 .catalog {
-	padding: 0 0 1.56rem 0;
-	.row {
-		align-items: flex-start;
+	padding: 1rem 0;
+	@media (min-width: $md2) {
+		padding: 0 0 1.56rem 0;
 	}
+
 	// .catalog__container
 	&__container {
 	}
@@ -10,12 +11,18 @@
 	&__header {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		flex-direction: column;
+		gap: 1.25rem;
+		@media (min-width: $md5) {
+			align-items: center;
+			flex-direction: row;
+		}
 	}
 	// .catalog__title
 	&__title {
 		display: flex;
 		align-items: flex-start;
+		flex-wrap: wrap;
 		gap: 0.63rem;
 		& span {
 			color: $lightBlue;
@@ -27,27 +34,27 @@
 	// .catalog__quantity
 	&__quantity {
 	}
-	// .catalog__views
-	&__views {
+	// .catalog__actions
+	&__actions {
 		display: flex;
 		gap: 0.62rem;
 	}
-	// .catalog__views-item
-	&__views-item {
+	// .catalog__actions-item
+	&__actions-item {
 		display: block;
 		flex-shrink: 0;
 	}
-	// .catalog__views-input
-	&__views-input {
+	// .catalog__actions-input
+	&__actions-input {
 		&:checked {
-			& + .catalog__views-btn {
+			& + .catalog__actions-btn {
 				border-color: $yellow;
 				color: $dark;
 			}
 		}
 	}
-	// .catalog__views-btn
-	&__views-btn {
+	// .catalog__actions-btn
+	&__actions-btn {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -60,13 +67,25 @@
 		color: $lightBlue;
 		background: $white;
 		cursor: pointer;
+		&.icon-filter {
+			margin-left: auto;
+			@media (min-width: $md5) {
+				margin-left: 0;
+			}
+		}
 	}
 	// .catalog__grid
 	&__grid {
 		margin-top: 1.25rem;
+		gap: rem(10);
+
 		display: grid;
-		gap: rem(20);
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+
+		@media (min-width: $md3) {
+			gap: rem(20);
+			grid-template-columns: repeat(3, 1fr);
+		}
 		@media (min-width: $md1) {
 			grid-template-columns: repeat(4, 1fr);
 		}
@@ -76,13 +95,73 @@
 	}
 	// .catalog__sidebar
 	&__sidebar {
-		position: sticky;
-		top: 1rem;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		visibility: hidden;
+		background: #fff;
+		overflow-y: auto;
+		padding: em(0) em(0) rem(120) em(0);
+		display: flex;
+		flex-direction: column;
+		scrollbar-gutter: stable;
+		&.visible {
+			opacity: 1;
+			visibility: visible;
+			z-index: 5;
+		}
+		transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+
+		@media (min-width: $md4) {
+			z-index: 1;
+			opacity: 1;
+			visibility: visible;
+			transition: none;
+			top: 1rem;
+			position: sticky;
+			overflow-y: visible;
+			background: none;
+			height: auto;
+			width: auto;
+			padding: 0;
+		}
 		.banners__item {
 			margin-top: 0.62rem;
 			text-align: center;
+			min-height: auto;
+			margin-left: 1rem;
+			margin-right: 1rem;
+			@media (min-width: $md4) {
+				margin-left: 0;
+				margin-right: 0;
+			}
 		}
 	}
+	// .catalog__sidebar-header
+	&__sidebar-header {
+		display: flex;
+		justify-content: space-between;
+		padding: rem(17.5) rem(20);
+		border-bottom: rem(1) solid $grayStroke;
+		@media (min-width: $md4) {
+			border-bottom: 0;
+			padding: 0;
+		}
+	}
+	// .catalog__sidebar-caption
+	&__sidebar-caption {
+	}
+	// .catalog__sidebar-close
+	&__sidebar-close {
+		color: $lightBlue;
+		@media (min-width: $md4) {
+			display: none;
+		}
+	}
+
 	// .catalog__sidebar-caption
 	&__sidebar-caption {
 		font-size: 1.3125rem;
@@ -90,12 +169,17 @@
 	}
 	// .catalog__filters
 	&__filters {
-		margin-top: 1.91rem;
+		margin-top: rem(20);
+		padding: 0 rem(16);
+		@media (min-width: $md4) {
+			margin-top: 1.91rem;
+			padding: 0;
+		}
 	}
 	// .catalog__filters-row
 	&__filters-row {
 		&:not(:last-child) {
-			margin-bottom: 1.91rem;
+			margin-bottom: 2.15rem;
 		}
 	}
 	// .catalog__filters-spoller
@@ -124,15 +208,54 @@
 	}
 	// .catalog__filters-content
 	&__filters-content {
-		// margin-top: 1.25rem;
 		display: none;
 		padding: 1.25rem 0 0 0;
+	}
+	// .catalog__filters-items
+	&__filters-items {
+	}
+	// .catalog__filters-hidden
+	&__filters-hidden {
+		margin-top: 0.5rem;
+		display: none;
+	}
+	// .catalog__filters-more
+	&__filters-more {
+		margin-top: 1.25rem;
+		color: $darkBlue;
+		font-size: 0.8125rem;
+
+		display: inline-flex;
+		align-items: center;
+		gap: 0.62rem;
+		&::before {
+			order: 1;
+			transform: rotate(90deg);
+			transition: transform 0.3s ease 0s;
+		}
+		& span {
+			pointer-events: none;
+			text-decoration: underline;
+		}
+		&.active {
+			&::before {
+				transform: rotate(-90deg);
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				& span {
+					text-decoration: none;
+				}
+			}
+		}
 	}
 	// .catalog__filters-price
 	&__filters-price {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 1.25rem;
+		row-gap: 1.4rem;
 	}
 	// .catalog__filters-column
 	&__filters-column {

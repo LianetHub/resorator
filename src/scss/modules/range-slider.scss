@@ -1,61 +1,5 @@
-// .noUi-connect {
-// 	background-color: $yellow;
-// }
-
-// .noUi-target {
-// 	height: rem(4);
-// 	background-color: $grayStroke;
-// 	border: none;
-// 	border-radius: rem(2);
-// 	box-shadow: none;
-// }
-
-// .noUi-handle::after,
-// .noUi-handle::before {
-// 	display: none;
-// }
-
-// .noUi-handle {
-// 	box-shadow: none;
-// 	border-radius: 50%;
-// 	background: $yellow;
-// 	border: 0;
-// 	outline: 0;
-// 	cursor: grab;
-// }
-
-// .noUi-horizontal .noUi-handle {
-// 	width: 1rem;
-// 	height: 1rem;
-// 	// top: -0.5rem;
-// }
-
-// .noUi-horizontal .noUi-handle-upper {
-// 	// right: 0;
-// }
-
 .noUi-connect {
 	background-color: $yellow;
-	position: relative;
-
-	&::before,
-	&::after {
-		content: "";
-		display: block;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		width: 0.5rem;
-		background: inherit;
-	}
-
-	&::before {
-		left: -0.5rem;
-	}
-
-	&::after {
-		right: -0.5rem;
-	}
 }
 
 .noUi-target {
@@ -78,9 +22,16 @@
 	border: 0;
 	outline: 0;
 	cursor: grab;
+}
 
-	&.noUi-horizontal {
-		width: 1rem;
-		height: 1rem;
-	}
+.noUi-horizontal .noUi-handle {
+	width: 1rem;
+	height: 1rem;
+}
+
+.noUi-horizontal .noUi-handle-upper {
+	right: 0;
+}
+.noUi-horizontal .noUi-handle-lower {
+	right: rem(-16);
 }
