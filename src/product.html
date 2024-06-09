@@ -216,9 +216,9 @@
                             <aside class="product-card__side">
                                 <div class="product-card__side-caption">Состояние товара</div>
                                 <ul class="product-card__side-labels">
-                                    <li class="product-card__side-label product-card__side-label_active">Новый</li>
-                                    <li class="product-card__side-label">Уценка</li>
-                                    <li class="product-card__side-label">Распродажа</li>
+                                    <a href="" class="product-card__side-label product-card__side-label_active">Новый</a>
+                                    <a href="" class="product-card__side-label">Уценка</a>
+                                    <a href="" class="product-card__side-label">Распродажа</a>
                                 </ul>
                                 <ul class="product-card__characteristics">
                                     <li class="product-card__characteristics-item">
@@ -239,7 +239,7 @@
                                     </li>
                                     <li class="product-card__characteristics-item">
                                         <div class="product-card__characteristics-name">Наличие на складе ПВЗ</div>
-                                        <a href="" class="product-card__characteristics-value blue-color">Все склады</a>
+                                        <a href="#select-stock" data-fancybox class="product-card__characteristics-value blue-color">Все склады</a>
                                     </li>
                                     <li class="product-card__characteristics-item">
                                         <div class="product-card__characteristics-name">Наличие на складе</div>
@@ -294,9 +294,10 @@
                             <div class="product-card__items swiper">
                                 <div class="swiper-wrapper">
                                     @@loop('./html/_product.html', './html/products-slider.json')
+                                    @@loop('./html/_product.html', './html/products-slider.json')
                                 </div>
                             </div>
-                            <a href="" class="product-card__loadmore icon-chevron">Развернуть все аксессуары</a>
+                            <button type="button" class="product-card__loadmore icon-chevron btn-all-products"><span>Развернуть</span> все аксессуары</button>
                         </div>
                         <div class="product-card__desc">
                             <h3 class="product-card__caption">

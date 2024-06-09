@@ -44,15 +44,15 @@
   <!-- Twitter -->
 
   <!-- plugnis -->
-  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240609134812">
-  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240609134812">
-  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240609134812">
-  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240609134812">
+  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240609152438">
+  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240609152438">
+  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240609152438">
+  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240609152438">
   <!-- plugnis -->
 
 
-  <link rel="stylesheet" href="css/reset.min.css?_v=20240609134812">
-  <link rel="stylesheet" href="css/style.min.css?_v=20240609134812">
+  <link rel="stylesheet" href="css/reset.min.css?_v=20240609152438">
+  <link rel="stylesheet" href="css/style.min.css?_v=20240609152438">
 
 </head>
 
@@ -408,6 +408,40 @@
       <button type="submit" class="form__btn btn btn-primary">Выбрать</button>
     </form>
   </div>
+  <div id="select-stock" class="popup">
+    <div class="popup__header">
+      <h3 class="popup__title title-sm">Выбор склада ПВЗ</h3>
+      <button type="button" class="popup__close" data-fancybox-close></button>
+    </div>
+    <p class="popup__subtitle">
+      Вы можете выбрать ближайший к вам склад для получения товара из имеющихся в наличии
+    </p>
+    <form action="#" class="popup__form form">
+      <label for="stock-location" class="form__label" tabindex="-1">Город</label>
+      <select name="stock" id="stock-location">
+        <option selected value="MSK">Московская область</option>
+        <option value="PK">Приморский край</option>
+        <option value="SPB">Санкт-Петербург</option>
+        <option value="PERM">Пермь</option>
+      </select>
+      <ul class="popup__list">
+        <li class="popup__list-item">
+          <div class="popup__list-caption">Адрес пункта выдачи:</div>
+          <div class="popup__list-text">Московская область, г. Домодедово, тер владение&nbsp;Торговая база</div>
+        </li>
+        <li class="popup__list-item">
+          <div class="popup__list-caption">Телефон:</div>
+          <div class="popup__list-text">8 (920) 221 22 22</div>
+        </li>
+        <li class="popup__list-item">
+          <div class="popup__list-caption">Рабочее время:</div>
+          <div class="popup__list-text">Пн-Пт, 9:00-18:00</div>
+        </li>
+      </ul>
+      <button type="submit" class="form__btn btn btn-primary">Выбрать</button>
+    </form>
+
+  </div>
   <div id="success" class="popup">
     <div class="popup__body">
       <div class="popup__title title-sm">Thank you! </div>
@@ -418,17 +452,17 @@
     </div>
   </div>
   <!-- plugnis -->
-  <script src="js/libs/jquery-3.7.1.min.js?_v=20240609134812"></script>
-  <script src="js/libs/swiper-bundle.min.js?_v=20240609134812"></script>
-  <script src="js/libs/fancybox.umd.js?_v=20240609134812"></script>
-  <script src="js/libs/nouislider.min.js?_v=20240609134812"></script>
-  <script src="js/libs/select2.full.min.js?_v=20240609134812"></script>
-  <script src="js/libs/jquery.validate.min.js?_v=20240609134812"></script>
-  <script src="js/libs/messages_ru.min.js?_v=20240609134812"></script>
+  <script src="js/libs/jquery-3.7.1.min.js?_v=20240609152438"></script>
+  <script src="js/libs/swiper-bundle.min.js?_v=20240609152438"></script>
+  <script src="js/libs/fancybox.umd.js?_v=20240609152438"></script>
+  <script src="js/libs/nouislider.min.js?_v=20240609152438"></script>
+  <script src="js/libs/select2.full.min.js?_v=20240609152438"></script>
+  <script src="js/libs/jquery.validate.min.js?_v=20240609152438"></script>
+  <script src="js/libs/messages_ru.min.js?_v=20240609152438"></script>
   <!-- plugnis -->
 
 
-  <script src="js/app.min.js?_v=20240609134812"></script>
+  <script src="js/app.min.js?_v=20240609152438"></script>
 </body>
 
 </html>

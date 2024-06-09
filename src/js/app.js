@@ -56,12 +56,79 @@ $(function () {
             $target.next().slideToggle();
         }
 
-    })
+        if ($target.hasClass('btn-all-products')) {
+            $target.toggleClass('active');
+            let $productWrapper = $target.closest('.product-card__products');
+            if ($target.hasClass('active')) {
+                $target.find('span').text('Свернуть');
+            } else {
+                $target.find('span').text('Развернуть');
+            }
+            toggleAllProducts($productWrapper);
+        }
+
+    });
+
+
+    function toggleAllProducts($productWrapper) {
+        let $controls = $productWrapper.find('.product-card__contorls');
+        let $productSlider = $productWrapper.find('.product-card__items');
+        let sliderData = productSliders.find(s => s.slider === $productSlider[0]);
+
+
+        if (sliderData) {
+            if (sliderData.swiper.destroyed) {
+
+                console.log("Re-initializing Swiper");
+
+                $controls.removeClass('hidden');
+                $productSlider.removeClass('destroyed');
+
+                let prev = $productWrapper.find('.product-card__prev')[0];
+                let next = $productWrapper.find('.product-card__next')[0];
+                let pagination = $productWrapper.find('.product-card__pagination')[0];
+
+                sliderData.swiper = new Swiper($productSlider[0], {
+                    slidesPerView: 6,
+                    spaceBetween: 20,
+                    pagination: {
+                        el: pagination,
+                        type: "fraction",
+                        renderFraction: function (currentClass, totalClass) {
+                            return `Страница <span class="${currentClass}"></span> из <span class="${totalClass}"></span>`;
+                        }
+                    },
+                    navigation: {
+                        nextEl: next,
+                        prevEl: prev
+                    },
+                    breakpoints: {
+                        1199.98: {
+                            slidesPerView: 4,
+                        },
+                        1399.98: {
+                            slidesPerView: 6,
+                        }
+                    }
+                });
+
+            } else {
+
+                console.log("Destroying Swiper");
+
+                $controls.addClass('hidden');
+                $productSlider.addClass('destroyed');
+
+                sliderData.swiper.destroy(true, true);
+            }
+        }
+    }
 
 
 
     // Fancybox.show([{
     //     src: "#select-language"
+
 
     // }], {
     //     dragToClose: false,
@@ -290,6 +357,7 @@ $(function () {
 
     }
 
+    let productSliders = [];
     if ($(".product-card__products").length > 0) {
 
         $(".product-card__products").each(function (index, section) {
@@ -298,7 +366,7 @@ $(function () {
             let next = $(section).find('.product-card__next');
             let pagination = $(section).find('.product-card__pagination');
 
-            new Swiper(slider[0], {
+            let swiper = new Swiper(slider[0], {
                 slidesPerView: 6,
                 spaceBetween: 20,
                 pagination: {
@@ -322,15 +390,9 @@ $(function () {
                 }
             });
 
-
+            productSliders.push({ slider: slider[0], swiper: swiper });
 
         })
-
-
-
-
-
-
 
     }
 

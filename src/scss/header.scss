@@ -467,22 +467,9 @@
 		@media (min-width: $md3) {
 			padding: 0;
 		}
-		&::before {
-			@media (min-width: $md3) {
-				content: "";
-				position: absolute;
-				top: 100%;
-				left: 0;
-				width: 100%;
-				height: rem(1);
-				transition: width 0.3s ease 0s;
-				width: 0;
-				background: currentColor;
-			}
-		}
-		&:hover {
-			&::before {
-				width: 100%;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 		&:active {
@@ -510,7 +497,7 @@
 	@media (min-width: $md3) {
 		display: none !important;
 	}
-	color: $lightBlue;
+	color: $white;
 	font-size: 0.875rem;
 	font-weight: 600;
 	// .submenu__item

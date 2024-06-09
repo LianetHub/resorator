@@ -15,26 +15,10 @@
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "icons";
   font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -49,16 +33,32 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
   src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "icons";
+  font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -678,6 +678,28 @@ body.lock-menu {
           align-items: center;
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
+}
+
+.popup__list {
+  margin-top: 1.25rem;
+}
+
+.popup__list-item {
+  color: #475569;
+}
+
+.popup__list-item:not(:last-child) {
+  margin-bottom: 0.62rem;
+}
+
+.popup__list-caption {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.popup__list-text {
+  margin-top: 0.31rem;
+  font-size: 0.75rem;
 }
 
 .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow::before {
@@ -1334,9 +1356,9 @@ body.lock-menu {
 }
 
 .toggler__input:checked + .toggler__btn::before {
-  -webkit-transform: translate(0.875rem, -50%);
-      -ms-transform: translate(0.875rem, -50%);
-          transform: translate(0.875rem, -50%);
+  -webkit-transform: translate(1.03125rem, -50%);
+      -ms-transform: translate(1.03125rem, -50%);
+          transform: translate(1.03125rem, -50%);
 }
 
 .toggler__btn {
@@ -1856,10 +1878,6 @@ body.lock-menu {
   padding: 1.25rem 0.63rem;
 }
 
-.menu__link:hover::before {
-  width: 100%;
-}
-
 .menu__link:active {
   color: inherit;
 }
@@ -1882,7 +1900,7 @@ body.lock-menu {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
-  color: #94a3b8;
+  color: #fff;
   font-size: 0.875rem;
   font-weight: 600;
 }
@@ -3201,6 +3219,7 @@ body.lock-menu {
 
 .product-card__info-item a {
   color: #1e6ba3;
+  text-decoration: underline;
 }
 
 .product-card__info-name {
@@ -3251,6 +3270,8 @@ body.lock-menu {
   padding: 0.45rem 0.875rem;
   color: #475569;
   font-size: 0.8125rem;
+  -webkit-transition: border-color 0.3s ease 0s;
+  transition: border-color 0.3s ease 0s;
 }
 
 .product-card__side-label.product-card__side-label_active {
@@ -3461,6 +3482,7 @@ body.lock-menu {
           align-items: flex-start;
   border-bottom: 0.0625rem solid #e8e8e8;
   padding-bottom: 0.5rem;
+  min-height: 2.5625rem;
 }
 
 .product-card__filters {
@@ -3514,6 +3536,18 @@ body.lock-menu {
 
 .product-card__items {
   margin-top: 1.25rem;
+}
+
+.product-card__items.destroyed {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.25rem;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.product-card__items.destroyed .swiper-wrapper {
+  display: contents;
 }
 
 .product-card__desc {
@@ -3676,13 +3710,7 @@ body.lock-menu {
 
 .product-card__loadmore {
   margin-top: 1.25rem;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.63rem;
+  display: inline-block;
   color: #94a3b8;
   font-size: 0.8125rem;
   padding-right: 1.5rem;
@@ -3711,6 +3739,12 @@ body.lock-menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.product-card__loadmore.active::before {
+  -webkit-transform: rotate(-90deg) translateX(50%);
+      -ms-transform: rotate(-90deg) translateX(50%);
+          transform: rotate(-90deg) translateX(50%);
 }
 
 .catalog {
@@ -4865,19 +4899,6 @@ body.lock-menu {
     padding: 0;
   }
 
-  .menu__link::before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 0.0625rem;
-    -webkit-transition: width 0.3s ease 0s;
-    transition: width 0.3s ease 0s;
-    width: 0;
-    background: currentColor;
-  }
-
   .menu__link.active {
     color: inherit;
   }
@@ -5604,6 +5625,11 @@ body.lock-menu {
     height: 30rem;
   }
 
+  .product-card__items.destroyed {
+    -ms-grid-columns: (1fr)[5];
+    grid-template-columns: repeat(5, 1fr);
+  }
+
   .catalog__grid {
     -ms-grid-columns: (1fr)[4];
     grid-template-columns: repeat(4, 1fr);
@@ -5871,6 +5897,11 @@ body.lock-menu {
     max-width: 92.5rem;
   }
 
+  .product-card__items.destroyed {
+    -ms-grid-columns: (1fr)[6];
+    grid-template-columns: repeat(6, 1fr);
+  }
+
   .catalog__grid {
     -ms-grid-columns: (1fr)[5];
     grid-template-columns: repeat(5, 1fr);
@@ -6028,6 +6059,10 @@ body.lock-menu {
     color: #f7ce46;
   }
 
+  .menu__link:hover {
+    text-decoration: underline;
+  }
+
   .search__btn:hover {
     background: #fbe59c;
   }
@@ -6084,7 +6119,11 @@ body.lock-menu {
   }
 
   .product-card__info-item a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+  }
+
+  .product-card__side-label:hover {
+    border: 0.0625rem solid #f7ce46;
   }
 
   .product-card__characteristics-value[href]:hover {

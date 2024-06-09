@@ -355,7 +355,7 @@
 			& + .toggler__btn {
 				color: $yellow;
 				&::before {
-					transform: translate(rem(14), -50%);
+					transform: translate(rem(16.5), -50%);
 				}
 			}
 		}
@@ -368,6 +368,7 @@
 		display: inline-block;
 		color: $white;
 		background: $lightGray;
+
 		position: relative;
 		cursor: pointer;
 		transition: color 0.3s ease 0s, background-color 0.3s ease 0s;

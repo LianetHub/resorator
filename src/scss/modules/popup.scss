@@ -74,4 +74,25 @@
 			}
 		}
 	}
+	// .popup__list
+	&__list {
+		margin-top: 1.25rem;
+	}
+	// .popup__list-item
+	&__list-item {
+		color: $darkBlue;
+		&:not(:last-child) {
+			margin-bottom: 0.62rem;
+		}
+	}
+	// .popup__list-caption
+	&__list-caption {
+		font-size: 0.75rem;
+		font-weight: 600;
+	}
+	// .popup__list-text
+	&__list-text {
+		margin-top: 0.31rem;
+		font-size: 0.75rem;
+	}
 }
