@@ -1,5 +1,8 @@
 .breadcrumbs {
-	padding: 1.91rem 0;
+	padding: 1.25rem 0;
+	@media (min-width: $md3) {
+		padding: 1.91rem 0;
+	}
 	// .breadcrumbs__container
 	&__container {
 	}

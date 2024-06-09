@@ -1,7 +1,12 @@
 .auth {
-	min-height: 100%;
-	padding: 4.75rem 0;
-	height: calc(100vh - rem(600));
+	padding: 1.25rem 0;
+	@media (min-width: $md5) {
+		padding: 0 0 1.25rem 0;
+		min-height: calc(100vh - rem(650));
+	}
+	@media (min-width: $md3) {
+		padding: 4.75rem 0;
+	}
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -15,12 +20,15 @@
 	// .auth__form
 	&__form {
 		display: flex;
-		width: 25rem;
-		padding: 2.5rem;
 		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-		border-radius: 0.3125rem;
-		border: rem(1) solid $grayStroke;
+		width: 100%;
+		@media (min-width: $md5) {
+			width: 25rem;
+			padding: 2.5rem;
+			justify-content: center;
+			align-items: flex-start;
+			border-radius: 0.3125rem;
+			border: rem(1) solid $grayStroke;
+		}
 	}
 }

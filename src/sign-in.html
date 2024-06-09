@@ -9,7 +9,7 @@
             "shadow": true
             })
             <main class="page">
-                <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                <nav aria-label="Хлебные крошки" class="breadcrumbs tablet-sm-only">
                     <div class="breadcrumbs__container">
                         <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
                             <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
@@ -29,7 +29,7 @@
                 </nav>
                 <div class="auth">
                     <div class="auth__container">
-                        <form action="#" class="auth__form form">
+                        <form action="#" class="auth__form form" data-validation-form>
                             <h1 class="form__caption">Авторизация</h1>
                             <p class="form__subtitle">
                                 Введите данные для авторизации на сайте
@@ -37,8 +37,8 @@
                             <div class="form__field">
                                 <div class="form__label">Номер телефона</div>
                                 <input type="tel" name="phone" placeholder="+7" class="form__input">
-                                <button type="submit" class="form__btn btn btn-primary">Продолжить</button>
                             </div>
+                            <button type="submit" disabled class="form__btn btn btn-primary">Продолжить</button>
                         </form>
                     </div>
                 </div>

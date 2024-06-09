@@ -220,6 +220,9 @@
 			}
 			.card__image {
 				padding-bottom: 40%;
+				@media (min-width: $md3) {
+					padding-bottom: 38.5%;
+				}
 				@media (min-width: $md1) {
 					padding-bottom: 56.25%;
 				}
@@ -239,6 +242,9 @@
 			&__image {
 				@media (min-width: $md3) {
 					flex: 1 1 auto;
+				}
+				@media (min-width: $md2) {
+					flex: 0 1 auto;
 				}
 			}
 		}

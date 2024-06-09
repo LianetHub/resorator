@@ -40,6 +40,11 @@
 		// 		display: flex;
 		// 	}
 		// }
+		label.error {
+			margin-top: 0.25rem;
+			font-size: 0.75rem;
+			color: $red;
+		}
 	}
 	// &__icon {
 	// 	position: absolute;
@@ -144,6 +149,7 @@
 	&__btn {
 		margin-top: 1.25rem;
 		width: 100%;
+		min-height: rem(54);
 	}
 	// &__date {
 	// 	@extend .form__input;

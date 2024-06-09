@@ -7,18 +7,18 @@
 }
 
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "DinPro";
   font-display: swap;
   src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
   font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -41,16 +41,16 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -509,7 +509,7 @@ body.lock-menu {
 }
 
 .breadcrumbs {
-  padding: 1.91rem 0;
+  padding: 1.25rem 0;
 }
 
 .breadcrumbs__list {
@@ -1159,6 +1159,12 @@ body.lock-menu {
   margin-top: 1.25rem;
 }
 
+.form__field label.error {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: #ef4444;
+}
+
 .form__label {
   font-size: 0.8125rem;
   margin-bottom: 0.5rem;
@@ -1244,6 +1250,7 @@ body.lock-menu {
 .form__btn {
   margin-top: 1.25rem;
   width: 100%;
+  min-height: 3.375rem;
 }
 
 .form__checkbox {
@@ -2834,9 +2841,7 @@ body.lock-menu {
 }
 
 .auth {
-  min-height: 100%;
-  padding: 4.75rem 0;
-  height: calc(100vh - 37.5rem);
+  padding: 1.25rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2865,20 +2870,11 @@ body.lock-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 25rem;
-  padding: 2.5rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  border-radius: 0.3125rem;
-  border: 0.0625rem solid #e8e8e8;
+  width: 100%;
 }
 
 .product-card {
@@ -4115,6 +4111,24 @@ body.lock-menu {
   .product__cart {
     margin-left: auto;
   }
+
+  .auth {
+    padding: 0 0 1.25rem 0;
+    min-height: calc(100vh - 40.625rem);
+  }
+
+  .auth__form {
+    width: 25rem;
+    padding: 2.5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    border-radius: 0.3125rem;
+    border: 0.0625rem solid #e8e8e8;
+  }
 }
 
 @media (any-hover: hover) and (min-width: 575.98px) {
@@ -4719,6 +4733,10 @@ body.lock-menu {
     max-width: 60rem;
   }
 
+  .breadcrumbs {
+    padding: 1.91rem 0;
+  }
+
   .d-lg-none {
     display: none;
   }
@@ -4852,6 +4870,10 @@ body.lock-menu {
     max-width: 45rem;
   }
 
+  .navigation__item.navigation__item_lg-tablet .card__image {
+    padding-bottom: 38.5%;
+  }
+
   .navigation__item .card__image {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
@@ -4860,6 +4882,10 @@ body.lock-menu {
 
   .products .row:not(:last-child) {
     margin-bottom: 2.2rem;
+  }
+
+  .auth {
+    padding: 4.75rem 0;
   }
 }
 
@@ -5180,6 +5206,12 @@ body.lock-menu {
 
   .navigation {
     padding: 2.1875rem 0;
+  }
+
+  .navigation__item .card__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
 
   .products__banner {
