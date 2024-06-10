@@ -16,8 +16,13 @@
 	font-size: 2.5625rem;
 }
 
-.title-lg {
+.title-xl {
 	font-size: 3.75rem;
+	font-weight: 600;
+}
+
+.title-lg {
+	font-size: 2.1875rem;
 	font-weight: 600;
 }
 
@@ -41,6 +46,12 @@
 }
 .red-color {
 	color: $red !important;
+}
+.accent-color {
+	color: $yellow !important;
+}
+.yellow-secondary-color {
+	color: $yellowSecond !important;
 }
 
 .text-uppercase {

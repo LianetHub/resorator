@@ -411,6 +411,13 @@ $(function () {
 
     }
 
+    if ($('.about__navbar').length > 0) {
+        new Swiper('.about__navbar', {
+            slidesPerView: "auto",
+            spaceBetween: 80
+        })
+    }
+
     // range slider
 
     const rangeFilters = $('.catalog__filters-price');
