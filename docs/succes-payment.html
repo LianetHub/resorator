@@ -44,15 +44,15 @@
   <!-- Twitter -->
 
   <!-- plugnis -->
-  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240612004233">
-  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240612004233">
-  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240612004233">
-  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240612004233">
+  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240612020454">
+  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240612020454">
+  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240612020454">
+  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240612020454">
   <!-- plugnis -->
 
 
-  <link rel="stylesheet" href="css/reset.min.css?_v=20240612004233">
-  <link rel="stylesheet" href="css/style.min.css?_v=20240612004233">
+  <link rel="stylesheet" href="css/reset.min.css?_v=20240612020454">
+  <link rel="stylesheet" href="css/style.min.css?_v=20240612020454">
 
 </head>
 
@@ -382,39 +382,47 @@
   </div>
   <div id="select-language" class="popup">
     <div class="popup__header">
-      <h3 class="popup__title title-sm">Выбор языка</h3>
+      <h3 class="popup__title title-sm tablet-sm-only">Выбор языка</h3>
+      <input type="text" name="language-search" class="popup__header-search mobile-sm-only" placeholder="Начните писать">
       <button type="button" class="popup__close" data-fancybox-close></button>
     </div>
-    <p class="popup__subtitle">
+    <p class="popup__subtitle tablet-sm-only">
       Язык отображения интерфейса сайта, определен автоматически как Русский.
     </p>
     <form action="#" class="popup__form form" id="language-form">
-      <label for="language-select" class="form__label" tabindex="-1">Язык</label>
-      <select name="language" id="language-select" class="select" data-list-mobile>
+      <label for="language-select" class="form__label form__label_lg-mobile" tabindex="-1">Язык</label>
+      <select name="language" id="language-select" data-list-mobile>
         <option value="RU" selected data-img-src="img/icons/flag-ru.svg">Русский</option>
         <option value="EN" data-img-src="img/icons/flag-usa.svg">English</option>
         <option value="CH" data-img-src="img/icons/flag-china.svg">中文</option>
       </select>
-      <button type="submit" class="form__btn btn btn-primary">Выбрать</button>
+      <button type="submit" class="form__btn btn btn-primary">
+        <span class="tablet-sm-only">Выбрать</span>
+        <span class="mobile-sm-only">Сохранить выбор</span>
+      </button>
     </form>
   </div>
   <div id="select-location" class="popup">
     <div class="popup__header">
-      <h3 class="popup__title title-sm">Выбор локации</h3>
+      <h3 class="popup__title title-sm tablet-sm-only">Выбор локации</h3>
+      <input type="text" name="location-search" class="popup__header-search mobile-sm-only" placeholder="Начните писать">
       <button type="button" class="popup__close" data-fancybox-close></button>
     </div>
-    <p class="popup__subtitle">
+    <p class="popup__subtitle tablet-sm-only">
       Ваше местоположение определено автоматически. Вы можете изменить его вручную.
     </p>
     <form action="#" class="popup__form form" id="location-form">
-      <label for="location-select" class="form__label" tabindex="-1">Ваше местоположение</label>
-      <select name="location" id="location-select">
+      <label for="location-select" class="form__label form__label_lg-mobile" tabindex="-1">Ваше местоположение</label>
+      <select name="location" id="location-select" data-list-mobile>
         <option selected value="PK">Приморский край</option>
         <option value="MSK">Москва</option>
         <option value="SPB">Санкт-Петербург</option>
         <option value="PERM">Пермь</option>
       </select>
-      <button type="submit" class="form__btn btn btn-primary">Выбрать</button>
+      <button type="submit" class="form__btn btn btn-primary">
+        <span class="tablet-sm-only">Выбрать</span>
+        <span class="mobile-sm-only">Сохранить выбор</span>
+      </button>
     </form>
   </div>
   <div id="select-stock" class="popup">
@@ -461,17 +469,17 @@
     </div>
   </div>
   <!-- plugnis -->
-  <script src="js/libs/jquery-3.7.1.min.js?_v=20240612004233"></script>
-  <script src="js/libs/swiper-bundle.min.js?_v=20240612004233"></script>
-  <script src="js/libs/fancybox.umd.js?_v=20240612004233"></script>
-  <script src="js/libs/nouislider.min.js?_v=20240612004233"></script>
-  <script src="js/libs/select2.full.min.js?_v=20240612004233"></script>
-  <script src="js/libs/jquery.validate.min.js?_v=20240612004233"></script>
-  <script src="js/libs/messages_ru.min.js?_v=20240612004233"></script>
+  <script src="js/libs/jquery-3.7.1.min.js?_v=20240612020454"></script>
+  <script src="js/libs/swiper-bundle.min.js?_v=20240612020454"></script>
+  <script src="js/libs/fancybox.umd.js?_v=20240612020454"></script>
+  <script src="js/libs/nouislider.min.js?_v=20240612020454"></script>
+  <script src="js/libs/select2.full.min.js?_v=20240612020454"></script>
+  <script src="js/libs/jquery.validate.min.js?_v=20240612020454"></script>
+  <script src="js/libs/messages_ru.min.js?_v=20240612020454"></script>
   <!-- plugnis -->
 
 
-  <script src="js/app.min.js?_v=20240612004233"></script>
+  <script src="js/app.min.js?_v=20240612020454"></script>
 </body>
 
 </html>

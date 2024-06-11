@@ -1,6 +1,5 @@
 "use strict";
 
-// const { default: Swiper } = require("swiper");
 
 //  init Fancybox
 if (typeof Fancybox !== "undefined" && Fancybox !== null) {
@@ -146,7 +145,6 @@ $(function () {
     }
 
 
-
     // Fancybox.show([{
     //     src: "#select-language"
 
@@ -179,49 +177,67 @@ $(function () {
 
 
     // custom select
+
     function initCustomSelect($select) {
-        // Создание кастомного списка
+
         var $customSelectContainer = $('<div>', { class: 'custom-select-container' });
         var $customSelect = $('<ul>', { id: 'custom-select-' + $select.attr('id') });
         $customSelectContainer.append($customSelect);
         $select.after($customSelectContainer);
 
-        function renderCustomSelect() {
-            if ($(window).width() < 576) {
-                $customSelect.empty();
-                $customSelectContainer.show();
-                $select.hide();
-                $select.find('option').each(function () {
-                    var imgSrc = $(this).data('img-src');
-                    var text = $(this).text();
-                    var value = $(this).val();
 
-                    var $li = $('<li>').attr('data-value', value).html('<img src="' + imgSrc + '" class="img-flag" /> ' + text);
+        var searchInputName = $select.attr('name') + '-search';
+        var $searchInput = $('input[name="' + searchInputName + '"]');
+
+
+        function renderCustomSelect(filter = '') {
+            $customSelect.empty();
+            $select.find('option').each(function () {
+                var text = $(this).text();
+                var value = $(this).val();
+                var imgSrc = $(this).data('img-src');
+
+                if (text.toLowerCase().includes(filter.toLowerCase())) {
+                    var $li;
+                    if (imgSrc) {
+                        $li = $('<li>').attr('data-value', value).html('<img src="' + imgSrc + '" class="img-flag" /> ' + text);
+                    } else {
+                        $li = $('<li>').attr('data-value', value).text(text);
+                    }
+
+                    if ($select.val() === value) {
+                        $li.addClass('selected');
+                    }
                     $li.on('click', function () {
                         $select.val(value).trigger('change');
+                        $customSelect.find('li').removeClass('selected');
+                        $li.addClass('selected');
                     });
                     $customSelect.append($li);
-                });
-            } else {
-                $customSelectContainer.hide();
-                $select.show();
-            }
+                }
+            });
         }
 
-        // Первичная отрисовка
+
         renderCustomSelect();
 
-        // Обработка ресайза окна
-        $(window).one('resize', function () {
+
+        $(window).on('resize', function () {
             renderCustomSelect();
         });
-    }
 
+
+        if ($searchInput.length > 0) {
+            $searchInput.on('input', function () {
+                var searchTerm = $(this).val().toLowerCase();
+                renderCustomSelect(searchTerm);
+            });
+        }
+    }
 
     $('select').each(function () {
         var $select = $(this);
         var searchEnabled = $select.data('search') !== undefined;
-
 
         $select.select2({
             templateResult: formatState,
@@ -249,6 +265,11 @@ $(function () {
             return $opt;
         }
     };
+
+
+
+
+
 
     // tooltip
     $('[data-tooltip]').on('mouseenter', function () {

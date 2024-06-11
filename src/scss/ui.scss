@@ -62,12 +62,6 @@
 	width: 100%;
 }
 
-.d-lg-none {
-	@media (min-width: $md3) {
-		display: none;
-	}
-}
-
 .label {
 	padding: 0.5rem 0.62rem;
 	font-size: 0.625rem;
@@ -262,6 +256,12 @@
 		&.swiper-pagination-bullet-active {
 			background: $yellow;
 		}
+	}
+}
+
+.d-lg-none {
+	@media (min-width: $md3) {
+		display: none;
 	}
 }
 

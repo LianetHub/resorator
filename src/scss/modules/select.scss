@@ -2,10 +2,40 @@
 	@media (min-width: $md5) {
 		display: none;
 	}
+	& ul {
+		border-top: rem(1) solid $grayStroke;
+		& li {
+			padding: 1.06rem 1.25rem;
+			border-bottom: rem(1) solid $grayStroke;
+			display: flex;
+			align-items: center;
+			gap: 0.63rem;
+			line-height: math.div(20, 16);
+			.img-flag {
+				width: rem(35);
+				height: rem(26);
+			}
+			&.selected {
+				&::before {
+					order: 1;
+					margin-left: auto;
+					font-size: 1.25rem;
+					color: $darkBlue;
+					@extend %ic, .icon-check;
+				}
+			}
+		}
+	}
 }
 select[data-list-mobile] {
 	@media (max-width: $md5) {
-		display: none;
+		& ~ .select2 {
+			display: none;
+		}
+		& ~ .custom-select-container {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 }
 
