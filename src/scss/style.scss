@@ -85,6 +85,12 @@ body {
 			overflow: visible;
 		}
 	}
+	&.lock-search {
+		overflow: hidden;
+		@media (min-width: $md3) {
+			overflow: visible;
+		}
+	}
 	&.lock-catalog-filter {
 		overflow: hidden;
 		@media (min-width: $md4) {

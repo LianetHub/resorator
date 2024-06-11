@@ -13,12 +13,13 @@ if (typeof Fancybox !== "undefined" && Fancybox !== null) {
 $(function () {
 
     // event handlers
+
     $(document).on('click', function (e) {
         let $target = $(e.target);
 
         if ($target.hasClass('search-btn-toggler')) {
-            $target.toggleClass('active');
-            $(".header__search").toggleClass('search_visible')
+            $(".header__search").toggleClass('search_visible');
+            $('body').toggleClass('lock-search')
         }
 
         if ($target[0].closest('.menu-toggler')) {
@@ -608,7 +609,7 @@ $(function () {
     }
 
 
-    // validation fields
+
 
     // $.validator.addMethod("onlyletters", function (value, element) {
     //     return !/[\d!@#$%^&*(),.?":{}|<>]/.test(value);
@@ -624,6 +625,8 @@ $(function () {
         this.value = this.value.replace(/\D/g, '');
     });
 
+
+    // validation fields
     $.validator.addMethod("phoneRU", function (value, element) {
         return this.optional(element) || /^(8|\+7) \(\d{3}\) \d{3}-\d{2}-\d{2}$/.test(value);
     }, "");
