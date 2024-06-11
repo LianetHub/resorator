@@ -1,16 +1,16 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -19,22 +19,6 @@
   font-display: swap;
   src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
   font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
   font-style: normal;
 }
 
@@ -49,8 +33,16 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -59,6 +51,14 @@
   font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -2921,10 +2921,11 @@ body.lock-catalog-filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 2.5rem;
   max-width: 2.5rem;
   width: 100%;
   font-size: 1.125rem;
+  height: 2.25rem;
+  min-width: 2.25rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -4929,6 +4930,13 @@ body.lock-catalog-filter {
   --gutter-y: 0.62rem;
 }
 
+@media (min-width: 375px) {
+  .product__action {
+    min-width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
 @media (min-width: 575.98px) {
   [class*=__container] {
     max-width: 36rem;
@@ -5122,6 +5130,7 @@ body.lock-catalog-filter {
   }
 
   .product__action {
+    min-width: 0;
     font-size: 1rem;
     max-width: 2rem;
     width: auto;

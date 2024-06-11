@@ -551,11 +551,17 @@
 	&__action {
 		display: flex;
 
-		height: 2.5rem;
 		max-width: 2.5rem;
 		width: 100%;
 		font-size: 1.125rem;
+		height: 2.25rem;
+		min-width: 2.25rem;
+		@media (min-width: 375px) {
+			min-width: 2.5rem;
+			height: 2.5rem;
+		}
 		@media (min-width: $md5) {
+			min-width: 0;
 			font-size: 1rem;
 			max-width: 2rem;
 			width: auto;
