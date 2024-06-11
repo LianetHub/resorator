@@ -18,6 +18,18 @@
 	}
 }
 
+.icon-minus:before {
+	content: "\e91e";
+}
+.icon-plus:before {
+	content: "\e91f";
+}
+.icon-attach:before {
+	content: "\e921";
+}
+.icon-info:before {
+	content: "\e920";
+}
 .icon-mail:before {
 	content: "\e91c";
 }

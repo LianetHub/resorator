@@ -58,6 +58,10 @@
 	text-transform: uppercase;
 }
 
+.full-width {
+	width: 100%;
+}
+
 .d-lg-none {
 	@media (min-width: $md3) {
 		display: none;

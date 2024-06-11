@@ -83,6 +83,11 @@ $(function () {
             $('body').toggleClass('lock-catalog-filter')
         }
 
+        if ($target.hasClass('about__services-caption')) {
+            $target.toggleClass('active');
+            $target.next().slideToggle();
+        }
+
     });
 
 

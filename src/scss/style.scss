@@ -62,6 +62,10 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 
 //ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ
 
+html {
+	scroll-padding-top: 5rem;
+}
+
 body {
 	font-family: $fontfamily, sans-serif;
 	color: $dark;
