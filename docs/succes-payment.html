@@ -44,15 +44,15 @@
   <!-- Twitter -->
 
   <!-- plugnis -->
-  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240612021549">
-  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240612021549">
-  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240612021549">
-  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240612021549">
+  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240612120511">
+  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240612120511">
+  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240612120511">
+  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240612120511">
   <!-- plugnis -->
 
 
-  <link rel="stylesheet" href="css/reset.min.css?_v=20240612021549">
-  <link rel="stylesheet" href="css/style.min.css?_v=20240612021549">
+  <link rel="stylesheet" href="css/reset.min.css?_v=20240612120511">
+  <link rel="stylesheet" href="css/style.min.css?_v=20240612120511">
 
 </head>
 
@@ -160,10 +160,8 @@
             Каталог
           </a>
           <form action="#" role="search" class="header__search search">
-            <div class="search__header">
-              <input type="text" autocomplete="off" name="search" class="search__form-input" placeholder="Поиск по товарам и брендам">
-              <button type="submit" aria-label="Искать товары" data-tooltip title="Искать товар" class="search__btn icon-search"></button>
-            </div>
+            <input type="text" autocomplete="off" name="search" class="search__form-input" placeholder="Поиск по товарам и брендам">
+            <button type="submit" aria-label="Искать товары" data-tooltip title="Искать товар" class="search__btn icon-search"></button>
           </form>
           <div class="header__actions actions">
             <button type="button" class="actions__item menu-toggler mobile-sm-only">
@@ -177,9 +175,9 @@
             <a href="/catalog.html" data-tooltip title="Каталог" class="actions__item icon-catalog mobile-sm-only">
               <span class="actions__item-desc">Каталог</span>
             </a>
-            <button type="button" class="actions__item search-btn-toggler icon-search">
+            <a href="#mobile-search" data-fancybox class="actions__item search-btn-toggler icon-search">
               <span class="actions__item-desc">Поиск</span>
-            </button>
+            </a>
             <a href="" data-tooltip title="Сравнение" class="actions__item icon-compare open-menu-mobile">
               <span class="actions__item-desc">Сравнение</span>
             </a>
@@ -190,7 +188,7 @@
               <span class="actions__item-desc">Корзина</span>
               <span class="actions__item-quantity">12</span>
             </a>
-            <a href="" data-tooltip title="Личный кабинет" class="actions__item icon-user  open-menu-mobile">
+            <a href="" data-tooltip title="Личный кабинет" class="actions__item icon-user open-menu-mobile">
               <span class="actions__item-desc">Пользователь</span>
             </a>
           </div>
@@ -461,6 +459,108 @@
     </form>
 
   </div>
+  <div id="mobile-search" class="popup popup_full-width">
+    <div class="popup__header">
+      <input type="text" name="search" class="popup__header-search" placeholder="Начните писать">
+      <button type="button" class="popup__close" data-fancybox-close></button>
+    </div>
+    <div class="search__body">
+      <div class="search__block">
+        <div class="search__caption">Группы</div>
+        <ul class="search__result">
+          <li class="search__result-item">
+            <a href="" class="search__result-link">Торговое оборудование</a>
+          </li>
+          <li class="search__result-item">
+            <a href="" class="search__result-link">Доставка и оплата</a>
+          </li>
+          <li class="search__result-item">
+            <a href="" class="search__result-link">Гарантия и сервис</a>
+          </li>
+          <li class="search__result-item">
+            <a href="" class="search__result-link">Прайс-лист</a>
+          </li>
+          <li class="search__result-item">
+            <a href="" class="search__result-link">Блог</a>
+          </li>
+          <li class="search__result-item">
+            <a href="" class="search__result-link">Производство</a>
+          </li>
+          <li class="search__result-item">
+            <a href="" class="search__result-link">Наш бренд</a>
+          </li>
+          <li class="search__result-item">
+            <a href="" class="search__result-link">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="search__block">
+        <div class="banners__item banners__item_green">
+          <div class="banners__item-body">
+            <div class="banners__item-caption">
+              Проверка
+              качества
+            </div>
+            <div class="banners__item-desc">
+              Все товары проверены и у вас
+              есть 14 дней для их оценки
+            </div>
+          </div>
+          <div class="banners__item-image">
+            <img src="img/banners/03.png" alt="Баннер">
+          </div>
+        </div>
+      </div>
+      <div class="search__block">
+        <div class="search__caption">Товары по видам направления</div>
+        <div class="products__grid">
+          <div class="products__item">
+            <a href="" class="card">
+              <span class="card__image">
+                <img src="img/products/01.png" class="cover-image" alt="Описание">
+              </span>
+              <span class="card__desc">
+                Пиццерия
+              </span>
+            </a>
+          </div>
+          <div class="products__item">
+            <a href="" class="card">
+              <span class="card__image">
+                <img src="img/products/02.png" class="cover-image" alt="Описание">
+              </span>
+              <span class="card__desc">
+                Пекарня
+              </span>
+            </a>
+          </div>
+          <div class="products__item">
+            <a href="" class="card">
+              <span class="card__image">
+                <img src="img/products/04.png" class="cover-image" alt="Описание">
+              </span>
+              <span class="card__desc">
+                Столовая
+              </span>
+            </a>
+          </div>
+          <div class="products__item">
+            <a href="" class="card">
+              <span class="card__image">
+                <img src="img/products/05.png" class="cover-image" alt="Описание">
+              </span>
+              <span class="card__desc">
+                Ресторан
+              </span>
+            </a>
+          </div>
+        </div>
+        <button type="button" class="search__more icon-chevron">
+          <span>Все направления</span>
+        </button>
+      </div>
+    </div>
+  </div>
   <div id="success" class="popup">
     <div class="popup__body">
       <div class="popup__title title-sm">Thank you! </div>
@@ -471,17 +571,17 @@
     </div>
   </div>
   <!-- plugnis -->
-  <script src="js/libs/jquery-3.7.1.min.js?_v=20240612021549"></script>
-  <script src="js/libs/swiper-bundle.min.js?_v=20240612021549"></script>
-  <script src="js/libs/fancybox.umd.js?_v=20240612021549"></script>
-  <script src="js/libs/nouislider.min.js?_v=20240612021549"></script>
-  <script src="js/libs/select2.full.min.js?_v=20240612021549"></script>
-  <script src="js/libs/jquery.validate.min.js?_v=20240612021549"></script>
-  <script src="js/libs/messages_ru.min.js?_v=20240612021549"></script>
+  <script src="js/libs/jquery-3.7.1.min.js?_v=20240612120511"></script>
+  <script src="js/libs/swiper-bundle.min.js?_v=20240612120511"></script>
+  <script src="js/libs/fancybox.umd.js?_v=20240612120511"></script>
+  <script src="js/libs/nouislider.min.js?_v=20240612120511"></script>
+  <script src="js/libs/select2.full.min.js?_v=20240612120511"></script>
+  <script src="js/libs/jquery.validate.min.js?_v=20240612120511"></script>
+  <script src="js/libs/messages_ru.min.js?_v=20240612120511"></script>
   <!-- plugnis -->
 
 
-  <script src="js/app.min.js?_v=20240612021549"></script>
+  <script src="js/app.min.js?_v=20240612120511"></script>
 </body>
 
 </html>

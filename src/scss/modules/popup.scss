@@ -6,10 +6,6 @@
 .fancybox__slide {
 	padding-block: 0;
 	padding-inline: 0;
-
-	@media (min-width: $md4) {
-		padding-block: 2.5rem;
-	}
 }
 
 .fancybox__backdrop {
@@ -40,6 +36,10 @@
 		min-height: auto;
 		border-radius: 0.5rem;
 		max-width: 21.875rem;
+	}
+	&.popup_full-width {
+		max-width: 100%;
+		border-radius: 0;
 	}
 	// .popup__header
 	&__header {

@@ -1,4 +1,5 @@
 //============ МОДУЛИ ====================
+@import "modules/search";
 @import "modules/breadcrumbs";
 @import "modules/tooltip";
 @import "modules/popup";
@@ -259,7 +260,7 @@
 	}
 }
 
-.d-lg-none {
+.pc-none {
 	@media (min-width: $md3) {
 		display: none;
 	}

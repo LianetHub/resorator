@@ -330,6 +330,7 @@
 	&__search {
 		min-height: 3rem;
 		margin-bottom: 1.25rem;
+		display: flex;
 	}
 	// .products__container
 	&__container {
@@ -345,8 +346,12 @@
 	&__grid {
 		display: grid;
 		gap: 1.25rem;
-		margin-top: 1.5rem;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+		margin-top: 1.25rem;
+		@media (min-width: $md5) {
+			margin-top: 1.5rem;
+			grid-template-columns: repeat(3, 1fr);
+		}
 		@media (min-width: $md4) {
 			row-gap: 0.3rem;
 			grid-template-columns: repeat(4, 1fr);
@@ -743,16 +748,26 @@
 	// .banners__item-caption
 	&__item-caption {
 		font-family: $font-din;
-		font-size: 1.9375rem;
 		font-weight: 700;
 		text-transform: uppercase;
+		font-size: 1.5rem;
+		@media (min-width: $md4) {
+			font-size: 1.9375rem;
+		}
 	}
 	// .banners__item-desc
 	&__item-desc {
 		margin-top: 0.62rem;
+		font-size: 0.75rem;
+		@media (min-width: $md4) {
+			font-size: 1rem;
+		}
 	}
 	// .banners__item-image
 	&__item-image {
-		min-width: 9.375rem;
+		min-width: 6.25rem;
+		@media (min-width: $md4) {
+			min-width: 9.375rem;
+		}
 	}
 }

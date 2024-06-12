@@ -18,8 +18,8 @@ $(function () {
         let $target = $(e.target);
 
         if ($target.hasClass('search-btn-toggler')) {
-            $(".header__search").toggleClass('search_visible');
-            $('body').toggleClass('lock-search')
+            // $(".mobile-search").toggleClass('search_visible');
+            // $('body').toggleClass('lock-search')
         }
 
         if ($target[0].closest('.menu-toggler')) {
@@ -147,7 +147,7 @@ $(function () {
 
 
     // Fancybox.show([{
-    //     src: "#select-language"
+    //     src: "#mobile-search"
 
 
     // }], {

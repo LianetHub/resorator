@@ -113,7 +113,7 @@
     },
     {
         "wrapper": true,
-        "className": "col-lg-3 col-md-4 col-6 d-lg-none tablet-only",
+        "className": "col-lg-3 col-md-4 col-6 pc-none tablet-only",
         "labels": true,
         "sale": false,
         "hit": true,
