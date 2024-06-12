@@ -51,11 +51,13 @@ $(function () {
             }
         }
 
+        // category spoller in filter on catalog page
         if ($target.hasClass('catalog__filters-spoller')) {
             $target.toggleClass('active');
             $target.next().slideToggle();
         }
 
+        // toggle slider to grid on product page
         if ($target.hasClass('btn-all-products')) {
             $target.toggleClass('active');
             let $productWrapper = $target.closest('.product-card__products');
@@ -67,7 +69,7 @@ $(function () {
             toggleAllProducts($productWrapper);
         }
 
-
+        // get visible all checkboxes in filter on catalog page
         if ($target.hasClass('catalog__filters-more')) {
             $target.toggleClass('active');
             $target.prev().slideToggle()
@@ -78,14 +80,28 @@ $(function () {
             }
         }
 
+        // get visible catalog on mobile - catalog page
         if ($target.hasClass('catalog-filter-btn')) {
             $('.catalog__sidebar').toggleClass('visible');
             $('body').toggleClass('lock-catalog-filter')
         }
 
+        // spoller services - on about page
         if ($target.hasClass('about__services-caption')) {
             $target.toggleClass('active');
             $target.next().slideToggle();
+        }
+
+        // product open all filters on mobile
+        if ($target.hasClass('product-card__filters-more')) {
+            $target.toggleClass('active');
+            $target.prev().toggleClass('active')
+        }
+
+        // product tabs
+        if ($target.hasClass('product-card__filter')) {
+            $target.addClass('active').siblings().removeClass('active');
+            $target.parent().removeClass('active').next().removeClass('active');
         }
 
     });
@@ -381,7 +397,18 @@ $(function () {
 
         let thumbsSlider = new Swiper('.product-card__thumbs', {
             slidesPerView: 3,
-            spaceBetween: 20
+            spaceBetween: 20,
+            breakpoints: {
+                575.98: {
+                    slidesPerView: 3,
+                },
+                767.98: {
+                    slidesPerView: 2,
+                },
+                991.98: {
+                    slidesPerView: 3,
+                }
+            }
         });
 
         let mainSlider = new Swiper('.product-card__slider-main', {
@@ -412,7 +439,7 @@ $(function () {
             let pagination = $(section).find('.product-card__pagination');
 
             let swiper = new Swiper(slider[0], {
-                slidesPerView: 2,
+                slidesPerView: 1.45,
                 spaceBetween: 20,
                 pagination: {
                     el: pagination[0],
@@ -426,6 +453,9 @@ $(function () {
                     prevEl: prev[0]
                 },
                 breakpoints: {
+                    575.98: {
+                        slidesPerView: 2,
+                    },
                     767.98: {
                         slidesPerView: 3,
                     },

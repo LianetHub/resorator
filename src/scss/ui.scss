@@ -279,7 +279,7 @@
 }
 .tablet-sm-only {
 	@media (max-width: $md5) {
-		display: none;
+		display: none !important;
 	}
 }
 

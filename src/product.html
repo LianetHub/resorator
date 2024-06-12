@@ -11,7 +11,7 @@
             <main class="page">
                 <section class="product-card">
                     <div class="product-card__container">
-                        <div class="product-card__header row">
+                        <div class="product-card__header row tablet-sm-only">
                             <div class="col-xxl-9 col-lg-7">
                                 <nav aria-label="Хлебные крошки" class="breadcrumbs">
                                     <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
@@ -46,7 +46,7 @@
                         <div class="product-card__content">
                             <div class="product-card__body">
                                 <div class="product-card__heading">
-                                    <h1 class="product-card__title title-md">
+                                    <h1 class="product-card__title">
                                         Печь конвекционная UNOX XB693, пароконвектомат
                                     </h1>
                                     <div class="product-card__labels">
@@ -73,7 +73,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="product-card__slider-bottom">
+                                        <div class="product-card__slider-bottom tablet-sm-only">
                                             <a href="https://youtu.be/w0uLb_Db7gE?si=weGIHvXgT1Hncbf8" data-fancybox class="product-card__slider-video icon-play">
                                                 <img src="@img/video-poster.jpg" class="cover-image" alt="Обложка видео">
                                             </a>
@@ -98,7 +98,7 @@
                                     </div>
                                     <div class="product-card__info">
                                         <div class="product-card__info-header">
-                                            <div class="product-card__info-caption title-sm">Характеристики</div>
+                                            <div class="product-card__info-caption">Характеристики</div>
                                             <div class="product-card__info-actions">
                                                 <button type="button" aria-label="Сравнить" data-tooltip title="Добавить к сравнению" class="product-card__info-action icon-compare"></button>
                                                 <button type="button" aria-label="Добавить в избранное" data-tooltip title="Добавить в избранное" class="product-card__info-action icon-star"></button>
@@ -282,8 +282,11 @@
                         <div class="product-card__products">
                             <div class="product-card__products-header">
                                 <div class="product-card__filters">
-                                    <a href="" class="product-card__filter active">Аксессуары <span class="product-card__quantity">(124)</span></a>
-                                    <a href="" class="product-card__filter">Запасные части <span class="product-card__quantity">(8)</span></a>
+                                    <div class="product-card__filters-items">
+                                        <button type="button" class="product-card__filter active">Аксессуары <span class="product-card__quantity">(124)</span></button>
+                                        <button type="button" class="product-card__filter">Запасные части <span class="product-card__quantity">(8)</span></button>
+                                    </div>
+                                    <button type="button" aria-label="Показать все фильтры" class="product-card__filters-more mobile-sm-only icon-chevron"></button>
                                 </div>
                                 <div class="product-card__contorls">
                                     <div class="product-card__prev swiper-button-prev"></div>
