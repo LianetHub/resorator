@@ -300,6 +300,41 @@
 	}
 }
 
+.quantity-block {
+	display: flex;
+	align-items: center;
+	max-width: 100%;
+	border-radius: 0.3125rem;
+	border: rem(1) solid $lightBlue;
+	padding: 0.62rem;
+	// .quantity-block__down
+	&__down {
+		width: 1.5rem;
+		height: 1.5rem;
+		font-size: 1.5rem;
+		flex-shrink: 0;
+		color: $lightBlue;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellow;
+			}
+		}
+	}
+	// .quantity-block__input
+	&__input {
+		text-align: center;
+		width: 100%;
+		flex: 1 1 auto;
+		padding: 0.5rem 0;
+		background: transparent;
+	}
+	// .quantity-block__up
+	&__up {
+		@extend .quantity-block__down;
+	}
+}
+
 // .fw-normal {
 // 	font-weight: 400;
 // }

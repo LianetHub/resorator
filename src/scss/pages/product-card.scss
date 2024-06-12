@@ -562,6 +562,24 @@
 		width: 100%;
 		min-height: 4rem;
 		font-size: 1rem;
+		&.hidden {
+			display: none;
+		}
+	}
+	// .product-card__cart-actions
+	&__cart-actions {
+		margin-top: rem(20);
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(10);
+	}
+	// .product-card__cart-btn
+	&__cart-btn {
+		min-height: 4rem;
+		padding-inline: 1rem;
+		&::before {
+			font-size: 1.25rem;
+		}
 	}
 	// .product-card__tags
 	&__tags {
