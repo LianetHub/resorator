@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "icons";
+  font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -15,10 +15,18 @@
 }
 
 @font-face {
-  font-family: "DinPro";
+  font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -41,14 +49,6 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
   src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -57,8 +57,8 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -89,6 +89,10 @@
 [class^=icon-]:before,
 [class*=" icon-"]:before {
   display: block;
+}
+
+.icon-cake:before {
+  content: "\e924";
 }
 
 .icon-minus-circle:before {
@@ -5454,6 +5458,154 @@ body.lock-catalog-filter {
   --gutter-y: 0.62rem;
 }
 
+.goods {
+  padding: 1.875rem 0;
+}
+
+.goods__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.goods__sidebar {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 13.25rem;
+          flex: 0 0 13.25rem;
+}
+
+.goods__sidebar-item:not(:last-child) {
+  margin-bottom: 0.94rem;
+}
+
+.goods__sidebar-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.63rem;
+  color: #475569;
+  font-size: 0.8125rem;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.goods__sidebar-link::before {
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #94a3b8;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.goods__sidebar-quantity {
+  margin-left: auto;
+  color: #94a3b8;
+  font-size: 0.8125rem;
+}
+
+.goods__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 1.25rem;
+  border-left: 0.0625rem solid #e8e8e8;
+}
+
+.goods__title {
+  margin-top: 1.88rem;
+  margin-bottom: 1.88rem;
+  color: #1d1d1d;
+  font-family: "DinPro";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.goods__body {
+  --gutter-y: 1.88rem;
+}
+
+.goods__caption {
+  color: #1d1d1d;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.goods__list {
+  margin-top: 1.25rem;
+}
+
+.goods__item {
+  color: #475569;
+  font-size: 0.8125rem;
+}
+
+.goods__item:not(:last-child) {
+  margin-bottom: 0.62rem;
+}
+
+.goods__item-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.62rem;
+}
+
+.goods__item-quantity {
+  color: #94a3b8;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.goods__more {
+  margin-top: 1.25rem;
+  color: #1e6ba3;
+  display: inline-block;
+  font-size: 0.8125rem;
+  text-decoration: underline;
+}
+
+.goods__products {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 14.375rem;
+          flex: 0 0 14.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
 @media (min-width: 375px) {
   .product__action {
     min-width: 2.5rem;
@@ -8035,6 +8187,23 @@ body.lock-catalog-filter {
 
   .about__feedback-item a:hover {
     color: #f7ce46;
+  }
+
+  .goods__sidebar-link:hover {
+    color: #475569;
+  }
+
+  .goods__sidebar-link:hover::before {
+    color: #475569;
+  }
+
+  .goods__sidebar-link:hover .goods__sidebar-text {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .goods__more:hover {
+    text-decoration: none;
   }
 }
 

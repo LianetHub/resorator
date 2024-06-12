@@ -1,0 +1,134 @@
+.goods {
+	padding: rem(30) 0;
+	// .goods__container
+	&__container {
+		display: flex;
+		align-items: flex-start;
+		gap: rem(20);
+	}
+	// .goods__sidebar
+	&__sidebar {
+		flex: 0 0 rem(212);
+	}
+	// .goods__sidebar-list
+	&__sidebar-list {
+	}
+	// .goods__sidebar-item
+	&__sidebar-item {
+		&:not(:last-child) {
+			margin-bottom: 0.94rem;
+		}
+	}
+	// .goods__sidebar-link
+	&__sidebar-link {
+		display: flex;
+		align-items: center;
+		gap: 0.63rem;
+		color: $darkBlue;
+		font-size: 0.8125rem;
+		transition: color 0.3s ease 0s;
+		&::before {
+			width: 1.25rem;
+			height: 1.25rem;
+			font-size: 1.25rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: $lightBlue;
+			transition: color 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $darkBlue;
+				&::before {
+					color: $darkBlue;
+				}
+				.goods__sidebar-text {
+					font-weight: 600;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	// .goods__sidebar-text
+	&__sidebar-text {
+	}
+	// .goods__sidebar-quantity
+	&__sidebar-quantity {
+		margin-left: auto;
+		color: $lightBlue;
+		font-size: 0.8125rem;
+	}
+	// .goods__content
+	&__content {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		padding-left: rem(20);
+		border-left: rem(1) solid $grayStroke;
+	}
+	// .goods__title
+	&__title {
+		margin-top: 1.88rem;
+		margin-bottom: 1.88rem;
+		color: $dark;
+		font-family: $font-din;
+		font-size: 1.5rem;
+		font-weight: 700;
+		line-height: 100%;
+	}
+	// .goods__body
+	&__body {
+		--gutter-y: 1.88rem;
+	}
+	// .goods__caption
+	&__caption {
+		color: $dark;
+		font-size: 0.875rem;
+		font-weight: 600;
+	}
+	// .goods__list
+	&__list {
+		margin-top: 1.25rem;
+	}
+	// .goods__item
+	&__item {
+		color: $darkBlue;
+		font-size: 0.8125rem;
+		&:not(:last-child) {
+			margin-bottom: 0.62rem;
+		}
+	}
+	// .goods__item-link
+	&__item-link {
+		display: flex;
+		align-items: center;
+		gap: 0.62rem;
+	}
+	// .goods__item-quantity
+	&__item-quantity {
+		color: $lightBlue;
+		font-size: 0.75rem;
+		font-weight: 600;
+	}
+	// .goods__more
+	&__more {
+		margin-top: 1.25rem;
+		color: $blue;
+		display: inline-block;
+		font-size: 0.8125rem;
+		text-decoration: underline;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	// .goods__products
+	&__products {
+		flex: 0 0 rem(230);
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
+	}
+}

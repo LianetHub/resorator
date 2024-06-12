@@ -1,0 +1,30 @@
+[
+    {
+        "wrapper": false,
+        "className": "",
+        "labels": true,
+        "sale": false,
+        "hit": false,
+        "novinka": true,
+        "index": "02",
+        "name": "Abat ПКА 6-2/3П",
+        "price": "149 729",
+        "аvailability": "yes",
+        "oldPrice": true,
+        "oldPriceValue": "270 380"
+    },
+    {
+        "wrapper": false,
+        "className": "",
+        "labels": true,
+        "sale": false,
+        "hit": false,
+        "novinka": true,
+        "index": "02",
+        "name": "Abat ПКА 6-2/3П",
+        "price": "149 729",
+        "аvailability": "yes",
+        "oldPrice": true,
+        "oldPriceValue": "270 380"
+    }
+]
