@@ -308,6 +308,8 @@
 	}
 	// .product-card__side
 	&__side {
+		position: sticky;
+		top: 1rem;
 		flex-shrink: 0;
 		width: 22.1875rem;
 		border-radius: 0.3125rem;
