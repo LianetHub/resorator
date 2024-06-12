@@ -772,6 +772,7 @@
 			align-items: center;
 			justify-content: space-between;
 			flex-direction: row;
+			flex-wrap: wrap;
 		}
 	}
 	// .product__avaibility
@@ -780,14 +781,27 @@
 		font-weight: 600;
 		text-transform: uppercase;
 		color: $lightBlue;
+		flex: 0 0 calc(50% - 0.25rem);
 	}
 	// .product__cart
 	&__cart {
+		flex: 0 0 calc(50% - 0.25rem);
 		@media (min-width: $md5) {
 			margin-left: auto;
 		}
 		white-space: nowrap;
 		transition: background-color 0.3s ease 0s;
+		&.hidden {
+			display: none;
+		}
+	}
+	&__cart-actions {
+		flex: 0 0 100%;
+		display: flex;
+		gap: rem(10);
+		.quantity-block {
+			padding: 0.25rem;
+		}
 	}
 }
 

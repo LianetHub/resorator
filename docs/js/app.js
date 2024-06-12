@@ -105,9 +105,9 @@ $(function () {
             $target.parent().removeClass('active').next().removeClass('active');
         }
 
-        // add to cart in product cart
-        if ($target.hasClass('product-card__cart')) {
-            let $cartActions = $target.next('.product-card__cart-actions');
+        // add to cart in product-card
+        if ($target.hasClass('product-card__cart') || $target.hasClass('product__cart')) {
+            let $cartActions = $target.next();
             $target.addClass('hidden');
             $cartActions.removeClass('hidden');
             $cartActions.find('.quantity-block__input').val(1);
@@ -120,9 +120,11 @@ $(function () {
             if (currentValue > 0) {
                 $input.val(currentValue - 1);
                 if (currentValue - 1 === 0) {
-                    let $cartActions = $target.closest('.product-card__cart-actions');
+                    let $cartActions = $target.parent().parent();
+
+
                     $cartActions.addClass('hidden');
-                    $cartActions.prev('.product-card__cart').removeClass('hidden');
+                    $cartActions.prev().removeClass('hidden');
                 }
             }
         }
