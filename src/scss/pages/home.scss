@@ -474,7 +474,7 @@
 		&:hover {
 			box-shadow: rem(37) rem(21) rem(12) 0 rgba(121, 122, 129, 0), rem(24) rem(14) rem(11) 0 rgba(121, 122, 129, 0.01),
 				rem(13) rem(8) rem(9) rem(0) rgba(121, 122, 129, 0.05), rem(6) rem(3) rem(7) 0 rgba(121, 122, 129, 0.09), rem(1) rem(1) rem(4) 0 rgba(121, 122, 129, 0.1);
-			.product__actions {
+			.product__action {
 				opacity: 1;
 				visibility: visible;
 			}
@@ -566,6 +566,10 @@
 		&:first-child {
 			margin-top: rem(38);
 		}
+		@media (any-hover: hover) {
+			&:hover {
+			}
+		}
 	}
 	// .product__image
 	&__image {
@@ -578,6 +582,8 @@
 		}
 		width: 100%;
 		& img {
+			position: relative;
+			z-index: 2;
 			max-height: 100%;
 			transition: transform 0.3s ease 0s;
 		}
@@ -604,12 +610,6 @@
 			position: absolute;
 			bottom: 0;
 			right: 0;
-			transition: all 0.3s ease 0s;
-			@media (hover: hover) {
-				transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
-				opacity: 0;
-				visibility: hidden;
-			}
 		}
 	}
 	// .product__info
@@ -618,8 +618,9 @@
 	}
 	// .product__action
 	&__action {
+		position: relative;
+		z-index: 2;
 		display: flex;
-
 		max-width: 2.5rem;
 		width: 100%;
 		font-size: 1.125rem;
@@ -646,6 +647,11 @@
 		color: $darkBlue;
 		transition: all 0.25s linear 0s;
 		will-change: contents;
+
+		@media (hover: hover) {
+			opacity: 0;
+			visibility: hidden;
+		}
 		& span {
 			display: none;
 			@media (min-width: $md5) {

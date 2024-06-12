@@ -141,6 +141,35 @@
             <div class="swiper-button-next product-card__colors-next"></div>
         </div>
     </div>
+    <div class="product-card__sizes hidden">
+        <button class="product-card__back icon-chevron">Выбор размера</button>
+        <div class="product-card__sizes-body">
+            <div class="form__field">
+                <label for="size-product-width" class="form__label" tabindex="-1">Ширина</label>
+                <select name="width" id="size-product-width">
+                    <option selected value="860">860 мм</option>
+                    <option value="1200">1200 мм</option>
+                    <option value="2400">2400 мм</option>
+                </select>
+            </div>
+            <div class="form__field">
+                <label for="size-product-height" class="form__label" tabindex="-1">Высота</label>
+                <select name="height" id="size-product-height">
+                    <option selected value="900">900 мм</option>
+                    <option value="1200">1200 мм</option>
+                    <option value="2400">2400 мм</option>
+                </select>
+            </div>
+            <div class="form__field">
+                <label for="size-product-deep" class="form__label" tabindex="-1">Глубина</label>
+                <select name="deep" id="size-product-deep">
+                    <option selected value="930">930 мм</option>
+                    <option value="1200">1200 мм</option>
+                    <option value="2400">2400 мм</option>
+                </select>
+            </div>
+        </div>
+    </div>
     <div class="product-card__price">
         <div class="product-card__price-old">322 703 ₽</div>
         <div class="product-card__price-saving">
@@ -169,4 +198,5 @@
         </div>
     </div>
     <button type="button" class="product-card__save-colors btn btn-primary btn-fullwidth hidden">Сохранить настройки</button>
+    <button type="button" class="product-card__save-sizes btn btn-primary btn-fullwidth hidden">Сохранить настройки</button>
 </aside>

@@ -44,15 +44,15 @@
   <!-- Twitter -->
 
   <!-- plugnis -->
-  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240612184831">
-  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240612184831">
-  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240612184831">
-  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240612184831">
+  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240612191847">
+  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240612191847">
+  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240612191847">
+  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240612191847">
   <!-- plugnis -->
 
 
-  <link rel="stylesheet" href="css/reset.min.css?_v=20240612184831">
-  <link rel="stylesheet" href="css/style.min.css?_v=20240612184831">
+  <link rel="stylesheet" href="css/reset.min.css?_v=20240612191847">
+  <link rel="stylesheet" href="css/style.min.css?_v=20240612191847">
 
 </head>
 
@@ -318,7 +318,7 @@
                       <div class="product-card__info-value">50 °С</div>
                     </li>
                     <li class="product-card__info-item">
-                      <div class="product-card__info-name">Размеры / <a href="">Выбрать</a>
+                      <div class="product-card__info-name">Размеры / <button type="button" class="product-card__info-size">Выбрать</button>
                       </div>
                       <div class="product-card__info-value">860х900х930 мм</div>
                     </li>
@@ -554,6 +554,35 @@
                   <div class="swiper-button-next product-card__colors-next"></div>
                 </div>
               </div>
+              <div class="product-card__sizes hidden">
+                <button class="product-card__back icon-chevron">Выбор размера</button>
+                <div class="product-card__sizes-body">
+                  <div class="form__field">
+                    <label for="size-product-width" class="form__label" tabindex="-1">Ширина</label>
+                    <select name="width" id="size-product-width">
+                      <option selected value="860">860 мм</option>
+                      <option value="1200">1200 мм</option>
+                      <option value="2400">2400 мм</option>
+                    </select>
+                  </div>
+                  <div class="form__field">
+                    <label for="size-product-height" class="form__label" tabindex="-1">Высота</label>
+                    <select name="height" id="size-product-height">
+                      <option selected value="900">900 мм</option>
+                      <option value="1200">1200 мм</option>
+                      <option value="2400">2400 мм</option>
+                    </select>
+                  </div>
+                  <div class="form__field">
+                    <label for="size-product-deep" class="form__label" tabindex="-1">Глубина</label>
+                    <select name="deep" id="size-product-deep">
+                      <option selected value="930">930 мм</option>
+                      <option value="1200">1200 мм</option>
+                      <option value="2400">2400 мм</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
               <div class="product-card__price">
                 <div class="product-card__price-old">322 703 ₽</div>
                 <div class="product-card__price-saving">
@@ -582,6 +611,7 @@
                 </div>
               </div>
               <button type="button" class="product-card__save-colors btn btn-primary btn-fullwidth hidden">Сохранить настройки</button>
+              <button type="button" class="product-card__save-sizes btn btn-primary btn-fullwidth hidden">Сохранить настройки</button>
             </aside>
           </div>
           <div class="product-card__tags">
@@ -5281,17 +5311,17 @@
     </div>
   </div>
   <!-- plugnis -->
-  <script src="js/libs/jquery-3.7.1.min.js?_v=20240612184831"></script>
-  <script src="js/libs/swiper-bundle.min.js?_v=20240612184831"></script>
-  <script src="js/libs/fancybox.umd.js?_v=20240612184831"></script>
-  <script src="js/libs/nouislider.min.js?_v=20240612184831"></script>
-  <script src="js/libs/select2.full.min.js?_v=20240612184831"></script>
-  <script src="js/libs/jquery.validate.min.js?_v=20240612184831"></script>
-  <script src="js/libs/messages_ru.min.js?_v=20240612184831"></script>
+  <script src="js/libs/jquery-3.7.1.min.js?_v=20240612191847"></script>
+  <script src="js/libs/swiper-bundle.min.js?_v=20240612191847"></script>
+  <script src="js/libs/fancybox.umd.js?_v=20240612191847"></script>
+  <script src="js/libs/nouislider.min.js?_v=20240612191847"></script>
+  <script src="js/libs/select2.full.min.js?_v=20240612191847"></script>
+  <script src="js/libs/jquery.validate.min.js?_v=20240612191847"></script>
+  <script src="js/libs/messages_ru.min.js?_v=20240612191847"></script>
   <!-- plugnis -->
 
 
-  <script src="js/app.min.js?_v=20240612184831"></script>
+  <script src="js/app.min.js?_v=20240612191847"></script>
 </body>
 
 </html>

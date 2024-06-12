@@ -450,6 +450,9 @@
 			display: none;
 		}
 	}
+	&__save-sizes {
+		@extend .product-card__save-colors;
+	}
 	// .product-card__colors-controls
 	&__colors-controls {
 		margin-top: 1.25rem;
@@ -468,6 +471,11 @@
 	}
 	// .product-card__colors-next
 	&__colors-next {
+	}
+	&__sizes {
+	}
+	&__sizes-body {
+		margin-top: 1.87rem;
 	}
 	// .product-card__info-name
 	&__info-name {
@@ -805,6 +813,11 @@
 			font-size: 1.5rem;
 			&.active {
 				border-bottom: 0.25rem solid $yellow;
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					border-bottom: 0.25rem solid $yellow;
+				}
 			}
 		}
 	}

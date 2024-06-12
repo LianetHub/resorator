@@ -142,12 +142,22 @@ $(function () {
             $('.product-card__save-colors').removeClass('hidden');
         }
 
-        // remove visible color palette on product page
-        if ($target.hasClass('product-card__save-colors') || $target.hasClass('product-card__back')) {
+        // get visible size choising on product page
+        if ($target.hasClass('product-card__info-size')) {
+            $('.product-card__side-main').addClass('hidden');
+            $('.product-card__footer').addClass('hidden');
+            $('.product-card__sizes').removeClass('hidden');
+            $('.product-card__save-sizes').removeClass('hidden');
+        }
+
+        // get default state side on product page
+        if ($target.hasClass('product-card__save-colors') || $target.hasClass('product-card__back') || $target.hasClass('product-card__save-sizes')) {
             $('.product-card__side-main').removeClass('hidden');
             $('.product-card__footer').removeClass('hidden');
             $('.product-card__colors').addClass('hidden');
             $('.product-card__save-colors').addClass('hidden');
+            $('.product-card__sizes').addClass('hidden');
+            $('.product-card__save-sizes').addClass('hidden');
         }
     });
 
@@ -328,6 +338,7 @@ $(function () {
         $select.select2({
             templateResult: formatState,
             templateSelection: formatState,
+            width: '100%',
             minimumResultsForSearch: searchEnabled ? 0 : Infinity
         });
 

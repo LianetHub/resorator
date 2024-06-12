@@ -15,22 +15,6 @@
 }
 
 @font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -41,8 +25,8 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -57,8 +41,24 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -1558,6 +1558,10 @@ body.lock-catalog-filter {
 
 .form__field:not(:first-child) {
   margin-top: 1.25rem;
+}
+
+.form__field select {
+  width: 100%;
 }
 
 .form__field label.error {
@@ -3122,6 +3126,8 @@ body.lock-catalog-filter {
 }
 
 .product__image img {
+  position: relative;
+  z-index: 2;
   max-height: 100%;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
@@ -3146,6 +3152,8 @@ body.lock-catalog-filter {
 }
 
 .product__action {
+  position: relative;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3839,12 +3847,14 @@ body.lock-catalog-filter {
   white-space: nowrap;
 }
 
-.product-card__save-colors {
+.product-card__save-colors,
+.product-card__save-sizes {
   margin-top: 1.25rem;
   min-height: 4rem;
 }
 
-.product-card__save-colors.hidden {
+.product-card__save-colors.hidden,
+.hidden.product-card__save-sizes {
   display: none;
 }
 
@@ -3865,6 +3875,10 @@ body.lock-catalog-filter {
 
 .product-card__colors-pagination {
   text-align: center;
+}
+
+.product-card__sizes-body {
+  margin-top: 1.87rem;
 }
 
 .product-card__info-name {
@@ -5583,8 +5597,6 @@ body.lock-catalog-filter {
     position: absolute;
     bottom: 0;
     right: 0;
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
   }
 
   .product__action {
@@ -5765,12 +5777,9 @@ body.lock-catalog-filter {
   }
 }
 
-@media (min-width: 575.98px) and (hover: hover) {
-  .product__actions {
-    -webkit-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
-    transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
-    opacity: 0;
-    visibility: hidden;
+@media (min-width: 575.98px) and (any-hover: hover) {
+  .product-card__filter:hover {
+    border-bottom: 0.25rem solid #f7ce46;
   }
 }
 
@@ -7853,7 +7862,7 @@ body.lock-catalog-filter {
             box-shadow: 2.3125rem 1.3125rem 0.75rem 0 rgba(121, 122, 129, 0), 1.5rem 0.875rem 0.6875rem 0 rgba(121, 122, 129, 0.01), 0.8125rem 0.5rem 0.5625rem 0rem rgba(121, 122, 129, 0.05), 0.375rem 0.1875rem 0.4375rem 0 rgba(121, 122, 129, 0.09), 0.0625rem 0.0625rem 0.25rem 0 rgba(121, 122, 129, 0.1);
   }
 
-  .product:hover .product__actions {
+  .product:hover .product__action {
     opacity: 1;
     visibility: visible;
   }
@@ -7962,5 +7971,12 @@ body.lock-catalog-filter {
 
   .about__feedback-item a:hover {
     color: #f7ce46;
+  }
+}
+
+@media (hover: hover) {
+  .product__action {
+    opacity: 0;
+    visibility: hidden;
   }
 }
