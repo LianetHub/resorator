@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Ресторатор | Логин</title>
+	<title>Ресторатор | Клиенты</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
 	<!-- favicon -->
 	<!-- Open Graph  -->
 	<meta property="og:type" content="business.business">
-	<meta property="og:title" content="Ресторатор | Логин">
+	<meta property="og:title" content="Ресторатор | Клиенты">
 	<meta property="og:description" content="">
 	<meta property="og:url" content="">
 	<meta property="og:image" content="/OG.png">
@@ -31,7 +31,7 @@
 	<!-- Open Graph  -->
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:title" content="Ресторатор | Логин">
+	<meta property="twitter:title" content="Ресторатор | Клиенты">
 	<meta property="twitter:description" content="">
 	<meta property="twitter:site" content="">
 	<meta property="twitter:url" content="">
@@ -180,7 +180,7 @@
 			</div>
 		</header>
 		<main class="page">
-			<nav aria-label="Хлебные крошки" class="breadcrumbs">
+			<nav aria-label="Хлебные крошки" class="breadcrumbs tablet-sm-only">
 				<div class="breadcrumbs__container">
 					<ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
 						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
@@ -191,29 +191,18 @@
 						</li>
 						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 							<a class="breadcrumbs__link active" itemprop="item">
-								<span itemprop="name">Регистрация</span>
+								<span itemprop="name">Клиенты</span>
 							</a>
 							<meta itemprop="position" content="2">
 						</li>
 					</ul>
 				</div>
 			</nav>
-			<div class="auth">
-				<div class="auth__container">
-					<form action="#" class="auth__form form" data-validation-form>
-						<h1 class="form__caption">СМС отправлено</h1>
-						<p class="form__subtitle"> На указанный номер телефона отправлено СМС сообщение с кодом для сброса пароля. </p>
-						<p class="form__subtitle"> Введите код из СМС, чтобы сбросить пароль и назначить новый. </p>
-						<div class="form__field">
-							<div class="form__label">Код из СМС</div>
-							<input type="text" maxlength="4" name="push" inputmode="numeric" placeholder="Введите код" class="form__input">
-						</div>
-						<a href="" class="form__link">Не приходит сообщение</a>
-						<button type="button" disabled class="form__repeat btn btn-secondary"> Повторная отправка 0:58 </button>
-						<button type="submit" disabled class="form__btn btn btn-primary">Подтвердить</button>
-					</form>
+			<section class="companies">
+				<div class="companies__container">
+					<h1 class="companies__title title">Клиенты</h1>
 				</div>
-			</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
