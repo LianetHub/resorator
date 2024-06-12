@@ -198,7 +198,7 @@
 	color: inherit;
 	border-radius: 0.3125rem;
 	border: rem(1) solid $grayStroke;
-	background: $white;
+	background: transparent;
 	width: 2rem;
 	height: 2rem;
 	padding: 0.4375rem 1rem;
@@ -225,6 +225,9 @@
 			background: $yellow;
 			color: $dark;
 		}
+	}
+	&.swiper-button-lock {
+		display: none;
 	}
 }
 

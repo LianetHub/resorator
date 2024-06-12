@@ -17,6 +17,7 @@ $(function () {
     $(document).on('click', function (e) {
         let $target = $(e.target);
 
+
         // open mobile menu
         if ($target[0].closest('.menu-toggler')) {
             $('.header').toggleClass('open-menu');
@@ -136,7 +137,17 @@ $(function () {
         // get visible color palette on product page
         if ($target.hasClass('product-card__info-color')) {
             $('.product-card__side-main').addClass('hidden');
-            $('.product-card__footer').addClass('hidden')
+            $('.product-card__footer').addClass('hidden');
+            $('.product-card__colors').removeClass('hidden');
+            $('.product-card__save-colors').removeClass('hidden');
+        }
+
+        // remove visible color palette on product page
+        if ($target.hasClass('product-card__save-colors') || $target.hasClass('product-card__back')) {
+            $('.product-card__side-main').removeClass('hidden');
+            $('.product-card__footer').removeClass('hidden');
+            $('.product-card__colors').addClass('hidden');
+            $('.product-card__save-colors').addClass('hidden');
         }
     });
 
@@ -389,6 +400,10 @@ $(function () {
         $this.attr('title', title);
     });
 
+
+
+
+
     // sliders 
 
     if ($(".companies__slider").length > 0) {
@@ -533,6 +548,59 @@ $(function () {
         new Swiper('.about__navbar', {
             slidesPerView: "auto",
             spaceBetween: 80
+        })
+    }
+
+    if ($('.product-card__colors-slider').length > 0) {
+        new Swiper('.product-card__colors-slider', {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            watchOverflow: true,
+            pagination: {
+                el: '.product-card__colors-pagination',
+                type: "fraction",
+                renderFraction: function (currentClass, totalClass) {
+                    return `Страница <span class="${currentClass}"></span> из <span class="${totalClass}"></span>`;
+                }
+            },
+            navigation: {
+                nextEl: '.product-card__colors-next',
+                prevEl: '.product-card__colors-prev'
+            },
+            grid: {
+                fill: 'column',
+                rows: 2,
+            },
+            breakpoints: {
+                575.98: {
+                    slidesPerView: 6,
+                    grid: {
+                        fill: 'column',
+                        rows: 2,
+                    },
+                },
+                767.98: {
+                    slidesPerView: 4,
+                    grid: {
+                        fill: 'column',
+                        rows: 2,
+                    },
+                },
+                991.98: {
+                    slidesPerView: 5,
+                    grid: {
+                        fill: 'column',
+                        rows: 2,
+                    },
+                },
+                1399.98: {
+                    slidesPerView: 4,
+                    grid: {
+                        fill: 'column',
+                        rows: 2,
+                    },
+                }
+            }
         })
     }
 

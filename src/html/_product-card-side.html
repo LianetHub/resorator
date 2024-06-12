@@ -1,5 +1,5 @@
 <aside class="product-card__side">
-    <div class="product-card__side-main hidden">
+    <div class="product-card__side-main">
         <div class="product-card__side-caption">Состояние товара</div>
         <ul class="product-card__side-labels">
             <a href="" class="product-card__side-label product-card__side-label_active">Новый</a>
@@ -33,8 +33,113 @@
             </li>
         </ul>
     </div>
-    <div class="product-card__colors">
+    <div class="product-card__colors hidden">
         <button class="product-card__back icon-chevron">Выбор цвета</button>
+        <div class="product-card__colors-slider swiper">
+            <div class="swiper-wrapper">
+                <label class="product-card__color swiper-slide">
+                    <input type="radio" name="color" value="1" class="product-card__color-input hidden" hidden>
+                    <span class="product-card__color-item">
+                        <span class="product-card__color-visual" style="background-color: #E2D1B5;"></span>
+                        <span class="product-card__color-name">Бежевый глянец</span>
+                        <span class="product-card__color-code">RAL 1015</span>
+                    </span>
+                </label>
+                <label class="product-card__color swiper-slide">
+                    <input type="radio" name="color" checked value="2" class="product-card__color-input hidden" hidden>
+                    <span class="product-card__color-item">
+                        <span class="product-card__color-visual" style="background-color: #9AA1AA;"></span>
+                        <span class="product-card__color-name">Серый металлик</span>
+                        <span class="product-card__color-code">RAL 7040</span>
+                    </span>
+                </label>
+                <label class="product-card__color swiper-slide">
+                    <input type="radio" name="color" value="3" class="product-card__color-input hidden" hidden>
+                    <span class="product-card__color-item">
+                        <span class="product-card__color-visual" style="background-color: #F6C6C2;"></span>
+                        <span class="product-card__color-name">Экотекст розовый</span>
+                        <span class="product-card__color-code">3004</span>
+                    </span>
+                </label>
+                <label class="product-card__color swiper-slide">
+                    <input type="radio" name="color" value="4" class="product-card__color-input hidden" hidden>
+                    <span class="product-card__color-item">
+                        <span class="product-card__color-visual" style="background-color: #848387;"></span>
+                        <span class="product-card__color-name">Серый муар</span>
+                        <span class="product-card__color-code">RAL 7040</span>
+                    </span>
+                </label>
+                <label class="product-card__color swiper-slide">
+                    <input type="radio" name="color" value="5" class="product-card__color-input hidden" hidden>
+                    <span class="product-card__color-item">
+                        <span class="product-card__color-visual" style="background-color: #6EB3C2;"></span>
+                        <span class="product-card__color-name">Экотекст голубой</span>
+                        <span class="product-card__color-code">3005</span>
+                    </span>
+                </label>
+                <label class="product-card__color swiper-slide">
+                    <input type="radio" name="color" value="6" class="product-card__color-input hidden" hidden>
+                    <span class="product-card__color-item">
+                        <span class="product-card__color-visual" style="background-color: #44322E;"></span>
+                        <span class="product-card__color-name">Темно коричнев</span>
+                        <span class="product-card__color-code">RAL 8017</span>
+                    </span>
+                </label>
+                <label class="product-card__color swiper-slide">
+                    <input type="radio" name="color" value="7" class="product-card__color-input hidden" hidden>
+                    <span class="product-card__color-item">
+                        <span class="product-card__color-visual" style="background-color: #4F5259;"></span>
+                        <span class="product-card__color-name">Графит муар</span>
+                        <span class="product-card__color-code">RAL 7024</span>
+                    </span>
+                </label>
+                <label class="product-card__color swiper-slide">
+                    <input type="radio" name="color" value="8" class="product-card__color-input hidden" hidden>
+                    <span class="product-card__color-item">
+                        <span class="product-card__color-visual" style="background-color: #323232;"></span>
+                        <span class="product-card__color-name">Черный муар</span>
+                        <span class="product-card__color-code">RAL 7024</span>
+                    </span>
+                </label>
+                <label class="product-card__color swiper-slide">
+                    <input type="radio" name="color" value="9" class="product-card__color-input hidden" hidden>
+                    <span class="product-card__color-item">
+                        <span class="product-card__color-visual" style="background-color: #E2D1B5;"></span>
+                        <span class="product-card__color-name">Бежевый глянец</span>
+                        <span class="product-card__color-code">RAL 1015</span>
+                    </span>
+                </label>
+                <label class="product-card__color swiper-slide">
+                    <input type="radio" name="color" value="10" class="product-card__color-input hidden" hidden>
+                    <span class="product-card__color-item">
+                        <span class="product-card__color-visual" style="background-color: #F6C6C2;"></span>
+                        <span class="product-card__color-name">Экотекст розовый</span>
+                        <span class="product-card__color-code">3004</span>
+                    </span>
+                </label>
+                <label class="product-card__color swiper-slide">
+                    <input type="radio" name="color" value="11" class="product-card__color-input hidden" hidden>
+                    <span class="product-card__color-item">
+                        <span class="product-card__color-visual" style="background-color: #6EB3C2;"></span>
+                        <span class="product-card__color-name">Экотекст голубой</span>
+                        <span class="product-card__color-code">3005</span>
+                    </span>
+                </label>
+                <label class="product-card__color swiper-slide">
+                    <input type="radio" name="color" value="12" class="product-card__color-input hidden" hidden>
+                    <span class="product-card__color-item">
+                        <span class="product-card__color-visual" style="background-color: #4F5259;"></span>
+                        <span class="product-card__color-name">Графит муар</span>
+                        <span class="product-card__color-code">RAL 7024</span>
+                    </span>
+                </label>
+            </div>
+        </div>
+        <div class="product-card__colors-controls">
+            <div class="swiper-button-prev product-card__colors-prev"></div>
+            <div class="product-card__colors-pagination"></div>
+            <div class="swiper-button-next product-card__colors-next"></div>
+        </div>
     </div>
     <div class="product-card__price">
         <div class="product-card__price-old">322 703 ₽</div>
@@ -50,7 +155,7 @@
         <a href="" class="product-card__more-btn icon-telegram"></a>
         <a href="" class="product-card__more-btn">Написать менеджеру</a>
     </div>
-    <div class="product-card__footer hidden">
+    <div class="product-card__footer">
         <button type="button" class="product-card__cart btn btn-primary">
             Добавить товар в корзину
         </button>
@@ -63,5 +168,5 @@
             <a href="cart.html" class="product-card__cart-btn btn btn-primary icon-arrow-short">Корзина</a>
         </div>
     </div>
-    <button type="button" class="">Сохранить настройки</button>
+    <button type="button" class="product-card__save-colors btn btn-primary btn-fullwidth hidden">Сохранить настройки</button>
 </aside>
