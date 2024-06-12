@@ -142,12 +142,16 @@ $(function () {
             $('.product-card__footer').addClass('hidden');
             $('.product-card__colors').removeClass('hidden');
             $('.product-card__save-colors').removeClass('hidden');
+            $('.product-card__sizes').addClass('hidden');
+            $('.product-card__save-sizes').addClass('hidden');
         }
 
         // get visible size choising on product page
         if ($target.hasClass('product-card__info-size')) {
             $('.product-card__side-main').addClass('hidden');
             $('.product-card__footer').addClass('hidden');
+            $('.product-card__colors').addClass('hidden');
+            $('.product-card__save-colors').addClass('hidden');
             $('.product-card__sizes').removeClass('hidden');
             $('.product-card__save-sizes').removeClass('hidden');
         }
