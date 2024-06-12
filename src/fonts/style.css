@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icons';
-  src:  url('fonts/icons.eot?8m500k');
-  src:  url('fonts/icons.eot?8m500k#iefix') format('embedded-opentype'),
-    url('fonts/icons.ttf?8m500k') format('truetype'),
-    url('fonts/icons.woff?8m500k') format('woff'),
-    url('fonts/icons.svg?8m500k#icons') format('svg');
+  src:  url('fonts/icons.eot?6e3pr9');
+  src:  url('fonts/icons.eot?6e3pr9#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?6e3pr9') format('truetype'),
+    url('fonts/icons.woff?6e3pr9') format('woff'),
+    url('fonts/icons.svg?6e3pr9#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,7 @@
 
 .icon-minus-circle:before {
   content: "\e922";
+  color: #94a3b8;
 }
 .icon-plus-circle:before {
   content: "\e923";
