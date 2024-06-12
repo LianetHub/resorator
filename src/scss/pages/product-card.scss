@@ -543,6 +543,31 @@
 			}
 		}
 	}
+	// .product-card__side-hint
+	&__side-hint {
+		margin-top: 0.63rem;
+		color: $lightBlue;
+		font-size: 0.8125rem;
+		display: flex;
+		align-items: center;
+		gap: 0.63rem;
+		&::before {
+			width: 1rem;
+			height: 1rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 1rem;
+		}
+		& a {
+			text-decoration: underline;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
 
 	// .product-card__characteristics
 	&__characteristics {

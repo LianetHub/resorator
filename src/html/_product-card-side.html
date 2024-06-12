@@ -2,10 +2,14 @@
 	<div class="product-card__side-main">
 		<div class="product-card__side-caption">Состояние товара</div>
 		<ul class="product-card__side-labels">
-			<a href="" class="product-card__side-label product-card__side-label_active">Новый</a>
-			<a href="" class="product-card__side-label">Уценка</a>
-			<a href="" class="product-card__side-label">Распродажа</a>
+			<a href="product.html" class="product-card__side-label@@if(active==1){ product-card__side-label_active}">Новый</a>
+			<a href="product-markdown.html" class="product-card__side-label@@if(active==2){ product-card__side-label_active}">Уценка</a>
+			<a href="" class="product-card__side-label@@if(active==3){ product-card__side-label_active}">Распродажа</a>
 		</ul>
+		@@if(active==2){
+		<div class="product-card__side-hint icon-info">Отсутствие упаковки у товара</div>
+		<div class="product-card__side-hint">Всего 3 товара. <a href="">Смотреть все</a></div>
+		}
 		<ul class="product-card__characteristics">
 			<li class="product-card__characteristics-item">
 				<div class="product-card__characteristics-name">Бренд</div>
