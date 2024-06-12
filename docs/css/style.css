@@ -1,16 +1,16 @@
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "DinPro";
   font-display: swap;
   src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -49,16 +49,16 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -2895,6 +2895,99 @@ body.lock-catalog-filter {
   transition: box-shadow 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
 }
 
+.row-layout .product {
+  padding: 1.12rem 1.25rem 0.62rem 15.63rem;
+  min-height: 13.76rem;
+}
+
+.row-layout .product .product__header {
+  margin-top: 0;
+  position: absolute;
+  top: 0.63rem;
+  left: 1.25rem;
+  width: 12.5rem;
+  height: 12.5rem;
+}
+
+.row-layout .product .product__actions {
+  top: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.row-layout .product .product__name {
+  -webkit-box-ordinal-group: -1;
+      -ms-flex-order: -2;
+          order: -2;
+}
+
+.row-layout .product .product__price {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  text-align: right;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.row-layout .product .product__footer {
+  display: contents;
+}
+
+.row-layout .product .product__info {
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 1.88rem;
+     -moz-column-gap: 1.88rem;
+          column-gap: 1.88rem;
+  -ms-grid-columns: 1fr 9.375rem;
+  grid-template-columns: 1fr 9.375rem;
+}
+
+.row-layout .product .product__props {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
+}
+
+.row-layout .product .product__props-row::after {
+  content: "";
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #94a3b8), color-stop(50%, transparent)) 0 0/0.25rem 0.0625rem repeat-x;
+  background: linear-gradient(90deg, #94a3b8 50%, transparent 50%) 0 0/0.25rem 0.0625rem repeat-x;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 0.0625rem;
+  margin: 0 0.62rem;
+}
+
+.row-layout .product .product__cart {
+  margin-top: 0.63rem;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.row-layout .product .product__avaibility {
+  -webkit-box-ordinal-group: -1;
+      -ms-flex-order: -2;
+          order: -2;
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .product.swiper-slide {
   height: auto;
 }
@@ -2902,6 +2995,10 @@ body.lock-catalog-filter {
 .product__labels {
   margin-left: 0;
   margin-right: -0.62rem;
+  height: 1.75rem;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 
 .product__label {
@@ -2911,6 +3008,9 @@ body.lock-catalog-filter {
 }
 
 .product__header {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
   margin-top: 0.625rem;
   position: relative;
   display: -webkit-box;
@@ -2966,6 +3066,10 @@ body.lock-catalog-filter {
   gap: 0.25rem;
 }
 
+.product__info {
+  display: contents;
+}
+
 .product__action {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3017,6 +3121,9 @@ body.lock-catalog-filter {
 }
 
 .product__price {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
   gap: 0.63rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3090,10 +3197,16 @@ body.lock-catalog-filter {
 
 .product__props-name {
   text-align: left;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 
 .product__props-value {
   text-align: right;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .product__footer {
@@ -4216,6 +4329,11 @@ body.lock-catalog-filter {
   display: grid;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
+}
+
+.catalog__grid.row-layout {
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
 }
 
 .catalog__sidebar {

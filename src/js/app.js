@@ -164,6 +164,18 @@ $(function () {
         }
     }
 
+    if ($('[name="views"]').length > 0) {
+
+        $('[name="views"]').on('change', function (e) {
+            let $target = $(e.target);
+            if ($target.val() == 'rows' && $target[0].checked) {
+                $('.catalog__grid').addClass('row-layout');
+            } else {
+                $('.catalog__grid').removeClass('row-layout');
+            }
+
+        });
+    }
 
     // Fancybox.show([{
     //     src: "#mobile-search"

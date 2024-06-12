@@ -92,6 +92,9 @@
 		@media (min-width: $md0) {
 			grid-template-columns: repeat(5, 1fr);
 		}
+		&.row-layout {
+			grid-template-columns: 1fr;
+		}
 	}
 	// .catalog__sidebar
 	&__sidebar {
