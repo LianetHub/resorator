@@ -114,6 +114,12 @@
             </div>
         </div>
         <div class="search__block">
+            <div class="search__caption">Товары</div>
+            <div class="row">
+                @@loop('_product.html', './html/products.json')
+            </div>
+        </div>
+        <div class="search__block">
             <div class="search__caption">Товары по видам направления</div>
             <div class="products__grid">
                 <div class="products__item">
