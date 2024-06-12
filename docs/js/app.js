@@ -17,30 +17,30 @@ $(function () {
     $(document).on('click', function (e) {
         let $target = $(e.target);
 
-        if ($target.hasClass('search-btn-toggler')) {
-            // $(".mobile-search").toggleClass('search_visible');
-            // $('body').toggleClass('lock-search')
-        }
-
+        // open mobile menu
         if ($target[0].closest('.menu-toggler')) {
             $('.header').toggleClass('open-menu');
             $('body').toggleClass('lock-menu')
         }
 
+        // open menu 2 lvl
         if ($target.hasClass('menu__arrow')) {
             $target.toggleClass('active');
             $target.next().slideToggle()
         }
 
+        // get visible full characteristics product - product page
         if ($target.hasClass('product-card__info-more')) {
             $target.toggleClass('active');
             $target.prev().toggleClass('full');
             if ($target.hasClass('active')) {
                 $target.text('Свернуть');
             } else {
-                $target.text('Развернуть храктеристики');
+                $target.text('Развернуть характеристики');
             }
         }
+
+        // get visible full description product - product page
         if ($target.hasClass('product-card__desc-more')) {
             $target.toggleClass('active');
             $target.next().slideToggle()
