@@ -2,1425 +2,955 @@
 <html lang="ru">
 
 <head>
-  <title>Ресторатор | Логин</title>
-  <meta charset="UTF-8">
-  <meta name="format-detection" content="telephone=no">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-
-  <!-- favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#f7ce46">
-  <meta name="theme-color" content="#ffffff">
-  <!-- favicon -->
-
-  <!-- Open Graph  -->
-  <meta property="og:type" content="business.business">
-  <meta property="og:title" content="Ресторатор | Логин">
-  <meta property="og:description" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="/OG.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="627">
-  <meta property="og:site_name" content="">
-  <meta property="og:locale" content="en_EN">
-  <!-- Open Graph  -->
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Ресторатор | Логин">
-  <meta property="twitter:description" content="">
-  <meta property="twitter:site" content="">
-  <meta property="twitter:url" content="">
-  <meta property="twitter:image:src" content="/OG.png">
-  <!-- Twitter -->
-
-  <!-- plugnis -->
-  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240612193011">
-  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240612193011">
-  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240612193011">
-  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240612193011">
-  <!-- plugnis -->
-
-
-  <link rel="stylesheet" href="css/reset.min.css?_v=20240612193011">
-  <link rel="stylesheet" href="css/style.min.css?_v=20240612193011">
-
+	<title>Ресторатор | Логин</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#f7ce46">
+	<meta name="theme-color" content="#ffffff">
+	<!-- favicon -->
+	<!-- Open Graph  -->
+	<meta property="og:type" content="business.business">
+	<meta property="og:title" content="Ресторатор | Логин">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="/OG.png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="627">
+	<meta property="og:site_name" content="">
+	<meta property="og:locale" content="en_EN">
+	<!-- Open Graph  -->
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:title" content="Ресторатор | Логин">
+	<meta property="twitter:description" content="">
+	<meta property="twitter:site" content="">
+	<meta property="twitter:url" content="">
+	<meta property="twitter:image:src" content="/OG.png">
+	<!-- Twitter -->
+	<!-- plugnis -->
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240612193204">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20240612193204">
+	<link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240612193204">
+	<link rel="stylesheet" href="css/libs/select2.min.css?_v=20240612193204">
+	<!-- plugnis -->
+	<link rel="stylesheet" href="css/reset.min.css?_v=20240612193204">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240612193204">
 </head>
 
 <body>
-  <div class="wrapper">
-    <header class="header header_shadow">
-      <div class="header__container">
-        <div class="header__top">
-          <a href="#select-language" data-fancybox class="header__language icon-globe">
-            RU
-          </a>
-          <a href="#select-location" data-fancybox class="header__location icon-location">
-            Приморский край
-          </a>
-          <div class="header__currency icon-currency">
-            97.8 USD / 99.05 EUR
-          </div>
-          <div class="header__menu menu">
-            <a href="/" class="menu__logo">
-              <img src="img/logo-white.svg" alt="Логотип">
-            </a>
-            <a href="tel:88003551555" class="menu__phone">8 (800) 355-15-55</a>
-            <nav aria-label="Меню в шапке" class="menu__navbar">
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a href="about.html" class="menu__link">О компании</a>
-                </li>
-                <li class="menu__item">
-                  <a href="" class="menu__link">Доставка и оплата</a>
-                  <button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
-                  <ul class="submenu">
-                    <li class="submenu__item">
-                      <a href="" class="submenu__link icon-chevron">Доставка</a>
-                    </li>
-                    <li class="submenu__item">
-                      <a href="" class="submenu__link icon-chevron">Оплата</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu__item">
-                  <a href="" class="menu__link">Гарантия и сервис</a>
-                </li>
-                <li class="menu__item">
-                  <a href="" class="menu__link">Прайс-лист</a>
-                  <button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
-                  <ul class="submenu">
-                    <li class="submenu__item">
-                      <a href="" class="submenu__link icon-chevron">Пиццерия</a>
-                    </li>
-                    <li class="submenu__item">
-                      <a href="" class="submenu__link icon-chevron">Пекарня</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu__item">
-                  <a href="" class="menu__link">Блог</a>
-                  <button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
-                  <ul class="submenu">
-                    <li class="submenu__item">
-                      <a href="" class="submenu__link icon-chevron">Статья 1</a>
-                    </li>
-                    <li class="submenu__item">
-                      <a href="" class="submenu__link icon-chevron">Статья 2</a>
-                    </li>
-                    <li class="submenu__item">
-                      <a href="" class="submenu__link icon-chevron">Статья 3</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu__item">
-                  <a href="" class="menu__link">Производство</a>
-                  <button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
-                  <ul class="submenu">
-                    <li class="submenu__item">
-                      <a href="" class="submenu__link icon-chevron">Статья 1</a>
-                    </li>
-                    <li class="submenu__item">
-                      <a href="" class="submenu__link icon-chevron">Статья 2</a>
-                    </li>
-                    <li class="submenu__item">
-                      <a href="" class="submenu__link icon-chevron">Статья 3</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu__item">
-                  <a href="" class="menu__link">Наш бренд</a>
-                </li>
-                <li class="menu__item">
-                  <a href="" class="menu__link">Контакты</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <button type="button" aria-label="Открыть мобильное меню" class="header__menu-btn menu-toggler icon-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-        <div class="header__body">
-          <a href="/index.html" class="header__logo">
-            <img src="img/logo.svg" alt="Логотип">
-          </a>
-          <a href="/catalog.html" class="header__catalog icon-burger">
-            Каталог
-          </a>
-          <form action="#" role="search" class="header__search search">
-            <input type="text" autocomplete="off" name="search" class="search__form-input" placeholder="Поиск по товарам и брендам">
-            <button type="submit" aria-label="Искать товары" data-tooltip title="Искать товар" class="search__btn icon-search"></button>
-          </form>
-          <div class="header__actions actions">
-            <button type="button" class="actions__item menu-toggler mobile-sm-only">
-              <span class="icon-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-              <span class="actions__item-desc">Меню</span>
-            </button>
-            <a href="/catalog.html" data-tooltip title="Каталог" class="actions__item icon-catalog mobile-sm-only">
-              <span class="actions__item-desc">Каталог</span>
-            </a>
-            <a href="#mobile-search" data-fancybox class="actions__item search-btn-toggler icon-search">
-              <span class="actions__item-desc">Поиск</span>
-            </a>
-            <a href="" data-tooltip title="Сравнение" class="actions__item icon-compare open-menu-mobile">
-              <span class="actions__item-desc">Сравнение</span>
-            </a>
-            <a href="" data-tooltip title="Избранное" class="actions__item icon-star open-menu-mobile">
-              <span class="actions__item-desc">Избранное</span>
-            </a>
-            <a href="" data-tooltip title="Корзина" class="actions__item icon-cart">
-              <span class="actions__item-desc">Корзина</span>
-              <span class="actions__item-quantity">12</span>
-            </a>
-            <a href="" data-tooltip title="Личный кабинет" class="actions__item icon-user open-menu-mobile">
-              <span class="actions__item-desc">Пользователь</span>
-            </a>
-          </div>
-          <a href="tel:88003551555" class="header__phone">8 (800) 355-15-55</a>
-        </div>
-      </div>
-    </header>
-    <main class="page">
-      <nav aria-label="Хлебные крошки" class="breadcrumbs">
-        <div class="breadcrumbs__container">
-          <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
-            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a href="/" class="breadcrumbs__link" itemprop="item">
-                <span itemprop="name">Главная</span>
-              </a>
-              <meta itemprop="position" content="1">
-            </li>
-            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="breadcrumbs__link active" itemprop="item">
-                <span itemprop="name">Регистрация</span>
-              </a>
-              <meta itemprop="position" content="2">
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div class="auth">
-        <div class="auth__container">
-          <form action="#" class="auth__form form" data-validation-form>
-            <h1 class="form__caption">СМС отправлено</h1>
-            <p class="form__subtitle">
-              На указанный номер телефона отправлено СМС сообщение с кодом для сброса пароля.
-            </p>
-            <p class="form__subtitle">
-              Введите код из СМС, чтобы сбросить пароль и назначить новый.
-            </p>
-            <div class="form__field">
-              <div class="form__label">Код из СМС</div>
-              <input type="text" maxlength="4" name="push" inputmode="numeric" placeholder="Введите код" class="form__input">
-            </div>
-            <a href="" class="form__link">Не приходит сообщение</a>
-            <button type="button" disabled class="form__repeat btn btn-secondary">
-              Повторная отправка 0:58
-            </button>
-            <button type="submit" disabled class="form__btn btn btn-primary">Подтвердить</button>
-          </form>
-        </div>
-      </div>
-    </main>
-    <footer class="footer">
-      <div class="footer__container">
-        <div class="row">
-          <div class="col-xl-2 ">
-            <a href="/" class="footer__logo">
-              <img src="img/logo-white.svg" alt="Логотип">
-            </a>
-          </div>
-          <div class="col-xl-2 col-md-4 col-6">
-            <div class="footer__caption">Каталог</div>
-            <nav class="footer__menu">
-              <ul class="footer__menu-list">
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Оборудование для торговли</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Посуда и инвентарь</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Мебель</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Упаковочное оборудование</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Складское хранение</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Клининговое оборудование</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="col-xl-2 col-md-4 col-6">
-            <div class="footer__caption">Услуги</div>
-            <nav class="footer__menu">
-              <ul class="footer__menu-list">
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Комплексное оснащение</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Кредит и лизинг</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Доставка и оплата</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Гарантия и сервис</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Разработка проекта</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="col-xl-2 col-md-4 col-6">
-            <div class="footer__caption">О компании</div>
-            <nav class="footer__menu">
-              <ul class="footer__menu-list">
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Компания</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Работа в компании</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Наше производство</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Наш бренд</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Портфолио</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Производители</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Клиенты</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="col-xl-2 col-md-4 col-6">
-            <div class="footer__caption">Документы</div>
-            <nav class="footer__menu">
-              <ul class="footer__menu-list">
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Сертификаты</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Реквизиты компании</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="" class="footer__menu-link">Прайс листы</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="col-xl-2 col-md-4 col-6">
-            <div class="footer__caption">Контакты</div>
-            <div class="footer__contacts">
-              <div class="footer__worktime">
-                Пн-Пт: 8:00 - 18:00
-                <br>
-                Сб: Выходной
-              </div>
-              <a href="tel:88003509705" class="footer__link">8 (800) 350-97-05</a>
-              <a href="mailto:info@resprofi.ru" class="footer__link">info@resprofi.ru</a>
-            </div>
-          </div>
-        </div>
-        <div class="footer__bottom">
-          <div class="footer__hint">
-            * Интернет ресурс носит исключительно информационный характер и не является публичной офертой, определяемой положениями ст. 437 Гражданского кодекса РФ.
-            <br>
-            ** Оборудование предназначено для использования в предпринимательской деятельности или в иных целях, не связанных с личным, семейным, домашним и иным подобным использованием.
-          </div>
-          <div class="footer__payments">
-            <div class="footer__payment">
-              <img src="img/payment/mir.svg" alt="Способ оплаты">
-            </div>
-            <div class="footer__payment">
-              <img src="img/payment/SBP.svg" alt="Способ оплаты">
-            </div>
-            <div class="footer__payment">
-              <img src="img/payment/UnionPay.svg" alt="Способ оплаты">
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
-  <div id="select-language" class="popup">
-    <div class="popup__header">
-      <h3 class="popup__title title-sm tablet-sm-only">Выбор языка</h3>
-      <input type="text" name="language-search" class="popup__header-search mobile-sm-only" placeholder="Начните писать">
-      <button type="button" class="popup__close" data-fancybox-close></button>
-    </div>
-    <p class="popup__subtitle tablet-sm-only">
-      Язык отображения интерфейса сайта, определен автоматически как Русский.
-    </p>
-    <form action="#" class="popup__form form" id="language-form">
-      <label for="language-select" class="form__label form__label_lg-mobile" tabindex="-1">Язык</label>
-      <select name="language" id="language-select" data-list-mobile>
-        <option value="RU" selected data-img-src="img/icons/flag-ru.svg">Русский</option>
-        <option value="EN" data-img-src="img/icons/flag-usa.svg">English</option>
-        <option value="CH" data-img-src="img/icons/flag-china.svg">中文</option>
-      </select>
-      <button type="submit" class="form__btn btn btn-primary">
-        <span class="tablet-sm-only">Выбрать</span>
-        <span class="mobile-sm-only">Сохранить выбор</span>
-      </button>
-    </form>
-  </div>
-  <div id="select-location" class="popup">
-    <div class="popup__header">
-      <h3 class="popup__title title-sm tablet-sm-only">Выбор локации</h3>
-      <input type="text" name="location-search" class="popup__header-search mobile-sm-only" placeholder="Начните писать">
-      <button type="button" class="popup__close" data-fancybox-close></button>
-    </div>
-    <p class="popup__subtitle tablet-sm-only">
-      Ваше местоположение определено автоматически. Вы можете изменить его вручную.
-    </p>
-    <form action="#" class="popup__form form" id="location-form">
-      <label for="location-select" class="form__label form__label_lg-mobile" tabindex="-1">Ваше местоположение</label>
-      <select name="location" id="location-select" data-list-mobile>
-        <option selected value="PK">Приморский край</option>
-        <option value="MSK">Москва</option>
-        <option value="SPB">Санкт-Петербург</option>
-        <option value="PERM">Пермь</option>
-      </select>
-      <button type="submit" class="form__btn btn btn-primary">
-        <span class="tablet-sm-only">Выбрать</span>
-        <span class="mobile-sm-only">Сохранить выбор</span>
-      </button>
-    </form>
-  </div>
-  <div id="select-stock" class="popup">
-    <div class="popup__header">
-      <h3 class="popup__title title-sm">Выбор склада ПВЗ</h3>
-      <button type="button" class="popup__close" data-fancybox-close></button>
-    </div>
-    <p class="popup__subtitle">
-      Вы можете выбрать ближайший к вам склад для получения товара из имеющихся в наличии
-    </p>
-    <form action="#" class="popup__form form">
-      <label for="stock-location" class="form__label" tabindex="-1">Город</label>
-      <select name="stock" id="stock-location">
-        <option selected value="MSK">Московская область</option>
-        <option value="PK">Приморский край</option>
-        <option value="SPB">Санкт-Петербург</option>
-        <option value="PERM">Пермь</option>
-      </select>
-      <ul class="popup__list">
-        <li class="popup__list-item">
-          <div class="popup__list-caption">Адрес пункта выдачи:</div>
-          <div class="popup__list-text">Московская область, г. Домодедово, тер владение&nbsp;Торговая база</div>
-        </li>
-        <li class="popup__list-item">
-          <div class="popup__list-caption">Телефон:</div>
-          <div class="popup__list-text">8 (920) 221 22 22</div>
-        </li>
-        <li class="popup__list-item">
-          <div class="popup__list-caption">Рабочее время:</div>
-          <div class="popup__list-text">Пн-Пт, 9:00-18:00</div>
-        </li>
-      </ul>
-      <button type="submit" class="form__btn btn btn-primary">Выбрать</button>
-    </form>
-
-  </div>
-  <div id="mobile-search" class="popup popup_full-width">
-    <div class="popup__header">
-      <input type="text" name="search" class="popup__header-search" placeholder="Начните писать">
-      <button type="button" class="popup__close" data-fancybox-close></button>
-    </div>
-    <div class="search__body">
-      <div class="search__block">
-        <div class="search__caption">Группы</div>
-        <ul class="search__result">
-          <li class="search__result-item">
-            <a href="" class="search__result-link">Торговое оборудование</a>
-          </li>
-          <li class="search__result-item">
-            <a href="" class="search__result-link">Доставка и оплата</a>
-          </li>
-          <li class="search__result-item">
-            <a href="" class="search__result-link">Гарантия и сервис</a>
-          </li>
-          <li class="search__result-item">
-            <a href="" class="search__result-link">Прайс-лист</a>
-          </li>
-          <li class="search__result-item">
-            <a href="" class="search__result-link">Блог</a>
-          </li>
-          <li class="search__result-item">
-            <a href="" class="search__result-link">Производство</a>
-          </li>
-          <li class="search__result-item">
-            <a href="" class="search__result-link">Наш бренд</a>
-          </li>
-          <li class="search__result-item">
-            <a href="" class="search__result-link">Контакты</a>
-          </li>
-        </ul>
-      </div>
-      <div class="search__block">
-        <div class="banners__item banners__item_green">
-          <div class="banners__item-body">
-            <div class="banners__item-caption">
-              Проверка
-              качества
-            </div>
-            <div class="banners__item-desc">
-              Все товары проверены и у вас
-              есть 14 дней для их оценки
-            </div>
-          </div>
-          <div class="banners__item-image">
-            <img src="img/banners/03.png" alt="Баннер">
-          </div>
-        </div>
-      </div>
-      <div class="search__block">
-        <div class="search__caption">Товары</div>
-        <div class="row">
-          <div class="col-lg-3 col-md-4 col-6">
-            <div class="product">
-
-
-
-              <div class="product__labels swiper">
-                <div class="swiper-wrapper">
-
-                  <div class="swiper-slide product__label label red">Распродажа</div>
-
-
-
-                </div>
-              </div>
-
-
-              <div class="product__header">
-                <a href="/product.html" class="product__image">
-                  <img src="img/goods/01.png" alt="UNOX XB693">
-                </a>
-                <div class="product__actions">
-                  <button type="button" class="product__action icon-eye">
-                    <span>Быстрый просмотр</span>
-                  </button>
-                  <button type="button" class="product__action icon-star">
-                    <span>Добавить в избранное</span>
-                  </button>
-                  <button type="button" class="product__action icon-compare">
-                    <span>Сравнить товар</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="product__info">
-                <a href="/product.html" class="product__name">
-                  <small>Пароконвектомат</small>
-                  UNOX XB693
-                </a>
-                <div class="product__price">
-
-                  <div class="product__price-old">
-                    322 703 ₽
-                  </div>
-
-                  <div class="product__price-value">231 501 ₽ </div>
-                </div>
-                <ul class="product__props tablet-sm-only">
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Цвет
-                    </div>
-                    <div class="product__props-value">
-                      Серый металлик
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Мощность
-                    </div>
-                    <div class="product__props-value">
-                      10.5 кВт
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Температура нагрева
-                    </div>
-                    <div class="product__props-value">
-                      50 °С
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Цвет
-                    </div>
-                    <div class="product__props-value">
-                      Серый металлик
-                    </div>
-                  </li>
-                </ul>
-                <div class="product__footer">
-
-                  <div class="product__avaibility green-color">В наличии</div>
-
-
-
-                  <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
-                </div>
-              </div>
-
-
-
-
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6">
-            <div class="product">
-
-
-
-              <div class="product__labels swiper">
-                <div class="swiper-wrapper">
-
-
-                  <div class="swiper-slide product__label label yellow">Новинка</div>
-
-
-                </div>
-              </div>
-
-
-              <div class="product__header">
-                <a href="/product.html" class="product__image">
-                  <img src="img/goods/02.png" alt="Abat ПКА 6-2/3П">
-                </a>
-                <div class="product__actions">
-                  <button type="button" class="product__action icon-eye">
-                    <span>Быстрый просмотр</span>
-                  </button>
-                  <button type="button" class="product__action icon-star">
-                    <span>Добавить в избранное</span>
-                  </button>
-                  <button type="button" class="product__action icon-compare">
-                    <span>Сравнить товар</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="product__info">
-                <a href="/product.html" class="product__name">
-                  <small>Пароконвектомат</small>
-                  Abat ПКА 6-2/3П
-                </a>
-                <div class="product__price">
-
-                  <div class="product__price-old">
-                    270 380 ₽
-                  </div>
-
-                  <div class="product__price-value">149 729 ₽ </div>
-                </div>
-                <ul class="product__props tablet-sm-only">
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Цвет
-                    </div>
-                    <div class="product__props-value">
-                      Серый металлик
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Мощность
-                    </div>
-                    <div class="product__props-value">
-                      10.5 кВт
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Температура нагрева
-                    </div>
-                    <div class="product__props-value">
-                      50 °С
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Цвет
-                    </div>
-                    <div class="product__props-value">
-                      Серый металлик
-                    </div>
-                  </li>
-                </ul>
-                <div class="product__footer">
-
-
-                  <div class="product__avaibility red-color">Товар закончился</div>
-
-
-                  <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
-                </div>
-              </div>
-
-
-
-
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6">
-            <div class="product">
-
-
-
-              <div class="product__labels swiper">
-                <div class="swiper-wrapper">
-
-
-
-                  <div class="swiper-slide product__label label green">Хит продаж</div>
-
-                </div>
-              </div>
-
-
-              <div class="product__header">
-                <a href="/product.html" class="product__image">
-                  <img src="img/goods/03.png" alt="UNOX XFT 133">
-                </a>
-                <div class="product__actions">
-                  <button type="button" class="product__action icon-eye">
-                    <span>Быстрый просмотр</span>
-                  </button>
-                  <button type="button" class="product__action icon-star">
-                    <span>Добавить в избранное</span>
-                  </button>
-                  <button type="button" class="product__action icon-compare">
-                    <span>Сравнить товар</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="product__info">
-                <a href="/product.html" class="product__name">
-                  <small>Пароконвектомат</small>
-                  UNOX XFT 133
-                </a>
-                <div class="product__price">
-
-                  <div class="product__price-old">
-                    82 370 ₽
-                  </div>
-
-                  <div class="product__price-value">70 061 ₽ </div>
-                </div>
-                <ul class="product__props tablet-sm-only">
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Цвет
-                    </div>
-                    <div class="product__props-value">
-                      Серый металлик
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Мощность
-                    </div>
-                    <div class="product__props-value">
-                      10.5 кВт
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Температура нагрева
-                    </div>
-                    <div class="product__props-value">
-                      50 °С
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Цвет
-                    </div>
-                    <div class="product__props-value">
-                      Серый металлик
-                    </div>
-                  </li>
-                </ul>
-                <div class="product__footer">
-
-
-
-                  <div class="product__avaibility">под заказ</div>
-
-                  <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
-                </div>
-              </div>
-
-
-
-
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6">
-            <div class="product">
-
-
-
-              <div class="product__labels swiper">
-                <div class="swiper-wrapper">
-
-
-                  <div class="swiper-slide product__label label yellow">Новинка</div>
-
-
-                  <div class="swiper-slide product__label label green">Хит продаж</div>
-
-                </div>
-              </div>
-
-
-              <div class="product__header">
-                <a href="/product.html" class="product__image">
-                  <img src="img/goods/04.png" alt="UNOX XEBC-06EU-E1RM">
-                </a>
-                <div class="product__actions">
-                  <button type="button" class="product__action icon-eye">
-                    <span>Быстрый просмотр</span>
-                  </button>
-                  <button type="button" class="product__action icon-star">
-                    <span>Добавить в избранное</span>
-                  </button>
-                  <button type="button" class="product__action icon-compare">
-                    <span>Сравнить товар</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="product__info">
-                <a href="/product.html" class="product__name">
-                  <small>Пароконвектомат</small>
-                  UNOX XEBC-06EU-E1RM
-                </a>
-                <div class="product__price">
-
-                  <div class="product__price-old">
-                    544 910 ₽
-                  </div>
-
-                  <div class="product__price-value">366 900 ₽ </div>
-                </div>
-                <ul class="product__props tablet-sm-only">
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Цвет
-                    </div>
-                    <div class="product__props-value">
-                      Серый металлик
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Мощность
-                    </div>
-                    <div class="product__props-value">
-                      10.5 кВт
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Температура нагрева
-                    </div>
-                    <div class="product__props-value">
-                      50 °С
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Цвет
-                    </div>
-                    <div class="product__props-value">
-                      Серый металлик
-                    </div>
-                  </li>
-                </ul>
-                <div class="product__footer">
-
-                  <div class="product__avaibility green-color">В наличии</div>
-
-
-
-                  <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
-                </div>
-              </div>
-
-
-
-
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6">
-            <div class="product">
-
-
-
-              <div class="product__labels swiper">
-                <div class="swiper-wrapper">
-
-
-                  <div class="swiper-slide product__label label yellow">Новинка</div>
-
-
-                </div>
-              </div>
-
-
-              <div class="product__header">
-                <a href="/product.html" class="product__image">
-                  <img src="img/goods/05.png" alt="UNOX XF 023 Anna">
-                </a>
-                <div class="product__actions">
-                  <button type="button" class="product__action icon-eye">
-                    <span>Быстрый просмотр</span>
-                  </button>
-                  <button type="button" class="product__action icon-star">
-                    <span>Добавить в избранное</span>
-                  </button>
-                  <button type="button" class="product__action icon-compare">
-                    <span>Сравнить товар</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="product__info">
-                <a href="/product.html" class="product__name">
-                  <small>Пароконвектомат</small>
-                  UNOX XF 023 Anna
-                </a>
-                <div class="product__price">
-
-                  <div class="product__price-old">
-                    83 198 ₽
-                  </div>
-
-                  <div class="product__price-value">54 922 ₽ </div>
-                </div>
-                <ul class="product__props tablet-sm-only">
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Цвет
-                    </div>
-                    <div class="product__props-value">
-                      Серый металлик
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Мощность
-                    </div>
-                    <div class="product__props-value">
-                      10.5 кВт
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Температура нагрева
-                    </div>
-                    <div class="product__props-value">
-                      50 °С
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Цвет
-                    </div>
-                    <div class="product__props-value">
-                      Серый металлик
-                    </div>
-                  </li>
-                </ul>
-                <div class="product__footer">
-
-                  <div class="product__avaibility green-color">В наличии</div>
-
-
-
-                  <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
-                </div>
-              </div>
-
-
-
-
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6">
-            <div class="product">
-
-
-
-              <div class="product__labels swiper">
-                <div class="swiper-wrapper">
-
-
-
-                  <div class="swiper-slide product__label label green">Хит продаж</div>
-
-                </div>
-              </div>
-
-
-              <div class="product__header">
-                <a href="/product.html" class="product__image">
-                  <img src="img/goods/06.png" alt="Steba DG 40">
-                </a>
-                <div class="product__actions">
-                  <button type="button" class="product__action icon-eye">
-                    <span>Быстрый просмотр</span>
-                  </button>
-                  <button type="button" class="product__action icon-star">
-                    <span>Добавить в избранное</span>
-                  </button>
-                  <button type="button" class="product__action icon-compare">
-                    <span>Сравнить товар</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="product__info">
-                <a href="/product.html" class="product__name">
-                  <small>Пароконвектомат</small>
-                  Steba DG 40
-                </a>
-                <div class="product__price">
-
-                  <div class="product__price-old">
-                    54 990 ₽
-                  </div>
-
-                  <div class="product__price-value">39 212 ₽ </div>
-                </div>
-                <ul class="product__props tablet-sm-only">
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Цвет
-                    </div>
-                    <div class="product__props-value">
-                      Серый металлик
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Мощность
-                    </div>
-                    <div class="product__props-value">
-                      10.5 кВт
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Температура нагрева
-                    </div>
-                    <div class="product__props-value">
-                      50 °С
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Цвет
-                    </div>
-                    <div class="product__props-value">
-                      Серый металлик
-                    </div>
-                  </li>
-                </ul>
-                <div class="product__footer">
-
-                  <div class="product__avaibility green-color">В наличии</div>
-
-
-
-                  <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
-                </div>
-              </div>
-
-
-
-
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6">
-            <div class="product">
-
-
-
-
-              <div class="product__header">
-                <a href="/product.html" class="product__image">
-                  <img src="img/goods/07.png" alt="Steba DG 40">
-                </a>
-                <div class="product__actions">
-                  <button type="button" class="product__action icon-eye">
-                    <span>Быстрый просмотр</span>
-                  </button>
-                  <button type="button" class="product__action icon-star">
-                    <span>Добавить в избранное</span>
-                  </button>
-                  <button type="button" class="product__action icon-compare">
-                    <span>Сравнить товар</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="product__info">
-                <a href="/product.html" class="product__name">
-                  <small>Пароконвектомат</small>
-                  Steba DG 40
-                </a>
-                <div class="product__price">
-
-                  <div class="product__price-value">442 692 ₽ </div>
-                </div>
-                <ul class="product__props tablet-sm-only">
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Цвет
-                    </div>
-                    <div class="product__props-value">
-                      Серый металлик
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Мощность
-                    </div>
-                    <div class="product__props-value">
-                      10.5 кВт
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Температура нагрева
-                    </div>
-                    <div class="product__props-value">
-                      50 °С
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Цвет
-                    </div>
-                    <div class="product__props-value">
-                      Серый металлик
-                    </div>
-                  </li>
-                </ul>
-                <div class="product__footer">
-
-                  <div class="product__avaibility green-color">В наличии</div>
-
-
-
-                  <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
-                </div>
-              </div>
-
-
-
-
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6">
-            <div class="product">
-
-
-
-              <div class="product__labels swiper">
-                <div class="swiper-wrapper">
-
-
-
-                  <div class="swiper-slide product__label label green">Хит продаж</div>
-
-                </div>
-              </div>
-
-
-              <div class="product__header">
-                <a href="/product.html" class="product__image">
-                  <img src="img/goods/08.png" alt="436 040">
-                </a>
-                <div class="product__actions">
-                  <button type="button" class="product__action icon-eye">
-                    <span>Быстрый просмотр</span>
-                  </button>
-                  <button type="button" class="product__action icon-star">
-                    <span>Добавить в избранное</span>
-                  </button>
-                  <button type="button" class="product__action icon-compare">
-                    <span>Сравнить товар</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="product__info">
-                <a href="/product.html" class="product__name">
-                  <small>Пароконвектомат</small>
-                  436 040
-                </a>
-                <div class="product__price">
-
-                  <div class="product__price-old">
-                    322 703 ₽
-                  </div>
-
-                  <div class="product__price-value">436 040 ₽ </div>
-                </div>
-                <ul class="product__props tablet-sm-only">
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Цвет
-                    </div>
-                    <div class="product__props-value">
-                      Серый металлик
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Мощность
-                    </div>
-                    <div class="product__props-value">
-                      10.5 кВт
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Температура нагрева
-                    </div>
-                    <div class="product__props-value">
-                      50 °С
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Цвет
-                    </div>
-                    <div class="product__props-value">
-                      Серый металлик
-                    </div>
-                  </li>
-                </ul>
-                <div class="product__footer">
-
-                  <div class="product__avaibility green-color">В наличии</div>
-
-
-
-                  <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
-                </div>
-              </div>
-
-
-
-
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-6 pc-none tablet-only">
-            <div class="product">
-
-
-
-              <div class="product__labels swiper">
-                <div class="swiper-wrapper">
-
-
-
-                  <div class="swiper-slide product__label label green">Хит продаж</div>
-
-                </div>
-              </div>
-
-
-              <div class="product__header">
-                <a href="/product.html" class="product__image">
-                  <img src="img/goods/06.png" alt="Steba DG 40">
-                </a>
-                <div class="product__actions">
-                  <button type="button" class="product__action icon-eye">
-                    <span>Быстрый просмотр</span>
-                  </button>
-                  <button type="button" class="product__action icon-star">
-                    <span>Добавить в избранное</span>
-                  </button>
-                  <button type="button" class="product__action icon-compare">
-                    <span>Сравнить товар</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="product__info">
-                <a href="/product.html" class="product__name">
-                  <small>Пароконвектомат</small>
-                  Steba DG 40
-                </a>
-                <div class="product__price">
-
-                  <div class="product__price-old">
-                    54 990 ₽
-                  </div>
-
-                  <div class="product__price-value">39 212 ₽ </div>
-                </div>
-                <ul class="product__props tablet-sm-only">
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Цвет
-                    </div>
-                    <div class="product__props-value">
-                      Серый металлик
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Мощность
-                    </div>
-                    <div class="product__props-value">
-                      10.5 кВт
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Температура нагрева
-                    </div>
-                    <div class="product__props-value">
-                      50 °С
-                    </div>
-                  </li>
-                  <li class="product__props-row">
-                    <div class="product__props-name">
-                      Цвет
-                    </div>
-                    <div class="product__props-value">
-                      Серый металлик
-                    </div>
-                  </li>
-                </ul>
-                <div class="product__footer">
-
-                  <div class="product__avaibility green-color">В наличии</div>
-
-
-
-                  <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
-                </div>
-              </div>
-
-
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="search__block">
-        <div class="search__caption">Товары по видам направления</div>
-        <div class="products__grid">
-          <div class="products__item">
-            <a href="" class="card">
-              <span class="card__image">
-                <img src="img/products/01.png" class="cover-image" alt="Описание">
-              </span>
-              <span class="card__desc">
-                Пиццерия
-              </span>
-            </a>
-          </div>
-          <div class="products__item">
-            <a href="" class="card">
-              <span class="card__image">
-                <img src="img/products/02.png" class="cover-image" alt="Описание">
-              </span>
-              <span class="card__desc">
-                Пекарня
-              </span>
-            </a>
-          </div>
-          <div class="products__item">
-            <a href="" class="card">
-              <span class="card__image">
-                <img src="img/products/04.png" class="cover-image" alt="Описание">
-              </span>
-              <span class="card__desc">
-                Столовая
-              </span>
-            </a>
-          </div>
-          <div class="products__item">
-            <a href="" class="card">
-              <span class="card__image">
-                <img src="img/products/05.png" class="cover-image" alt="Описание">
-              </span>
-              <span class="card__desc">
-                Ресторан
-              </span>
-            </a>
-          </div>
-        </div>
-        <button type="button" class="search__more icon-chevron">
-          <span>Все направления</span>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div id="success" class="popup">
-    <div class="popup__body">
-      <div class="popup__title title-sm">Thank you! </div>
-      <p class="popup__subtitle">
-        Our consultant will contact you and answer all your questions!
-      </p>
-      <button type="button" data-fancybox-close class="popup__btn btn btn-primary btn-sm">Okay</button>
-    </div>
-  </div>
-  <!-- plugnis -->
-  <script src="js/libs/jquery-3.7.1.min.js?_v=20240612193011"></script>
-  <script src="js/libs/swiper-bundle.min.js?_v=20240612193011"></script>
-  <script src="js/libs/fancybox.umd.js?_v=20240612193011"></script>
-  <script src="js/libs/nouislider.min.js?_v=20240612193011"></script>
-  <script src="js/libs/select2.full.min.js?_v=20240612193011"></script>
-  <script src="js/libs/jquery.validate.min.js?_v=20240612193011"></script>
-  <script src="js/libs/messages_ru.min.js?_v=20240612193011"></script>
-  <!-- plugnis -->
-
-
-  <script src="js/app.min.js?_v=20240612193011"></script>
+	<div class="wrapper">
+		<header class="header header_shadow">
+			<div class="header__container">
+				<div class="header__top">
+					<a href="#select-language" data-fancybox class="header__language icon-globe"> RU </a>
+					<a href="#select-location" data-fancybox class="header__location icon-location"> Приморский край </a>
+					<div class="header__currency icon-currency"> 97.8 USD / 99.05 EUR </div>
+					<div class="header__menu menu">
+						<a href="/" class="menu__logo">
+							<img src="img/logo-white.svg" alt="Логотип">
+						</a>
+						<a href="tel:88003551555" class="menu__phone">8 (800) 355-15-55</a>
+						<nav aria-label="Меню в шапке" class="menu__navbar">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a href="about.html" class="menu__link">О компании</a>
+								</li>
+								<li class="menu__item">
+									<a href="" class="menu__link">Доставка и оплата</a>
+									<button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
+									<ul class="submenu">
+										<li class="submenu__item">
+											<a href="" class="submenu__link icon-chevron">Доставка</a>
+										</li>
+										<li class="submenu__item">
+											<a href="" class="submenu__link icon-chevron">Оплата</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu__item">
+									<a href="" class="menu__link">Гарантия и сервис</a>
+								</li>
+								<li class="menu__item">
+									<a href="" class="menu__link">Прайс-лист</a>
+									<button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
+									<ul class="submenu">
+										<li class="submenu__item">
+											<a href="" class="submenu__link icon-chevron">Пиццерия</a>
+										</li>
+										<li class="submenu__item">
+											<a href="" class="submenu__link icon-chevron">Пекарня</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu__item">
+									<a href="" class="menu__link">Блог</a>
+									<button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
+									<ul class="submenu">
+										<li class="submenu__item">
+											<a href="" class="submenu__link icon-chevron">Статья 1</a>
+										</li>
+										<li class="submenu__item">
+											<a href="" class="submenu__link icon-chevron">Статья 2</a>
+										</li>
+										<li class="submenu__item">
+											<a href="" class="submenu__link icon-chevron">Статья 3</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu__item">
+									<a href="" class="menu__link">Производство</a>
+									<button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
+									<ul class="submenu">
+										<li class="submenu__item">
+											<a href="" class="submenu__link icon-chevron">Статья 1</a>
+										</li>
+										<li class="submenu__item">
+											<a href="" class="submenu__link icon-chevron">Статья 2</a>
+										</li>
+										<li class="submenu__item">
+											<a href="" class="submenu__link icon-chevron">Статья 3</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu__item">
+									<a href="" class="menu__link">Наш бренд</a>
+								</li>
+								<li class="menu__item">
+									<a href="" class="menu__link">Контакты</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<button type="button" aria-label="Открыть мобильное меню" class="header__menu-btn menu-toggler icon-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+				<div class="header__body">
+					<a href="/index.html" class="header__logo">
+						<img src="img/logo.svg" alt="Логотип">
+					</a>
+					<a href="/catalog.html" class="header__catalog icon-burger"> Каталог </a>
+					<form action="#" role="search" class="header__search search">
+						<input type="text" autocomplete="off" name="search" class="search__form-input" placeholder="Поиск по товарам и брендам">
+						<button type="submit" aria-label="Искать товары" data-tooltip title="Искать товар" class="search__btn icon-search"></button>
+					</form>
+					<div class="header__actions actions">
+						<button type="button" class="actions__item menu-toggler mobile-sm-only">
+							<span class="icon-menu">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+							<span class="actions__item-desc">Меню</span>
+						</button>
+						<a href="/catalog.html" data-tooltip title="Каталог" class="actions__item icon-catalog mobile-sm-only">
+							<span class="actions__item-desc">Каталог</span>
+						</a>
+						<a href="#mobile-search" data-fancybox class="actions__item search-btn-toggler icon-search">
+							<span class="actions__item-desc">Поиск</span>
+						</a>
+						<a href="" data-tooltip title="Сравнение" class="actions__item icon-compare open-menu-mobile">
+							<span class="actions__item-desc">Сравнение</span>
+						</a>
+						<a href="" data-tooltip title="Избранное" class="actions__item icon-star open-menu-mobile">
+							<span class="actions__item-desc">Избранное</span>
+						</a>
+						<a href="" data-tooltip title="Корзина" class="actions__item icon-cart">
+							<span class="actions__item-desc">Корзина</span>
+							<span class="actions__item-quantity">12</span>
+						</a>
+						<a href="" data-tooltip title="Личный кабинет" class="actions__item icon-user open-menu-mobile">
+							<span class="actions__item-desc">Пользователь</span>
+						</a>
+					</div>
+					<a href="tel:88003551555" class="header__phone">8 (800) 355-15-55</a>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<nav aria-label="Хлебные крошки" class="breadcrumbs">
+				<div class="breadcrumbs__container">
+					<ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+							<a href="/" class="breadcrumbs__link" itemprop="item">
+								<span itemprop="name">Главная</span>
+							</a>
+							<meta itemprop="position" content="1">
+						</li>
+						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+							<a class="breadcrumbs__link active" itemprop="item">
+								<span itemprop="name">Регистрация</span>
+							</a>
+							<meta itemprop="position" content="2">
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="auth">
+				<div class="auth__container">
+					<form action="#" class="auth__form form" data-validation-form>
+						<h1 class="form__caption">СМС отправлено</h1>
+						<p class="form__subtitle"> На указанный номер телефона отправлено СМС сообщение с кодом для сброса пароля. </p>
+						<p class="form__subtitle"> Введите код из СМС, чтобы сбросить пароль и назначить новый. </p>
+						<div class="form__field">
+							<div class="form__label">Код из СМС</div>
+							<input type="text" maxlength="4" name="push" inputmode="numeric" placeholder="Введите код" class="form__input">
+						</div>
+						<a href="" class="form__link">Не приходит сообщение</a>
+						<button type="button" disabled class="form__repeat btn btn-secondary"> Повторная отправка 0:58 </button>
+						<button type="submit" disabled class="form__btn btn btn-primary">Подтвердить</button>
+					</form>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="row">
+					<div class="col-xl-2 ">
+						<a href="/" class="footer__logo">
+							<img src="img/logo-white.svg" alt="Логотип">
+						</a>
+					</div>
+					<div class="col-xl-2 col-md-4 col-6">
+						<div class="footer__caption">Каталог</div>
+						<nav class="footer__menu">
+							<ul class="footer__menu-list">
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Оборудование для торговли</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Посуда и инвентарь</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Мебель</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Упаковочное оборудование</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Складское хранение</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Клининговое оборудование</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-xl-2 col-md-4 col-6">
+						<div class="footer__caption">Услуги</div>
+						<nav class="footer__menu">
+							<ul class="footer__menu-list">
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Комплексное оснащение</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Кредит и лизинг</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Доставка и оплата</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Гарантия и сервис</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Разработка проекта</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-xl-2 col-md-4 col-6">
+						<div class="footer__caption">О компании</div>
+						<nav class="footer__menu">
+							<ul class="footer__menu-list">
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Компания</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Работа в компании</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Наше производство</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Наш бренд</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Портфолио</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Производители</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Клиенты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-xl-2 col-md-4 col-6">
+						<div class="footer__caption">Документы</div>
+						<nav class="footer__menu">
+							<ul class="footer__menu-list">
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Сертификаты</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Реквизиты компании</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Прайс листы</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-xl-2 col-md-4 col-6">
+						<div class="footer__caption">Контакты</div>
+						<div class="footer__contacts">
+							<div class="footer__worktime"> Пн-Пт: 8:00 - 18:00 <br> Сб: Выходной </div>
+							<a href="tel:88003509705" class="footer__link">8 (800) 350-97-05</a>
+							<a href="mailto:info@resprofi.ru" class="footer__link">info@resprofi.ru</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__hint"> * Интернет ресурс носит исключительно информационный характер и не является публичной офертой, определяемой положениями ст. 437 Гражданского кодекса РФ. <br> ** Оборудование предназначено для использования в предпринимательской деятельности или в иных целях, не связанных с личным, семейным, домашним и иным подобным использованием. </div>
+					<div class="footer__payments">
+						<div class="footer__payment">
+							<img src="img/payment/mir.svg" alt="Способ оплаты">
+						</div>
+						<div class="footer__payment">
+							<img src="img/payment/SBP.svg" alt="Способ оплаты">
+						</div>
+						<div class="footer__payment">
+							<img src="img/payment/UnionPay.svg" alt="Способ оплаты">
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div id="select-language" class="popup">
+		<div class="popup__header">
+			<h3 class="popup__title title-sm tablet-sm-only">Выбор языка</h3>
+			<input type="text" name="language-search" class="popup__header-search mobile-sm-only" placeholder="Начните писать">
+			<button type="button" class="popup__close" data-fancybox-close></button>
+		</div>
+		<p class="popup__subtitle tablet-sm-only"> Язык отображения интерфейса сайта, определен автоматически как Русский. </p>
+		<form action="#" class="popup__form form" id="language-form">
+			<label for="language-select" class="form__label form__label_lg-mobile" tabindex="-1">Язык</label>
+			<select name="language" id="language-select" data-list-mobile>
+				<option value="RU" selected data-img-src="img/icons/flag-ru.svg">Русский</option>
+				<option value="EN" data-img-src="img/icons/flag-usa.svg">English</option>
+				<option value="CH" data-img-src="img/icons/flag-china.svg">中文</option>
+			</select>
+			<button type="submit" class="form__btn btn btn-primary">
+				<span class="tablet-sm-only">Выбрать</span>
+				<span class="mobile-sm-only">Сохранить выбор</span>
+			</button>
+		</form>
+	</div>
+	<div id="select-location" class="popup">
+		<div class="popup__header">
+			<h3 class="popup__title title-sm tablet-sm-only">Выбор локации</h3>
+			<input type="text" name="location-search" class="popup__header-search mobile-sm-only" placeholder="Начните писать">
+			<button type="button" class="popup__close" data-fancybox-close></button>
+		</div>
+		<p class="popup__subtitle tablet-sm-only"> Ваше местоположение определено автоматически. Вы можете изменить его вручную. </p>
+		<form action="#" class="popup__form form" id="location-form">
+			<label for="location-select" class="form__label form__label_lg-mobile" tabindex="-1">Ваше местоположение</label>
+			<select name="location" id="location-select" data-list-mobile>
+				<option selected value="PK">Приморский край</option>
+				<option value="MSK">Москва</option>
+				<option value="SPB">Санкт-Петербург</option>
+				<option value="PERM">Пермь</option>
+			</select>
+			<button type="submit" class="form__btn btn btn-primary">
+				<span class="tablet-sm-only">Выбрать</span>
+				<span class="mobile-sm-only">Сохранить выбор</span>
+			</button>
+		</form>
+	</div>
+	<div id="select-stock" class="popup">
+		<div class="popup__header">
+			<h3 class="popup__title title-sm">Выбор склада ПВЗ</h3>
+			<button type="button" class="popup__close" data-fancybox-close></button>
+		</div>
+		<p class="popup__subtitle"> Вы можете выбрать ближайший к вам склад для получения товара из имеющихся в наличии </p>
+		<form action="#" class="popup__form form">
+			<label for="stock-location" class="form__label" tabindex="-1">Город</label>
+			<select name="stock" id="stock-location">
+				<option selected value="MSK">Московская область</option>
+				<option value="PK">Приморский край</option>
+				<option value="SPB">Санкт-Петербург</option>
+				<option value="PERM">Пермь</option>
+			</select>
+			<ul class="popup__list">
+				<li class="popup__list-item">
+					<div class="popup__list-caption">Адрес пункта выдачи:</div>
+					<div class="popup__list-text">Московская область, г. Домодедово, тер владение&nbsp;Торговая база</div>
+				</li>
+				<li class="popup__list-item">
+					<div class="popup__list-caption">Телефон:</div>
+					<div class="popup__list-text">8 (920) 221 22 22</div>
+				</li>
+				<li class="popup__list-item">
+					<div class="popup__list-caption">Рабочее время:</div>
+					<div class="popup__list-text">Пн-Пт, 9:00-18:00</div>
+				</li>
+			</ul>
+			<button type="submit" class="form__btn btn btn-primary">Выбрать</button>
+		</form>
+	</div>
+	<div id="mobile-search" class="popup popup_full-width">
+		<div class="popup__header">
+			<input type="text" name="search" class="popup__header-search" placeholder="Начните писать">
+			<button type="button" class="popup__close" data-fancybox-close></button>
+		</div>
+		<div class="search__body">
+			<div class="search__block">
+				<div class="search__caption">Группы</div>
+				<ul class="search__result">
+					<li class="search__result-item"><a href="" class="search__result-link">Торговое оборудование</a></li>
+					<li class="search__result-item"><a href="" class="search__result-link">Доставка и оплата</a></li>
+					<li class="search__result-item"><a href="" class="search__result-link">Гарантия и сервис</a></li>
+					<li class="search__result-item"><a href="" class="search__result-link">Прайс-лист</a></li>
+					<li class="search__result-item"><a href="" class="search__result-link">Блог</a></li>
+					<li class="search__result-item"><a href="" class="search__result-link">Производство</a></li>
+					<li class="search__result-item"><a href="" class="search__result-link">Наш бренд</a></li>
+					<li class="search__result-item"><a href="" class="search__result-link">Контакты</a></li>
+				</ul>
+			</div>
+			<div class="search__block">
+				<div class="banners__item banners__item_green">
+					<div class="banners__item-body">
+						<div class="banners__item-caption"> Проверка качества </div>
+						<div class="banners__item-desc"> Все товары проверены и у вас есть 14 дней для их оценки </div>
+					</div>
+					<div class="banners__item-image">
+						<img src="img/banners/03.png" alt="Баннер">
+					</div>
+				</div>
+			</div>
+			<div class="search__block">
+				<div class="search__caption">Товары</div>
+				<div class="row">
+					<div class="col-lg-3 col-md-4 col-6">
+						<div class="product">
+							<div class="product__labels swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide product__label label red">Распродажа</div>
+								</div>
+							</div>
+							<div class="product__header">
+								<a href="/product.html" class="product__image">
+									<img src="img/goods/01.png" alt="UNOX XB693">
+								</a>
+								<div class="product__actions">
+									<button type="button" class="product__action icon-eye">
+										<span>Быстрый просмотр</span>
+									</button>
+									<button type="button" class="product__action icon-star">
+										<span>Добавить в избранное</span>
+									</button>
+									<button type="button" class="product__action icon-compare">
+										<span>Сравнить товар</span>
+									</button>
+								</div>
+							</div>
+							<div class="product__info">
+								<a href="/product.html" class="product__name">
+									<small>Пароконвектомат</small> UNOX XB693 </a>
+								<div class="product__price">
+									<div class="product__price-old"> 322 703 ₽ </div>
+									<div class="product__price-value">231 501 ₽ </div>
+								</div>
+								<ul class="product__props tablet-sm-only">
+									<li class="product__props-row">
+										<div class="product__props-name"> Цвет </div>
+										<div class="product__props-value"> Серый металлик </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Мощность </div>
+										<div class="product__props-value"> 10.5 кВт </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Температура нагрева </div>
+										<div class="product__props-value"> 50 °С </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Цвет </div>
+										<div class="product__props-value"> Серый металлик </div>
+									</li>
+								</ul>
+								<div class="product__footer">
+									<div class="product__avaibility green-color">В наличии</div>
+									<button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6">
+						<div class="product">
+							<div class="product__labels swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide product__label label yellow">Новинка</div>
+								</div>
+							</div>
+							<div class="product__header">
+								<a href="/product.html" class="product__image">
+									<img src="img/goods/02.png" alt="Abat ПКА 6-2/3П">
+								</a>
+								<div class="product__actions">
+									<button type="button" class="product__action icon-eye">
+										<span>Быстрый просмотр</span>
+									</button>
+									<button type="button" class="product__action icon-star">
+										<span>Добавить в избранное</span>
+									</button>
+									<button type="button" class="product__action icon-compare">
+										<span>Сравнить товар</span>
+									</button>
+								</div>
+							</div>
+							<div class="product__info">
+								<a href="/product.html" class="product__name">
+									<small>Пароконвектомат</small> Abat ПКА 6-2/3П </a>
+								<div class="product__price">
+									<div class="product__price-old"> 270 380 ₽ </div>
+									<div class="product__price-value">149 729 ₽ </div>
+								</div>
+								<ul class="product__props tablet-sm-only">
+									<li class="product__props-row">
+										<div class="product__props-name"> Цвет </div>
+										<div class="product__props-value"> Серый металлик </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Мощность </div>
+										<div class="product__props-value"> 10.5 кВт </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Температура нагрева </div>
+										<div class="product__props-value"> 50 °С </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Цвет </div>
+										<div class="product__props-value"> Серый металлик </div>
+									</li>
+								</ul>
+								<div class="product__footer">
+									<div class="product__avaibility red-color">Товар закончился</div>
+									<button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6">
+						<div class="product">
+							<div class="product__labels swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide product__label label green">Хит продаж</div>
+								</div>
+							</div>
+							<div class="product__header">
+								<a href="/product.html" class="product__image">
+									<img src="img/goods/03.png" alt="UNOX XFT 133">
+								</a>
+								<div class="product__actions">
+									<button type="button" class="product__action icon-eye">
+										<span>Быстрый просмотр</span>
+									</button>
+									<button type="button" class="product__action icon-star">
+										<span>Добавить в избранное</span>
+									</button>
+									<button type="button" class="product__action icon-compare">
+										<span>Сравнить товар</span>
+									</button>
+								</div>
+							</div>
+							<div class="product__info">
+								<a href="/product.html" class="product__name">
+									<small>Пароконвектомат</small> UNOX XFT 133 </a>
+								<div class="product__price">
+									<div class="product__price-old"> 82 370 ₽ </div>
+									<div class="product__price-value">70 061 ₽ </div>
+								</div>
+								<ul class="product__props tablet-sm-only">
+									<li class="product__props-row">
+										<div class="product__props-name"> Цвет </div>
+										<div class="product__props-value"> Серый металлик </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Мощность </div>
+										<div class="product__props-value"> 10.5 кВт </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Температура нагрева </div>
+										<div class="product__props-value"> 50 °С </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Цвет </div>
+										<div class="product__props-value"> Серый металлик </div>
+									</li>
+								</ul>
+								<div class="product__footer">
+									<div class="product__avaibility">под заказ</div>
+									<button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6">
+						<div class="product">
+							<div class="product__labels swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide product__label label yellow">Новинка</div>
+									<div class="swiper-slide product__label label green">Хит продаж</div>
+								</div>
+							</div>
+							<div class="product__header">
+								<a href="/product.html" class="product__image">
+									<img src="img/goods/04.png" alt="UNOX XEBC-06EU-E1RM">
+								</a>
+								<div class="product__actions">
+									<button type="button" class="product__action icon-eye">
+										<span>Быстрый просмотр</span>
+									</button>
+									<button type="button" class="product__action icon-star">
+										<span>Добавить в избранное</span>
+									</button>
+									<button type="button" class="product__action icon-compare">
+										<span>Сравнить товар</span>
+									</button>
+								</div>
+							</div>
+							<div class="product__info">
+								<a href="/product.html" class="product__name">
+									<small>Пароконвектомат</small> UNOX XEBC-06EU-E1RM </a>
+								<div class="product__price">
+									<div class="product__price-old"> 544 910 ₽ </div>
+									<div class="product__price-value">366 900 ₽ </div>
+								</div>
+								<ul class="product__props tablet-sm-only">
+									<li class="product__props-row">
+										<div class="product__props-name"> Цвет </div>
+										<div class="product__props-value"> Серый металлик </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Мощность </div>
+										<div class="product__props-value"> 10.5 кВт </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Температура нагрева </div>
+										<div class="product__props-value"> 50 °С </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Цвет </div>
+										<div class="product__props-value"> Серый металлик </div>
+									</li>
+								</ul>
+								<div class="product__footer">
+									<div class="product__avaibility green-color">В наличии</div>
+									<button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6">
+						<div class="product">
+							<div class="product__labels swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide product__label label yellow">Новинка</div>
+								</div>
+							</div>
+							<div class="product__header">
+								<a href="/product.html" class="product__image">
+									<img src="img/goods/05.png" alt="UNOX XF 023 Anna">
+								</a>
+								<div class="product__actions">
+									<button type="button" class="product__action icon-eye">
+										<span>Быстрый просмотр</span>
+									</button>
+									<button type="button" class="product__action icon-star">
+										<span>Добавить в избранное</span>
+									</button>
+									<button type="button" class="product__action icon-compare">
+										<span>Сравнить товар</span>
+									</button>
+								</div>
+							</div>
+							<div class="product__info">
+								<a href="/product.html" class="product__name">
+									<small>Пароконвектомат</small> UNOX XF 023 Anna </a>
+								<div class="product__price">
+									<div class="product__price-old"> 83 198 ₽ </div>
+									<div class="product__price-value">54 922 ₽ </div>
+								</div>
+								<ul class="product__props tablet-sm-only">
+									<li class="product__props-row">
+										<div class="product__props-name"> Цвет </div>
+										<div class="product__props-value"> Серый металлик </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Мощность </div>
+										<div class="product__props-value"> 10.5 кВт </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Температура нагрева </div>
+										<div class="product__props-value"> 50 °С </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Цвет </div>
+										<div class="product__props-value"> Серый металлик </div>
+									</li>
+								</ul>
+								<div class="product__footer">
+									<div class="product__avaibility green-color">В наличии</div>
+									<button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6">
+						<div class="product">
+							<div class="product__labels swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide product__label label green">Хит продаж</div>
+								</div>
+							</div>
+							<div class="product__header">
+								<a href="/product.html" class="product__image">
+									<img src="img/goods/06.png" alt="Steba DG 40">
+								</a>
+								<div class="product__actions">
+									<button type="button" class="product__action icon-eye">
+										<span>Быстрый просмотр</span>
+									</button>
+									<button type="button" class="product__action icon-star">
+										<span>Добавить в избранное</span>
+									</button>
+									<button type="button" class="product__action icon-compare">
+										<span>Сравнить товар</span>
+									</button>
+								</div>
+							</div>
+							<div class="product__info">
+								<a href="/product.html" class="product__name">
+									<small>Пароконвектомат</small> Steba DG 40 </a>
+								<div class="product__price">
+									<div class="product__price-old"> 54 990 ₽ </div>
+									<div class="product__price-value">39 212 ₽ </div>
+								</div>
+								<ul class="product__props tablet-sm-only">
+									<li class="product__props-row">
+										<div class="product__props-name"> Цвет </div>
+										<div class="product__props-value"> Серый металлик </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Мощность </div>
+										<div class="product__props-value"> 10.5 кВт </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Температура нагрева </div>
+										<div class="product__props-value"> 50 °С </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Цвет </div>
+										<div class="product__props-value"> Серый металлик </div>
+									</li>
+								</ul>
+								<div class="product__footer">
+									<div class="product__avaibility green-color">В наличии</div>
+									<button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6">
+						<div class="product">
+							<div class="product__header">
+								<a href="/product.html" class="product__image">
+									<img src="img/goods/07.png" alt="Steba DG 40">
+								</a>
+								<div class="product__actions">
+									<button type="button" class="product__action icon-eye">
+										<span>Быстрый просмотр</span>
+									</button>
+									<button type="button" class="product__action icon-star">
+										<span>Добавить в избранное</span>
+									</button>
+									<button type="button" class="product__action icon-compare">
+										<span>Сравнить товар</span>
+									</button>
+								</div>
+							</div>
+							<div class="product__info">
+								<a href="/product.html" class="product__name">
+									<small>Пароконвектомат</small> Steba DG 40 </a>
+								<div class="product__price">
+									<div class="product__price-value">442 692 ₽ </div>
+								</div>
+								<ul class="product__props tablet-sm-only">
+									<li class="product__props-row">
+										<div class="product__props-name"> Цвет </div>
+										<div class="product__props-value"> Серый металлик </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Мощность </div>
+										<div class="product__props-value"> 10.5 кВт </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Температура нагрева </div>
+										<div class="product__props-value"> 50 °С </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Цвет </div>
+										<div class="product__props-value"> Серый металлик </div>
+									</li>
+								</ul>
+								<div class="product__footer">
+									<div class="product__avaibility green-color">В наличии</div>
+									<button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6">
+						<div class="product">
+							<div class="product__labels swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide product__label label green">Хит продаж</div>
+								</div>
+							</div>
+							<div class="product__header">
+								<a href="/product.html" class="product__image">
+									<img src="img/goods/08.png" alt="436 040">
+								</a>
+								<div class="product__actions">
+									<button type="button" class="product__action icon-eye">
+										<span>Быстрый просмотр</span>
+									</button>
+									<button type="button" class="product__action icon-star">
+										<span>Добавить в избранное</span>
+									</button>
+									<button type="button" class="product__action icon-compare">
+										<span>Сравнить товар</span>
+									</button>
+								</div>
+							</div>
+							<div class="product__info">
+								<a href="/product.html" class="product__name">
+									<small>Пароконвектомат</small> 436 040 </a>
+								<div class="product__price">
+									<div class="product__price-old"> 322 703 ₽ </div>
+									<div class="product__price-value">436 040 ₽ </div>
+								</div>
+								<ul class="product__props tablet-sm-only">
+									<li class="product__props-row">
+										<div class="product__props-name"> Цвет </div>
+										<div class="product__props-value"> Серый металлик </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Мощность </div>
+										<div class="product__props-value"> 10.5 кВт </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Температура нагрева </div>
+										<div class="product__props-value"> 50 °С </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Цвет </div>
+										<div class="product__props-value"> Серый металлик </div>
+									</li>
+								</ul>
+								<div class="product__footer">
+									<div class="product__avaibility green-color">В наличии</div>
+									<button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6 pc-none tablet-only">
+						<div class="product">
+							<div class="product__labels swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide product__label label green">Хит продаж</div>
+								</div>
+							</div>
+							<div class="product__header">
+								<a href="/product.html" class="product__image">
+									<img src="img/goods/06.png" alt="Steba DG 40">
+								</a>
+								<div class="product__actions">
+									<button type="button" class="product__action icon-eye">
+										<span>Быстрый просмотр</span>
+									</button>
+									<button type="button" class="product__action icon-star">
+										<span>Добавить в избранное</span>
+									</button>
+									<button type="button" class="product__action icon-compare">
+										<span>Сравнить товар</span>
+									</button>
+								</div>
+							</div>
+							<div class="product__info">
+								<a href="/product.html" class="product__name">
+									<small>Пароконвектомат</small> Steba DG 40 </a>
+								<div class="product__price">
+									<div class="product__price-old"> 54 990 ₽ </div>
+									<div class="product__price-value">39 212 ₽ </div>
+								</div>
+								<ul class="product__props tablet-sm-only">
+									<li class="product__props-row">
+										<div class="product__props-name"> Цвет </div>
+										<div class="product__props-value"> Серый металлик </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Мощность </div>
+										<div class="product__props-value"> 10.5 кВт </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Температура нагрева </div>
+										<div class="product__props-value"> 50 °С </div>
+									</li>
+									<li class="product__props-row">
+										<div class="product__props-name"> Цвет </div>
+										<div class="product__props-value"> Серый металлик </div>
+									</li>
+								</ul>
+								<div class="product__footer">
+									<div class="product__avaibility green-color">В наличии</div>
+									<button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="search__block">
+				<div class="search__caption">Товары по видам направления</div>
+				<div class="products__grid">
+					<div class="products__item">
+						<a href="" class="card">
+							<span class="card__image">
+								<img src="img/products/01.png" class="cover-image" alt="Описание">
+							</span>
+							<span class="card__desc"> Пиццерия </span>
+						</a>
+					</div>
+					<div class="products__item">
+						<a href="" class="card">
+							<span class="card__image">
+								<img src="img/products/02.png" class="cover-image" alt="Описание">
+							</span>
+							<span class="card__desc"> Пекарня </span>
+						</a>
+					</div>
+					<div class="products__item">
+						<a href="" class="card">
+							<span class="card__image">
+								<img src="img/products/04.png" class="cover-image" alt="Описание">
+							</span>
+							<span class="card__desc"> Столовая </span>
+						</a>
+					</div>
+					<div class="products__item">
+						<a href="" class="card">
+							<span class="card__image">
+								<img src="img/products/05.png" class="cover-image" alt="Описание">
+							</span>
+							<span class="card__desc"> Ресторан </span>
+						</a>
+					</div>
+				</div>
+				<button type="button" class="search__more icon-chevron"><span>Все направления</span></button>
+			</div>
+		</div>
+	</div>
+	<div id="success" class="popup">
+		<div class="popup__body">
+			<div class="popup__title title-sm">Thank you! </div>
+			<p class="popup__subtitle"> Our consultant will contact you and answer all your questions! </p>
+			<button type="button" data-fancybox-close class="popup__btn btn btn-primary btn-sm">Okay</button>
+		</div>
+	</div> <!-- plugnis -->
+	<script src="js/libs/jquery-3.7.1.min.js?_v=20240612193204"></script>
+	<script src="js/libs/swiper-bundle.min.js?_v=20240612193204"></script>
+	<script src="js/libs/fancybox.umd.js?_v=20240612193204"></script>
+	<script src="js/libs/nouislider.min.js?_v=20240612193204"></script>
+	<script src="js/libs/select2.full.min.js?_v=20240612193204"></script>
+	<script src="js/libs/jquery.validate.min.js?_v=20240612193204"></script>
+	<script src="js/libs/messages_ru.min.js?_v=20240612193204"></script>
+	<!-- plugnis -->
+	<script src="js/app.min.js?_v=20240612193204"></script>
 </body>
 
 </html>
