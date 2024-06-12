@@ -44,15 +44,15 @@
   <!-- Twitter -->
 
   <!-- plugnis -->
-  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240612165200">
-  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240612165200">
-  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240612165200">
-  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240612165200">
+  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240612172209">
+  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20240612172209">
+  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240612172209">
+  <link rel="stylesheet" href="css/libs/select2.min.css?_v=20240612172209">
   <!-- plugnis -->
 
 
-  <link rel="stylesheet" href="css/reset.min.css?_v=20240612165200">
-  <link rel="stylesheet" href="css/style.min.css?_v=20240612165200">
+  <link rel="stylesheet" href="css/reset.min.css?_v=20240612172209">
+  <link rel="stylesheet" href="css/style.min.css?_v=20240612172209">
 
 </head>
 
@@ -301,7 +301,7 @@
                       </div>
                     </li>
                     <li class="product-card__info-item">
-                      <div class="product-card__info-name">Цвет / <a href="">Выбрать</a>
+                      <div class="product-card__info-name">Цвет / <button type="button" class="product-card__info-color">Выбрать</button>
                       </div>
                       <div class="product-card__info-value">Серый металлик</div>
                     </li>
@@ -410,40 +410,45 @@
               </div>
             </div>
             <aside class="product-card__side">
-              <div class="product-card__side-caption">Состояние товара</div>
-              <ul class="product-card__side-labels">
-                <a href="" class="product-card__side-label product-card__side-label_active">Новый</a>
-                <a href="" class="product-card__side-label">Уценка</a>
-                <a href="" class="product-card__side-label">Распродажа</a>
-              </ul>
-              <ul class="product-card__characteristics">
-                <li class="product-card__characteristics-item">
-                  <div class="product-card__characteristics-name">Бренд</div>
-                  <a href="" class="product-card__characteristics-value blue-color">
-                    <strong>UNOX</strong>
-                  </a>
-                </li>
-                <li class="product-card__characteristics-item">
-                  <div class="product-card__characteristics-name">Артикул товара</div>
-                  <div class="product-card__characteristics-value">000000</div>
-                </li>
-                <li class="product-card__characteristics-item">
-                  <div class="product-card__characteristics-name">Доставка по Москве и МО</div>
-                  <div class="product-card__characteristics-value">Бесплатно</div>
-                </li>
-                <li class="product-card__characteristics-item">
-                  <div class="product-card__characteristics-name">Онлайн просмотр</div>
-                  <div class="product-card__characteristics-value">Да</div>
-                </li>
-                <li class="product-card__characteristics-item">
-                  <div class="product-card__characteristics-name">Наличие на складе ПВЗ</div>
-                  <a href="#select-stock" data-fancybox class="product-card__characteristics-value blue-color">Все склады</a>
-                </li>
-                <li class="product-card__characteristics-item">
-                  <div class="product-card__characteristics-name">Наличие на складе</div>
-                  <strong class="product-card__characteristics-value green-color text-uppercase">В наличии</strong>
-                </li>
-              </ul>
+              <div class="product-card__side-main hidden">
+                <div class="product-card__side-caption">Состояние товара</div>
+                <ul class="product-card__side-labels">
+                  <a href="" class="product-card__side-label product-card__side-label_active">Новый</a>
+                  <a href="" class="product-card__side-label">Уценка</a>
+                  <a href="" class="product-card__side-label">Распродажа</a>
+                </ul>
+                <ul class="product-card__characteristics">
+                  <li class="product-card__characteristics-item">
+                    <div class="product-card__characteristics-name">Бренд</div>
+                    <a href="" class="product-card__characteristics-value blue-color">
+                      <strong>UNOX</strong>
+                    </a>
+                  </li>
+                  <li class="product-card__characteristics-item">
+                    <div class="product-card__characteristics-name">Артикул товара</div>
+                    <div class="product-card__characteristics-value">000000</div>
+                  </li>
+                  <li class="product-card__characteristics-item">
+                    <div class="product-card__characteristics-name">Доставка по Москве и МО</div>
+                    <div class="product-card__characteristics-value">Бесплатно</div>
+                  </li>
+                  <li class="product-card__characteristics-item">
+                    <div class="product-card__characteristics-name">Онлайн просмотр</div>
+                    <div class="product-card__characteristics-value">Да</div>
+                  </li>
+                  <li class="product-card__characteristics-item">
+                    <div class="product-card__characteristics-name">Наличие на складе ПВЗ</div>
+                    <a href="#select-stock" data-fancybox class="product-card__characteristics-value blue-color">Все склады</a>
+                  </li>
+                  <li class="product-card__characteristics-item">
+                    <div class="product-card__characteristics-name">Наличие на складе</div>
+                    <strong class="product-card__characteristics-value green-color text-uppercase">В наличии</strong>
+                  </li>
+                </ul>
+              </div>
+              <div class="product-card__colors">
+                <button class="product-card__back icon-chevron">Выбор цвета</button>
+              </div>
               <div class="product-card__price">
                 <div class="product-card__price-old">322 703 ₽</div>
                 <div class="product-card__price-saving">
@@ -458,21 +463,24 @@
                 <a href="" class="product-card__more-btn icon-telegram"></a>
                 <a href="" class="product-card__more-btn">Написать менеджеру</a>
               </div>
-              <button type="button" class="product-card__cart btn btn-primary">
-                Добавить товар в корзину
-              </button>
-              <div class="product-card__cart-actions hidden">
-                <div class="quantity-block">
-                  <button type="button" class="quantity-block__down icon-minus-circle"></button>
-                  <input type="number" name="quantity" class="quantity-block__input" value="0">
-                  <button type="button" class="quantity-block__up icon-plus-circle"></button>
+              <div class="product-card__footer hidden">
+                <button type="button" class="product-card__cart btn btn-primary">
+                  Добавить товар в корзину
+                </button>
+                <div class="product-card__cart-actions hidden">
+                  <div class="quantity-block">
+                    <button type="button" class="quantity-block__down icon-minus-circle"></button>
+                    <input type="number" name="quantity" class="quantity-block__input" value="0">
+                    <button type="button" class="quantity-block__up icon-plus-circle"></button>
+                  </div>
+                  <a href="cart.html" class="product-card__cart-btn btn btn-primary icon-arrow-short">Корзина</a>
                 </div>
-                <a href="cart.html" class="product-card__cart-btn btn btn-primary icon-arrow-short">Корзина</a>
               </div>
+              <button type="button" class="">Сохранить настройки</button>
             </aside>
           </div>
           <div class="product-card__tags">
-            <a href="" class="product-card__tag ">Печь конвекционная</a>
+            <a href="" class="product-card__tag">Печь конвекционная</a>
             <a href="" class="product-card__tag">UNOX</a>
             <a href="" class="product-card__tag">10 Уровней</a>
             <a href="" class="product-card__tag">Печи профессиональные для ресторанов</a>
@@ -502,7 +510,7 @@
                 <div class="product-card__next swiper-button-next"></div>
               </div>
             </div>
-            <div class="product-card__items swiper">
+            <div class="product-card__items swiper ">
               <div class="swiper-wrapper">
 
                 <div class="product swiper-slide">
@@ -5168,17 +5176,17 @@
     </div>
   </div>
   <!-- plugnis -->
-  <script src="js/libs/jquery-3.7.1.min.js?_v=20240612165200"></script>
-  <script src="js/libs/swiper-bundle.min.js?_v=20240612165200"></script>
-  <script src="js/libs/fancybox.umd.js?_v=20240612165200"></script>
-  <script src="js/libs/nouislider.min.js?_v=20240612165200"></script>
-  <script src="js/libs/select2.full.min.js?_v=20240612165200"></script>
-  <script src="js/libs/jquery.validate.min.js?_v=20240612165200"></script>
-  <script src="js/libs/messages_ru.min.js?_v=20240612165200"></script>
+  <script src="js/libs/jquery-3.7.1.min.js?_v=20240612172209"></script>
+  <script src="js/libs/swiper-bundle.min.js?_v=20240612172209"></script>
+  <script src="js/libs/fancybox.umd.js?_v=20240612172209"></script>
+  <script src="js/libs/nouislider.min.js?_v=20240612172209"></script>
+  <script src="js/libs/select2.full.min.js?_v=20240612172209"></script>
+  <script src="js/libs/jquery.validate.min.js?_v=20240612172209"></script>
+  <script src="js/libs/messages_ru.min.js?_v=20240612172209"></script>
   <!-- plugnis -->
 
 
-  <script src="js/app.min.js?_v=20240612165200"></script>
+  <script src="js/app.min.js?_v=20240612172209"></script>
 </body>
 
 </html>

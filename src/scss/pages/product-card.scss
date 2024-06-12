@@ -347,7 +347,8 @@
 		&:not(:last-child) {
 			margin-bottom: 0.63rem;
 		}
-		& a {
+		& a,
+		button {
 			color: $blue;
 			text-decoration: underline;
 			@media (any-hover: hover) {
@@ -556,9 +557,12 @@
 			}
 		}
 	}
+	// .product-card__footer
+	&__footer {
+		margin-top: 1.25rem;
+	}
 	// .product-card__cart
 	&__cart {
-		margin-top: 1.25rem;
 		width: 100%;
 		min-height: 4rem;
 		font-size: 1rem;

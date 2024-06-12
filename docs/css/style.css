@@ -7,26 +7,26 @@
 }
 
 @font-face {
-  font-family: "icons";
+  font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "DinPro";
+  font-family: "icons";
   font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -41,16 +41,8 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -59,6 +51,14 @@
   font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -3709,7 +3709,8 @@ body.lock-catalog-filter {
   margin-bottom: 0.63rem;
 }
 
-.product-card__info-item a {
+.product-card__info-item a,
+.product-card__info-item button {
   color: #1e6ba3;
   text-decoration: underline;
 }
@@ -3932,8 +3933,11 @@ body.lock-catalog-filter {
   border: 0;
 }
 
-.product-card__cart {
+.product-card__footer {
   margin-top: 1.25rem;
+}
+
+.product-card__cart {
   width: 100%;
   min-height: 4rem;
   font-size: 1rem;
@@ -7727,7 +7731,8 @@ body.lock-catalog-filter {
     text-decoration: none;
   }
 
-  .product-card__info-item a:hover {
+  .product-card__info-item a:hover,
+  .product-card__info-item button:hover {
     text-decoration: none;
   }
 

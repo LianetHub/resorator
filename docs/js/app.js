@@ -132,6 +132,12 @@ $(function () {
             let currentValue = parseInt($input.val(), 10);
             $input.val(currentValue + 1);
         }
+
+        // get visible color palette on product page
+        if ($target.hasClass('product-card__info-color')) {
+            $('.product-card__side-main').addClass('hidden');
+            $('.product-card__footer').addClass('hidden')
+        }
     });
 
 
