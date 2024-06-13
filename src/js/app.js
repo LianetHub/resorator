@@ -168,6 +168,12 @@ $(function () {
             $('.product-card__sizes').addClass('hidden');
             $('.product-card__save-sizes').addClass('hidden');
         }
+
+        // accordion on delivery page
+        if ($target.hasClass('delivery__accordion-btn')) {
+            $target.toggleClass('active');
+            $target.next().slideToggle()
+        }
     });
 
 

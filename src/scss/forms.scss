@@ -291,7 +291,7 @@
 	&__file-btn {
 		cursor: pointer;
 		&.btn.btn-primary-outline {
-			color: $white;
+			color: inherit;
 			font-size: 0.875rem;
 			min-height: 100%;
 			&::before {
@@ -450,6 +450,7 @@
 	}
 	&.btn-primary-outline {
 		color: $yellow;
+	
 		border: rem(1) solid $yellow;
 		&:hover,
 		&:active {

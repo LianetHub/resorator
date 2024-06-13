@@ -23,14 +23,6 @@
 }
 
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Inter";
   font-display: swap;
   src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
@@ -39,10 +31,10 @@
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "icons";
   font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -62,6 +54,15 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+.delivery__warning-list li::before,
 .about__services-caption.active::before,
 .about__services-caption::before,
 .product-card__desc-list li::before,
@@ -168,6 +169,7 @@
 }
 
 .icon-chevron:before,
+.delivery__warning-list li:before,
 .select2-container--default .select2-selection--single .select2-selection__arrow:before,
 .breadcrumbs__item:not(:first-child):before {
   content: "\e90b";
@@ -1329,6 +1331,7 @@ body.lock-catalog-filter {
   width: 2rem;
   height: 2rem;
   padding: 0.4375rem 1rem;
+  font-size: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1787,7 +1790,7 @@ body.lock-catalog-filter {
 }
 
 .form__file-btn.btn.btn-primary-outline {
-  color: #fff;
+  color: inherit;
   font-size: 0.875rem;
   min-height: 100%;
 }
@@ -5804,6 +5807,197 @@ body.lock-catalog-filter {
   font-weight: 600;
 }
 
+.delivery {
+  padding: 1.5rem 0em;
+}
+
+.delivery__content {
+  margin-top: 2.25rem;
+}
+
+.delivery__block:not(:last-child) {
+  margin-bottom: 1.88rem;
+}
+
+.delivery__accordion {
+  margin-top: 1.95rem;
+}
+
+.delivery__accordion-item {
+  border-top: 0.0625rem solid #e8e8e8;
+  border-bottom: 0.0625rem solid #e8e8e8;
+}
+
+.delivery__accordion-item:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.delivery__accordion-btn {
+  color: #1d1d1d;
+  text-align: left;
+  font-family: "DinPro";
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 100%;
+  width: 100%;
+  padding: 1.25rem 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.delivery__accordion-btn::before {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  width: 1.5rem;
+  font-size: 1.25rem;
+  height: 1.5rem;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.delivery__accordion-btn.active::before {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.delivery__accordion-text {
+  color: #475569;
+  max-width: 44rem;
+  font-size: 0.8125rem;
+  display: none;
+  padding: 0 0.625rem 1.25rem;
+}
+
+.delivery__warning {
+  margin-top: 1.88rem;
+  border-radius: 0.3125rem;
+  background: #f2f5f9;
+  padding: 1.25rem;
+}
+
+.delivery__warning-list {
+  margin-top: 1.87rem;
+  color: #475569;
+  font-size: 0.8125rem;
+}
+
+.delivery__warning-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.62rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.delivery__warning-list li::before {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  width: 1rem;
+  height: 1rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.delivery__warning-list li:not(:last-child) {
+  margin-bottom: 0.62rem;
+}
+
+.delivery__companies {
+  margin-top: 1.87rem;
+}
+
+.delivery__company {
+  border-radius: 0.3125rem;
+  border: 1px solid #e8e8e8;
+  padding: 2rem 1.25rem;
+  min-height: 7.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.delivery__company img {
+  max-height: 3.75rem;
+}
+
+.delivery__subtitle {
+  margin-top: 1.25rem;
+  color: #475569;
+  font-size: 0.8125rem;
+}
+
+.delivery__feedback {
+  border-radius: 0.3125rem;
+  background: #f2f5f9;
+  padding: 1.25rem;
+}
+
+.delivery__feedback .row {
+  --gutter-y: 2rem;
+}
+
+.delivery__form {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.delivery__form .row {
+  --gutter-y: 0.5rem;
+}
+
+.delivery__form .form__hint {
+  color: #94a3b8;
+}
+
+.delivery__text {
+  margin-top: 1.25rem;
+  color: #475569;
+  font-size: 0.8125rem;
+  line-height: 120%;
+}
+
+.delivery__text > *:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.delivery__text ul {
+  list-style: disc;
+  padding-left: 1.5em;
+}
+
 @media (min-width: 375px) {
   .product__action {
     min-width: 2.5rem;
@@ -6251,6 +6445,22 @@ body.lock-catalog-filter {
 
   .brands__card {
     padding: 1.25rem;
+  }
+
+  .delivery {
+    padding: 0.75rem 0em 1.87rem 0em;
+  }
+
+  .delivery__content {
+    margin-top: 1.75rem;
+  }
+
+  .delivery__warning {
+    padding: 1.88rem;
+  }
+
+  .delivery__feedback {
+    padding: 1.88rem;
   }
 }
 
@@ -7553,6 +7763,10 @@ body.lock-catalog-filter {
   .brands__locations {
     grid-template-columns: repeat(auto-fill, minmax(13.25rem, 1fr));
   }
+
+  .delivery {
+    padding: 0em 0em 1.87rem 0em;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -8357,6 +8571,14 @@ body.lock-catalog-filter {
 
   .brands__title {
     font-size: 1.9375rem;
+  }
+
+  .delivery__title {
+    font-size: 1.9375rem;
+  }
+
+  .delivery__companies .row {
+    --gutter-y: 1.25rem;
   }
 }
 
