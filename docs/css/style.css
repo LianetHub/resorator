@@ -17,14 +17,6 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
   src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
@@ -43,6 +35,14 @@
   font-display: swap;
   src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
   font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -4599,6 +4599,9 @@ body.lock-catalog-filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   gap: 0.62rem;
 }
 
@@ -6184,6 +6187,10 @@ body.lock-catalog-filter {
     margin-left: 0;
   }
 
+  .catalog__grid {
+    grid-template-columns: repeat(auto-fit, minmax(13.125rem, 1fr));
+  }
+
   .service-page {
     padding: 0 0 1.25rem 0;
     min-height: calc(100vh - 40.625rem);
@@ -7187,8 +7194,6 @@ body.lock-catalog-filter {
 
   .catalog__grid {
     gap: 1.25rem;
-    -ms-grid-columns: (1fr)[3];
-    grid-template-columns: repeat(3, 1fr);
   }
 
   .service-page {
@@ -7928,11 +7933,6 @@ body.lock-catalog-filter {
     grid-template-columns: repeat(5, 1fr);
   }
 
-  .catalog__grid {
-    -ms-grid-columns: (1fr)[4];
-    grid-template-columns: repeat(4, 1fr);
-  }
-
   .brands__filtres {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -8217,11 +8217,6 @@ body.lock-catalog-filter {
   .product-card__items.destroyed {
     -ms-grid-columns: (1fr)[6];
     grid-template-columns: repeat(6, 1fr);
-  }
-
-  .catalog__grid {
-    -ms-grid-columns: (1fr)[5];
-    grid-template-columns: repeat(5, 1fr);
   }
 }
 
