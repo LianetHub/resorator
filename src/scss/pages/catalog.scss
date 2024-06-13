@@ -212,11 +212,33 @@
 	}
 	// .catalog__filters-items
 	&__filters-items {
+		// display: flex;
+		// flex-direction: column;
+		// align-items: flex-start;
+	}
+	// .catalog__filters-link
+	&__filters-link {
+		display: block;
+		width: fit-content;
+		&:not(:last-child) {
+			margin-bottom: 1.25rem;
+		}
+		color: $darkBlue;
+		font-size: 0.875rem;
+
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 	// .catalog__filters-hidden
 	&__filters-hidden {
 		margin-top: 0.5rem;
 		display: none;
+		&.lg-offset {
+			margin-top: 1.25rem;
+		}
 	}
 	// .catalog__filters-more
 	&__filters-more {

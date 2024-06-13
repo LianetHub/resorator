@@ -76,7 +76,7 @@ $(function () {
         // get visible all checkboxes in filter on catalog page
         if ($target.hasClass('catalog__filters-more')) {
             $target.toggleClass('active');
-            $target.prev().slideToggle()
+            $target.prev().slideToggle();
             if ($target.hasClass('active')) {
                 $target.find('span').text('Скрыть все');
             } else {
@@ -187,7 +187,7 @@ $(function () {
 
                 let prev = $productWrapper.find('.product-card__prev');
                 let next = $productWrapper.find('.product-card__next');
-                let pagination = $productWrapper.find('.product-card__pagination');     
+                let pagination = $productWrapper.find('.product-card__pagination');
 
                 sliderData.swiper = new Swiper($productSlider[0], {
                     slidesPerView: 2,
