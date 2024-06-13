@@ -232,8 +232,10 @@ $(function () {
             let $target = $(e.target);
             if ($target.val() == 'rows' && $target[0].checked) {
                 $('.catalog__grid').addClass('row-layout');
+                $('.brands__list').addClass('row-layout');
             } else {
                 $('.catalog__grid').removeClass('row-layout');
+                $('.brands__list').removeClass('row-layout');
             }
 
         });
@@ -246,6 +248,15 @@ $(function () {
             $input.val(1);
         }
     });
+
+    // get visible alphabet nav on brand page
+    $('[name="alphabet"]').on('change', function (e) {
+        if (e.target.checked) {
+            $('.brands__alphabet').removeClass('hidden');
+        } else {
+            $('.brands__alphabet').addClass('hidden');
+        }
+    })
 
     // Fancybox.show([{
     //     src: "#mobile-search"
