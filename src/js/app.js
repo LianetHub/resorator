@@ -66,6 +66,9 @@ $(function () {
                 $target.find('span').text('Свернуть');
             } else {
                 $target.find('span').text('Развернуть');
+                $('html, body').animate({
+                    scrollTop: $target.closest('.product-card__products').offset().top - 20
+                }, 0);
             }
             toggleAllProducts($productWrapper);
         }
@@ -182,9 +185,9 @@ $(function () {
                 $controls.removeClass('hidden');
                 $productSlider.removeClass('destroyed');
 
-                let prev = $productWrapper.find('.product-card__prev')[0];
-                let next = $productWrapper.find('.product-card__next')[0];
-                let pagination = $productWrapper.find('.product-card__pagination')[0];
+                let prev = $productWrapper.find('.product-card__prev');
+                let next = $productWrapper.find('.product-card__next');
+                let pagination = $productWrapper.find('.product-card__pagination');     
 
                 sliderData.swiper = new Swiper($productSlider[0], {
                     slidesPerView: 2,
