@@ -15,26 +15,10 @@
 }
 
 @font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
   font-style: normal;
 }
 
@@ -49,8 +33,16 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -59,6 +51,14 @@
   font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -5789,6 +5789,25 @@ body.lock-catalog-filter {
   transition: background-color 0.3s ease 0s;
 }
 
+.brands__card-production {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.63rem;
+  color: #94a3b8;
+  font-size: 0.8125rem;
+  margin-bottom: 0.875rem;
+  padding: 0 1.06rem;
+}
+
+.brands__card-production img {
+  border: 0.0625rem solid #f1f2f4;
+  max-width: 1.875rem;
+}
+
 .brands__card-logo {
   margin-top: auto;
   margin-bottom: auto;
@@ -6481,6 +6500,10 @@ body.lock-catalog-filter {
 
   .brands__card {
     padding: 1.25rem;
+  }
+
+  .brands__card-production {
+    padding: 0;
   }
 
   .brands__names {

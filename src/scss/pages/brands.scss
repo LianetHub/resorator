@@ -201,6 +201,23 @@
 			}
 		}
 	}
+	// .brands__card-production
+	&__card-production {
+		display: flex;
+		align-items: center;
+		gap: 0.63rem;
+		color: $lightBlue;
+		font-size: 0.8125rem;
+		margin-bottom: 0.875rem;
+		padding: 0 1.06rem;
+		@media (min-width: $md5) {
+			padding: 0;
+		}
+		& img {
+			border: rem(1) solid $lightGray;
+			max-width: rem(30);
+		}
+	}
 	// .brands__card-logo
 	&__card-logo {
 		margin-top: auto;
