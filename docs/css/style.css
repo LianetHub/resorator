@@ -7,10 +7,18 @@
 }
 
 @font-face {
-  font-family: "icons";
+  font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -23,22 +31,6 @@
 }
 
 @font-face {
-  font-family: "DinPro";
-  font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Inter";
   font-display: swap;
   src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
@@ -47,10 +39,18 @@
 }
 
 @font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -6114,6 +6114,82 @@ body.lock-catalog-filter {
 .delivery__text ul {
   list-style: disc;
   padding-left: 1.5em;
+}
+
+.cart {
+  padding: 0em 0em 1.25rem 0em;
+}
+
+.cart__list {
+  margin-top: 1.25rem;
+}
+
+.cart__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #f1f2f4;
+  gap: 1.88rem;
+}
+
+.cart__item:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.cart__sidebar {
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid v #f1f2f4;
+  background: #f2f5f9;
+  padding: 1.88rem;
+}
+
+.cart__sidebar-row {
+  margin-top: 1.88rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.cart__sidebar-value {
+  text-align: right;
+}
+
+.cart__sidebar-total {
+  margin-top: 1.88rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.3125rem;
+  font-weight: 600;
+}
+
+.cart__sidebar-btn {
+  margin-top: 1.25rem;
+}
+
+.cart__sidebar-hint {
+  margin-top: 1.25rem;
+  color: #475569;
+  text-align: center;
+  font-size: 0.875rem;
 }
 
 @media (min-width: 375px) {

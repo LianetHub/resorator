@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Ресторатор | Страница не найдена</title>
+	<title>Ресторатор | Корзина</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
 	<!-- favicon -->
 	<!-- Open Graph  -->
 	<meta property="og:type" content="business.business">
-	<meta property="og:title" content="Ресторатор | Страница не найдена">
+	<meta property="og:title" content="Ресторатор | Корзина">
 	<meta property="og:description" content="">
 	<meta property="og:url" content="">
 	<meta property="og:image" content="/OG.png">
@@ -31,7 +31,7 @@
 	<!-- Open Graph  -->
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:title" content="Ресторатор | Страница не найдена">
+	<meta property="twitter:title" content="Ресторатор | Корзина">
 	<meta property="twitter:description" content="">
 	<meta property="twitter:site" content="">
 	<meta property="twitter:url" content="">
@@ -190,29 +190,638 @@
 							<meta itemprop="position" content="1">
 						</li>
 						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-							<a class="breadcrumbs__link active" itemprop="item">
-								<span itemprop="name">Страница не найдена</span>
+							<a href="/lk" class="breadcrumbs__link" itemprop="item">
+								<span itemprop="name">Личный кабинет</span>
 							</a>
 							<meta itemprop="position" content="2">
+						</li>
+						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+							<a class="breadcrumbs__link active" itemprop="item">
+								<span itemprop="name">Корзина</span>
+							</a>
+							<meta itemprop="position" content="3">
 						</li>
 					</ul>
 				</div>
 			</nav>
-			<section class="service-page">
-				<div class="service-page__container">
-					<div class="service-page__body">
-						<div class="service-page__image">
-							<img src="img/404.svg" alt="404">
-						</div>
-						<div class="service-page__content">
-							<div class="service-page__status title"> 404 </div>
-							<h1 class="service-page__title title-md"> Такой страницы не существует </h1>
-							<p class="service-page__subtitle"> Похоже ссылка на страницу изменилась. <br> Для продолжения перейдите на главную страницу или вернитесь назад </p>
-							<div class="service-page__btns">
-								<a href="/" class="service-page__btn btn btn-md btn-secondary icon-arrow-left">Вернуться</a>
-								<a href="/" class="service-page__btn btn btn-md btn-secondary icon-home">На главную</a>
+			<section class="cart">
+				<div class="cart__container">
+					<div class="cart__body">
+						<div class="row">
+							<div class="col-9">
+								<div class="cart__title title-md"> Корзина <span class="cart__title-quantity">(3)</span>
+								</div>
+								<ul class="cart__list">
+									<li class="cart__item">
+										<a href="" class="cart__item-image">
+											<img src="img/goods/01.png" alt="Изображение товара">
+										</a>
+										<div class="cart__item-body">
+											<div class="cart__item-main">
+												<div class="cart__item-name">
+													<small>Пароконвектомат</small> UNOX XF 023 Anna
+												</div>
+												<div class="cart__item-row">
+													<div class="cart__item-copy icon-copy"> 000000 </div>
+													<div class="cart__item-availability green-color"> В наличии </div>
+												</div>
+											</div>
+										</div>
+										<div class="cart__item-price">
+											<div class="cart__item-price-old">322 703 ₽</div>
+											<div class="cart__item-price-current">2 654 922 ₽ </div>
+										</div>
+										<div class="quantity-block">
+											<button type="button" class="quantity-block__down icon-minus-circle"></button>
+											<input type="number" name="quantity" class="quantity-block__input" value="1">
+											<button type="button" class="quantity-block__up icon-plus-circle"></button>
+										</div>
+										<button type="button" class="cart__item-delete icon-close"></button>
+									</li>
+								</ul>
+							</div>
+							<div class="col-3">
+								<aside class="cart__sidebar">
+									<h2 class="cart__sidebar-title title-sm"> Информация о заказе </h2>
+									<div class="cart__sidebar-row">
+										<div class="cart__sidebar-property">3 товара</div>
+										<div class="cart__sidebar-value">81 997 ₽ </div>
+									</div>
+									<div class="cart__sidebar-total">
+										<div class="cart__sidebar-property">Итого</div>
+										<div class="cart__sidebar-value">69 998 ₽ </div>
+									</div>
+									<a href="" class="cart__sidebar-btn btn btn-primary btn-fullwidth">Перейти к оформлению</a>
+									<a href="" class="cart__sidebar-btn btn btn-primary-outline btn-fullwidth">В кредит или лизинг</a>
+									<div class="cart__sidebar-hint"> Заполните анкету и получите одобрение в течении нескольких минут </div>
+									<div class="product-card__more">
+										<a href="" class="product-card__more-btn icon-whatsapp"></a>
+										<a href="" class="product-card__more-btn icon-telegram"></a>
+										<a href="" class="product-card__more-btn">Написать менеджеру</a>
+									</div>
+								</aside>
 							</div>
 						</div>
+					</div>
+					<div class="product-card__products">
+						<div class="product-card__products-header">
+							<div class="product-card__caption"> Вам пригодится <span class="product-card__quantity">(124)</span>
+							</div>
+							<div class="product-card__contorls">
+								<div class="product-card__prev swiper-button-prev"></div>
+								<div class="product-card__pagination"></div>
+								<div class="product-card__next swiper-button-next"></div>
+							</div>
+						</div>
+						<div class="product-card__items swiper">
+							<div class="swiper-wrapper">
+								<div class="product swiper-slide">
+									<div class="product__labels swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide product__label label red">Распродажа</div>
+										</div>
+									</div>
+									<div class="product__header">
+										<a href="/product.html" class="product__image">
+											<img src="img/goods/01.png" alt="UNOX XB693">
+										</a>
+										<div class="product__actions">
+											<button type="button" class="product__action icon-eye">
+												<span>Быстрый просмотр</span>
+											</button>
+											<button type="button" class="product__action icon-star">
+												<span>Добавить в избранное</span>
+											</button>
+											<button type="button" class="product__action icon-compare">
+												<span>Сравнить товар</span>
+											</button>
+										</div>
+									</div>
+									<div class="product__info">
+										<a href="/product.html" class="product__name">
+											<small>Пароконвектомат</small> UNOX XB693 </a>
+										<div class="product__price">
+											<div class="product__price-old"> 322 703 ₽ </div>
+											<div class="product__price-value">231 501 ₽ </div>
+										</div>
+										<ul class="product__props">
+											<li class="product__props-row">
+												<div class="product__props-name"> Цвет </div>
+												<div class="product__props-value"> Серый металлик </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Мощность </div>
+												<div class="product__props-value"> 10.5 кВт </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Температура нагрева </div>
+												<div class="product__props-value"> 50 °С </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Цвет </div>
+												<div class="product__props-value"> Серый металлик </div>
+											</li>
+										</ul>
+										<div class="product__footer">
+											<div class="product__avaibility green-color">В наличии</div>
+											<button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+											<div class="product__cart-actions hidden">
+												<div class="quantity-block">
+													<button type="button" class="quantity-block__down icon-minus-circle"></button>
+													<input type="number" name="quantity" class="quantity-block__input" value="0">
+													<button type="button" class="quantity-block__up icon-plus-circle"></button>
+												</div>
+												<a href="cart.html" class="product__cart-link btn btn-primary icon-arrow-short btn-sm">Корзина</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="product swiper-slide">
+									<div class="product__labels swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide product__label label yellow">Новинка</div>
+										</div>
+									</div>
+									<div class="product__header">
+										<a href="/product.html" class="product__image">
+											<img src="img/goods/02.png" alt="Abat ПКА 6-2/3П">
+										</a>
+										<div class="product__actions">
+											<button type="button" class="product__action icon-eye">
+												<span>Быстрый просмотр</span>
+											</button>
+											<button type="button" class="product__action icon-star">
+												<span>Добавить в избранное</span>
+											</button>
+											<button type="button" class="product__action icon-compare">
+												<span>Сравнить товар</span>
+											</button>
+										</div>
+									</div>
+									<div class="product__info">
+										<a href="/product.html" class="product__name">
+											<small>Пароконвектомат</small> Abat ПКА 6-2/3П </a>
+										<div class="product__price">
+											<div class="product__price-old"> 270 380 ₽ </div>
+											<div class="product__price-value">149 729 ₽ </div>
+										</div>
+										<ul class="product__props">
+											<li class="product__props-row">
+												<div class="product__props-name"> Цвет </div>
+												<div class="product__props-value"> Серый металлик </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Мощность </div>
+												<div class="product__props-value"> 10.5 кВт </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Температура нагрева </div>
+												<div class="product__props-value"> 50 °С </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Цвет </div>
+												<div class="product__props-value"> Серый металлик </div>
+											</li>
+										</ul>
+										<div class="product__footer">
+											<div class="product__avaibility red-color">Товар закончился</div>
+											<button type="button" disabled class="product__cart btn btn-secondary btn-sm">В корзину</button>
+											<div class="product__cart-actions hidden">
+												<div class="quantity-block">
+													<button type="button" class="quantity-block__down icon-minus-circle"></button>
+													<input type="number" name="quantity" class="quantity-block__input" value="0">
+													<button type="button" class="quantity-block__up icon-plus-circle"></button>
+												</div>
+												<a href="cart.html" class="product__cart-link btn btn-primary icon-arrow-short btn-sm">Корзина</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="product swiper-slide">
+									<div class="product__labels swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide product__label label green">Хит продаж</div>
+										</div>
+									</div>
+									<div class="product__header">
+										<a href="/product.html" class="product__image">
+											<img src="img/goods/03.png" alt="UNOX XFT 133">
+										</a>
+										<div class="product__actions">
+											<button type="button" class="product__action icon-eye">
+												<span>Быстрый просмотр</span>
+											</button>
+											<button type="button" class="product__action icon-star">
+												<span>Добавить в избранное</span>
+											</button>
+											<button type="button" class="product__action icon-compare">
+												<span>Сравнить товар</span>
+											</button>
+										</div>
+									</div>
+									<div class="product__info">
+										<a href="/product.html" class="product__name">
+											<small>Пароконвектомат</small> UNOX XFT 133 </a>
+										<div class="product__price">
+											<div class="product__price-old"> 82 370 ₽ </div>
+											<div class="product__price-value">70 061 ₽ </div>
+										</div>
+										<ul class="product__props">
+											<li class="product__props-row">
+												<div class="product__props-name"> Цвет </div>
+												<div class="product__props-value"> Серый металлик </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Мощность </div>
+												<div class="product__props-value"> 10.5 кВт </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Температура нагрева </div>
+												<div class="product__props-value"> 50 °С </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Цвет </div>
+												<div class="product__props-value"> Серый металлик </div>
+											</li>
+										</ul>
+										<div class="product__footer">
+											<div class="product__avaibility">под заказ</div>
+											<button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+											<div class="product__cart-actions hidden">
+												<div class="quantity-block">
+													<button type="button" class="quantity-block__down icon-minus-circle"></button>
+													<input type="number" name="quantity" class="quantity-block__input" value="0">
+													<button type="button" class="quantity-block__up icon-plus-circle"></button>
+												</div>
+												<a href="cart.html" class="product__cart-link btn btn-primary icon-arrow-short btn-sm">Корзина</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="product swiper-slide">
+									<div class="product__labels swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide product__label label yellow">Новинка</div>
+											<div class="swiper-slide product__label label green">Хит продаж</div>
+										</div>
+									</div>
+									<div class="product__header">
+										<a href="/product.html" class="product__image">
+											<img src="img/goods/04.png" alt="UNOX XEBC-06EU-E1RM">
+										</a>
+										<div class="product__actions">
+											<button type="button" class="product__action icon-eye">
+												<span>Быстрый просмотр</span>
+											</button>
+											<button type="button" class="product__action icon-star">
+												<span>Добавить в избранное</span>
+											</button>
+											<button type="button" class="product__action icon-compare">
+												<span>Сравнить товар</span>
+											</button>
+										</div>
+									</div>
+									<div class="product__info">
+										<a href="/product.html" class="product__name">
+											<small>Пароконвектомат</small> UNOX XEBC-06EU-E1RM </a>
+										<div class="product__price">
+											<div class="product__price-old"> 544 910 ₽ </div>
+											<div class="product__price-value">366 900 ₽ </div>
+										</div>
+										<ul class="product__props">
+											<li class="product__props-row">
+												<div class="product__props-name"> Цвет </div>
+												<div class="product__props-value"> Серый металлик </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Мощность </div>
+												<div class="product__props-value"> 10.5 кВт </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Температура нагрева </div>
+												<div class="product__props-value"> 50 °С </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Цвет </div>
+												<div class="product__props-value"> Серый металлик </div>
+											</li>
+										</ul>
+										<div class="product__footer">
+											<div class="product__avaibility green-color">В наличии</div>
+											<button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+											<div class="product__cart-actions hidden">
+												<div class="quantity-block">
+													<button type="button" class="quantity-block__down icon-minus-circle"></button>
+													<input type="number" name="quantity" class="quantity-block__input" value="0">
+													<button type="button" class="quantity-block__up icon-plus-circle"></button>
+												</div>
+												<a href="cart.html" class="product__cart-link btn btn-primary icon-arrow-short btn-sm">Корзина</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="product swiper-slide">
+									<div class="product__labels swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide product__label label yellow">Новинка</div>
+										</div>
+									</div>
+									<div class="product__header">
+										<a href="/product.html" class="product__image">
+											<img src="img/goods/05.png" alt="UNOX XF 023 Anna">
+										</a>
+										<div class="product__actions">
+											<button type="button" class="product__action icon-eye">
+												<span>Быстрый просмотр</span>
+											</button>
+											<button type="button" class="product__action icon-star">
+												<span>Добавить в избранное</span>
+											</button>
+											<button type="button" class="product__action icon-compare">
+												<span>Сравнить товар</span>
+											</button>
+										</div>
+									</div>
+									<div class="product__info">
+										<a href="/product.html" class="product__name">
+											<small>Пароконвектомат</small> UNOX XF 023 Anna </a>
+										<div class="product__price">
+											<div class="product__price-old"> 83 198 ₽ </div>
+											<div class="product__price-value">54 922 ₽ </div>
+										</div>
+										<ul class="product__props">
+											<li class="product__props-row">
+												<div class="product__props-name"> Цвет </div>
+												<div class="product__props-value"> Серый металлик </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Мощность </div>
+												<div class="product__props-value"> 10.5 кВт </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Температура нагрева </div>
+												<div class="product__props-value"> 50 °С </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Цвет </div>
+												<div class="product__props-value"> Серый металлик </div>
+											</li>
+										</ul>
+										<div class="product__footer">
+											<div class="product__avaibility green-color">В наличии</div>
+											<button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+											<div class="product__cart-actions hidden">
+												<div class="quantity-block">
+													<button type="button" class="quantity-block__down icon-minus-circle"></button>
+													<input type="number" name="quantity" class="quantity-block__input" value="0">
+													<button type="button" class="quantity-block__up icon-plus-circle"></button>
+												</div>
+												<a href="cart.html" class="product__cart-link btn btn-primary icon-arrow-short btn-sm">Корзина</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="product swiper-slide">
+									<div class="product__labels swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide product__label label green">Хит продаж</div>
+										</div>
+									</div>
+									<div class="product__header">
+										<a href="/product.html" class="product__image">
+											<img src="img/goods/06.png" alt="Steba DG 40">
+										</a>
+										<div class="product__actions">
+											<button type="button" class="product__action icon-eye">
+												<span>Быстрый просмотр</span>
+											</button>
+											<button type="button" class="product__action icon-star">
+												<span>Добавить в избранное</span>
+											</button>
+											<button type="button" class="product__action icon-compare">
+												<span>Сравнить товар</span>
+											</button>
+										</div>
+									</div>
+									<div class="product__info">
+										<a href="/product.html" class="product__name">
+											<small>Пароконвектомат</small> Steba DG 40 </a>
+										<div class="product__price">
+											<div class="product__price-old"> 54 990 ₽ </div>
+											<div class="product__price-value">39 212 ₽ </div>
+										</div>
+										<ul class="product__props">
+											<li class="product__props-row">
+												<div class="product__props-name"> Цвет </div>
+												<div class="product__props-value"> Серый металлик </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Мощность </div>
+												<div class="product__props-value"> 10.5 кВт </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Температура нагрева </div>
+												<div class="product__props-value"> 50 °С </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Цвет </div>
+												<div class="product__props-value"> Серый металлик </div>
+											</li>
+										</ul>
+										<div class="product__footer">
+											<div class="product__avaibility green-color">В наличии</div>
+											<button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+											<div class="product__cart-actions hidden">
+												<div class="quantity-block">
+													<button type="button" class="quantity-block__down icon-minus-circle"></button>
+													<input type="number" name="quantity" class="quantity-block__input" value="0">
+													<button type="button" class="quantity-block__up icon-plus-circle"></button>
+												</div>
+												<a href="cart.html" class="product__cart-link btn btn-primary icon-arrow-short btn-sm">Корзина</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="product swiper-slide">
+									<div class="product__header">
+										<a href="/product.html" class="product__image">
+											<img src="img/goods/07.png" alt="Steba DG 40">
+										</a>
+										<div class="product__actions">
+											<button type="button" class="product__action icon-eye">
+												<span>Быстрый просмотр</span>
+											</button>
+											<button type="button" class="product__action icon-star">
+												<span>Добавить в избранное</span>
+											</button>
+											<button type="button" class="product__action icon-compare">
+												<span>Сравнить товар</span>
+											</button>
+										</div>
+									</div>
+									<div class="product__info">
+										<a href="/product.html" class="product__name">
+											<small>Пароконвектомат</small> Steba DG 40 </a>
+										<div class="product__price">
+											<div class="product__price-value">442 692 ₽ </div>
+										</div>
+										<ul class="product__props">
+											<li class="product__props-row">
+												<div class="product__props-name"> Цвет </div>
+												<div class="product__props-value"> Серый металлик </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Мощность </div>
+												<div class="product__props-value"> 10.5 кВт </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Температура нагрева </div>
+												<div class="product__props-value"> 50 °С </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Цвет </div>
+												<div class="product__props-value"> Серый металлик </div>
+											</li>
+										</ul>
+										<div class="product__footer">
+											<div class="product__avaibility green-color">В наличии</div>
+											<button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+											<div class="product__cart-actions hidden">
+												<div class="quantity-block">
+													<button type="button" class="quantity-block__down icon-minus-circle"></button>
+													<input type="number" name="quantity" class="quantity-block__input" value="0">
+													<button type="button" class="quantity-block__up icon-plus-circle"></button>
+												</div>
+												<a href="cart.html" class="product__cart-link btn btn-primary icon-arrow-short btn-sm">Корзина</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="product swiper-slide">
+									<div class="product__labels swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide product__label label green">Хит продаж</div>
+										</div>
+									</div>
+									<div class="product__header">
+										<a href="/product.html" class="product__image">
+											<img src="img/goods/08.png" alt="436 040">
+										</a>
+										<div class="product__actions">
+											<button type="button" class="product__action icon-eye">
+												<span>Быстрый просмотр</span>
+											</button>
+											<button type="button" class="product__action icon-star">
+												<span>Добавить в избранное</span>
+											</button>
+											<button type="button" class="product__action icon-compare">
+												<span>Сравнить товар</span>
+											</button>
+										</div>
+									</div>
+									<div class="product__info">
+										<a href="/product.html" class="product__name">
+											<small>Пароконвектомат</small> 436 040 </a>
+										<div class="product__price">
+											<div class="product__price-old"> 322 703 ₽ </div>
+											<div class="product__price-value">436 040 ₽ </div>
+										</div>
+										<ul class="product__props">
+											<li class="product__props-row">
+												<div class="product__props-name"> Цвет </div>
+												<div class="product__props-value"> Серый металлик </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Мощность </div>
+												<div class="product__props-value"> 10.5 кВт </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Температура нагрева </div>
+												<div class="product__props-value"> 50 °С </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Цвет </div>
+												<div class="product__props-value"> Серый металлик </div>
+											</li>
+										</ul>
+										<div class="product__footer">
+											<div class="product__avaibility green-color">В наличии</div>
+											<button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+											<div class="product__cart-actions hidden">
+												<div class="quantity-block">
+													<button type="button" class="quantity-block__down icon-minus-circle"></button>
+													<input type="number" name="quantity" class="quantity-block__input" value="0">
+													<button type="button" class="quantity-block__up icon-plus-circle"></button>
+												</div>
+												<a href="cart.html" class="product__cart-link btn btn-primary icon-arrow-short btn-sm">Корзина</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="product swiper-slide pc-none tablet-only">
+									<div class="product__labels swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide product__label label green">Хит продаж</div>
+										</div>
+									</div>
+									<div class="product__header">
+										<a href="/product.html" class="product__image">
+											<img src="img/goods/06.png" alt="Steba DG 40">
+										</a>
+										<div class="product__actions">
+											<button type="button" class="product__action icon-eye">
+												<span>Быстрый просмотр</span>
+											</button>
+											<button type="button" class="product__action icon-star">
+												<span>Добавить в избранное</span>
+											</button>
+											<button type="button" class="product__action icon-compare">
+												<span>Сравнить товар</span>
+											</button>
+										</div>
+									</div>
+									<div class="product__info">
+										<a href="/product.html" class="product__name">
+											<small>Пароконвектомат</small> Steba DG 40 </a>
+										<div class="product__price">
+											<div class="product__price-old"> 54 990 ₽ </div>
+											<div class="product__price-value">39 212 ₽ </div>
+										</div>
+										<ul class="product__props">
+											<li class="product__props-row">
+												<div class="product__props-name"> Цвет </div>
+												<div class="product__props-value"> Серый металлик </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Мощность </div>
+												<div class="product__props-value"> 10.5 кВт </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Температура нагрева </div>
+												<div class="product__props-value"> 50 °С </div>
+											</li>
+											<li class="product__props-row">
+												<div class="product__props-name"> Цвет </div>
+												<div class="product__props-value"> Серый металлик </div>
+											</li>
+										</ul>
+										<div class="product__footer">
+											<div class="product__avaibility green-color">В наличии</div>
+											<button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
+											<div class="product__cart-actions hidden">
+												<div class="quantity-block">
+													<button type="button" class="quantity-block__down icon-minus-circle"></button>
+													<input type="number" name="quantity" class="quantity-block__input" value="0">
+													<button type="button" class="quantity-block__up icon-plus-circle"></button>
+												</div>
+												<a href="cart.html" class="product__cart-link btn btn-primary icon-arrow-short btn-sm">Корзина</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="product-card__loadmore icon-chevron btn-all-products"><span>Развернуть</span> все товары</button>
 					</div>
 				</div>
 			</section>

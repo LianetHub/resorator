@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор | Корзина'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "shadow": true
+            })
+            <main class="page">
+                <nav aria-label="Хлебные крошки" class="breadcrumbs tablet-sm-only">
+                    <div class="breadcrumbs__container">
+                        <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a href="/" class="breadcrumbs__link" itemprop="item">
+                                    <span itemprop="name">Главная</span>
+                                </a>
+                                <meta itemprop="position" content="1">
+                            </li>
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a href="/lk" class="breadcrumbs__link" itemprop="item">
+                                    <span itemprop="name">Личный кабинет</span>
+                                </a>
+                                <meta itemprop="position" content="2">
+                            </li>
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a class="breadcrumbs__link active" itemprop="item">
+                                    <span itemprop="name">Корзина</span>
+                                </a>
+                                <meta itemprop="position" content="3">
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <section class="cart">
+                    <div class="cart__container">
+                        <div class="cart__body">
+                            <div class="row">
+                                <div class="col-9">
+                                    <div class="cart__title title-md">
+                                        Корзина
+                                        <span class="cart__title-quantity">(3)</span>
+                                    </div>
+                                    <ul class="cart__list">
+                                        <li class="cart__item">
+                                            <a href="" class="cart__item-image">
+                                                <img src="@img/goods/01.png" alt="Изображение товара">
+                                            </a>
+                                            <div class="cart__item-body">
+                                                <div class="cart__item-main">
+                                                    <div class="cart__item-name">
+                                                        <small>Пароконвектомат</small>
+                                                        UNOX XF 023 Anna
+                                                    </div>
+                                                    <div class="cart__item-row">
+                                                        <div class="cart__item-copy icon-copy">
+                                                            000000
+                                                        </div>
+                                                        <div class="cart__item-availability green-color">
+                                                            В наличии
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cart__item-price">
+                                                <div class="cart__item-price-old">322 703 ₽</div>
+                                                <div class="cart__item-price-current">2 654 922 ₽ </div>
+                                            </div>
+                                            <div class="quantity-block">
+                                                <button type="button" class="quantity-block__down icon-minus-circle"></button>
+                                                <input type="number" name="quantity" class="quantity-block__input" value="1">
+                                                <button type="button" class="quantity-block__up icon-plus-circle"></button>
+                                            </div>
+                                            <button type="button" class="cart__item-delete icon-close"></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-3">
+                                    <aside class="cart__sidebar">
+                                        <h2 class="cart__sidebar-title title-sm">
+                                            Информация о заказе
+                                        </h2>
+                                        <div class="cart__sidebar-row">
+                                            <div class="cart__sidebar-property">3 товара</div>
+                                            <div class="cart__sidebar-value">81 997 ₽ </div>
+                                        </div>
+                                        <div class="cart__sidebar-total">
+                                            <div class="cart__sidebar-property">Итого</div>
+                                            <div class="cart__sidebar-value">69 998 ₽ </div>
+                                        </div>
+                                        <a href="" class="cart__sidebar-btn btn btn-primary btn-fullwidth">Перейти к оформлению</a>
+                                        <a href="" class="cart__sidebar-btn btn btn-primary-outline btn-fullwidth">В кредит или лизинг</a>
+                                        <div class="cart__sidebar-hint">
+                                            Заполните анкету и получите одобрение в течении нескольких минут
+                                        </div>
+                                        <div class="product-card__more">
+                                            <a href="" class="product-card__more-btn icon-whatsapp"></a>
+                                            <a href="" class="product-card__more-btn icon-telegram"></a>
+                                            <a href="" class="product-card__more-btn">Написать менеджеру</a>
+                                        </div>
+                                    </aside>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__products">
+                            <div class="product-card__products-header">
+                                <div class="product-card__caption">
+                                    Вам пригодится
+                                    <span class="product-card__quantity">(124)</span>
+                                </div>
+                                <div class="product-card__contorls">
+                                    <div class="product-card__prev swiper-button-prev"></div>
+                                    <div class="product-card__pagination"></div>
+                                    <div class="product-card__next swiper-button-next"></div>
+                                </div>
+                            </div>
+                            <div class="product-card__items swiper">
+                                <div class="swiper-wrapper">
+                                    @@loop('./html/_product.html', './html/products-slider.json')
+                                </div>
+                            </div>
+                            <button type="button" class="product-card__loadmore icon-chevron btn-all-products"><span>Развернуть</span> все товары</button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>
