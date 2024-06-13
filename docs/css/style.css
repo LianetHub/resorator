@@ -15,6 +15,14 @@
 }
 
 @font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "DinPro";
   font-display: swap;
   src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
@@ -25,8 +33,8 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -51,14 +59,6 @@
   font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -4378,11 +4378,11 @@ body.lock-catalog-filter {
   display: -ms-grid;
   display: grid;
   gap: 1.25rem;
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.product-card__items.destroyed .swiper-wrapper {
+.product-card__items.destroyed > .swiper-wrapper {
   display: contents;
 }
 
@@ -6992,6 +6992,11 @@ body.lock-catalog-filter {
     margin: 0;
   }
 
+  .product-card__items.destroyed {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .product-card__docs-list {
     row-gap: 1rem;
     gap: 1.25rem;
@@ -7559,6 +7564,11 @@ body.lock-catalog-filter {
         -ms-flex: 0 0 calc(100% - 32rem);
             flex: 0 0 calc(100% - 32rem);
     width: auto;
+  }
+
+  .product-card__items.destroyed {
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .catalog__grid {
@@ -8400,6 +8410,10 @@ body.lock-catalog-filter {
 
   .product-card__slide {
     height: 30rem;
+  }
+
+  .product-card__info-list {
+    max-height: var(--side-product-height, 22.1875rem);
   }
 
   .product-card__side {

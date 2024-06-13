@@ -289,7 +289,40 @@ $(function () {
         }
     });
 
-    // init goods sidebar
+
+    // observer height change in product car side
+
+    function setSideProductHeight() {
+
+        var $sideProduct = $('.product-card__side');
+        var $infoList = $('.product-card__info-list');
+        var $content = $('.product-card__content');
+
+        var sideProductHeight = $sideProduct.height();
+        var offsetTop = $infoList.offset().top - $content.offset().top;
+        var adjustedHeight = sideProductHeight - offsetTop;
+
+        $(':root').css('--side-product-height', adjustedHeight + 'px');
+    }
+
+    var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+            setSideProductHeight();
+        });
+    });
+
+
+    var config = {
+        attributes: true,
+        attributeFilter: ['style'],
+        subtree: true
+    };
+
+    var sideProduct = document.querySelector('.product-card__side');
+
+    observer.observe(sideProduct, config);
+
+    setSideProductHeight();
 
 
 

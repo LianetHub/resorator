@@ -283,7 +283,10 @@
 	// .product-card__info-list
 	&__info-list {
 		margin-top: 0.75rem;
-		max-height: rem(225);
+		max-height: 14.0625rem;
+		@media (min-width: $md1) {
+			max-height: var(--side-product-height, rem(355));
+		}
 		transition: max-height 0.3s ease 0s;
 		overflow: hidden;
 		&.full {
@@ -889,12 +892,18 @@
 			overflow: hidden;
 		}
 		&.destroyed {
-			.swiper-wrapper {
+			& > .swiper-wrapper {
 				display: contents;
 			}
 			display: grid;
 			gap: rem(20);
-			grid-template-columns: repeat(4, 1fr);
+			grid-template-columns: repeat(2, 1fr);
+			@media (min-width: $md4) {
+				grid-template-columns: repeat(3, 1fr);
+			}
+			@media (min-width: $md3) {
+				grid-template-columns: repeat(4, 1fr);
+			}
 			@media (min-width: $md1) {
 				grid-template-columns: repeat(5, 1fr);
 			}
