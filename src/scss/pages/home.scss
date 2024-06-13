@@ -910,6 +910,24 @@
 		&.banners__item_green {
 			background: #bcddc9;
 		}
+		&.banners__item_column-mobile {
+			flex-direction: column-reverse;
+			text-align: center;
+			@media (min-width: $md5) {
+				text-align: left;
+				flex-direction: row;
+			}
+			.banners__item-caption {
+				font-size: 1.9375rem;
+			}
+			.banners__item-desc {
+				font-size: 1rem;
+				margin-top: 1rem;
+				@media (min-width: $md4) {
+					margin-top: 0.62rem;
+				}
+			}
+		}
 	}
 	// .banners__item-body
 	&__item-body {

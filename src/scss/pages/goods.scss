@@ -1,14 +1,33 @@
 .goods {
-	padding: rem(30) 0;
+	padding: rem(20) 0;
+	@media (min-width: $md5) {
+		padding: rem(30) 0;
+	}
 	// .goods__container
 	&__container {
 		display: flex;
-		align-items: flex-start;
 		gap: rem(20);
+		flex-direction: column;
+		@media (min-width: $md3) {
+			align-items: flex-start;
+			flex-direction: row;
+		}
 	}
 	// .goods__sidebar
 	&__sidebar {
-		flex: 0 0 rem(212);
+		order: 1;
+		border-radius: 0.3125rem;
+		padding: 1.88rem;
+		border: rem(1) solid $grayStroke;
+		@media (min-width: $md3) {
+			padding: 0;
+			border: 0;
+			border-radius: 0;
+			flex: 0 0 rem(260);
+			order: 0;
+			position: sticky;
+			top: 1rem;
+		}
 	}
 	// .goods__sidebar-list
 	&__sidebar-list {
@@ -16,7 +35,41 @@
 	// .goods__sidebar-item
 	&__sidebar-item {
 		&:not(:last-child) {
-			margin-bottom: 0.94rem;
+			margin-bottom: 1.88rem;
+			@media (min-width: $md3) {
+				margin-bottom: 0.94rem;
+			}
+		}
+	}
+	// .goods__sidebar-categories
+	&__sidebar-categories {
+		margin-top: 1.25rem;
+		display: none;
+		&.initial-block {
+			display: block;
+		}
+	}
+	// .goods__sidebar-category
+	&__sidebar-category {
+		&:not(:last-child) {
+			margin-bottom: 1.25rem;
+		}
+		font-size: 0.875rem;
+		@media (min-width: $md3) {
+			padding-left: 2rem;
+			font-size: 0.75rem;
+			&:not(:last-child) {
+				margin-bottom: 0.75rem;
+			}
+		}
+		& a {
+			color: $darkBlue;
+
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 	// .goods__sidebar-link
@@ -25,17 +78,14 @@
 		align-items: center;
 		gap: 0.63rem;
 		color: $darkBlue;
-		font-size: 0.8125rem;
 		transition: color 0.3s ease 0s;
+		font-size: 0.8125rem;
 		&::before {
-			width: 1.25rem;
-			height: 1.25rem;
-			font-size: 1.25rem;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			color: $lightBlue;
-			transition: color 0.3s ease 0s;
+			order: 1;
+			@extend %ic, .icon-plus;
+			font-size: 1.5rem;
+			margin-left: auto;
+			flex-shrink: 0;
 		}
 		@media (any-hover: hover) {
 			&:hover {
@@ -49,37 +99,113 @@
 				}
 			}
 		}
+		&.active {
+			color: $darkBlue;
+			.goods__sidebar-main {
+				&::before {
+					color: $darkBlue;
+				}
+			}
+			.goods__sidebar-text {
+				@media (min-width: $md3) {
+					font-weight: 600;
+					text-decoration: underline;
+				}
+			}
+			&::before {
+				@extend %ic, .icon-minus;
+			}
+		}
+	}
+	// .goods__sidebar-main
+	&__sidebar-main {
+		@media (min-width: $md3) {
+			position: relative;
+			padding-left: 2rem;
+		}
+		&::before {
+			display: none;
+			@media (min-width: $md3) {
+				width: 1.25rem;
+				height: 1.25rem;
+				font-size: 1.25rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: $lightBlue;
+				transition: color 0.3s ease 0s;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+			}
+		}
 	}
 	// .goods__sidebar-text
 	&__sidebar-text {
+		font-size: 1.125rem;
+		font-weight: 700;
+		font-family: $font-din;
+		@media (min-width: $md3) {
+			font-family: $fontfamily;
+			font-weight: 400;
+			font-size: 0.8125rem;
+		}
 	}
 	// .goods__sidebar-quantity
 	&__sidebar-quantity {
-		margin-left: auto;
 		color: $lightBlue;
 		font-size: 0.8125rem;
 	}
 	// .goods__content
 	&__content {
-		flex: 1 1 auto;
 		display: flex;
 		flex-direction: column;
-		padding-left: rem(20);
-		border-left: rem(1) solid $grayStroke;
+		@media (min-width: $md3) {
+			flex: 1 1 auto;
+			padding-left: rem(20);
+			border-left: rem(1) solid $grayStroke;
+		}
+	}
+	// .goods__categories
+	&__categories {
+		margin-top: 1.88rem;
+	}
+	// .goods__category
+	&__category {
+		&:not(:last-child) {
+			margin-bottom: 1.88rem;
+		}
+		@media (min-width: $md3) {
+			&:not(:last-child) {
+				margin-bottom: 0;
+			}
+			display: none;
+			&.active {
+				display: block;
+			}
+		}
 	}
 	// .goods__title
 	&__title {
-		margin-top: 1.88rem;
-		margin-bottom: 1.88rem;
-		color: $dark;
 		font-family: $font-din;
-		font-size: 1.5rem;
 		font-weight: 700;
 		line-height: 100%;
+		color: $darkBlue;
+		font-size: 1.125rem;
+		display: flex;
+		@media (min-width: $md3) {
+			font-size: 1.5rem;
+			color: $dark;
+		}
 	}
 	// .goods__body
 	&__body {
-		--gutter-y: 1.88rem;
+		margin-top: 1.88rem;
+
+		.row {
+			--gutter-y: 1.88rem;
+		}
 	}
 	// .goods__caption
 	&__caption {

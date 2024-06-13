@@ -174,6 +174,26 @@ $(function () {
             $target.toggleClass('active');
             $target.next().slideToggle()
         }
+
+        // get visible category block
+        if ($target.closest('.goods__sidebar-link').length > 0) {
+            e.preventDefault();
+
+            let $link = $target.closest('.goods__sidebar-link');
+
+            if (!$link.hasClass('active')) {
+                let targetId = $link.attr('href');
+
+                $('.goods__sidebar-link').removeClass('active');
+                $link.addClass('active');
+
+                $('.goods__category').removeClass('active');
+                $(targetId).addClass('active');
+
+                $('.goods__sidebar-categories').slideUp();
+                $link.next('.goods__sidebar-categories').slideDown();
+            }
+        }
     });
 
 
@@ -267,7 +287,11 @@ $(function () {
         } else {
             $('.brands__alphabet').addClass('hidden');
         }
-    })
+    });
+
+    // init goods sidebar
+
+
 
     // Fancybox.show([{
     //     src: "#mobile-search"

@@ -289,7 +289,7 @@
 
 .pc-only {
 	@media (max-width: $md3) {
-		display: none;
+		display: none !important;
 	}
 }
 
