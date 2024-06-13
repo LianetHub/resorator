@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Ресторатор | Логин</title>
+	<title>Ресторатор | Доставка и оплата</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
 	<!-- favicon -->
 	<!-- Open Graph  -->
 	<meta property="og:type" content="business.business">
-	<meta property="og:title" content="Ресторатор | Логин">
+	<meta property="og:title" content="Ресторатор | Доставка и оплата">
 	<meta property="og:description" content="">
 	<meta property="og:url" content="">
 	<meta property="og:image" content="/OG.png">
@@ -31,7 +31,7 @@
 	<!-- Open Graph  -->
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:title" content="Ресторатор | Логин">
+	<meta property="twitter:title" content="Ресторатор | Доставка и оплата">
 	<meta property="twitter:description" content="">
 	<meta property="twitter:site" content="">
 	<meta property="twitter:url" content="">
@@ -191,26 +191,61 @@
 						</li>
 						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 							<a class="breadcrumbs__link active" itemprop="item">
-								<span itemprop="name">Регистрация пользователя</span>
+								<span itemprop="name">Доставка и оплата</span>
 							</a>
 							<meta itemprop="position" content="2">
 						</li>
 					</ul>
 				</div>
 			</nav>
-			<div class="auth">
-				<div class="auth__container">
-					<form action="#" class="auth__form form" data-validation-form>
-						<h1 class="form__caption">Зарегистрироваться</h1>
-						<p class="form__subtitle"> На указанный номер телефона отправлено СМС сообщение с кодом для подтверждения регистрации. </p>
-						<div class="form__field">
-							<div class="form__label">Номер телефона</div>
-							<input type="tel" name="phone" placeholder="+7" class="form__input">
+			<section class="delivery">
+				<div class="delivery__container">
+					<h1 class="delivery__title title"> Доставка и оплата </h1>
+					<div class="delivery__content">
+						<div class="delivery__block">
+							<h2 class="delivery__caption title-md">Доставка</h2>
+							<ul class="delivery__accordion row">
+								<li class="delivery__accordion-item col-6">
+									<button type="button" class="delivery__accordion-btn icon-chevron">Доставка по Москве и Московской области</button>
+									<p class="delivery__accordion-text">Услуга оплаты через интернет осуществляется в соответствии с Правилами международных платежных систем Visa, MasterCard и Платежной системы МИР на принципах соблюдения конфиденциальности и безопасности совершения платежа, для чего используются самые современные методы проверки, шифрования и передачи данных по закрытым каналам связи.</p>
+								</li>
+								<li class="delivery__accordion-item col-6">
+									<button type="button" class="delivery__accordion-btn icon-chevron">Доставка в Казахстан и Белорусь</button>
+									<p class="delivery__accordion-text">Услуга оплаты через интернет осуществляется в соответствии с Правилами международных платежных систем Visa, MasterCard и Платежной системы МИР на принципах соблюдения конфиденциальности и безопасности совершения платежа, для чего используются самые современные методы проверки, шифрования и передачи данных по закрытым каналам связи.</p>
+								</li>
+								<li class="delivery__accordion-item col-6">
+									<button type="button" class="delivery__accordion-btn icon-chevron">Доставка за пределы МКАД</button>
+									<p class="delivery__accordion-text">Услуга оплаты через интернет осуществляется в соответствии с Правилами международных платежных систем Visa, MasterCard и Платежной системы МИР на принципах соблюдения конфиденциальности и безопасности совершения платежа, для чего используются самые современные методы проверки, шифрования и передачи данных по закрытым каналам связи.</p>
+								</li>
+								<li class="delivery__accordion-item col-6">
+									<button type="button" class="delivery__accordion-btn icon-chevron">Самовывоз со склада</button>
+									<p class="delivery__accordion-text">Услуга оплаты через интернет осуществляется в соответствии с Правилами международных платежных систем Visa, MasterCard и Платежной системы МИР на принципах соблюдения конфиденциальности и безопасности совершения платежа, для чего используются самые современные методы проверки, шифрования и передачи данных по закрытым каналам связи.</p>
+								</li>
+								<li class="delivery__accordion-item col-6">
+									<button type="button" class="delivery__accordion-btn icon-chevron">Доставка по России</button>
+									<p class="delivery__accordion-text">Услуга оплаты через интернет осуществляется в соответствии с Правилами международных платежных систем Visa, MasterCard и Платежной системы МИР на принципах соблюдения конфиденциальности и безопасности совершения платежа, для чего используются самые современные методы проверки, шифрования и передачи данных по закрытым каналам связи.</p>
+								</li>
+							</ul>
+							<div class="delivery__warning">
+								<div class="delivery__warning-caption">Внимание</div>
+								<ul class="delivery__warning-list">
+									<li>Риск случайной утраты или повреждения изделия переходит к Покупателю с момента передачи товара к транспортной компании</li>
+									<li>Приобретение товара с доставкой не дает Покупателю права требования повторной услуги доставки товара в случае возникновения необходимости гарантийного обслуживания или замены</li>
+									<li>Приобретение товара с платной доставкой не подразумевает возможности возврата стоимости услуги доставки</li>
+								</ul>
+							</div>
 						</div>
-						<button type="submit" disabled class="form__btn btn btn-primary">Продолжить</button>
-					</form>
+						<div class="delivery__block">
+							<h2 class="delivery__caption title-md">Рассчитать стоимость доставки</h2>
+							<div class="delivery__companies row">
+								<div class="col-2">
+									<div class="delivery__company"></div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -1003,6 +1038,23 @@
 				<button type="button" class="search__more icon-chevron"><span>Все направления</span></button>
 			</div>
 		</div>
+	</div>
+	<div id="brand-location" class="popup">
+		<div class="popup__header">
+			<h3 class="popup__title title-sm">Города</h3>
+			<button type="button" class="popup__close" data-fancybox-close></button>
+		</div>
+		<p class="popup__subtitle tablet-sm-only"> Ваше местоположение определено автоматически. Вы можете изменить его вручную. </p>
+		<form action="#" class="popup__form form">
+			<select name="brand-location" id="location-brand" data-list-mobile>
+				<option selected value="MSK">Москва</option>
+				<option value="SPB">Санкт-Петербург</option>
+				<option value="EKB">Екатеринбург</option>
+				<option value="RB">Беларусь</option>
+				<option value="BEL">Бельгия</option>
+			</select>
+			<button type="submit" class="form__btn btn btn-primary"> Применить </button>
+		</form>
 	</div> <!-- plugnis -->
 	<script src="js/libs/jquery-3.7.1.min.js?_v=20240613180859"></script>
 	<script src="js/libs/swiper-bundle.min.js?_v=20240613180859"></script>
