@@ -167,8 +167,8 @@
 			}
 		}
 	}
-	// .brands__list
-	&__list {
+	// .brands__grid
+	&__grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 0.63rem;
@@ -217,5 +217,51 @@
 		color: $darkBlue;
 		font-size: 0.875rem;
 		font-weight: 600;
+	}
+	// .brands__list
+	&__list {
+		margin-top: 1.88rem;
+	}
+	// .brands__list-item
+	&__list-item {
+		&:not(:last-child) {
+			margin-bottom: 0.63rem;
+			@media (min-width: $md3) {
+				margin-bottom: rem(30);
+			}
+		}
+	}
+	// .brands__list-letter
+	&__list-letter {
+		color: $darkBlue;
+		font-size: 1.3125rem;
+		font-weight: 600;
+		margin-bottom: 0.62rem;
+	}
+	// .brands__names
+	&__names {
+		display: grid;
+		gap: 0.62rem;
+		column-gap: 1.25rem;
+		grid-template-columns: repeat(2, 1fr);
+		@media (min-width: $md5) {
+			grid-template-columns: repeat(auto-fill, minmax(10.4rem, 1fr));
+		}
+		@media (min-width: $md3) {
+			grid-template-columns: repeat(auto-fill, minmax(14.3rem, 1fr));
+		}
+	}
+	// .brands__name
+	&__name {
+		color: $darkBlue;
+		font-size: 0.8125rem;
+	}
+	// .brands__name-link
+	&__name-link {
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 }

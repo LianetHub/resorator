@@ -241,10 +241,12 @@ $(function () {
             let $target = $(e.target);
             if ($target.val() == 'rows' && $target[0].checked) {
                 $('.catalog__grid').addClass('row-layout');
-                $('.brands__list').addClass('row-layout');
+                $('.brands__grid').addClass('hidden');
+                $('.brands__list').removeClass('hidden');
             } else {
                 $('.catalog__grid').removeClass('row-layout');
-                $('.brands__list').removeClass('row-layout');
+                $('.brands__list').addClass('hidden');
+                $('.brands__grid').removeClass('hidden');
             }
 
         });

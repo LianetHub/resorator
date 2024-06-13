@@ -23,6 +23,14 @@
 }
 
 @font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Inter";
   font-display: swap;
   src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
@@ -31,10 +39,10 @@
 }
 
 @font-face {
-  font-family: "icons";
+  font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -51,14 +59,6 @@
   font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
   font-style: normal;
 }
 
@@ -1512,10 +1512,15 @@ body.lock-catalog-filter {
 
 .hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .cover-image {
@@ -5758,7 +5763,7 @@ body.lock-catalog-filter {
   transition: color 0.3s ease 0s;
 }
 
-.brands__list {
+.brands__grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -5805,6 +5810,37 @@ body.lock-catalog-filter {
   color: #475569;
   font-size: 0.875rem;
   font-weight: 600;
+}
+
+.brands__list {
+  margin-top: 1.88rem;
+}
+
+.brands__list-item:not(:last-child) {
+  margin-bottom: 0.63rem;
+}
+
+.brands__list-letter {
+  color: #475569;
+  font-size: 1.3125rem;
+  font-weight: 600;
+  margin-bottom: 0.62rem;
+}
+
+.brands__names {
+  display: -ms-grid;
+  display: grid;
+  gap: 0.62rem;
+  -webkit-column-gap: 1.25rem;
+     -moz-column-gap: 1.25rem;
+          column-gap: 1.25rem;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.brands__name {
+  color: #475569;
+  font-size: 0.8125rem;
 }
 
 .delivery {
@@ -6437,7 +6473,7 @@ body.lock-catalog-filter {
     padding-right: calc((100vw - 36rem) / 2);
   }
 
-  .brands__list {
+  .brands__grid {
     margin-top: 1.87rem;
     gap: 1.25rem;
     grid-template-columns: repeat(auto-fill, minmax(14.3rem, 1fr));
@@ -6445,6 +6481,10 @@ body.lock-catalog-filter {
 
   .brands__card {
     padding: 1.25rem;
+  }
+
+  .brands__names {
+    grid-template-columns: repeat(auto-fill, minmax(10.4rem, 1fr));
   }
 
   .delivery {
@@ -7430,6 +7470,14 @@ body.lock-catalog-filter {
   .brands__alphabet {
     margin-right: calc(-1 * (100vw - 60rem) / 2);
     padding-right: calc((100vw - 60rem) / 2);
+  }
+
+  .brands__list-item:not(:last-child) {
+    margin-bottom: 1.875rem;
+  }
+
+  .brands__names {
+    grid-template-columns: repeat(auto-fill, minmax(14.3rem, 1fr));
   }
 }
 
@@ -8829,6 +8877,10 @@ body.lock-catalog-filter {
 
   .brands__card:hover {
     background: #e8e8e8;
+  }
+
+  .brands__name-link:hover {
+    text-decoration: underline;
   }
 }
 
