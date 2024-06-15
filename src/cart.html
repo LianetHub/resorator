@@ -37,7 +37,7 @@
                     <div class="cart__container">
                         <div class="cart__body">
                             <div class="row">
-                                <div class="col-9">
+                                <div class="col-xxl-9 col-lg-7">
                                     <div class="cart__title title-md">
                                         Корзина
                                         <span class="cart__title-quantity">(3)</span>
@@ -54,8 +54,9 @@
                                                         UNOX XF 023 Anna
                                                     </div>
                                                     <div class="cart__item-row">
-                                                        <div class="cart__item-copy icon-copy">
-                                                            000000
+                                                        <div class="cart__item-copy">
+                                                            <span>000000</span>
+                                                            <button type="button" class="btn-copy icon-copy"></button>
                                                         </div>
                                                         <div class="cart__item-availability green-color">
                                                             В наличии
@@ -63,20 +64,90 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="cart__item-price">
-                                                <div class="cart__item-price-old">322 703 ₽</div>
-                                                <div class="cart__item-price-current">2 654 922 ₽ </div>
+                                            <div class="cart__item-info">
+                                                <div class="cart__item-price">
+                                                    <div class="cart__item-price-old">322 703 ₽</div>
+                                                    <div class="cart__item-price-current">2 654 922 ₽ </div>
+                                                </div>
+                                                <div class="cart__item-quantity quantity-block">
+                                                    <button type="button" class="quantity-block__down icon-minus-circle"></button>
+                                                    <input type="number" name="quantity" class="quantity-block__input" value="1">
+                                                    <button type="button" class="quantity-block__up icon-plus-circle"></button>
+                                                </div>
                                             </div>
-                                            <div class="quantity-block">
-                                                <button type="button" class="quantity-block__down icon-minus-circle"></button>
-                                                <input type="number" name="quantity" class="quantity-block__input" value="1">
-                                                <button type="button" class="quantity-block__up icon-plus-circle"></button>
+                                            <button type="button" class="cart__item-delete icon-close"></button>
+                                        </li>
+                                        <li class="cart__item">
+                                            <a href="" class="cart__item-image">
+                                                <img src="@img/goods/01.png" alt="Изображение товара">
+                                            </a>
+                                            <div class="cart__item-body">
+                                                <div class="cart__item-main">
+                                                    <div class="cart__item-name">
+                                                        <small>Пароконвектомат</small>
+                                                        UNOX XF 023 Anna
+                                                    </div>
+                                                    <div class="cart__item-row">
+                                                        <div class="cart__item-copy">
+                                                            <span>000000</span>
+                                                            <button type="button" class="btn-copy icon-copy"></button>
+                                                        </div>
+                                                        <div class="cart__item-availability green-color">
+                                                            В наличии
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cart__item-info">
+                                                <div class="cart__item-price">
+                                                    <div class="cart__item-price-old">322 703 ₽</div>
+                                                    <div class="cart__item-price-current">2 654 922 ₽ </div>
+                                                </div>
+                                                <div class="cart__item-quantity quantity-block">
+                                                    <button type="button" class="quantity-block__down icon-minus-circle"></button>
+                                                    <input type="number" name="quantity" class="quantity-block__input" value="1">
+                                                    <button type="button" class="quantity-block__up icon-plus-circle"></button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="cart__item-delete icon-close"></button>
+                                        </li>
+                                        <li class="cart__item">
+                                            <a href="" class="cart__item-image">
+                                                <img src="@img/goods/01.png" alt="Изображение товара">
+                                            </a>
+                                            <div class="cart__item-body">
+                                                <div class="cart__item-main">
+                                                    <div class="cart__item-name">
+                                                        <small>Пароконвектомат</small>
+                                                        UNOX XF 023 Anna
+                                                    </div>
+                                                    <div class="cart__item-row">
+                                                        <div class="cart__item-copy">
+                                                            <span>000000</span>
+                                                            <button type="button" class="btn-copy icon-copy"></button>
+                                                        </div>
+                                                        <div class="cart__item-availability green-color">
+                                                            В наличии
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cart__item-info">
+                                                <div class="cart__item-price">
+                                                    <div class="cart__item-price-old">322 703 ₽</div>
+                                                    <div class="cart__item-price-current">2 654 922 ₽ </div>
+                                                </div>
+                                                <div class="cart__item-quantity quantity-block">
+                                                    <button type="button" class="quantity-block__down icon-minus-circle"></button>
+                                                    <input type="number" name="quantity" class="quantity-block__input" value="1">
+                                                    <button type="button" class="quantity-block__up icon-plus-circle"></button>
+                                                </div>
                                             </div>
                                             <button type="button" class="cart__item-delete icon-close"></button>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-xxl-3 col-lg-5">
                                     <aside class="cart__sidebar">
                                         <h2 class="cart__sidebar-title title-sm">
                                             Информация о заказе
@@ -85,12 +156,36 @@
                                             <div class="cart__sidebar-property">3 товара</div>
                                             <div class="cart__sidebar-value">81 997 ₽ </div>
                                         </div>
+                                        <div class="cart__sidebar-row">
+                                            <div class="cart__sidebar-property icon-chevron">Выгода</div>
+                                            <div class="cart__sidebar-value">-14 999 ₽ </div>
+                                        </div>
+                                        <ul class="cart__sidebar-profits">
+                                            <li class="cart__sidebar-profit">
+                                                <div class="cart__sidebar-profit-name">
+                                                    Выгода по акции
+                                                </div>
+                                                <div class="cart__sidebar-profit-value">
+                                                    -8 000 ₽
+                                                </div>
+                                            </li>
+                                            <li class="cart__sidebar-profit">
+                                                <div class="cart__sidebar-profit-name">
+                                                    Выгода по акции
+                                                </div>
+                                                <div class="cart__sidebar-profit-value">
+                                                    -6 999 ₽
+                                                </div>
+                                            </li>
+                                        </ul>
                                         <div class="cart__sidebar-total">
                                             <div class="cart__sidebar-property">Итого</div>
                                             <div class="cart__sidebar-value">69 998 ₽ </div>
                                         </div>
-                                        <a href="" class="cart__sidebar-btn btn btn-primary btn-fullwidth">Перейти к оформлению</a>
-                                        <a href="" class="cart__sidebar-btn btn btn-primary-outline btn-fullwidth">В кредит или лизинг</a>
+                                        <div class="cart__sidebar-btns">
+                                            <a href="" class="cart__sidebar-btn btn btn-primary btn-fullwidth">Перейти к оформлению</a>
+                                            <a href="" class="cart__sidebar-btn btn btn-primary-outline btn-fullwidth">В кредит или лизинг</a>
+                                        </div>
                                         <div class="cart__sidebar-hint">
                                             Заполните анкету и получите одобрение в течении нескольких минут
                                         </div>

@@ -670,6 +670,7 @@
 		margin-top: 1.25rem;
 		display: flex;
 		gap: 0.63rem;
+		max-width: rem(290);
 		& + .product-card__cart {
 			margin-top: rem(20);
 		}

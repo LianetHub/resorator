@@ -29,6 +29,23 @@
 			top: 1rem;
 			&.goods__sidebar_lg {
 				flex: 0 0 rem(480);
+				.goods__sidebar-list {
+					padding: rem(30);
+					border-radius: 0.3125rem;
+					border: rem(1) solid #e8e8e8;
+				}
+				.goods__sidebar-category {
+					padding-left: 0rem;
+					font-size: 0.875rem;
+					&:not(:last-child) {
+						margin-bottom: 1.25rem;
+					}
+				}
+				.goods__sidebar-item {
+					&:not(:last-child) {
+						margin-bottom: 1.88rem;
+					}
+				}
 			}
 		}
 	}
@@ -123,6 +140,12 @@
 			}
 		}
 	}
+	&__sidebar-caption {
+		font-family: $font-din;
+		font-size: 1.125rem;
+		font-weight: 700;
+		line-height: 100%;
+	}
 	// .goods__sidebar-main
 	&__sidebar-main {
 		@media (min-width: $md3) {
@@ -169,8 +192,10 @@
 		flex-direction: column;
 		@media (min-width: $md3) {
 			flex: 1 1 auto;
-			padding-left: rem(20);
-			border-left: rem(1) solid $grayStroke;
+			&:not(:first-child) {
+				padding-left: rem(20);
+				border-left: rem(1) solid $grayStroke;
+			}
 		}
 	}
 	// .goods__categories

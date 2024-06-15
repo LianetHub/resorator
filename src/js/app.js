@@ -196,11 +196,15 @@ $(function () {
                 $('.goods__sidebar-link').removeClass('active');
                 $link.addClass('active');
 
-                $('.goods__category').removeClass('active');
-                $(targetId).addClass('active');
-
                 $('.goods__sidebar-categories').slideUp();
                 $link.next('.goods__sidebar-categories').slideDown();
+
+                if ($('.goods__category').length > 0) {
+                    $('.goods__category').removeClass('active');
+                    $(targetId).addClass('active');
+                }
+
+
             }
         }
 
@@ -311,11 +315,11 @@ $(function () {
     }
 
     function showTooltip($element) {
-        var originalHTML = $element.html();
-        $element.html('<div class="tooltip">Скопировано</div>');
+
+        $element.html('<span class="tooltip">Скопировано</span>');
 
         setTimeout(function () {
-            $element.html(originalHTML);
+            $element.html("");
         }, 1000);
     }
 
