@@ -137,6 +137,18 @@
 		align-items: center;
 		& img {
 			max-height: rem(60);
+			height: auto;
+
+			filter: grayscale(1);
+			transition: filter 0.3s ease 0s, transform 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				& img {
+					filter: grayscale(0);
+					transform: scale(1.015);
+				}
+			}
 		}
 	}
 	// .delivery__subtitle

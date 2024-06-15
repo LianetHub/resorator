@@ -102,9 +102,19 @@ $(function () {
             $target.prev().toggleClass('active')
         }
 
-        // product tabs
+        // product filter products
         if ($target.hasClass('product-card__filter')) {
+
             $target.addClass('active').siblings().removeClass('active');
+
+            let $productWrapper = $target.closest('.product-card__products');
+            let filterClass = $target.data('filter');
+            if (filterClass) {
+
+                filterProducts($productWrapper, filterClass);
+            }
+
+            // close filters on mobile
             $target.parent().removeClass('active').next().removeClass('active');
         }
 
@@ -252,6 +262,22 @@ $(function () {
                 sliderData.swiper.destroy(true, true);
             }
         }
+    }
+
+    function filterProducts($productWrapper, filterClass) {
+        let $productSlider = $productWrapper.find('.product-card__items');
+        let slides = $productSlider[0].swiper.slides;
+
+        slides.forEach(slide => {
+            $(slide).removeClass('filter-slide-active');
+
+            if ($(slide).hasClass(filterClass)) {
+                $(slide).addClass('filter-slide-active');
+            }
+        });
+        $productSlider[0].swiper.update()
+
+
     }
 
     // change grid layout
@@ -637,6 +663,43 @@ $(function () {
             });
 
             productSliders.push({ slider: slider[0], swiper: swiper });
+
+            // sliders.each(function (index, slider) {
+            //     console.log(slider);
+
+            //     let swiper = new Swiper(slider, {
+            //         slidesPerView: 1.45,
+            //         spaceBetween: 20,
+            //         pagination: {
+            //             el: pagination[0],
+            //             type: "fraction",
+            //             renderFraction: function (currentClass, totalClass) {
+            //                 return `Страница <span class="${currentClass}"></span> из <span class="${totalClass}"></span>`;
+            //             }
+            //         },
+            //         navigation: {
+            //             nextEl: next[0],
+            //             prevEl: prev[0]
+            //         },
+            //         breakpoints: {
+            //             575.98: {
+            //                 slidesPerView: 2,
+            //             },
+            //             767.98: {
+            //                 slidesPerView: 3,
+            //             },
+            //             991.98: {
+            //                 slidesPerView: 4,
+            //             },
+            //             1399.98: {
+            //                 slidesPerView: 6,
+            //             }
+            //         }
+            //     });
+
+            //     productSliders.push({ slider: slider, swiper: swiper });
+            // })
+
 
         })
 

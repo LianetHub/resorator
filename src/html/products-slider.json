@@ -113,7 +113,7 @@
     },
     {
         "wrapper": false,
-        "className": " swiper-slide pc-none tablet-only",
+        "className": " swiper-slide",
         "labels": true,
         "sale": false,
         "hit": true,

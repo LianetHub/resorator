@@ -1,0 +1,22 @@
+<div class="product-card__products">
+    <div class="product-card__products-header">
+        <div class="product-card__filters">
+            <div class="product-card__filters-items">
+                <button type="button" data-filter="filter-1" class="product-card__filter active">Аксессуары <span class="product-card__quantity">(124)</span></button>
+                <button type="button" data-filter="filter-2" class="product-card__filter">Запасные части <span class="product-card__quantity">(8)</span></button>
+            </div>
+            <button type="button" aria-label="Показать все фильтры" class="product-card__filters-more mobile-sm-only icon-chevron"></button>
+        </div>
+        <div class="product-card__contorls">
+            <div class="product-card__prev swiper-button-prev"></div>
+            <div class="product-card__pagination"></div>
+            <div class="product-card__next swiper-button-next"></div>
+        </div>
+    </div>
+    <div class="product-card__items swiper">
+        <div class="swiper-wrapper">
+            @@loop('_product.html', './html/products-filter.json')
+        </div>
+    </div>
+    <button type="button" class="product-card__loadmore icon-chevron btn-all-products"><span>Развернуть</span> все аксессуары</button>
+</div>

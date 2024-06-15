@@ -785,10 +785,8 @@
 		border-bottom: rem(1) solid $grayStroke;
 		display: flex;
 		justify-content: space-between;
-		padding-bottom: 0.45rem;
-		@media (min-width: $md5) {
-			padding-bottom: 0.85rem;
-		}
+		padding-bottom: 0.85rem;
+
 		@media (min-width: $md4) {
 			border-bottom: 0;
 			padding-bottom: 0;
@@ -800,6 +798,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
+		align-self: flex-end;
 		&.active {
 			.product-card__filter {
 				display: flex;
@@ -849,7 +848,11 @@
 				}
 			}
 		}
+		@media (min-width: $md4) {
+			margin-bottom: -2.5rem;
+		}
 	}
+
 	// .product-card__quantity
 	&__quantity {
 		color: $lightBlue;
@@ -882,10 +885,11 @@
 	// .product-card__next
 	&__next {
 	}
+
 	// .product-card__items
 	&__items {
 		padding: 1.25rem 0;
-
+		width: 100%;
 		max-width: 100%;
 		overflow: visible;
 		@media (min-width: $md5) {

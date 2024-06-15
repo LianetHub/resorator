@@ -608,6 +608,12 @@
 	}
 	&.swiper-slide {
 		height: auto;
+		&.filter-slide {
+			display: none;
+			&.filter-slide-active {
+				display: flex;
+			}
+		}
 	}
 	// .product__labels
 	&__labels {
