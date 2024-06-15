@@ -44,6 +44,7 @@
 
 	&__label {
 		font-size: 0.8125rem;
+		display: block;
 		margin-bottom: 0.5rem;
 		&.form__label_lg-mobile {
 			@media (max-width: $md5) {
@@ -53,6 +54,10 @@
 				font-weight: 700;
 				line-height: 100%;
 			}
+		}
+		& strong {
+			font-size: 0.875rem;
+			font-weight: 600;
 		}
 	}
 	// .form__input
@@ -450,7 +455,7 @@
 	}
 	&.btn-primary-outline {
 		color: $yellow;
-	
+
 		border: rem(1) solid $yellow;
 		&:hover,
 		&:active {

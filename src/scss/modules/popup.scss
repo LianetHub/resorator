@@ -41,6 +41,9 @@
 		max-width: 100%;
 		border-radius: 0;
 	}
+	&.popup_lg {
+		max-width: rem(600);
+	}
 	// .popup__header
 	&__header {
 		display: flex;
@@ -129,5 +132,68 @@
 	&__list-text {
 		margin-top: 0.31rem;
 		font-size: 0.75rem;
+	}
+	// .popup__block
+	&__block {
+		margin-top: rem(20);
+	}
+	// .popup__manager
+	&__manager {
+		margin-top: 0.63rem;
+		border-radius: 0.3125rem;
+		background: $lightBg;
+		color: $darkBlue;
+		padding: 1.25rem;
+	}
+	// .popup__manager-name
+	&__manager-name {
+		font-size: 0.75rem;
+		font-weight: 600;
+		display: flex;
+		gap: 0.62rem;
+	}
+	// .popup__manager-position
+	&__manager-position {
+		color: #94a3b8;
+		font-weight: 400;
+	}
+	// .popup__manager-row
+	&__manager-row {
+		margin-top: 0.62rem;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	// .popup__manager-column
+	&__manager-column {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	// .popup__manager-caption
+	&__manager-caption {
+		font-size: 0.75rem;
+		font-weight: 600;
+	}
+	// .popup__manager-info
+	&__manager-info {
+		margin-top: 0.31rem;
+		display: flex;
+		align-items: center;
+		font-size: 0.75rem;
+	}
+	// .popup__manager-contact
+	&__manager-contact {
+	}
+	// .popup__info
+	&__info {
+	}
+	// .popup__info-list
+	&__info-list {
+	}
+	// .popup__info-item
+	&__info-item {
+	}
+	// .popup__info-download
+	&__info-download {
 	}
 }

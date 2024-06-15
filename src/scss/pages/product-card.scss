@@ -1104,4 +1104,39 @@
 			}
 		}
 	}
+	// .product-card__offers
+	&__offers {
+		margin-top: 1.88rem;
+	}
+	// .product-card__caption
+	&__caption {
+	}
+	// .product-card__offers-content
+	&__offers-content {
+		margin-top: 1.25rem;
+		overflow-x: auto;
+		& th,
+		td {
+			&:nth-child(1) {
+				width: 8.2rem;
+			}
+			&:nth-child(2) {
+				width: 44%;
+			}
+			&:nth-child(3) {
+				// width: 10%;
+			}
+			&:nth-child(4) {
+			}
+			&:nth-child(5) {
+			}
+			&:nth-child(6) {
+			}
+			&:nth-child(7) {
+			}
+			&:nth-child(8) {
+				width: 0.75rem;
+			}
+		}
+	}
 }
