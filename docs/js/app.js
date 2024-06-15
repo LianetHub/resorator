@@ -186,7 +186,7 @@ $(function () {
         }
 
         // get visible category block
-        if ($target.closest('.goods__sidebar-link').length > 0) {
+        if ($target.closest('.goods__sidebar-link')) {
             e.preventDefault();
 
             let $link = $target.closest('.goods__sidebar-link');
@@ -202,6 +202,32 @@ $(function () {
 
                 $('.goods__sidebar-categories').slideUp();
                 $link.next('.goods__sidebar-categories').slideDown();
+            }
+        }
+
+        // copy btn
+        if ($target.hasClass('btn-copy')) {
+            var textToCopy = $target.prev().text();
+
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(textToCopy).then(function () {
+                    showTooltip($target);
+                }).catch(function (err) {
+                    console.error('Ошибка при копировании: ', err);
+                });
+            } else {
+                var textArea = document.createElement("textarea");
+                textArea.value = textToCopy;
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    showTooltip($target);
+                } catch (err) {
+                    console.error('Ошибка при копировании: ', err);
+                }
+                document.body.removeChild(textArea);
             }
         }
     });
@@ -279,6 +305,16 @@ $(function () {
 
 
     }
+
+    function showTooltip($element) {
+        var originalHTML = $element.html();
+        $element.html('<div class="tooltip">Скопировано</div>');
+
+        setTimeout(function () {
+            $element.html(originalHTML);
+        }, 1000);
+    }
+
 
     // change grid layout
     if ($('[name="views"]').length > 0) {
@@ -481,6 +517,7 @@ $(function () {
 
 
 
+
     // tooltip
     $('[data-tooltip]').on('mouseenter', function () {
         var $this = $(this);
@@ -523,8 +560,6 @@ $(function () {
         var title = $this.data('title');
         $this.attr('title', title);
     });
-
-
 
 
 

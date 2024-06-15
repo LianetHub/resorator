@@ -150,7 +150,9 @@
 		font-size: 0.75rem;
 		font-weight: 600;
 		display: flex;
+		flex-wrap: wrap;
 		gap: 0.62rem;
+		row-gap: 0.25rem;
 	}
 	// .popup__manager-position
 	&__manager-position {
@@ -161,7 +163,10 @@
 	&__manager-row {
 		margin-top: 0.62rem;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+		@media (min-width: $md5) {
+			grid-template-columns: repeat(3, 1fr);
+		}
 	}
 	// .popup__manager-column
 	&__manager-column {
@@ -180,20 +185,72 @@
 		display: flex;
 		align-items: center;
 		font-size: 0.75rem;
+		gap: rem(10);
 	}
 	// .popup__manager-contact
 	&__manager-contact {
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 	// .popup__info
 	&__info {
+		margin-top: 0.63rem;
+		border-radius: 0.3125rem;
+		background: $lightBg;
+		color: $darkBlue;
+		padding: 1.25rem;
 	}
 	// .popup__info-list
 	&__info-list {
+		font-size: 0.75rem;
 	}
 	// .popup__info-item
 	&__info-item {
+		display: flex;
+		flex-direction: column;
+		gap: 0.31rem;
+		@media (min-width: $md5) {
+			flex-direction: row;
+			gap: 0.62rem;
+		}
+		&:not(:last-child) {
+			margin-bottom: 0.62rem;
+			@media (min-width: $md5) {
+				margin-bottom: 0.31rem;
+			}
+		}
+		& a {
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
 	}
 	// .popup__info-download
 	&__info-download {
+		margin-top: 0.63rem;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.62rem;
+		&::before {
+			font-size: 1rem;
+			color: #94a3b8;
+		}
+		& span {
+			text-decoration: underline;
+			color: $blue;
+			font-size: 0.75rem;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				& span {
+					text-decoration: none;
+				}
+			}
+		}
 	}
 }

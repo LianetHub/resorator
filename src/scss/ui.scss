@@ -67,6 +67,27 @@
 	width: 100%;
 }
 
+.btn-copy {
+	position: relative;
+	color: $lightBlue;
+	transition: color 0.3s ease 0s;
+	font-size: rem(16);
+	@media (any-hover: hover) {
+		&:hover {
+			color: $dark;
+		}
+	}
+	.tooltip {
+		bottom: calc(100% + rem(8));
+		left: 50%;
+		transform: translateX(-50%);
+		&::after {
+			border-top: rem(5) solid #1d1d1d;
+			bottom: rem(-4);
+		}
+	}
+}
+
 .label {
 	padding: 0.5rem 0.62rem;
 	font-size: 0.625rem;

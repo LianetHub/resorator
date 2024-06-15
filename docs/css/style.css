@@ -1,14 +1,6 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DinPro";
-  font-display: swap;
   src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
@@ -25,15 +17,15 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
@@ -49,8 +41,16 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -92,6 +92,10 @@
 [class^=icon-]:before,
 [class*=" icon-"]:before {
   display: block;
+}
+
+.icon-copy:before {
+  content: "\e925";
 }
 
 .icon-cake:before {
@@ -771,6 +775,11 @@ body.lock-catalog-filter {
   z-index: 1000;
   font-size: 0.8125rem;
   max-width: 12.5rem;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .tooltip.open-top::after {
@@ -962,7 +971,10 @@ body.lock-catalog-filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 0.62rem;
+  row-gap: 0.25rem;
 }
 
 .popup__manager-position {
@@ -974,8 +986,7 @@ body.lock-catalog-filter {
   margin-top: 0.62rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
 .popup__manager-column {
@@ -1004,6 +1015,56 @@ body.lock-catalog-filter {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 0.75rem;
+  gap: 0.625rem;
+}
+
+.popup__info {
+  margin-top: 0.63rem;
+  border-radius: 0.3125rem;
+  background: #f2f5f9;
+  color: #475569;
+  padding: 1.25rem;
+}
+
+.popup__info-list {
+  font-size: 0.75rem;
+}
+
+.popup__info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.31rem;
+}
+
+.popup__info-item:not(:last-child) {
+  margin-bottom: 0.62rem;
+}
+
+.popup__info-download {
+  margin-top: 0.63rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.62rem;
+}
+
+.popup__info-download::before {
+  font-size: 1rem;
+  color: #94a3b8;
+}
+
+.popup__info-download span {
+  text-decoration: underline;
+  color: #1e6ba3;
   font-size: 0.75rem;
 }
 
@@ -1245,6 +1306,27 @@ body.lock-catalog-filter {
 
 .full-width {
   width: 100%;
+}
+
+.btn-copy {
+  position: relative;
+  color: #94a3b8;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+  font-size: 1rem;
+}
+
+.btn-copy .tooltip {
+  bottom: calc(100% + 0.5rem);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.btn-copy .tooltip::after {
+  border-top: 0.3125rem solid #1d1d1d;
+  bottom: -0.25rem;
 }
 
 .label {
@@ -4738,6 +4820,25 @@ table td button {
 .product-card__offers-content {
   margin-top: 1.25rem;
   overflow-x: auto;
+  padding-bottom: 1.25rem;
+}
+
+.product-card__offers-content::-webkit-scrollbar {
+  height: 0.5rem;
+}
+
+.product-card__offers-content::-webkit-scrollbar-track {
+  background: #f2f5f9;
+  border-radius: 0.5rem;
+}
+
+.product-card__offers-content::-webkit-scrollbar-thumb {
+  background: #ced6e0;
+  border-radius: 0.5rem;
+}
+
+.product-card__offers-content table {
+  width: 92.5rem;
 }
 
 .product-card__offers-content th:nth-child(1),
@@ -6409,6 +6510,23 @@ table td button {
 
   .popup__header {
     padding-bottom: 0.25rem;
+  }
+
+  .popup__manager-row {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .popup__info-item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 0.62rem;
+  }
+
+  .popup__info-item:not(:last-child) {
+    margin-bottom: 0.31rem;
   }
 
   .custom-select-container {
@@ -9086,6 +9204,11 @@ table td button {
     display: none;
   }
 
+  .product-card__offers-content {
+    margin-right: -1rem;
+    padding-right: 1rem;
+  }
+
   .brands__title {
     font-size: 1.9375rem;
   }
@@ -9111,6 +9234,22 @@ table td button {
 
   .popup__close:hover {
     color: #f7ce46;
+  }
+
+  .popup__manager-contact:hover {
+    text-decoration: underline;
+  }
+
+  .popup__info-item a:hover {
+    text-decoration: underline;
+  }
+
+  .popup__info-download:hover span {
+    text-decoration: none;
+  }
+
+  .btn-copy:hover {
+    color: #1d1d1d;
   }
 
   .card:hover .card__image img {
@@ -9289,6 +9428,10 @@ table td button {
 
   .product-card__loadmore:hover {
     text-decoration: none;
+  }
+
+  .product-card__offers-content::-webkit-scrollbar-thumb:hover {
+    background: #f7ce46;
   }
 
   .catalog__filters-link:hover {

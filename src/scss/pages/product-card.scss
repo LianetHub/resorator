@@ -1115,6 +1115,30 @@
 	&__offers-content {
 		margin-top: 1.25rem;
 		overflow-x: auto;
+		padding-bottom: 1.25rem;
+		@media (max-width: $md5) {
+			margin-right: -1rem;
+			padding-right: 1rem;
+		}
+		&::-webkit-scrollbar {
+			height: rem(8);
+		}
+		&::-webkit-scrollbar-track {
+			background: #f2f5f9;
+			border-radius: rem(8);
+		}
+		&::-webkit-scrollbar-thumb {
+			background: #ced6e0;
+			border-radius: rem(8);
+			@media (any-hover: hover) {
+				&:hover {
+					background: $yellow;
+				}
+			}
+		}
+		& table {
+			width: rem(1480);
+		}
 		& th,
 		td {
 			&:nth-child(1) {
