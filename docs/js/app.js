@@ -354,14 +354,14 @@ $(function () {
 
 
 
-    Fancybox.show([{
-        src: "#supplier-name"
+    // Fancybox.show([{
+    //     src: "#supplier-name"
 
 
-    }], {
-        dragToClose: false,
-        closeButton: false
-    })
+    // }], {
+    //     dragToClose: false,
+    //     closeButton: false
+    // })
 
 
     $('#language-form').on('submit', function (e) {
