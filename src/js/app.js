@@ -394,14 +394,14 @@ $(function () {
 
 
 
-    Fancybox.show([{
-        src: "#product-fast"
+    // Fancybox.show([{
+    //     src: "#product-fast"
 
 
-    }], {
-        dragToClose: false,
-        closeButton: false
-    })
+    // }], {
+    //     dragToClose: false,
+    //     closeButton: false
+    // })
 
 
     $('#language-form').on('submit', function (e) {
