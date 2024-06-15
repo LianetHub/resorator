@@ -759,6 +759,8 @@
 		}
 		&.active {
 			background: $yellow;
+			opacity: 1;
+			visibility: visible;
 		}
 	}
 	// .product__price

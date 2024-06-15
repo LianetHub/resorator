@@ -17,9 +17,6 @@ $(function () {
     $(document).on('click', function (e) {
         let $target = $(e.target);
 
-        console.log($target);
-
-
         // open mobile menu
         if ($target[0].closest('.menu-toggler')) {
             $('.header').toggleClass('open-menu');
@@ -188,7 +185,7 @@ $(function () {
         }
 
         // get visible category block
-        if ($target.closest('.goods__sidebar-link')) {
+        if ($target[0].closest('.goods__sidebar-link')) {
             e.preventDefault();
 
             let $link = $target.closest('.goods__sidebar-link');
@@ -231,6 +228,11 @@ $(function () {
                 }
                 document.body.removeChild(textArea);
             }
+        }
+
+        // add active state product cart actions
+        if ($target.hasClass('product__action') && $target[0].tagName.toLowerCase() === 'button') {
+            $target.toggleClass('active')
         }
     });
 
@@ -392,14 +394,14 @@ $(function () {
 
 
 
-    // Fancybox.show([{
-    //     src: "#supplier-name"
+    Fancybox.show([{
+        src: "#product-fast"
 
 
-    // }], {
-    //     dragToClose: false,
-    //     closeButton: false
-    // })
+    }], {
+        dragToClose: false,
+        closeButton: false
+    })
 
 
     $('#language-form').on('submit', function (e) {
@@ -626,34 +628,44 @@ $(function () {
 
     if ($(".product-card__slider").length > 0) {
 
-        let thumbsSlider = new Swiper('.product-card__thumbs', {
-            slidesPerView: 3,
-            spaceBetween: 20,
-            breakpoints: {
-                575.98: {
-                    slidesPerView: 3,
-                },
-                767.98: {
-                    slidesPerView: 2,
-                },
-                991.98: {
-                    slidesPerView: 3,
+        $(".product-card__slider").each((function (index, slider) {
+
+            let thumbsBlock = slider.querySelector('.product-card__thumbs');
+            let mainBlock = slider.querySelector('.product-card__slider-main');
+            let paginationBlock = slider.querySelector('.product-card__slider-pagination')
+
+            let thumbsSlider = new Swiper(thumbsBlock, {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                breakpoints: {
+                    575.98: {
+                        slidesPerView: 3,
+                    },
+                    767.98: {
+                        slidesPerView: 2,
+                    },
+                    991.98: {
+                        slidesPerView: 3,
+                    }
                 }
-            }
-        });
+            });
 
-        let mainSlider = new Swiper('.product-card__slider-main', {
-            slidesPerView: 1,
+            let mainSlider = new Swiper(mainBlock, {
+                slidesPerView: 1,
 
-            pagination: {
-                el: '.product-card__slider-pagination',
-                clickable: true
-            },
-            thumbs: {
-                swiper: thumbsSlider
-            }
+                pagination: {
+                    el: paginationBlock,
+                    clickable: true
+                },
+                thumbs: {
+                    swiper: thumbsSlider
+                }
 
-        });
+            });
+
+        }))
+
+
 
 
 

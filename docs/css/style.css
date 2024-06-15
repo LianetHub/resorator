@@ -1,12 +1,4 @@
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "DinPro";
   font-display: swap;
   src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
@@ -23,10 +15,10 @@
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "icons";
   font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -35,6 +27,22 @@
   font-display: swap;
   src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
   font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -51,14 +59,6 @@
   font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
   font-style: normal;
 }
 
@@ -844,6 +844,10 @@ body.lock-catalog-filter {
   max-width: 37.5rem;
 }
 
+.popup.popup_xl {
+  max-width: 51.4375rem;
+}
+
 .popup__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1066,6 +1070,50 @@ body.lock-catalog-filter {
   text-decoration: underline;
   color: #1e6ba3;
   font-size: 0.75rem;
+}
+
+.popup__product {
+  padding: 1.875rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.popup__product-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.popup__product-content {
+  margin-top: 1.87rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.popup__product-content .product-card__info-list {
+  max-height: 14.0625rem;
+}
+
+.popup__product-btn {
+  margin-top: 1.25rem;
+  width: auto;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .custom-select-container ul {
@@ -2001,10 +2049,13 @@ table td button {
           align-items: center;
   font-size: 0.8125rem;
   gap: 0.62rem;
+  color: #94a3b8;
 }
 
 .form__hint::before {
   font-size: 1rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .form__file-btn {
@@ -3454,6 +3505,8 @@ table td button {
 
 .product__action.active {
   background: #f7ce46;
+  opacity: 1;
+  visibility: visible;
 }
 
 .product__price {
@@ -6372,10 +6425,6 @@ table td button {
   --gutter-y: 0.5rem;
 }
 
-.delivery__form .form__hint {
-  color: #94a3b8;
-}
-
 .delivery__text {
   margin-top: 1.25rem;
   color: #475569;
@@ -6527,6 +6576,13 @@ table td button {
 
   .popup__info-item:not(:last-child) {
     margin-bottom: 0.31rem;
+  }
+
+  .popup__product-header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 
   .custom-select-container {
@@ -7245,6 +7301,32 @@ table td button {
     max-width: 45.5rem;
   }
 
+  .popup__product-content {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .popup__product-content .product-card__info {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+  }
+
+  .popup__product-content .product-card__slider {
+    max-width: 21.875rem;
+  }
+
+  .popup__product-content .product-card__slider-main {
+    height: 21.875rem;
+  }
+
+  .popup__product-content .product-card__slide {
+    height: 21.875rem;
+  }
+
+  .popup__product-content .product-card__slider-video {
+    width: 5rem;
+  }
+
   .mobile-only {
     display: none !important;
   }
@@ -7682,6 +7764,23 @@ table td button {
 
   .breadcrumbs {
     padding: 1.91rem 0;
+  }
+
+  .popup__product-content {
+    -ms-grid-columns: 25rem 1fr;
+    grid-template-columns: 25rem 1fr;
+  }
+
+  .popup__product-content .product-card__slider {
+    max-width: 25rem;
+  }
+
+  .popup__product-content .product-card__slider-main {
+    height: 25rem;
+  }
+
+  .popup__product-content .product-card__slide {
+    height: 25rem;
   }
 
   .pc-none {

@@ -38,13 +38,13 @@
 	<meta property="twitter:image:src" content="/OG.png">
 	<!-- Twitter -->
 	<!-- plugnis -->
-	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240615192229">
-	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20240615192229">
-	<link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240615192229">
-	<link rel="stylesheet" href="css/libs/select2.min.css?_v=20240615192229">
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240615204045">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20240615204045">
+	<link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240615204045">
+	<link rel="stylesheet" href="css/libs/select2.min.css?_v=20240615204045">
 	<!-- plugnis -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20240615192229">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240615192229">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20240615204045">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240615204045">
 </head>
 
 <body>
@@ -614,6 +614,408 @@
 			<button type="submit" class="form__btn btn btn-primary">Выбрать</button>
 		</form>
 	</div>
+	<div id="callback" class="popup">
+		<div class="popup__header">
+			<h3 class="popup__title title-sm">Свяжитесь с нами</h3>
+			<button type="button" class="popup__close" data-fancybox-close></button>
+		</div>
+		<form action="#" class="popup__form form">
+			<div class="form__field">
+				<div class="form__label">Ваше имя *</div>
+				<input type="text" name="name" required placeholder="Имя" class="form__input">
+			</div>
+			<div class="form__field">
+				<div class="form__label">Телефон *</div>
+				<input type="tel" name="phone" required placeholder="+7" class="form__input">
+			</div>
+			<div class="form__field">
+				<div class="form__label">E-mail *</div>
+				<input type="email" name="e-mail" required placeholder="mail@example.ru" class="form__input">
+			</div>
+			<div class="form__field">
+				<div class="form__label">Сообщение</div>
+				<textarea name="message" class="form__textarea" placeholder="Дополнительная информация"></textarea>
+			</div>
+			<div class="form__field">
+				<label class="form__file">
+					<input type="file" name="attachment" class="form__file-input hidden" hidden>
+					<span class="form__file-btn btn btn-primary-outline icon-attach full-width">Загрузить</span>
+				</label>
+			</div>
+			<div class="form__hint icon-info"> Вы можете прикрепить файл к Вашему сообщению </div>
+			<button type="submit" class="form__btn btn btn-primary">Отправить</button>
+		</form>
+	</div>
+	<div id="product-fast" class="popup popup_xl">
+		<div class="popup__header">
+			<h3 class="popup__title title-sm">Быстрый просмотр</h3>
+			<button type="button" class="popup__close" data-fancybox-close></button>
+		</div>
+		<div class="popup__product">
+			<div class="popup__product-header">
+				<h2 class="popup__product-title title-sm"> Печь конвекционная UNOX XB693, пароконвектомат </h2>
+				<div class="product-card__info-actions">
+					<button type="button" aria-label="Сравнить" data-tooltip title="Добавить к сравнению" class="product-card__info-action icon-compare"></button>
+					<button type="button" aria-label="Добавить в избранное" data-tooltip title="Добавить в избранное" class="product-card__info-action icon-star"></button>
+					<button type="button" aria-label="Скачать характеристики" data-tooltip title="Скачать характеристики" class="product-card__info-action icon-doc"></button>
+				</div>
+			</div>
+			<div class="product-card__labels">
+				<div class="product-card__label label yellow">Новинка</div>
+				<div class="product-card__label label red">Распродажа</div>
+				<div class="product-card__label label green">Хит продаж</div>
+			</div>
+			<div class="popup__product-content">
+				<div class="product-card__slider">
+					<div class="product-card__slider-main swiper">
+						<div class="swiper-wrapper">
+							<a href="img/goods/09.png" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+								<img src="img/goods/09.png" alt="Товар">
+							</a>
+							<a href="img/goods/01.png" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+								<img src="img/goods/01.png" alt="Товар">
+							</a>
+							<a href="img/goods/02.png" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+								<img src="img/goods/02.png" alt="Товар">
+							</a>
+							<a href="img/goods/03.png" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+								<img src="img/goods/03.png" alt="Товар">
+							</a>
+						</div>
+					</div>
+					<div class="product-card__slider-bottom tablet-sm-only">
+						<a href="https://youtu.be/w0uLb_Db7gE?si=weGIHvXgT1Hncbf8" data-fancybox class="product-card__slider-video icon-play">
+							<img src="img/video-poster.jpg" class="cover-image" alt="Обложка видео">
+						</a>
+						<div class="product-card__thumbs swiper">
+							<div class="swiper-wrapper">
+								<div class="product-card__thumb swiper-slide">
+									<img src="img/goods/09.png" alt="Товар">
+								</div>
+								<div class="product-card__thumb swiper-slide">
+									<img src="img/goods/01.png" alt="Товар">
+								</div>
+								<div class="product-card__thumb swiper-slide">
+									<img src="img/goods/02.png" alt="Товар">
+								</div>
+								<div class="product-card__thumb swiper-slide">
+									<img src="img/goods/03.png" alt="Товар">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="product-card__slider-pagination swiper-pagination"></div>
+				</div>
+				<aside class="product-card__side">
+					<div class="product-card__side-main">
+						<div class="product-card__side-caption">Состояние товара</div>
+						<ul class="product-card__side-labels">
+							<a href="product.html" class="product-card__side-label product-card__side-label_active">Новый</a>
+							<a href="product-markdown.html" class="product-card__side-label">Уценка</a>
+							<a href="" class="product-card__side-label">Распродажа</a>
+						</ul>
+						<ul class="product-card__characteristics">
+							<li class="product-card__characteristics-item">
+								<div class="product-card__characteristics-name">Бренд</div>
+								<a href="" class="product-card__characteristics-value blue-color"><strong>UNOX</strong></a>
+							</li>
+							<li class="product-card__characteristics-item">
+								<div class="product-card__characteristics-name">Артикул товара</div>
+								<div class="product-card__characteristics-value">000000</div>
+							</li>
+							<li class="product-card__characteristics-item">
+								<div class="product-card__characteristics-name">Доставка по Москве и МО</div>
+								<div class="product-card__characteristics-value">Бесплатно</div>
+							</li>
+							<li class="product-card__characteristics-item">
+								<div class="product-card__characteristics-name">Онлайн просмотр</div>
+								<div class="product-card__characteristics-value">Да</div>
+							</li>
+							<li class="product-card__characteristics-item">
+								<div class="product-card__characteristics-name">Наличие на складе ПВЗ</div>
+								<a href="#select-stock" data-fancybox class="product-card__characteristics-value blue-color">Все склады</a>
+							</li>
+							<li class="product-card__characteristics-item">
+								<div class="product-card__characteristics-name">Наличие на складе</div>
+								<strong class="product-card__characteristics-value green-color text-uppercase">В наличии</strong>
+							</li>
+						</ul>
+					</div>
+					<div class="product-card__colors hidden">
+						<button class="product-card__back icon-chevron">Выбор цвета</button>
+						<div class="product-card__colors-slider swiper">
+							<div class="swiper-wrapper">
+								<label class="product-card__color swiper-slide">
+									<input type="radio" name="color" value="1" class="product-card__color-input hidden" hidden>
+									<span class="product-card__color-item">
+										<span class="product-card__color-visual" style="background-color: #E2D1B5;"></span>
+										<span class="product-card__color-name">Бежевый глянец</span>
+										<span class="product-card__color-code">RAL 1015</span>
+									</span>
+								</label>
+								<label class="product-card__color swiper-slide">
+									<input type="radio" name="color" checked value="2" class="product-card__color-input hidden" hidden>
+									<span class="product-card__color-item">
+										<span class="product-card__color-visual" style="background-color: #9AA1AA;"></span>
+										<span class="product-card__color-name">Серый металлик</span>
+										<span class="product-card__color-code">RAL 7040</span>
+									</span>
+								</label>
+								<label class="product-card__color swiper-slide">
+									<input type="radio" name="color" value="3" class="product-card__color-input hidden" hidden>
+									<span class="product-card__color-item">
+										<span class="product-card__color-visual" style="background-color: #F6C6C2;"></span>
+										<span class="product-card__color-name">Экотекст розовый</span>
+										<span class="product-card__color-code">3004</span>
+									</span>
+								</label>
+								<label class="product-card__color swiper-slide">
+									<input type="radio" name="color" value="4" class="product-card__color-input hidden" hidden>
+									<span class="product-card__color-item">
+										<span class="product-card__color-visual" style="background-color: #848387;"></span>
+										<span class="product-card__color-name">Серый муар</span>
+										<span class="product-card__color-code">RAL 7040</span>
+									</span>
+								</label>
+								<label class="product-card__color swiper-slide">
+									<input type="radio" name="color" value="5" class="product-card__color-input hidden" hidden>
+									<span class="product-card__color-item">
+										<span class="product-card__color-visual" style="background-color: #6EB3C2;"></span>
+										<span class="product-card__color-name">Экотекст голубой</span>
+										<span class="product-card__color-code">3005</span>
+									</span>
+								</label>
+								<label class="product-card__color swiper-slide">
+									<input type="radio" name="color" value="6" class="product-card__color-input hidden" hidden>
+									<span class="product-card__color-item">
+										<span class="product-card__color-visual" style="background-color: #44322E;"></span>
+										<span class="product-card__color-name">Темно коричнев</span>
+										<span class="product-card__color-code">RAL 8017</span>
+									</span>
+								</label>
+								<label class="product-card__color swiper-slide">
+									<input type="radio" name="color" value="7" class="product-card__color-input hidden" hidden>
+									<span class="product-card__color-item">
+										<span class="product-card__color-visual" style="background-color: #4F5259;"></span>
+										<span class="product-card__color-name">Графит муар</span>
+										<span class="product-card__color-code">RAL 7024</span>
+									</span>
+								</label>
+								<label class="product-card__color swiper-slide">
+									<input type="radio" name="color" value="8" class="product-card__color-input hidden" hidden>
+									<span class="product-card__color-item">
+										<span class="product-card__color-visual" style="background-color: #323232;"></span>
+										<span class="product-card__color-name">Черный муар</span>
+										<span class="product-card__color-code">RAL 7024</span>
+									</span>
+								</label>
+								<label class="product-card__color swiper-slide">
+									<input type="radio" name="color" value="9" class="product-card__color-input hidden" hidden>
+									<span class="product-card__color-item">
+										<span class="product-card__color-visual" style="background-color: #E2D1B5;"></span>
+										<span class="product-card__color-name">Бежевый глянец</span>
+										<span class="product-card__color-code">RAL 1015</span>
+									</span>
+								</label>
+								<label class="product-card__color swiper-slide">
+									<input type="radio" name="color" value="10" class="product-card__color-input hidden" hidden>
+									<span class="product-card__color-item">
+										<span class="product-card__color-visual" style="background-color: #F6C6C2;"></span>
+										<span class="product-card__color-name">Экотекст розовый</span>
+										<span class="product-card__color-code">3004</span>
+									</span>
+								</label>
+								<label class="product-card__color swiper-slide">
+									<input type="radio" name="color" value="11" class="product-card__color-input hidden" hidden>
+									<span class="product-card__color-item">
+										<span class="product-card__color-visual" style="background-color: #6EB3C2;"></span>
+										<span class="product-card__color-name">Экотекст голубой</span>
+										<span class="product-card__color-code">3005</span>
+									</span>
+								</label>
+								<label class="product-card__color swiper-slide">
+									<input type="radio" name="color" value="12" class="product-card__color-input hidden" hidden>
+									<span class="product-card__color-item">
+										<span class="product-card__color-visual" style="background-color: #4F5259;"></span>
+										<span class="product-card__color-name">Графит муар</span>
+										<span class="product-card__color-code">RAL 7024</span>
+									</span>
+								</label>
+							</div>
+						</div>
+						<div class="product-card__colors-controls">
+							<div class="swiper-button-prev product-card__colors-prev"></div>
+							<div class="product-card__colors-pagination"></div>
+							<div class="swiper-button-next product-card__colors-next"></div>
+						</div>
+					</div>
+					<div class="product-card__sizes hidden">
+						<button class="product-card__back icon-chevron">Выбор размера</button>
+						<div class="product-card__sizes-body">
+							<div class="form__field">
+								<label for="size-product-width" class="form__label" tabindex="-1">Ширина</label>
+								<select name="width" id="size-product-width">
+									<option selected value="860">860 мм</option>
+									<option value="1200">1200 мм</option>
+									<option value="2400">2400 мм</option>
+								</select>
+							</div>
+							<div class="form__field">
+								<label for="size-product-height" class="form__label" tabindex="-1">Высота</label>
+								<select name="height" id="size-product-height">
+									<option selected value="900">900 мм</option>
+									<option value="1200">1200 мм</option>
+									<option value="2400">2400 мм</option>
+								</select>
+							</div>
+							<div class="form__field">
+								<label for="size-product-deep" class="form__label" tabindex="-1">Глубина</label>
+								<select name="deep" id="size-product-deep">
+									<option selected value="930">930 мм</option>
+									<option value="1200">1200 мм</option>
+									<option value="2400">2400 мм</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="product-card__price">
+						<div class="product-card__price-old">322 703 ₽</div>
+						<div class="product-card__price-saving"> Экономия 91 202 ₽ </div>
+						<div class="product-card__price-current">
+							<strong>231 501</strong> ₽
+						</div>
+					</div>
+					<div class="product-card__more">
+						<a href="" class="product-card__more-btn icon-whatsapp"></a>
+						<a href="" class="product-card__more-btn icon-telegram"></a>
+						<a href="#callback" data-fancybox class="product-card__more-btn">Написать менеджеру</a>
+					</div>
+					<div class="product-card__footer">
+						<button type="button" class="product-card__cart btn btn-primary"> Добавить товар в корзину </button>
+						<div class="product-card__cart-actions hidden">
+							<div class="quantity-block">
+								<button type="button" class="quantity-block__down icon-minus-circle"></button>
+								<input type="number" name="quantity" class="quantity-block__input" value="0">
+								<button type="button" class="quantity-block__up icon-plus-circle"></button>
+							</div>
+							<a href="cart.html" class="product-card__cart-btn btn btn-primary icon-arrow-short">Корзина</a>
+						</div>
+					</div>
+					<button type="button" class="product-card__save-colors btn btn-primary btn-fullwidth hidden">Сохранить настройки</button>
+					<button type="button" class="product-card__save-sizes btn btn-primary btn-fullwidth hidden">Сохранить настройки</button>
+				</aside>
+				<div class="product-card__info">
+					<div class="product-card__info-header">
+						<div class="product-card__info-caption">Характеристики</div>
+					</div>
+					<ul class="product-card__info-list">
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Тип</div>
+							<div class="product-card__info-value"><a href="">Пароконвектомат</a></div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Цвет</div>
+							<div class="product-card__info-value">Серый металлик</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Мощность</div>
+							<div class="product-card__info-value">10.5 кВт</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Макс. температура нагрева</div>
+							<div class="product-card__info-value">260 °С</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Мин. температура нагрева</div>
+							<div class="product-card__info-value">50 °С</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Размеры </div>
+							<div class="product-card__info-value">860х900х930 мм</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Вес</div>
+							<div class="product-card__info-value">82.8 кг</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Гарантийный срок</div>
+							<div class="product-card__info-value">12 мес</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Страна-изготовитель</div>
+							<div class="product-card__info-value">Италия</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Цвет</div>
+							<div class="product-card__info-value">Серый металлик</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Мощность</div>
+							<div class="product-card__info-value">10.5 кВт</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Макс. температура нагрева</div>
+							<div class="product-card__info-value">260 °С</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Мин. температура нагрева</div>
+							<div class="product-card__info-value">50 °С</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Размеры</div>
+							<div class="product-card__info-value">860х900х930 мм</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Вес</div>
+							<div class="product-card__info-value">82.8 кг</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Гарантийный срок</div>
+							<div class="product-card__info-value">12 мес</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Страна-изготовитель</div>
+							<div class="product-card__info-value">Италия</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Цвет </div>
+							<div class="product-card__info-value">Серый металлик</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Мощность</div>
+							<div class="product-card__info-value">10.5 кВт</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Макс. температура нагрева</div>
+							<div class="product-card__info-value">260 °С</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Мин. температура нагрева</div>
+							<div class="product-card__info-value">50 °С</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Размеры</div>
+							<div class="product-card__info-value">860х900х930 мм</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Вес</div>
+							<div class="product-card__info-value">82.8 кг</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Гарантийный срок</div>
+							<div class="product-card__info-value">12 мес</div>
+						</li>
+						<li class="product-card__info-item">
+							<div class="product-card__info-name">Страна-изготовитель</div>
+							<div class="product-card__info-value">Италия</div>
+						</li>
+					</ul>
+					<button type="button" class="product-card__info-more icon-chevron"> Развернуть храктеристики </button>
+				</div>
+			</div>
+			<a href="" class="popup__product-btn btn btn-primary icon-arrow-short">Перейти к товару</a>
+		</div>
+	</div>
 	<div id="mobile-search" class="popup popup_full-width">
 		<div class="popup__header">
 			<input type="text" name="search" class="popup__header-search" placeholder="Начните писать">
@@ -659,9 +1061,9 @@
 									<img src="img/goods/01.png" alt="UNOX XB693">
 								</a>
 								<div class="product__actions">
-									<button type="button" class="product__action icon-eye">
+									<a href="#product-fast" data-fancybox class="product__action icon-eye">
 										<span>Быстрый просмотр</span>
-									</button>
+									</a>
 									<button type="button" class="product__action icon-star">
 										<span>Добавить в избранное</span>
 									</button>
@@ -722,9 +1124,9 @@
 									<img src="img/goods/02.png" alt="Abat ПКА 6-2/3П">
 								</a>
 								<div class="product__actions">
-									<button type="button" class="product__action icon-eye">
+									<a href="#product-fast" data-fancybox class="product__action icon-eye">
 										<span>Быстрый просмотр</span>
-									</button>
+									</a>
 									<button type="button" class="product__action icon-star">
 										<span>Добавить в избранное</span>
 									</button>
@@ -785,9 +1187,9 @@
 									<img src="img/goods/03.png" alt="UNOX XFT 133">
 								</a>
 								<div class="product__actions">
-									<button type="button" class="product__action icon-eye">
+									<a href="#product-fast" data-fancybox class="product__action icon-eye">
 										<span>Быстрый просмотр</span>
-									</button>
+									</a>
 									<button type="button" class="product__action icon-star">
 										<span>Добавить в избранное</span>
 									</button>
@@ -849,9 +1251,9 @@
 									<img src="img/goods/04.png" alt="UNOX XEBC-06EU-E1RM">
 								</a>
 								<div class="product__actions">
-									<button type="button" class="product__action icon-eye">
+									<a href="#product-fast" data-fancybox class="product__action icon-eye">
 										<span>Быстрый просмотр</span>
-									</button>
+									</a>
 									<button type="button" class="product__action icon-star">
 										<span>Добавить в избранное</span>
 									</button>
@@ -912,9 +1314,9 @@
 									<img src="img/goods/05.png" alt="UNOX XF 023 Anna">
 								</a>
 								<div class="product__actions">
-									<button type="button" class="product__action icon-eye">
+									<a href="#product-fast" data-fancybox class="product__action icon-eye">
 										<span>Быстрый просмотр</span>
-									</button>
+									</a>
 									<button type="button" class="product__action icon-star">
 										<span>Добавить в избранное</span>
 									</button>
@@ -975,9 +1377,9 @@
 									<img src="img/goods/06.png" alt="Steba DG 40">
 								</a>
 								<div class="product__actions">
-									<button type="button" class="product__action icon-eye">
+									<a href="#product-fast" data-fancybox class="product__action icon-eye">
 										<span>Быстрый просмотр</span>
-									</button>
+									</a>
 									<button type="button" class="product__action icon-star">
 										<span>Добавить в избранное</span>
 									</button>
@@ -1033,9 +1435,9 @@
 									<img src="img/goods/07.png" alt="Steba DG 40">
 								</a>
 								<div class="product__actions">
-									<button type="button" class="product__action icon-eye">
+									<a href="#product-fast" data-fancybox class="product__action icon-eye">
 										<span>Быстрый просмотр</span>
-									</button>
+									</a>
 									<button type="button" class="product__action icon-star">
 										<span>Добавить в избранное</span>
 									</button>
@@ -1095,9 +1497,9 @@
 									<img src="img/goods/08.png" alt="436 040">
 								</a>
 								<div class="product__actions">
-									<button type="button" class="product__action icon-eye">
+									<a href="#product-fast" data-fancybox class="product__action icon-eye">
 										<span>Быстрый просмотр</span>
-									</button>
+									</a>
 									<button type="button" class="product__action icon-star">
 										<span>Добавить в избранное</span>
 									</button>
@@ -1158,9 +1560,9 @@
 									<img src="img/goods/06.png" alt="Steba DG 40">
 								</a>
 								<div class="product__actions">
-									<button type="button" class="product__action icon-eye">
+									<a href="#product-fast" data-fancybox class="product__action icon-eye">
 										<span>Быстрый просмотр</span>
-									</button>
+									</a>
 									<button type="button" class="product__action icon-star">
 										<span>Добавить в избранное</span>
 									</button>
@@ -1251,15 +1653,15 @@
 			</div>
 		</div>
 	</div> <!-- plugnis -->
-	<script src="js/libs/jquery-3.7.1.min.js?_v=20240615192229"></script>
-	<script src="js/libs/swiper-bundle.min.js?_v=20240615192229"></script>
-	<script src="js/libs/fancybox.umd.js?_v=20240615192229"></script>
-	<script src="js/libs/nouislider.min.js?_v=20240615192229"></script>
-	<script src="js/libs/select2.full.min.js?_v=20240615192229"></script>
-	<script src="js/libs/jquery.validate.min.js?_v=20240615192229"></script>
-	<script src="js/libs/messages_ru.min.js?_v=20240615192229"></script>
+	<script src="js/libs/jquery-3.7.1.min.js?_v=20240615204045"></script>
+	<script src="js/libs/swiper-bundle.min.js?_v=20240615204045"></script>
+	<script src="js/libs/fancybox.umd.js?_v=20240615204045"></script>
+	<script src="js/libs/nouislider.min.js?_v=20240615204045"></script>
+	<script src="js/libs/select2.full.min.js?_v=20240615204045"></script>
+	<script src="js/libs/jquery.validate.min.js?_v=20240615204045"></script>
+	<script src="js/libs/messages_ru.min.js?_v=20240615204045"></script>
 	<!-- plugnis -->
-	<script src="js/app.min.js?_v=20240615192229"></script>
+	<script src="js/app.min.js?_v=20240615204045"></script>
 </body>
 
 </html>

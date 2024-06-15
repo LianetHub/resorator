@@ -77,6 +77,222 @@
     </form>
 
 </div>
+<div id="callback" class="popup">
+    <div class="popup__header">
+        <h3 class="popup__title title-sm">Свяжитесь с нами</h3>
+        <button type="button" class="popup__close" data-fancybox-close></button>
+    </div>
+
+    <form action="#" class="popup__form form">
+        <div class="form__field">
+            <div class="form__label">Ваше имя *</div>
+            <input type="text" name="name" required placeholder="Имя" class="form__input">
+        </div>
+        <div class="form__field">
+            <div class="form__label">Телефон *</div>
+            <input type="tel" name="phone" required placeholder="+7" class="form__input">
+        </div>
+        <div class="form__field">
+            <div class="form__label">E-mail *</div>
+            <input type="email" name="e-mail" required placeholder="mail@example.ru" class="form__input">
+        </div>
+        <div class="form__field">
+            <div class="form__label">Сообщение</div>
+            <textarea name="message" class="form__textarea" placeholder="Дополнительная информация"></textarea>
+        </div>
+        <div class="form__field">
+            <label class="form__file">
+                <input type="file" name="attachment" class="form__file-input hidden" hidden>
+                <span class="form__file-btn btn btn-primary-outline icon-attach full-width">Загрузить</span>
+            </label>
+        </div>
+        <div class="form__hint icon-info">
+            Вы можете прикрепить файл к Вашему сообщению
+        </div>
+        <button type="submit" class="form__btn btn btn-primary">Отправить</button>
+    </form>
+
+</div>
+<div id="product-fast" class="popup popup_xl">
+    <div class="popup__header">
+        <h3 class="popup__title title-sm">Быстрый просмотр</h3>
+        <button type="button" class="popup__close" data-fancybox-close></button>
+    </div>
+    <div class="popup__product">
+        <div class="popup__product-header">
+            <h2 class="popup__product-title title-sm">
+                Печь конвекционная UNOX XB693, пароконвектомат
+            </h2>
+            <div class="product-card__info-actions">
+                <button type="button" aria-label="Сравнить" data-tooltip title="Добавить к сравнению" class="product-card__info-action icon-compare"></button>
+                <button type="button" aria-label="Добавить в избранное" data-tooltip title="Добавить в избранное" class="product-card__info-action icon-star"></button>
+                <button type="button" aria-label="Скачать характеристики" data-tooltip title="Скачать характеристики" class="product-card__info-action icon-doc"></button>
+            </div>
+        </div>
+        <div class="product-card__labels">
+            <div class="product-card__label label yellow">Новинка</div>
+            <div class="product-card__label label red">Распродажа</div>
+            <div class="product-card__label label green">Хит продаж</div>
+        </div>
+        <div class="popup__product-content">
+            <div class="product-card__slider">
+                <div class="product-card__slider-main swiper">
+                    <div class="swiper-wrapper">
+                        <a href="@img/goods/09.png" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+                            <img src="@img/goods/09.png" alt="Товар">
+                        </a>
+                        <a href="@img/goods/01.png" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+                            <img src="@img/goods/01.png" alt="Товар">
+                        </a>
+                        <a href="@img/goods/02.png" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+                            <img src="@img/goods/02.png" alt="Товар">
+                        </a>
+                        <a href="@img/goods/03.png" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+                            <img src="@img/goods/03.png" alt="Товар">
+                        </a>
+                    </div>
+                </div>
+                <div class="product-card__slider-bottom tablet-sm-only">
+                    <a href="https://youtu.be/w0uLb_Db7gE?si=weGIHvXgT1Hncbf8" data-fancybox class="product-card__slider-video icon-play">
+                        <img src="@img/video-poster.jpg" class="cover-image" alt="Обложка видео">
+                    </a>
+                    <div class="product-card__thumbs swiper">
+                        <div class="swiper-wrapper">
+                            <div class="product-card__thumb swiper-slide">
+                                <img src="@img/goods/09.png" alt="Товар">
+                            </div>
+                            <div class="product-card__thumb swiper-slide">
+                                <img src="@img/goods/01.png" alt="Товар">
+                            </div>
+                            <div class="product-card__thumb swiper-slide">
+                                <img src="@img/goods/02.png" alt="Товар">
+                            </div>
+                            <div class="product-card__thumb swiper-slide">
+                                <img src="@img/goods/03.png" alt="Товар">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card__slider-pagination swiper-pagination"></div>
+            </div>
+            @@include('_product-card-side.html', {
+            "active": 1
+            })
+            <div class="product-card__info">
+                <div class="product-card__info-header">
+                    <div class="product-card__info-caption">Характеристики</div>
+                </div>
+                <ul class="product-card__info-list">
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Тип</div>
+                        <div class="product-card__info-value"><a href="">Пароконвектомат</a></div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Цвет</div>
+                        <div class="product-card__info-value">Серый металлик</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Мощность</div>
+                        <div class="product-card__info-value">10.5 кВт</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Макс. температура нагрева</div>
+                        <div class="product-card__info-value">260 °С</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Мин. температура нагрева</div>
+                        <div class="product-card__info-value">50 °С</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Размеры </div>
+                        <div class="product-card__info-value">860х900х930 мм</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Вес</div>
+                        <div class="product-card__info-value">82.8 кг</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Гарантийный срок</div>
+                        <div class="product-card__info-value">12 мес</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Страна-изготовитель</div>
+                        <div class="product-card__info-value">Италия</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Цвет</div>
+                        <div class="product-card__info-value">Серый металлик</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Мощность</div>
+                        <div class="product-card__info-value">10.5 кВт</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Макс. температура нагрева</div>
+                        <div class="product-card__info-value">260 °С</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Мин. температура нагрева</div>
+                        <div class="product-card__info-value">50 °С</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Размеры</div>
+                        <div class="product-card__info-value">860х900х930 мм</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Вес</div>
+                        <div class="product-card__info-value">82.8 кг</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Гарантийный срок</div>
+                        <div class="product-card__info-value">12 мес</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Страна-изготовитель</div>
+                        <div class="product-card__info-value">Италия</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Цвет </div>
+                        <div class="product-card__info-value">Серый металлик</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Мощность</div>
+                        <div class="product-card__info-value">10.5 кВт</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Макс. температура нагрева</div>
+                        <div class="product-card__info-value">260 °С</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Мин. температура нагрева</div>
+                        <div class="product-card__info-value">50 °С</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Размеры</div>
+                        <div class="product-card__info-value">860х900х930 мм</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Вес</div>
+                        <div class="product-card__info-value">82.8 кг</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Гарантийный срок</div>
+                        <div class="product-card__info-value">12 мес</div>
+                    </li>
+                    <li class="product-card__info-item">
+                        <div class="product-card__info-name">Страна-изготовитель</div>
+                        <div class="product-card__info-value">Италия</div>
+                    </li>
+                </ul>
+                <button type="button" class="product-card__info-more icon-chevron">
+                    Развернуть храктеристики
+                </button>
+            </div>
+        </div>
+        <a href="" class="popup__product-btn btn btn-primary icon-arrow-short">Перейти к товару</a>
+    </div>
+
+</div>
 <div id="mobile-search" class="popup popup_full-width">
     <div class="popup__header">
         <input type="text" name="search" class="popup__header-search" placeholder="Начните писать">
