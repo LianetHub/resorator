@@ -17,6 +17,8 @@ $(function () {
     $(document).on('click', function (e) {
         let $target = $(e.target);
 
+        console.log($target);
+
 
         // open mobile menu
         if ($target[0].closest('.menu-toggler')) {
@@ -563,7 +565,7 @@ $(function () {
 
 
 
-    // sliders 
+    // sliders
 
     if ($(".companies__slider").length > 0) {
         $(".companies__slider").each((function (index, slider) {
@@ -975,7 +977,7 @@ $(function () {
     //     return this.optional(element) || iti.isValidNumber();
     // }, "Пожалуйста, введите корректный номер телефона");
 
-    // push 
+    // push
     $('input[name="push"]').on('input', function () {
         this.value = this.value.replace(/\D/g, '');
     });
