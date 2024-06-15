@@ -157,13 +157,53 @@
 		color: $darkBlue;
 		font-size: 0.8125rem;
 	}
+	// .delivery__contacts
+	&__contacts {
+		margin-top: rem(30);
+		color: $darkBlue;
+	}
+	// .delivery__contacts-caption
+	&__contacts-caption {
+		font-size: 1.125rem;
+		font-weight: 600;
+	}
+	// .delivery__contacts-list
+	&__contacts-list {
+		margin-top: 1.25rem;
+		font-size: 0.875rem;
+		font-weight: 600;
+	}
+	// .delivery__contacts-item
+	&__contacts-item {
+		&:not(:last-child) {
+			margin-bottom: 0.62rem;
+		}
+	}
+	// .delivery__contacts-link
+	&__contacts-link {
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellow;
+			}
+		}
+	}
 	// .delivery__feedback
 	&__feedback {
 		border-radius: 0.3125rem;
-		background: $lightBg;
+		background-color: $lightBg;
 		padding: 1.25rem;
+
 		@media (min-width: $md5) {
 			padding: 1.88rem;
+		}
+		@media (min-width: $md3) {
+			background-image: url("@img/delivery-decor.svg");
+			background-repeat: no-repeat;
+			background-position: 30% bottom;
+		}
+		@media (min-width: $md2) {
+			background-position: 35% bottom;
 		}
 		.row {
 			--gutter-y: 2rem;
@@ -186,6 +226,9 @@
 		line-height: 120%;
 		& > *:not(:last-child) {
 			margin-bottom: 1.25rem;
+		}
+		& p {
+			text-align: justify;
 		}
 		& ul {
 			list-style: disc;

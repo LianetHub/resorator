@@ -15,10 +15,10 @@
 }
 
 @font-face {
-  font-family: "icons";
+  font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -31,10 +31,10 @@
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "icons";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -49,16 +49,16 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -6405,9 +6405,34 @@ table td button {
   font-size: 0.8125rem;
 }
 
+.delivery__contacts {
+  margin-top: 1.875rem;
+  color: #475569;
+}
+
+.delivery__contacts-caption {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.delivery__contacts-list {
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.delivery__contacts-item:not(:last-child) {
+  margin-bottom: 0.62rem;
+}
+
+.delivery__contacts-link {
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
 .delivery__feedback {
   border-radius: 0.3125rem;
-  background: #f2f5f9;
+  background-color: #f2f5f9;
   padding: 1.25rem;
 }
 
@@ -6434,6 +6459,10 @@ table td button {
 
 .delivery__text > *:not(:last-child) {
   margin-bottom: 1.25rem;
+}
+
+.delivery__text p {
+  text-align: justify;
 }
 
 .delivery__text ul {
@@ -8161,6 +8190,12 @@ table td button {
   .brands__names {
     grid-template-columns: repeat(auto-fill, minmax(14.3rem, 1fr));
   }
+
+  .delivery__feedback {
+    background-image: url("../img/delivery-decor.svg");
+    background-repeat: no-repeat;
+    background-position: 30% bottom;
+  }
 }
 
 @media (min-width: 992px) {
@@ -8496,6 +8531,10 @@ table td button {
 
   .delivery {
     padding: 0em 0em 1.87rem 0em;
+  }
+
+  .delivery__feedback {
+    background-position: 35% bottom;
   }
 }
 
@@ -9612,6 +9651,10 @@ table td button {
     -webkit-transform: scale(1.015);
         -ms-transform: scale(1.015);
             transform: scale(1.015);
+  }
+
+  .delivery__contacts-link:hover {
+    color: #f7ce46;
   }
 }
 
