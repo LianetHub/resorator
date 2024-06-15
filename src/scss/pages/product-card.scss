@@ -410,7 +410,7 @@
 		&:checked {
 			& + .product-card__color-item {
 				.product-card__color-visual {
-					border: rem(2) solid $dark;
+					border: rem(2) solid $yellow;
 					box-shadow: inset 0 0 0 rem(2) #fff;
 				}
 			}
@@ -490,6 +490,13 @@
 	&__info-value {
 		order: 1;
 		flex-shrink: 0;
+	}
+	// .product-card__sideber
+	&__sidebar {
+		border-radius: 0.3125rem;
+		border: rem(1) solid $lightGray;
+		background: $lightBg;
+		padding: 1.87rem;
 	}
 	// .product-card__side
 	&__side {
@@ -663,6 +670,9 @@
 		margin-top: 1.25rem;
 		display: flex;
 		gap: 0.63rem;
+		& + .product-card__cart {
+			margin-top: rem(20);
+		}
 	}
 	// .product-card__more-btn
 	&__more-btn {

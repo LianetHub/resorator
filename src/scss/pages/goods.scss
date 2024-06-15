@@ -27,10 +27,16 @@
 			order: 0;
 			position: sticky;
 			top: 1rem;
+			&.goods__sidebar_lg {
+				flex: 0 0 rem(480);
+			}
 		}
 	}
 	// .goods__sidebar-list
 	&__sidebar-list {
+		& + .banners__item {
+			margin-top: rem(20);
+		}
 	}
 	// .goods__sidebar-item
 	&__sidebar-item {
