@@ -392,6 +392,27 @@
 	&__block-body {
 		margin-top: 1.25rem;
 	}
+	// .purchase__buyer
+	&__buyer {
+		border-radius: 0.3125rem;
+		border: rem(1) solid $lightGray;
+		background: $lightBg;
+		padding: 1.88rem;
+		color: $darkBlue;
+	}
+	// .purchase__buyer-title
+	&__buyer-title {
+	}
+	// .purchase__buyer-reqs
+	&__buyer-reqs {
+		margin-top: 1.25rem;
+		font-size: 0.875rem;
+	}
+	// .purchase__buyer-address
+	&__buyer-address {
+		margin-top: 0.63rem;
+		font-size: 0.875rem;
+	}
 	// .purchase__caption
 	&__caption {
 	}

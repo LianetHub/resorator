@@ -521,6 +521,11 @@
 		border: rem(1) solid $lightGray;
 		background: $lightBg;
 		padding: 1.87rem;
+		transition: opacity 0.3s ease 0s;
+		&.fade-in-out {
+			pointer-events: none;
+			opacity: 0;
+		}
 	}
 	// .product-card__side-caption
 	&__side-caption {

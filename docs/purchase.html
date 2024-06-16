@@ -38,13 +38,13 @@
 	<meta property="twitter:image:src" content="/OG.png">
 	<!-- Twitter -->
 	<!-- plugnis -->
-	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240616174007">
-	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20240616174007">
-	<link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240616174007">
-	<link rel="stylesheet" href="css/libs/select2.min.css?_v=20240616174007">
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240616181407">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20240616181407">
+	<link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240616181407">
+	<link rel="stylesheet" href="css/libs/select2.min.css?_v=20240616181407">
 	<!-- plugnis -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20240616174007">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240616174007">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20240616181407">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240616181407">
 </head>
 
 <body>
@@ -213,7 +213,7 @@
 								<div class="cart__purchase purchase">
 									<div class="purchase__tabs" data-underline-filters>
 										<button type="button" class="purchase__tab active" data-underline-filter>Физическое лицо</button>
-										<button type="button" class="purchase__tab active" data-underline-filter>Юридическое лицо</button>
+										<button type="button" class="purchase__tab" data-underline-filter>Юридическое лицо</button>
 									</div>
 									<div class="purchase__body">
 										<div class="purchase__content active">
@@ -336,6 +336,102 @@
 															<div class="form__field">
 																<div class="form__label">Отчество</div>
 																<input type="text" name="parentname" placeholder="Ваше отчество" class="form__input">
+															</div>
+														</div>
+														<div class="col-sm-6">
+															<div class="form__field">
+																<div class="form__label">Телефон для связи*</div>
+																<input type="tel" name="phone" placeholder="+7" class="form__input">
+															</div>
+														</div>
+														<div class="col-sm-6">
+															<div class="form__field">
+																<div class="form__label">Дополнительный телефон</div>
+																<input type="tel" name="second-phone" placeholder="+7" class="form__input">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="purchase__content">
+											<div class="purchase__block">
+												<div class="purchase__caption title-sm"> Способ оплаты </div>
+												<div class="purchase__options">
+													<label class="purchase__option option">
+														<input type="radio" name="payment" checked value="online" class="option__input hidden" hidden>
+														<span class="option__content">
+															<span class="purchase__option-caption">С расчетного счета</span>
+														</span>
+													</label>
+												</div>
+												<div class="purchase__options">
+													<label class="purchase__option option">
+														<input type="radio" name="payment" value="credit" class="option__input hidden" hidden>
+														<span class="option__content">
+															<span class="purchase__option-caption">Купить в лизинг (от 500 000)</span>
+														</span>
+													</label>
+												</div>
+											</div>
+											<div class="purchase__block">
+												<div class="purchase__caption title-sm"> Адрес доставки </div>
+												<div class="purchase__block-body">
+													<div class="row">
+														<div class="col-md-4 col-sm-6">
+															<div class="form__field">
+																<div class="form__label">Город *</div>
+																<input type="text" name="city" placeholder="Укажите город" class="form__input">
+															</div>
+														</div>
+														<div class="col-md-4 col-sm-6">
+															<div class="form__field">
+																<div class="form__label">Улица*</div>
+																<input type="text" name="street" placeholder="Укажите улицу" class="form__input">
+															</div>
+														</div>
+														<div class="col-md-4 col-sm-6">
+															<div class="form__field">
+																<div class="form__label">Дом*</div>
+																<input type="text" name="street" placeholder="Укажите дом" class="form__input">
+															</div>
+														</div>
+														<div class="col-md-4 col-sm-6">
+															<div class="form__field">
+																<div class="form__label">Квартира/Офис</div>
+																<input type="text" name="office" placeholder="Квартира/Офис" class="form__input">
+															</div>
+														</div>
+														<div class="col-md-4 col-sm-6">
+															<div class="form__field">
+																<div class="form__label">Подъезд</div>
+																<input type="text" name="entrance" placeholder="Квартира/Офис" class="form__input">
+															</div>
+														</div>
+														<div class="col-md-4 col-sm-6">
+															<div class="form__field">
+																<div class="form__label">Этаж</div>
+																<input type="text" name="floor" placeholder="Этаж" class="form__input">
+															</div>
+														</div>
+														<div class="col-12">
+															<div class="form__field">
+																<div class="form__label">Комментарий</div>
+																<textarea name="comment" class="form__textarea" placeholder="Вы можете указать ваш комментарий, например, наличие лифта, код домофона и т.п."></textarea>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="purchase__block">
+												<div class="purchase__caption title-sm"> Покупатель </div>
+												<div class="purchase__block-body">
+													<div class="row sm-offsets">
+														<div class="col-12">
+															<div class="purchase__buyer">
+																<div class="purchase__buyer-title title-sm">ООО “Пример”</div>
+																<div class="purchase__buyer-reqs"> ИНН: 3664069397 КПП: 366601001 </div>
+																<address class="purchase__buyer-address">Воронежская обл, г.о. город Воронеж, г Воронеж, ул Средне-Московская, д. 7/9, помещ. 1/1</address>
 															</div>
 														</div>
 														<div class="col-sm-6">
@@ -2010,15 +2106,15 @@
 			</div>
 		</div>
 	</div> <!-- plugnis -->
-	<script src="js/libs/jquery-3.7.1.min.js?_v=20240616174007"></script>
-	<script src="js/libs/swiper-bundle.min.js?_v=20240616174007"></script>
-	<script src="js/libs/fancybox.umd.js?_v=20240616174007"></script>
-	<script src="js/libs/nouislider.min.js?_v=20240616174007"></script>
-	<script src="js/libs/select2.full.min.js?_v=20240616174007"></script>
-	<script src="js/libs/jquery.validate.min.js?_v=20240616174007"></script>
-	<script src="js/libs/messages_ru.min.js?_v=20240616174007"></script>
+	<script src="js/libs/jquery-3.7.1.min.js?_v=20240616181407"></script>
+	<script src="js/libs/swiper-bundle.min.js?_v=20240616181407"></script>
+	<script src="js/libs/fancybox.umd.js?_v=20240616181407"></script>
+	<script src="js/libs/nouislider.min.js?_v=20240616181407"></script>
+	<script src="js/libs/select2.full.min.js?_v=20240616181407"></script>
+	<script src="js/libs/jquery.validate.min.js?_v=20240616181407"></script>
+	<script src="js/libs/messages_ru.min.js?_v=20240616181407"></script>
 	<!-- plugnis -->
-	<script src="js/app.min.js?_v=20240616174007"></script>
+	<script src="js/app.min.js?_v=20240616181407"></script>
 </body>
 
 </html>

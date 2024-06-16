@@ -1,24 +1,24 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DinPro";
-  font-display: swap;
   src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "icons";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -33,16 +33,24 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
   src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "icons";
+  font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -51,14 +59,6 @@
   font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -4361,6 +4361,13 @@ table td button {
   border: 0.0625rem solid #f1f2f4;
   background: #f2f5f9;
   padding: 1.87rem;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+
+.product-card__side.fade-in-out {
+  pointer-events: none;
+  opacity: 0;
 }
 
 .product-card__side-caption {
@@ -6327,8 +6334,29 @@ table td button {
   display: none;
 }
 
+.brands__alphabet.active.brands__alphabet-english {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.brands__alphabet.active.brands__alphabet-russian {
+  display: none;
+}
+
+.brands__alphabet.brands__alphabet-english {
+  display: none;
+}
+
+.brands__alphabet.brands__alphabet-russian {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .brands__alphabet-item {
   font-size: 1.3125rem;
+  text-transform: uppercase;
 }
 
 .brands__actions {
@@ -6336,6 +6364,12 @@ table td button {
   display: -ms-flexbox;
   display: flex;
   gap: 0.62rem;
+}
+
+.brands__actions-item {
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+  text-transform: uppercase;
 }
 
 .brands__actions-input:checked + .brands__actions-btn {
@@ -6378,11 +6412,6 @@ table td button {
   font-size: 0.875rem;
   font-weight: 600;
   padding-inline: 1rem;
-}
-
-.brands__alphabet-item {
-  -webkit-transition: color 0.3s ease 0s;
-  transition: color 0.3s ease 0s;
 }
 
 .brands__grid {
@@ -7081,6 +7110,24 @@ table td button {
 
 .purchase__block-body {
   margin-top: 1.25rem;
+}
+
+.purchase__buyer {
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #f1f2f4;
+  background: #f2f5f9;
+  padding: 1.88rem;
+  color: #475569;
+}
+
+.purchase__buyer-reqs {
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.purchase__buyer-address {
+  margin-top: 0.63rem;
+  font-size: 0.875rem;
 }
 
 .purchase__options {
@@ -10431,7 +10478,7 @@ table td button {
     text-decoration: underline;
   }
 
-  .brands__alphabet-item:hover {
+  .brands__actions-item:hover {
     color: #f7ce46;
   }
 

@@ -155,32 +155,50 @@ $(function () {
 
         // get visible color palette on product page
         if ($target.hasClass('product-card__info-color')) {
-            $('.product-card__side-main').addClass('hidden');
-            $('.product-card__footer').addClass('hidden');
-            $('.product-card__colors').removeClass('hidden');
-            $('.product-card__save-colors').removeClass('hidden');
-            $('.product-card__sizes').addClass('hidden');
-            $('.product-card__save-sizes').addClass('hidden');
+            $('.product-card__side').removeClass('fade-in-out');
+            $('.product-card__side').addClass('fade-in-out');
+            setTimeout(() => {
+                $('.product-card__side').removeClass('fade-in-out')
+                $('.product-card__side-main').addClass('hidden');
+                $('.product-card__footer').addClass('hidden');
+                $('.product-card__colors').removeClass('hidden');
+                $('.product-card__save-colors').removeClass('hidden');
+                $('.product-card__sizes').addClass('hidden');
+                $('.product-card__save-sizes').addClass('hidden');
+            }, 300)
+
         }
 
         // get visible size choising on product page
         if ($target.hasClass('product-card__info-size')) {
-            $('.product-card__side-main').addClass('hidden');
-            $('.product-card__footer').addClass('hidden');
-            $('.product-card__colors').addClass('hidden');
-            $('.product-card__save-colors').addClass('hidden');
-            $('.product-card__sizes').removeClass('hidden');
-            $('.product-card__save-sizes').removeClass('hidden');
+            $('.product-card__side').removeClass('fade-in-out');
+            $('.product-card__side').addClass('fade-in-out');
+            setTimeout(() => {
+                $('.product-card__side').removeClass('fade-in-out')
+                $('.product-card__side-main').addClass('hidden');
+                $('.product-card__footer').addClass('hidden');
+                $('.product-card__colors').addClass('hidden');
+                $('.product-card__save-colors').addClass('hidden');
+                $('.product-card__sizes').removeClass('hidden');
+                $('.product-card__save-sizes').removeClass('hidden');
+            }, 300)
+
         }
 
         // get default state side on product page
         if ($target.hasClass('product-card__save-colors') || $target.hasClass('product-card__back') || $target.hasClass('product-card__save-sizes')) {
-            $('.product-card__side-main').removeClass('hidden');
-            $('.product-card__footer').removeClass('hidden');
-            $('.product-card__colors').addClass('hidden');
-            $('.product-card__save-colors').addClass('hidden');
-            $('.product-card__sizes').addClass('hidden');
-            $('.product-card__save-sizes').addClass('hidden');
+            $('.product-card__side').removeClass('fade-in-out');
+            $('.product-card__side').addClass('fade-in-out');
+            setTimeout(() => {
+                $('.product-card__side').removeClass('fade-in-out')
+                $('.product-card__side-main').removeClass('hidden');
+                $('.product-card__footer').removeClass('hidden');
+                $('.product-card__colors').addClass('hidden');
+                $('.product-card__save-colors').addClass('hidden');
+                $('.product-card__sizes').addClass('hidden');
+                $('.product-card__save-sizes').addClass('hidden');
+            }, 300)
+
         }
 
         // accordion on delivery page
@@ -217,6 +235,7 @@ $(function () {
             }
         }
 
+        // get sidebar on tablet - categories page
         if ($target.hasClass('goods__sidebar-filter')) {
             $target.toggleClass('active');
             $('.goods__sidebar-content').slideToggle()
@@ -267,9 +286,15 @@ $(function () {
             $target.closest('.cart__item').remove();
         }
 
+        // close profit sale - cart page
         if ($target.is('.btn-profit-cart')) {
             $target.toggleClass('closed');
             $('.cart__sidebar-profits').slideToggle()
+        }
+
+        // cart purchase tabs
+        if ($target.is('.purchase__tab')) {
+            $('.purchase__content').eq($target.index()).addClass('active').siblings().removeClass('active');
         }
 
     });
@@ -432,9 +457,9 @@ $(function () {
     // get visible alphabet nav on brand page
     $('[name="alphabet"]').on('change', function (e) {
         if (e.target.checked) {
-            $('.brands__alphabet').removeClass('hidden');
+            $('.brands__alphabet').addClass('active');
         } else {
-            $('.brands__alphabet').addClass('hidden');
+            $('.brands__alphabet').removeClass('active');
         }
     });
 
