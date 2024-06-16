@@ -25,24 +25,8 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
   src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
   font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -57,8 +41,24 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -5913,6 +5913,29 @@ table td button {
   border: 0.0625rem solid #e8e8e8;
 }
 
+.goods__sidebar.goods__sidebar_lg {
+  display: none;
+}
+
+.goods__sidebar.goods__sidebar_lg .goods__sidebar-list {
+  padding: 1.875rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #e8e8e8;
+}
+
+.goods__sidebar.goods__sidebar_lg .goods__sidebar-category {
+  padding-left: 0rem;
+  font-size: 0.875rem;
+}
+
+.goods__sidebar.goods__sidebar_lg .goods__sidebar-category:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.goods__sidebar.goods__sidebar_lg .goods__sidebar-item:not(:last-child) {
+  margin-bottom: 1.88rem;
+}
+
 .goods__sidebar-list + .banners__item {
   margin-top: 1.25rem;
 }
@@ -6014,19 +6037,72 @@ table td button {
   margin-top: 1.88rem;
 }
 
+.goods__category {
+  display: none;
+}
+
 .goods__category:not(:last-child) {
   margin-bottom: 1.88rem;
+}
+
+.goods__category.active {
+  display: block;
 }
 
 .goods__title {
   font-family: "DinPro";
   font-weight: 700;
   line-height: 100%;
-  color: #475569;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.goods__grid {
+  margin-top: 1.88rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 1.25rem;
+  row-gap: 0.625rem;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.goods__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.625rem;
+  text-align: center;
+}
+
+.goods__card-image {
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
+.goods__card-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.goods__card-name {
+  color: #475569;
+  font-size: 0.8125rem;
+  font-weight: 600;
 }
 
 .goods__body {
@@ -8439,28 +8515,10 @@ table td button {
   }
 
   .goods__sidebar.goods__sidebar_lg {
+    display: block;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 30rem;
-            flex: 0 0 30rem;
-  }
-
-  .goods__sidebar.goods__sidebar_lg .goods__sidebar-list {
-    padding: 1.875rem;
-    border-radius: 0.3125rem;
-    border: 0.0625rem solid #e8e8e8;
-  }
-
-  .goods__sidebar.goods__sidebar_lg .goods__sidebar-category {
-    padding-left: 0rem;
-    font-size: 0.875rem;
-  }
-
-  .goods__sidebar.goods__sidebar_lg .goods__sidebar-category:not(:last-child) {
-    margin-bottom: 1.25rem;
-  }
-
-  .goods__sidebar.goods__sidebar_lg .goods__sidebar-item:not(:last-child) {
-    margin-bottom: 1.88rem;
+        -ms-flex: 0 0 20rem;
+            flex: 0 0 20rem;
   }
 
   .goods__sidebar-item:not(:last-child) {
@@ -8527,20 +8585,12 @@ table td button {
     border-left: 0.0625rem solid #e8e8e8;
   }
 
-  .goods__category {
-    display: none;
-  }
-
   .goods__category:not(:last-child) {
     margin-bottom: 0;
   }
 
-  .goods__category.active {
-    display: block;
-  }
-
   .goods__title {
-    font-size: 1.5rem;
+    color: #475569;
     color: #1d1d1d;
   }
 
@@ -9333,6 +9383,17 @@ table td button {
     grid-template-columns: repeat(5, 1fr);
   }
 
+  .goods__sidebar.goods__sidebar_lg {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30rem;
+            flex: 0 0 30rem;
+  }
+
+  .goods__grid {
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .brands__filtres {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -10033,6 +10094,12 @@ table td button {
   .goods__sidebar-link:hover .goods__sidebar-text {
     font-weight: 600;
     text-decoration: underline;
+  }
+
+  .goods__card:hover .goods__card-image img {
+    -webkit-transform: scale(1.025);
+        -ms-transform: scale(1.025);
+            transform: scale(1.025);
   }
 
   .goods__more:hover {
