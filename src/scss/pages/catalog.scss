@@ -139,6 +139,13 @@
 			}
 		}
 	}
+	&__sidebar-main {
+		@media (min-width: $md4) {
+			border: 1px solid $grayStroke;
+			padding: rem(10);
+			border-radius: rem(5);
+		}
+	}
 	// .catalog__sidebar-header
 	&__sidebar-header {
 		display: flex;

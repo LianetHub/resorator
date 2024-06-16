@@ -437,24 +437,36 @@ table {
 	}
 }
 
-// .fw-normal {
-// 	font-weight: 400;
-// }
+[data-underline-filters] {
+	position: relative;
+	display: flex;
+	--underline-left: 0;
+	--underline-width: 0;
+	&.init {
+		&::after {
+			transition: left 0.3s, width 0.3s;
+		}
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: var(--underline-left);
+		height: 0.25rem;
+		width: var(--underline-width);
+		background: $yellow;
 
-// .interline-sm {
-// 	line-height: 140%;
-// }
+		pointer-events: none;
+	}
+}
 
-// .map {
-// 	margin-top: 7.5rem;
-// 	@media (min-width: $md2) {
-// 		margin-top: 8.75rem;
-// 	}
-// 	background: $beige;
-// 	height: rem(500);
-// }
+[data-underline-filter] {
+	padding: 10px 0;
+	position: relative;
+	cursor: pointer;
+}
 
-._loading {
+[data-underline-filters] ._loading {
 	&::after {
 		content: "";
 		position: absolute;

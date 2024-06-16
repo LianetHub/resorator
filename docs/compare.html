@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Ресторатор | Логин</title>
+	<title>Ресторатор | Корзина</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
 	<!-- favicon -->
 	<!-- Open Graph  -->
 	<meta property="og:type" content="business.business">
-	<meta property="og:title" content="Ресторатор | Логин">
+	<meta property="og:title" content="Ресторатор | Корзина">
 	<meta property="og:description" content="">
 	<meta property="og:url" content="">
 	<meta property="og:image" content="/OG.png">
@@ -31,7 +31,7 @@
 	<!-- Open Graph  -->
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:title" content="Ресторатор | Логин">
+	<meta property="twitter:title" content="Ресторатор | Корзина">
 	<meta property="twitter:description" content="">
 	<meta property="twitter:site" content="">
 	<meta property="twitter:url" content="">
@@ -180,7 +180,7 @@
 			</div>
 		</header>
 		<main class="page">
-			<nav aria-label="Хлебные крошки" class="breadcrumbs">
+			<nav aria-label="Хлебные крошки" class="breadcrumbs tablet-sm-only">
 				<div class="breadcrumbs__container">
 					<ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
 						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
@@ -190,30 +190,55 @@
 							<meta itemprop="position" content="1">
 						</li>
 						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-							<a class="breadcrumbs__link active" itemprop="item">
-								<span itemprop="name">Регистрация</span>
+							<a href="/lk" class="breadcrumbs__link" itemprop="item">
+								<span itemprop="name">Личный кабинет</span>
 							</a>
 							<meta itemprop="position" content="2">
+						</li>
+						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+							<a class="breadcrumbs__link active" itemprop="item">
+								<span itemprop="name">Сравнение товаров</span>
+							</a>
+							<meta itemprop="position" content="3">
 						</li>
 					</ul>
 				</div>
 			</nav>
-			<div class="auth">
-				<div class="auth__container">
-					<form action="#" class="auth__form form" data-validation-form>
-						<h1 class="form__caption">СМС отправлено</h1>
-						<p class="form__subtitle"> На указанный номер телефона отправлено СМС сообщение с кодом для сброса пароля. </p>
-						<p class="form__subtitle"> Введите код из СМС, чтобы сбросить пароль и назначить новый. </p>
-						<div class="form__field">
-							<div class="form__label">Код из СМС</div>
-							<input type="text" maxlength="4" name="push" inputmode="numeric" placeholder="Введите код" class="form__input">
+			<section class="compare">
+				<div class="compare__container">
+					<h1 class="compare__title title"> Сравнение товаров </h1>
+					<div class="compare__filters" data-underline-filters>
+						<button type="button" data-underline-filter class="compare__filter active">Печи профессиональные (8)</button>
+						<button type="button" data-underline-filter class="compare__filter">Фритюрницы (8)</button>
+						<button type="button" data-underline-filter class="compare__filter">Прижимные грили (8)</button>
+						<button type="button" data-underline-filter class="compare__filter">Нейтральное оборудование (8)</button>
+					</div>
+					<div class="compare__desc">
+						<h2 class="compare__desc-caption title-sm"> Описание </h2>
+						<label class="compare__checkbox checkbox">
+							<input type="checkbox" checked name="differences" class="checkbox__input hidden" hidden>
+							<span class="checkbox__content">Показать только различия</span>
+						</label>
+						<div class="compare__table">
+							<table>
+								<thead>
+									<tr>
+										<th>
+											<strong class="compare__table-characteristic">Тип установки</strong> Встраиваемая
+										</th>
+										<th>Отдельностоящая</th>
+										<th>Отдельностоящая</th>
+										<th>Встраиваемая</th>
+										<th>Встраиваемая</th>
+										<th>Встраиваемая</th>
+										<th>Встраиваемая</th>
+									</tr>
+								</thead>
+							</table>
 						</div>
-						<a href="" class="form__link">Не приходит сообщение</a>
-						<button type="button" disabled class="form__repeat btn btn-secondary"> Повторная отправка 0:58 </button>
-						<button type="submit" disabled class="form__btn btn btn-primary">Подтвердить</button>
-					</form>
+					</div>
 				</div>
-			</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">

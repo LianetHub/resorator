@@ -238,7 +238,19 @@ $(function () {
         if ($target.hasClass('product__action') && $target[0].tagName.toLowerCase() === 'button') {
             $target.toggleClass('active')
         }
+
+        // underline filters animation line
+        if ($target.is('[data-underline-filter]')) {
+            var $filtersContainer = $target.closest('[data-underline-filters]');
+            var $activeFilter = $filtersContainer.find('[data-underline-filter].active');
+            $activeFilter.removeClass('active');
+            $target.addClass('active');
+            moveUnderline($target);
+        }
+
     });
+
+
 
 
     function toggleAllProducts($productWrapper) {
@@ -323,6 +335,49 @@ $(function () {
         }, 1000);
     }
 
+    function moveUnderline($element) {
+        var $filtersContainer = $element.closest('[data-underline-filters]');
+        var left = $element.position().left;
+        var width = $element.outerWidth();
+        $filtersContainer.css({
+            '--underline-left': left + 'px',
+            '--underline-width': width + 'px'
+        });
+    }
+
+    // init underline filters line
+    if ($('[data-underline-filters]').length > 0) {
+
+        $('[data-underline-filters]').each(function () {
+            var $activeFilter = $(this).find('[data-underline-filter].active');
+            setTimeout(() => {
+                $('[data-underline-filters]').addClass('init');
+            }, 300)
+            if ($activeFilter.length) {
+                moveUnderline($activeFilter);
+            }
+        });
+    }
+    $(document).on('mouseover', '[data-underline-filter]', function (e) {
+        let $target = $(e.target);
+        if ($target.is('[data-underline-filter]')) {
+            moveUnderline($target);
+        }
+    });
+
+
+    $(document).on('mouseout', '[data-underline-filter]', function (e) {
+        let $target = $(e.target);
+        if ($target.is('[data-underline-filter]')) {
+            var $filtersContainer = $target.closest('[data-underline-filters]');
+            var $activeFilter = $filtersContainer.find('[data-underline-filter].active');
+            if ($activeFilter.length) {
+                moveUnderline($activeFilter);
+            }
+        }
+    });
+
+
 
     // change grid layout
     if ($('[name="views"]').length > 0) {
@@ -395,6 +450,8 @@ $(function () {
 
         setSideProductHeight();
     }
+
+
 
 
 
@@ -568,6 +625,8 @@ $(function () {
         var title = $this.data('title');
         $this.attr('title', title);
     });
+
+
 
 
 
@@ -818,6 +877,10 @@ $(function () {
         })
     }
 
+
+
+
+
     // range slider
 
     const rangeFilters = $('.catalog__filters-price');
@@ -909,6 +972,7 @@ $(function () {
 
 
 
+
     // input mask telephone russia
     var phoneInputs = document.querySelectorAll('input[type="tel"]');
 
@@ -983,23 +1047,16 @@ $(function () {
 
 
 
-
-    // $.validator.addMethod("onlyletters", function (value, element) {
-    //     return !/[\d!@#$%^&*(),.?":{}|<>]/.test(value);
-    // }, "Поле не должно содержать цифры");
-
-    // $.validator.addMethod("intlTelInputValid", function (value, element) {
-    //     var iti = window.intlTelInputGlobals.getInstance(element);
-    //     return this.optional(element) || iti.isValidNumber();
-    // }, "Пожалуйста, введите корректный номер телефона");
-
     // push
+
     $('input[name="push"]').on('input', function () {
         this.value = this.value.replace(/\D/g, '');
     });
 
 
+
     // validation fields
+
     $.validator.addMethod("phoneRU", function (value, element) {
         return this.optional(element) || /^(8|\+7) \(\d{3}\) \d{3}-\d{2}-\d{2}$/.test(value);
     }, "");

@@ -7,6 +7,14 @@
 }
 
 @font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "DinPro";
   font-display: swap;
   src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
@@ -25,22 +33,6 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
   src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
@@ -51,6 +43,14 @@
   font-display: swap;
   src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -1697,8 +1697,40 @@ table td button {
   transition: color 0.3s ease 0s;
 }
 
-._loading::after,
-.form._sending button[type=submit]::after {
+[data-underline-filters] {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  --underline-left: 0;
+  --underline-width: 0;
+}
+
+[data-underline-filters].init::after {
+  -webkit-transition: left 0.3s, width 0.3s;
+  transition: left 0.3s, width 0.3s;
+}
+
+[data-underline-filters]::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: var(--underline-left);
+  height: 0.25rem;
+  width: var(--underline-width);
+  background: #f7ce46;
+  pointer-events: none;
+}
+
+[data-underline-filter] {
+  padding: 10px 0;
+  position: relative;
+  cursor: pointer;
+}
+
+[data-underline-filters] ._loading::after,
+[data-underline-filters] .form._sending button[type=submit]::after,
+.form._sending [data-underline-filters] button[type=submit]::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1710,8 +1742,9 @@ table td button {
   z-index: 2;
 }
 
-._loading::before,
-.form._sending button[type=submit]::before {
+[data-underline-filters] ._loading::before,
+[data-underline-filters] .form._sending button[type=submit]::before,
+.form._sending [data-underline-filters] button[type=submit]::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -4580,8 +4613,6 @@ table td button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -5975,6 +6006,10 @@ table td button {
           flex-direction: column;
 }
 
+.goods__block {
+  margin-top: 1.875rem;
+}
+
 .goods__categories {
   margin-top: 1.88rem;
 }
@@ -7173,13 +7208,7 @@ table td button {
   }
 
   .product-card__filter {
-    padding-bottom: 0.75rem;
-    margin-bottom: -1rem;
     font-size: 1.5rem;
-  }
-
-  .product-card__filter.active {
-    border-bottom: 0.25rem solid #f7ce46;
   }
 
   .product-card__items {
@@ -7366,12 +7395,6 @@ table td button {
   .actions__item:hover {
     background: #f7ce46;
     color: #1d1d1d;
-  }
-}
-
-@media (min-width: 575.98px) and (any-hover: hover) {
-  .product-card__filter:hover {
-    border-bottom: 0.25rem solid #f7ce46;
   }
 }
 
@@ -7762,17 +7785,12 @@ table td button {
         -ms-flex-align: start;
             align-items: flex-start;
     border-bottom: 0.0625rem solid #e8e8e8;
-    padding-bottom: 0.5rem;
     min-height: 2.5625rem;
   }
 
   .product-card__filters {
     border-bottom: 0;
     padding-bottom: 0;
-  }
-
-  .product-card__filter {
-    margin-bottom: -2.5rem;
   }
 
   .product-card__contorls {
@@ -7810,6 +7828,12 @@ table td button {
   .catalog__sidebar .banners__item {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .catalog__sidebar-main {
+    border: 1px solid #e8e8e8;
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
   }
 
   .catalog__sidebar-header {
