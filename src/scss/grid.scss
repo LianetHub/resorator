@@ -4,6 +4,10 @@
 	@media (min-width: $md5) {
 		--gutter-x: 1.25rem;
 		--gutter-y: 1.25rem;
+		&.sm-offsets {
+			--gutter-x: 0.62rem;
+			--gutter-y: 0.62rem;
+		}
 	}
 	display: flex;
 	flex-wrap: wrap;

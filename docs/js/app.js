@@ -127,13 +127,18 @@ $(function () {
 
         // decrement quantity block
         if ($target.hasClass('quantity-block__down')) {
+
+
             let $input = $target.siblings('.quantity-block__input');
             let currentValue = parseInt($input.val(), 10);
             if (currentValue > 0) {
                 $input.val(currentValue - 1);
                 if (currentValue - 1 === 0) {
+                    if ($target[0].closest('.cart__item')) {
+                        $input.val(1);
+                        return
+                    }
                     let $cartActions = $target.parent().parent();
-
 
                     $cartActions.addClass('hidden');
                     $cartActions.prev().removeClass('hidden');
@@ -255,6 +260,16 @@ $(function () {
             $activeFilter.removeClass('active');
             $target.addClass('active');
             moveUnderline($target);
+        }
+
+        // remove product from cart - cart page
+        if ($target.is('.cart__item-delete')) {
+            $target.closest('.cart__item').remove();
+        }
+
+        if ($target.is('.btn-profit-cart')) {
+            $target.toggleClass('closed');
+            $('.cart__sidebar-profits').slideToggle()
         }
 
     });

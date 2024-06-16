@@ -1,15 +1,39 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
@@ -25,22 +49,6 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
@@ -49,19 +57,12 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
+.purchase__bank-input:checked + .purchase__bank-logo::before,
 .delivery__warning-list li::before,
 .goods__sidebar-link.active::before,
 .goods__sidebar-link::before,
@@ -197,6 +198,7 @@
 }
 
 .icon-tick-circle:before,
+.purchase__bank-input:checked + .purchase__bank-logo:before,
 .product-card__desc-list li:before,
 .product-card__characteristics-name:before {
   content: "\e912";
@@ -2151,6 +2153,66 @@ table td button {
   transition: -webkit-transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.option__input:checked + .option__content::before {
+  border-color: #94a3b8;
+  background: #94a3b8;
+  -webkit-box-shadow: inset 0 0 0 0.25rem #fff;
+          box-shadow: inset 0 0 0 0.25rem #fff;
+}
+
+.option__input:checked + .option__btn {
+  background: #f7ce46;
+  color: #fff;
+}
+
+.option__input:disabled + .option__btn {
+  pointer-events: none;
+  border-radius: 0.75rem;
+  border: 0.0625rem solid #dfe0e1;
+  color: #9aa2a9;
+}
+
+.option__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.63rem;
+  cursor: pointer;
+}
+
+.option__content::before {
+  content: "";
+  width: 1.375rem;
+  height: 1.375rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-transition: background-color 0.3s ease 0s, border-color 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s, border-color 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s, box-shadow 0.3s ease 0s, border-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s, box-shadow 0.3s ease 0s, border-color 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border: 0.0625rem solid #94a3b8;
+}
+
+.option__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .btn {
@@ -6882,6 +6944,10 @@ table td button {
   gap: 0.75rem;
 }
 
+.cart__sidebar-property.btn-profit-cart {
+  cursor: pointer;
+}
+
 .cart__sidebar-property::before {
   font-size: 0.75rem;
   font-weight: 700;
@@ -6892,6 +6958,12 @@ table td button {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
+}
+
+.cart__sidebar-property.closed::before {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .cart__sidebar-value {
@@ -6915,6 +6987,29 @@ table td button {
 
 .cart__sidebar-total .cart__sidebar-value {
   font-size: 1.5rem;
+}
+
+.cart__sidebar-total + .cart__sidebar-btn {
+  margin-top: 1.25rem;
+  width: 100%;
+}
+
+.cart__sidebar-downloads {
+  margin-top: 1.87rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.cart__sidebar-download {
+  margin-bottom: 1rem;
+}
+
+.cart__sidebar-download.btn {
+  padding: 0.62rem;
+  color: #475569;
 }
 
 .cart__sidebar-btns {
@@ -6941,6 +7036,125 @@ table td button {
   font-size: 0.875rem;
 }
 
+.purchase {
+  margin-top: 0.75rem;
+}
+
+.purchase__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.5rem;
+  border-bottom: 0.0625rem solid #e8e8e8;
+}
+
+.purchase__tab {
+  font-family: "DinPro";
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 100%;
+  padding-bottom: 1rem;
+}
+
+.purchase__body {
+  margin-top: 1.25rem;
+}
+
+.purchase__content {
+  display: none;
+}
+
+.purchase__content.active {
+  display: block;
+}
+
+.purchase__block {
+  border-radius: 0.625rem;
+  border: 0.0625rem solid #e8e8e8;
+  background: #fff;
+  padding: 1.25rem;
+}
+
+.purchase__block:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.purchase__block-body {
+  margin-top: 1.25rem;
+}
+
+.purchase__options {
+  margin-top: 1.25rem;
+}
+
+.purchase__option-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.purchase__option-caption {
+  color: #475569;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.purchase__option-text {
+  margin-top: 0.63rem;
+  color: #475569;
+  font-size: 0.8125rem;
+}
+
+.purchase__banks {
+  margin-top: 0.63rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.62rem;
+  padding-left: 1.75rem;
+}
+
+.purchase__bank-input:checked + .purchase__bank-logo {
+  border: 0.0625rem solid #f7ce46;
+  -webkit-box-shadow: inset 0 0 0 0.0625rem #f7ce46;
+          box-shadow: inset 0 0 0 0.0625rem #f7ce46;
+  position: relative;
+}
+
+.purchase__bank-input:checked + .purchase__bank-logo::before {
+  position: absolute;
+  color: #f7ce46;
+  top: 0.38rem;
+  left: 0.38rem;
+}
+
+.purchase__bank-logo {
+  width: 12.5rem;
+  height: 4.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  border: 0.0625rem solid #e8e8e8;
+}
+
+.purchase__bank-logo img {
+  max-width: 100%;
+}
+
 @media (min-width: 375px) {
   .product__action {
     min-width: 2.5rem;
@@ -6956,6 +7170,11 @@ table td button {
   .row {
     --gutter-x: 1.25rem;
     --gutter-y: 1.25rem;
+  }
+
+  .row.sm-offsets {
+    --gutter-x: 0.62rem;
+    --gutter-y: 0.62rem;
   }
 
   .search__form-input {
@@ -7494,6 +7713,11 @@ table td button {
 
   .cart__sidebar {
     padding: 1.88rem;
+  }
+
+  .cart__sidebar-total + .cart__sidebar-btn {
+    width: auto;
+    min-width: 13.1875rem;
   }
 
   .cart__sidebar-btns {
@@ -8703,6 +8927,10 @@ table td button {
     margin-top: 1.5rem;
   }
 
+  .cart__sidebar-total + .cart__sidebar-btn {
+    width: 100%;
+  }
+
   .cart__sidebar-btns {
     margin-top: 1.25rem;
     -ms-grid-columns: 1fr;
@@ -9052,6 +9280,11 @@ table td button {
 
   .delivery__feedback {
     background-position: 35% bottom;
+  }
+
+  .cart__sidebar {
+    position: sticky;
+    top: 1rem;
   }
 }
 
@@ -9910,7 +10143,7 @@ table td button {
     --gutter-y: 1.25rem;
   }
 
-  .cart__body .row {
+  .cart__body > .row {
     --gutter-y: 2.5rem;
   }
 

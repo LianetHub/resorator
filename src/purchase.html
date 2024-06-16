@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор | Корзина'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "shadow": true
+            })
+            <main class="page">
+                <nav aria-label="Хлебные крошки" class="breadcrumbs tablet-sm-only">
+                    <div class="breadcrumbs__container">
+                        <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a href="/" class="breadcrumbs__link" itemprop="item">
+                                    <span itemprop="name">Главная</span>
+                                </a>
+                                <meta itemprop="position" content="1">
+                            </li>
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a href="/lk" class="breadcrumbs__link" itemprop="item">
+                                    <span itemprop="name">Личный кабинет</span>
+                                </a>
+                                <meta itemprop="position" content="2">
+                            </li>
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a class="breadcrumbs__link active" itemprop="item">
+                                    <span itemprop="name">Корзина</span>
+                                </a>
+                                <meta itemprop="position" content="3">
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <section class="cart">
+                    <div class="cart__container">
+                        <div class="cart__body">
+                            <div class="row">
+                                <div class="col-xxl-9 col-lg-7">
+                                    <div class="cart__title title-md">
+                                        Оформление заказа
+                                    </div>
+                                    <div class="cart__purchase purchase">
+                                        <div class="purchase__tabs" data-underline-filters>
+                                            <button type="button" class="purchase__tab active" data-underline-filter>Физическое лицо</button>
+                                            <button type="button" class="purchase__tab active" data-underline-filter>Юридическое лицо</button>
+                                        </div>
+                                        <div class="purchase__body">
+                                            <div class="purchase__content active">
+                                                <div class="purchase__block">
+                                                    <div class="purchase__caption title-sm">
+                                                        Способ оплаты
+                                                    </div>
+                                                    <div class="purchase__options">
+                                                        <label class="purchase__option option">
+                                                            <input type="radio" name="payment" checked value="online" class="option__input hidden" hidden>
+                                                            <span class="option__content">
+                                                                <span class="option__column">
+                                                                    <span class="purchase__option-caption">Онлайн оплата банковской картой</span>
+                                                                    <span class="purchase__option-text">Visa, Master Card, МИР зачисление в течение 5 минут. Ссылка на оплату будет направлена на e-mail, после подтверждения заказа с менеджером</span>
+                                                                </span>
+                                                            </span>
+                                                        </label>
+                                                        <div class="purchase__banks">
+                                                            <label class="purchase__bank">
+                                                                <input type="radio" name="bank-online" checked value="sberbank" class="purchase__bank-input hidden" hidden>
+                                                                <span class="purchase__bank-logo">
+                                                                    <img src="@img/payment/sberbank.svg" alt="Логотип банка">
+                                                                </span>
+                                                            </label>
+                                                            <label class="purchase__bank">
+                                                                <input type="radio" name="bank-online" value="tinkoff" class="purchase__bank-input hidden" hidden>
+                                                                <span class="purchase__bank-logo">
+                                                                    <img src="@img/payment/tinkoff.svg" alt="Логотип банка">
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="purchase__options">
+                                                        <label class="purchase__option option">
+                                                            <input type="radio" name="payment" value="credit" class="option__input hidden" hidden>
+                                                            <span class="option__content">
+                                                                <span class="purchase__option-caption">Купить в кредит</span>
+                                                            </span>
+                                                        </label>
+                                                        <div class="purchase__banks">
+                                                            <label class="purchase__bank">
+                                                                <input type="radio" name="bank-credit" value="sberbank" class="purchase__bank-input hidden" hidden>
+                                                                <span class="purchase__bank-logo">
+                                                                    <img src="@img/payment/sberbank.svg" alt="Логотип банка">
+                                                                </span>
+                                                            </label>
+                                                            <label class="purchase__bank">
+                                                                <input type="radio" name="bank-credit" value="tinkoff" class="purchase__bank-input hidden" hidden>
+                                                                <span class="purchase__bank-logo">
+                                                                    <img src="@img/payment/tinkoff.svg" alt="Логотип банка">
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="purchase__block">
+                                                    <div class="purchase__caption title-sm">
+                                                        Адрес доставки
+                                                    </div>
+                                                    <div class="purchase__block-body">
+                                                        <div class="row">
+                                                            <div class="col-md-4 col-sm-6">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Город *</div>
+                                                                    <input type="text" name="city" placeholder="Укажите город" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Улица*</div>
+                                                                    <input type="text" name="street" placeholder="Укажите улицу" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Дом*</div>
+                                                                    <input type="text" name="street" placeholder="Укажите дом" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Квартира/Офис</div>
+                                                                    <input type="text" name="office" placeholder="Квартира/Офис" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Подъезд</div>
+                                                                    <input type="text" name="entrance" placeholder="Квартира/Офис" class="form__input">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4 col-sm-6">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Этаж</div>
+                                                                    <input type="text" name="floor" placeholder="Этаж" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Комментарий</div>
+                                                                    <textarea name="comment" class="form__textarea" placeholder="Вы можете указать ваш комментарий, например, наличие лифта, код домофона и т.п."></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="purchase__block">
+                                                    <div class="purchase__caption title-sm">
+                                                        Покупатель
+                                                    </div>
+                                                    <div class="purchase__block-body">
+                                                        <div class="row sm-offsets">
+                                                            <div class="col-12">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Фамилия*</div>
+                                                                    <input type="text" name="surname" placeholder="Ваша фамилия" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Имя*</div>
+                                                                    <input type="text" name="firstname" placeholder="Ваше имя" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Отчество</div>
+                                                                    <input type="text" name="parentname" placeholder="Ваше отчество" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Телефон для связи*</div>
+                                                                    <input type="tel" name="phone" placeholder="+7" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Дополнительный телефон</div>
+                                                                    <input type="tel" name="second-phone" placeholder="+7" class="form__input">
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-lg-5">
+                                    <aside class="cart__sidebar">
+                                        <h2 class="cart__sidebar-title title-sm">
+                                            Информация о заказе
+                                        </h2>
+                                        <div class="cart__sidebar-row">
+                                            <div class="cart__sidebar-property">3 товара</div>
+                                            <div class="cart__sidebar-value">81 997 ₽ </div>
+                                        </div>
+                                        <div class="cart__sidebar-row">
+                                            <div class="cart__sidebar-property icon-chevron btn-profit-cart">Выгода</div>
+                                            <div class="cart__sidebar-value">-14 999 ₽ </div>
+                                        </div>
+                                        <ul class="cart__sidebar-profits">
+                                            <li class="cart__sidebar-profit">
+                                                <div class="cart__sidebar-profit-name">
+                                                    Выгода по акции
+                                                </div>
+                                                <div class="cart__sidebar-profit-value">
+                                                    -8 000 ₽
+                                                </div>
+                                            </li>
+                                            <li class="cart__sidebar-profit">
+                                                <div class="cart__sidebar-profit-name">
+                                                    Выгода по акции
+                                                </div>
+                                                <div class="cart__sidebar-profit-value">
+                                                    -6 999 ₽
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="cart__sidebar-total">
+                                            <div class="cart__sidebar-property">Итого</div>
+                                            <div class="cart__sidebar-value">69 998 ₽ </div>
+                                        </div>
+                                        <a href="" class="cart__sidebar-btn btn btn-primary btn-fullwidth">Далее</a>
+                                        <div class="cart__sidebar-downloads">
+                                            <a href="" class="cart__sidebar-download btn btn-sm btn-primary-outline icon-doc">Скачать PDF</a>
+                                            <a href="" class="cart__sidebar-download btn btn-sm btn-primary-outline icon-doc">Скачать Excell</a>
+                                        </div>
+                                        <div class="product-card__more">
+                                            <a href="" class="product-card__more-btn icon-whatsapp"></a>
+                                            <a href="" class="product-card__more-btn icon-telegram"></a>
+                                            <a href="" class="product-card__more-btn">Написать менеджеру</a>
+                                        </div>
+                                    </aside>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__products">
+                            <div class="product-card__products-header">
+                                <div class="product-card__caption">
+                                    Ваш заказ
+                                    <span class="product-card__quantity">(124)</span>
+                                </div>
+                                <div class="product-card__contorls">
+                                    <div class="product-card__prev swiper-button-prev"></div>
+                                    <div class="product-card__pagination"></div>
+                                    <div class="product-card__next swiper-button-next"></div>
+                                </div>
+                            </div>
+                            <div class="product-card__items swiper">
+                                <div class="swiper-wrapper">
+                                    @@loop('./html/_product.html', './html/products-slider.json')
+                                </div>
+                            </div>
+                            <button type="button" class="product-card__loadmore icon-chevron btn-all-products"><span>Развернуть</span> все товары</button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

@@ -12,7 +12,7 @@
 	// .cart__body
 	&__body {
 		margin-bottom: 1.5rem;
-		.row {
+		& > .row {
 			@media (max-width: $md5) {
 				--gutter-y: 2.5rem;
 			}
@@ -204,6 +204,10 @@
 		@media (min-width: $md5) {
 			padding: 1.88rem;
 		}
+		@media (min-width: $md2) {
+			position: sticky;
+			top: 1rem;
+		}
 	}
 	// .cart__sidebar-title
 	&__sidebar-title {
@@ -249,12 +253,20 @@
 		flex-direction: row;
 		align-items: center;
 		gap: 0.75rem;
+		&.btn-profit-cart {
+			cursor: pointer;
+		}
 		&::before {
 			font-size: 0.75rem;
 			font-weight: 700;
 			order: 1;
 			color: #94a3b8;
 			transform: rotate(-90deg);
+		}
+		&.closed {
+			&::before {
+				transform: rotate(90deg);
+			}
 		}
 	}
 	// .cart__sidebar-value
@@ -271,6 +283,32 @@
 		font-weight: 600;
 		.cart__sidebar-value {
 			font-size: 1.5rem;
+		}
+		& + .cart__sidebar-btn {
+			margin-top: 1.25rem;
+			width: 100%;
+			@media (min-width: $md5) {
+				width: auto;
+				min-width: rem(211);
+			}
+			@media (min-width: $md3) {
+				width: 100%;
+			}
+		}
+	}
+	// .cart__sidebar-downloads
+	&__sidebar-downloads {
+		margin-top: 1.87rem;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.25rem;
+	}
+	// .cart__sidebar-download
+	&__sidebar-download {
+		margin-bottom: 1rem;
+		&.btn {
+			padding: 0.62rem;
+			color: $darkBlue;
 		}
 	}
 	// .cart__sidebar-btns
@@ -310,5 +348,120 @@
 		margin-bottom: 2rem;
 		color: $darkBlue;
 		font-size: 0.875rem;
+	}
+}
+
+.purchase {
+	margin-top: 0.75rem;
+	// .purchase__tabs
+	&__tabs {
+		display: flex;
+		gap: 2.5rem;
+		border-bottom: rem(1) solid $grayStroke;
+	}
+	// .purchase__tab
+	&__tab {
+		font-family: $font-din;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 100%;
+		padding-bottom: 1rem;
+	}
+	// .purchase__body
+	&__body {
+		margin-top: 1.25rem;
+	}
+	// .purchase__content
+	&__content {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+	// .purchase__block
+	&__block {
+		border-radius: 0.625rem;
+		border: rem(1) solid $grayStroke;
+		background: #fff;
+		padding: 1.25rem;
+		&:not(:last-child) {
+			margin-bottom: 1.25rem;
+		}
+	}
+	// .purchase__block-body
+	&__block-body {
+		margin-top: 1.25rem;
+	}
+	// .purchase__caption
+	&__caption {
+	}
+	// .purchase__options
+	&__options {
+		margin-top: 1.25rem;
+	}
+	// .purchase__option
+	&__option {
+	}
+	// .purchase__option-input
+	&__option-input {
+	}
+	// .purchase__option-column
+	&__option-column {
+		display: flex;
+		flex-direction: column;
+	}
+	// .purchase__option-caption
+	&__option-caption {
+		color: $darkBlue;
+		font-size: 0.8125rem;
+		font-weight: 600;
+	}
+	// .purchase__option-text
+	&__option-text {
+		margin-top: 0.63rem;
+		color: $darkBlue;
+		font-size: 0.8125rem;
+	}
+	// .purchase__banks
+	&__banks {
+		margin-top: 0.63rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.62rem;
+		padding-left: 1.75rem;
+	}
+	// .purchase__bank
+	&__bank {
+	}
+	// .purchase__bank-input
+	&__bank-input {
+		&:checked {
+			& + .purchase__bank-logo {
+				border: rem(1) solid $yellow;
+				box-shadow: inset 0 0 0 rem(1) $yellow;
+				position: relative;
+				&::before {
+					@extend %ic, .icon-tick-circle;
+					position: absolute;
+					color: $yellow;
+					top: 0.38rem;
+					left: 0.38rem;
+				}
+			}
+		}
+	}
+	// .purchase__bank-logo
+	&__bank-logo {
+		width: 12.5rem;
+		height: 4.375rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0.3125rem;
+		cursor: pointer;
+		border: rem(1) solid $grayStroke;
+		& img {
+			max-width: 100%;
+		}
 	}
 }
