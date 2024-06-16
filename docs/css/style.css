@@ -1,16 +1,16 @@
 @font-face {
-  font-family: "DinPro";
-  font-display: swap;
-  src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
+  src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -33,14 +33,6 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
   src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
@@ -51,6 +43,14 @@
   font-display: swap;
   src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -842,11 +842,19 @@ body.lock-catalog-filter {
   border-radius: 0;
 }
 
+.popup.popup_md {
+  max-width: 25rem;
+}
+
 .popup.popup_lg {
-  max-width: 37.5rem;
+  max-width: 31.25rem;
 }
 
 .popup.popup_xl {
+  max-width: 37.5rem;
+}
+
+.popup.popup_xxl {
   max-width: 51.4375rem;
 }
 
@@ -1116,6 +1124,55 @@ body.lock-catalog-filter {
   width: auto;
   -ms-flex-item-align: start;
       align-self: flex-start;
+}
+
+.popup__phone {
+  margin-top: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+
+.popup__phone-value {
+  color: #475569;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.popup__action {
+  color: #1e6ba3;
+  font-size: 0.8125rem;
+  text-decoration: underline;
+}
+
+.popup__timer {
+  text-align: center;
+  margin-top: 0.63rem;
+  color: #94a3b8;
+  text-align: center;
+  font-size: 0.8125rem;
+}
+
+.popup__actions {
+  margin-top: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popup__checkboxes {
+  margin-top: 1.25rem;
+}
+
+.popup__checkbox:not(:last-child) {
+  margin-bottom: 1.25rem;
 }
 
 .custom-select-container ul {
@@ -2359,6 +2416,8 @@ table td button {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   background: transparent;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2375,6 +2434,11 @@ table td button {
   font-size: 0.875rem;
   font-weight: 100;
   border-radius: 0.3125rem;
+}
+
+.checkbox__content a {
+  color: #1e6ba3;
+  text-decoration: underline;
 }
 
 .checkbox__row {
@@ -10225,6 +10289,10 @@ table td button {
     text-decoration: none;
   }
 
+  .popup__action:hover {
+    text-decoration: none;
+  }
+
   .btn-copy:hover {
     color: #1d1d1d;
   }
@@ -10277,6 +10345,10 @@ table td button {
   }
 
   .form__link:hover {
+    text-decoration: none;
+  }
+
+  .checkbox__content a:hover {
     text-decoration: none;
   }
 

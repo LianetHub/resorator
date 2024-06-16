@@ -502,18 +502,6 @@ $(function () {
 
 
 
-
-
-    // Fancybox.show([{
-    //     src: "#product-fast"
-
-
-    // }], {
-    //     dragToClose: false,
-    //     closeButton: false
-    // })
-
-
     $('#language-form').on('submit', function (e) {
         e.preventDefault();
 

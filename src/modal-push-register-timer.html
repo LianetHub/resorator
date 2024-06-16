@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор | Логин'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "shadow": true
+            })
+            <main class="page">
+                <div id="push-register" class="popup popup_md">
+                    <div class="popup__header">
+                        <h3 class="popup__title title-sm">Введите код</h3>
+                        <button type="button" class="popup__close" data-fancybox-close></button>
+                    </div>
+                    <p class="popup__subtitle">Вам пришло СМС сообщение с кодом, введите его в поле ниже.</p>
+                    <div class="popup__phone">
+                        <div class="popup__phone-value">+7 964 448 44 43</div>
+                        <a href="" class="popup__action">Изменить</a>
+                    </div>
+                    <form action="#" class="popup__form form">
+                        <div class="form__field">
+                            <div class="form__label">Код из СМС</div>
+                            <input type="text" maxlength="4" name="push" inputmode="numeric" placeholder="Введите код" class="form__input">
+                        </div>
+                        <div class="popup__timer">
+                            Получить новый код можно через 00:12
+                        </div>
+                        <div class="popup__actions">
+                            <a href="" class="popup__action">Войти по почте</a>
+                            <a href="" class="popup__action">Не приходит код</a>
+                        </div>
+                    </form>
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+        <script>
+
+            Fancybox.show([{
+                src: "#push-register"
+
+
+            }], {
+                dragToClose: false,
+                closeButton: false
+            })
+        </script>
+    </body>
+</html>

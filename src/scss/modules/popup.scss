@@ -41,10 +41,16 @@
 		max-width: 100%;
 		border-radius: 0;
 	}
+	&.popup_md {
+		max-width: rem(400);
+	}
 	&.popup_lg {
-		max-width: rem(600);
+		max-width: rem(500);
 	}
 	&.popup_xl {
+		max-width: rem(600);
+	}
+	&.popup_xxl {
 		max-width: rem(823);
 	}
 	// .popup__header
@@ -328,5 +334,54 @@
 		margin-top: rem(20);
 		width: auto;
 		align-self: flex-start;
+	}
+	// .popup__phone
+	&__phone {
+		margin-top: rem(20);
+		display: flex;
+		align-items: center;
+		gap: rem(20);
+	}
+	// .popup__phone-value
+	&__phone-value {
+		color: $darkBlue;
+		font-size: 0.875rem;
+		font-weight: 600;
+	}
+	// .popup__action
+	&__action {
+		color: $blue;
+		font-size: 0.8125rem;
+		text-decoration: underline;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	// .popup__timer
+	&__timer {
+		text-align: center;
+		margin-top: 0.63rem;
+		color: $lightBlue;
+		text-align: center;
+		font-size: 0.8125rem;
+	}
+	// .popup__actions
+	&__actions {
+		margin-top: 1.25rem;
+		display: flex;
+		justify-content: space-between;
+	}
+	// .popup__checkboxes
+	&__checkboxes {
+		margin-top: rem(20);
+	}
+	// .popup__checkbox
+	&__checkbox {
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
 	}
 }

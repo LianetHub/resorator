@@ -180,34 +180,19 @@
 			</div>
 		</header>
 		<main class="page">
-			<nav aria-label="Хлебные крошки" class="breadcrumbs tablet-sm-only">
-				<div class="breadcrumbs__container">
-					<ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
-						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-							<a href="/" class="breadcrumbs__link" itemprop="item">
-								<span itemprop="name">Главная</span>
-							</a>
-							<meta itemprop="position" content="1">
-						</li>
-						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-							<a class="breadcrumbs__link active" itemprop="item">
-								<span itemprop="name">Регистрация пользователя</span>
-							</a>
-							<meta itemprop="position" content="2">
-						</li>
-					</ul>
+			<div id="phone-number" class="popup popup_md">
+				<div class="popup__header">
+					<h3 class="popup__title title-sm">Введите номер телефона</h3>
+					<button type="button" class="popup__close" data-fancybox-close></button>
 				</div>
-			</nav>
-			<div class="auth">
-				<div class="auth__container">
-					<form action="#" class="auth__form form">
-						<h1 class="form__caption">Регистрация успешна</h1>
-						<p class="form__subtitle"> Вы успешно зарегистрировались на сайте </p>
-						<p class="form__subtitle"> Нажмите Продолжить для перехода к последним действиям </p>
-						<a href="" class="form__link">Перейти в личный кабинет</a>
-						<a href="" class="form__btn btn btn-primary">Продолжить</a>
-					</form>
-				</div>
+				<p class="popup__subtitle">Мы отправим код в СМС сообщении или позвоним. Отвечать на звонок не нужно.</p>
+				<form action="#" class="popup__form form">
+					<div class="form__field">
+						<div class="form__label">Телефон *</div>
+						<input type="tel" name="phone" required placeholder="+7" class="form__input">
+					</div>
+					<button type="submit" class="form__btn btn btn-primary">Войти</button>
+				</form>
 			</div>
 		</main>
 		<footer class="footer">
@@ -1270,6 +1255,15 @@
 	<script src="js/libs/messages_ru.min.js?_v=20240616184535"></script>
 	<!-- plugnis -->
 	<script src="js/app.min.js?_v=20240616184535"></script>
+	<script>
+		Fancybox.show([{
+			src: "#phone-number"
+		}], {
+			dragToClose: false,
+			closeButton: false
+		})
+
+	</script>
 </body>
 
 </html>

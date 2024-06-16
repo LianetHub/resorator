@@ -180,34 +180,43 @@
 			</div>
 		</header>
 		<main class="page">
-			<nav aria-label="Хлебные крошки" class="breadcrumbs tablet-sm-only">
-				<div class="breadcrumbs__container">
-					<ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
-						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-							<a href="/" class="breadcrumbs__link" itemprop="item">
-								<span itemprop="name">Главная</span>
-							</a>
-							<meta itemprop="position" content="1">
-						</li>
-						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-							<a class="breadcrumbs__link active" itemprop="item">
-								<span itemprop="name">Регистрация пользователя</span>
-							</a>
-							<meta itemprop="position" content="2">
-						</li>
-					</ul>
+			<div id="push-register" class="popup popup_lg">
+				<div class="popup__header">
+					<h3 class="popup__title title-sm">Введите код</h3>
+					<button type="button" class="popup__close" data-fancybox-close></button>
 				</div>
-			</nav>
-			<div class="auth">
-				<div class="auth__container">
-					<form action="#" class="auth__form form">
-						<h1 class="form__caption">Регистрация успешна</h1>
-						<p class="form__subtitle"> Вы успешно зарегистрировались на сайте </p>
-						<p class="form__subtitle"> Нажмите Продолжить для перехода к последним действиям </p>
-						<a href="" class="form__link">Перейти в личный кабинет</a>
-						<a href="" class="form__btn btn btn-primary">Продолжить</a>
-					</form>
+				<p class="popup__subtitle">Проверьте устройство, на котором вы авторизованы в приложении по номеру.</p>
+				<div class="popup__phone">
+					<div class="popup__phone-value">+7 964 448 44 43</div>
+					<a href="" class="popup__action">Изменить</a>
 				</div>
+				<form action="#" class="popup__form form">
+					<div class="form__field">
+						<div class="form__label">Код из СМС</div>
+						<input type="text" maxlength="4" name="push" inputmode="numeric" placeholder="Введите код" class="form__input">
+					</div>
+					<div class="popup__timer"> Получить новый код можно через 00:12 </div>
+					<div class="popup__actions">
+						<a href="" class="popup__action">Войти по почте</a>
+						<a href="" class="popup__action">Не приходит код</a>
+					</div>
+					<div class="popup__checkboxes">
+						<label class="popup__checkbox checkbox">
+							<input type="checkbox" checked name="privacy" class="checkbox__input hidden" hidden>
+							<span class="checkbox__content">
+								<span> Соглашаюсь с <a href="">условиями использования</a> сайта Resprofi.ru и <a href="">условиями обработки</a> персональных данных </span>
+							</span>
+						</label>
+						<label class="popup__checkbox checkbox">
+							<input type="checkbox" checked name="privacy" class="checkbox__input hidden" hidden>
+							<span class="checkbox__content">
+								<span> Соглашаюсь на получение сообщений <a href="">рекламного характера</a>
+								</span>
+							</span>
+						</label>
+					</div>
+					<button type="submit" class="form__btn btn btn-primary">Зарегистрироваться</button>
+				</form>
 			</div>
 		</main>
 		<footer class="footer">
@@ -1270,6 +1279,15 @@
 	<script src="js/libs/messages_ru.min.js?_v=20240616184535"></script>
 	<!-- plugnis -->
 	<script src="js/app.min.js?_v=20240616184535"></script>
+	<script>
+		Fancybox.show([{
+			src: "#push-register"
+		}], {
+			dragToClose: false,
+			closeButton: false
+		})
+
+	</script>
 </body>
 
 </html>
