@@ -204,8 +204,17 @@ $(function () {
                     $(targetId).addClass('active');
                 }
 
+                if ($('.goods__sidebar-title').length > 0) {
+                    $('.goods__sidebar-title').text($link.text().trim())
+                }
+
 
             }
+        }
+
+        if ($target.hasClass('goods__sidebar-filter')) {
+            $target.toggleClass('active');
+            $('.goods__sidebar-content').slideToggle()
         }
 
         // copy btn

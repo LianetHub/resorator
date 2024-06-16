@@ -7,6 +7,14 @@
 }
 
 @font-face {
+  font-family: "DinPro";
+  font-display: swap;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -15,10 +23,26 @@
 }
 
 @font-face {
-  font-family: "DinPro";
+  font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -35,30 +59,6 @@
   font-display: swap;
   src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
   font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
   font-style: normal;
 }
 
@@ -5914,10 +5914,15 @@ table td button {
 }
 
 .goods__sidebar.goods__sidebar_lg {
-  display: none;
+  padding: 0;
+  border: 0;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 
 .goods__sidebar.goods__sidebar_lg .goods__sidebar-list {
+  display: block;
   padding: 1.875rem;
   border-radius: 0.3125rem;
   border: 0.0625rem solid #e8e8e8;
@@ -5934,6 +5939,43 @@ table td button {
 
 .goods__sidebar.goods__sidebar_lg .goods__sidebar-item:not(:last-child) {
   margin-bottom: 1.88rem;
+}
+
+.goods__sidebar-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.88rem;
+}
+
+.goods__sidebar-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 2.375rem;
+  height: 2.375rem;
+  padding: 0.4375rem 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.3125rem;
+  border: 1px solid #94a3b8;
+  color: #94a3b8;
+  background: #fff;
+}
+
+.goods__sidebar-content {
+  display: none;
 }
 
 .goods__sidebar-list + .banners__item {
@@ -6029,12 +6071,12 @@ table td button {
           flex-direction: column;
 }
 
-.goods__block {
-  margin-top: 1.875rem;
+.goods__heading + .goods__block {
+  margin-top: 0rem;
 }
 
-.goods__categories {
-  margin-top: 1.88rem;
+.goods__block {
+  margin-top: 1.875rem;
 }
 
 .goods__category {
@@ -6063,10 +6105,9 @@ table td button {
   margin-top: 1.88rem;
   display: -ms-grid;
   display: grid;
-  gap: 1.25rem;
-  row-gap: 0.625rem;
-  -ms-grid-columns: (1fr)[3];
-  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.625rem;
 }
 
 .goods__card {
@@ -7926,6 +7967,13 @@ table td button {
     padding: 0;
   }
 
+  .goods__grid {
+    gap: 1.25rem;
+    row-gap: 0.625rem;
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .brands__alphabet {
     margin-right: calc(-1 * (100vw - 45.5rem) / 2);
     padding-right: calc((100vw - 45.5rem) / 2);
@@ -8515,10 +8563,25 @@ table td button {
   }
 
   .goods__sidebar.goods__sidebar_lg {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
     display: block;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 20rem;
             flex: 0 0 20rem;
+  }
+
+  .goods__sidebar.goods__sidebar_lg .goods__sidebar-list {
+    margin-top: 0;
+  }
+
+  .goods__sidebar-header {
+    display: none;
+  }
+
+  .goods__sidebar-content {
+    display: block !important;
   }
 
   .goods__sidebar-item:not(:last-child) {
@@ -8583,6 +8646,14 @@ table td button {
   .goods__content:not(:first-child) {
     padding-left: 1.25rem;
     border-left: 0.0625rem solid #e8e8e8;
+  }
+
+  .goods__heading + .goods__block {
+    margin-top: 1.875rem;
+  }
+
+  .goods__categories {
+    margin-top: 1.88rem;
   }
 
   .goods__category:not(:last-child) {
@@ -9723,6 +9794,16 @@ table td button {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
   }
+
+  .goods__content.goods__content_lg {
+    display: contents;
+  }
+
+  .goods__content.goods__content_lg .banners__item {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
 }
 
 @media (max-width: 766.98px) {
@@ -9810,6 +9891,11 @@ table td button {
   .product-card__offers-content {
     margin-right: -1rem;
     padding-right: 1rem;
+  }
+
+  .goods__heading {
+    font-size: 1.9375rem;
+    line-height: 1.25;
   }
 
   .brands__title {

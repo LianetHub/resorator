@@ -29,15 +29,24 @@
 			top: 1rem;
 		}
 		&.goods__sidebar_lg {
-			display: none;
+			padding: 0;
+			border: 0;
+			order: -1;
 			@media (min-width: $md3) {
+				order: 0;
 				display: block;
 				flex: 0 0 rem(320);
 			}
 			@media (min-width: $md1) {
 				flex: 0 0 rem(480);
 			}
+
 			.goods__sidebar-list {
+				display: block;
+
+				@media (min-width: $md3) {
+					margin-top: 0;
+				}
 				padding: rem(30);
 				border-radius: 0.3125rem;
 				border: rem(1) solid #e8e8e8;
@@ -54,6 +63,41 @@
 					margin-bottom: 1.88rem;
 				}
 			}
+		}
+	}
+
+	// .goods__sidebar-header
+	&__sidebar-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 1.88rem;
+		@media (min-width: $md3) {
+			display: none;
+		}
+	}
+	// .goods__sidebar-title
+	&__sidebar-title {
+	}
+	// .goods__sidebar-filter
+	&__sidebar-filter {
+		display: flex;
+		width: 2.375rem;
+		height: 2.375rem;
+		padding: 0.4375rem 1rem;
+		justify-content: center;
+		align-items: center;
+		gap: 0.625rem;
+		border-radius: 0.3125rem;
+		border: 1px solid $lightBlue;
+		color: $lightBlue;
+		background: $white;
+	}
+	// .goods__sidebar-content
+	&__sidebar-content {
+		display: none;
+		@media (min-width: $md3) {
+			display: block !important;
 		}
 	}
 	// .goods__sidebar-list
@@ -197,6 +241,14 @@
 	&__content {
 		display: flex;
 		flex-direction: column;
+		&.goods__content_lg {
+			@media (max-width: $md3) {
+				display: contents;
+				.banners__item {
+					order: -1;
+				}
+			}
+		}
 		@media (min-width: $md3) {
 			flex: 1 1 auto;
 			&:not(:first-child) {
@@ -206,13 +258,26 @@
 		}
 	}
 	&__heading {
+		@media (max-width: $md5) {
+			font-size: 1.9375rem;
+			line-height: 1.25;
+		}
+		& + .goods__block {
+			margin-top: rem(0);
+			@media (min-width: $md3) {
+				margin-top: rem(30);
+			}
+		}
 	}
+	// .goods__block
 	&__block {
 		margin-top: rem(30);
 	}
 	// .goods__categories
 	&__categories {
-		margin-top: 1.88rem;
+		@media (min-width: $md3) {
+			margin-top: 1.88rem;
+		}
 	}
 	// .goods__category
 	&__category {
@@ -245,9 +310,13 @@
 	&__grid {
 		margin-top: 1.88rem;
 		display: grid;
-		gap: rem(20);
-		row-gap: rem(10);
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(10);
+		@media (min-width: $md4) {
+			gap: rem(20);
+			row-gap: rem(10);
+			grid-template-columns: repeat(3, 1fr);
+		}
 		@media (min-width: $md1) {
 			grid-template-columns: repeat(4, 1fr);
 		}
