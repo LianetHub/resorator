@@ -306,6 +306,38 @@
 			}
 		}
 	}
+	// .form__tabs
+	&__tabs {
+		display: flex;
+		gap: rem(40);
+		border-bottom: rem(1) solid $grayStroke;
+	}
+	// .form__tab-btn
+	&__tab-btn {
+		color: $darkBlue;
+		font-family: $font-din;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 100%;
+		padding-bottom: 0.87rem;
+		&.active {
+			color: $dark;
+		}
+	}
+	// .form__tab-contents
+	&__tab-contents {
+		margin-top: 1.25rem;
+	}
+	// .form__tab-content
+	&__tab-content {
+		&.active {
+			display: block;
+		}
+		display: none;
+		.purchase__buyer {
+			margin-top: 0.63rem;
+		}
+	}
 }
 
 .toggler {

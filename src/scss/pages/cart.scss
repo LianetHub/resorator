@@ -299,13 +299,19 @@
 	// .cart__sidebar-downloads
 	&__sidebar-downloads {
 		margin-top: 1.87rem;
+		margin-bottom: 1rem;
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
 		gap: 1.25rem;
+		grid-template-columns: repeat(2, 1fr);
+		@media (min-width: $md2) {
+			grid-template-columns: 1fr;
+		}
+		@media (min-width: $md0) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 	// .cart__sidebar-download
 	&__sidebar-download {
-		margin-bottom: 1rem;
 		&.btn {
 			padding: 0.62rem;
 			color: $darkBlue;

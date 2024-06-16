@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор | Логин'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "shadow": true
+            })
+            <main class="page">
+                <div id="register-end" class="popup popup_lg">
+                    <div class="popup__header">
+                        <h3 class="popup__title title-sm">Завершение регистрации</h3>
+                        <button type="button" class="popup__close" data-fancybox-close></button>
+                    </div>
+                    <p class="popup__subtitle">Для завершени регистрации, введите недостающую информацию</p>
+
+                    <form action="#" class="popup__form form">
+                        <div class="form__tabs" data-underline-filters>
+                            <button type="button" data-underline-filter class="form__tab-btn active">Физическое лицо</button>
+                            <button type="button" data-underline-filter class="form__tab-btn">Юридическое лицо</button>
+                        </div>
+                        <div class="form__tab-contents">
+                            <div class="form__tab-content active">
+                                <div class="form__field">
+                                    <div class="form__label">Имя</div>
+                                    <input type="text" name="name" placeholder="Укажите Имя" class="form__input">
+                                </div>
+                                <div class="form__field">
+                                    <div class="form__label">Фамилия</div>
+                                    <input type="text" placeholder="Укажите Фамилию" class="form__input">
+                                </div>
+                            </div>
+                            <div class="form__tab-content">
+                                <div class="form__field">
+                                    <div class="form__label">ИНН</div>
+                                    <input type="number" name="inn" placeholder="3664069397" class="form__input">
+                                </div>
+                                <div class="purchase__buyer">
+                                    <div class="purchase__buyer-title title-sm">ООО “Пример”</div>
+                                    <div class="purchase__buyer-reqs">
+                                        ИНН: 3664069397 КПП: 366601001
+                                    </div>
+                                    <address class="purchase__buyer-address">Воронежская обл, г.о. город Воронеж, г Воронеж, ул Средне-Московская, д. 7/9, помещ. 1/1</address>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="form__btn btn btn-primary">Продолжить</button>
+                    </form>
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+        <script>
+
+            Fancybox.show([{
+                src: "#register-end"
+
+
+            }], {
+                dragToClose: false,
+                closeButton: false
+            })
+        </script>
+    </body>
+</html>

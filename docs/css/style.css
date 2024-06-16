@@ -1,12 +1,4 @@
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "DinPro";
   font-display: swap;
   src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
@@ -15,10 +7,10 @@
 }
 
 @font-face {
-  font-family: "DinPro";
+  font-family: "icons";
   font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -27,6 +19,14 @@
   font-display: swap;
   src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
   font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -2164,6 +2164,43 @@ table td button {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+}
+
+.form__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.5rem;
+  border-bottom: 0.0625rem solid #e8e8e8;
+}
+
+.form__tab-btn {
+  color: #475569;
+  font-family: "DinPro";
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 100%;
+  padding-bottom: 0.87rem;
+}
+
+.form__tab-btn.active {
+  color: #1d1d1d;
+}
+
+.form__tab-contents {
+  margin-top: 1.25rem;
+}
+
+.form__tab-content {
+  display: none;
+}
+
+.form__tab-content.active {
+  display: block;
+}
+
+.form__tab-content .purchase__buyer {
+  margin-top: 0.63rem;
 }
 
 .toggler__input:disabled + .toggler__btn {
@@ -7089,15 +7126,12 @@ table td button {
 
 .cart__sidebar-downloads {
   margin-top: 1.87rem;
+  margin-bottom: 1rem;
   display: -ms-grid;
   display: grid;
+  gap: 1.25rem;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-}
-
-.cart__sidebar-download {
-  margin-bottom: 1rem;
 }
 
 .cart__sidebar-download.btn {
@@ -9397,6 +9431,11 @@ table td button {
     position: sticky;
     top: 1rem;
   }
+
+  .cart__sidebar-downloads {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -10101,6 +10140,11 @@ table td button {
   .product-card__items.destroyed {
     -ms-grid-columns: (1fr)[6];
     grid-template-columns: repeat(6, 1fr);
+  }
+
+  .cart__sidebar-downloads {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
