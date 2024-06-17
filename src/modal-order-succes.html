@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "shadow": true
+            })
+            <main class="page">
+                <div id="order-succes" class="popup popup_md">
+                    <div class="popup__header">
+                        <h3 class="popup__title title-sm">Заказ принят</h3>
+                        <button type="button" class="popup__close" data-fancybox-close></button>
+                    </div>
+                    <div class="popup__status">
+                        <div class="popup__status-icon">
+                            <img src="@img/icon-succes.svg" alt="Иконка">
+                        </div>
+                        <div class="popup__status-text">Благодарим за ваш заказ</div>
+                    </div>
+                    <p class="popup__subtitle text-center">Мы уже получили информацию по заказу и&nbsp;в&nbsp;ближайшее время свяжемся с вами.</p>
+
+                    <a href="catalog.html" class="form__btn btn btn-primary">Вернуться в магазин</a>
+
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+        <script>
+
+            Fancybox.show([{
+                src: "#order-succes"
+
+
+            }], {
+                dragToClose: false,
+                closeButton: false
+            })
+        </script>
+    </body>
+</html>

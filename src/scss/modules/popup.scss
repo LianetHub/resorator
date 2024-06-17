@@ -92,6 +92,27 @@
 		font-size: 0.8125rem;
 		color: $darkBlue;
 	}
+	// .popup__status
+	&__status {
+		margin-top: 1.25rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		& + .popup__subtitle {
+			font-size: 0.875rem;
+		}
+	}
+	// .popup__status-icon
+	&__status-icon {
+	}
+	// .popup__status-text
+	&__status-text {
+		margin-top: 1.25rem;
+		color: $darkBlue;
+		font-size: 1rem;
+		font-weight: 600;
+	}
 	// .popup__form
 	&__form {
 		margin-top: 1.25rem;
@@ -382,6 +403,15 @@
 	&__checkbox {
 		&:not(:last-child) {
 			margin-bottom: rem(20);
+		}
+	}
+	&__btns {
+		margin-top: 1.25rem;
+		display: grid;
+		gap: rem(20);
+		grid-template-columns: repeat(2, 1fr);
+		.btn.btn-gray-outline {
+			color: $darkBlue;
 		}
 	}
 }

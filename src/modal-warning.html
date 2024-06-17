@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "shadow": true
+            })
+            <main class="page">
+                <div id="save" class="popup popup_md">
+                    <div class="popup__header">
+                        <h3 class="popup__title title-sm">Внимание</h3>
+                        <button type="button" class="popup__close" data-fancybox-close></button>
+                    </div>
+                    <div class="popup__status">
+                        <div class="popup__status-icon">
+                            <img src="@img/icon-warning.svg" alt="Иконка">
+                        </div>
+                        <div class="popup__status-text">ВНИМАНИЕ!</div>
+                    </div>
+                    <p class="popup__subtitle text-center">На странице были внесены изменения, которые&nbsp;не были сохранены.</p>
+                    <div class="popup__btns">
+                        <button type="button" data-fancybox-close class="btn btn-gray-outline">Отмена</button>
+                        <button type="button" class="btn btn-primary">Сохранить</button>
+
+                    </div>
+
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+        <script>
+
+            Fancybox.show([{
+                src: "#save"
+
+
+            }], {
+                dragToClose: false,
+                closeButton: false
+            })
+        </script>
+    </body>
+</html>

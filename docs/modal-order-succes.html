@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Ресторатор | Логин</title>
+	<title>Ресторатор</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
 	<!-- favicon -->
 	<!-- Open Graph  -->
 	<meta property="og:type" content="business.business">
-	<meta property="og:title" content="Ресторатор | Логин">
+	<meta property="og:title" content="Ресторатор">
 	<meta property="og:description" content="">
 	<meta property="og:url" content="">
 	<meta property="og:image" content="/OG.png">
@@ -31,7 +31,7 @@
 	<!-- Open Graph  -->
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:title" content="Ресторатор | Логин">
+	<meta property="twitter:title" content="Ресторатор">
 	<meta property="twitter:description" content="">
 	<meta property="twitter:site" content="">
 	<meta property="twitter:url" content="">
@@ -180,36 +180,19 @@
 			</div>
 		</header>
 		<main class="page">
-			<nav aria-label="Хлебные крошки" class="breadcrumbs tablet-sm-only">
-				<div class="breadcrumbs__container">
-					<ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
-						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-							<a href="/" class="breadcrumbs__link" itemprop="item">
-								<span itemprop="name">Главная</span>
-							</a>
-							<meta itemprop="position" content="1">
-						</li>
-						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-							<a class="breadcrumbs__link active" itemprop="item">
-								<span itemprop="name">Регистрация пользователя</span>
-							</a>
-							<meta itemprop="position" content="2">
-						</li>
-					</ul>
+			<div id="order-succes" class="popup popup_md">
+				<div class="popup__header">
+					<h3 class="popup__title title-sm">Заказ принят</h3>
+					<button type="button" class="popup__close" data-fancybox-close></button>
 				</div>
-			</nav>
-			<div class="auth">
-				<div class="auth__container">
-					<form action="#" class="auth__form form" data-validation-form>
-						<h1 class="form__caption">Зарегистрироваться</h1>
-						<p class="form__subtitle"> На указанный номер телефона отправлено СМС сообщение с кодом для подтверждения регистрации. </p>
-						<div class="form__field">
-							<div class="form__label">Номер телефона</div>
-							<input type="tel" name="phone" placeholder="+7" class="form__input">
-						</div>
-						<button type="submit" disabled class="form__btn btn btn-primary">Продолжить</button>
-					</form>
+				<div class="popup__status">
+					<div class="popup__status-icon">
+						<img src="img/icon-succes.svg" alt="Иконка">
+					</div>
+					<div class="popup__status-text">Благодарим за ваш заказ</div>
 				</div>
+				<p class="popup__subtitle text-center">Мы уже получили информацию по заказу и&nbsp;в&nbsp;ближайшее время свяжемся с вами.</p>
+				<a href="catalog.html" class="form__btn btn btn-primary">Вернуться в магазин</a>
 			</div>
 		</main>
 		<footer class="footer">
@@ -1272,6 +1255,15 @@
 	<script src="js/libs/messages_ru.min.js?_v=20240617155244"></script>
 	<!-- plugnis -->
 	<script src="js/app.min.js?_v=20240617155244"></script>
+	<script>
+		Fancybox.show([{
+			src: "#order-succes"
+		}], {
+			dragToClose: false,
+			closeButton: false
+		})
+
+	</script>
 </body>
 
 </html>
