@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "shadow": true
+            })
+            <main class="page">
+                <div id="suppliers" class="popup popup_lg">
+                    <div class="popup__header">
+                        <h3 class="popup__title title-sm">Поставщики</h3>
+                        <button type="button" class="popup__close" data-fancybox-close></button>
+                    </div>
+                    <form action="#" class="popup__form form">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form__field">
+                                    <div class="form__label">Наименование</div>
+                                    <input type="text" name="name" placeholder="Имя" class="form__input">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form__field">
+                                    <div class="form__label">Телефон *</div>
+                                    <input type="tel" name="phone" placeholder="+7" class="form__input">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form__field">
+                                    <div class="form__label">E-mail *</div>
+                                    <input type="email" name="email" placeholder="mail@example.ru" class="form__input">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form__field">
+                                    <div class="form__label">Сайт</div>
+                                    <input type="text" name="site" placeholder="http://" class="form__input">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form__field">
+                                    <div class="form__label">Личный кабинет</div>
+                                    <input type="text" name="lk" placeholder="Укажите ссылку" class="form__input">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form__field">
+                                    <div class="form__label">Логин</div>
+                                    <input type="text" name="login" placeholder="Логин" class="form__input">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form__field">
+                                    <div class="form__label">Пароль</div>
+                                    <input type="text" name="login" placeholder="******" class="form__input">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form__field">
+                                    <div class="form__label">Комментарий</div>
+                                    <textarea name="comment" class="form__textarea" placeholder="Дополнительная информация"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="form__btn btn btn-primary">Сохранить</button>
+                    </form>
+
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+        <script>
+
+            Fancybox.show([{
+                src: "#suppliers"
+            }], {
+                dragToClose: false,
+                closeButton: false
+            })
+        </script>
+    </body>
+</html>
