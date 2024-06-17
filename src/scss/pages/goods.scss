@@ -92,6 +92,10 @@
 		border: 1px solid $lightBlue;
 		color: $lightBlue;
 		background: $white;
+		&.active {
+			border-color: $yellow;
+			color: $dark;
+		}
 	}
 	// .goods__sidebar-content
 	&__sidebar-content {

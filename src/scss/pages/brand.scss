@@ -1,0 +1,59 @@
+.brand {
+	padding: 1.75rem 0 1rem em(0);
+	@media (min-width: $md5) {
+		padding: 0.75rem 0 1rem em(0);
+	}
+	@media (min-width: $md2) {
+		padding: em(0) em(0) 2rem em(0);
+	}
+	// .brand__container
+	&__container {
+	}
+	// .brand__title
+	&__title {
+		@media (max-width: $md5) {
+			font-size: 1.9375rem;
+		}
+	}
+	// .brand__body
+	&__body {
+		margin-top: 1.75rem;
+		.row {
+			--gutter-y: 1.5rem;
+		}
+	}
+	// .brand__image
+	&__image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0.3125rem;
+		border: rem(1) solid $grayStroke;
+		padding: 1.25rem;
+		height: 14.375rem;
+		@media (min-width: $md5) {
+			height: auto;
+			aspect-ratio: 1;
+		}
+		& img {
+			max-width: 10rem;
+		}
+	}
+	// .brand__desc
+	&__desc {
+	}
+	// .brand__desc-title
+	&__desc-title {
+	}
+	// .brand__desc-text
+	&__desc-text {
+		margin-top: 0.75rem;
+		color: $darkBlue;
+		font-size: 0.8125rem;
+		& p {
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}

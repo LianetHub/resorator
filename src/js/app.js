@@ -297,6 +297,11 @@ $(function () {
             $('.purchase__content').eq($target.index()).addClass('active').siblings().removeClass('active');
         }
 
+        // catalog tabs
+        if ($target[0].closest('.catalog__tab')) {
+            $('.catalog__tabs-block').eq($target.closest('.catalog__tab').index()).addClass('active').siblings().removeClass('active');
+        }
+
         // form tabs
         if ($target.is('.form__tab-btn')) {
             $('.form__tab-content').eq($target.index()).addClass('active').siblings().removeClass('active');

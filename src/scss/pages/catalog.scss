@@ -7,8 +7,67 @@
 	// .catalog__container
 	&__container {
 	}
+	// .catalog__content
+	&__content {
+		display: flex;
+		gap: 1rem;
+		flex-direction: column;
+		@media (min-width: $md3) {
+			align-items: flex-start;
+			flex-direction: row;
+		}
+	}
+	// .catalog__content-main
+	&__content-main {
+		display: contents;
+		@media (min-width: $md3) {
+			flex: 1 1 auto;
+			display: block;
+		}
+	}
+	// .catalog__caption
+	&__caption {
+		order: -1;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-bottom: 1rem;
+		@media (min-width: $md5) {
+			margin-bottom: 2rem;
+		}
+		@media (min-width: $md2) {
+			margin-bottom: 3rem;
+		}
+	}
+	// .catalog__title
+	&__title {
+	}
+	// .catalog__link
+	&__link {
+		color: $lightBlue;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.63rem;
+		&::before {
+			order: 1;
+		}
+		font-size: 0.8125rem;
+
+		& span {
+			text-decoration: underline;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				& span {
+					text-decoration: none;
+				}
+			}
+		}
+	}
 	// .catalog__header
 	&__header {
+		order: -1;
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column;
@@ -17,6 +76,41 @@
 			align-items: center;
 			flex-direction: row;
 		}
+	}
+	// .catalog__tabs
+	&__tabs {
+		display: flex;
+		gap: 2.5rem;
+		border-bottom: rem(1) solid $grayStroke;
+		width: 100%;
+	}
+	// .catalog__tab
+	&__tab {
+		font-family: $font-din;
+		padding-bottom: 0.88rem;
+		font-size: 1.5rem;
+		font-weight: 700;
+		line-height: 100%;
+		display: flex;
+		align-items: flex-start;
+		gap: 0.62rem;
+	}
+	// .catalog__tab-quantity
+	&__tab-quantity {
+		color: $lightBlue;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 100%;
+	}
+	// .catalog__tab-blocks
+	&__tab-blocks {
+	}
+	// .catalog__tabs-block
+	&__tabs-block {
+		&.active {
+			display: block;
+		}
+		display: none;
 	}
 	// .catalog__title
 	&__title {
@@ -39,6 +133,12 @@
 		display: flex;
 		justify-content: flex-end;
 		gap: 0.62rem;
+		.goods__sidebar-filter {
+			margin-left: auto;
+			@media (min-width: $md5) {
+				margin-left: 0;
+			}
+		}
 	}
 	// .catalog__actions-item
 	&__actions-item {

@@ -308,7 +308,7 @@
 
 .pc-none {
 	@media (min-width: $md3) {
-		display: none;
+		display: none !important;
 	}
 }
 
