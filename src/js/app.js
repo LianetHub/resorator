@@ -307,6 +307,18 @@ $(function () {
             $('.form__tab-content').eq($target.index()).addClass('active').siblings().removeClass('active');
         }
 
+        // open all filter compare page
+        if ($target.is('.compare__filters-arrow')) {
+            $target.toggleClass('active');
+            $target.parent().toggleClass('full-mobile')
+        }
+
+        // open all filter compare page
+        if ($target.is('.compare__filter')) {
+            $('.compare__filters-arrow').removeClass('active');
+            $target.parent().removeClass('full-mobile')
+        }
+
     });
 
 
@@ -511,7 +523,6 @@ $(function () {
     }
 
 
-
     $('#language-form').on('submit', function (e) {
         e.preventDefault();
 
@@ -530,7 +541,16 @@ $(function () {
 
         //submit handler
 
-    })
+    });
+
+    // highlight compare row
+    if ($('.compare__row').length > 0) {
+        $('.compare__row').on('mouseenter', function (e) {
+            let currentIndex = $(e.target).index() + 1;
+            $(`.compare__row:nth-child(${currentIndex})`).addClass('hover').siblings().removeClass('hover')
+        })
+    }
+
 
 
     // custom select
@@ -922,6 +942,39 @@ $(function () {
                 }
             }
         })
+    }
+
+
+    if ($('.compare__items').length > 0) {
+        let compareItemsSlider = new Swiper('.compare__items', {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            watchOverflow: true,
+            pagination: {
+                el: '.compare__pagination',
+                type: "fraction",
+                renderFraction: function (currentClass, totalClass) {
+                    return `Страница <span class="${currentClass}"></span> из <span class="${totalClass}"></span>`;
+                }
+            },
+            navigation: {
+                nextEl: '.compare__next',
+                prevEl: '.compare__prev'
+            },
+        });
+
+        let compareTableSlider = new Swiper('.compare__table', {
+            slidesPerView: "auto",
+        });
+
+
+        compareItemsSlider.controller.control = compareTableSlider;
+        compareTableSlider.controller.control = compareItemsSlider;
+
+
+
+
+
     }
 
 

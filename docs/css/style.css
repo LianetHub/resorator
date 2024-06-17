@@ -1,16 +1,16 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -23,17 +23,17 @@
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "icons";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "icons";
+  font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -49,8 +49,8 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -7485,6 +7485,168 @@ table td button {
   max-width: 100%;
 }
 
+.compare {
+  padding: 0em 0em 2rem 0em;
+}
+
+.compare__filters {
+  position: relative;
+  margin-top: 2rem;
+  border-bottom: 0.0625rem solid #e8e8e8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.compare__filters.full-mobile .compare__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.compare__filters-arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.compare__filters-arrow::before {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.compare__filters-arrow.active {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.compare__filter {
+  font-family: "DinPro";
+  color: #475569;
+  font-size: 1rem;
+  font-weight: 500;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  line-height: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.63rem;
+  padding-bottom: 0.88rem;
+  display: none;
+  max-width: calc(100vw - 4.5rem);
+}
+
+.compare__filter.active {
+  color: #1d1d1d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.compare__filter span {
+  color: #94a3b8;
+}
+
+.compare__items {
+  margin-top: 1.875rem;
+  overflow: visible;
+}
+
+.compare__items .product {
+  width: 14.375rem;
+  max-width: 14.375rem;
+}
+
+.compare__contorls {
+  margin-top: 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.compare__pagination {
+  width: auto;
+  color: #475569;
+  font-size: 0.8125rem;
+}
+
+.compare__desc {
+  margin-top: 1.88rem;
+}
+
+.compare__checkbox {
+  margin-top: 1.88rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.compare__table {
+  margin-top: 1.88rem;
+  overflow: visible;
+}
+
+.compare__slide {
+  border-top: 0.0625rem solid #e8e8e8;
+  width: 15.625rem;
+  max-width: 15.625rem;
+}
+
+.compare__row {
+  height: 5rem;
+  border-bottom: 0.0625rem solid #e8e8e8;
+  padding: 1rem 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 1rem;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+}
+
+.compare__row.hover {
+  background: #f2f5f9;
+}
+
+.compare__row-caption {
+  color: #94a3b8;
+  font-family: "DinPro";
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.compare__row-value {
+  color: #475569;
+  font-size: 0.8125rem;
+}
+
 @media (min-width: 375px) {
   .product__action {
     min-width: 2.5rem;
@@ -8077,6 +8239,12 @@ table td button {
     text-align: left;
     margin-top: 2rem;
   }
+
+  .compare__contorls {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 @media (any-hover: hover) and (min-width: 575.98px) {
@@ -8552,6 +8720,33 @@ table td button {
 
   .cart__item-info {
     display: contents;
+  }
+
+  .compare__filters {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    overflow-x: auto;
+    gap: 2.5rem;
+    padding-right: 1.5rem;
+    margin-right: -1.5rem;
+    scrollbar-width: 0;
+  }
+
+  .compare__filters::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+
+  .compare__filter {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -10425,6 +10620,10 @@ table td button {
   .tablet-only {
     display: none;
   }
+
+  .compare__filters::after {
+    display: none;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -10855,6 +11054,10 @@ table td button {
 
   .cart__item-delete:hover {
     color: #ef4444;
+  }
+
+  .compare__row:hover {
+    background: #f2f5f9;
   }
 }
 
