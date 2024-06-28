@@ -944,7 +944,6 @@ $(function () {
         })
     }
 
-
     if ($('.compare__items').length > 0) {
         let compareItemsSlider = new Swiper('.compare__items', {
             slidesPerView: "auto",
@@ -977,6 +976,27 @@ $(function () {
 
     }
 
+    if ($(".blog__item-images").length > 0) {
+        $(".blog__item-images").each((function (index, slider) {
+
+            let prev = $(slider).find('.blog__item-prev');
+            let next = $(slider).find('.blog__item-next');
+            let paginationBlock = $(slider).find('.blog__pagination');
+
+            new Swiper(slider, {
+                slidesPerView: 1,
+                navigation: {
+                    nextEl: next[0],
+                    prevEl: prev[0]
+                },
+                pagination: {
+                    el: paginationBlock[0],
+                    clickable: true
+                }
+            });
+
+        }));
+    }
 
 
 

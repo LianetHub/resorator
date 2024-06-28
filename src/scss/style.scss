@@ -132,6 +132,9 @@ body {
 	@media (min-width: $md3) {
 		max-width: rem(960);
 	}
+	@media (min-width: $md2) {
+		max-width: rem(1140);
+	}
 	@media (min-width: $md1) {
 		max-width: rem(1320);
 	}
@@ -174,3 +177,4 @@ body {
 @import "pages/delivery";
 @import "pages/cart";
 @import "pages/compare";
+@import "pages/blog";

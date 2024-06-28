@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор | Блог'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "shadow": true
+            })
+            <main class="page">
+                <nav aria-label="Хлебные крошки" class="breadcrumbs tablet-sm-only">
+                    <div class="breadcrumbs__container">
+                        <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a href="/" class="breadcrumbs__link" itemprop="item">
+                                    <span itemprop="name">Главная</span>
+                                </a>
+                                <meta itemprop="position" content="1">
+                            </li>
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a class="breadcrumbs__link active" itemprop="item">
+                                    <span itemprop="name">Блог</span>
+                                </a>
+                                <meta itemprop="position" content="2">
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <section class="blog">
+                    <div class="blog__container">
+                        <h1 class="blog__title title-md">Блог</h1>
+                        <div class="blog__body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2 class="blog__caption title-sm">Новости индустрии Horeca & Retail</h2>
+                                </div>
+                                <ul class="col-xxl-9 col-lg-8 blog__list">
+                                    <li class="blog__item">
+                                        <div class="blog__item-images swiper">
+                                            <div class="swiper-wrapper">
+                                                <a href="https://youtu.be/fzx_FyhPJZc?si=UiVykn6kVNjc2yP-" data-fancybox class="blog__item-image swiper-slide">
+                                                    <img src="@img/blog/01.jpg" class="cover-image" alt="Постер">
+                                                </a>
+                                                <a href="https://youtu.be/fzx_FyhPJZc?si=UiVykn6kVNjc2yP-" data-fancybox class="blog__item-image swiper-slide">
+                                                    <img src="@img/blog/02.jpg" class="cover-image" alt="Постер">
+                                                </a>
+                                                <div class="blog__item-image swiper-slide">
+                                                    <img src="@img/blog/02.jpg" class="cover-image" alt="Постер">
+                                                </div>
+                                                <div class="blog__item-image swiper-slide">
+                                                    <img src="@img/blog/02.jpg" class="cover-image" alt="Постер">
+                                                </div>
+                                            </div>
+                                            <div class="blog__item-controls">
+                                                <button type="button" class="blog__item-prev icon-arrow"></button>
+                                                <button type="button" class="blog__pagination swiper-pagination"></button>
+                                                <button type="button" class="blog__item-next icon-arrow"></button>
+                                            </div>
+                                        </div>
+                                        <div class="blog__item-body">
+                                            <time datetime="2024-03-03" class="blog__item-time icon-calendar">03.03.2024</time>
+                                            <a href="" class="blog__item-name title-sm">Кафе Restori</a>
+                                            <p class="blog__item-desc">Компания КОБОР продемонстрировала высокий уровень профессионализма и ответственности, оперативно предоставив всё необходимое оборудование для кафе Rebellion. Особенную ценность представляет возможность изготовления нейтрального оборудования по индивидуальным размерам, что позволило идеально интегрировать его в маленькие размеры кухни и обеспечить максимальную эффективность рабочего пространства.</p>
+                                            <a href="" class="blog__item-link icon-arrow">Читать подробнее</a>
+                                        </div>
+                                    </li>
+                                    <li class="blog__item">
+                                        <div class="blog__item-images swiper">
+                                            <div class="swiper-wrapper">
+                                                <a href="https://youtu.be/fzx_FyhPJZc?si=UiVykn6kVNjc2yP-" data-fancybox class="blog__item-image swiper-slide">
+                                                    <img src="@img/blog/01.jpg" class="cover-image" alt="Постер">
+                                                </a>
+                                                <a href="https://youtu.be/fzx_FyhPJZc?si=UiVykn6kVNjc2yP-" data-fancybox class="blog__item-image swiper-slide">
+                                                    <img src="@img/blog/02.jpg" class="cover-image" alt="Постер">
+                                                </a>
+                                                <div class="blog__item-image swiper-slide">
+                                                    <img src="@img/blog/02.jpg" class="cover-image" alt="Постер">
+                                                </div>
+                                                <div class="blog__item-image swiper-slide">
+                                                    <img src="@img/blog/02.jpg" class="cover-image" alt="Постер">
+                                                </div>
+                                            </div>
+                                            <div class="blog__item-controls">
+                                                <button type="button" class="blog__item-prev icon-arrow"></button>
+                                                <button type="button" class="blog__pagination swiper-pagination"></button>
+                                                <button type="button" class="blog__item-next icon-arrow"></button>
+                                            </div>
+                                        </div>
+                                        <div class="blog__item-body">
+                                            <time datetime="2024-03-03" class="blog__item-time icon-calendar">03.03.2024</time>
+                                            <a href="" class="blog__item-name title-sm">Кафе Restori</a>
+                                            <p class="blog__item-desc">Компания КОБОР продемонстрировала высокий уровень профессионализма и ответственности, оперативно предоставив всё необходимое оборудование для кафе Rebellion. Особенную ценность представляет возможность изготовления нейтрального оборудования по индивидуальным размерам, что позволило идеально интегрировать его в маленькие размеры кухни и обеспечить максимальную эффективность рабочего пространства.</p>
+                                            <a href="" class="blog__item-link icon-arrow">Читать подробнее</a>
+                                        </div>
+                                    </li>
+                                    <li class="blog__item">
+                                        <div class="blog__item-images swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="blog__item-image swiper-slide">
+                                                    <img src="@img/blog/02.jpg" class="cover-image" alt="Постер">
+                                                </div>
+                                                <a href="https://youtu.be/fzx_FyhPJZc?si=UiVykn6kVNjc2yP-" data-fancybox class="blog__item-image swiper-slide">
+                                                    <img src="@img/blog/01.jpg" class="cover-image" alt="Постер">
+                                                </a>
+                                                <div class="blog__item-image swiper-slide">
+                                                    <img src="@img/blog/02.jpg" class="cover-image" alt="Постер">
+                                                </div>
+                                                <div class="blog__item-image swiper-slide">
+                                                    <img src="@img/blog/02.jpg" class="cover-image" alt="Постер">
+                                                </div>
+                                            </div>
+                                            <div class="blog__item-controls">
+                                                <button type="button" class="blog__item-prev icon-arrow"></button>
+                                                <button type="button" class="blog__pagination swiper-pagination"></button>
+                                                <button type="button" class="blog__item-next icon-arrow"></button>
+                                            </div>
+                                        </div>
+                                        <div class="blog__item-body">
+                                            <time datetime="2024-03-03" class="blog__item-time icon-calendar">03.03.2024</time>
+                                            <a href="" class="blog__item-name title-sm">Кафе Restori</a>
+                                            <p class="blog__item-desc">Компания КОБОР продемонстрировала высокий уровень профессионализма и ответственности, оперативно предоставив всё необходимое оборудование для кафе Rebellion. Особенную ценность представляет возможность изготовления нейтрального оборудования по индивидуальным размерам, что позволило идеально интегрировать его в маленькие размеры кухни и обеспечить максимальную эффективность рабочего пространства.</p>
+                                            <a href="" class="blog__item-link icon-arrow">Читать подробнее</a>
+                                        </div>
+                                    </li>
+                                    <li class="blog__item">
+                                        <div class="blog__item-images swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="blog__item-image swiper-slide">
+                                                    <img src="@img/blog/02.jpg" class="cover-image" alt="Постер">
+                                                </div>
+                                                <a href="https://youtu.be/fzx_FyhPJZc?si=UiVykn6kVNjc2yP-" data-fancybox class="blog__item-image swiper-slide">
+                                                    <img src="@img/blog/01.jpg" class="cover-image" alt="Постер">
+                                                </a>
+                                                <div class="blog__item-image swiper-slide">
+                                                    <img src="@img/blog/02.jpg" class="cover-image" alt="Постер">
+                                                </div>
+                                                <div class="blog__item-image swiper-slide">
+                                                    <img src="@img/blog/02.jpg" class="cover-image" alt="Постер">
+                                                </div>
+                                            </div>
+                                            <div class="blog__item-controls">
+                                                <button type="button" class="blog__item-prev icon-arrow"></button>
+                                                <button type="button" class="blog__pagination swiper-pagination"></button>
+                                                <button type="button" class="blog__item-next icon-arrow"></button>
+                                            </div>
+                                        </div>
+                                        <div class="blog__item-body">
+                                            <time datetime="2024-03-03" class="blog__item-time icon-calendar">03.03.2024</time>
+                                            <a href="" class="blog__item-name title-sm">Кафе Restori</a>
+                                            <p class="blog__item-desc">Компания КОБОР продемонстрировала высокий уровень профессионализма и ответственности, оперативно предоставив всё необходимое оборудование для кафе Rebellion. Особенную ценность представляет возможность изготовления нейтрального оборудования по индивидуальным размерам, что позволило идеально интегрировать его в маленькие размеры кухни и обеспечить максимальную эффективность рабочего пространства.</p>
+                                            <a href="" class="blog__item-link icon-arrow">Читать подробнее</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="col-xxl-3 col-lg-4">
+                                    <aside class="blog__sidebar">
+                                        <nav class="blog__sidebar-navbar">
+                                            <h2 class="blog__sidebar-caption title-sm">
+                                                Рубрики
+                                            </h2>
+                                            <ul class="blog__sidebar-list">
+                                                <li class="blog__sidebar-item">
+                                                    <a href="" class="blog__sidebar-link active">
+                                                        <span class="blog__sidebar-text">Новости индустрии Horeca & Retail</span>
+                                                        <span class="blog__sidebar-quantity">154</span>
+                                                    </a>
+                                                </li>
+                                                <li class="blog__sidebar-item">
+                                                    <a href="" class="blog__sidebar-link">
+                                                        <span class="blog__sidebar-text">
+                                                            Новости компании Restorator
+                                                        </span>
+                                                        <span class="blog__sidebar-quantity">4</span>
+                                                    </a>
+                                                </li>
+                                                <li class="blog__sidebar-item">
+                                                    <a href="" class="blog__sidebar-link">
+                                                        <span class="blog__sidebar-text">
+                                                            Бренды
+                                                        </span>
+                                                        <span class="blog__sidebar-quantity">4</span>
+                                                    </a>
+                                                </li>
+                                                <li class="blog__sidebar-item">
+                                                    <a href="" class="blog__sidebar-link">
+                                                        <span class="blog__sidebar-text">
+                                                            Люди
+                                                        </span>
+                                                        <span class="blog__sidebar-quantity">25</span>
+                                                    </a>
+                                                </li>
+                                                <li class="blog__sidebar-item">
+                                                    <a href="" class="blog__sidebar-link">
+                                                        <span class="blog__sidebar-text">
+                                                            Оборудование
+                                                        </span>
+                                                        <span class="blog__sidebar-quantity">16</span>
+                                                    </a>
+                                                </li>
+                                                <li class="blog__sidebar-item">
+                                                    <a href="" class="blog__sidebar-link">
+                                                        <span class="blog__sidebar-text">
+                                                            Мебель
+                                                        </span>
+                                                        <span class="blog__sidebar-quantity">44</span>
+                                                    </a>
+                                                </li>
+                                                <li class="blog__sidebar-item">
+                                                    <a href="" class="blog__sidebar-link">
+                                                        <span class="blog__sidebar-text">
+                                                            Посуду
+                                                        </span>
+                                                        <span class="blog__sidebar-quantity">4</span>
+                                                    </a>
+                                                </li>
+                                                <li class="blog__sidebar-item">
+                                                    <a href="" class="blog__sidebar-link">
+                                                        <span class="blog__sidebar-text">
+                                                            Рецепты
+                                                        </span>
+                                                        <span class="blog__sidebar-quantity">20</span>
+                                                    </a>
+                                                </li>
+                                                <li class="blog__sidebar-item">
+                                                    <a href="" class="blog__sidebar-link">
+                                                        <span class="blog__sidebar-text">
+                                                            Вопрос / Ответ
+                                                        </span>
+                                                        <span class="blog__sidebar-quantity">98</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                        <div class="blog__sidebar-banner banners__item banners__item_green banners__item_column pc-only">
+                                            <div class="banners__item-body">
+                                                <div class="banners__item-caption">
+                                                    Проверка
+                                                    качества
+                                                </div>
+                                                <div class="banners__item-desc">
+                                                    Все товары проверены и у вас
+                                                    есть&nbsp;14 дней для их оценки
+                                                </div>
+                                            </div>
+                                            <div class="banners__item-image">
+                                                <img src="@img/banners/03.png" alt="Баннер">
+                                            </div>
+                                        </div>
+                                    </aside>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

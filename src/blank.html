@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор | Заглушка'
+    })
+    <body>
+        <div class="wrapper">
+            <main class="page">
+                <div class="blank">
+                    <div class="blank__promo" style="background-image: url('@img/about-promo.jpg');">
+                        <div class="blank__promo-caption">
+                            <img src="@img/blank.svg" alt="Страница в разработке">
+                        </div>
+                        <div class="blank__promo-tagline">
+                            Гарантия и сервис. За интересующей вас информацией обратитесь к нашему менеджеру или позвоните по телефону указанному на сайте.
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>
