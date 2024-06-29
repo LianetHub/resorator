@@ -86,6 +86,14 @@
 		margin-left: auto;
 		flex-shrink: 0;
 	}
+	// .popup__download
+	&__download {
+		margin-top: rem(20);
+		margin-right: auto;
+		&.btn.btn-primary-outline {
+			color: $darkBlue;
+		}
+	}
 	// .popup__subtitle
 	&__subtitle {
 		margin-top: 1.25rem;

@@ -232,6 +232,13 @@
 			margin-top: 0.63rem;
 		}
 	}
+	// .form__option
+	&__option {
+		display: block;
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+		}
+	}
 }
 
 .toggler {
@@ -314,6 +321,7 @@
 			content: "";
 			width: 1.375rem;
 			height: 1.375rem;
+			min-width: 1.375rem;
 			align-self: flex-start;
 			border-radius: 50%;
 			background: #fff;
@@ -322,10 +330,26 @@
 			border: rem(1) solid $lightBlue;
 		}
 	}
+	// .option__column
 	&__column {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+	}
+	// .option__content
+	&__content {
+	}
+	// .option__content-caption
+	&__content-caption {
+		color: $darkBlue;
+		font-size: 0.8125rem;
+		font-weight: 600;
+	}
+	// .option__content-text
+	&__content-text {
+		margin-top: 0.63rem;
+		color: $darkBlue;
+		font-size: 0.8125rem;
 	}
 }
 

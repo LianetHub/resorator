@@ -145,6 +145,7 @@
 
 			@media (any-hover: hover) {
 				&:hover {
+					color: $blue;
 					text-decoration: underline;
 				}
 			}

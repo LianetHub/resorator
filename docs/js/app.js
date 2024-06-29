@@ -295,6 +295,12 @@ $(function () {
         // cart purchase tabs
         if ($target.is('.purchase__tab')) {
             $('.purchase__content').eq($target.index()).addClass('active').siblings().removeClass('active');
+            if ($target.index() + 1 === 1) {
+                $('.cart__sidebar-btn').attr('href', '#order-individual');
+            } else {
+                $('.cart__sidebar-btn').attr('href', '#order-entity');
+            }
+
         }
 
         // catalog tabs
@@ -424,7 +430,7 @@ $(function () {
 
     function filterProducts($productWrapper, filterClass) {
         let $productSlider = $productWrapper.find('.product-card__items');
-        let slides = $productSlider[0].swiper.slides;
+        let slides = $productSlider[0].querySelectorAll('.filter-slide');
 
         slides.forEach(slide => {
             $(slide).removeClass('filter-slide-active');
@@ -433,7 +439,10 @@ $(function () {
                 $(slide).addClass('filter-slide-active');
             }
         });
-        $productSlider[0].swiper.update()
+
+        if ($productSlider[0].swiper) {
+            $productSlider[0].swiper.update()
+        }
 
 
     }

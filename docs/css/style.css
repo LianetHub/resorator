@@ -7,18 +7,18 @@
 }
 
 @font-face {
-  font-family: "DinPro";
-  font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -33,8 +33,8 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -49,16 +49,16 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -920,6 +920,15 @@ body.lock-catalog-filter {
   margin-left: auto;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+
+.popup__download {
+  margin-top: 1.25rem;
+  margin-right: auto;
+}
+
+.popup__download.btn.btn-primary-outline {
+  color: #475569;
 }
 
 .popup__subtitle {
@@ -1847,6 +1856,7 @@ table td:not(:last-child) {
 table td a {
   font-size: 0.8125rem;
   text-decoration: underline;
+  color: #1e6ba3;
 }
 
 table td button {
@@ -2303,6 +2313,14 @@ table td button {
   margin-top: 0.63rem;
 }
 
+.form__option {
+  display: block;
+}
+
+.form__option:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
 .toggler__input:disabled + .toggler__btn {
   background: #dfe0e1;
   color: #fff;
@@ -2383,6 +2401,7 @@ table td button {
   content: "";
   width: 1.375rem;
   height: 1.375rem;
+  min-width: 1.375rem;
   -ms-flex-item-align: start;
       align-self: flex-start;
   border-radius: 50%;
@@ -2407,6 +2426,18 @@ table td button {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.option__content-caption {
+  color: #475569;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.option__content-text {
+  margin-top: 0.63rem;
+  color: #475569;
+  font-size: 0.8125rem;
 }
 
 .btn {
@@ -3641,8 +3672,8 @@ table td button {
 
 .row-layout .product .product__props-row::after {
   content: "";
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #94a3b8), color-stop(50%, transparent)) 0 0/0.25rem 0.0625rem repeat-x;
-  background: linear-gradient(90deg, #94a3b8 50%, transparent 50%) 0 0/0.25rem 0.0625rem repeat-x;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #94a3b8), color-stop(50%, transparent)) 0 0/0.5rem 0.0625rem repeat-x;
+  background: linear-gradient(90deg, #94a3b8 50%, transparent 50%) 0 0/0.5rem 0.0625rem repeat-x;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -4408,7 +4439,7 @@ table td button {
   background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #f1f2f4), color-stop(50%, transparent));
   background-image: linear-gradient(90deg, #f1f2f4 50%, transparent 50%);
   background-repeat: repeat-x;
-  background-size: 0.25rem 0.0625rem;
+  background-size: 0.5rem 0.0625rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
@@ -6785,7 +6816,6 @@ table td button {
   margin-top: 0.63rem;
   color: #475569;
   font-size: 0.875rem;
-  font-weight: 500;
 }
 
 .brands__list {
@@ -7278,6 +7308,20 @@ table td button {
           align-items: center;
   font-weight: 600;
   font-size: 1rem;
+  gap: 0.63rem;
+}
+
+.cart__sidebar-row::after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 0.0625rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 0.25rem;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #94a3b8), color-stop(50%, transparent)) 0 0/0.5rem 0.0625rem repeat-x;
+  background: linear-gradient(90deg, #94a3b8 50%, transparent 50%) 0 0/0.5rem 0.0625rem repeat-x;
 }
 
 .cart__sidebar-profits {
@@ -7296,18 +7340,38 @@ table td button {
           align-items: center;
   color: #475569;
   font-size: 0.875rem;
+  gap: 0.63rem;
 }
 
 .cart__sidebar-profit:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
+.cart__sidebar-profit::after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 0.0625rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 0.25rem;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #94a3b8), color-stop(50%, transparent)) 0 0/0.5rem 0.0625rem repeat-x;
+  background: linear-gradient(90deg, #94a3b8 50%, transparent 50%) 0 0/0.5rem 0.0625rem repeat-x;
+}
+
 .cart__sidebar-profit-value {
   text-align: right;
   font-weight: 600;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .cart__sidebar-property {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7345,6 +7409,9 @@ table td button {
 
 .cart__sidebar-value {
   text-align: right;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .cart__sidebar-total {
@@ -7360,6 +7427,7 @@ table td button {
           justify-content: space-between;
   font-size: 1.3125rem;
   font-weight: 600;
+  gap: 0.63rem;
 }
 
 .cart__sidebar-total .cart__sidebar-value {
@@ -7369,6 +7437,19 @@ table td button {
 .cart__sidebar-total + .cart__sidebar-btn {
   margin-top: 1.25rem;
   width: 100%;
+}
+
+.cart__sidebar-total::after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 0.0625rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 0.35rem;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #94a3b8), color-stop(50%, transparent)) 0 0/0.5rem 0.0625rem repeat-x;
+  background: linear-gradient(90deg, #94a3b8 50%, transparent 50%) 0 0/0.5rem 0.0625rem repeat-x;
 }
 
 .cart__sidebar-downloads {
@@ -7477,28 +7558,6 @@ table td button {
 
 .purchase__options {
   margin-top: 1.25rem;
-}
-
-.purchase__option-column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.purchase__option-caption {
-  color: #475569;
-  font-size: 0.8125rem;
-  font-weight: 600;
-}
-
-.purchase__option-text {
-  margin-top: 0.63rem;
-  color: #475569;
-  font-size: 0.8125rem;
 }
 
 .purchase__banks {
@@ -11989,6 +12048,7 @@ table td button {
   }
 
   .goods__sidebar-category a:hover {
+    color: #1e6ba3;
     text-decoration: underline;
   }
 

@@ -568,7 +568,7 @@
 		.product__props-row {
 			&::after {
 				content: "";
-				background: linear-gradient(90deg, #94a3b8 50%, transparent 50%) 0 0 / rem(4) rem(1) repeat-x;
+				background: linear-gradient(90deg, #94a3b8 50%, transparent 50%) 0 0 / rem(8) rem(1) repeat-x;
 				flex: 1 1 auto;
 				align-self: flex-end;
 				height: rem(1);

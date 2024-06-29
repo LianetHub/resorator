@@ -223,6 +223,15 @@
 		align-items: center;
 		font-weight: 600;
 		font-size: 1rem;
+		gap: 0.63rem;
+		&::after {
+			content: "";
+			flex: 1 1 auto;
+			height: rem(1);
+			align-self: flex-end;
+			margin-bottom: 0.25rem;
+			background: linear-gradient(90deg, $lightBlue 50%, transparent 50%) 0 0 / rem(8) rem(1) repeat-x;
+		}
 	}
 	// .cart__sidebar-profits
 	&__sidebar-profits {
@@ -235,8 +244,17 @@
 		align-items: center;
 		color: $darkBlue;
 		font-size: 0.875rem;
+		gap: 0.63rem;
 		&:not(:last-child) {
 			margin-bottom: 0.5rem;
+		}
+		&::after {
+			content: "";
+			flex: 1 1 auto;
+			height: rem(1);
+			align-self: flex-end;
+			margin-bottom: 0.25rem;
+			background: linear-gradient(90deg, $lightBlue 50%, transparent 50%) 0 0 / rem(8) rem(1) repeat-x;
 		}
 	}
 	// .cart__sidebar-profit-name
@@ -246,9 +264,11 @@
 	&__sidebar-profit-value {
 		text-align: right;
 		font-weight: 600;
+		order: 1;
 	}
 	// .cart__sidebar-property
 	&__sidebar-property {
+		order: -1;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -272,6 +292,7 @@
 	// .cart__sidebar-value
 	&__sidebar-value {
 		text-align: right;
+		order: 1;
 	}
 	// .cart__sidebar-total
 	&__sidebar-total {
@@ -281,6 +302,7 @@
 		justify-content: space-between;
 		font-size: 1.3125rem;
 		font-weight: 600;
+		gap: 0.63rem;
 		.cart__sidebar-value {
 			font-size: 1.5rem;
 		}
@@ -294,6 +316,14 @@
 			@media (min-width: $md3) {
 				width: 100%;
 			}
+		}
+		&::after {
+			content: "";
+			flex: 1 1 auto;
+			height: rem(1);
+			align-self: flex-end;
+			margin-bottom: 0.35rem;
+			background: linear-gradient(90deg, $lightBlue 50%, transparent 50%) 0 0 / rem(8) rem(1) repeat-x;
 		}
 	}
 	// .cart__sidebar-downloads
@@ -426,29 +456,7 @@
 	&__options {
 		margin-top: 1.25rem;
 	}
-	// .purchase__option
-	&__option {
-	}
-	// .purchase__option-input
-	&__option-input {
-	}
-	// .purchase__option-column
-	&__option-column {
-		display: flex;
-		flex-direction: column;
-	}
-	// .purchase__option-caption
-	&__option-caption {
-		color: $darkBlue;
-		font-size: 0.8125rem;
-		font-weight: 600;
-	}
-	// .purchase__option-text
-	&__option-text {
-		margin-top: 0.63rem;
-		color: $darkBlue;
-		font-size: 0.8125rem;
-	}
+
 	// .purchase__banks
 	&__banks {
 		margin-top: 0.63rem;
