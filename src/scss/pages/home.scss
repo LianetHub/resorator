@@ -15,7 +15,7 @@
 	// .promo__slide
 	&__slide {
 		background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), var(--banner-image) center 0 / cover no-repeat, $darkBg;
-		color: #fff;
+		color: $white;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;

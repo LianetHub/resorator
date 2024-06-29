@@ -319,6 +319,47 @@ $(function () {
             $target.parent().removeClass('full-mobile')
         }
 
+        // contact page tabs
+        if ($target.is('.contacts__tab-btn')) {
+            $target.addClass('active').siblings().removeClass('active');
+            $('.contacts__tabs-content').eq($target.index()).addClass('active').siblings().removeClass('active');
+        }
+
+
+        // get visible all vacancies  on contacts page
+        if ($target[0].closest('.contacts__vacancies-more')) {
+            $target.closest('.contacts__vacancies-more').toggleClass('active');
+            $target.closest('.contacts__vacancies-more').prev().toggleClass('active');
+            if ($target.closest('.contacts__vacancies-more').hasClass('active')) {
+                $target.closest('.contacts__vacancies-more').find('span').text('Скрыть все');
+            } else {
+                $target.closest('.contacts__vacancies-more').find('span').text('Показать больше вакансий');
+            }
+        }
+
+        // get visible all vacancies  on contacts page
+        if ($target[0].closest('.contacts__offices-more')) {
+            $target.closest('.contacts__offices-more').toggleClass('active');
+            $target.closest('.contacts__offices-more').prev().toggleClass('active');
+            if ($target.closest('.contacts__offices-more').hasClass('active')) {
+                $target.closest('.contacts__offices-more').find('span').text('Скрыть все');
+            } else {
+                $target.closest('.contacts__offices-more').find('span').text('Показать больше офисов');
+            }
+        }
+
+        // get full info vacancy
+        if ($target.is('.contacts__vacancies-btn')) {
+            $target.closest('.contacts__vacancies').toggleClass('open-vacancy');
+            $target.closest('.contacts__card').toggleClass('active');
+        }
+
+        // get full info office
+        if ($target.is('.contacts__offices-btn')) {
+            $target.closest('.contacts__offices').toggleClass('open-office');
+            $target.closest('.contacts__card').toggleClass('active');
+        }
+
     });
 
 
@@ -399,10 +440,10 @@ $(function () {
 
     function showTooltip($element) {
 
-        $element.html('<span class="tooltip">Скопировано</span>');
+        $element.html($element.html() + '<span class="tooltip">Скопировано</span>');
 
         setTimeout(function () {
-            $element.html("");
+            $element.find('.tooltip').remove();
         }, 1000);
     }
 
@@ -891,6 +932,13 @@ $(function () {
         })
     }
 
+    if ($('.contacts__tabs').length > 0) {
+        new Swiper('.contacts__tabs', {
+            slidesPerView: "auto",
+            spaceBetween: 10
+        })
+    }
+
     if ($('.product-card__colors-slider').length > 0) {
         new Swiper('.product-card__colors-slider', {
             slidesPerView: 4,
@@ -989,6 +1037,22 @@ $(function () {
                     nextEl: next[0],
                     prevEl: prev[0]
                 },
+                pagination: {
+                    el: paginationBlock[0],
+                    clickable: true
+                }
+            });
+
+        }));
+    }
+
+    if ($(".contacts__card-slider").length > 0) {
+        $(".contacts__card-slider").each((function (index, slider) {
+
+            let paginationBlock = $(slider).find('.contacts__card-pagination');
+
+            new Swiper(slider, {
+                slidesPerView: 1,
                 pagination: {
                     el: paginationBlock[0],
                     clickable: true

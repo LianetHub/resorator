@@ -20,7 +20,7 @@
 		}
 		.checkbox__content {
 			&::before {
-				color: #fff;
+				color: $white;
 			}
 		}
 	}
@@ -240,7 +240,7 @@
 		&:disabled {
 			& + .toggler__btn {
 				background: #dfe0e1;
-				color: #fff;
+				color: $white;
 			}
 		}
 		&:checked {
@@ -292,7 +292,7 @@
 			}
 			& + .option__btn {
 				background: $yellow;
-				color: #fff;
+				color: $white;
 			}
 		}
 		&:disabled {
@@ -363,6 +363,16 @@
 			border-color: $lightGray;
 			color: $darkBlue;
 		}
+		.icon-arrow-short {
+			display: flex;
+			width: 2.5rem;
+			height: 2.5rem;
+			justify-content: center;
+			align-items: center;
+			font-size: 1.5rem;
+			border-radius: 50%;
+			background: $white;
+		}
 	}
 	&.btn-primary-outline {
 		color: $yellow;
@@ -407,6 +417,7 @@
 	}
 	&.btn-rounded {
 		border-radius: 3.4375rem;
+		padding: 0.7rem 1.25rem;
 	}
 	&.btn-fullwidth {
 		width: 100%;

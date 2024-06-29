@@ -293,19 +293,8 @@
 	}
 	// .about__services-btn
 	&__services-btn {
-		padding: 0.7rem 1.25rem;
 		&.btn-primary-outline {
 			padding: 0.7rem 1.82rem;
-		}
-		.icon-arrow-short {
-			display: flex;
-			width: 2.5rem;
-			height: 2.5rem;
-			justify-content: center;
-			align-items: center;
-			font-size: 1.5rem;
-			border-radius: 50%;
-			background: $white;
 		}
 	}
 	// .about__services-list

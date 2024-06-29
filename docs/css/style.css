@@ -15,18 +15,18 @@
 }
 
 @font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -41,16 +41,16 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -2454,6 +2454,25 @@ table td button {
   color: #475569;
 }
 
+.btn.btn-primary .icon-arrow-short,
+.btn.btn-primary .swiper-button-next,
+.btn.btn-primary .swiper-button-prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  background: #fff;
+}
+
 .btn.btn-primary-outline {
   color: #f7ce46;
   border: 0.0625rem solid #f7ce46;
@@ -2505,6 +2524,7 @@ table td button {
 
 .btn.btn-rounded {
   border-radius: 3.4375rem;
+  padding: 0.7rem 1.25rem;
 }
 
 .btn.btn-fullwidth {
@@ -6017,31 +6037,8 @@ table td button {
   gap: 2.5rem;
 }
 
-.about__services-btn {
-  padding: 0.7rem 1.25rem;
-}
-
 .about__services-btn.btn-primary-outline {
   padding: 0.7rem 1.82rem;
-}
-
-.about__services-btn .icon-arrow-short,
-.about__services-btn .swiper-button-next,
-.about__services-btn .swiper-button-prev {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 2.5rem;
-  height: 2.5rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 1.5rem;
-  border-radius: 50%;
-  background: #fff;
 }
 
 .about__services-item {
@@ -7972,6 +7969,503 @@ table td button {
           order: 1;
 }
 
+.contacts {
+  padding: 1.5rem 0 1.56rem 0em;
+}
+
+.contacts__title.contacts__title_underline {
+  border-bottom: 0.0625rem solid #e8e8e8;
+  padding-bottom: 0.62rem;
+}
+
+.contacts__block:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.contacts__body:not(:first-child) {
+  margin-top: 1.25rem;
+}
+
+.contacts__body .row {
+  --gutter-y: 1.25rem;
+}
+
+.contacts__card {
+  border-radius: 0.625rem;
+  background: #f2f5f9;
+  color: #475569;
+  padding: 1.875rem;
+  min-height: 100%;
+}
+
+.contacts__card.contacts__card_dark {
+  background: #303030;
+  color: #fff;
+}
+
+.contacts__card.contacts__card_yellow {
+  background: #f4eed7;
+}
+
+.contacts__card.contacts__card_lg {
+  border-radius: 1.25rem;
+}
+
+.contacts__card.contacts__card_lg .contacts__card-text {
+  margin-top: 1.87rem;
+}
+
+.contacts__card.contacts__card_lg .contacts__card-list {
+  margin-top: 1.88rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+}
+
+.contacts__card.contacts__card_lg .contacts__card-item {
+  font-size: 1rem;
+}
+
+.contacts__card.contacts__card_lg .contacts__card-link {
+  margin-top: 0.62rem;
+}
+
+.contacts__card.active .contacts__card-close {
+  display: block;
+}
+
+.contacts__card.active .contacts__card-btn,
+.contacts__card.active .contacts__card-request {
+  display: none;
+}
+
+.contacts__card.active .contacts__card-request {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts__card.active .contacts__card-body {
+  display: none;
+}
+
+.contacts__card.active .contacts__card-info {
+  display: block;
+}
+
+.contacts__card-close {
+  display: none;
+}
+
+.contacts__card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  gap: 2rem;
+}
+
+.contacts__card-header .contacts__card-close {
+  margin-left: auto;
+}
+
+.contacts__image {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  padding-bottom: 35.85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 1.25rem;
+}
+
+.contacts__image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  border-radius: 1.25rem;
+}
+
+.contacts__image img {
+  border-radius: 1.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contacts__card-body {
+  margin-top: 1.25rem;
+}
+
+.contacts__card-info {
+  margin-top: 2rem;
+  display: none;
+}
+
+.contacts__card-info-list {
+  margin: 1rem 0 0 0;
+}
+
+.contacts__card-info-item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.contacts__card-info-caption {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contacts__card-info-desc {
+  margin-top: 0.63rem;
+  font-size: 0.875rem;
+}
+
+.contacts__card-info-desc.lg-desc {
+  font-size: 1rem;
+}
+
+.contacts__card-info-desc ul {
+  text-align: left;
+}
+
+.contacts__card-info-desc ul li::before {
+  content: "-";
+  margin-right: 0.25rem;
+}
+
+.contacts__card-text {
+  font-size: 0.875rem;
+}
+
+.contacts__card-text:not(:first-child) {
+  margin-top: 1.125rem;
+}
+
+.contacts__card-list {
+  margin-top: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contacts__card-btn,
+.contacts__card-request {
+  margin-top: 1.88rem;
+  font-size: 1rem;
+}
+
+.contacts__card-btn.btn-gray-outline,
+.btn-gray-outline.contacts__card-request {
+  padding: 1.325rem;
+  color: #475569;
+}
+
+.contacts__card-request {
+  display: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.contacts__card-item {
+  font-size: 0.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contacts__card-link {
+  margin-top: 0.31rem;
+  font-size: 1rem;
+  font-weight: 600;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.contacts__tab-btn {
+  border-radius: 0.625rem;
+  background: #f1f2f4;
+  color: #475569;
+  font-family: "DinPro";
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 100%;
+  padding: 1.06rem 1.25rem;
+  border-radius: 0.625rem;
+  width: auto;
+}
+
+.contacts__tab-btn.active {
+  background: #f4eed7;
+}
+
+.contacts__tabs-body {
+  margin-top: 1.25rem;
+}
+
+.contacts__tabs-content {
+  display: none;
+}
+
+.contacts__tabs-content.active {
+  display: block;
+}
+
+.contacts__card-hint {
+  margin-top: 0.62rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contacts__card-props {
+  margin-top: 1.88rem;
+  max-width: 50rem;
+}
+
+.contacts__card-prop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.63rem;
+  font-size: 0.875rem;
+  row-gap: 0.15rem;
+}
+
+.contacts__card-prop:not(:last-child) {
+  margin-bottom: 0.63rem;
+}
+
+.contacts__card-prop-name {
+  font-weight: 600;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.contacts__card-prop-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.63rem;
+}
+
+.contacts__card-prop-value::before {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 1rem;
+  margin: 0.25rem 0 0 0;
+  height: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #475569;
+}
+
+.contacts__card-prop-value[href] {
+  font-weight: 600;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.contacts__card-copy {
+  margin-top: 1.87rem;
+  border-radius: 0.3125rem;
+  border: 1px solid #475569;
+  color: #475569;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.62rem;
+  padding: 0.62rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+}
+
+.contacts__card-copy::before {
+  font-size: 1rem;
+}
+
+.contacts__vacancies .contacts__card {
+  border-radius: 1.25rem;
+}
+
+.contacts__vacancies.open-vacancy .row {
+  display: contents;
+}
+
+.contacts__vacancies.open-vacancy .row > * {
+  display: contents;
+}
+
+.contacts__vacancies.open-vacancy .contacts__card:not(.active) {
+  display: none;
+}
+
+.contacts__vacancies.open-vacancy + .contacts__vacancies-more,
+.contacts__vacancies.open-vacancy + .contacts__offices-more {
+  display: none;
+}
+
+.contacts__vacancies-more,
+.contacts__offices-more {
+  margin-top: 1.25rem;
+  color: #94a3b8;
+  font-size: 0.8125rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.62rem;
+}
+
+.contacts__vacancies-more::before,
+.contacts__offices-more::before {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  font-size: 0.75rem;
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.contacts__vacancies-more span,
+.contacts__offices-more span {
+  text-decoration: underline;
+}
+
+.contacts__vacancies-more.active::before,
+.active.contacts__offices-more::before {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.contacts__offices {
+  margin-top: 1.87rem;
+}
+
+.contacts__offices .contacts__card {
+  border-radius: 1.25rem;
+}
+
+.contacts__offices:not(.active) .row > :not(:nth-child(1),
+:nth-child(2),
+:nth-child(3)) {
+  display: none;
+}
+
+.contacts__offices.open-office .row {
+  display: contents;
+}
+
+.contacts__offices.open-office .row > * {
+  display: contents;
+}
+
+.contacts__offices.open-office .contacts__card-slider {
+  display: block;
+}
+
+.contacts__offices.open-office .contacts__card {
+  grid-column: auto;
+}
+
+.contacts__offices.open-office .contacts__card:not(.active) {
+  display: none;
+}
+
+.contacts__offices.open-office .contacts__card:not(.active) + .contacts__card-slider {
+  display: none;
+}
+
+.contacts__offices.open-office + .contacts__offices-more {
+  display: none;
+}
+
+.contacts__card-slider {
+  display: none;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.contacts__card-slide {
+  height: auto;
+}
+
+.contacts__card-slide img {
+  border-radius: 0 0 0.625rem 0.625rem;
+  min-height: 28.625rem;
+}
+
+.contacts__card-pagination {
+  position: absolute;
+  bottom: 0;
+}
+
+.contacts__office {
+  display: -ms-grid;
+  display: grid;
+}
+
+.contacts__office .contacts__card {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+}
+
 @media (min-width: 375px) {
   .product__action {
     min-width: 2.5rem;
@@ -8570,6 +9064,49 @@ table td button {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+
+  .contacts {
+    padding: 1rem 0 1.56rem 0em;
+  }
+
+  .contacts__body .row {
+    --gutter-y: 1.88rem;
+  }
+
+  .contacts__card.contacts__card_lg .contacts__card-text {
+    margin-top: 2.25rem;
+  }
+
+  .contacts__card.contacts__card_lg .contacts__card-list {
+    gap: 2.75rem;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contacts__card-header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .contacts__card-caption {
+    line-height: 1;
+  }
+
+  .contacts__card-body {
+    margin-top: 1.87rem;
+  }
+
+  .contacts__card-prop {
+    row-gap: 0.63rem;
+  }
 }
 
 @media (any-hover: hover) and (min-width: 575.98px) {
@@ -9104,6 +9641,16 @@ table td button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .contacts__card-slide img {
+    border-radius: 0.625rem;
+  }
+
+  .contacts__office {
+    gap: 1.25rem;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -10242,6 +10789,14 @@ table td button {
   .blog {
     padding: 0em 0em 1.56rem 0em;
   }
+
+  .contacts {
+    padding: 0em 0em 1.56rem 0em;
+  }
+
+  .contacts__office {
+    gap: 1.875rem;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -10686,6 +11241,13 @@ table td button {
         -ms-flex: 0 0 24rem;
             flex: 0 0 24rem;
   }
+
+  .contacts__vacancies:not(.active) .row > :not(:nth-child(1),
+  :nth-child(2),
+  :nth-child(3),
+  :nth-child(4)) {
+    display: none;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -11020,6 +11582,14 @@ table td button {
   .compare__filters::after {
     display: none;
   }
+
+  .contacts__vacancies:not(.active) .row > :not(:nth-child(1)) {
+    display: none;
+  }
+
+  .contacts__offices.open-office .contacts__card:not(:last-child) {
+    border-radius: 0.625rem 0.625rem 0 0;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -11130,6 +11700,33 @@ table td button {
 
   .cart__title {
     font-size: 1.5rem;
+  }
+
+  .contacts__card.active .contacts__card-info {
+    text-align: justify;
+  }
+
+  .contacts__card-request {
+    width: 100%;
+  }
+
+  .contacts__card-request.btn {
+    padding-inline: 0rem;
+  }
+}
+
+@media (max-width: 1399.98px) and (min-width: 991.98px) {
+  .contacts__vacancies:not(.active) .row > :not(:nth-child(1),
+  :nth-child(2),
+  :nth-child(3)) {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) and (min-width: 766.98px) {
+  .contacts__vacancies:not(.active) .row > :not(:nth-child(1),
+  :nth-child(2)) {
+    display: none;
   }
 }
 
@@ -11477,6 +12074,24 @@ table td button {
 
   .blog__sidebar-link:hover .blog__sidebar-text {
     text-decoration: underline;
+  }
+
+  .contacts__card-link:hover {
+    color: #f7ce46;
+  }
+
+  .contacts__card-prop-value[href]:hover {
+    color: #f7ce46;
+  }
+
+  .contacts__card-copy:hover {
+    background: #475569;
+    color: #fff;
+  }
+
+  .contacts__vacancies-more:hover span,
+  .contacts__offices-more:hover span {
+    text-decoration: none;
   }
 }
 
