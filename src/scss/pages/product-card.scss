@@ -92,6 +92,7 @@
 			margin-top: rem(28);
 			gap: rem(20);
 			display: flex;
+			align-items: flex-start;
 		}
 	}
 	// .product-card__slider
@@ -232,6 +233,11 @@
 	&__info {
 		flex: 1 1 auto;
 		order: 1;
+
+		@media (min-width: $md3) {
+			position: sticky;
+			top: 1rem;
+		}
 	}
 	// .product-card__info-header
 	&__info-header {
@@ -511,8 +517,8 @@
 		}
 		@media (min-width: $md1) {
 			position: sticky;
-			flex: 0 0 auto;
 			top: 1rem;
+			flex: 0 0 auto;
 			width: 22.1875rem;
 		}
 		margin-left: auto;
