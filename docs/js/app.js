@@ -414,6 +414,12 @@ $(function () {
             }
         }
 
+        // get visiblie bid form - leasing page
+        if ($target.is('.leasing__side-btn') || $target.is('.leasing__side-back')) {
+            $('.leasing__side-main').toggleClass('hidden');
+            $('.leasing__side-bid').toggleClass('hidden');
+        }
+
     });
 
 
@@ -1256,6 +1262,26 @@ $(function () {
             }
         });
     }
+
+    // range input
+    const rangeInputs = $('.range__input');
+    if (rangeInputs.length > 0) {
+
+        rangeInputs.each((index, rangeInput) => {
+            getInputRangePrecent(rangeInput);
+            $(rangeInput).on('input', (e) => {
+                getInputRangePrecent(e.target);
+
+            })
+
+        })
+    };
+
+    function getInputRangePrecent(rangeInput) {
+        let currentPrecent = ((rangeInput.value - rangeInput.min) / (rangeInput.max - rangeInput.min)) * 100;
+        $(rangeInput).css('--precent', `${currentPrecent}%`)
+    }
+
 
 
 

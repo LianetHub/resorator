@@ -77,6 +77,13 @@
 		font-size: 0.8125rem;
 		display: none;
 		padding: 0 0.625rem 1.25rem;
+		& p {
+			font-size: 0.8125rem;
+			line-height: normal;
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+			}
+		}
 	}
 	// .delivery__warning
 	&__warning {

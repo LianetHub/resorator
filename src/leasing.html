@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор | Лизинг'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "shadow": true
+            })
+            <main class="page">
+                <nav aria-label="Хлебные крошки" class="breadcrumbs tablet-sm-only">
+                    <div class="breadcrumbs__container">
+                        <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a href="/" class="breadcrumbs__link" itemprop="item">
+                                    <span itemprop="name">Главная</span>
+                                </a>
+                                <meta itemprop="position" content="1">
+                            </li>
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a class="breadcrumbs__link active" itemprop="item">
+                                    <span itemprop="name">Лизинг</span>
+                                </a>
+                                <meta itemprop="position" content="2">
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <section class="leasing">
+                    <div class="leasing__container">
+                        <h1 class="leasing__title title-md">
+                            Лизинг
+                        </h1>
+                        <div class="leasing__body">
+                            <div class="row">
+                                <div class="col-xl-7 col-lg-6">
+                                    <div class="leasing__calc">
+                                        <div class="leasing__calc-row">
+                                            <div class="leasing__calc-header">
+                                                <div class="leasing__calc-caption">Стоимость имущества</div>
+                                                <div class="leasing__calc-inputs">
+                                                    <div class="leasing__calc-input">
+                                                        <input type="number" name="current-price" class="form__input" placeholder="500 000">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="leasing__calc-range range">
+                                                <input type="range" name="price-range" min="500" max="50000" step="100" class="range__input">
+                                            </div>
+                                            <div class="leasing__calc-ticks">
+                                                <div class="leasing__calc-tick">500 тыс. Р</div>
+                                                <div class="leasing__calc-tick tablet-only">13 млн. Р</div>
+                                                <div class="leasing__calc-tick">25 млн. Р</div>
+                                                <div class="leasing__calc-tick tablet-only">38 млн. Р</div>
+                                                <div class="leasing__calc-tick">50 млн. Р</div>
+                                            </div>
+                                        </div>
+                                        <div class="leasing__calc-row">
+                                            <div class="leasing__calc-header">
+                                                <div class="leasing__calc-caption">Первоначаль&shy;ный взнос</div>
+                                                <div class="leasing__calc-inputs">
+                                                    <div class="leasing__calc-input">
+                                                        <input type="number" name="initial-currency" class="form__input" placeholder="0 Р">
+                                                    </div>
+                                                    <div class="leasing__calc-input">
+                                                        <input type="number" name="initial-precent" class="form__input" placeholder="0%">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="leasing__calc-range range">
+                                                <input type="range" name="initial-range" min="0" max="49" step="1" class="range__input">
+                                            </div>
+                                            <div class="leasing__calc-ticks">
+                                                <div class="leasing__calc-tick">0%</div>
+                                                <div class="leasing__calc-tick">49%</div>
+                                            </div>
+                                        </div>
+                                        <div class="leasing__calc-row">
+                                            <div class="leasing__calc-header">
+                                                <div class="leasing__calc-caption">Срок договора</div>
+                                                <div class="leasing__calc-inputs">
+                                                    <div class="leasing__calc-input">
+                                                        <input type="number" name="term" class="form__input" placeholder="36 меяцев">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="leasing__calc-range range">
+                                                <input type="range" name="term-range" min="12" max="60" step="1" class="range__input">
+                                            </div>
+                                            <div class="leasing__calc-ticks">
+                                                <div class="leasing__calc-tick">12 мес.</div>
+                                                <div class="leasing__calc-tick">24 мес.</div>
+                                                <div class="leasing__calc-tick">36 мес.</div>
+                                                <div class="leasing__calc-tick">48 мес.</div>
+                                                <div class="leasing__calc-tick">60 мес.</div>
+                                            </div>
+                                        </div>
+                                        <div class="leasing__calc-row">
+                                            <div class="leasing__calc-header">
+                                                <div class="leasing__calc-caption">Последний платеж</div>
+                                                <div class="leasing__calc-inputs">
+                                                    <div class="leasing__calc-input">
+                                                        <input type="number" name="last" class="form__input" placeholder="0%">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="leasing__calc-range range">
+                                                <input type="range" name="term-range" min="0" max="40" step="1" class="range__input">
+                                            </div>
+                                            <div class="leasing__calc-ticks">
+                                                <div class="leasing__calc-tick">0%</div>
+                                                <div class="leasing__calc-tick">40%</div>
+                                            </div>
+                                        </div>
+                                        <div class="leasing__calc-row">
+                                            <div class="leasing__calc-header">
+                                                <div class="leasing__calc-caption">Выручка за последний год</div>
+                                            </div>
+                                            <div class="leasing__calc-options">
+                                                <label class="leasing__calc-option option">
+                                                    <input type="radio" name="revenue" checked value="120" class="option__input hidden" hidden>
+                                                    <span class="option__content">
+                                                        0-120 млн.
+                                                    </span>
+                                                </label>
+                                                <label class="leasing__calc-option option">
+                                                    <input type="radio" name="revenue" value="800" class="option__input hidden" hidden>
+                                                    <span class="option__content">
+                                                        120-800 млн.
+                                                    </span>
+                                                </label>
+                                                <label class="leasing__calc-option option">
+                                                    <input type="radio" name="revenue" value="2000" class="option__input hidden" hidden>
+                                                    <span class="option__content">
+                                                        800 млн. - 2 млрд.
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-5 col-lg-6">
+                                    <aside class="leasing__side">
+                                        <div class="leasing__side-main">
+                                            <h2 class="leasing__side-caption title-sm">
+                                                Информация о заказе
+                                            </h2>
+                                            <div class="leasing__side-schedule form__field">
+                                                <label for="payment-schedule" class="form__label" tabindex="-1">График платежей</label>
+                                                <select name="payment-schedule" id="payment-schedule">
+                                                    <option selected value="1">Равномерный</option>
+                                                    <option value="2">Неравномерный</option>
+                                                </select>
+                                            </div>
+                                            <div class="leasing__side-row">
+                                                <div class="leasing__side-prop">Ежемесячный платеж</div>
+                                                <div class="leasing__side-value">
+                                                    <strong>69 998</strong>₽
+                                                </div>
+                                            </div>
+                                            <div class="leasing__side-row">
+                                                <div class="leasing__side-prop">Экономия по налогам</div>
+                                                <div class="leasing__side-value">
+                                                    <strong>69 998</strong> ₽
+                                                </div>
+                                            </div>
+                                            <div class="leasing__side-small">
+                                                <div class="leasing__side-row">
+                                                    <div class="leasing__side-prop leasing__side-prop_sm">Годовое удорожание</div>
+                                                    <div class="leasing__side-value leasing__side-value_sm">
+                                                        <strong>23.62%</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="leasing__side-row">
+                                                    <div class="leasing__side-prop leasing__side-prop_sm">Сумма договора</div>
+                                                    <div class="leasing__side-value leasing__side-value_sm">
+                                                        <strong>854 338</strong> ₽
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="" class="leasing__side-download btn btn-sm btn-primary-outline icon-doc">
+                                                Получить график платежей PDF
+                                            </a>
+                                            <button type="button" class="leasing__side-btn btn btn-primary">Оставить заявку</button>
+                                            <p class="leasing__side-privacy">Стоимость предмета лизинга и приведенные расчеты через калькулятор являются предварительными. Для точного определения процентной ставки по договору, пожалуйста, обратитесь к менеджеру в вашем регионе. Калькулятор не следует применять для расчетов по 44-ФЗ и 223-ФЗ.</p>
+                                        </div>
+                                        <div class="leasing__side-bid hidden">
+                                            <button class="leasing__side-back icon-chevron">Оставить заявку</button>
+                                            <form action="#" class="leasing__side-form">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="form__field">
+                                                            <div class="form__label">Ваше имя *</div>
+                                                            <input type="text" name="name" placeholder="Имя" class="form__input">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form__field">
+                                                            <div class="form__label">Организация*</div>
+                                                            <input type="text" name="organization" placeholder="Организация" class="form__input">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form__field">
+                                                            <div class="form__label">ИНН*</div>
+                                                            <input type="number" name="inn" placeholder="ИНН компании" class="form__input">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form__field">
+                                                            <div class="form__label">Телефон *</div>
+                                                            <input type="tel" name="phone" placeholder="+7" class="form__input">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form__field">
+                                                            <div class="form__label">E-mail *</div>
+                                                            <input type="email" name="email" placeholder="mail@example.ru" class="form__input">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form__field">
+                                                            <div class="form__label">Сообщение</div>
+                                                            <textarea name="message" class="form__textarea" placeholder="Дополнительная информация"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <button type="submit" class="btn btn-primary btn-fullwidth">Отправить заявку</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </aside>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="contacts">
+                    <div class="contacts__container">
+                        <div class="contacts__block">
+                            <h2 class="contacts__title contacts__title_underline title-md">Офисы продаж по России</h2>
+                            <div class="contacts__offices">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="contacts__office">
+                                            <div class="contacts__card">
+                                                <div class="contacts__card-header">
+                                                    <h2 class="contacts__card-caption title-sm">
+                                                        Москва
+                                                    </h2>
+                                                    <button type="button" class="contacts__card-close contacts__offices-btn icon-close"></button>
+                                                </div>
+                                                <div class="contacts__card-info">
+                                                    <p class="contacts__card-hint">Название точки продаж или офиса</p>
+                                                </div>
+                                                <p class="contacts__card-text lg-offset">
+                                                    Отзывы наших соискателей на HH.ru оценивают нас как «очень хорошо» и более 90% готовы рекомендовать нашу компанию.
+                                                </p>
+                                                <p class="contacts__card-text">
+                                                    Для начала работы в сервисе достаточно отправить отклик или позвонить нам, мы работаем ежедневно.
+                                                </p>
+                                                <ul class="contacts__card-props">
+                                                    <li class="contacts__card-prop">
+                                                        <div class="contacts__card-prop-name">Часы работы:</div>
+                                                        <div class="contacts__card-prop-value">09:00 - 21:00</div>
+                                                    </li>
+                                                    <li class="contacts__card-prop">
+                                                        <a href="mailto:mail@mail.ru" class="contacts__card-prop-value icon-mail">
+                                                            mail@mail.ru
+                                                        </a>
+                                                    </li>
+                                                    <li class="contacts__card-prop">
+                                                        <a href="tel:88003551555" class="contacts__card-prop-value icon-phone">
+                                                            8 (800) 355-15-55
+                                                        </a>
+                                                    </li>
+                                                    <li class="contacts__card-prop">
+                                                        <address class="contacts__card-prop-value icon-location">
+                                                            142181, Московская область, г. Подольск, деревня Коледино, Территория Индустриальный парк Коледино, д. 6, стр. 1
+                                                        </address>
+                                                    </li>
+                                                </ul>
+                                                <button type="button" class="contacts__offices-btn contacts__card-btn btn btn-gray-outline btn-rounded btn-fullwidth">
+                                                    Смотреть подробности
+                                                </button>
+                                            </div>
+                                            <div class="contacts__card-slider swiper">
+                                                <div class="swiper-wrapper">
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                </div>
+                                                <div class="contacts__card-pagination swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="contacts__office">
+                                            <div class="contacts__card">
+                                                <div class="contacts__card-header">
+                                                    <h2 class="contacts__card-caption title-sm">
+                                                        Москва
+                                                    </h2>
+                                                    <button type="button" class="contacts__card-close contacts__offices-btn icon-close"></button>
+                                                </div>
+                                                <div class="contacts__card-info">
+                                                    <p class="contacts__card-hint">Название точки продаж или офиса</p>
+                                                </div>
+                                                <p class="contacts__card-text lg-offset">
+                                                    Отзывы наших соискателей на HH.ru оценивают нас как «очень хорошо» и более 90% готовы рекомендовать нашу компанию.
+                                                </p>
+                                                <p class="contacts__card-text">
+                                                    Для начала работы в сервисе достаточно отправить отклик или позвонить нам, мы работаем ежедневно.
+                                                </p>
+                                                <ul class="contacts__card-props">
+                                                    <li class="contacts__card-prop">
+                                                        <div class="contacts__card-prop-name">Часы работы:</div>
+                                                        <div class="contacts__card-prop-value">09:00 - 21:00</div>
+                                                    </li>
+                                                    <li class="contacts__card-prop">
+                                                        <a href="mailto:mail@mail.ru" class="contacts__card-prop-value icon-mail">
+                                                            mail@mail.ru
+                                                        </a>
+                                                    </li>
+                                                    <li class="contacts__card-prop">
+                                                        <a href="tel:88003551555" class="contacts__card-prop-value icon-phone">
+                                                            8 (800) 355-15-55
+                                                        </a>
+                                                    </li>
+                                                    <li class="contacts__card-prop">
+                                                        <address class="contacts__card-prop-value icon-location">
+                                                            142181, Московская область, г. Подольск, деревня Коледино, Территория Индустриальный парк Коледино, д. 6, стр. 1
+                                                        </address>
+                                                    </li>
+                                                </ul>
+                                                <button type="button" class="contacts__offices-btn contacts__card-btn btn btn-gray-outline btn-rounded btn-fullwidth">
+                                                    Смотреть подробности
+                                                </button>
+                                            </div>
+                                            <div class="contacts__card-slider swiper">
+                                                <div class="swiper-wrapper">
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                </div>
+                                                <div class="contacts__card-pagination swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="contacts__office">
+                                            <div class="contacts__card">
+                                                <div class="contacts__card-header">
+                                                    <h2 class="contacts__card-caption title-sm">
+                                                        Москва
+                                                    </h2>
+                                                    <button type="button" class="contacts__card-close contacts__offices-btn icon-close"></button>
+                                                </div>
+                                                <div class="contacts__card-info">
+                                                    <p class="contacts__card-hint">Название точки продаж или офиса</p>
+                                                </div>
+                                                <p class="contacts__card-text lg-offset">
+                                                    Отзывы наших соискателей на HH.ru оценивают нас как «очень хорошо» и более 90% готовы рекомендовать нашу компанию.
+                                                </p>
+                                                <p class="contacts__card-text">
+                                                    Для начала работы в сервисе достаточно отправить отклик или позвонить нам, мы работаем ежедневно.
+                                                </p>
+                                                <ul class="contacts__card-props">
+                                                    <li class="contacts__card-prop">
+                                                        <div class="contacts__card-prop-name">Часы работы:</div>
+                                                        <div class="contacts__card-prop-value">09:00 - 21:00</div>
+                                                    </li>
+                                                    <li class="contacts__card-prop">
+                                                        <a href="mailto:mail@mail.ru" class="contacts__card-prop-value icon-mail">
+                                                            mail@mail.ru
+                                                        </a>
+                                                    </li>
+                                                    <li class="contacts__card-prop">
+                                                        <a href="tel:88003551555" class="contacts__card-prop-value icon-phone">
+                                                            8 (800) 355-15-55
+                                                        </a>
+                                                    </li>
+                                                    <li class="contacts__card-prop">
+                                                        <address class="contacts__card-prop-value icon-location">
+                                                            142181, Московская область, г. Подольск, деревня Коледино, Территория Индустриальный парк Коледино, д. 6, стр. 1
+                                                        </address>
+                                                    </li>
+                                                </ul>
+                                                <button type="button" class="contacts__offices-btn contacts__card-btn btn btn-gray-outline btn-rounded btn-fullwidth">
+                                                    Смотреть подробности
+                                                </button>
+                                            </div>
+                                            <div class="contacts__card-slider swiper">
+                                                <div class="swiper-wrapper">
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                </div>
+                                                <div class="contacts__card-pagination swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="contacts__office">
+                                            <div class="contacts__card">
+                                                <div class="contacts__card-header">
+                                                    <h2 class="contacts__card-caption title-sm">
+                                                        Москва
+                                                    </h2>
+                                                    <button type="button" class="contacts__card-close contacts__offices-btn icon-close"></button>
+                                                </div>
+                                                <div class="contacts__card-info">
+                                                    <p class="contacts__card-hint">Название точки продаж или офиса</p>
+                                                </div>
+                                                <p class="contacts__card-text lg-offset">
+                                                    Отзывы наших соискателей на HH.ru оценивают нас как «очень хорошо» и более 90% готовы рекомендовать нашу компанию.
+                                                </p>
+                                                <p class="contacts__card-text">
+                                                    Для начала работы в сервисе достаточно отправить отклик или позвонить нам, мы работаем ежедневно.
+                                                </p>
+                                                <ul class="contacts__card-props">
+                                                    <li class="contacts__card-prop">
+                                                        <div class="contacts__card-prop-name">Часы работы:</div>
+                                                        <div class="contacts__card-prop-value">09:00 - 21:00</div>
+                                                    </li>
+                                                    <li class="contacts__card-prop">
+                                                        <a href="mailto:mail@mail.ru" class="contacts__card-prop-value icon-mail">
+                                                            mail@mail.ru
+                                                        </a>
+                                                    </li>
+                                                    <li class="contacts__card-prop">
+                                                        <a href="tel:88003551555" class="contacts__card-prop-value icon-phone">
+                                                            8 (800) 355-15-55
+                                                        </a>
+                                                    </li>
+                                                    <li class="contacts__card-prop">
+                                                        <address class="contacts__card-prop-value icon-location">
+                                                            142181, Московская область, г. Подольск, деревня Коледино, Территория Индустриальный парк Коледино, д. 6, стр. 1
+                                                        </address>
+                                                    </li>
+                                                </ul>
+                                                <button type="button" class="contacts__offices-btn contacts__card-btn btn btn-gray-outline btn-rounded btn-fullwidth">
+                                                    Смотреть подробности
+                                                </button>
+                                            </div>
+                                            <div class="contacts__card-slider swiper">
+                                                <div class="swiper-wrapper">
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                </div>
+                                                <div class="contacts__card-pagination swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="contacts__office">
+                                            <div class="contacts__card">
+                                                <div class="contacts__card-header">
+                                                    <h2 class="contacts__card-caption title-sm">
+                                                        Москва
+                                                    </h2>
+                                                    <button type="button" class="contacts__card-close contacts__offices-btn icon-close"></button>
+                                                </div>
+                                                <div class="contacts__card-info">
+                                                    <p class="contacts__card-hint">Название точки продаж или офиса</p>
+                                                </div>
+                                                <p class="contacts__card-text lg-offset">
+                                                    Отзывы наших соискателей на HH.ru оценивают нас как «очень хорошо» и более 90% готовы рекомендовать нашу компанию.
+                                                </p>
+                                                <p class="contacts__card-text">
+                                                    Для начала работы в сервисе достаточно отправить отклик или позвонить нам, мы работаем ежедневно.
+                                                </p>
+                                                <ul class="contacts__card-props">
+                                                    <li class="contacts__card-prop">
+                                                        <div class="contacts__card-prop-name">Часы работы:</div>
+                                                        <div class="contacts__card-prop-value">09:00 - 21:00</div>
+                                                    </li>
+                                                    <li class="contacts__card-prop">
+                                                        <a href="mailto:mail@mail.ru" class="contacts__card-prop-value icon-mail">
+                                                            mail@mail.ru
+                                                        </a>
+                                                    </li>
+                                                    <li class="contacts__card-prop">
+                                                        <a href="tel:88003551555" class="contacts__card-prop-value icon-phone">
+                                                            8 (800) 355-15-55
+                                                        </a>
+                                                    </li>
+                                                    <li class="contacts__card-prop">
+                                                        <address class="contacts__card-prop-value icon-location">
+                                                            142181, Московская область, г. Подольск, деревня Коледино, Территория Индустриальный парк Коледино, д. 6, стр. 1
+                                                        </address>
+                                                    </li>
+                                                </ul>
+                                                <button type="button" class="contacts__offices-btn contacts__card-btn btn btn-gray-outline btn-rounded btn-fullwidth">
+                                                    Смотреть подробности
+                                                </button>
+                                            </div>
+                                            <div class="contacts__card-slider swiper">
+                                                <div class="swiper-wrapper">
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                </div>
+                                                <div class="contacts__card-pagination swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="contacts__office">
+                                            <div class="contacts__card">
+                                                <div class="contacts__card-header">
+                                                    <h2 class="contacts__card-caption title-sm">
+                                                        Москва
+                                                    </h2>
+                                                    <button type="button" class="contacts__card-close contacts__offices-btn icon-close"></button>
+                                                </div>
+                                                <div class="contacts__card-info">
+                                                    <p class="contacts__card-hint">Название точки продаж или офиса</p>
+                                                </div>
+                                                <p class="contacts__card-text lg-offset">
+                                                    Отзывы наших соискателей на HH.ru оценивают нас как «очень хорошо» и более 90% готовы рекомендовать нашу компанию.
+                                                </p>
+                                                <p class="contacts__card-text">
+                                                    Для начала работы в сервисе достаточно отправить отклик или позвонить нам, мы работаем ежедневно.
+                                                </p>
+                                                <ul class="contacts__card-props">
+                                                    <li class="contacts__card-prop">
+                                                        <div class="contacts__card-prop-name">Часы работы:</div>
+                                                        <div class="contacts__card-prop-value">09:00 - 21:00</div>
+                                                    </li>
+                                                    <li class="contacts__card-prop">
+                                                        <a href="mailto:mail@mail.ru" class="contacts__card-prop-value icon-mail">
+                                                            mail@mail.ru
+                                                        </a>
+                                                    </li>
+                                                    <li class="contacts__card-prop">
+                                                        <a href="tel:88003551555" class="contacts__card-prop-value icon-phone">
+                                                            8 (800) 355-15-55
+                                                        </a>
+                                                    </li>
+                                                    <li class="contacts__card-prop">
+                                                        <address class="contacts__card-prop-value icon-location">
+                                                            142181, Московская область, г. Подольск, деревня Коледино, Территория Индустриальный парк Коледино, д. 6, стр. 1
+                                                        </address>
+                                                    </li>
+                                                </ul>
+                                                <button type="button" class="contacts__offices-btn contacts__card-btn btn btn-gray-outline btn-rounded btn-fullwidth">
+                                                    Смотреть подробности
+                                                </button>
+                                            </div>
+                                            <div class="contacts__card-slider swiper">
+                                                <div class="swiper-wrapper">
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                    <div class="contacts__card-slide swiper-slide">
+                                                        <img src="@img/office.jpg" class="cover-image" alt="Фото офиса">
+                                                    </div>
+                                                </div>
+                                                <div class="contacts__card-pagination swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="contacts__offices-more icon-chevron">
+                                <span>Показать больше офисов</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <section class="delivery">
+                    <div class="delivery__container">
+                        <div class="delivery__content">
+                            <div class="delivery__block">
+                                <h2 class="delivery__caption title-sm">Что такое лизинг?</h2>
+                                <div class="delivery__text">
+                                    <p>
+                                        Лизинг – это финансовая услуга с участием трёх сторон, смысл которой заключается в приобретении лизингодателем нужного вам имущества и предоставлении его в долгосрочную аренду с правом выкупа. Услуга популярна во многих отраслях и может быть в равной степени выгодной для малого, среднего и крупного бизнеса Челябинска. Компания «Уралпромлизинг» является экспертом данного рынка, предоставляя услуги лизинга с 2003 года. Мы объективно одни из самых опытных, надёжных и заслуженно востребованных лизингодателей Челябинска.
+                                    </p>
+                                </div>
+                                <div class="delivery__accordion">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="delivery__accordion-item ">
+                                                <button type="button" class="delivery__accordion-btn icon-chevron">
+                                                    Какое имущество можно взять в лизинг?
+                                                </button>
+                                                <p class="delivery__accordion-text">Услуга оплаты через интернет осуществляется в соответствии с Правилами международных платежных систем Visa, MasterCard и Платежной системы МИР на принципах соблюдения конфиденциальности и безопасности совершения платежа, для чего используются самые современные методы проверки, шифрования и передачи данных по закрытым каналам связи.</p>
+                                            </div>
+                                            <div class="delivery__accordion-item ">
+                                                <button type="button" class="delivery__accordion-btn icon-chevron">
+                                                    Купить в лизинг – это не кредит
+                                                </button>
+                                                <div class="delivery__accordion-text">
+                                                    <p>
+                                                        Лизинг и кредит – похожие финансовые инструменты, но отнюдь не одно и то же. В обоих случаях цель заказчика – это получение в пользование какого-либо имущества в данный момент времени. Но механизмы разные. И чаще всего лизинг – более выгодный финансовый путь для бизнеса, чем кредит.
+                                                    </p>
+                                                    <p>
+                                                        Суть различия этих понятий в том, что в кредит заёмщик получает денежные средства для приобретения чего-либо в собственность. В лизинг же предоставляется сам объект, уже купленный компанией-лизингодателем. По кредиту вы платите проценты, по лизингу – в платежи закладывается амортизация.
+                                                    </p>
+                                                    <p>
+                                                        Вместе с тем, как и при кредите, в итоге вы становитесь полноправным владельцем: по истечении договора лизинга имущество, взятое в аренду, выкупается в собственность.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="delivery__accordion-item ">
+                                                <button type="button" class="delivery__accordion-btn icon-chevron">
+                                                    Виды лизинга
+                                                </button>
+                                                <p class="delivery__accordion-text">Услуга оплаты через интернет осуществляется в соответствии с Правилами международных платежных систем Visa, MasterCard и Платежной системы МИР на принципах соблюдения конфиденциальности и безопасности совершения платежа, для чего используются самые современные методы проверки, шифрования и передачи данных по закрытым каналам связи.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="delivery__accordion-item">
+                                                <button type="button" class="delivery__accordion-btn icon-chevron">
+                                                    Условия лизинга для ИП и юридических лиц
+                                                </button>
+                                                <p class="delivery__accordion-text">Услуга оплаты через интернет осуществляется в соответствии с Правилами международных платежных систем Visa, MasterCard и Платежной системы МИР на принципах соблюдения конфиденциальности и безопасности совершения платежа, для чего используются самые современные методы проверки, шифрования и передачи данных по закрытым каналам связи.</p>
+                                            </div>
+                                            <div class="delivery__accordion-item">
+                                                <button type="button" class="delivery__accordion-btn icon-chevron">
+                                                    Экономическая целесообразность
+                                                </button>
+                                                <p class="delivery__accordion-text">Услуга оплаты через интернет осуществляется в соответствии с Правилами международных платежных систем Visa, MasterCard и Платежной системы МИР на принципах соблюдения конфиденциальности и безопасности совершения платежа, для чего используются самые современные методы проверки, шифрования и передачи данных по закрытым каналам связи.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+
+        @@include('html/_js.html', {})
+    </body>
+</html>
