@@ -4,9 +4,9 @@
 	padding: em(0) em(0) 2.5rem em(0);
 	// .about__promo
 	&__promo {
-		// height: 100vh;
-		// min-height: 100vh;
-		min-height: rem(800);
+		height: 100vh;
+		min-height: 100vh;
+
 		@media (min-width: $md5) {
 			min-height: rem(800);
 		}
