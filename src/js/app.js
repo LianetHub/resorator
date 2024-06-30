@@ -1144,21 +1144,35 @@ $(function () {
 
     if ($('.about__team-content').length > 0) {
 
-        getMobileSlider('.about__team-content', {
+        getResponsiveSlider('.about__team-content', {
             slidesPerView: 1.4,
             spaceBetween: 10,
             grabCursor: true,
-        })
+        }, null, 576.98)
+    }
+
+    if ($('.delivery__companies').length > 0) {
+
+        getResponsiveSlider('.delivery__companies', {
+            slidesPerView: "auto",
+            loop: true,
+            speed: 10000,
+            autoplay: {
+                delay: 1,
+                stopOnLastSlide: false,
+            },
+        }, 991.98, null)
     }
 
 
-    function getMobileSlider(sliderName, options) {
 
+    function getResponsiveSlider(sliderName, options, minWidth, maxWidth) {
         let init = false;
         let swiper = null;
 
         function getSwiper() {
-            if (window.innerWidth <= 575.98) {
+            if ((window.innerWidth >= minWidth || minWidth === null) &&
+                (window.innerWidth <= maxWidth || maxWidth === null)) {
                 if (!init) {
                     init = true;
                     swiper = new Swiper(sliderName, options);
@@ -1169,9 +1183,12 @@ $(function () {
                 init = false;
             }
         }
+
         getSwiper();
         window.addEventListener("resize", getSwiper);
     }
+
+
 
 
 
@@ -1455,7 +1472,7 @@ $(function () {
     const $counters = $('[data-counter]');
 
     if ($counters.length > 0) {
-        const animationDuration = 3000;
+        const animationDuration = 6000;
         $counters.each(function () {
             const $section = $(this);
 

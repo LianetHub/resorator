@@ -128,6 +128,10 @@
 	&__companies {
 		margin-top: 1.87rem;
 		.row {
+			@media (min-width: $md3) {
+				flex-wrap: nowrap;
+				transition-timing-function: linear !important;
+			}
 			@media (max-width: $md5) {
 				--gutter-y: 1.25rem;
 			}
@@ -137,16 +141,18 @@
 	&__company {
 		border-radius: 0.3125rem;
 		border: 1px solid $grayStroke;
-		padding: 2rem 1.25rem;
+		padding: 1rem 1.25rem;
 		min-height: rem(120);
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		& img {
-			max-height: rem(60);
+			max-height: rem(180);
 			height: auto;
 
-			filter: grayscale(1);
+			@media (min-width: $md3) {
+				filter: grayscale(1);
+			}
 			transition: filter 0.3s ease 0s, transform 0.3s ease 0s;
 		}
 		@media (any-hover: hover) {
