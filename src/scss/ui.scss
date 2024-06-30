@@ -305,6 +305,32 @@
 	}
 }
 
+.swiper-scrollbar {
+	&.swiper-scrollbar-horizontal {
+		position: static;
+		margin-top: 1.25rem;
+		@media (min-width: $md3) {
+			margin-top: 1.88rem;
+		}
+
+		margin-left: auto;
+		margin-right: auto;
+		height: 0.5rem;
+		background: $lightBg;
+		display: flex;
+		align-items: center;
+		border-radius: 0.625rem;
+		.swiper-scrollbar-drag {
+			border-radius: 0.625rem;
+			height: 0.5rem;
+			margin-top: rem(-1);
+			margin-bottom: rem(-1);
+			display: block;
+			background: #ced6e0;
+		}
+	}
+}
+
 .pc-none {
 	@media (min-width: $md3) {
 		display: none !important;

@@ -1,16 +1,16 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/DinPro-Light.woff2") format("woff2"), url("../fonts/DinPro-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Light.woff2") format("woff2"), url("../fonts/DinPro-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -25,14 +25,6 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
   src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
@@ -41,8 +33,8 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -57,8 +49,8 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -67,6 +59,14 @@
   font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -1837,6 +1837,31 @@ body.lock-catalog-filter {
 
 .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #f7ce46;
+}
+
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: static;
+  margin-top: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 0.5rem;
+  background: #f2f5f9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.625rem;
+}
+
+.swiper-scrollbar.swiper-scrollbar-horizontal .swiper-scrollbar-drag {
+  border-radius: 0.625rem;
+  height: 0.5rem;
+  margin-top: -0.0625rem;
+  margin-bottom: -0.0625rem;
+  display: block;
+  background: #ced6e0;
 }
 
 .quantity-block {
@@ -8026,7 +8051,6 @@ table td button {
 
 .compare__items {
   margin-top: 1.875rem;
-  overflow: visible;
 }
 
 .compare__items .product {
@@ -8067,7 +8091,6 @@ table td button {
 
 .compare__table {
   margin-top: 1.88rem;
-  overflow: visible;
 }
 
 .compare__slide {
@@ -10762,6 +10785,10 @@ table td button {
 
   .popup__product-content .product-card__slide {
     height: 25rem;
+  }
+
+  .swiper-scrollbar.swiper-scrollbar-horizontal {
+    margin-top: 1.88rem;
   }
 
   .pc-none {

@@ -1092,6 +1092,10 @@ $(function () {
 
         let compareTableSlider = new Swiper('.compare__table', {
             slidesPerView: "auto",
+            scrollbar: {
+                el: '.compare__table-scrollbar',
+                draggable: true,
+            },
         });
 
 
