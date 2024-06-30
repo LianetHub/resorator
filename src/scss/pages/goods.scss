@@ -377,6 +377,12 @@
 	// .goods__list
 	&__list {
 		margin-top: 1.25rem;
+
+		&:not(.active) {
+			.goods__item:not(:nth-child(1), :nth-child(2), :nth-child(3), :nth-child(4), :nth-child(5)) {
+				display: none;
+			}
+		}
 	}
 	// .goods__item
 	&__item {
@@ -391,6 +397,15 @@
 		display: flex;
 		align-items: center;
 		gap: 0.62rem;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $blue;
+				& .goods__item-text {
+					text-decoration: underline;
+				}
+			}
+		}
 	}
 	// .goods__item-quantity
 	&__item-quantity {

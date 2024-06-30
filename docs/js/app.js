@@ -253,6 +253,17 @@ $(function () {
             $('.goods__sidebar-content').slideToggle()
         }
 
+        // get all subcategories - goods page
+        if ($target.is('.goods__more')) {
+            $target.toggleClass('active');
+            $target.prev().toggleClass('active');
+            if ($target.hasClass('active')) {
+                $target.text('Скрыть');
+            } else {
+                $target.text('Показать все');
+            }
+        }
+
         // copy btn
         if ($target.hasClass('btn-copy')) {
             var textToCopy = $target.prev().text();
@@ -399,7 +410,7 @@ $(function () {
             if ($target.closest('.about__geography-more').hasClass('active')) {
                 $target.closest('.about__geography-more').find('span').text('Скрыть');
             } else {
-                $target.closest('.about__geography-more').find('span').text('Вся города');
+                $target.closest('.about__geography-more').find('span').text('Всe города');
             }
         }
 
@@ -1415,57 +1426,10 @@ $(function () {
     }
 
     // counting animation - about page
-    // const $counters = $('[data-counter]');
-
-    // if ($counters.length > 0) {
-    //     $counters.each(function () {
-    //         const $section = $(this);
-
-    //         const callback = function (entries, counterObserver) {
-    //             if (entries[0].isIntersecting) {
-    //                 if (!$section.hasClass('animated')) {
-    //                     counter($section);
-    //                 }
-    //                 $section.addClass('animated');
-    //             }
-    //         };
-
-    //         const counterObserver = new IntersectionObserver(callback);
-    //         counterObserver.observe(this);
-    //     });
-
-    //     function counter($counter) {
-    //         let countFinish = +$counter.text().replace(/\s+/g, '');
-    //         $counter.parent().css('min-width', $counter.parent().width());
-    //         $counter.text("0");
-
-    //         // Сохраняем текущую ширину элемента
-
-    //         const updateCounter = () => {
-    //             const target = countFinish;
-    //             const count = +$counter.text().replace(/\s+/g, '');
-    //             const increment = target / 75;
-
-    //             if (count < target) {
-    //                 $counter.text(numberWithCommas(Math.ceil(count + increment)));
-    //                 requestAnimationFrame(updateCounter);
-    //             } else {
-    //                 $counter.text(numberWithCommas(target));
-    //                 $counter.parent().css('min-width', '');
-    //             }
-    //         };
-    //         requestAnimationFrame(updateCounter);
-    //     }
-
-    //     function numberWithCommas(x) {
-    //         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-    //     }
-    // }
-
     const $counters = $('[data-counter]');
-    const animationDuration = 3000;
 
     if ($counters.length > 0) {
+        const animationDuration = 3000;
         $counters.each(function () {
             const $section = $(this);
 
