@@ -5,55 +5,61 @@
     })
     <body>
         <div class="wrapper">
+            @@include('html/_about-header.html', {
+            "menuBtn": true
+            })
             <main class="page">
                 <div class="about">
                     <div class="about__promo" style="background-image: url('@img/about-promo.jpg');">
-                        <a href="/" class="about__promo-logo">
-                            <img src="@img/logo.svg" alt="Логотип сайта">
+                        <div class="about__promo-caption">Компания</div>
+                        <div class="about__promo-logo">
+                            <img src="@img/logo-restorator.svg" alt="Логотип сайта">
+                        </div>
+                        <div class="about__promo-tagline">Комплексное оснащение HoReCa и Retail</div>
+                        <a href="" class="about__promo-btn btn btn-rounded btn-white-outline mobile-sm-only">
+                            Оставить заявку
+                            <span class="icon-arrow-short"></span>
                         </a>
-                        <div class="about__promo-tagline">Федеральный поставщик профессионального оборудования инвентаря и посуды для общепита и торговли</div>
                     </div>
                     <div class="about__container">
-                        <nav class="about__navbar swiper" aria-label="Навигация по странице">
-                            <ul class="swiper-wrapper">
-                                <li class="about__navbar-item swiper-slide"><a href="#about-company" class="about__navbar-link">О компании</a></li>
-                                <li class="about__navbar-item swiper-slide"><a href="#directions" class="about__navbar-link">Направления</a></li>
-                                <li class="about__navbar-item swiper-slide"><a href="#services-and-goods" class="about__navbar-link">Услуги и товары</a></li>
-                                <li class="about__navbar-item swiper-slide"><a href="#our-brand" class="about__navbar-link">Наш бренд</a></li>
-                                <li class="about__navbar-item swiper-slide"><a href="#our-production" class="about__navbar-link">Собственное производство</a></li>
-                                <li class="about__navbar-item swiper-slide"><a href="#team" class="about__navbar-link">Команда</a></li>
-                                <li class="about__navbar-item swiper-slide"><a href="#market" class="about__navbar-link">Интернет-магазин</a></li>
-                                <li class="about__navbar-item swiper-slide"><a href="#contacts" class="about__navbar-link">Контакты</a></li>
-                            </ul>
+                        <nav class="about__navbar" aria-label="Навигация по странице">
+                            <div class="about__navbar-body">
+                                <button type="button" aria-label="Закрыть меню" class="about__navbar-close about-navbar-toggler icon-close"></button>
+                                <ul class="about__navbar-list">
+                                    <li class="about__navbar-item"><a href="#about-company" class="about__navbar-link">О компании</a></li>
+                                    <li class="about__navbar-separator"></li>
+                                    <li class="about__navbar-item"><a href="#activities" class="about__navbar-link">Направления деятельности</a></li>
+                                    <li class="about__navbar-separator"></li>
+                                    <li class="about__navbar-item"><a href="#sales-geography" class="about__navbar-link">География продаж</a></li>
+                                    <li class="about__navbar-separator"></li>
+                                    <li class="about__navbar-item"><a href="#services" class="about__navbar-link">Услуги</a></li>
+                                    <li class="about__navbar-separator"></li>
+                                    <li class="about__navbar-item"><a href="#team" class="about__navbar-link">Команда</a></li>
+                                    <li class="about__navbar-separator"></li>
+                                    <li class="about__navbar-item"><a href="#contacts" class="about__navbar-link">Команда</a></li>
+                                    <li class="about__navbar-separator"></li>
+                                    <li class="about__navbar-item"><a href="#feedback" class="about__navbar-link">Интернет-магазин</a></li>
+                                </ul>
+                            </div>
                         </nav>
                         <div id="about-company" class="about__info">
-                            <div class="row">
-                                <div class="col-5">
-                                    <h2 class="about__tagline title-lg">
-                                        Мы - ведущая компания в сфере комплесных услуг поставки
-                                        <span class="yellow-secondary-color">холодильного, технологического, теплового</span> оборудования
-                                    </h2>
-                                </div>
-                                <div class="col-6 offset-1">
-                                    <div class="about__info-text">
-                                        <p>
-                                            Используя многолетний опыт работы, поиск новых производителей, следуя за тенденциями рынка, наша компания предлагает клиентам огромный выбор оборудования и рациональные решения с необходимым функционалом.
-                                        </p>
-                                        <p>
-                                            Территориальный охват доставок, собственные и эксклюзивные торговые марки, прямые поставки мировых и российских брендов позволяют обеспечивать индивидуальный подход и гибкую ценовую политику для каждого клиента. Специалисты компании РЕСТОРАТОР могут вылететь к клиенту в любую точку России и СНГ.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            <h1 class="about__title">
+                                Ресторатор <br>
+                                Федеральный поставщик профессиональн&shy;ого оборудова&shy;ния, инвентаря и посуды
+                            </h1>
+                            <a href="" class="about__info-btn btn btn-primary btn-rounded">
+                                Скачать <br class="tablet-sm-only">
+                                презентацию
+                            </a>
                         </div>
                         <ul class="about__nums">
                             <li class="about__nums-item">
                                 <div class="about__nums-value accent-color title-xl">650+</div>
-                                <div class="about__nums-desc">мировых и Российских брендов</div>
+                                <div class="about__nums-desc">Представленных брендов из&nbsp;Росии и Европы</div>
                             </li>
                             <li class="about__nums-item">
                                 <div class="about__nums-value accent-color title-xl">150 000+</div>
-                                <div class="about__nums-desc">наименований товаров на складе</div>
+                                <div class="about__nums-desc lg-desc">Наименований товаров на складе</div>
                             </li>
                             <li class="about__nums-item">
                                 <div class="about__nums-value accent-color title-xl">10+</div>
@@ -61,112 +67,58 @@
                             </li>
                             <li class="about__nums-item">
                                 <div class="about__nums-value accent-color title-xl">1 000+</div>
-                                <div class="about__nums-desc">открытых Объектов по всей России</div>
+                                <div class="about__nums-desc">Открытых объектов по&nbsp;`всей&nbsp;России</div>
+                            </li>
+                            <li class="about__nums-item">
+                                <div class="about__nums-value accent-color title-xl">1 000+</div>
+                                <div class="about__nums-desc">Открытых объектов по&nbsp;всей&nbsp;России</div>
                             </li>
                         </ul>
                         <div class="about__benefits">
-                            <div class="row">
-                                <div class="col-5">
-                                    <h2 class="about__benefits-title title-lg">Ценности, которые делают компанию Ресторатор лидером рынка</h2>
-                                    <p class="about__benefits-desc">
-                                        Используя многолетний опыт работы, поиск новых производителей, следуя за тенденциями рынка, наша компания предлагает клиентам огромный выбор оборудования и рациональные решения с необходимым функционалом
-                                    </p>
-                                </div>
-                                <div class="col-6 offset-1">
-                                    <ol class="about__benefits-list">
-                                        <li class="about__benefits-item">
-                                            <h3 class="about__benefits-caption yellow-secondary-color">Сотрудники</h3>
-                                            <p class="about__benefits-text">Самый значимый и ценный актив в нашей компании</p>
-                                        </li>
-                                        <li class="about__benefits-item">
-                                            <h3 class="about__benefits-caption yellow-secondary-color">Клиент</h3>
-                                            <p class="about__benefits-text">Мы выстраиваем отношения и создаем проекты, которые делают нашу повседневную жизнь лучше, а людей – счастливее</p>
-                                        </li>
-                                        <li class="about__benefits-item">
-                                            <h3 class="about__benefits-caption yellow-secondary-color">Репутация</h3>
-                                            <p class="about__benefits-text">Мы беремся только за те проекты, которые соответствуют нашим возможностям и интересам</p>
-                                        </li>
-                                        <li class="about__benefits-item">
-                                            <h3 class="about__benefits-caption yellow-secondary-color">Профессионализм</h3>
-                                            <p class="about__benefits-text">Основан на реальном опыте</p>
-                                        </li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="about__clients">
-                            <h2 class="about__clients-title title-lg">Ключевые клиенты</h2>
-                            <div class="about__clients-body">
+                            <h2 class="about__benefits-title title-lg">Ценности компании</h2>
+                            <div class="about__benefits-body">
                                 <div class="row">
-                                    <div class="col-2">
-                                        <div class="about__clients-item">
-                                            <img src="@img/clients/farfor.png" height="105" alt="Логотип клиента">
+                                    <div class="col-xxl-3 col-md-6">
+                                        <div class="about__benefits-item">
+                                            <h3 class="about__benefits-caption title-sm yellow-secondary-color">Репутация</h3>
+                                            <p class="about__benefits-text">Мы беремся только за те проеткы, которые соответствуют нашим возможностям и интересам</p>
                                         </div>
                                     </div>
-                                    <div class="col-2">
-                                        <div class="about__clients-item">
-                                            <img src="@img/clients/azimut.png" height="80" alt="Логотип клиента">
+                                    <div class="col-xxl-3 col-md-6">
+                                        <div class="about__benefits-item">
+                                            <h3 class="about__benefits-caption title-sm yellow-secondary-color">Сотрудники</h3>
+                                            <p class="about__benefits-text">Самый значимый и ценный актив в нашей компании</p>
                                         </div>
                                     </div>
-                                    <div class="col-2">
-                                        <div class="about__clients-item">
-                                            <img src="@img/clients/gazprom.png" height="81" alt="Логотип клиента">
+                                    <div class="col-xxl-3 col-md-6">
+                                        <div class="about__benefits-item">
+                                            <h3 class="about__benefits-caption title-sm yellow-secondary-color">Профессионализм</h3>
+                                            <p class="about__benefits-text">Основанный на реальном опыте</p>
                                         </div>
                                     </div>
-                                    <div class="col-2">
-                                        <div class="about__clients-item">
-                                            <img src="@img/clients/farfor.png" height="105" alt="Логотип клиента">
+                                    <div class="col-xxl-3 col-md-6">
+                                        <div class="about__benefits-item">
+                                            <h3 class="about__benefits-caption title-sm yellow-secondary-color">Клиент</h3>
+                                            <p class="about__benefits-text">Мы выстраиваем отношения и создаем проекты, которые делают нашу повседневную жизнь лучше, а людей - счастливее</p>
                                         </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="about__clients-item">
-                                            <img src="@img/clients/azimut.png" height="80" alt="Логотип клиента">
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="about__clients-item">
-                                            <img src="@img/clients/gazprom.png" height="81" alt="Логотип клиента">
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="about__clients-item">
-                                            <img src="@img/clients/azimut.png" height="80" alt="Логотип клиента">
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="about__clients-item">
-                                            <img src="@img/clients/gazprom.png" height="81" alt="Логотип клиента">
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="about__clients-item">
-                                            <img src="@img/clients/farfor.png" height="105" alt="Логотип клиента">
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="about__clients-item">
-                                            <img src="@img/clients/azimut.png" height="80" alt="Логотип клиента">
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="about__clients-item">
-                                            <img src="@img/clients/gazprom.png" height="81" alt="Логотип клиента">
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <a href="" class="about__clients-btn btn btn-primary">
-                                            Стать клиентом
-                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="directions" class="about__directions">
+                        <div class="about__showroom">
+                            <div class="about__showroom-body">
+                                <div class="about__showroom-label">
+                                    3D Showroom
+                                </div>
+                                <img src="@img/showroom.jpg" alt="Шоурум">
+                            </div>
+                        </div>
+                        <div id="activities" class="about__directions">
                             <h2 class="about__directions-title title-lg">
                                 Направления деятельности нашей компании
                             </h2>
                             <ul class="about__directions-list">
-                                <li class="about__directions-item sm-row">
+                                <li class="about__directions-item">
                                     <a href="" class="about__directions-link">
                                         <span class="about__directions-image">
                                             <img src="@img/directions/01.jpg" class="cover-image" alt="Изображение направления деятельности">
@@ -174,7 +126,7 @@
                                         <span class="about__directions-name">Пиццерии</span>
                                     </a>
                                 </li>
-                                <li class="about__directions-item lg-row">
+                                <li class="about__directions-item">
                                     <a href="" class="about__directions-link">
                                         <span class="about__directions-image">
                                             <img src="@img/directions/02.jpg" class="cover-image" alt="Изображение направления деятельности">
@@ -182,7 +134,7 @@
                                         <span class="about__directions-name">Пекарни и кондитерские</span>
                                     </a>
                                 </li>
-                                <li class="about__directions-item lg-column">
+                                <li class="about__directions-item">
                                     <a href="" class="about__directions-link">
                                         <span class="about__directions-image">
                                             <img src="@img/directions/03.jpg" class="cover-image" alt="Изображение направления деятельности">
@@ -190,7 +142,7 @@
                                         <span class="about__directions-name">Рестораны, кафе</span>
                                     </a>
                                 </li>
-                                <li class="about__directions-item lg-column">
+                                <li class="about__directions-item">
                                     <a href="" class="about__directions-link">
                                         <span class="about__directions-image">
                                             <img src="@img/directions/04.jpg" class="cover-image" alt="Изображение направления деятельности">
@@ -230,7 +182,7 @@
                                         <span class="about__directions-name">Производства и фабрики-кухни</span>
                                     </a>
                                 </li>
-                                <li class="about__directions-item lg-row">
+                                <li class="about__directions-item">
                                     <a href="" class="about__directions-link">
                                         <span class="about__directions-image">
                                             <img src="@img/directions/09.jpg" class="cover-image" alt="Изображение направления деятельности">
@@ -238,7 +190,7 @@
                                         <span class="about__directions-name">Автозаправочные станции (АЗС)</span>
                                     </a>
                                 </li>
-                                <li class="about__directions-item sm-row">
+                                <li class="about__directions-item">
                                     <a href="" class="about__directions-link">
                                         <span class="about__directions-image">
                                             <img src="@img/directions/10.jpg" class="cover-image" alt="Изображение направления деятельности">
@@ -248,45 +200,162 @@
                                 </li>
                             </ul>
                         </div>
-                        <div id="services-and-goods" class="about__services">
-                            <div class="row">
-                                <div class="col-6">
-                                    <h2 class="about__services-title title-lg">Услуги и товары</h2>
-                                    <p class="about__services-desc">
-                                        Используя многолетний опыт работы, поиск новых производителей, следуя за тенденциями рынка, наша компания предлагает клиентам огромный выбор оборудования и рациональные решения с необходимым функционалом
-                                    </p>
-                                    <div class="about__services-btns">
-                                        <a href="" class="about__services-btn btn btn-primary btn-rounded">
-                                            Интернет магазин
-                                            <span class="icon-arrow-short"></span>
+                        <div class="about__clients">
+                            <h2 class="about__clients-title title-lg">Ключевые клиенты</h2>
+                            <div class="about__clients-body">
+                                <div class="row">
+                                    <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+                                        <div class="about__clients-item">
+                                            <img src="@img/clients/farfor.png" height="105" alt="Логотип клиента">
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+                                        <div class="about__clients-item">
+                                            <img src="@img/clients/azimut.png" height="80" alt="Логотип клиента">
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+                                        <div class="about__clients-item">
+                                            <img src="@img/clients/gazprom.png" height="81" alt="Логотип клиента">
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+                                        <div class="about__clients-item">
+                                            <img src="@img/clients/farfor.png" height="105" alt="Логотип клиента">
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+                                        <div class="about__clients-item">
+                                            <img src="@img/clients/azimut.png" height="80" alt="Логотип клиента">
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+                                        <div class="about__clients-item">
+                                            <img src="@img/clients/gazprom.png" height="81" alt="Логотип клиента">
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+                                        <div class="about__clients-item">
+                                            <img src="@img/clients/azimut.png" height="80" alt="Логотип клиента">
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+                                        <div class="about__clients-item">
+                                            <img src="@img/clients/gazprom.png" height="81" alt="Логотип клиента">
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+                                        <div class="about__clients-item">
+                                            <img src="@img/clients/farfor.png" height="105" alt="Логотип клиента">
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+                                        <div class="about__clients-item">
+                                            <img src="@img/clients/azimut.png" height="80" alt="Логотип клиента">
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-lg-3 col-sm-4 tablet-sm-only">
+                                        <div class="about__clients-item">
+                                            <img src="@img/clients/gazprom.png" height="81" alt="Логотип клиента">
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-lg-3 col-sm-4 col-12">
+                                        <a href="" class="about__clients-btn btn btn-primary">
+                                            Стать клиентом
                                         </a>
-                                        <a href="" class="about__services-btn btn btn-primary-outline btn-rounded">Обратная связь</a>
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <ol class="about__services-list">
-                                        <li class="about__services-item">
-                                            <button type="button" class="about__services-caption yellow-secondary-color">Технологическое проектирование объектов&nbsp;Ритейла и HoReCa</button>
-                                            <p class="about__services-text">Если вы хотите узнать подробнее о доставке и оплате, выберите удобный для вас способ связи или заполните форму и наш менеджер свяжется с вами</p>
-                                        </li>
-                                        <li class="about__services-item">
-                                            <button type="button" class="about__services-caption yellow-secondary-color">Технологическая поддержка и обучение</button>
-                                            <p class="about__services-text">Если вы хотите узнать подробнее о доставке и оплате, выберите удобный для вас способ связи или заполните форму и наш менеджер свяжется с вами</p>
-                                        </li>
-                                        <li class="about__services-item">
-                                            <button type="button" class="about__services-caption yellow-secondary-color">Профессиональное оборудование</button>
-                                            <p class="about__services-text">Если вы хотите узнать подробнее о доставке и оплате, выберите удобный для вас способ связи или заполните форму и наш менеджер свяжется с вами</p>
-                                        </li>
-                                        <li class="about__services-item">
-                                            <button type="button" class="about__services-caption yellow-secondary-color">Посуда, инвентарь и кухонные пренадлежности</button>
-                                            <p class="about__services-text">Если вы хотите узнать подробнее о доставке и оплате, выберите удобный для вас способ связи или заполните форму и наш менеджер свяжется с вами</p>
-                                        </li>
-                                        <li class="about__services-item">
-                                            <button type="button" class="about__services-caption yellow-secondary-color">Мебель и предметы интерьера</button>
-                                            <p class="about__services-text">Если вы хотите узнать подробнее о доставке и оплате, выберите удобный для вас способ связи или заполните форму и наш менеджер свяжется с вами</p>
-                                        </li>
-
-                                    </ol>
+                            </div>
+                        </div>
+                        <div id="sales-geography" class="about__geography">
+                            <h2 class="about__geography-caption title-lg">География продаж</h2>
+                            <div class="about__geography-image tablet-sm-only">
+                                <img src="@img/map.svg" alt="Карта">
+                            </div>
+                            <div class="about__geography-list">
+                                <a href="" class="about__geography-item icon-location">Москва</a>
+                                <a href="" class="about__geography-item">Челябинск</a>
+                                <a href="" class="about__geography-item">Краснодар</a>
+                                <a href="" class="about__geography-item">Москва</a>
+                                <a href="" class="about__geography-item">Москва</a>
+                                <a href="" class="about__geography-item">Москва</a>
+                                <a href="" class="about__geography-item">Санкт-Петербург</a>
+                                <a href="" class="about__geography-item">Киров</a>
+                                <a href="" class="about__geography-item">Мариуполь</a>
+                                <a href="" class="about__geography-item">Санкт-Петербург</a>
+                                <a href="" class="about__geography-item">Санкт-Петербург</a>
+                                <a href="" class="about__geography-item">Санкт-Петербург</a>
+                                <a href="" class="about__geography-item">Казань</a>
+                                <a href="" class="about__geography-item">Магнитогорск</a>
+                                <a href="" class="about__geography-item">Владивосток</a>
+                                <a href="" class="about__geography-item">Казань</a>
+                                <a href="" class="about__geography-item">Казань</a>
+                                <a href="" class="about__geography-item">Казань</a>
+                                <a href="" class="about__geography-item">Уфа</a>
+                                <a href="" class="about__geography-item">Ижевск</a>
+                                <a href="" class="about__geography-item">Сочи</a>
+                                <a href="" class="about__geography-item">Уфа</a>
+                                <a href="" class="about__geography-item">Уфа</a>
+                                <a href="" class="about__geography-item">Уфа</a>
+                                <a href="" class="about__geography-item">Екатеринбург</a>
+                                <a href="" class="about__geography-item">Ростов на Дону</a>
+                                <a href="" class="about__geography-item">Барнаул</a>
+                                <a href="" class="about__geography-item">Екатеринбург</a>
+                                <a href="" class="about__geography-item">Екатеринбург</a>
+                                <a href="" class="about__geography-item">Екатеринбург</a>
+                            </div>
+                            <div class="about__geography-more icon-chevron mobile-sm-only">
+                                <span>Все города</span>
+                            </div>
+                        </div>
+                        <div id="services" class="about__services">
+                            <h2 class="about__services-title title-lg">Полный цикл услуг</h2>
+                            <div class="about__services-body">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <a href="" class="about__services-item">
+                                            <span class="about__services-caption">
+                                                Консультация <br>
+                                                и подбор оборудования
+                                            </span>
+                                            <span class="about__services-image">
+                                                <img src="@img/about-services/01.jpg" class="cover-image" alt="Постер">
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="" class="about__services-item">
+                                            <span class="about__services-caption">
+                                                Проектирование <br>
+                                                и дизайн помещения
+                                            </span>
+                                            <span class="about__services-image">
+                                                <img src="@img/about-services/02.jpg" class="cover-image" alt="Постер">
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="" class="about__services-item">
+                                            <span class="about__services-caption">
+                                                Услуги по логистике <br>
+                                                и такелажным работам
+                                            </span>
+                                            <span class="about__services-image">
+                                                <img src="@img/about-services/03.jpg" class="cover-image" alt="Постер">
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <a href="" class="about__services-item">
+                                            <span class="about__services-caption">
+                                                Монтажные <br>
+                                                и пусконаладочные работы
+                                            </span>
+                                            <span class="about__services-image">
+                                                <img src="@img/about-services/04.jpg" class="cover-image" alt="Постер">
+                                            </span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -298,88 +367,152 @@
                                 </div>
                                 <a href="" class="about__team-btn btn btn-primary btn-rounded">Стать частью нашей команды</a>
                             </div>
-                            <ul class="about__team-list row">
-                                <li class="about__team-item col-2">
-                                    <div class="about__team-image">
-                                        <img src="@img/team/01.jpg" class="cover-image" alt="Фотография члена команды">
-                                        <div class="about__team-actions">
-                                            <a href="" class="about__team-action icon-phone"></a>
-                                            <a href="" class="about__team-action icon-mail"></a>
+                            <div class="about__team-content">
+                                <ul class="about__team-list row swiper-wrapper">
+                                    <li class="about__team-item swiper-slide col-xxl-2 col-lg-3 col-md-4 col-6">
+                                        <div class="about__team-image">
+                                            <img src="@img/team/01.jpg" class="cover-image" alt="Фотография члена команды">
+                                            <div class="about__team-actions">
+                                                <a href="" class="about__team-action icon-phone"></a>
+                                                <a href="" class="about__team-action icon-mail"></a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="about__team-name">Радыгина Наталья</div>
-                                    <div class="about__team-desc">Менеджер по работе с клиентами</div>
-                                </li>
-                                <li class="about__team-item col-2">
-                                    <div class="about__team-image">
-                                        <img src="@img/team/02.jpg" class="cover-image" alt="Фотография члена команды">
-                                        <div class="about__team-actions">
-                                            <a href="" class="about__team-action icon-phone"></a>
-                                            <a href="" class="about__team-action icon-mail"></a>
+                                        <div class="about__team-name">Радыгина Наталья</div>
+                                        <div class="about__team-desc">Менеджер по работе с клиентами</div>
+                                    </li>
+                                    <li class="about__team-item swiper-slide col-xxl-2 col-lg-3 col-md-4 col-6">
+                                        <div class="about__team-image">
+                                            <img src="@img/team/02.jpg" class="cover-image" alt="Фотография члена команды">
+                                            <div class="about__team-actions">
+                                                <a href="" class="about__team-action icon-phone"></a>
+                                                <a href="" class="about__team-action icon-mail"></a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="about__team-name">Радыгина Наталья</div>
-                                    <div class="about__team-desc">Менеджер по работе с клиентами</div>
-                                </li>
-                                <li class="about__team-item col-2">
-                                    <div class="about__team-image">
-                                        <img src="@img/team/03.jpg" class="cover-image" alt="Фотография члена команды">
-                                        <div class="about__team-actions">
-                                            <a href="" class="about__team-action icon-phone"></a>
-                                            <a href="" class="about__team-action icon-mail"></a>
+                                        <div class="about__team-name">Радыгина Наталья</div>
+                                        <div class="about__team-desc">Менеджер по работе с клиентами</div>
+                                    </li>
+                                    <li class="about__team-item swiper-slide col-xxl-2 col-lg-3 col-md-4 col-6">
+                                        <div class="about__team-image">
+                                            <img src="@img/team/03.jpg" class="cover-image" alt="Фотография члена команды">
+                                            <div class="about__team-actions">
+                                                <a href="" class="about__team-action icon-phone"></a>
+                                                <a href="" class="about__team-action icon-mail"></a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="about__team-name">Радыгина Наталья</div>
-                                    <div class="about__team-desc">Менеджер по работе с клиентами</div>
-                                </li>
-                                <li class="about__team-item col-2">
-                                    <div class="about__team-image">
-                                        <img src="@img/team/04.jpg" class="cover-image" alt="Фотография члена команды">
-                                        <div class="about__team-actions">
-                                            <a href="" class="about__team-action icon-phone"></a>
-                                            <a href="" class="about__team-action icon-mail"></a>
+                                        <div class="about__team-name">Радыгина Наталья</div>
+                                        <div class="about__team-desc">Менеджер по работе с клиентами</div>
+                                    </li>
+                                    <li class="about__team-item swiper-slide col-xxl-2 col-lg-3 col-md-4 col-6">
+                                        <div class="about__team-image">
+                                            <img src="@img/team/04.jpg" class="cover-image" alt="Фотография члена команды">
+                                            <div class="about__team-actions">
+                                                <a href="" class="about__team-action icon-phone"></a>
+                                                <a href="" class="about__team-action icon-mail"></a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="about__team-name">Радыгина Наталья</div>
-                                    <div class="about__team-desc">Менеджер по работе с клиентами</div>
-                                </li>
-                                <li class="about__team-item col-2">
-                                    <div class="about__team-image">
-                                        <img src="@img/team/01.jpg" class="cover-image" alt="Фотография члена команды">
-                                        <div class="about__team-actions">
-                                            <a href="" class="about__team-action icon-phone"></a>
-                                            <a href="" class="about__team-action icon-mail"></a>
+                                        <div class="about__team-name">Радыгина Наталья</div>
+                                        <div class="about__team-desc">Менеджер по работе с клиентами</div>
+                                    </li>
+                                    <li class="about__team-item swiper-slide col-xxl-2 col-lg-3 col-md-4 col-6">
+                                        <div class="about__team-image">
+                                            <img src="@img/team/01.jpg" class="cover-image" alt="Фотография члена команды">
+                                            <div class="about__team-actions">
+                                                <a href="" class="about__team-action icon-phone"></a>
+                                                <a href="" class="about__team-action icon-mail"></a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="about__team-name">Радыгина Наталья</div>
-                                    <div class="about__team-desc">Менеджер по работе с клиентами</div>
-                                </li>
-                                <li class="about__team-item col-2">
-                                    <div class="about__team-image">
-                                        <img src="@img/team/02.jpg" class="cover-image" alt="Фотография члена команды">
-                                        <div class="about__team-actions">
-                                            <a href="" class="about__team-action icon-phone"></a>
-                                            <a href="" class="about__team-action icon-mail"></a>
+                                        <div class="about__team-name">Радыгина Наталья</div>
+                                        <div class="about__team-desc">Менеджер по работе с клиентами</div>
+                                    </li>
+                                    <li class="about__team-item swiper-slide col-xxl-2 col-lg-3 col-md-4 col-6">
+                                        <div class="about__team-image">
+                                            <img src="@img/team/02.jpg" class="cover-image" alt="Фотография члена команды">
+                                            <div class="about__team-actions">
+                                                <a href="" class="about__team-action icon-phone"></a>
+                                                <a href="" class="about__team-action icon-mail"></a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="about__team-name">Радыгина Наталья</div>
-                                    <div class="about__team-desc">Менеджер по работе с клиентами</div>
-                                </li>
-                            </ul>
+                                        <div class="about__team-name">Радыгина Наталья</div>
+                                        <div class="about__team-desc">Менеджер по работе с клиентами</div>
+                                    </li>
+                                    <li class="about__team-item swiper-slide col-xxl-2 col-lg-3 col-md-4 col-6">
+                                        <div class="about__team-image">
+                                            <img src="@img/team/01.jpg" class="cover-image" alt="Фотография члена команды">
+                                            <div class="about__team-actions">
+                                                <a href="" class="about__team-action icon-phone"></a>
+                                                <a href="" class="about__team-action icon-mail"></a>
+                                            </div>
+                                        </div>
+                                        <div class="about__team-name">Радыгина Наталья</div>
+                                        <div class="about__team-desc">Менеджер по работе с клиентами</div>
+                                    </li>
+                                    <li class="about__team-item swiper-slide col-xxl-2 col-lg-3 col-md-4 col-6">
+                                        <div class="about__team-image">
+                                            <img src="@img/team/02.jpg" class="cover-image" alt="Фотография члена команды">
+                                            <div class="about__team-actions">
+                                                <a href="" class="about__team-action icon-phone"></a>
+                                                <a href="" class="about__team-action icon-mail"></a>
+                                            </div>
+                                        </div>
+                                        <div class="about__team-name">Радыгина Наталья</div>
+                                        <div class="about__team-desc">Менеджер по работе с клиентами</div>
+                                    </li>
+                                    <li class="about__team-item swiper-slide col-xxl-2 col-lg-3 col-md-4 col-6">
+                                        <div class="about__team-image">
+                                            <img src="@img/team/03.jpg" class="cover-image" alt="Фотография члена команды">
+                                            <div class="about__team-actions">
+                                                <a href="" class="about__team-action icon-phone"></a>
+                                                <a href="" class="about__team-action icon-mail"></a>
+                                            </div>
+                                        </div>
+                                        <div class="about__team-name">Радыгина Наталья</div>
+                                        <div class="about__team-desc">Менеджер по работе с клиентами</div>
+                                    </li>
+                                    <li class="about__team-item swiper-slide col-xxl-2 col-lg-3 col-md-4 col-6">
+                                        <div class="about__team-image">
+                                            <img src="@img/team/04.jpg" class="cover-image" alt="Фотография члена команды">
+                                            <div class="about__team-actions">
+                                                <a href="" class="about__team-action icon-phone"></a>
+                                                <a href="" class="about__team-action icon-mail"></a>
+                                            </div>
+                                        </div>
+                                        <div class="about__team-name">Радыгина Наталья</div>
+                                        <div class="about__team-desc">Менеджер по работе с клиентами</div>
+                                    </li>
+                                    <li class="about__team-item swiper-slide col-xxl-2 col-lg-3 col-md-4 col-6">
+                                        <div class="about__team-image">
+                                            <img src="@img/team/01.jpg" class="cover-image" alt="Фотография члена команды">
+                                            <div class="about__team-actions">
+                                                <a href="" class="about__team-action icon-phone"></a>
+                                                <a href="" class="about__team-action icon-mail"></a>
+                                            </div>
+                                        </div>
+                                        <div class="about__team-name">Радыгина Наталья</div>
+                                        <div class="about__team-desc">Менеджер по работе с клиентами</div>
+                                    </li>
+                                    <li class="about__team-item swiper-slide col-xxl-2 col-lg-3 col-md-4 col-6">
+                                        <div class="about__team-image">
+                                            <img src="@img/team/02.jpg" class="cover-image" alt="Фотография члена команды">
+                                            <div class="about__team-actions">
+                                                <a href="" class="about__team-action icon-phone"></a>
+                                                <a href="" class="about__team-action icon-mail"></a>
+                                            </div>
+                                        </div>
+                                        <div class="about__team-name">Радыгина Наталья</div>
+                                        <div class="about__team-desc">Менеджер по работе с клиентами</div>
+                                    </li>
+                                </ul>
+                            </div>
                             <button type="button" class="about__team-more icon-chevron"><span>Вся команда</span></button>
                         </div>
-                        <div id="contacts" class="about__feedback">
+                        <div id="feedback" class="about__feedback">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <h2 class="about__feedback-title title-lg">Свяжитесь с нами</h2>
                                     <p class="about__feedback-subtitle">Если вы хотите узнать подробнее о доставке и оплате, выберите удобный для вас способ связи или заполните форму и наш менеджер свяжется с вами</p>
                                     <div class="about__feedback-contacts">
                                         <div class="about__feedback-caption">Контакты</div>
                                         <ul class="about__feedback-list">
-                                            <li class="about__feedback-item">
-                                                Пн-Пт: 8:00 - 18:00 <br>
-                                                Сб: Выходной
-                                            </li>
                                             <li class="about__feedback-item">
                                                 <a href="tel:88003509705">8 (800) 350-97-05</a>
                                             </li>
@@ -389,7 +522,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <form action="#" class="about__feedback-form" data-form-validation>
                                         <div class="row">
                                             <div class="col-12">
@@ -398,13 +531,13 @@
                                                     <input type="text" name="name" placeholder="Имя" class="form__input form__input_gray">
                                                 </div>
                                             </div>
-                                            <div class="col-6">
+                                            <div class="col-sm-6">
                                                 <div class="form__field">
                                                     <div class="form__label">Телефон *</div>
                                                     <input type="tel" name="phone" placeholder="+7" class="form__input form__input_gray">
                                                 </div>
                                             </div>
-                                            <div class="col-6">
+                                            <div class="col-sm-6">
                                                 <div class="form__field">
                                                     <div class="form__label">E-mail *</div>
                                                     <input type="email" name="email" placeholder="mail@example.ru" class="form__input form__input_gray">
@@ -421,13 +554,13 @@
                                                     Вы можете прикрепить файл к Вашему сообщению
                                                 </div>
                                             </div>
-                                            <div class="col-6">
+                                            <div class="col-xl-6 col-lg-12 col-sm-6">
                                                 <label class="form__file">
                                                     <input type="file" name="attachment" class="form__file-input hidden" hidden>
                                                     <span class="form__file-btn btn btn-primary-outline icon-attach full-width">Прикрепить файл</span>
                                                 </label>
                                             </div>
-                                            <div class="col-6">
+                                            <div class="col-xl-6 col-lg-12 col-sm-6">
                                                 <button type="submit" class="btn btn-primary full-width">Отправить</button>
                                             </div>
                                         </div>

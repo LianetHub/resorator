@@ -431,6 +431,29 @@
 			color: $white;
 		}
 	}
+	&.btn-white-outline {
+		border: rem(1) solid $white;
+		color: $white;
+		&:hover,
+		&:active {
+			background: $white;
+			color: $dark;
+			.icon-arrow-short {
+				background: $grayStroke;
+			}
+		}
+		.icon-arrow-short {
+			display: flex;
+			width: 2.5rem;
+			height: 2.5rem;
+			justify-content: center;
+			align-items: center;
+			font-size: 1.5rem;
+			border-radius: 50%;
+			background: $white;
+			color: $dark;
+		}
+	}
 	&.btn-sm {
 		padding: 0.62rem 1rem;
 		font-size: 0.75rem;

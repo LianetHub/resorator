@@ -7,6 +7,31 @@
 	&.header_shadow {
 		box-shadow: 0 rem(4) rem(15) 0 rgba(0, 0, 0, 0.05);
 	}
+	&.header_about {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 2;
+		background: transparent;
+		color: $white;
+		padding: rem(20) 0;
+		.header__top {
+			color: inherit;
+		}
+		.header__container {
+			@media (max-width: $md3) {
+				@media (min-width: $md5) {
+					padding: 0 rem(65);
+				}
+			}
+		}
+	}
+	&.open-menu {
+		.about-navbar-toggler {
+			display: none;
+		}
+	}
 	// .header__container
 	&__container {
 	}
@@ -27,6 +52,19 @@
 		}
 		@media (min-width: $md3) {
 			flex-wrap: wrap;
+		}
+	}
+	// .header__request
+	&__request {
+		margin-left: auto;
+		&.btn-rounded {
+			padding: 0.75rem 1.25rem;
+			font-size: 1rem;
+			.icon-arrow-short {
+				width: 1.875rem;
+				height: 1.875rem;
+				font-size: 1.25rem;
+			}
 		}
 	}
 	// .header__language
@@ -107,8 +145,10 @@
 			@media (min-width: $md3) {
 				display: none;
 			}
-			@media (max-width: $md5) {
-				display: none;
+			&.menu-toggler {
+				@media (max-width: $md5) {
+					display: none;
+				}
 			}
 		}
 	}

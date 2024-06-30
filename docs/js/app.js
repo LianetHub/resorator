@@ -23,6 +23,18 @@ $(function () {
             $('body').toggleClass('lock-menu')
         }
 
+        // open mobile menu - about page
+        if ($target[0].closest('.about-navbar-toggler')) {
+            $('.about__navbar').toggleClass('open-menu');
+            $('body').toggleClass('lock-menu');
+        }
+
+        // close mobile menu - about page
+        if ($target.is('.about__navbar-link') || $target.is('.about__navbar')) {
+            $('.about__navbar').removeClass('open-menu');
+            $('body').removeClass('lock-menu');
+        }
+
         // open menu 2 lvl
         if ($target.hasClass('menu__arrow')) {
             $target.toggleClass('active');
@@ -366,6 +378,31 @@ $(function () {
             $target.closest('.contacts__card').toggleClass('active');
         }
 
+        // get full team items - about page
+        if ($target[0].closest('.about__team-more')) {
+            $target.closest('.about__team-more').toggleClass('active');
+            if (window.innerWidth < 576) {
+                toggleDestroyTeamSlider()
+            }
+            $target.closest('.about__team-more').prev().toggleClass('active');
+            if ($target.closest('.about__team-more').hasClass('active')) {
+                $target.closest('.about__team-more').find('span').text('Скрыть');
+            } else {
+                $target.closest('.about__team-more').find('span').text('Вся команда');
+            }
+        }
+
+        // get full cities items - about page
+        if ($target[0].closest('.about__geography-more')) {
+            $target.closest('.about__geography-more').toggleClass('active');
+            $target.closest('.about__geography-more').prev().toggleClass('active');
+            if ($target.closest('.about__geography-more').hasClass('active')) {
+                $target.closest('.about__geography-more').find('span').text('Скрыть');
+            } else {
+                $target.closest('.about__geography-more').find('span').text('Вся города');
+            }
+        }
+
     });
 
 
@@ -464,6 +501,30 @@ $(function () {
             '--underline-left': left + 'px',
             '--underline-width': width + 'px'
         });
+    }
+
+    function toggleDestroyTeamSlider() {
+
+        let $slider = $('.about__team-content');
+        if ($slider.length == 0) return;
+
+
+        if ($slider[0].swiper) {
+            console.log("Destroying Swiper");
+            $slider.addClass('destroyed')
+            $slider[0].swiper.destroy(true, true);
+
+
+        } else {
+
+            console.log("Re-initializing Swiper");
+            $slider.removeClass('destroyed')
+            getMobileSlider('.about__team-content', {
+                slidesPerView: 1.4,
+                spaceBetween: 10,
+                grabCursor: true,
+            })
+        }
     }
 
     // init underline filters line
@@ -934,13 +995,6 @@ $(function () {
 
     }
 
-    if ($('.about__navbar').length > 0) {
-        new Swiper('.about__navbar', {
-            slidesPerView: "auto",
-            spaceBetween: 80
-        })
-    }
-
     if ($('.contacts__tabs').length > 0) {
         new Swiper('.contacts__tabs', {
             slidesPerView: "auto",
@@ -1071,6 +1125,36 @@ $(function () {
         }));
     }
 
+    if ($('.about__team-content').length > 0) {
+
+        getMobileSlider('.about__team-content', {
+            slidesPerView: 1.4,
+            spaceBetween: 10,
+            grabCursor: true,
+        })
+    }
+
+
+    function getMobileSlider(sliderName, options) {
+
+        let init = false;
+        let swiper = null;
+
+        function getSwiper() {
+            if (window.innerWidth <= 575.98) {
+                if (!init) {
+                    init = true;
+                    swiper = new Swiper(sliderName, options);
+                }
+            } else if (init) {
+                swiper.destroy();
+                swiper = null;
+                init = false;
+            }
+        }
+        getSwiper();
+        window.addEventListener("resize", getSwiper);
+    }
 
 
 
