@@ -4,16 +4,22 @@
             <a href="#select-language" data-fancybox class="header__language icon-globe">
                 RU
             </a>
-            <a href="" class="header__request btn btn-rounded btn-white-outline tablet-sm-only">
+            @@if(menuBtn===true){
+            <a href="#callback" data-fancybox class="header__request btn btn-rounded btn-white-outline tablet-sm-only">
                 Оставить заявку
                 <span class="icon-arrow-short"></span>
             </a>
-            @@if(menuBtn===true){
             <button type="button" aria-label="Открыть мобильное меню" class="header__menu-btn about-navbar-toggler icon-menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+            }
+            @@if(menuBtn===false){
+            <a href="#callback" data-fancybox class="header__request btn btn-rounded btn-white-outline">
+                Оставить заявку
+                <span class="icon-arrow-short"></span>
+            </a>
             }
         </div>
         <div class="header__menu menu mobile-sm-only">

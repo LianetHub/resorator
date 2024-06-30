@@ -5,15 +5,16 @@
     })
     <body>
         <div class="wrapper">
+            @@include('html/_about-header.html', {
+            "menuBtn": false
+            })
             <main class="page">
-                <div class="blank">
-                    <div class="blank__promo" style="background-image: url('@img/about-promo.jpg');">
-                        <div class="blank__promo-caption">
+                <div class="about about_blank">
+                    <div class="about__promo" style="background-image: url('@img/about-promo.jpg');">
+                        <div class="about__promo-logo">
                             <img src="@img/blank.svg" alt="Страница в разработке">
                         </div>
-                        <div class="blank__promo-tagline">
-                            Гарантия и сервис. За интересующей вас информацией обратитесь к нашему менеджеру или позвоните по телефону указанному на сайте.
-                        </div>
+                        <div class="about__promo-tagline"> Гарантия и сервис. За интересующей вас информацией обратитесь к нашему менеджеру или позвоните по телефону указанному на сайте.</div>
                     </div>
                 </div>
             </main>

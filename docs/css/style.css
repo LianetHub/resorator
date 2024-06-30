@@ -1,6 +1,14 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
+  src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
   src: url("../fonts/DinPro-Light.woff2") format("woff2"), url("../fonts/DinPro-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
@@ -15,10 +23,34 @@
 }
 
 @font-face {
-  font-family: "DinPro";
+  font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -35,38 +67,6 @@
   font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -1760,61 +1760,6 @@ body.lock-catalog-filter {
   background: transparent;
 }
 
-.blank {
-  background-color: #303030;
-  color: #e8e8e8;
-}
-
-.blank__promo {
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-  z-index: 1;
-}
-
-.blank__promo::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(28, 30, 33, 0.65)), to(rgba(28, 30, 33, 0.65)));
-  background-image: linear-gradient(0deg, rgba(28, 30, 33, 0.65) 0%, rgba(28, 30, 33, 0.65) 100%);
-}
-
-.blank__promo-caption {
-  max-width: 31.9375rem;
-  width: 100%;
-}
-
-.blank__promo-caption img {
-  width: 100%;
-}
-
-.blank__promo-tagline {
-  margin-top: 0.62rem;
-  max-width: 35.625rem;
-  font-size: 1.125rem;
-}
-
 table {
   width: 100%;
   font-size: 0.8125rem;
@@ -2735,7 +2680,7 @@ table td button {
 
 .header__request.btn-rounded {
   padding: 0.75rem 1.25rem;
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 
 .header__request.btn-rounded .icon-arrow-short,
@@ -5840,7 +5785,11 @@ table td button {
 .about {
   background-color: #303030;
   color: #e8e8e8;
-  padding: 0em 0em 2.5rem 0em;
+  padding-bottom: 2.5rem;
+}
+
+.about.about_blank {
+  padding-bottom: 0;
 }
 
 .about__promo {
@@ -5891,6 +5840,10 @@ table td button {
 .about__promo-logo {
   max-width: 32rem;
   width: 100%;
+}
+
+.about__promo-logo:first-child {
+  margin-top: auto;
 }
 
 .about__promo-logo img {
@@ -8890,6 +8843,10 @@ table td button {
             justify-content: flex-start;
   }
 
+  .header__request.btn-rounded {
+    font-size: 1rem;
+  }
+
   .header__currency {
     margin-right: auto;
   }
@@ -9249,6 +9206,10 @@ table td button {
   }
 
   .about__promo-caption {
+    margin-top: 0;
+  }
+
+  .about__promo-logo:first-child {
     margin-top: 0;
   }
 

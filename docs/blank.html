@@ -38,24 +38,138 @@
 	<meta property="twitter:image:src" content="/OG.png">
 	<!-- Twitter -->
 	<!-- plugnis -->
-	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240630143917">
-	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20240630143917">
-	<link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240630143917">
-	<link rel="stylesheet" href="css/libs/select2.min.css?_v=20240630143917">
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240630145456">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20240630145456">
+	<link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240630145456">
+	<link rel="stylesheet" href="css/libs/select2.min.css?_v=20240630145456">
 	<!-- plugnis -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20240630143917">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240630143917">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20240630145456">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240630145456">
 </head>
 
 <body>
 	<div class="wrapper">
+		<header class="header header_about">
+			<div class="header__container">
+				<div class="header__top">
+					<a href="#select-language" data-fancybox class="header__language icon-globe"> RU </a>
+					<a href="#callback" data-fancybox class="header__request btn btn-rounded btn-white-outline"> Оставить заявку <span class="icon-arrow-short"></span>
+					</a>
+				</div>
+				<div class="header__menu menu mobile-sm-only">
+					<a href="index.html" class="menu__logo">
+						<img src="img/logo-white.svg" alt="Логотип">
+					</a>
+					<a href="tel:88003551555" class="menu__phone">8 (800) 355-15-55</a>
+					<nav aria-label="Меню в шапке" class="menu__navbar">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="about.html" class="menu__link">О компании</a>
+							</li>
+							<li class="menu__item">
+								<a href="delivery.html" class="menu__link">Доставка и оплата</a>
+								<button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
+								<ul class="submenu">
+									<li class="submenu__item">
+										<a href="" class="submenu__link icon-chevron">Доставка</a>
+									</li>
+									<li class="submenu__item">
+										<a href="" class="submenu__link icon-chevron">Оплата</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link">Гарантия и сервис</a>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link">Прайс-лист</a>
+								<button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
+								<ul class="submenu">
+									<li class="submenu__item">
+										<a href="" class="submenu__link icon-chevron">Пиццерия</a>
+									</li>
+									<li class="submenu__item">
+										<a href="" class="submenu__link icon-chevron">Пекарня</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="blog.html" class="menu__link">Блог</a>
+								<button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
+								<ul class="submenu">
+									<li class="submenu__item">
+										<a href="" class="submenu__link icon-chevron">Статья 1</a>
+									</li>
+									<li class="submenu__item">
+										<a href="" class="submenu__link icon-chevron">Статья 2</a>
+									</li>
+									<li class="submenu__item">
+										<a href="" class="submenu__link icon-chevron">Статья 3</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link">Производство</a>
+								<button type="button" aria-label="Подменю" class="menu__arrow icon-chevron"></button>
+								<ul class="submenu">
+									<li class="submenu__item">
+										<a href="" class="submenu__link icon-chevron">Статья 1</a>
+									</li>
+									<li class="submenu__item">
+										<a href="" class="submenu__link icon-chevron">Статья 2</a>
+									</li>
+									<li class="submenu__item">
+										<a href="" class="submenu__link icon-chevron">Статья 3</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link">Наш бренд</a>
+							</li>
+							<li class="menu__item">
+								<a href="contacts.html" class="menu__link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__actions actions mobile-sm-only">
+					<button type="button" class="actions__item menu-toggler mobile-sm-only">
+						<span class="icon-menu">
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+						<span class="actions__item-desc">Меню</span>
+					</button>
+					<a href="/catalog.html" data-tooltip title="Каталог" class="actions__item icon-catalog mobile-sm-only">
+						<span class="actions__item-desc">Каталог</span>
+					</a>
+					<a href="#mobile-search" data-fancybox class="actions__item search-btn-toggler icon-search">
+						<span class="actions__item-desc">Поиск</span>
+					</a>
+					<a href="compare.html" data-tooltip title="Сравнение" class="actions__item icon-compare open-menu-mobile">
+						<span class="actions__item-desc">Сравнение</span>
+					</a>
+					<a href="favorite.html" data-tooltip title="Избранное" class="actions__item icon-star open-menu-mobile">
+						<span class="actions__item-desc">Избранное</span>
+					</a>
+					<a href="" data-tooltip title="Корзина" class="actions__item icon-cart">
+						<span class="actions__item-desc">Корзина</span>
+						<span class="actions__item-quantity">12</span>
+					</a>
+					<a href="" data-tooltip title="Личный кабинет" class="actions__item icon-user open-menu-mobile">
+						<span class="actions__item-desc">Пользователь</span>
+					</a>
+				</div>
+			</div>
+		</header>
 		<main class="page">
-			<div class="blank">
-				<div class="blank__promo" style="background-image: url('img/about-promo.jpg');">
-					<div class="blank__promo-caption">
+			<div class="about about_blank">
+				<div class="about__promo" style="background-image: url('img/about-promo.jpg');">
+					<div class="about__promo-logo">
 						<img src="img/blank.svg" alt="Страница в разработке">
 					</div>
-					<div class="blank__promo-tagline"> Гарантия и сервис. За интересующей вас информацией обратитесь к нашему менеджеру или позвоните по телефону указанному на сайте. </div>
+					<div class="about__promo-tagline"> Гарантия и сервис. За интересующей вас информацией обратитесь к нашему менеджеру или позвоните по телефону указанному на сайте.</div>
 				</div>
 			</div>
 		</main>
@@ -1109,15 +1223,15 @@
 			</div>
 		</div>
 	</div> <!-- plugnis -->
-	<script src="js/libs/jquery-3.7.1.min.js?_v=20240630143917"></script>
-	<script src="js/libs/swiper-bundle.min.js?_v=20240630143917"></script>
-	<script src="js/libs/fancybox.umd.js?_v=20240630143917"></script>
-	<script src="js/libs/nouislider.min.js?_v=20240630143917"></script>
-	<script src="js/libs/select2.full.min.js?_v=20240630143917"></script>
-	<script src="js/libs/jquery.validate.min.js?_v=20240630143917"></script>
-	<script src="js/libs/messages_ru.min.js?_v=20240630143917"></script>
+	<script src="js/libs/jquery-3.7.1.min.js?_v=20240630145456"></script>
+	<script src="js/libs/swiper-bundle.min.js?_v=20240630145456"></script>
+	<script src="js/libs/fancybox.umd.js?_v=20240630145456"></script>
+	<script src="js/libs/nouislider.min.js?_v=20240630145456"></script>
+	<script src="js/libs/select2.full.min.js?_v=20240630145456"></script>
+	<script src="js/libs/jquery.validate.min.js?_v=20240630145456"></script>
+	<script src="js/libs/messages_ru.min.js?_v=20240630145456"></script>
 	<!-- plugnis -->
-	<script src="js/app.min.js?_v=20240630143917"></script>
+	<script src="js/app.min.js?_v=20240630145456"></script>
 </body>
 
 </html>

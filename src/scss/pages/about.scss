@@ -1,7 +1,10 @@
 .about {
 	background-color: #303030;
 	color: $grayStroke;
-	padding: em(0) em(0) 2.5rem em(0);
+	padding-bottom: 2.5rem;
+	&.about_blank {
+		padding-bottom: 0;
+	}
 	// .about__promo
 	&__promo {
 		height: 100vh;
@@ -46,6 +49,12 @@
 	}
 	// .about__promo-logo
 	&__promo-logo {
+		&:first-child {
+			margin-top: auto;
+			@media (min-width: $md5) {
+				margin-top: 0;
+			}
+		}
 		max-width: 32rem;
 		width: 100%;
 		& img {
@@ -932,6 +941,7 @@
 	// .about__feedback
 	&__feedback {
 		padding: 1.88rem;
+
 		border-radius: 1.25rem;
 		background: $darkBg;
 		.row {
