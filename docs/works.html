@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Ресторатор | Оплата прошла успешно</title>
+	<title>Ресторатор | Наши работы</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
 	<!-- favicon -->
 	<!-- Open Graph  -->
 	<meta property="og:type" content="business.business">
-	<meta property="og:title" content="Ресторатор | Оплата прошла успешно">
+	<meta property="og:title" content="Ресторатор | Наши работы">
 	<meta property="og:description" content="">
 	<meta property="og:url" content="">
 	<meta property="og:image" content="/OG.png">
@@ -31,7 +31,7 @@
 	<!-- Open Graph  -->
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:title" content="Ресторатор | Оплата прошла успешно">
+	<meta property="twitter:title" content="Ресторатор | Наши работы">
 	<meta property="twitter:description" content="">
 	<meta property="twitter:site" content="">
 	<meta property="twitter:url" content="">
@@ -190,38 +190,138 @@
 							<meta itemprop="position" content="1">
 						</li>
 						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-							<a href="/" class="breadcrumbs__link" itemprop="item">
-								<span itemprop="name">Личный кабинет</span>
+							<a class="breadcrumbs__link active" itemprop="item">
+								<span itemprop="name">Наши работы</span>
 							</a>
 							<meta itemprop="position" content="2">
-						</li>
-						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-							<a class="breadcrumbs__link active" itemprop="item">
-								<span itemprop="name">Корзина</span>
-							</a>
-							<meta itemprop="position" content="3">
 						</li>
 					</ul>
 				</div>
 			</nav>
-			<section class="service-page">
-				<div class="service-page__container">
-					<div class="service-page__body service-page__body_sm">
-						<div class="service-page__image">
-							<img src="img/succes-payment.svg" alt="Успех">
+			<section class="works">
+				<div class="works__container">
+					<h1 class="works__title title-md">Наши работы</h1>
+					<div class="works__header">
+						<div class="works__filters" data-underline-filters>
+							<button type="button" data-underline-filter class="works__filter active">Все проекты</button>
+							<button type="button" data-underline-filter class="works__filter">Пекарни</button>
+							<button type="button" data-underline-filter class="works__filter">Рестораны</button>
+							<button type="button" data-underline-filter class="works__filter">Кулинария</button>
+							<button type="button" data-underline-filter class="works__filter">Гастромаркет</button>
+							<button type="button" class="works__filters-arrow icon-chevron mobile-only"></button>
 						</div>
-						<div class="service-page__content">
-							<h1 class="service-page__title title-md"> Ваш заказ оформлен </h1>
-							<p class="service-page__subtitle"> Ваш заказ оформлен. В ближайшее время с вами свяжется менеджер компании. Вы можете продолжить покупки, перейдя на страницу с каталогом товаров или вернуться на главную страницу сайта. </p>
-							<div class="service-page__btns">
-								<a href="/" class="service-page__btn btn btn-md btn-secondary icon-arrow-left">
-									<span class="tablet-sm-only">Продолжить покупки</span>
-									<span class="mobile-sm-only">Вернуться</span>
-								</a>
-								<a href="/" class="service-page__btn btn btn-md btn-secondary icon-home">На главную</a>
+						<div class="works__sort">
+							<div class="works__sort-item icon-location">
+								<select name="works-location">
+									<option value="Москва" selected>Москва</option>
+									<option value="Пермь">Пермь</option>
+									<option value="Орёл">Орёл</option>
+								</select>
+							</div>
+							<div class="works__sort-item icon-calendar">
+								<select name="works-year">
+									<option value="2000" selected>2000 год</option>
+									<option value="2010">2010 год</option>
+									<option value="2020">2020 год</option>
+								</select>
 							</div>
 						</div>
 					</div>
+					<ul class="works__list">
+						<li class="blog__item">
+							<div class="blog__item-images swiper">
+								<div class="swiper-wrapper">
+									<a href="https://youtu.be/fzx_FyhPJZc?si=UiVykn6kVNjc2yP-" data-fancybox class="blog__item-image swiper-slide">
+										<img src="img/blog/01.jpg" class="cover-image" alt="Постер">
+									</a>
+									<a href="https://youtu.be/fzx_FyhPJZc?si=UiVykn6kVNjc2yP-" data-fancybox class="blog__item-image swiper-slide">
+										<img src="img/blog/02.jpg" class="cover-image" alt="Постер">
+									</a>
+									<div class="blog__item-image swiper-slide">
+										<img src="img/blog/02.jpg" class="cover-image" alt="Постер">
+									</div>
+									<div class="blog__item-image swiper-slide">
+										<img src="img/blog/02.jpg" class="cover-image" alt="Постер">
+									</div>
+								</div>
+								<div class="blog__item-controls">
+									<button type="button" class="blog__item-prev icon-arrow"></button>
+									<button type="button" class="blog__pagination swiper-pagination"></button>
+									<button type="button" class="blog__item-next icon-arrow"></button>
+								</div>
+							</div>
+							<div class="blog__item-body">
+								<div class="blog__item-header">
+									<div class="blog__item-location icon-location">Москва</div>
+									<time datetime="2024-03-03" class="blog__item-time icon-calendar">2000 год</time>
+								</div>
+								<a href="" class="blog__item-name title-md">Кафе Restori</a>
+								<p class="blog__item-desc blog__item-desc_lg">Компания КОБОР продемонстрировала высокий уровень профессионализма и ответственности, оперативно предоставив всё необходимое оборудование для кафе Rebellion. Особенную ценность представляет возможность изготовления нейтрального оборудования по индивидуальным размерам, что позволило идеально интегрировать его в маленькие размеры кухни и обеспечить максимальную эффективность рабочего пространства.</p>
+								<a href="" class="blog__item-link icon-arrow">Читать подробнее</a>
+							</div>
+						</li>
+						<li class="blog__item">
+							<div class="blog__item-images swiper">
+								<div class="swiper-wrapper">
+									<a href="https://youtu.be/fzx_FyhPJZc?si=UiVykn6kVNjc2yP-" data-fancybox class="blog__item-image swiper-slide">
+										<img src="img/blog/01.jpg" class="cover-image" alt="Постер">
+									</a>
+									<a href="https://youtu.be/fzx_FyhPJZc?si=UiVykn6kVNjc2yP-" data-fancybox class="blog__item-image swiper-slide">
+										<img src="img/blog/02.jpg" class="cover-image" alt="Постер">
+									</a>
+									<div class="blog__item-image swiper-slide">
+										<img src="img/blog/02.jpg" class="cover-image" alt="Постер">
+									</div>
+									<div class="blog__item-image swiper-slide">
+										<img src="img/blog/02.jpg" class="cover-image" alt="Постер">
+									</div>
+								</div>
+								<div class="blog__item-controls">
+									<button type="button" class="blog__item-prev icon-arrow"></button>
+									<button type="button" class="blog__pagination swiper-pagination"></button>
+									<button type="button" class="blog__item-next icon-arrow"></button>
+								</div>
+							</div>
+							<div class="blog__item-body">
+								<time datetime="2024-03-03" class="blog__item-time icon-calendar">03.03.2024</time>
+								<a href="" class="blog__item-name title-md">Кафе Restori</a>
+								<p class="blog__item-desc blog__item-desc_lg">Компания КОБОР продемонстрировала высокий уровень профессионализма и ответственности, оперативно предоставив всё необходимое оборудование для кафе Rebellion. Особенную ценность представляет возможность изготовления нейтрального оборудования по индивидуальным размерам, что позволило идеально интегрировать его в маленькие размеры кухни и обеспечить максимальную эффективность рабочего пространства.</p>
+								<a href="" class="blog__item-link icon-arrow">Читать подробнее</a>
+							</div>
+						</li>
+						<li class="blog__item">
+							<div class="blog__item-images swiper">
+								<div class="swiper-wrapper">
+									<div class="blog__item-image swiper-slide">
+										<img src="img/blog/02.jpg" class="cover-image" alt="Постер">
+									</div>
+									<a href="https://youtu.be/fzx_FyhPJZc?si=UiVykn6kVNjc2yP-" data-fancybox class="blog__item-image swiper-slide">
+										<img src="img/blog/01.jpg" class="cover-image" alt="Постер">
+									</a>
+									<div class="blog__item-image swiper-slide">
+										<img src="img/blog/02.jpg" class="cover-image" alt="Постер">
+									</div>
+									<div class="blog__item-image swiper-slide">
+										<img src="img/blog/02.jpg" class="cover-image" alt="Постер">
+									</div>
+								</div>
+								<div class="blog__item-controls">
+									<button type="button" class="blog__item-prev icon-arrow"></button>
+									<button type="button" class="blog__pagination swiper-pagination"></button>
+									<button type="button" class="blog__item-next icon-arrow"></button>
+								</div>
+							</div>
+							<div class="blog__item-body">
+								<div class="blog__item-header">
+									<div class="blog__item-location icon-location">Москва</div>
+									<time datetime="2024-03-03" class="blog__item-time icon-calendar">2000 год</time>
+								</div>
+								<a href="" class="blog__item-name title-md">Кафе Restori</a>
+								<p class="blog__item-desc blog__item-desc_lg">Компания КОБОР продемонстрировала высокий уровень профессионализма и ответственности, оперативно предоставив всё необходимое оборудование для кафе Rebellion. Особенную ценность представляет возможность изготовления нейтрального оборудования по индивидуальным размерам, что позволило идеально интегрировать его в маленькие размеры кухни и обеспечить максимальную эффективность рабочего пространства.</p>
+								<a href="" class="blog__item-link icon-arrow">Читать подробнее</a>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</section>
 		</main>

@@ -1,0 +1,234 @@
+.works {
+	padding: 1.35rem em(0) 1.56rem em(0);
+	@media (min-width: $md4) {
+		padding: 1rem em(0) 1.56rem em(0);
+	}
+	@media (min-width: $md3) {
+		padding: em(0) em(0) 1.56rem em(0);
+	}
+	// .works__container
+	&__container {
+	}
+	// .works__title
+	&__title {
+	}
+	// .works__header
+	&__header {
+		display: flex;
+		flex-direction: column;
+		margin-top: rem(40);
+		gap: rem(16);
+		@media (min-width: $md5) {
+			gap: rem(20);
+			margin-top: rem(20);
+		}
+		@media (min-width: $md2) {
+			align-items: flex-start;
+			gap: rem(40);
+			border-bottom: rem(1) solid #e8e8e8;
+			flex-direction: row;
+		}
+	}
+	// .works__filters
+	&__filters {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		border-bottom: rem(1) solid #e8e8e8;
+		&.full-mobile {
+			.works__filter {
+				display: flex;
+			}
+		}
+		@media (min-width: $md4) {
+			padding-bottom: 0.5rem;
+			padding-right: 1.5rem;
+			margin-right: -1.5rem;
+			gap: 2.5rem;
+			flex-wrap: nowrap;
+			flex-direction: row;
+			overflow-x: auto;
+			&::-webkit-scrollbar {
+				width: 0;
+				height: 0;
+				display: none;
+			}
+			scrollbar-width: 0;
+		}
+		@media (min-width: $md2) {
+			border-bottom: 0;
+		}
+		&::after {
+			@media (max-width: $md4) {
+				display: none;
+			}
+		}
+	}
+	// .works__filter
+	&__filter {
+		color: $darkBlue;
+		font-family: $font-din;
+		font-size: 1.25rem;
+		line-height: 100%;
+		white-space: nowrap;
+		flex-shrink: 0;
+		display: none;
+		text-align: left;
+		max-width: calc(100vw - 4.5rem);
+		@media (min-width: $md4) {
+			width: auto;
+			display: block;
+		}
+		&.active {
+			color: $dark;
+			display: block;
+			order: -1;
+			font-weight: 700;
+			font-size: 1.5rem;
+			@media (min-width: $md4) {
+				order: 0;
+			}
+		}
+		& span {
+			color: $lightBlue;
+		}
+	}
+	&__filters-arrow {
+		position: absolute;
+		top: 0.25rem;
+		right: 0;
+		font-size: 1.25rem;
+		width: 2.5rem;
+		height: 2.5rem;
+		transition: transform 0.3s ease 0s;
+		color: $darkBlue;
+		&::before {
+			transform: rotate(90deg);
+		}
+		&.active {
+			transform: rotate(-180deg);
+		}
+	}
+	// .works__sort
+	&__sort {
+		display: flex;
+		gap: 1.75rem;
+		justify-content: space-between;
+		@media (min-width: $md5) {
+			justify-content: flex-start;
+		}
+		@media (min-width: $md2) {
+			gap: 2.5rem;
+			margin-left: auto;
+		}
+	}
+	// .works__sort-item
+	&__sort-item {
+		display: flex;
+		align-items: center;
+		&::before {
+			width: 1.25rem;
+			height: 1.25rem;
+			flex-shrink: 0;
+			font-size: 1.25rem;
+			color: $lightBlue;
+			margin-right: 0.63rem;
+		}
+		.select2-selection.select2-selection--single {
+			border: 0;
+			padding: 0;
+			gap: 0.62rem;
+			.select2-selection__rendered {
+				color: $lightBlue;
+				font-family: $font-din;
+				font-size: 1rem;
+				font-weight: 500;
+				line-height: 100%;
+				padding-right: 2rem;
+				padding-left: 0;
+			}
+			.select2-selection__arrow {
+				right: 0;
+				&::before {
+					font-size: 1rem;
+				}
+			}
+			.select2-dropdown {
+				border: 0.0625rem solid #e8e8e8 !important;
+				border-radius: rem(4) !important;
+			}
+		}
+	}
+	// .works__list
+	&__list {
+		margin-top: 1.88rem;
+		@media (min-width: $md5) {
+			margin-top: 1.18rem;
+		}
+		@media (min-width: $md2) {
+			margin-top: 1.88rem;
+		}
+		.blog__item {
+			gap: 1.5rem;
+			@media (min-width: $md3) {
+				gap: 3.13rem;
+			}
+		}
+		.blog__item-images {
+			@media (min-width: $md4) {
+				flex: 0 0 22rem;
+			}
+			@media (min-width: $md3) {
+				flex: 0 0 24rem;
+			}
+			@media (min-width: $md1) {
+				flex: 0 0 30rem;
+			}
+			@media (min-width: $md0) {
+				flex: 0 0 37.8125rem;
+			}
+		}
+		.blog__item-image img {
+			min-height: 24rem;
+		}
+	}
+}
+
+// .blog {
+//     // .blog__item
+//     &__item {
+//     }
+//     // .blog__item-images
+//     &__item-images {
+//     }
+//     // .blog__item-image
+//     &__item-image {
+//     }
+//     // .blog__item-controls
+//     &__item-controls {
+//     }
+//     // .blog__item-prev
+//     &__item-prev {
+//     }
+//     // .blog__pagination
+//     &__pagination {
+//     }
+//     // .blog__item-next
+//     &__item-next {
+//     }
+//     // .blog__item-body
+//     &__item-body {
+//     }
+//     // .blog__item-time
+//     &__item-time {
+//     }
+//     // .blog__item-name
+//     &__item-name {
+//     }
+//     // .blog__item-desc
+//     &__item-desc {
+//     }
+//     // .blog__item-link
+//     &__item-link {
+//     }
+// }

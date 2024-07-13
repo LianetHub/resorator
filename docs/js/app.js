@@ -420,6 +420,19 @@ $(function () {
             $('.leasing__side-bid').toggleClass('hidden');
         }
 
+        // open all filter works page
+        if ($target.is('.works__filters-arrow')) {
+            $target.toggleClass('active');
+            $target.parent().toggleClass('full-mobile')
+        }
+
+        // open all filter works page
+        if ($target.is('.works__filter')) {
+            $('.works__filters-arrow').removeClass('active');
+            $target.parent().removeClass('full-mobile')
+        }
+
+
     });
 
 
