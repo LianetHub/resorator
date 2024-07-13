@@ -15,26 +15,18 @@
 }
 
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DinPro";
-  font-display: swap;
-  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "DinPro";
   font-display: swap;
   src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
   font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -47,18 +39,10 @@
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -73,8 +57,24 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -7469,6 +7469,11 @@ table td button {
   --gutter-y: 0.5rem;
 }
 
+.delivery__form .form__file {
+  display: block;
+  margin-top: 0.75rem;
+}
+
 .delivery__text {
   margin-top: 1.25rem;
   color: #475569;
@@ -9299,6 +9304,165 @@ table td button {
   min-height: 24rem;
 }
 
+.feedback {
+  padding: 1.56rem 0;
+}
+
+.work-card {
+  padding: 1.25rem 0 0 0;
+}
+
+.work-card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.work-card__location {
+  color: #94a3b8;
+  font-family: "DinPro";
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.62rem;
+}
+
+.work-card__banner {
+  margin-top: 2.75rem;
+}
+
+.work-card__video {
+  display: block;
+  position: relative;
+}
+
+.work-card__video::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 5.3125rem;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.work-card__video img {
+  width: 100%;
+  height: 21.4375rem;
+  border-radius: 0.3125rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.work-card__gallery {
+  margin-top: 2.25rem;
+}
+
+.work-card__gallery-caption {
+  margin-top: 1rem;
+}
+
+.work-card__gallery-slider {
+  overflow: visible;
+  margin-top: 1rem;
+}
+
+.work-card__gallery-slide {
+  width: 100%;
+  height: 21.4375rem;
+  border-radius: 0.3125rem;
+  overflow: hidden;
+}
+
+.work-card__gallery-slide img {
+  border-radius: 0.3125rem;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.work-card__gallery-controls {
+  margin-top: 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.work-card__gallery-next,
+.work-card__gallery-prev {
+  color: #fff;
+  padding: 0.875rem 1rem;
+  font-size: 1.125rem;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+  background: #1d1d1d;
+  color: #fff;
+}
+
+.work-card__gallery-next.swiper-button-disabled,
+.swiper-button-disabled.work-card__gallery-prev {
+  background: #e8e8e8;
+}
+
+.work-card__gallery-prev::before {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.work-card__gallery-pagination {
+  margin: 0;
+}
+
+.work-card__bottom {
+  margin-top: 1.75rem;
+}
+
+.work-card__bottom .row {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.work-card__desc {
+  color: #475569;
+  font-size: 1.125rem;
+  text-align: justify;
+}
+
+.work-card__desc p:not(:last-child) {
+  margin-bottom: 1.75rem;
+}
+
 @media (min-width: 375px) {
   .product__action {
     min-width: 2.5rem;
@@ -10129,6 +10293,43 @@ table td button {
   .works__list {
     margin-top: 1.18rem;
   }
+
+  .work-card {
+    padding: 1rem 0 0 0;
+  }
+
+  .work-card__banner {
+    margin-top: 1.88rem;
+  }
+
+  .work-card__video img {
+    height: 25rem;
+  }
+
+  .work-card__gallery {
+    margin-top: 1.5rem;
+  }
+
+  .work-card__gallery-slider {
+    margin-top: 1.25rem;
+  }
+
+  .work-card__gallery-slide {
+    width: 30rem;
+    height: 21.875rem;
+  }
+
+  .work-card__gallery-controls {
+    margin-top: 1.25rem;
+  }
+
+  .work-card__bottom {
+    margin-top: 1.75rem;
+  }
+
+  .work-card__desc p:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (any-hover: hover) and (min-width: 575.98px) {
@@ -10743,6 +10944,13 @@ table td button {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 22rem;
             flex: 0 0 22rem;
+  }
+
+  .work-card__gallery-next,
+  .work-card__gallery-prev {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -11709,6 +11917,18 @@ table td button {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 24rem;
             flex: 0 0 24rem;
+  }
+
+  .work-card {
+    padding: 0;
+  }
+
+  .work-card__desc {
+    text-align: left;
+  }
+
+  .work-card__desc p:not(:last-child) {
+    margin-bottom: 1.25rem;
   }
 }
 
@@ -12913,6 +13133,10 @@ table td button {
         -ms-flex: 0 0 37.8125rem;
             flex: 0 0 37.8125rem;
   }
+
+  .work-card__gallery-slider {
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 1199.98px) {
@@ -13581,6 +13805,21 @@ table td button {
 
   .leasing__side-back:hover {
     color: #f7ce46;
+  }
+
+  .work-card__video:hover::before {
+    color: #fff;
+  }
+
+  .work-card__gallery-slide:hover img {
+    -webkit-transform: scale(1.015);
+        -ms-transform: scale(1.015);
+            transform: scale(1.015);
+  }
+
+  .work-card__gallery-next:hover,
+  .work-card__gallery-prev:hover {
+    background: #000;
   }
 }
 

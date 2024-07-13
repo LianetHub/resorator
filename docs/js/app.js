@@ -1180,6 +1180,21 @@ $(function () {
             },
         }, 991.98, null)
     }
+    if ($('.work-card__gallery-slider').length > 0) {
+
+        new Swiper('.work-card__gallery-slider', {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.work-card__gallery-next',
+                prevEl: '.work-card__gallery-prev'
+            },
+            pagination: {
+                el: '.work-card__gallery-pagination',
+                clickable: true
+            }
+        })
+    }
 
 
 

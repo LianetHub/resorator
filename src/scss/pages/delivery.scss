@@ -230,6 +230,10 @@
 		.row {
 			--gutter-y: 0.5rem;
 		}
+		.form__file {
+			display: block;
+			margin-top: 0.75rem;
+		}
 	}
 	// .delivery__text
 	&__text {
