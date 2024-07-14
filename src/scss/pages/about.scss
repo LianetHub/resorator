@@ -9,7 +9,7 @@
 	&__promo {
 		height: 100vh;
 		min-height: 100vh;
-
+		background-attachment: fixed;
 		@media (min-width: $md5) {
 			min-height: rem(800);
 		}

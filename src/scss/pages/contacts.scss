@@ -72,6 +72,10 @@
 				margin-top: 0.62rem;
 			}
 		}
+		&.contacts__card_black {
+			background: $dark;
+			color: $white;
+		}
 		&.active {
 			.contacts__card-close {
 				display: block;
@@ -250,7 +254,7 @@
 	&__tab-btn {
 		border-radius: 0.625rem;
 		background: $lightGray;
-		color: $darkBlue;
+		color: $dark;
 		font-family: $font-din;
 		font-size: 1rem;
 		font-weight: 500;
@@ -260,7 +264,7 @@
 
 		width: auto;
 		&.active {
-			background: #f4eed7;
+			background: $yellow;
 		}
 	}
 	// .contacts__tabs-body
@@ -272,6 +276,10 @@
 		display: none;
 		&.active {
 			display: block;
+			animation: fadeIn 0.4s;
+		}
+		&.fade-out {
+			animation: fadeOut 0.4s forwards;
 		}
 	}
 	// .contacts__card-hint
@@ -335,8 +343,9 @@
 	&__card-copy {
 		margin-top: 1.87rem;
 		border-radius: 0.3125rem;
-		border: 1px solid $darkBlue;
-		color: $darkBlue;
+
+		background: $yellow;
+		color: $dark;
 		display: flex;
 		gap: 0.62rem;
 		padding: 0.62rem 1rem;
@@ -348,8 +357,7 @@
 		transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
-				background: $darkBlue;
-				color: $white;
+				background: darken($yellow, 10);
 			}
 		}
 	}
@@ -387,6 +395,7 @@
 			}
 		}
 		&.open-vacancy {
+			animation: fadeIn 1s;
 			.row {
 				display: contents;
 				& > * {
@@ -452,6 +461,7 @@
 			}
 		}
 		&.open-office {
+			animation: fadeIn 1s;
 			.row {
 				display: contents;
 				& > * {

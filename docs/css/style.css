@@ -9,16 +9,16 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Light.woff2") format("woff2"), url("../fonts/DinPro-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/DinPro-Light.woff2") format("woff2"), url("../fonts/DinPro-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -35,6 +35,22 @@
   font-display: swap;
   src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -57,24 +73,8 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
   font-style: normal;
 }
 
@@ -2051,6 +2051,46 @@ table td button {
   100% {
     -webkit-transform: translate(-50%, -50%) rotate(360deg);
             transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
 
@@ -5942,6 +5982,7 @@ table td button {
 .about__promo {
   height: 100vh;
   min-height: 100vh;
+  background-attachment: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8495,6 +8536,11 @@ table td button {
   margin-top: 0.62rem;
 }
 
+.contacts__card.contacts__card_black {
+  background: #1d1d1d;
+  color: #fff;
+}
+
 .contacts__card.active .contacts__card-close {
   display: block;
 }
@@ -8671,7 +8717,7 @@ table td button {
 .contacts__tab-btn {
   border-radius: 0.625rem;
   background: #f1f2f4;
-  color: #475569;
+  color: #1d1d1d;
   font-family: "DinPro";
   font-size: 1rem;
   font-weight: 500;
@@ -8682,7 +8728,7 @@ table td button {
 }
 
 .contacts__tab-btn.active {
-  background: #f4eed7;
+  background: #f7ce46;
 }
 
 .contacts__tabs-body {
@@ -8695,6 +8741,13 @@ table td button {
 
 .contacts__tabs-content.active {
   display: block;
+  -webkit-animation: fadeIn 0.4s;
+          animation: fadeIn 0.4s;
+}
+
+.contacts__tabs-content.fade-out {
+  -webkit-animation: fadeOut 0.4s forwards;
+          animation: fadeOut 0.4s forwards;
 }
 
 .contacts__card-hint {
@@ -8769,8 +8822,8 @@ table td button {
 .contacts__card-copy {
   margin-top: 1.87rem;
   border-radius: 0.3125rem;
-  border: 1px solid #475569;
-  color: #475569;
+  background: #f7ce46;
+  color: #1d1d1d;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8788,6 +8841,11 @@ table td button {
 
 .contacts__vacancies .contacts__card {
   border-radius: 1.25rem;
+}
+
+.contacts__vacancies.open-vacancy {
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
 }
 
 .contacts__vacancies.open-vacancy .row {
@@ -8871,6 +8929,11 @@ table td button {
 :nth-child(2),
 :nth-child(3)) {
   display: none;
+}
+
+.contacts__offices.open-office {
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
 }
 
 .contacts__offices.open-office .row {
@@ -13794,8 +13857,7 @@ table td button {
   }
 
   .contacts__card-copy:hover {
-    background: #475569;
-    color: #fff;
+    background: #f5c115;
   }
 
   .contacts__vacancies-more:hover span,

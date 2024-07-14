@@ -351,7 +351,10 @@ $(function () {
         // contact page tabs
         if ($target.is('.contacts__tab-btn')) {
             $target.addClass('active').siblings().removeClass('active');
-            $('.contacts__tabs-content').eq($target.index()).addClass('active').siblings().removeClass('active');
+            $(".contacts__tabs-content.active").addClass('fade-out');
+            setTimeout(() => {
+                $('.contacts__tabs-content').eq($target.index()).addClass('active').siblings().removeClass('active').removeClass('fade-out');
+            }, 500)
         }
 
 
