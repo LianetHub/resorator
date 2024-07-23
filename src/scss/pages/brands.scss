@@ -120,6 +120,12 @@
 	&__alphabet-item {
 		font-size: 1.3125rem;
 		text-transform: uppercase;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellow;
+			}
+		}
 	}
 	// .brands__actions
 	&__actions {
@@ -287,6 +293,7 @@
 		@media (any-hover: hover) {
 			&:hover {
 				text-decoration: underline;
+				color: $blue;
 			}
 		}
 	}

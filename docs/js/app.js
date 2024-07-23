@@ -1104,6 +1104,7 @@ $(function () {
                 nextEl: '.compare__next',
                 prevEl: '.compare__prev'
             },
+
         });
 
         let compareTableSlider = new Swiper('.compare__table', {
@@ -1112,6 +1113,13 @@ $(function () {
                 el: '.compare__table-scrollbar',
                 draggable: true,
             },
+            // on: {
+            //     setTranslate: (swiper) => {
+
+            //         $('.compare__row-caption').css('transform', `translate3d(${-swiper.translate}px, 0, -1px)`)
+            //     },
+
+            // }
         });
 
 
@@ -1127,16 +1135,16 @@ $(function () {
     if ($(".blog__item-images").length > 0) {
         $(".blog__item-images").each((function (index, slider) {
 
-            let prev = $(slider).find('.blog__item-prev');
-            let next = $(slider).find('.blog__item-next');
+            // let prev = $(slider).find('.blog__item-prev');
+            // let next = $(slider).find('.blog__item-next');
             let paginationBlock = $(slider).find('.blog__pagination');
 
             new Swiper(slider, {
                 slidesPerView: 1,
-                navigation: {
-                    nextEl: next[0],
-                    prevEl: prev[0]
-                },
+                // navigation: {
+                //     nextEl: next[0],
+                //     prevEl: prev[0]
+                // },
                 pagination: {
                     el: paginationBlock[0],
                     clickable: true

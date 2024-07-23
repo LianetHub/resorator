@@ -156,6 +156,8 @@
 		font-family: $font-din;
 		font-size: 1rem;
 		font-weight: 500;
+		position: sticky;
+		left: 0;
 	}
 	// .compare__row-value
 	&__row-value {
