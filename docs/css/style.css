@@ -17,8 +17,16 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -33,8 +41,16 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
+  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -47,18 +63,10 @@
 }
 
 @font-face {
-  font-family: "DinPro";
-  font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -67,14 +75,6 @@
   font-display: swap;
   src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
   font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
-  font-weight: 600;
   font-style: normal;
 }
 
@@ -8504,7 +8504,9 @@ table td button {
   min-height: 100%;
 }
 
-.contacts__card.contacts__card_dark {
+.contacts__card.contacts__card_dark,
+.contacts__offices.open-office .contacts__card,
+.contacts__vacancies.open-vacancy .contacts__card {
   background: #303030;
   color: #fff;
 }
@@ -8566,6 +8568,8 @@ table td button {
 
 .contacts__card-close {
   display: none;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
 }
 
 .contacts__card-header {
@@ -8680,7 +8684,9 @@ table td button {
 }
 
 .contacts__card-btn.btn-gray-outline,
-.btn-gray-outline.contacts__card-request {
+.btn-gray-outline.contacts__card-request,
+.contacts__card-btn.btn-primary,
+.btn-primary.contacts__card-request {
   padding: 1.325rem;
   color: #475569;
 }
@@ -8860,6 +8866,10 @@ table td button {
   display: none;
 }
 
+.contacts__vacancies.open-vacancy .contacts__card-close {
+  color: #f7ce46;
+}
+
 .contacts__vacancies.open-vacancy + .contacts__vacancies-more,
 .contacts__vacancies.open-vacancy + .contacts__offices-more {
   display: none;
@@ -8958,6 +8968,14 @@ table td button {
 
 .contacts__offices.open-office .contacts__card:not(.active) + .contacts__card-slider {
   display: none;
+}
+
+.contacts__offices.open-office .contacts__card-prop-value::before {
+  color: #f7ce46;
+}
+
+.contacts__offices.open-office .contacts__card-close {
+  color: #f7ce46;
 }
 
 .contacts__offices.open-office + .contacts__offices-more {
@@ -13418,8 +13436,8 @@ table td button {
     width: 100%;
   }
 
-  .contacts__card-request.btn {
-    padding-inline: 0rem;
+  .contacts__card-request.btn.btn-rounded {
+    padding-inline: 0;
   }
 
   .leasing__side-row::after {
@@ -13860,9 +13878,17 @@ table td button {
     background: #f5c115;
   }
 
+  .contacts__vacancies.open-vacancy .contacts__card-close:hover {
+    color: #fbe59c;
+  }
+
   .contacts__vacancies-more:hover span,
   .contacts__offices-more:hover span {
     text-decoration: none;
+  }
+
+  .contacts__offices.open-office .contacts__card-close:hover {
+    color: #fbe59c;
   }
 
   .leasing__side-back:hover {

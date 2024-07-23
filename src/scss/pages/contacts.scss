@@ -100,6 +100,7 @@
 	// .contacts__card-close
 	&__card-close {
 		display: none;
+		transition: color 0.3s ease 0s;
 	}
 	&__card-header {
 		display: flex;
@@ -211,7 +212,8 @@
 	&__card-btn {
 		margin-top: 1.88rem;
 		font-size: 1rem;
-		&.btn-gray-outline {
+		&.btn-gray-outline,
+		&.btn-primary {
 			padding: 1.325rem;
 			color: $darkBlue;
 		}
@@ -221,10 +223,11 @@
 		@extend .contacts__card-btn;
 		display: none;
 		width: fit-content;
+
 		@media (max-width: $md5) {
 			width: 100%;
-			&.btn {
-				padding-inline: 0rem;
+			&.btn.btn-rounded {
+				padding-inline: 0;
 			}
 		}
 	}
@@ -403,8 +406,17 @@
 				}
 			}
 			.contacts__card {
+				@extend .contacts__card_dark;
 				&:not(.active) {
 					display: none;
+				}
+			}
+			.contacts__card-close {
+				color: $yellow;
+				@media (any-hover: hover) {
+					&:hover {
+						color: $yellowSecond;
+					}
 				}
 			}
 			& + .contacts__vacancies-more {
@@ -472,6 +484,7 @@
 				display: block;
 			}
 			.contacts__card {
+				@extend .contacts__card_dark;
 				grid-column: auto;
 				@media (max-width: $md4) {
 					&:not(:last-child) {
@@ -482,6 +495,19 @@
 					display: none;
 					& + .contacts__card-slider {
 						display: none;
+					}
+				}
+			}
+			.contacts__card-prop-value {
+				&::before {
+					color: $yellow;
+				}
+			}
+			.contacts__card-close {
+				color: $yellow;
+				@media (any-hover: hover) {
+					&:hover {
+						color: $yellowSecond;
 					}
 				}
 			}
