@@ -1,0 +1,126 @@
+@@if(wrapper==true){ <div class="@@className">
+    <div class="product"> }
+        @@if(wrapper==false){ <div class="product@@className"> }
+
+            @@if(labels===true) {
+            <div class="product__labels swiper">
+                <div class="swiper-wrapper">
+                    @@if(sale===true) {
+                    <div class="swiper-slide product__label label red">Распродажа</div>
+                    }
+                    @@if(novinka===true) {
+                    <div class="swiper-slide product__label label yellow">Новинка</div>
+                    }
+                    @@if(hit===true) {
+                    <div class="swiper-slide product__label label green">Хит продаж</div>
+                    }
+                </div>
+            </div>
+            }
+
+            <div class="product__header">
+                <a href="/product.html" class="product__image">
+                    <img src="@img/goods/@@index.png" alt="@@name">
+                </a>
+                <div class="product__actions">
+                    <a href="#product-fast" data-fancybox class="product__action icon-eye">
+                        <span>Быстрый просмотр</span>
+                    </a>
+                    <button type="button" data-favorite class="product__action icon-star active">
+                        <span>Добавить в избранное</span>
+                    </button>
+                    <button type="button" class="product__action icon-compare">
+                        <span>Сравнить товар</span>
+                    </button>
+                    <div class="product__remove popup popup_md">
+                        <div class="popup__header">
+                            <h3 class="popup__title title-sm">Удалить из избранного?</h3>
+                            <button type="button" class="popup__close" data-fancybox-close></button>
+                        </div>
+                        <div class="product__remove-btns">
+                            <button type="button" data-fancybox-close class="btn btn-secondary">
+                                Отменить
+                            </button>
+                            <button type="button" data-remove-favorite class="btn btn-primary">
+                                Удалить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__info">
+                <a href="/product.html" class="product__name">
+                    <small>Пароконвектомат</small>
+                    @@name
+                </a>
+                <div class="product__price">
+                    @@if(oldPrice===true) {
+                    <div class="product__price-old">
+                        @@oldPriceValue ₽
+                    </div>
+                    }
+                    <div class="product__price-value">@@price ₽ </div>
+                </div>
+                <ul class="product__props">
+                    <li class="product__props-row">
+                        <div class="product__props-name">
+                            Цвет
+                        </div>
+                        <div class="product__props-value">
+                            Серый металлик
+                        </div>
+                    </li>
+                    <li class="product__props-row">
+                        <div class="product__props-name">
+                            Мощность
+                        </div>
+                        <div class="product__props-value">
+                            10.5 кВт
+                        </div>
+                    </li>
+                    <li class="product__props-row">
+                        <div class="product__props-name">
+                            Температура нагрева
+                        </div>
+                        <div class="product__props-value">
+                            50 °С
+                        </div>
+                    </li>
+                    <li class="product__props-row">
+                        <div class="product__props-name">
+                            Цвет
+                        </div>
+                        <div class="product__props-value">
+                            Серый металлик
+                        </div>
+                    </li>
+                </ul>
+                <div class="product__footer">
+                    @@if(аvailability==='yes') {
+                    <div class="product__avaibility green-color">В наличии</div>
+                    }
+                    @@if(аvailability==='no') {
+                    <div class="product__avaibility red-color">Товар закончился</div>
+                    }
+                    @@if(аvailability==='stock') {
+                    <div class="product__avaibility">под заказ</div>
+                    }
+                    <button type="button" @@if(аvailability==='no' ){disabled} class="product__cart btn btn-secondary btn-sm">В корзину</button>
+                    <div class="product__cart-actions hidden">
+                        <div class="quantity-block">
+                            <button type="button" class="quantity-block__down icon-minus-circle"></button>
+                            <input type="number" name="quantity" class="quantity-block__input" value="0">
+                            <button type="button" class="quantity-block__up icon-plus-circle"></button>
+                        </div>
+                        <a href="cart.html" class="product__cart-link btn btn-primary icon-arrow-short btn-sm">Корзина</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            @@if(wrapper==false){
+        </div> }
+        @@if(wrapper==true){</div>
+</div>}

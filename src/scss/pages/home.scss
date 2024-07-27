@@ -892,6 +892,17 @@
 			font-size: 0.85rem;
 		}
 	}
+	// .product__remove
+	&__remove {
+	}
+
+	// .product__remove-btns
+	&__remove-btns {
+		margin-top: 1.5rem;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
 }
 
 .banners {

@@ -292,7 +292,40 @@ $(function () {
 
         // add active state product cart actions
         if ($target.hasClass('product__action') && $target[0].tagName.toLowerCase() === 'button') {
-            $target.toggleClass('active')
+
+            // confirmation of removal from favorites
+            if ($target.is('[data-favorite]') && $target.hasClass('active')) {
+
+                let $currentProduct = $target.closest('.product');
+                let $parent = $target.closest('.product__actions');
+                let $removeBlock = $target.siblings('.product__remove').clone(true, true);
+                let originalRemoveBlock = $target.siblings('.product__remove');
+
+                $currentProduct.addClass('confirm-remove');
+
+                let currentInstance = Fancybox.show([{
+                    src: $removeBlock[0],
+                    type: "html",
+                    dragToClose: false,
+                    closeButton: false
+                }]);
+
+                currentInstance.on('close', function () {
+                    $removeBlock.remove();
+                    $currentProduct.removeClass('confirm-remove');
+                    $parent.append(originalRemoveBlock);
+                });
+
+                return;
+            }
+            $target.toggleClass('active');
+        }
+
+        // remove from favorite list
+        if ($target.is('[data-remove-favorite]')) {
+            $('.product.confirm-remove').remove()
+            Fancybox.getInstance().close()
+
         }
 
         // underline filters animation line
@@ -687,16 +720,6 @@ $(function () {
 
     });
 
-    // highlight compare row
-    // if ($('.compare__row').length > 0) {
-    //     $('.compare__row').on('mouseenter', function (e) {
-    //         let currentIndex = $(e.target).index() + 1;
-    //         $(`.compare__row:nth-child(${currentIndex})`).addClass('hover').siblings().removeClass('hover')
-    //     })
-    // }
-
-
-
     // custom select
 
     function initCustomSelect($select) {
@@ -986,43 +1009,6 @@ $(function () {
             });
 
             productSliders.push({ slider: slider[0], swiper: swiper });
-
-            // sliders.each(function (index, slider) {
-            //     console.log(slider);
-
-            //     let swiper = new Swiper(slider, {
-            //         slidesPerView: 1.45,
-            //         spaceBetween: 20,
-            //         pagination: {
-            //             el: pagination[0],
-            //             type: "fraction",
-            //             renderFraction: function (currentClass, totalClass) {
-            //                 return `Страница <span class="${currentClass}"></span> из <span class="${totalClass}"></span>`;
-            //             }
-            //         },
-            //         navigation: {
-            //             nextEl: next[0],
-            //             prevEl: prev[0]
-            //         },
-            //         breakpoints: {
-            //             575.98: {
-            //                 slidesPerView: 2,
-            //             },
-            //             767.98: {
-            //                 slidesPerView: 3,
-            //             },
-            //             991.98: {
-            //                 slidesPerView: 4,
-            //             },
-            //             1399.98: {
-            //                 slidesPerView: 6,
-            //             }
-            //         }
-            //     });
-
-            //     productSliders.push({ slider: slider, swiper: swiper });
-            // })
-
 
         })
 
