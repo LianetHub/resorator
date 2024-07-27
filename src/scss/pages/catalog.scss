@@ -332,10 +332,14 @@
 		}
 		color: $darkBlue;
 		font-size: 0.875rem;
-
+		.quantity {
+			font-weight: 700;
+			color: $lightBlue;
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				text-decoration: underline;
+				color: $blue;
 			}
 		}
 	}
