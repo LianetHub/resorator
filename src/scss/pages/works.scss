@@ -215,16 +215,29 @@
 	// .work-card__header
 	&__header {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
 		flex-wrap: wrap;
 		gap: 1rem;
+		@media (min-width: $md5) {
+			justify-content: space-between;
+		}
 	}
 	// .work-card__title
 	&__title {
+		flex: 0 0 100%;
+		@media (min-width: $md5) {
+			flex: 0 1 auto;
+		}
 	}
 	// .work-card__location
 	&__location {
+		@media (min-width: $md5) {
+			margin-left: auto;
+		}
+		@extend .work-card__time;
+	}
+	// .work-card__time
+	&__time {
 		color: $lightBlue;
 		font-family: $font-din;
 		font-size: 1rem;
@@ -335,7 +348,7 @@
 			display: flex;
 		}
 		align-items: center;
-		transition: background-color 0.3s ease 0s;
+		transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 		background: $dark;
 		color: $white;
 		&.swiper-button-disabled {
@@ -343,7 +356,8 @@
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				background: $black;
+				background: $yellow;
+				color: $dark;
 			}
 		}
 	}
