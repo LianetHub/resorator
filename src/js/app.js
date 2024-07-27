@@ -688,12 +688,12 @@ $(function () {
     });
 
     // highlight compare row
-    if ($('.compare__row').length > 0) {
-        $('.compare__row').on('mouseenter', function (e) {
-            let currentIndex = $(e.target).index() + 1;
-            $(`.compare__row:nth-child(${currentIndex})`).addClass('hover').siblings().removeClass('hover')
-        })
-    }
+    // if ($('.compare__row').length > 0) {
+    //     $('.compare__row').on('mouseenter', function (e) {
+    //         let currentIndex = $(e.target).index() + 1;
+    //         $(`.compare__row:nth-child(${currentIndex})`).addClass('hover').siblings().removeClass('hover')
+    //     })
+    // }
 
 
 
@@ -1107,44 +1107,58 @@ $(function () {
 
         });
 
-        let compareTableSlider = new Swiper('.compare__table', {
-            slidesPerView: "auto",
-            scrollbar: {
-                el: '.compare__table-scrollbar',
-                draggable: true,
-            },
-            // on: {
-            //     setTranslate: (swiper) => {
+        let tableCellsArr = [];
+        $('.compare__table').each(function () {
+            let compareTableSlider = new Swiper(this, {
+                slidesPerView: "auto",
+                grabCursor: true,
+                scrollbar: {
+                    el: '.compare__table-scrollbar',
+                    draggable: true,
+                },
+            });
+            tableCellsArr.push(compareTableSlider)
+        })
 
-            //         $('.compare__row-caption').css('transform', `translate3d(${-swiper.translate}px, 0, -1px)`)
-            //     },
-
-            // }
-        });
-
-
-        compareItemsSlider.controller.control = compareTableSlider;
-        compareTableSlider.controller.control = compareItemsSlider;
+        bindSwipers(compareItemsSlider, ...tableCellsArr);
 
 
 
-
+        function bindSwipers(...swiperList) {
+            for (const swiper of swiperList) {
+                swiper.setTranslate = function (translate, byController, doNotPropagate) {
+                    if (doNotPropagate) {
+                        Swiper.prototype.setTranslate.apply(this, arguments);
+                    } else {
+                        for (const swiper of swiperList) {
+                            swiper.setTranslate(translate, byController, true);
+                        }
+                    }
+                };
+                swiper.setTransition = function (duration, byController, doNotPropagate) {
+                    if (doNotPropagate) {
+                        Swiper.prototype.setTransition.apply(this, arguments);
+                    } else {
+                        for (const swiper of swiperList) {
+                            swiper.setTransition(duration, byController, true);
+                        }
+                    }
+                };
+            }
+        }
 
     }
 
     if ($(".blog__item-images").length > 0) {
         $(".blog__item-images").each((function (index, slider) {
 
-            // let prev = $(slider).find('.blog__item-prev');
-            // let next = $(slider).find('.blog__item-next');
+
             let paginationBlock = $(slider).find('.blog__pagination');
 
             new Swiper(slider, {
                 slidesPerView: 1,
-                // navigation: {
-                //     nextEl: next[0],
-                //     prevEl: prev[0]
-                // },
+                grabCursor: true,
+
                 pagination: {
                     el: paginationBlock[0],
                     clickable: true

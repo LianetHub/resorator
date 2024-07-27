@@ -15,14 +15,6 @@
 }
 
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "DinPro";
   font-display: swap;
   src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
@@ -31,10 +23,26 @@
 }
 
 @font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Inter";
   font-display: swap;
   src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -49,8 +57,8 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -67,14 +75,6 @@
   font-display: swap;
   src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
   font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
-  font-weight: 600;
   font-style: normal;
 }
 
@@ -8145,51 +8145,44 @@ table td button {
   width: fit-content;
 }
 
-.compare__table {
-  margin-top: 1.88rem;
+.compare__content {
+  margin-top: 1.75rem;
 }
 
-.compare__slide {
-  border-top: 0.0625rem solid #e8e8e8;
-  width: 15.625rem;
-  max-width: 15.625rem;
-}
-
-.compare__row {
-  height: 5rem;
-  border-bottom: 0.0625rem solid #e8e8e8;
-  padding: 1rem 0.625rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  gap: 1rem;
+.compare__block {
+  position: relative;
   -webkit-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
+  border-bottom: 0.0625rem solid #e8e8e8;
 }
 
-.compare__row.hover {
-  background: #f2f5f9;
+.compare__block:first-child {
+  border-top: 0.0625rem solid #e8e8e8;
 }
 
-.compare__row-caption {
+.compare__block-caption {
   color: #94a3b8;
   font-family: "DinPro";
   font-size: 1rem;
   font-weight: 500;
-  position: sticky;
-  left: 0;
+  padding: 1rem 0.625rem 0;
+  position: absolute;
 }
 
-.compare__row-value {
+.compare__slide {
+  padding: 2.875rem 0.625rem 1.25rem;
+}
+
+.compare__slide {
+  width: 15.625rem;
+  display: block;
+  max-width: 15.625rem;
   color: #475569;
   font-size: 0.8125rem;
+}
+
+.compare__table-scrollbar {
+  width: 100% !important;
 }
 
 .blog {
@@ -8389,11 +8382,11 @@ table td button {
   gap: 1.25rem;
 }
 
-.blog__item-link::before {
-  -webkit-transition: -webkit-transform 0.3s ease 0s;
-  transition: -webkit-transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+.blog__item-link .icon-arrow {
+  overflow: hidden;
+  display: block;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -10961,10 +10954,6 @@ table td button {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 22rem;
             flex: 0 0 22rem;
-  }
-
-  .blog__pagination {
-    display: none;
   }
 
   .blog__item-next,
@@ -13848,7 +13837,7 @@ table td button {
     color: #ef4444;
   }
 
-  .compare__row:hover {
+  .compare__block:hover {
     background: #f2f5f9;
   }
 
@@ -13865,10 +13854,10 @@ table td button {
     color: #f7ce46;
   }
 
-  .blog__item-link:hover::before {
-    -webkit-transform: translateX(1rem);
-        -ms-transform: translateX(1rem);
-            transform: translateX(1rem);
+  .blog__item-link:hover ::before {
+    -webkit-animation: arrow-scale 0.3s linear 0s forwards;
+            animation: arrow-scale 0.3s linear 0s forwards;
+    color: #f7ce46;
   }
 
   .blog__sidebar-link:hover .blog__sidebar-text {

@@ -107,9 +107,9 @@
 		padding: 1.25rem;
 	}
 	&__pagination {
-		@media (min-width: $md4) {
-			display: none;
-		}
+		// @media (min-width: $md4) {
+		// 	display: none;
+		// }
 	}
 	// .blog__item-next
 	&__item-next {
@@ -211,15 +211,18 @@
 		font-weight: 500;
 		line-height: 100%;
 		gap: 1.25rem;
-		&::before {
-			transition: transform 0.3s ease 0s;
+		& .icon-arrow {
+			overflow: hidden;
+			display: block;
+			transition: color 0.3s ease 0s;
 			order: 1;
 			font-size: 1.25rem;
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				&::before {
-					transform: translateX(1rem);
+				& ::before {
+					animation: arrow-scale 0.3s linear 0s forwards;
+					color: $yellow;
 				}
 			}
 		}
