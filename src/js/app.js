@@ -242,8 +242,9 @@ $(function () {
                 if ($('.goods__sidebar-title').length > 0) {
                     $('.goods__sidebar-title').text($link.text().trim())
                 }
-
-
+            } else {
+                $link.removeClass('active');
+                $link.next('.goods__sidebar-categories').slideUp();
             }
         }
 

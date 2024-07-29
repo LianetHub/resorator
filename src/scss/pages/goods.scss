@@ -373,6 +373,15 @@
 		color: $dark;
 		font-size: 0.875rem;
 		font-weight: 600;
+		& a {
+			transition: color 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: underline;
+					color: $blue;
+				}
+			}
+		}
 	}
 	// .goods__list
 	&__list {
