@@ -87,12 +87,12 @@
                     <div class="product__avaibility green-color">В наличии</div>
                     }
                     @@if(аvailability==='no') {
-                    <div class="product__avaibility red-color">Товар закончился</div>
+                    <div class="product__avaibility">под заказ</div>
                     }
                     @@if(аvailability==='stock') {
                     <div class="product__avaibility">под заказ</div>
                     }
-                    <button type="button" @@if(аvailability==='no' ){disabled} class="product__cart btn btn-secondary btn-sm">В корзину</button>
+                    <button type="button" class="product__cart btn btn-secondary btn-sm">В корзину</button>
                     <div class="product__cart-actions hidden">
                         <div class="quantity-block">
                             <button type="button" class="quantity-block__down icon-minus-circle"></button>
