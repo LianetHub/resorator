@@ -618,11 +618,11 @@
 	// .product__labels
 	&__labels {
 		margin-left: 0;
-		margin-right: -0.62rem;
+		overflow: visible;
 		height: 1.75rem;
 		order: -1;
 		@media (min-width: $md4) {
-			max-width: calc(100% + 0.62rem);
+			max-width: 100%;
 		}
 		&:not(.swiper-initialized) {
 			.product__label {
@@ -635,6 +635,7 @@
 	// .product__label
 	&__label {
 		width: fit-content;
+		user-select: none;
 	}
 	// .product__header
 	&__header {
