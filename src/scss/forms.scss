@@ -436,10 +436,11 @@
 		color: $white;
 		&:hover,
 		&:active {
-			background: $white;
+			background: $yellow;
+			border-color: $yellow;
 			color: $dark;
 			.icon-arrow-short {
-				background: $grayStroke;
+				background: $white;
 			}
 		}
 		.icon-arrow-short {

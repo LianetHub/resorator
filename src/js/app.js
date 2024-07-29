@@ -469,6 +469,24 @@ $(function () {
             $target.parent().removeClass('full-mobile')
         }
 
+        // bind category direction in modal form
+        if ($target.is('.about__directions-link')) {
+            let currentInstance = Fancybox.getInstance();
+            let currentCategory = $target.find('.about__directions-name').text();
+            let $input = null;
+
+            currentInstance.on('done', function () {
+                let currentForm = $(currentInstance.container).find('.popup__form');
+                $input = $(`<input type="hidden" name="current-direction"/>`).val(currentCategory);
+                currentForm.append($input)
+            });
+
+            currentInstance.on('close', function () {
+                $('[current-direction]').remove()
+            });
+
+        }
+
 
     });
 
@@ -1547,7 +1565,7 @@ $(function () {
     const $counters = $('[data-counter]');
 
     if ($counters.length > 0) {
-        const animationDuration = 6000;
+        const animationDuration = 3000;
         $counters.each(function () {
             const $section = $(this);
 

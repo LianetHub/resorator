@@ -41,16 +41,16 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -2762,7 +2762,8 @@ table td button {
 
 .btn.btn-white-outline:hover,
 .btn.btn-white-outline:active {
-  background: #fff;
+  background: #f7ce46;
+  border-color: #f7ce46;
   color: #1d1d1d;
 }
 
@@ -2772,7 +2773,7 @@ table td button {
 .btn.btn-white-outline:active .icon-arrow-short,
 .btn.btn-white-outline:active .swiper-button-next,
 .btn.btn-white-outline:active .swiper-button-prev {
-  background: #e8e8e8;
+  background: #fff;
 }
 
 .btn.btn-white-outline .icon-arrow-short,
