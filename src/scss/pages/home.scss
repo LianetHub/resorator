@@ -624,6 +624,13 @@
 		@media (min-width: $md4) {
 			max-width: calc(100% + 0.62rem);
 		}
+		&:not(.swiper-initialized) {
+			.product__label {
+				&:not(:last-child) {
+					margin-right: rem(10);
+				}
+			}
+		}
 	}
 	// .product__label
 	&__label {

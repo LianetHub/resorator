@@ -80,7 +80,13 @@
 	// .compare__items
 	&__items {
 		margin-top: rem(30);
-
+		&:not(.swiper-initialized) {
+			.product {
+				&:not(:last-child) {
+					margin-right: rem(20);
+				}
+			}
+		}
 		.product {
 			width: rem(230);
 			max-width: rem(230);

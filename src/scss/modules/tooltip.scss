@@ -8,12 +8,13 @@
 	background: #1d1d1d;
 	padding: 0.625rem;
 	color: $white;
-	z-index: 1000;
+	z-index: 100000000;
 	font-size: 0.8125rem;
 	max-width: rem(200);
 	pointer-events: none;
 	user-select: none;
 	text-align: center;
+
 	&.open-top {
 		&::after {
 			border-top: rem(5) solid #1d1d1d;
