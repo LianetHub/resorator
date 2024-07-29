@@ -482,7 +482,7 @@ $(function () {
             });
 
             currentInstance.on('close', function () {
-                $('[current-direction]').remove()
+                $('[name="current-direction"]').remove()
             });
 
         }
