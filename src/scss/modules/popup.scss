@@ -37,6 +37,14 @@
 		border-radius: 0.5rem;
 		max-width: 21.875rem;
 	}
+	&.popup_search {
+		background: transparent;
+		padding-inline: 0;
+		padding-block: 0;
+		@media (min-width: $md4) {
+			padding-block: rem(24);
+		}
+	}
 	&.popup_full-width {
 		max-width: 100%;
 		border-radius: 0;

@@ -562,8 +562,10 @@
 		@media (any-hover: hover) {
 			&:hover {
 				border: rem(1) solid $yellow;
-				background: $yellow;
 			}
+		}
+		&:active {
+			background: $yellow;
 		}
 	}
 	// .product-card__side-hint

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "shadow": true
+            })
+            @@include('html/_search.html', {
+            "results": false
+            })
+            <main class="page">
+
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+        <script>
+
+            Fancybox.show([{
+                src: "#search",
+                dragToClose: false,
+                closeButton: false
+            }])
+        </script>
+    </body>
+</html>

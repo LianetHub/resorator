@@ -482,14 +482,39 @@ $(function () {
             });
 
             currentInstance.on('close', function () {
-                $('[name="current-direction"]').remove()
+                $('[name="current-direction"]').remove();
             });
 
         }
 
+        // open search form
+        if ($target.is('.search__btn')) {
+            getVisibleSearchForm()
+        }
 
     });
 
+
+    if ($('.search__form-input').length > 0) {
+        $('.search__form-input').on("focus", function () {
+            getVisibleSearchForm()
+        });
+    }
+
+
+    function getVisibleSearchForm() {
+        Fancybox.show([{
+            src: "#search",
+            dragToClose: false,
+            closeButton: false
+        }]);
+    }
+
+    // Fancybox.show([{
+    //     src: "#search",
+    //     dragToClose: false,
+    //     closeButton: false
+    // }]);
 
 
 

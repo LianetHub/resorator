@@ -1,0 +1,33 @@
+<div id="search" class="popup popup_full-width popup_search">
+    <form action="#" role="search" class="search">
+        <div class="search__content">
+            <div class="search__container">
+                <div class="search__header">
+                    <input type="text" class="search__input" placeholder="Начните вводить для поиска">
+                    <button type="button" data-fancybox-close class="search__close icon-close"></button>
+                </div>
+                @@if(results===false) {
+                <div class="search__left">
+                    <div class="search__left-image">
+                        <img src="@img/error-search.svg" alt="Ошибка поиска">
+                    </div>
+                    <div class="search__left-content">
+                        <div class="search__left-caption">
+                            Поиск не дал результатов
+                        </div>
+                        <div class="search__left-desc">
+                            <p>По вашему запросу ничего не найдено. Проверьте правильность вводимых слов.</p>
+                            <p>Если вы не нашли необходимую продукцию, вы можете связаться с менеджером для уточнения запроса.</p>
+                        </div>
+                        <div class="product-card__more">
+                            <a href="" class="product-card__more-btn icon-whatsapp"></a>
+                            <a href="" class="product-card__more-btn icon-telegram"></a>
+                            <a href="" class="product-card__more-btn">Написать менеджеру</a>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </form>
+</div>
