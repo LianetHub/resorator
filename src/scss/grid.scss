@@ -1297,3 +1297,67 @@
 		--gutter-y: 3rem;
 	}
 }
+$grid-breakpoints: (
+	xxl: 1400px,
+	xl: 1200px,
+	lg: 992px,
+	md: 768px,
+	sm: 576px,
+) !default;
+
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+	$min: map-get($breakpoints, $name);
+	@return if($min != 0, $min, null);
+}
+
+// Mixin for media breakpoint up
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+	$min: breakpoint-min($name, $breakpoints);
+	@if $min {
+		@media (min-width: $min) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+// Mixin for order
+@mixin make-order($order) {
+	order: $order;
+}
+
+// Mixin for order-first
+@mixin make-order-first {
+	order: -1;
+}
+
+@mixin generate-order {
+	@for $i from 8 through 0 {
+		.order-#{$i} {
+			@include make-order($i);
+		}
+
+		@each $breakpoint in map-keys($grid-breakpoints) {
+			@include media-breakpoint-up($breakpoint) {
+				.order-#{$breakpoint}-#{$i} {
+					@include make-order($i);
+				}
+			}
+		}
+	}
+
+	.order-first {
+		@include make-order-first;
+	}
+
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		@include media-breakpoint-up($breakpoint) {
+			.order-#{$breakpoint}-first {
+				@include make-order-first;
+			}
+		}
+	}
+}
+
+@include generate-order;

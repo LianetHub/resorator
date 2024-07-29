@@ -1193,6 +1193,7 @@ $(function () {
             },
         }, 991.98, null)
     }
+
     if ($('.work-card__gallery-slider').length > 0) {
 
         new Swiper('.work-card__gallery-slider', {
@@ -1208,6 +1209,34 @@ $(function () {
             }
         })
     }
+
+    if ($('.blog-article__images.swiper').length > 0) {
+
+        $(".blog-article__images.swiper").each((function (index, slider) {
+            new Swiper(slider, {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                watchOverflow: true,
+                pagination: {
+                    el: slider.querySelector('.blog-article__images-pagination'),
+                    clickable: true
+                },
+                breakpoints: {
+                    575.98: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    767.98: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    }
+                }
+            })
+        }));
+
+    }
+
+
 
 
 
