@@ -161,6 +161,14 @@
 		font-size: 0.875rem;
 		text-decoration: line-through;
 	}
+	// .cart__item-price-old
+	&__item-price-hint {
+		color: $lightBlue;
+		font-size: 0.875rem;
+		&[data-tooltip] {
+			cursor: help;
+		}
+	}
 	// .cart__item-price-current
 	&__item-price-current {
 		margin-top: 0.31rem;
@@ -293,6 +301,9 @@
 	&__sidebar-value {
 		text-align: right;
 		order: 1;
+		&[data-tooltip] {
+			cursor: help;
+		}
 	}
 	// .cart__sidebar-total
 	&__sidebar-total {
@@ -369,7 +380,7 @@
 			color: $dark;
 		}
 	}
-	// .cart__sidebar-hitt
+	// .cart__sidebar-hint
 	&__sidebar-hint {
 		margin-top: 1.25rem;
 		text-align: center;
@@ -384,6 +395,10 @@
 		margin-bottom: 2rem;
 		color: $darkBlue;
 		font-size: 0.875rem;
+	}
+	// .cart__order
+	&__order {
+		margin-top: 1rem;
 	}
 }
 

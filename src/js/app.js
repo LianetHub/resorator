@@ -345,7 +345,7 @@ $(function () {
         // close profit sale - cart page
         if ($target.is('.btn-profit-cart')) {
             $target.toggleClass('closed');
-            $('.cart__sidebar-profits').slideToggle()
+            $target.parent('.cart__sidebar-row').next('.cart__sidebar-profits').slideToggle()
         }
 
         // cart purchase tabs
@@ -821,10 +821,12 @@ $(function () {
     $('[data-tooltip]').on('mouseenter', function () {
         var $this = $(this);
         var title = $this.attr('title');
+        var $color = $(this).data('tooltip');
+
 
         $this.data('title', title).removeAttr('title');
 
-        var $tooltip = $('<div class="tooltip"></div>').text(title);
+        var $tooltip = $(`<div class="tooltip ${$color}"></div>`).text(title);
         $('body').append($tooltip);
 
         var offset = $this.offset();

@@ -23,14 +23,6 @@
 }
 
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Inter";
   font-display: swap;
   src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
@@ -39,10 +31,10 @@
 }
 
 @font-face {
-  font-family: "DinPro";
+  font-family: "icons";
   font-display: swap;
-  src: url("../fonts/DinPro-Light.woff2") format("woff2"), url("../fonts/DinPro-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -63,10 +55,10 @@
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../fonts/DinPro-Light.woff2") format("woff2"), url("../fonts/DinPro-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -75,6 +67,14 @@
   font-display: swap;
   src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -800,6 +800,7 @@ body.lock-catalog-filter {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  text-align: center;
 }
 
 .tooltip.open-top::after {
@@ -810,6 +811,17 @@ body.lock-catalog-filter {
 .tooltip.open-bottom::after {
   border-bottom: 0.3125rem solid #1d1d1d;
   top: -0.25rem;
+}
+
+.tooltip.gray {
+  background: #f2f5f9;
+  color: #475569;
+  text-align: left;
+  max-width: 15.4375rem;
+}
+
+.tooltip.gray::after {
+  border-color: #f2f5f9;
 }
 
 .tooltip::after {
@@ -1581,6 +1593,10 @@ body.lock-catalog-filter {
 
 .yellow-secondary-color {
   color: #fbe59c !important;
+}
+
+.gray-color {
+  color: #94a3b8 !important;
 }
 
 .text-uppercase {
@@ -7703,6 +7719,15 @@ table td button {
   text-decoration: line-through;
 }
 
+.cart__item-price-hint {
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+
+.cart__item-price-hint[data-tooltip] {
+  cursor: help;
+}
+
 .cart__item-price-current {
   margin-top: 0.31rem;
   font-size: 1rem;
@@ -7851,6 +7876,10 @@ table td button {
           order: 1;
 }
 
+.cart__sidebar-value[data-tooltip] {
+  cursor: help;
+}
+
 .cart__sidebar-total {
   margin-top: 1.88rem;
   display: -webkit-box;
@@ -7927,6 +7956,10 @@ table td button {
   margin-bottom: 2rem;
   color: #475569;
   font-size: 0.875rem;
+}
+
+.cart__order {
+  margin-top: 1rem;
 }
 
 .purchase {
