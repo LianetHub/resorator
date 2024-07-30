@@ -515,11 +515,11 @@ $(function () {
         }]);
     }
 
-    Fancybox.show([{
-        src: "#search",
-        dragToClose: false,
-        closeButton: false
-    }]);
+    // Fancybox.show([{
+    //     src: "#search",
+    //     dragToClose: false,
+    //     closeButton: false
+    // }]);
 
 
 
