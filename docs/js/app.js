@@ -492,6 +492,11 @@ $(function () {
             getVisibleSearchForm()
         }
 
+        // delete search query
+        if ($target.is('.search__queries-delete')) {
+            $target.closest('.search__queries-item').remove()
+        }
+
     });
 
 
@@ -510,11 +515,11 @@ $(function () {
         }]);
     }
 
-    Fancybox.show([{
-        src: "#search",
-        dragToClose: false,
-        closeButton: false
-    }]);
+    // Fancybox.show([{
+    //     src: "#search",
+    //     dragToClose: false,
+    //     closeButton: false
+    // }]);
 
 
 

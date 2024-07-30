@@ -186,4 +186,122 @@
 			}
 		}
 	}
+	// .search__results
+	&__results {
+		margin-top: 1.4rem;
+		padding-bottom: 1.25rem;
+	}
+	// .search__results-content
+	&__results-content {
+		margin-top: 2.5rem;
+	}
+	// .search__queries
+	&__queries {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 0.625rem;
+	}
+	// .search__queries-caption
+	&__queries-caption {
+		color: $lightBlue;
+		font-size: 1.125rem;
+		font-weight: 600;
+	}
+	// .search__queries-item
+	&__queries-item {
+		position: relative;
+		@media (any-hover: hover) {
+			&:hover {
+				.search__queries-name {
+					background: $yellow;
+				}
+			}
+		}
+	}
+	// .search__queries-name
+	&__queries-name {
+		border-radius: 0.3125rem;
+		background: $lightGray;
+		display: flex;
+		align-items: center;
+		color: $darkBlue;
+		font-size: 0.8125rem;
+		padding: 0.69rem 2.9rem 0.69rem 1.25rem;
+		transition: background-color 0.3s ease 0s;
+	}
+	// .search__queries-delete
+	&__queries-delete {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 1rem;
+		color: $lightBlue;
+		font-size: 0.675rem;
+		width: 1.5rem;
+		height: 1.5rem;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $dark;
+			}
+		}
+	}
+	// .search__categories
+	&__categories {
+	}
+	// .search__categories
+	&__categories-caption {
+		margin-bottom: 1.25rem;
+	}
+	// .search__categories-list
+	&__categories-list {
+	}
+	// .search__categories-item
+	&__categories-item {
+	}
+	// .search__categories-link
+	&__categories-link {
+		color: $darkBlue;
+		font-size: 0.8125rem;
+		display: flex;
+
+		&::before {
+			width: 1.25rem;
+			height: 1.25rem;
+			font-size: 1.25rem;
+			flex-shrink: 0;
+			color: $lightBlue;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				.search__categories-name {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+	&__categories-name {
+		text-decoration: underline;
+	}
+	// .search__categories-quantity
+	&__categories-quantity {
+	}
+	// .search__filters
+	&__filters {
+	}
+	// .search__filters-rows
+	&__filters-rows {
+	}
+	// .search__filters-btns
+	&__filters-btns {
+		display: flex;
+		flex-direction: column;
+	}
+	// .search__filters-btn
+	&__filters-btn {
+		&:not(:last-child) {
+			margin-bottom: 1.25rem;
+		}
+	}
 }
