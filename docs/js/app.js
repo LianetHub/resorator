@@ -501,10 +501,9 @@ $(function () {
 
 
         // about page click btns
+
         if ($target.is('.about__prev')) {
             const currentIndex = getCurrentSectionIndex();
-            console.log(currentIndex);
-
             if (currentIndex > 0) {
                 scrollToSection(currentIndex - 1);
             } else if (currentIndex === 0) {
@@ -594,7 +593,6 @@ $(function () {
         $sections.eq(index).addClass('active');
     }
 
-
     function getVisibleSearchForm() {
         Fancybox.show([{
             src: "#search",
@@ -619,7 +617,6 @@ $(function () {
             $('[name="theme-mail"]').remove();
         });
     }
-
 
     function toggleAllProducts($productWrapper) {
         let $controls = $productWrapper.find('.product-card__contorls');
@@ -727,7 +724,6 @@ $(function () {
         $clone.remove();
         return width;
     }
-
 
     function toggleDestroyTeamSlider() {
 
