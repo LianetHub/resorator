@@ -316,6 +316,9 @@
 	&__filters-content {
 		display: none;
 		padding: 1.25rem 0 0 0;
+		&.initial-block {
+			display: block;
+		}
 	}
 	// .catalog__filters-items
 	&__filters-items {
@@ -394,6 +397,8 @@
 		position: relative;
 		color: $darkBlue;
 		font-size: 0.875rem;
+		display: flex;
+
 		.form__input {
 			font-size: 0.875rem;
 			padding-left: 2rem;

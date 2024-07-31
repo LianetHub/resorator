@@ -506,6 +506,17 @@ $(function () {
         });
     }
 
+    if ($('.search__input').length > 0) {
+        $('.search__input').on("input", function (e) {
+            if ($(e.target).val().length > 0) {
+                $('.search__results').slideDown()
+            } else {
+                $('.search__results').slideUp()
+            }
+        });
+    }
+
+
 
     function getVisibleSearchForm() {
         Fancybox.show([{
@@ -611,12 +622,25 @@ $(function () {
     function moveUnderline($element) {
         var $filtersContainer = $element.closest('[data-underline-filters]');
         var left = $element.position().left;
-        var width = $element.outerWidth();
+        var width = $element.is(':visible') ? $element.outerWidth() : getHiddenElementWidth($element);
+
         $filtersContainer.css({
             '--underline-left': left + 'px',
             '--underline-width': width + 'px'
         });
     }
+
+    function getHiddenElementWidth($element) {
+        let $clone = $element.clone().css({
+            visibility: 'hidden',
+            display: 'block',
+            position: 'absolute'
+        }).appendTo('body');
+        let width = $clone.width();
+        $clone.remove();
+        return width;
+    }
+
 
     function toggleDestroyTeamSlider() {
 
