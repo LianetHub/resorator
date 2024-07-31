@@ -518,13 +518,13 @@ $(function () {
 
 
 
-    function getVisibleSearchForm() {
-        Fancybox.show([{
-            src: "#search",
-            dragToClose: false,
-            closeButton: false
-        }]);
-    }
+    // function getVisibleSearchForm() {
+    //     Fancybox.show([{
+    //         src: "#search",
+    //         dragToClose: false,
+    //         closeButton: false
+    //     }]);
+    // }
 
     // Fancybox.show([{
     //     src: "#search",
