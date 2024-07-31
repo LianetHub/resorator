@@ -471,19 +471,21 @@ $(function () {
 
         // bind category direction in modal form
         if ($target.is('.about__directions-link')) {
-            let currentInstance = Fancybox.getInstance();
-            let currentCategory = $target.find('.about__directions-name').text();
-            let $input = null;
+            bindCategoryInModal($target, '.about__directions-name');
+        }
 
-            currentInstance.on('done', function () {
-                let currentForm = $(currentInstance.container).find('.popup__form');
-                $input = $(`<input type="hidden" name="current-direction"/>`).val(currentCategory);
-                currentForm.append($input)
-            });
+        // bind category circle in modal form
+        if ($target[0].closest('.about__services-item')) {
+            bindCategoryInModal($target.closest('.about__services-item'), '.about__services-caption');
+        }
 
-            currentInstance.on('close', function () {
-                $('[name="current-direction"]').remove();
-            });
+        // open modal on click map point about page
+        if ($target.is('.map-point')) {
+            Fancybox.show([{
+                src: "#callback",
+                dragToClose: false,
+                closeButton: false
+            }]);
 
         }
 
@@ -495,6 +497,34 @@ $(function () {
         // delete search query
         if ($target.is('.search__queries-delete')) {
             $target.closest('.search__queries-item').remove()
+        }
+
+
+        // about page click btns
+        if ($target.is('.about__prev')) {
+            const currentIndex = getCurrentSectionIndex();
+            console.log(currentIndex);
+
+            if (currentIndex > 0) {
+                scrollToSection(currentIndex - 1);
+            } else if (currentIndex === 0) {
+                $('.about__block').removeClass('active');
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 'smooth');
+            }
+        }
+
+        if ($target.is('.about__next')) {
+            if ($('.about__block.active').length === 0) {
+                $('.about__block').first().addClass('active');
+                scrollToSection(0);
+                return;
+            }
+            const currentIndex = getCurrentSectionIndex();
+            if (currentIndex !== -1 && currentIndex < $('.about__block').length - 1) {
+                scrollToSection(currentIndex + 1);
+            }
         }
 
     });
@@ -517,21 +547,78 @@ $(function () {
     }
 
 
+    if ($('.about__geography-item').length > 0) {
+        $('.about__geography-item').on('mouseenter', function (e) {
+            let currentPlace = $(e.target).text();
+            let currentPlaceMark = $(`.map-point[title="${currentPlace}"]`);
 
-    // function getVisibleSearchForm() {
-    //     Fancybox.show([{
-    //         src: "#search",
-    //         dragToClose: false,
-    //         closeButton: false
-    //     }]);
-    // }
 
-    // Fancybox.show([{
-    //     src: "#search",
-    //     dragToClose: false,
-    //     closeButton: false
-    // }]);
+            if (currentPlaceMark.length > 0) {
+                currentPlaceMark.trigger('mouseenter').addClass('hover');
+            }
+        })
+        $('.about__geography-item').on('mouseleave', function (e) {
 
+
+            $('.map-point').trigger('mouseleave').removeClass('hover');
+        })
+    }
+
+
+
+    function scrollToSection(index) {
+        const $sections = $('.about__block');
+        if (index >= 0 && index < $sections.length) {
+            const $targetSection = $sections.eq(index);
+            $('html, body').animate({
+                scrollTop: $targetSection.offset().top - $(".about__navbar").height()
+            }, 300);
+            updateActiveSection(index);
+        }
+    }
+
+    function getCurrentSectionIndex(direction) {
+        const $sections = $('.about__block');
+        let $activeSection = $sections.filter('.active');
+
+        if ($activeSection.length === 0) {
+            $activeSection = $sections.first().addClass('active');
+        }
+
+        return $sections.index($activeSection);
+    }
+
+    function updateActiveSection(index) {
+        const $sections = $('.about__block');
+        $sections.removeClass('active');
+        $sections.eq(index).addClass('active');
+    }
+
+
+    function getVisibleSearchForm() {
+        Fancybox.show([{
+            src: "#search",
+            dragToClose: false,
+            closeButton: false
+        }]);
+    }
+
+    function bindCategoryInModal($target, categorySelector) {
+        let currentInstance = Fancybox.getInstance();
+        let currentCategory = $target.find(categorySelector).text().trim();
+
+        let $input = null;
+
+        currentInstance.on('done', function () {
+            let currentForm = $(currentInstance.container).find('.popup__form');
+            $input = $('<input type="hidden" name="theme-mail"/>').val(currentCategory);
+            currentForm.append($input);
+        });
+
+        currentInstance.on('close', function () {
+            $('[name="theme-mail"]').remove();
+        });
+    }
 
 
     function toggleAllProducts($productWrapper) {

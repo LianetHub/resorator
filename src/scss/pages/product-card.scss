@@ -558,6 +558,7 @@
 			font-weight: 600;
 			font-size: 0.75rem;
 			border: rem(1) solid $yellow;
+			background: $yellow;
 		}
 		@media (any-hover: hover) {
 			&:hover {

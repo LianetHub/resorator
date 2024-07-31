@@ -1,6 +1,14 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
   src: url("../fonts/DinPro-Light.woff2") format("woff2"), url("../fonts/DinPro-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
@@ -11,22 +19,6 @@
   font-display: swap;
   src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
   font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DinPro";
-  font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DinPro";
-  font-display: swap;
-  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -57,16 +49,24 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
+  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -5224,6 +5224,7 @@ table td button {
   font-weight: 600;
   font-size: 0.75rem;
   border: 0.0625rem solid #f7ce46;
+  background: #f7ce46;
 }
 
 .product-card__side-label:active {
@@ -6417,6 +6418,68 @@ table td button {
   padding-bottom: 0;
 }
 
+.about__controls {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  z-index: 10;
+}
+
+.about__next,
+.about__prev {
+  border-radius: 0.3125rem;
+  background: #f7ce46;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #1d1d1d;
+  z-index: 2;
+  -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0;
+  transition: background-color 0.3s ease 0s, color 0.3s ease 0;
+}
+
+.about__next::before,
+.about__prev::before {
+  color: currentColor;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.about__next:disabled,
+.about__prev:disabled,
+.about__next[aria-disabled=true],
+[aria-disabled=true].about__prev {
+  opacity: 0.5;
+  color: #1d1d1d;
+}
+
+.about__prev::before {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
 .about__promo {
   height: 100vh;
   min-height: 100vh;
@@ -6860,6 +6923,18 @@ table td button {
   padding: 1.25rem 0;
 }
 
+.about__geography-image svg {
+  max-width: 100%;
+}
+
+.about__geography-image svg .map-point {
+  cursor: pointer;
+}
+
+.about__geography-image svg .map-point.hover {
+  fill: #f7ce46;
+}
+
 .about__geography-list {
   margin-top: 2.5rem;
   display: -ms-grid;
@@ -6869,15 +6944,14 @@ table td button {
 }
 
 .about__geography-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   color: #e8e8e8;
   font-size: 1.125rem;
   gap: 0.62rem;
+  cursor: help;
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
@@ -14250,6 +14324,10 @@ table td button {
     margin-top: auto;
   }
 
+  .popup__form .form__field {
+    margin-top: auto;
+  }
+
   select[data-list-mobile] ~ .select2 {
     display: none;
   }
@@ -14697,6 +14775,12 @@ table td button {
     text-decoration: none;
   }
 
+  .about__next:hover,
+  .about__prev:hover {
+    background: #fbe59c;
+    color: #1d1d1d;
+  }
+
   .about__navbar-link:hover {
     color: #f7ce46;
   }
@@ -14709,6 +14793,10 @@ table td button {
 
   .about__directions-link:hover::before {
     background: rgba(23, 24, 27, 0.2);
+  }
+
+  .about__geography-image svg .map-point:hover {
+    fill: #f7ce46;
   }
 
   .about__geography-item:hover {
