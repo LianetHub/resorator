@@ -1,0 +1,347 @@
+.complex {
+	padding: rem(25) 0;
+	// .complex__container
+	&__container {
+	}
+	// .complex__block
+	&__block {
+		&:not(:last-child) {
+			margin-bottom: 2.5rem;
+		}
+	}
+	// .complex__title
+	&__title {
+		color: $darkStroke;
+		font-size: 2.125rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		display: flex;
+		flex-direction: column;
+		& strong {
+			font-size: 2.5625rem;
+		}
+	}
+	// .complex__tabs
+	&__tabs {
+		margin-top: 1.25rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.25rem;
+	}
+	// .complex__tab-btn
+	&__tab-btn {
+		border-radius: 0.3125rem;
+		padding: 0.69rem 1.25rem;
+		font-size: 0.8125rem;
+		background: $lightGray;
+		color: $darkBlue;
+		transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+		&.active {
+			color: $dark;
+			background: $yellow;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $dark;
+				background: $yellow;
+			}
+		}
+	}
+	// .complex__tab-content
+	&__tab-content {
+		margin-top: 1.25rem;
+	}
+	// .complex__tab-block
+	&__tab-block {
+		display: none;
+		&.active {
+			display: block;
+		}
+		&.fade {
+			animation: fadeIn 1s;
+		}
+		& img {
+			width: 100%;
+			border-radius: 0.3125rem;
+		}
+	}
+	// .complex__clients
+	&__clients {
+		margin-top: 1.25rem;
+		.row {
+			@media (max-width: $md3) {
+				--gutter-y: 0.625rem;
+			}
+		}
+	}
+	// .complex__clients-item
+	&__clients-item {
+		border-radius: 0.625rem;
+		border: rem(1) solid $grayStroke;
+		padding: 0.62rem;
+
+		min-height: 7.8125rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		& img {
+			max-height: rem(74);
+			@media (min-width: $md5) {
+				max-height: 6.5625rem;
+			}
+			width: auto;
+			height: auto;
+		}
+	}
+	// .complex__clients-btn
+	&__clients-btn {
+		width: 100%;
+		height: 100%;
+		font-size: 1rem;
+	}
+	// .complex__calc
+	&__calc {
+		border-radius: 0.3125rem;
+		background-color: $lightBg;
+		padding: 2.5rem;
+		background-image: url("@img/complex-calc.svg");
+		background-size: auto;
+		background-repeat: no-repeat;
+		background-position: 40% bottom;
+		.complex__title {
+			font-size: 1.5rem;
+			strong {
+				font-size: 1.9375rem;
+			}
+		}
+	}
+	// .complex__title
+	&__title {
+	}
+	// .complex__list
+	&__list {
+		margin-top: 2.5rem;
+		max-width: rem(440);
+	}
+	// .complex__item
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 1.88rem;
+		}
+		border-left: rem(2) solid $yellow;
+		padding-left: 1.25rem;
+	}
+	// .complex__item-caption
+	&__item-caption {
+		color: $darkBlue;
+		font-size: 1rem;
+		font-weight: 700;
+	}
+	// .complex__item-desc
+	&__item-desc {
+		margin-top: 0.63rem;
+		color: $darkBlue;
+		font-size: 0.8125rem;
+	}
+	// .complex__calc-body
+	&__calc-body {
+		border-radius: 0.5rem;
+		background: $white;
+		padding: 1.875rem;
+	}
+	// .complex__calc-block
+	&__calc-block {
+		&:not(:last-child) {
+			margin-bottom: 1.88rem;
+		}
+	}
+	// .complex__calc-caption
+	&__calc-caption {
+		color: $darkBlue;
+		font-size: 0.875rem;
+		font-weight: 600;
+		margin-bottom: 0.69rem;
+	}
+	// .complex__calc-range
+	&__calc-range {
+	}
+	// .complex__calc-ticks
+	&__calc-ticks {
+		margin-top: 0.69rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: $lightBlue;
+		font-size: 0.875rem;
+	}
+	// .complex__calc-tick
+	&__calc-tick {
+	}
+	// .complex__calc-checkbox
+	&__calc-checkbox {
+		&:not(:last-child) {
+			margin-bottom: 1.25rem;
+		}
+	}
+	// .complex__price
+	&__price {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		gap: 0.62rem;
+		&::before {
+			content: "";
+			flex: 1 1 auto;
+			height: rem(1);
+			background: linear-gradient(90deg, $lightBlue 50%, transparent 50%) 0 0 / rem(8) rem(1) repeat-x;
+		}
+	}
+	// .complex__price-column
+	&__price-column {
+		display: flex;
+		flex-direction: column;
+		order: -1;
+	}
+	// .complex__price-caption
+	&__price-caption {
+		color: $darkBlue;
+		font-size: 0.875rem;
+		font-weight: 600;
+	}
+	// .complex__price-subtitle
+	&__price-subtitle {
+		margin-top: 0.31rem;
+		color: $lightBlue;
+		font-size: 0.875rem;
+	}
+	// .complex__price-value
+	&__price-value {
+		font-size: 0.875rem;
+		font-weight: 600;
+		color: $lightBlue;
+		& strong {
+			color: $darkBlue;
+			font-family: $font-din;
+			font-size: 1.3125rem;
+			margin-left: 0.125rem;
+		}
+
+		.currency {
+			margin-left: 0.25rem;
+			color: $lightBlue;
+			font-weight: 400;
+			font-size: 1.3125rem;
+		}
+	}
+	// .complex__calc-total
+	&__calc-total {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 0.62rem;
+		&::before {
+			content: "";
+			flex: 1 1 auto;
+			height: rem(1);
+			background: linear-gradient(90deg, $lightBlue 50%, transparent 50%) 0 0 / rem(8) rem(1) repeat-x;
+		}
+	}
+	// .complex__calc-total-caption
+	&__calc-total-caption {
+		font-size: 1.3125rem;
+		font-weight: 600;
+		order: -1;
+		display: flex;
+	}
+	// .complex__calc-total-value
+	&__calc-total-value {
+		font-size: 0.875rem;
+		font-weight: 600;
+		color: $lightBlue;
+		& strong {
+			color: $darkBlue;
+			font-family: $font-din;
+			font-size: 1.9375rem;
+			margin-left: 0.25rem;
+		}
+
+		.currency {
+			margin-left: 0.62rem;
+			color: $lightBlue;
+			font-weight: 400;
+			font-size: 1.9375rem;
+		}
+	}
+	// .complex__calc-btn
+	&__calc-btn {
+		min-height: 4rem;
+	}
+	// .complex__benefits
+	&__benefits {
+		border-radius: 0.3125rem;
+		background-color: $lightBg;
+		padding: 2.5rem;
+		@media (min-width: $md3) {
+			background-image: url("@img/delivery-decor.svg");
+			background-repeat: no-repeat;
+			background-position: 30% bottom;
+		}
+		@media (min-width: $md2) {
+			background-position: 35% bottom;
+		}
+		.complex__title {
+			font-size: 1.5rem;
+			strong {
+				font-size: 1.9375rem;
+			}
+		}
+	}
+
+	// .complex__order-list
+	&__order-list {
+		margin-top: 1.88rem;
+		max-width: rem(434);
+		color: $darkBlue;
+		font-size: 1rem;
+		& li {
+			counter-increment: num;
+			display: flex;
+			align-items: center;
+			gap: 1.25rem;
+			color: $darkBlue;
+			font-size: 1rem;
+			&:not(:last-child) {
+				margin-bottom: 1.88rem;
+			}
+			&::before {
+				align-self: flex-start;
+				content: counter(num);
+				width: 2.5rem;
+				height: 2.5rem;
+				flex-shrink: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: $darkBg;
+				background: $yellow;
+				border-radius: 50%;
+				text-align: center;
+				font-size: 1.3125rem;
+				font-weight: 600;
+			}
+		}
+	}
+	// .complex__form
+	&__form {
+		background: $white;
+		padding: 1.5rem;
+		border-radius: 0.5rem;
+		.row {
+			--gutter-y: 0.5rem;
+		}
+		.form__file {
+			display: block;
+			margin-top: 0.75rem;
+		}
+	}
+}

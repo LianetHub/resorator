@@ -1,6 +1,14 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
+  src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
   src: url("../fonts/DinPro-Light.woff2") format("woff2"), url("../fonts/DinPro-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
@@ -9,8 +17,8 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -23,14 +31,6 @@
 }
 
 @font-face {
-  font-family: "DinPro";
-  font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Inter";
   font-display: swap;
   src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
@@ -39,10 +39,18 @@
 }
 
 @font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -67,14 +75,6 @@
   font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
   font-style: normal;
 }
 
@@ -10189,6 +10189,393 @@ table td button {
   margin-bottom: 1.75rem;
 }
 
+.complex {
+  padding: 1.5625rem 0;
+}
+
+.complex__block:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.complex__title {
+  color: #4b4b4b;
+  font-size: 2.125rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.complex__title strong {
+  font-size: 2.5625rem;
+}
+
+.complex__tabs {
+  margin-top: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.complex__tab-btn {
+  border-radius: 0.3125rem;
+  padding: 0.69rem 1.25rem;
+  font-size: 0.8125rem;
+  background: #f1f2f4;
+  color: #475569;
+  -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+}
+
+.complex__tab-btn.active {
+  color: #1d1d1d;
+  background: #f7ce46;
+}
+
+.complex__tab-content {
+  margin-top: 1.25rem;
+}
+
+.complex__tab-block {
+  display: none;
+}
+
+.complex__tab-block.active {
+  display: block;
+}
+
+.complex__tab-block.fade {
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+}
+
+.complex__tab-block img {
+  width: 100%;
+  border-radius: 0.3125rem;
+}
+
+.complex__clients {
+  margin-top: 1.25rem;
+}
+
+.complex__clients-item {
+  border-radius: 0.625rem;
+  border: 0.0625rem solid #e8e8e8;
+  padding: 0.62rem;
+  min-height: 7.8125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.complex__clients-item img {
+  max-height: 4.625rem;
+  width: auto;
+  height: auto;
+}
+
+.complex__clients-btn {
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+}
+
+.complex__calc {
+  border-radius: 0.3125rem;
+  background-color: #f2f5f9;
+  padding: 2.5rem;
+  background-image: url("../img/complex-calc.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: 40% bottom;
+}
+
+.complex__calc .complex__title {
+  font-size: 1.5rem;
+}
+
+.complex__calc .complex__title strong {
+  font-size: 1.9375rem;
+}
+
+.complex__list {
+  margin-top: 2.5rem;
+  max-width: 27.5rem;
+}
+
+.complex__item {
+  border-left: 0.125rem solid #f7ce46;
+  padding-left: 1.25rem;
+}
+
+.complex__item:not(:last-child) {
+  margin-bottom: 1.88rem;
+}
+
+.complex__item-caption {
+  color: #475569;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.complex__item-desc {
+  margin-top: 0.63rem;
+  color: #475569;
+  font-size: 0.8125rem;
+}
+
+.complex__calc-body {
+  border-radius: 0.5rem;
+  background: #fff;
+  padding: 1.875rem;
+}
+
+.complex__calc-block:not(:last-child) {
+  margin-bottom: 1.88rem;
+}
+
+.complex__calc-caption {
+  color: #475569;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.69rem;
+}
+
+.complex__calc-ticks {
+  margin-top: 0.69rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+
+.complex__calc-checkbox:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.complex__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  gap: 0.62rem;
+}
+
+.complex__price::before {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 0.0625rem;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #94a3b8), color-stop(50%, transparent)) 0 0/0.5rem 0.0625rem repeat-x;
+  background: linear-gradient(90deg, #94a3b8 50%, transparent 50%) 0 0/0.5rem 0.0625rem repeat-x;
+}
+
+.complex__price-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+.complex__price-caption {
+  color: #475569;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.complex__price-subtitle {
+  margin-top: 0.31rem;
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+
+.complex__price-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.complex__price-value strong {
+  color: #475569;
+  font-family: "DinPro";
+  font-size: 1.3125rem;
+  margin-left: 0.125rem;
+}
+
+.complex__price-value .currency {
+  margin-left: 0.25rem;
+  color: #94a3b8;
+  font-weight: 400;
+  font-size: 1.3125rem;
+}
+
+.complex__calc-total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.62rem;
+}
+
+.complex__calc-total::before {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 0.0625rem;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #94a3b8), color-stop(50%, transparent)) 0 0/0.5rem 0.0625rem repeat-x;
+  background: linear-gradient(90deg, #94a3b8 50%, transparent 50%) 0 0/0.5rem 0.0625rem repeat-x;
+}
+
+.complex__calc-total-caption {
+  font-size: 1.3125rem;
+  font-weight: 600;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.complex__calc-total-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.complex__calc-total-value strong {
+  color: #475569;
+  font-family: "DinPro";
+  font-size: 1.9375rem;
+  margin-left: 0.25rem;
+}
+
+.complex__calc-total-value .currency {
+  margin-left: 0.62rem;
+  color: #94a3b8;
+  font-weight: 400;
+  font-size: 1.9375rem;
+}
+
+.complex__calc-btn {
+  min-height: 4rem;
+}
+
+.complex__benefits {
+  border-radius: 0.3125rem;
+  background-color: #f2f5f9;
+  padding: 2.5rem;
+}
+
+.complex__benefits .complex__title {
+  font-size: 1.5rem;
+}
+
+.complex__benefits .complex__title strong {
+  font-size: 1.9375rem;
+}
+
+.complex__order-list {
+  margin-top: 1.88rem;
+  max-width: 27.125rem;
+  color: #475569;
+  font-size: 1rem;
+}
+
+.complex__order-list li {
+  counter-increment: num;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+  color: #475569;
+  font-size: 1rem;
+}
+
+.complex__order-list li:not(:last-child) {
+  margin-bottom: 1.88rem;
+}
+
+.complex__order-list li::before {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  content: counter(num);
+  width: 2.5rem;
+  height: 2.5rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #2b2b2b;
+  background: #f7ce46;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.3125rem;
+  font-weight: 600;
+}
+
+.complex__form {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.complex__form .row {
+  --gutter-y: 0.5rem;
+}
+
+.complex__form .form__file {
+  display: block;
+  margin-top: 0.75rem;
+}
+
 @media (min-width: 375px) {
   .product__action {
     min-width: 2.5rem;
@@ -11079,6 +11466,10 @@ table td button {
 
   .work-card__desc p:not(:last-child) {
     margin-bottom: 1.5rem;
+  }
+
+  .complex__clients-item img {
+    max-height: 6.5625rem;
   }
 }
 
@@ -12835,6 +13226,12 @@ table td button {
   .work-card__desc p:not(:last-child) {
     margin-bottom: 1.25rem;
   }
+
+  .complex__benefits {
+    background-image: url("../img/delivery-decor.svg");
+    background-repeat: no-repeat;
+    background-position: 30% bottom;
+  }
 }
 
 @media (min-width: 992px) {
@@ -13348,6 +13745,10 @@ table td button {
 
   .works__list {
     margin-top: 1.88rem;
+  }
+
+  .complex__benefits {
+    background-position: 35% bottom;
   }
 }
 
@@ -14286,6 +14687,10 @@ table td button {
         -ms-flex-order: -1;
             order: -1;
   }
+
+  .complex__clients .row {
+    --gutter-y: 0.625rem;
+  }
 }
 
 @media (max-width: 766.98px) {
@@ -14991,6 +15396,11 @@ table td button {
   .work-card__gallery-prev:hover {
     background: #f7ce46;
     color: #1d1d1d;
+  }
+
+  .complex__tab-btn:hover {
+    color: #1d1d1d;
+    background: #f7ce46;
   }
 }
 

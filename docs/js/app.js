@@ -526,6 +526,13 @@ $(function () {
             }
         }
 
+        // tabs complex page
+        if ($target.is('.complex__tab-btn')) {
+            $target.addClass('active').siblings().removeClass('active');
+            $target.closest('.complex__tabs').next('.complex__tab-content').find('.complex__tab-block').eq($target.index()).addClass('active fade').siblings().removeClass('active fade');
+        }
+
+
     });
 
 
