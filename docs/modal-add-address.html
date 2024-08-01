@@ -179,36 +179,54 @@
 				</div>
 			</div>
 		</header>
-		<div id="search" class="popup popup_full-width popup_search">
-			<div role="search" class="search">
-				<div class="search__content">
-					<div class="search__container">
-						<form action="#" class="search__header">
-							<input type="text" class="search__input" placeholder="Начните вводить для поиска">
-							<button type="button" data-fancybox-close class="search__close icon-close"></button>
-						</form>
-						<div class="search__left">
-							<div class="search__left-image">
-								<img src="img/error-search.svg" alt="Ошибка поиска">
+		<main class="page">
+			<div id="add-address" class="popup popup_lg">
+				<div class="popup__header">
+					<h3 class="popup__title title-sm">Добавление адреса</h3>
+					<button type="button" class="popup__close" data-fancybox-close></button>
+				</div>
+				<form action="#" class="popup__form form">
+					<div class="row">
+						<div class="col-12">
+							<div class="form__field">
+								<div class="form__label">Город</div>
+								<input type="text" name="city" placeholder="Укажите город" class="form__input">
 							</div>
-							<div class="search__left-content">
-								<div class="search__left-caption"> Поиск не дал результатов </div>
-								<div class="search__left-desc">
-									<p>По вашему запросу ничего не найдено. Проверьте правильность вводимых слов.</p>
-									<p>Если вы не нашли необходимую продукцию, вы можете связаться с менеджером для уточнения запроса.</p>
-								</div>
-								<div class="product-card__more">
-									<a href="" class="product-card__more-btn icon-whatsapp"></a>
-									<a href="" class="product-card__more-btn icon-telegram"></a>
-									<a href="" class="product-card__more-btn">Написать менеджеру</a>
-								</div>
+						</div>
+						<div class="col-12">
+							<div class="form__field">
+								<div class="form__label">Улица</div>
+								<input type="text" name="street" placeholder="Улица" class="form__input">
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form__field">
+								<div class="form__label">Номер дома</div>
+								<input type="text" name="number" placeholder="Номер дома" class="form__input">
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form__field">
+								<div class="form__label">Телефон для связи</div>
+								<input type="tel" name="phone" placeholder="+7" class="form__input">
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form__field">
+								<div class="form__label">Контактное лицо</div>
+								<input type="text" name="text" placeholder="ФИО Контактного лица" class="form__input">
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form__field">
+								<div class="form__label">Комментарий</div>
+								<textarea name="comment" class="form__textarea" placeholder="Дополнительная информация"></textarea>
 							</div>
 						</div>
 					</div>
-				</div>
+					<button type="submit" class="form__btn btn btn-primary">Добавить</button>
+				</form>
 			</div>
-		</div>
-		<main class="page">
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -1273,10 +1291,11 @@
 	<script src="js/app.min.js?_v=20240801202755"></script>
 	<script>
 		Fancybox.show([{
-			src: "#search",
+			src: "#add-address"
+		}], {
 			dragToClose: false,
 			closeButton: false
-		}])
+		})
 
 	</script>
 </body>
