@@ -12,13 +12,19 @@
 	// .complex__title
 	&__title {
 		color: $darkStroke;
-		font-size: 2.125rem;
 		font-weight: 300;
 		text-transform: uppercase;
 		display: flex;
 		flex-direction: column;
-		& strong {
-			font-size: 2.5625rem;
+		font-size: 1.5rem;
+		strong {
+			font-size: 1.9375rem;
+		}
+		&.complex__title_lg {
+			font-size: 2.125rem;
+			& strong {
+				font-size: 2.5625rem;
+			}
 		}
 	}
 	// .complex__tabs
@@ -108,16 +114,8 @@
 		background-size: auto;
 		background-repeat: no-repeat;
 		background-position: 40% bottom;
-		.complex__title {
-			font-size: 1.5rem;
-			strong {
-				font-size: 1.9375rem;
-			}
-		}
 	}
-	// .complex__title
-	&__title {
-	}
+
 	// .complex__list
 	&__list {
 		margin-top: 2.5rem;
@@ -289,12 +287,6 @@
 		@media (min-width: $md2) {
 			background-position: 35% bottom;
 		}
-		.complex__title {
-			font-size: 1.5rem;
-			strong {
-				font-size: 1.9375rem;
-			}
-		}
 	}
 
 	// .complex__order-list
@@ -342,6 +334,145 @@
 		.form__file {
 			display: block;
 			margin-top: 0.75rem;
+		}
+	}
+	// .complex__body
+	&__body {
+		margin-top: rem(20);
+		@media (min-width: $md5) {
+			margin-top: 2.25rem;
+		}
+		.row {
+			@media (max-width: $md3) {
+				--gutter-y: 0.625rem;
+			}
+		}
+	}
+	// .complex__services-item
+	&__services-item {
+		position: relative;
+		display: flex;
+		height: rem(200);
+		@media (min-width: $md5) {
+			height: 10.75738rem;
+		}
+		@media (min-width: $md3) {
+			height: 22.1875rem;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				.complex__services-image {
+					&::before {
+						opacity: 0;
+					}
+					&::after {
+						opacity: 1;
+					}
+				}
+				.complex__services-desc,
+				.complex__services-btn {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	// .complex__services-body
+	&__services-body {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 0.91rem;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		color: $grayStroke;
+
+		@media (min-width: $md3) {
+			padding: 1.88rem;
+		}
+	}
+	// .complex__services-caption
+	&__services-caption {
+		font-family: $font-din;
+		font-weight: 700;
+		line-height: 120%;
+		text-transform: uppercase;
+		font-size: 0.63638rem;
+		@media (min-width: $md3) {
+			font-size: 1.3125rem;
+		}
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellow;
+			}
+		}
+	}
+	// .complex__services-desc
+	&__services-desc {
+		margin-top: 1.25rem;
+		max-width: 32rem;
+		opacity: 0;
+		transition: opacity 0.3s ease 0s;
+	}
+	// .complex__services-btn
+	&__services-btn {
+		margin-top: auto;
+		border-radius: 0.3125rem;
+		border: rem(1) solid $yellow;
+		padding: 0.69rem 1rem;
+		color: $yellow;
+		font-size: 0.8125rem;
+		opacity: 0;
+		transition: background-color 0.3s ease 0s, color 0.3s ease 0s, opacity 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background: $yellow;
+				color: $dark;
+			}
+		}
+	}
+
+	// .complex__services-image
+	&__services-image {
+		position: relative;
+		display: block;
+		overflow: hidden;
+		height: 100%;
+		width: 100%;
+		border-radius: 0.3125rem;
+		z-index: 1;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 0.3125rem;
+			z-index: 2;
+			transition: opacity 0.3s ease 0s;
+			background: linear-gradient(0deg, rgba(23, 24, 27, 0.4) 0%, rgba(23, 24, 27, 0.4) 100%);
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 0.3125rem;
+			opacity: 0;
+			transition: opacity 0.3s ease 0s;
+			background: linear-gradient(0deg, rgba(23, 24, 27, 0.9) 0%, rgba(23, 24, 27, 0.9) 100%);
+		}
+		& img {
+			border-radius: 0.3125rem;
+			z-index: 1;
+			transition: transform 0.3s ease 0s;
 		}
 	}
 }
