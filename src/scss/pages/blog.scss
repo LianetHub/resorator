@@ -191,10 +191,11 @@
 		color: $darkBlue;
 		text-align: justify;
 		font-size: 0.875rem;
+
 		&.blog__item-desc_lg {
 			margin-top: 1.87rem;
-			font-size: 0.9375rem;
-			line-height: 140%;
+			font-size: 1rem;
+			line-height: 120%;
 			& + .blog__item-link {
 				margin-top: 1.87rem;
 			}

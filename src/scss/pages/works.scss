@@ -385,9 +385,10 @@
 	// .work-card__desc
 	&__desc {
 		color: $darkBlue;
-		font-size: 1.125rem;
+
 		text-align: justify;
 		@media (min-width: $md3) {
+			font-size: 1rem;
 			text-align: left;
 		}
 		& p {
@@ -397,7 +398,7 @@
 					margin-bottom: 1.5rem;
 				}
 				@media (min-width: $md3) {
-					margin-bottom: 1.25rem;
+					margin-bottom: 1rem;
 				}
 			}
 		}
