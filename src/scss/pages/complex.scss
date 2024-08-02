@@ -16,14 +16,26 @@
 		text-transform: uppercase;
 		display: flex;
 		flex-direction: column;
-		font-size: 1.5rem;
+		font-size: 1.35rem;
+		@media (min-width: $md4) {
+			font-size: 1.5rem;
+		}
 		strong {
-			font-size: 1.9375rem;
+			font-size: 1.75rem;
+			@media (min-width: $md4) {
+				font-size: 1.9375rem;
+			}
 		}
 		&.complex__title_lg {
-			font-size: 2.125rem;
+			font-size: 1.75rem;
+			@media (min-width: $md4) {
+				font-size: 2.125rem;
+			}
 			& strong {
-				font-size: 2.5625rem;
+				font-size: 2.25rem;
+				@media (min-width: $md4) {
+					font-size: 2.5625rem;
+				}
 			}
 		}
 	}
@@ -32,7 +44,10 @@
 		margin-top: 1.25rem;
 		display: flex;
 		flex-wrap: wrap;
-		gap: 1.25rem;
+		gap: 0.63rem;
+		@media (min-width: $md4) {
+			gap: 1.25rem;
+		}
 	}
 	// .complex__tab-btn
 	&__tab-btn {
@@ -109,17 +124,34 @@
 	&__calc {
 		border-radius: 0.3125rem;
 		background-color: $lightBg;
-		padding: 2.5rem;
-		background-image: url("@img/complex-calc.svg");
-		background-size: auto;
-		background-repeat: no-repeat;
-		background-position: 40% bottom;
+		padding: 1.88rem;
+		margin: 0 -1.88rem;
+		@media (min-width: $md3) {
+			margin: 0;
+			padding: 2.5rem;
+			background-image: url("@img/complex-calc.svg");
+			background-size: auto;
+			background-repeat: no-repeat;
+			background-position: 60% bottom;
+		}
+		@media (min-width: $md2) {
+			background-position: 41% bottom;
+		}
+		.row {
+			--gutter-x: #{rem(40)};
+			--gutter-y: #{rem(40)};
+		}
 	}
 
 	// .complex__list
 	&__list {
 		margin-top: 2.5rem;
-		max-width: rem(440);
+		@media (min-width: $md3) {
+			max-width: rem(320);
+		}
+		@media (min-width: $md2) {
+			max-width: rem(440);
+		}
 	}
 	// .complex__item
 	&__item {
@@ -140,6 +172,7 @@
 		margin-top: 0.63rem;
 		color: $darkBlue;
 		font-size: 0.8125rem;
+		line-height: 1.25;
 	}
 	// .complex__calc-body
 	&__calc-body {
@@ -184,14 +217,19 @@
 	// .complex__price
 	&__price {
 		display: flex;
-		align-items: center;
 		width: 100%;
 		gap: 0.62rem;
-		&::before {
-			content: "";
-			flex: 1 1 auto;
-			height: rem(1);
-			background: linear-gradient(90deg, $lightBlue 50%, transparent 50%) 0 0 / rem(8) rem(1) repeat-x;
+		flex-direction: column;
+		align-items: flex-start;
+		@media (min-width: $md5) {
+			align-items: center;
+			flex-direction: row;
+			&::before {
+				content: "";
+				flex: 1 1 auto;
+				height: rem(1);
+				background: linear-gradient(90deg, $lightBlue 50%, transparent 50%) 0 0 / rem(8) rem(1) repeat-x;
+			}
 		}
 	}
 	// .complex__price-column
@@ -278,8 +316,10 @@
 	&__benefits {
 		border-radius: 0.3125rem;
 		background-color: $lightBg;
-		padding: 2.5rem;
+		padding: 1.88rem;
+		margin: 0 -1.25rem;
 		@media (min-width: $md3) {
+			margin: 0;
 			background-image: url("@img/delivery-decor.svg");
 			background-repeat: no-repeat;
 			background-position: 30% bottom;
@@ -340,7 +380,7 @@
 	&__body {
 		margin-top: rem(20);
 		@media (min-width: $md5) {
-			margin-top: 2.25rem;
+			margin-top: 1rem;
 		}
 		.row {
 			@media (max-width: $md3) {
@@ -415,8 +455,14 @@
 	&__services-desc {
 		margin-top: 1.25rem;
 		max-width: 32rem;
-		opacity: 0;
-		transition: opacity 0.3s ease 0s;
+		font-size: 0.65rem;
+		@media (min-width: $md3) {
+			font-size: 1rem;
+		}
+		@media (hover: hover) {
+			transition: opacity 0.3s ease 0s;
+			opacity: 0;
+		}
 	}
 	// .complex__services-btn
 	&__services-btn {
@@ -425,9 +471,14 @@
 		border: rem(1) solid $yellow;
 		padding: 0.69rem 1rem;
 		color: $yellow;
-		font-size: 0.8125rem;
-		opacity: 0;
 		transition: background-color 0.3s ease 0s, color 0.3s ease 0s, opacity 0.3s ease 0s;
+		font-size: 0.725rem;
+		@media (min-width: $md3) {
+			font-size: 0.8125rem;
+		}
+		@media (hover: hover) {
+			opacity: 0;
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				background: $yellow;
@@ -473,6 +524,272 @@
 			border-radius: 0.3125rem;
 			z-index: 1;
 			transition: transform 0.3s ease 0s;
+		}
+	}
+	// .complex__btns
+	&__btns {
+		display: grid;
+		gap: rem(20);
+		@media (min-width: $md4) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	// .complex__btn
+	&__btn {
+		background: $lightBg;
+		padding: rem(20);
+		text-align: left;
+		transition: background-color 0.3s ease 0s;
+		& strong {
+			pointer-events: none;
+		}
+		&.active {
+			background: $yellow;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: $yellow;
+			}
+		}
+	}
+	// .complex__title
+	&__title {
+	}
+	// .complex__options
+	&__options {
+		margin-top: rem(20);
+	}
+	// .complex__option
+	&__option {
+		display: none;
+		&.active {
+			display: block;
+		}
+		&.fade {
+			animation: fadeIn 1s;
+		}
+	}
+	// .complex__slider
+	&__slider {
+	}
+	// .complex__slide
+	&__slide {
+		height: auto;
+	}
+	// .complex__card
+	&__card {
+		display: flex;
+		flex-direction: column;
+		border-radius: 0.3125rem;
+		background: #f1f2f4;
+		padding: 1.875rem;
+		min-height: 100%;
+	}
+	// .complex__card-caption
+	&__card-caption {
+	}
+	// .complex__card-list
+	&__card-list {
+		margin-top: 1.97rem;
+	}
+	// .complex__card-item
+	&__card-item {
+		display: flex;
+		gap: 0.62rem;
+		&:not(:last-child) {
+			margin-bottom: 0.65rem;
+		}
+	}
+	// .complex__card-prop
+	&__card-prop {
+		color: $lightBlue;
+		font-size: 0.875rem;
+		font-weight: 600;
+	}
+	// .complex__card-value
+	&__card-value {
+		color: $darkBlue;
+		font-size: 0.875rem;
+		font-weight: 600;
+	}
+	// .complex__card-more
+	&__card-more {
+		margin-top: 2.15rem;
+		display: flex;
+		align-items: center;
+		color: $darkBlue;
+		font-family: $font-din;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 100%;
+		gap: 1.25rem;
+		& .icon-arrow {
+			overflow: hidden;
+			display: block;
+			transition: color 0.3s ease 0s;
+			order: 1;
+			font-size: 1.25rem;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				& ::before {
+					animation: arrow-scale 0.3s linear 0s forwards;
+					color: $yellow;
+				}
+			}
+		}
+	}
+	// .complex__image
+	&__image {
+		min-height: 100%;
+		display: flex;
+		& img {
+			min-height: 21.875rem;
+			height: auto;
+			border-radius: 0.3125rem;
+		}
+	}
+	// .complex__controls
+	&__controls {
+		margin-top: 1.2rem;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: rem(20);
+	}
+	// .complex__prev
+	&__prev {
+	}
+	// .complex__pagination
+	&__pagination {
+		width: auto;
+		display: inline;
+		margin: 0;
+		color: $darkBlue;
+		font-size: 0.8125rem;
+	}
+	// .complex__next
+	&__next {
+	}
+	// .complex__card-time
+	&__card-time {
+		margin-top: 0.62rem;
+		color: $lightBlue;
+		font-family: $font-din;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 100%;
+		display: flex;
+		align-items: center;
+		gap: 0.62rem;
+		&::before {
+			font-size: 1.25rem;
+		}
+	}
+	// .complex__card-link
+	&__card-link {
+		margin: auto 0;
+		color: $blue;
+		font-size: 0.875rem;
+		text-decoration: underline;
+		max-width: 18rem;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	// .complex__slider-header
+	&__slider-header {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: 1.25rem;
+	}
+	// .complex__ready
+	&__ready {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+	}
+	// .complex__ready-image
+	&__ready-image {
+		& img {
+			height: 20rem;
+			width: 100%;
+			object-fit: cover;
+			@media (min-width: $md4) {
+				height: 25rem;
+			}
+		}
+	}
+	// .complex__ready-body
+	&__ready-body {
+		border-radius: 0rem 0rem 0.3125rem 0.3125rem;
+		background: #f1f2f4;
+		padding: 1.875rem;
+	}
+	// .complex__ready-name
+	&__ready-name {
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellow;
+			}
+		}
+	}
+	// .complex__ready-info
+	&__ready-info {
+		margin-top: 0.63rem;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 0.63rem;
+		color: $lightBlue;
+		font-size: 0.875rem;
+		font-weight: 600;
+		& span {
+			color: $darkBlue;
+		}
+	}
+	// .complex__ready-price
+	&__ready-price {
+		margin-top: 0.63rem;
+		display: flex;
+		gap: 0.63rem;
+		font-size: 1.9375rem;
+		font-weight: 300;
+		& strong {
+			font-weight: 600;
+			color: $dark;
+			font-weight: 600;
+		}
+	}
+	// .complex__ready-link
+	&__ready-link {
+		margin-top: 2.15rem;
+		display: flex;
+		align-items: center;
+		color: $darkBlue;
+		font-family: $font-din;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 100%;
+		gap: 1.25rem;
+		& .icon-arrow {
+			overflow: hidden;
+			display: block;
+			transition: color 0.3s ease 0s;
+			order: 1;
+			font-size: 1.25rem;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				& ::before {
+					animation: arrow-scale 0.3s linear 0s forwards;
+					color: $yellow;
+				}
+			}
 		}
 	}
 }

@@ -500,38 +500,17 @@ $(function () {
         }
 
 
-        // about page click btns
-
-        if ($target.is('.about__prev')) {
-            const currentIndex = getCurrentSectionIndex();
-            if (currentIndex > 0) {
-                scrollToSection(currentIndex - 1);
-            } else if (currentIndex === 0) {
-                $('.about__block').removeClass('active');
-                $('html, body').animate({
-                    scrollTop: 0
-                }, 'smooth');
-            }
-        }
-
-        if ($target.is('.about__next')) {
-            if ($('.about__block.active').length === 0) {
-                $('.about__block').first().addClass('active');
-                scrollToSection(0);
-                return;
-            }
-            const currentIndex = getCurrentSectionIndex();
-            if (currentIndex !== -1 && currentIndex < $('.about__block').length - 1) {
-                scrollToSection(currentIndex + 1);
-            }
-        }
-
         // tabs complex page
         if ($target.is('.complex__tab-btn')) {
             $target.addClass('active').siblings().removeClass('active');
             $target.closest('.complex__tabs').next('.complex__tab-content').find('.complex__tab-block').eq($target.index()).addClass('active fade').siblings().removeClass('active fade');
         }
 
+
+        if ($target.is('.complex__btn')) {
+            $target.addClass('active').siblings().removeClass('active');
+            $target.closest('.complex__btns').next('.complex__options').find('.complex__option').eq($target.index()).addClass('active fade').siblings().removeClass('active fade');
+        }
 
     });
 
@@ -568,36 +547,6 @@ $(function () {
 
             $('.map-point').trigger('mouseleave').removeClass('hover');
         })
-    }
-
-
-
-    function scrollToSection(index) {
-        const $sections = $('.about__block');
-        if (index >= 0 && index < $sections.length) {
-            const $targetSection = $sections.eq(index);
-            $('html, body').animate({
-                scrollTop: $targetSection.offset().top - $(".about__navbar").height()
-            }, 300);
-            updateActiveSection(index);
-        }
-    }
-
-    function getCurrentSectionIndex(direction) {
-        const $sections = $('.about__block');
-        let $activeSection = $sections.filter('.active');
-
-        if ($activeSection.length === 0) {
-            $activeSection = $sections.first().addClass('active');
-        }
-
-        return $sections.index($activeSection);
-    }
-
-    function updateActiveSection(index) {
-        const $sections = $('.about__block');
-        $sections.removeClass('active');
-        $sections.eq(index).addClass('active');
     }
 
     function getVisibleSearchForm() {
@@ -1399,6 +1348,60 @@ $(function () {
 
     }
 
+    if ($(".complex__slider").length > 0) {
+
+        $(".complex__slider").each(function (index, slider) {
+
+            let prev = $(slider).find('.complex__prev');
+            let next = $(slider).find('.complex__next');
+            let pagination = $(slider).find('.complex__pagination');
+            let options = {
+                watchOverflow: true,
+                pagination: {
+                    el: pagination[0],
+                    type: "fraction",
+                    renderFraction: function (currentClass, totalClass) {
+                        return `Страница <span class="${currentClass}"></span> из <span class="${totalClass}"></span>`;
+                    }
+                },
+                navigation: {
+                    nextEl: next[0],
+                    prevEl: prev[0]
+                },
+
+            }
+
+            if ($(slider).hasClass('complex__slider_lg')) {
+
+                let swiper = new Swiper(slider, {
+                    ...options,
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        479.98: {
+                            slidesPerView: 1.45,
+                        },
+                        575.98: {
+                            slidesPerView: 2,
+                        },
+                        991.98: {
+                            slidesPerView: 3,
+                        },
+                        1199.98: {
+                            slidesPerView: 4,
+                        }
+                    }
+                });
+            } else {
+                let swiper = new Swiper(slider, options);
+            }
+
+
+
+
+        })
+
+    }
 
 
 

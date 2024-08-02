@@ -80,9 +80,30 @@
                                 <button type="button" class="complex__tab-btn">Отели</button>
                             </div>
                             <div class="complex__tab-content">
-                                <div class="complex__tab-block active">
-
-                                </div>
+                                @@include('./html/_tab-complex.html', {
+                                "className": " active"
+                                })
+                                @@include('./html/_tab-complex.html', {
+                                "className": ""
+                                })
+                                @@include('./html/_tab-complex.html', {
+                                "className": ""
+                                })
+                                @@include('./html/_tab-complex.html', {
+                                "className": ""
+                                })
+                                @@include('./html/_tab-complex.html', {
+                                "className": ""
+                                })
+                                @@include('./html/_tab-complex.html', {
+                                "className": ""
+                                })
+                                @@include('./html/_tab-complex.html', {
+                                "className": ""
+                                })
+                                @@include('./html/_tab-complex.html', {
+                                "className": ""
+                                })
                             </div>
                         </div>
                         <div class="complex__block">
@@ -158,7 +179,7 @@
                         <div class="complex__block">
                             <div class="complex__calc">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-lg-6">
                                         <h2 class="complex__title">
                                             оснащение
                                             <strong>калькулятор</strong>
@@ -178,7 +199,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-lg-6">
                                         <form action="#" class="complex__calc-body">
                                             <div class="complex__calc-block">
                                                 <label for="type-of-establishment" class="form__label" tabindex="-1">Выберите тип заведения</label>
@@ -356,7 +377,7 @@
                         <div class="complex__block">
                             <div class="complex__benefits">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-lg-6">
                                         <div class="complex__title">
                                             наши
                                             <strong>преимущества</strong>
@@ -379,7 +400,7 @@
                                             </li>
                                         </ol>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-lg-6">
                                         <form action="#" class="complex__form" data-form-validation>
                                             <div class="row">
                                                 <div class="col-12">
@@ -427,11 +448,109 @@
                             </div>
                         </div>
                         <div class="complex__block">
-                            <div class="complex__block-header">
-                                <h2 class="complex__title">
-                                    мы проводим
-                                    <strong>Семинары и мастер-классы</strong>
-                                </h2>
+                            <div class="complex__slider swiper">
+                                <div class="complex__slider-header">
+                                    <h2 class="complex__title">
+                                        мы проводим
+                                        <strong>Семинары и мастер-классы</strong>
+                                    </h2>
+                                    <div class="complex__controls">
+                                        <div class="complex__prev swiper-button-prev"></div>
+                                        <div class="complex__pagination swiper-pagination"></div>
+                                        <div class="complex__next swiper-button-next"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-wrapper">
+                                    <div class="complex__slide swiper-slide">
+                                        <div class="row">
+                                            <div class="col-xl-4 col-sm-6">
+                                                <div class="complex__card">
+                                                    <div class="complex__card-caption title-sm">Тема мероприятия</div>
+                                                    <time datetime="2024-03-03" class="complex__card-time icon-calendar">03.03.2024</time>
+                                                    <a href="" class="complex__card-link">
+                                                        Деловое презентационное мероприятие «Огонёк. О гриле – подробно. Концепция меню с приготовлением уникальных авторских блюд».
+                                                    </a>
+                                                    <a href="" class="complex__card-more">
+                                                        Узнать подробнее
+                                                        <span class="icon-arrow"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-8 col-sm-6">
+                                                <div class="complex__image">
+                                                    <img src="@img/blog-article/05.jpg" class="cover-image" alt="Изображение заведения">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="complex__slide swiper-slide">
+                                        <div class="row">
+                                            <div class="col-xl-4 col-sm-6">
+                                                <div class="complex__card">
+                                                    <div class="complex__card-caption title-sm">Тема мероприятия</div>
+                                                    <time datetime="2024-03-03" class="complex__card-time icon-calendar">03.03.2024</time>
+                                                    <a href="" class="complex__card-link">
+                                                        Деловое презентационное мероприятие «Огонёк. О гриле – подробно. Концепция меню с приготовлением уникальных авторских блюд».
+                                                    </a>
+                                                    <a href="" class="complex__card-more">
+                                                        Узнать подробнее
+                                                        <span class="icon-arrow"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-8 col-sm-6">
+                                                <div class="complex__image">
+                                                    <img src="@img/blog-article/05.jpg" class="cover-image" alt="Изображение заведения">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="complex__slide swiper-slide">
+                                        <div class="row">
+                                            <div class="col-xl-4 col-sm-6">
+                                                <div class="complex__card">
+                                                    <div class="complex__card-caption title-sm">Тема мероприятия</div>
+                                                    <time datetime="2024-03-03" class="complex__card-time icon-calendar">03.03.2024</time>
+                                                    <a href="" class="complex__card-link">
+                                                        Деловое презентационное мероприятие «Огонёк. О гриле – подробно. Концепция меню с приготовлением уникальных авторских блюд».
+                                                    </a>
+                                                    <a href="" class="complex__card-more">
+                                                        Узнать подробнее
+                                                        <span class="icon-arrow"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-8 col-sm-6">
+                                                <div class="complex__image">
+                                                    <img src="@img/blog-article/05.jpg" class="cover-image" alt="Изображение заведения">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="complex__slide swiper-slide">
+                                        <div class="row">
+                                            <div class="col-xl-4 col-sm-6">
+                                                <div class="complex__card">
+                                                    <div class="complex__card-caption title-sm">Тема мероприятия</div>
+                                                    <time datetime="2024-03-03" class="complex__card-time icon-calendar">03.03.2024</time>
+                                                    <a href="" class="complex__card-link">
+                                                        Деловое презентационное мероприятие «Огонёк. О гриле – подробно. Концепция меню с приготовлением уникальных авторских блюд».
+                                                    </a>
+                                                    <a href="" class="complex__card-more">
+                                                        Узнать подробнее
+                                                        <span class="icon-arrow"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-8 col-sm-6">
+                                                <div class="complex__image">
+                                                    <img src="@img/blog-article/05.jpg" class="cover-image" alt="Изображение заведения">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>

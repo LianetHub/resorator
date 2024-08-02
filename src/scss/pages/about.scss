@@ -6,53 +6,6 @@
 		padding-bottom: 0;
 	}
 
-	// .about__controls
-	&__controls {
-		position: fixed;
-		top: 50%;
-		transform: translateY(-50%);
-		right: rem(20);
-		display: flex;
-		flex-direction: column;
-		gap: 2rem;
-		z-index: 10;
-	}
-	// .about__next
-	&__next {
-		border-radius: 0.3125rem;
-		background: $yellow;
-		width: 3rem;
-		height: 3rem;
-		font-size: 1.25rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: $dark;
-		z-index: 2;
-		transition: background-color 0.3s ease 0s, color 0.3s ease 0;
-		&::before {
-			color: currentColor;
-			transform: rotate(90deg);
-		}
-		&:disabled,
-		&[aria-disabled="true"] {
-			opacity: 0.5;
-			color: $dark;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				background: $yellowSecond;
-				color: $dark;
-			}
-		}
-	}
-	// .about__prev
-	&__prev {
-		@extend .about__next;
-		&::before {
-			transform: rotate(-90deg);
-		}
-	}
 	// .about__promo
 	&__promo {
 		height: 100vh;
