@@ -112,6 +112,14 @@
 			}
 			width: auto;
 			height: auto;
+			transition: transform 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				& img {
+					transform: scale(1.025);
+				}
+			}
 		}
 	}
 	// .complex__clients-btn
@@ -538,6 +546,7 @@
 	&__btn {
 		background: $lightBg;
 		padding: rem(20);
+		border-radius: rem(5);
 		text-align: left;
 		transition: background-color 0.3s ease 0s;
 		& strong {
@@ -643,10 +652,20 @@
 	&__image {
 		min-height: 100%;
 		display: flex;
+		overflow: hidden;
+		border-radius: 0.3125rem;
 		& img {
 			min-height: 21.875rem;
 			height: auto;
 			border-radius: 0.3125rem;
+			transition: transform 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				& img {
+					transform: scale(1.025);
+				}
+			}
 		}
 	}
 	// .complex__controls
@@ -715,6 +734,33 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100%;
+		border-radius: rem(5);
+		background: #f1f2f4;
+		transition: background-color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background: $dark;
+				color: $white;
+				.complex__ready-name {
+					color: $yellow;
+				}
+				.complex__ready-info {
+					color: inherit;
+					& span {
+						color: inherit;
+					}
+				}
+				.complex__ready-price {
+					color: inherit;
+					& strong {
+						color: inherit;
+					}
+				}
+				.complex__ready-link {
+					color: $yellow;
+				}
+			}
+		}
 	}
 	// .complex__ready-image
 	&__ready-image {
@@ -730,17 +776,11 @@
 	// .complex__ready-body
 	&__ready-body {
 		border-radius: 0rem 0rem 0.3125rem 0.3125rem;
-		background: #f1f2f4;
 		padding: 1.875rem;
 	}
 	// .complex__ready-name
 	&__ready-name {
 		transition: color 0.3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				color: $yellow;
-			}
-		}
 	}
 	// .complex__ready-info
 	&__ready-info {

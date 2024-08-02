@@ -81,28 +81,36 @@
                             </div>
                             <div class="complex__tab-content">
                                 @@include('./html/_tab-complex.html', {
-                                "className": " active"
+                                "className": " active",
+                                "id": 1
                                 })
                                 @@include('./html/_tab-complex.html', {
-                                "className": ""
+                                "className": "",
+                                "id": 2
                                 })
                                 @@include('./html/_tab-complex.html', {
-                                "className": ""
+                                "className": "",
+                                "id": 3
                                 })
                                 @@include('./html/_tab-complex.html', {
-                                "className": ""
+                                "className": "",
+                                "id": 4
                                 })
                                 @@include('./html/_tab-complex.html', {
-                                "className": ""
+                                "className": "",
+                                "id": 5
                                 })
                                 @@include('./html/_tab-complex.html', {
-                                "className": ""
+                                "className": "",
+                                "id": 6
                                 })
                                 @@include('./html/_tab-complex.html', {
-                                "className": ""
+                                "className": "",
+                                "id": 7
                                 })
                                 @@include('./html/_tab-complex.html', {
-                                "className": ""
+                                "className": "",
+                                "id": 8
                                 })
                             </div>
                         </div>
@@ -314,12 +322,12 @@
                                     <div class="col-md-8">
                                         <div class="complex__services-item">
                                             <div class="complex__services-body">
-                                                <a href="#callback" data-fancybox class="complex__services-caption">
+                                                <a href="#consult" data-fancybox class="complex__services-caption">
                                                     Консультация <br>
                                                     и подбор оборудования
                                                 </a>
                                                 <div class="complex__services-desc">Дизайн проект это комплект документов, разработанных в соответствии с техническим заданием выявляющих логику пространства, создающий индивидуальный дизайн интерьера. Хорошо разработанный дизайн проект помогает решить много вопросов, которые возникают при строительстве.</div>
-                                                <a href="#callback" data-fancybox class="complex__services-btn">Написать менеджеру</a>
+                                                <a href="#consult" data-fancybox class="complex__services-btn">Написать менеджеру</a>
                                             </div>
                                             <div class="complex__services-image">
                                                 <img src="@img/about-services/01.jpg" class="cover-image" alt="Постер">
@@ -329,12 +337,12 @@
                                     <div class="col-md-4">
                                         <div class="complex__services-item">
                                             <div class="complex__services-body">
-                                                <a href="#callback" data-fancybox class="complex__services-caption">
+                                                <a href="#consult" data-fancybox class="complex__services-caption">
                                                     Проектирование <br>
                                                     и дизайн помещения
                                                 </a>
                                                 <div class="complex__services-desc">Дизайн проект это комплект документов, разработанных в соответствии с техническим заданием выявляющих логику пространства, создающий индивидуальный дизайн интерьера. Хорошо разработанный дизайн проект помогает решить много вопросов, которые возникают при строительстве.</div>
-                                                <a href="#callback" data-fancybox class="complex__services-btn">Написать менеджеру</a>
+                                                <a href="#consult" data-fancybox class="complex__services-btn">Написать менеджеру</a>
                                             </div>
                                             <div class="complex__services-image">
                                                 <img src="@img/about-services/02.jpg" class="cover-image" alt="Постер">
@@ -344,12 +352,12 @@
                                     <div class="col-md-4">
                                         <div class="complex__services-item">
                                             <div class="complex__services-body">
-                                                <a href="#callback" data-fancybox class="complex__services-caption">
+                                                <a href="#consult" data-fancybox class="complex__services-caption">
                                                     Услуги по логистике <br>
                                                     и такелажным работам
                                                 </a>
                                                 <div class="complex__services-desc">Дизайн проект это комплект документов, разработанных в соответствии с техническим заданием выявляющих логику пространства, создающий индивидуальный дизайн интерьера. Хорошо разработанный дизайн проект помогает решить много вопросов, которые возникают при строительстве.</div>
-                                                <a href="#callback" data-fancybox class="complex__services-btn">Написать менеджеру</a>
+                                                <a href="#consult" data-fancybox class="complex__services-btn">Написать менеджеру</a>
                                             </div>
                                             <div class="complex__services-image">
                                                 <img src="@img/about-services/03.jpg" class="cover-image" alt="Постер">
@@ -359,12 +367,12 @@
                                     <div class="col-md-8">
                                         <div class="complex__services-item">
                                             <div class="complex__services-body">
-                                                <a href="#callback" data-fancybox class="complex__services-caption">
+                                                <a href="#consult" data-fancybox class="complex__services-caption">
                                                     Монтажные <br>
                                                     и пусконаладочные работы
                                                 </a>
                                                 <div class="complex__services-desc">Дизайн проект это комплект документов, разработанных в соответствии с техническим заданием выявляющих логику пространства, создающий индивидуальный дизайн интерьера. Хорошо разработанный дизайн проект помогает решить много вопросов, которые возникают при строительстве.</div>
-                                                <a href="#callback" data-fancybox class="complex__services-btn">Написать менеджеру</a>
+                                                <a href="#consult" data-fancybox class="complex__services-btn">Написать менеджеру</a>
                                             </div>
                                             <div class="complex__services-image">
                                                 <img src="@img/about-services/04.jpg" class="cover-image" alt="Постер">
@@ -559,6 +567,42 @@
             @@include('html/_footer.html', {})
         </div>
         @@include('html/_modal.html', {})
+        <div id="consult" class="popup popup_md">
+            <div class="popup__header">
+                <h3 class="popup__title title-sm">Консультация и подбор оборудования</h3>
+                <button type="button" class="popup__close" data-fancybox-close></button>
+            </div>
+
+            <form action="#" class="popup__form form">
+                <div class="form__field">
+                    <div class="form__label">Ваше имя *</div>
+                    <input type="text" name="name" required placeholder="Имя" class="form__input">
+                </div>
+                <div class="form__field">
+                    <div class="form__label">Телефон *</div>
+                    <input type="tel" name="phone" required placeholder="+7" class="form__input">
+                </div>
+                <div class="form__field">
+                    <div class="form__label">E-mail *</div>
+                    <input type="email" name="e-mail" required placeholder="mail@example.ru" class="form__input">
+                </div>
+                <div class="form__field">
+                    <div class="form__label">Сообщение</div>
+                    <textarea name="message" class="form__textarea" placeholder="Дополнительная информация"></textarea>
+                </div>
+                <div class="form__field">
+                    <label class="form__file">
+                        <input type="file" name="attachment" class="form__file-input hidden" hidden>
+                        <span class="form__file-btn btn btn-primary-outline icon-attach full-width">Загрузить</span>
+                    </label>
+                </div>
+                <div class="form__hint icon-info">
+                    Вы можете прикрепить файл к Вашему сообщению
+                </div>
+                <button type="submit" class="form__btn btn btn-primary">Отправить</button>
+            </form>
+
+        </div>
         @@include('html/_js.html', {})
     </body>
 </html>
