@@ -38,13 +38,13 @@
 	<meta property="twitter:image:src" content="/OG.png">
 	<!-- Twitter -->
 	<!-- plugnis -->
-	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240802152432">
-	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20240802152432">
-	<link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240802152432">
-	<link rel="stylesheet" href="css/libs/select2.min.css?_v=20240802152432">
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240802154210">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20240802154210">
+	<link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240802154210">
+	<link rel="stylesheet" href="css/libs/select2.min.css?_v=20240802154210">
 	<!-- plugnis -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20240802152432">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240802152432">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20240802154210">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240802154210">
 </head>
 
 <body>
@@ -3693,9 +3693,9 @@
 								<div class="col-md-4">
 									<div class="complex__services-item">
 										<div class="complex__services-body">
-											<a href="#consult" data-fancybox class="complex__services-caption"> Проектирование <br> и дизайн помещения </a>
+											<a href="#design" data-fancybox class="complex__services-caption"> Проектирование <br> и дизайн помещения </a>
 											<div class="complex__services-desc">Дизайн проект это комплект документов, разработанных в соответствии с техническим заданием выявляющих логику пространства, создающий индивидуальный дизайн интерьера. Хорошо разработанный дизайн проект помогает решить много вопросов, которые возникают при строительстве.</div>
-											<a href="#consult" data-fancybox class="complex__services-btn">Написать менеджеру</a>
+											<a href="#design" data-fancybox class="complex__services-btn">Написать менеджеру</a>
 										</div>
 										<div class="complex__services-image">
 											<img src="img/about-services/02.jpg" class="cover-image" alt="Постер">
@@ -3705,9 +3705,9 @@
 								<div class="col-md-4">
 									<div class="complex__services-item">
 										<div class="complex__services-body">
-											<a href="#consult" data-fancybox class="complex__services-caption"> Услуги по логистике <br> и такелажным работам </a>
+											<a href="#services" data-fancybox class="complex__services-caption"> Услуги по логистике <br> и такелажным работам </a>
 											<div class="complex__services-desc">Дизайн проект это комплект документов, разработанных в соответствии с техническим заданием выявляющих логику пространства, создающий индивидуальный дизайн интерьера. Хорошо разработанный дизайн проект помогает решить много вопросов, которые возникают при строительстве.</div>
-											<a href="#consult" data-fancybox class="complex__services-btn">Написать менеджеру</a>
+											<a href="#services" data-fancybox class="complex__services-btn">Написать менеджеру</a>
 										</div>
 										<div class="complex__services-image">
 											<img src="img/about-services/03.jpg" class="cover-image" alt="Постер">
@@ -3717,9 +3717,9 @@
 								<div class="col-md-8">
 									<div class="complex__services-item">
 										<div class="complex__services-body">
-											<a href="#consult" data-fancybox class="complex__services-caption"> Монтажные <br> и пусконаладочные работы </a>
+											<a href="#installation" data-fancybox class="complex__services-caption"> Монтажные <br> и пусконаладочные работы </a>
 											<div class="complex__services-desc">Дизайн проект это комплект документов, разработанных в соответствии с техническим заданием выявляющих логику пространства, создающий индивидуальный дизайн интерьера. Хорошо разработанный дизайн проект помогает решить много вопросов, которые возникают при строительстве.</div>
-											<a href="#consult" data-fancybox class="complex__services-btn">Написать менеджеру</a>
+											<a href="#installation" data-fancybox class="complex__services-btn">Написать менеджеру</a>
 										</div>
 										<div class="complex__services-image">
 											<img src="img/about-services/04.jpg" class="cover-image" alt="Постер">
@@ -4961,16 +4961,112 @@
 			<div class="form__hint icon-info"> Вы можете прикрепить файл к Вашему сообщению </div>
 			<button type="submit" class="form__btn btn btn-primary">Отправить</button>
 		</form>
+	</div>
+	<div id="design" class="popup popup_md">
+		<div class="popup__header">
+			<h3 class="popup__title title-sm"> Проектирование и дизайн помещения</h3>
+			<button type="button" class="popup__close" data-fancybox-close></button>
+		</div>
+		<form action="#" class="popup__form form">
+			<div class="form__field">
+				<div class="form__label">Ваше имя *</div>
+				<input type="text" name="name" required placeholder="Имя" class="form__input">
+			</div>
+			<div class="form__field">
+				<div class="form__label">Телефон *</div>
+				<input type="tel" name="phone" required placeholder="+7" class="form__input">
+			</div>
+			<div class="form__field">
+				<div class="form__label">E-mail *</div>
+				<input type="email" name="e-mail" required placeholder="mail@example.ru" class="form__input">
+			</div>
+			<div class="form__field">
+				<div class="form__label">Сообщение</div>
+				<textarea name="message" class="form__textarea" placeholder="Дополнительная информация"></textarea>
+			</div>
+			<div class="form__field">
+				<label class="form__file">
+					<input type="file" name="attachment" class="form__file-input hidden" hidden>
+					<span class="form__file-btn btn btn-primary-outline icon-attach full-width">Загрузить</span>
+				</label>
+			</div>
+			<div class="form__hint icon-info"> Вы можете прикрепить файл к Вашему сообщению </div>
+			<button type="submit" class="form__btn btn btn-primary">Отправить</button>
+		</form>
+	</div>
+	<div id="services" class="popup popup_md">
+		<div class="popup__header">
+			<h3 class="popup__title title-sm"> Услуги по логистике и такелажным работам</h3>
+			<button type="button" class="popup__close" data-fancybox-close></button>
+		</div>
+		<form action="#" class="popup__form form">
+			<div class="form__field">
+				<div class="form__label">Ваше имя *</div>
+				<input type="text" name="name" required placeholder="Имя" class="form__input">
+			</div>
+			<div class="form__field">
+				<div class="form__label">Телефон *</div>
+				<input type="tel" name="phone" required placeholder="+7" class="form__input">
+			</div>
+			<div class="form__field">
+				<div class="form__label">E-mail *</div>
+				<input type="email" name="e-mail" required placeholder="mail@example.ru" class="form__input">
+			</div>
+			<div class="form__field">
+				<div class="form__label">Сообщение</div>
+				<textarea name="message" class="form__textarea" placeholder="Дополнительная информация"></textarea>
+			</div>
+			<div class="form__field">
+				<label class="form__file">
+					<input type="file" name="attachment" class="form__file-input hidden" hidden>
+					<span class="form__file-btn btn btn-primary-outline icon-attach full-width">Загрузить</span>
+				</label>
+			</div>
+			<div class="form__hint icon-info"> Вы можете прикрепить файл к Вашему сообщению </div>
+			<button type="submit" class="form__btn btn btn-primary">Отправить</button>
+		</form>
+	</div>
+	<div id="installation" class="popup popup_md">
+		<div class="popup__header">
+			<h3 class="popup__title title-sm">Монтажные и пусконаладочные работы</h3>
+			<button type="button" class="popup__close" data-fancybox-close></button>
+		</div>
+		<form action="#" class="popup__form form">
+			<div class="form__field">
+				<div class="form__label">Ваше имя *</div>
+				<input type="text" name="name" required placeholder="Имя" class="form__input">
+			</div>
+			<div class="form__field">
+				<div class="form__label">Телефон *</div>
+				<input type="tel" name="phone" required placeholder="+7" class="form__input">
+			</div>
+			<div class="form__field">
+				<div class="form__label">E-mail *</div>
+				<input type="email" name="e-mail" required placeholder="mail@example.ru" class="form__input">
+			</div>
+			<div class="form__field">
+				<div class="form__label">Сообщение</div>
+				<textarea name="message" class="form__textarea" placeholder="Дополнительная информация"></textarea>
+			</div>
+			<div class="form__field">
+				<label class="form__file">
+					<input type="file" name="attachment" class="form__file-input hidden" hidden>
+					<span class="form__file-btn btn btn-primary-outline icon-attach full-width">Загрузить</span>
+				</label>
+			</div>
+			<div class="form__hint icon-info"> Вы можете прикрепить файл к Вашему сообщению </div>
+			<button type="submit" class="form__btn btn btn-primary">Отправить</button>
+		</form>
 	</div> <!-- plugnis -->
-	<script src="js/libs/jquery-3.7.1.min.js?_v=20240802152432"></script>
-	<script src="js/libs/swiper-bundle.min.js?_v=20240802152432"></script>
-	<script src="js/libs/fancybox.umd.js?_v=20240802152432"></script>
-	<script src="js/libs/nouislider.min.js?_v=20240802152432"></script>
-	<script src="js/libs/select2.full.min.js?_v=20240802152432"></script>
-	<script src="js/libs/jquery.validate.min.js?_v=20240802152432"></script>
-	<script src="js/libs/messages_ru.min.js?_v=20240802152432"></script>
+	<script src="js/libs/jquery-3.7.1.min.js?_v=20240802154210"></script>
+	<script src="js/libs/swiper-bundle.min.js?_v=20240802154210"></script>
+	<script src="js/libs/fancybox.umd.js?_v=20240802154210"></script>
+	<script src="js/libs/nouislider.min.js?_v=20240802154210"></script>
+	<script src="js/libs/select2.full.min.js?_v=20240802154210"></script>
+	<script src="js/libs/jquery.validate.min.js?_v=20240802154210"></script>
+	<script src="js/libs/messages_ru.min.js?_v=20240802154210"></script>
 	<!-- plugnis -->
-	<script src="js/app.min.js?_v=20240802152432"></script>
+	<script src="js/app.min.js?_v=20240802154210"></script>
 </body>
 
 </html>
