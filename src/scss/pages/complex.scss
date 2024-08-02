@@ -667,6 +667,10 @@
 		margin: 0;
 		color: $darkBlue;
 		font-size: 0.8125rem;
+		&.swiper-pagintion {
+			padding: 0;
+			margin: 0;
+		}
 	}
 	// .complex__next
 	&__next {
