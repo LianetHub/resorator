@@ -132,7 +132,7 @@
 	// .popup__form
 	&__form {
 		margin-top: 1.25rem;
-		// flex: 1 1 auto;
+		position: relative;
 		@media (max-width: $md5) {
 			gap: 1.25rem;
 			.form__btn {
@@ -143,6 +143,7 @@
 			}
 		}
 	}
+
 	&__close {
 		background: none;
 		width: 1.5rem;
@@ -432,5 +433,8 @@
 		.btn.btn-gray-outline {
 			color: $darkBlue;
 		}
+	}
+	&__card {
+		margin-top: 1.25rem;
 	}
 }

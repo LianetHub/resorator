@@ -774,6 +774,19 @@ $(function () {
         }
     });
 
+    // get visible search results
+    if ($('[data-search]').length > 0) {
+
+        $('[data-search]').on('focus', function (e) {
+            $('[data-search]').closest('.form__field').next('.form__results').slideDown();
+        })
+        $('[data-search]').on('blur', function (e) {
+            $('[data-search]').closest('.form__field').next('.form__results').slideUp();
+        })
+
+    }
+
+
 
     // observer height change in product car side
     if ($('.product-card__side').length > 0) {
@@ -810,6 +823,8 @@ $(function () {
 
         setSideProductHeight();
     }
+
+
 
 
     $('#language-form').on('submit', function (e) {

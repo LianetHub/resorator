@@ -17,8 +17,8 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -31,14 +31,6 @@
 }
 
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Inter";
   font-display: swap;
   src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
@@ -47,18 +39,26 @@
 }
 
 @font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -73,8 +73,8 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -1310,6 +1310,7 @@ body.lock-catalog-filter {
 
 .popup__form {
   margin-top: 1.25rem;
+  position: relative;
 }
 
 .popup__close {
@@ -1572,6 +1573,10 @@ body.lock-catalog-filter {
 
 .popup__btns .btn.btn-gray-outline {
   color: #475569;
+}
+
+.popup__card {
+  margin-top: 1.25rem;
 }
 
 .custom-select-container ul {
@@ -2517,6 +2522,17 @@ table td button {
   color: #ef4444;
 }
 
+.form__field-btn {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0.75rem;
+  font-size: 1.25rem;
+  color: #94a3b8;
+}
+
 .form__label {
   font-size: 0.8125rem;
   display: block;
@@ -2790,6 +2806,51 @@ table td button {
 
 .form__option:not(:last-child) {
   margin-bottom: 1.5rem;
+}
+
+.form__results {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.63rem);
+  left: 0;
+  width: 100%;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #e8e8e8;
+  background: #fff;
+  padding: 0.62rem 0.63rem;
+  max-height: 14.6875rem;
+  overflow-y: auto;
+}
+
+.form__results::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.form__results::-webkit-scrollbar-track {
+  background: #f2f5f9;
+}
+
+.form__results::-webkit-scrollbar-thumb {
+  background: #ced6e0;
+  border-radius: 0.5rem;
+}
+
+.form__result-item {
+  color: #475569;
+  font-size: 0.8125rem;
+  padding: 0.94rem 0.62rem;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+  border-radius: 0.3125rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.form__result-item:not(:last-child) {
+  border-bottom: 0.0625rem solid #f2f5f9;
 }
 
 .toggler__input:disabled + .toggler__btn {
@@ -8411,10 +8472,10 @@ table td button {
 }
 
 .purchase__block-body {
-  margin-top: 1.25rem;
+  margin-top: 1.125rem;
 }
 
-.purchase__buyer {
+.purchase__card {
   border-radius: 0.3125rem;
   border: 0.0625rem solid #f1f2f4;
   background: #f2f5f9;
@@ -8422,14 +8483,71 @@ table td button {
   color: #475569;
 }
 
-.purchase__buyer-reqs {
-  margin-top: 1.25rem;
-  font-size: 0.875rem;
+.purchase__card-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
 }
 
-.purchase__buyer-address {
-  margin-top: 0.63rem;
+.purchase__card-reqs {
   font-size: 0.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2.5rem;
+  row-gap: 0.625rem;
+}
+
+.purchase__card-reqs:not(:first-child) {
+  margin-top: 1.25rem;
+}
+
+.purchase__card-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.31rem;
+  font-size: 0.8125rem;
+}
+
+.purchase__card-item strong {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.purchase__card-item.lg-item {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+}
+
+.purchase__card-address {
+  margin-top: 0.63rem;
+}
+
+.purchase__caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+}
+
+.purchase__caption-link {
+  color: #1e6ba3;
+  font-size: 0.875rem;
+  text-decoration: underline;
+  font-weight: 400;
 }
 
 .purchase__options {
@@ -15462,6 +15580,14 @@ table td button {
     text-decoration: none;
   }
 
+  .form__results::-webkit-scrollbar-thumb:hover {
+    background: #afbccc;
+  }
+
+  .form__result-item:hover {
+    background-color: #f2f5f9;
+  }
+
   .checkbox__content a:hover {
     text-decoration: none;
   }
@@ -15744,6 +15870,10 @@ table td button {
 
   .cart__item-delete:hover {
     color: #ef4444;
+  }
+
+  .purchase__caption-link:hover {
+    text-decoration: none;
   }
 
   .compare__block:hover {
