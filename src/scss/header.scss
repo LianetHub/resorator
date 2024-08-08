@@ -317,6 +317,9 @@
 				background: $yellow;
 			}
 		}
+		&.icon-dialog {
+			position: relative;
+		}
 		@media (max-width: $md5) {
 			flex: 0 0 25%;
 			&.open-menu-mobile {

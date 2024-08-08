@@ -41,6 +41,14 @@
 			color: $red;
 		}
 	}
+	// .form__field-row
+	&__field-row {
+		position: relative;
+		.form__input {
+			padding-right: 2.25rem;
+		}
+	}
+
 	&__field-btn {
 		position: absolute;
 		top: 50%;
@@ -48,6 +56,12 @@
 		right: 0.75rem;
 		font-size: 1.25rem;
 		color: $lightBlue;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellow;
+			}
+		}
 	}
 	&__label {
 		font-size: 0.8125rem;
@@ -295,6 +309,15 @@
 			}
 		}
 	}
+	&__btns {
+		display: flex;
+		gap: rem(30);
+		flex-direction: column;
+		@media (min-width: $md5) {
+			flex-wrap: wrap;
+			flex-direction: row;
+		}
+	}
 }
 
 .toggler {
@@ -455,8 +478,7 @@
 		}
 	}
 	&.btn-primary-outline {
-		color: $yellow;
-
+		color: $darkBlue;
 		border: rem(1) solid $yellow;
 		&:hover,
 		&:active {
@@ -480,7 +502,7 @@
 	}
 	&.btn-gray-outline {
 		border: rem(1) solid $lightBlue;
-		color: $lightBlue;
+		color: $darkBlue;
 		&:hover,
 		&:active {
 			background: $lightBlue;

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор | Оформление заказа'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "shadow": true
+            })
+            @@include('html/_search.html', {
+            "results": true
+            })
+            <main class="page">
+                <nav aria-label="Хлебные крошки" class="breadcrumbs tablet-sm-only">
+                    <div class="breadcrumbs__container">
+                        <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a href="/" class="breadcrumbs__link" itemprop="item">
+                                    <span itemprop="name">Главная</span>
+                                </a>
+                                <meta itemprop="position" content="1">
+                            </li>
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a href="/lk" class="breadcrumbs__link" itemprop="item">
+                                    <span itemprop="name">Личный кабинет</span>
+                                </a>
+                                <meta itemprop="position" content="2">
+                            </li>
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a class="breadcrumbs__link active" itemprop="item">
+                                    <span itemprop="name">Корзина</span>
+                                </a>
+                                <meta itemprop="position" content="3">
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <section class="cart">
+                    <div class="cart__container">
+                        <div class="cart__body">
+                            <div class="row">
+                                <div class="col-xxl-9 col-lg-7">
+                                    <div class="cart__title title-md">
+                                        Оформление заказа
+                                    </div>
+                                    <div class="cart__purchase purchase">
+                                        <div class="purchase__tabs" data-underline-filters>
+                                            <button type="button" class="purchase__tab active" data-underline-filter>Физическое лицо</button>
+                                            <button type="button" class="purchase__tab" data-underline-filter>Юридическое лицо</button>
+                                        </div>
+                                        <div class="purchase__body">
+                                            <div class="purchase__content active">
+                                                <div class="purchase__block">
+                                                    <div class="purchase__caption title-sm">
+                                                        Покупатель
+                                                    </div>
+                                                    <div class="purchase__block-body">
+                                                        <div class="row sm-offsets">
+                                                            <div class="col-12">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Фамилия*</div>
+                                                                    <input type="text" name="surname" placeholder="Ваша фамилия" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Имя*</div>
+                                                                    <input type="text" name="firstname" placeholder="Ваше имя" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Отчество</div>
+                                                                    <input type="text" name="parentname" placeholder="Ваше отчество" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Телефон для связи*</div>
+                                                                    <input type="tel" name="phone" placeholder="+7" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Дополнительный телефон</div>
+                                                                    <input type="tel" name="second-phone" placeholder="+7" class="form__input">
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="purchase__block">
+                                                    <div class="purchase__caption title-sm">
+                                                        Адрес доставки
+                                                        <a href="#choise-address" data-fancybox class="purchase__caption-link">Выбрать</a>
+                                                    </div>
+                                                    <div class="purchase__block-body">
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <div class="purchase__card-item">
+                                                                    <strong>Город</strong>
+                                                                    Москва, Люберецкий МО
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="purchase__card-item">
+                                                                    <strong>Квартира/Офис</strong>
+                                                                    316
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="purchase__card-item">
+                                                                    <strong>Улица</strong>
+                                                                    Строительная
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="purchase__card-item">
+                                                                    <strong>Подъезд</strong>
+                                                                    <span class="red-color">Не указан</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="purchase__card-item">
+                                                                    <strong>Дом</strong>
+                                                                    6
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="purchase__card-item">
+                                                                    <strong>Этаж</strong>
+                                                                    2
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="purchase__card-item">
+                                                                    <strong>Комментарий</strong>
+                                                                    При доставке важно позвонить по номеру телефона, указанному в оформлении заказа за 2 часа до выезда курьера. Так же уведомить о точной дате доставки и согласовать ее непосредственно по телефону.
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <a href="" class="purchase__caption-link">Изменить адрес доставки</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="purchase__content">
+                                                <div class="purchase__block">
+                                                    <div class="purchase__caption title-sm">
+                                                        Покупатель
+                                                        <a href="#choise-company" data-fancybox class="purchase__caption-link">Выбрать</a>
+                                                    </div>
+                                                    <div class="purchase__block-body">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="purchase__card">
+                                                                    <div class="purchase__card-title title-sm">ООО “Пример”</div>
+                                                                    <div class="purchase__card-reqs">
+                                                                        <div class="purchase__card-item">
+                                                                            <strong> ИНН</strong> 3664069397
+                                                                        </div>
+                                                                        <div class="purchase__card-item">
+                                                                            <strong>КПП</strong> 366601001
+                                                                        </div>
+                                                                    </div>
+                                                                    <address class="purchase__card-address purchase__card-item">
+                                                                        <strong>
+                                                                            Адрес
+                                                                        </strong>
+                                                                        Воронежская обл, г.о. город Воронеж, г Воронеж, ул Средне-Московская, д. 7/9, помещ. 1/1
+                                                                    </address>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Телефон для связи*</div>
+                                                                    <input type="tel" name="phone" placeholder="+7" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Дополнительный телефон</div>
+                                                                    <input type="tel" name="second-phone" placeholder="+7" class="form__input">
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="purchase__block">
+                                                    <div class="purchase__caption title-sm">
+                                                        Адрес доставки
+                                                        <a href="#choise-address" data-fancybox class="purchase__caption-link">Выбрать</a>
+                                                    </div>
+                                                    <div class="purchase__block-body">
+                                                        <div class="row">
+                                                            <div class="col-md-4 col-sm-6">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Город *</div>
+                                                                    <input type="text" name="city" placeholder="Укажите город" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Улица*</div>
+                                                                    <input type="text" name="street" placeholder="Укажите улицу" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Дом*</div>
+                                                                    <input type="text" name="street" placeholder="Укажите дом" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Квартира/Офис</div>
+                                                                    <input type="text" name="office" placeholder="Квартира/Офис" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Подъезд</div>
+                                                                    <input type="text" name="entrance" placeholder="Квартира/Офис" class="form__input">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4 col-sm-6">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Этаж</div>
+                                                                    <input type="text" name="floor" placeholder="Этаж" class="form__input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="form__field">
+                                                                    <div class="form__label">Комментарий</div>
+                                                                    <textarea name="comment" class="form__textarea" placeholder="Вы можете указать ваш комментарий, например, наличие лифта, код домофона и т.п."></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-lg-5">
+                                    <aside class="cart__sidebar">
+                                        <h2 class="cart__sidebar-title title-sm">
+                                            Информация о заказе
+                                        </h2>
+                                        <div class="cart__sidebar-row">
+                                            <div class="cart__sidebar-property">3 товара</div>
+                                            <div class="cart__sidebar-value">81 997 ₽ </div>
+                                        </div>
+                                        <div class="cart__sidebar-row">
+                                            <div class="cart__sidebar-property icon-chevron btn-profit-cart">Выгода</div>
+                                            <div class="cart__sidebar-value">-14 999 ₽ </div>
+                                        </div>
+                                        <ul class="cart__sidebar-profits">
+                                            <li class="cart__sidebar-profit">
+                                                <div class="cart__sidebar-profit-name">
+                                                    Выгода по акции
+                                                </div>
+                                                <div class="cart__sidebar-profit-value">
+                                                    -8 000 ₽
+                                                </div>
+                                            </li>
+                                            <li class="cart__sidebar-profit">
+                                                <div class="cart__sidebar-profit-name">
+                                                    Выгода по акции
+                                                </div>
+                                                <div class="cart__sidebar-profit-value">
+                                                    -6 999 ₽
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="cart__sidebar-total">
+                                            <div class="cart__sidebar-property">Итого</div>
+                                            <div class="cart__sidebar-value">69 998 ₽ </div>
+                                        </div>
+                                        <a href="#order-individual" data-fancybox class="cart__sidebar-btn btn btn-primary btn-fullwidth">Далее</a>
+                                        <div class="cart__sidebar-downloads">
+                                            <a href="" class="cart__sidebar-download btn btn-sm btn-primary-outline icon-doc">Скачать PDF</a>
+                                            <a href="" class="cart__sidebar-download btn btn-sm btn-primary-outline icon-doc">Скачать Excell</a>
+                                        </div>
+                                        <div class="product-card__more">
+                                            <a href="" class="product-card__more-btn icon-whatsapp"></a>
+                                            <a href="" class="product-card__more-btn icon-telegram"></a>
+                                            <a href="" class="product-card__more-btn">Написать менеджеру</a>
+                                        </div>
+                                    </aside>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__products">
+                            <div class="product-card__products-header">
+                                <div class="product-card__caption">
+                                    Вам пригодится
+                                    <span class="product-card__quantity">(124)</span>
+                                </div>
+                                <div class="product-card__contorls">
+                                    <div class="product-card__prev swiper-button-prev"></div>
+                                    <div class="product-card__pagination"></div>
+                                    <div class="product-card__next swiper-button-next"></div>
+                                </div>
+                            </div>
+                            <div class="product-card__items swiper">
+                                <div class="swiper-wrapper">
+                                    @@loop('./html/_product.html', './html/products-slider.json')
+                                </div>
+                            </div>
+                            <button type="button" class="product-card__loadmore icon-chevron btn-all-products"><span>Развернуть</span> все товары</button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        <div id="order-individual" class="popup popup_lg">
+            <div class="popup__header">
+                <h3 class="popup__title title-sm">Оформление заказа</h3>
+                <button type="button" class="popup__close" data-fancybox-close></button>
+            </div>
+            <form action="#" class="popup__form form">
+                <div class="form__options">
+                    <label class="form__option option">
+                        <input type="radio" name="payment-individual" checked value="online" class="option__input hidden" hidden>
+                        <span class="option__content">
+                            <span class="option__column">
+                                <span class="option__content-caption">Онлайн оплата банковской картой</span>
+                                <span class="option__content-text">Visa, Master Card, МИР зачисление в течение 5 минут. Ссылка на оплату будет направлена на e-mail, после подтверждения заказа с менеджером</span>
+                            </span>
+                        </span>
+                    </label>
+                    <label class="form__option option">
+                        <input type="radio" name="payment-individual" value="lease" class="option__input hidden" hidden>
+                        <span class="option__content">
+                            <span class="option__column">
+                                <span class="option__content-caption">Купить в кредит</span>
+                                <span class="option__content-text">Visa, Master Card, МИР зачисление в течение 5 минут. Ссылка на оплату будет направлена на e-mail, после подтверждения заказа с менеджером</span>
+                            </span>
+                        </span>
+                    </label>
+                    <label class="form__option option">
+                        <input type="radio" name="payment-individual" value="manager" class="option__input hidden" hidden>
+                        <span class="option__content">
+                            <span class="option__column">
+                                <span class="option__content-caption">Связаться с менеджером</span>
+                                <span class="option__content-text">Visa, Master Card, МИР зачисление в течение 5 минут. Ссылка на оплату будет направлена на e-mail, после подтверждения заказа с менеджером</span>
+                            </span>
+                        </span>
+                    </label>
+                </div>
+                <button type="submit" class="form__btn btn btn-primary">Оформить заказ</button>
+            </form>
+
+        </div>
+        <div id="order-entity" class="popup popup_lg">
+            <div class="popup__header">
+                <h3 class="popup__title title-sm">Оформление заказа</h3>
+                <button type="button" class="popup__close" data-fancybox-close></button>
+            </div>
+            <a href="" class="popup__download btn btn-sm btn-primary-outline icon-doc">Скачать счет на оплату PDF</a>
+            <form action="#" class="popup__form form">
+                <div class="form__options">
+                    <label class="form__option option">
+                        <input type="radio" name="payment-entity" checked value="online" class="option__input hidden" hidden>
+                        <span class="option__content">
+                            <span class="option__column">
+                                <span class="option__content-caption">Оплата картой</span>
+                                <span class="option__content-text">Visa, Master Card, МИР зачисление в течение 5 минут. Ссылка на оплату будет направлена на e-mail, после подтверждения заказа с менеджером</span>
+                            </span>
+                        </span>
+                    </label>
+                    <label class="form__option option">
+                        <input type="radio" name="payment-entity" value="credit" class="option__input hidden" hidden>
+                        <span class="option__content">
+                            <span class="option__column">
+                                <span class="option__content-caption">Покупка в лизинг</span>
+                                <span class="option__content-text">Возможна покупка товара в лизинг при стоимости товара от 500&nbsp;000 рублей.</span>
+                            </span>
+                        </span>
+                    </label>
+                    <label class="form__option option">
+                        <input type="radio" name="payment-entity" value="manager" class="option__input hidden" hidden>
+                        <span class="option__content">
+                            <span class="option__column">
+                                <span class="option__content-caption">Связаться с менеджером</span>
+                                <span class="option__content-text">Visa, Master Card, МИР зачисление в течение 5 минут. Ссылка на оплату будет направлена на e-mail, после подтверждения заказа с менеджером</span>
+                            </span>
+                        </span>
+                    </label>
+                </div>
+                <button type="submit" class="form__btn btn btn-primary">Оформить заказ</button>
+            </form>
+        </div>
+        <div id="choise-company" class="popup popup_lg">
+            <div class="popup__header">
+                <h3 class="popup__title title-sm">Выбрать компанию</h3>
+                <button type="button" class="popup__close" data-fancybox-close></button>
+            </div>
+            <p class="popup__subtitle">
+                Выберите компанию для выставления счета
+            </p>
+            <form action="#" class="popup__form form">
+                <div class="form__field">
+                    <input type="text" data-search class="form__input" placeholder="Начните вводить для поиска">
+                    <button type="submit" class="form__field-btn icon-search"></button>
+                </div>
+                <div class="form__results">
+                    <a href="" class="form__result-item">ООО “Пример”</a>
+                    <a href="" class="form__result-item">ООО “Ресторатор”</a>
+                    <a href="" class="form__result-item">ООО “Русхорека”</a>
+                    <a href="" class="form__result-item">ООО “Супер компания”</a>
+                    <a href="" class="form__result-item">ООО “Супер компания”</a>
+                    <a href="" class="form__result-item">ООО “Супер компания”</a>
+                </div>
+            </form>
+            <div class="popup__card purchase__card">
+                <div class="purchase__card-title title-sm">ООО “Ресторатор”</div>
+                <div class="purchase__card-reqs">
+                    <div class="purchase__card-item">
+                        <strong> ИНН</strong> 3664069397
+                    </div>
+                    <div class="purchase__card-item">
+                        <strong>КПП</strong> 366601001
+                    </div>
+                </div>
+                <address class="purchase__card-address purchase__card-item">
+                    <strong>
+                        Адрес
+                    </strong>
+                    Воронежская обл, г.о. город Воронеж, г Воронеж, ул Средне-Московская, д. 7/9, помещ. 1/1
+                </address>
+            </div>
+        </div>
+        <div id="choise-address" class="popup popup_lg">
+            <div class="popup__header">
+                <h3 class="popup__title title-sm">Адрес доставки</h3>
+                <button type="button" class="popup__close" data-fancybox-close></button>
+            </div>
+            <p class="popup__subtitle">
+                Выберите адрес доставки
+            </p>
+            <form action="#" class="popup__form form">
+                <div class="form__field">
+                    <input type="text" data-search class="form__input" placeholder="Начните вводить для поиска">
+                    <button type="submit" class="form__field-btn icon-search"></button>
+                </div>
+                <div class="form__results">
+                    <a href="" class="form__result-item">Воронежская обл, г.о. город Воронеж, г Воронеж...</a>
+                    <a href="" class="form__result-item">Воронежская обл, г.о. город Воронеж, г Воронеж...</a>
+                    <a href="" class="form__result-item">Воронежская обл, г.о. город Воронеж, г Воронеж...</a>
+                    <a href="" class="form__result-item">Воронежская обл, г.о. город Воронеж, г Воронеж...</a>
+                    <a href="" class="form__result-item">Воронежская обл, г.о. город Воронеж, г Воронеж...</a>
+                    <a href="" class="form__result-item">Воронежская обл, г.о. город Воронеж, г Воронеж...</a>
+                    <a href="" class="form__result-item">Воронежская обл, г.о. город Воронеж, г Воронеж...</a>
+                    <a href="" class="form__result-item">Воронежская обл, г.о. город Воронеж, г Воронеж...</a>
+                    <a href="" class="form__result-item">Воронежская обл, г.о. город Воронеж, г Воронеж...</a>
+
+                </div>
+            </form>
+            <div class="popup__card purchase__card">
+                <div class="purchase__card-grid">
+                    <div class="purchase__card-item">
+                        <strong>Город</strong> Москва, Люберецкий МО
+                    </div>
+                    <div class="purchase__card-item">
+                        <strong>Квартира/Офис</strong> 316
+                    </div>
+                    <div class="purchase__card-item">
+                        <strong>Улица</strong> Строительная
+                    </div>
+                    <div class="purchase__card-item">
+                        <strong>Подъезд</strong> <span class="color-red">Строительная</span>
+                    </div>
+                    <div class="purchase__card-item">
+                        <strong>Дом</strong> 6
+                    </div>
+                    <div class="purchase__card-item">
+                        <strong>Этаж</strong> 2
+                    </div>
+                    <div class="purchase__card-item lg-item">
+                        <strong>Комментарий</strong>
+                        При доставке важно позвонить по номеру телефона, указанному в оформлении заказа за 2 часа до выезда курьера. Так же уведомить о точной дате доставки и согласовать ее непосредственно по телефону.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('html/_js.html', {})
+
+    </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор | Личный кабинет пользователя'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('./html/_lk-header.html')
+            <main class="page">
+                <div class="lk">
+                    @@include('./html/_lk-sidebar.html', {
+                    "active": 5
+                    })
+                    <div class="lk__content">
+                        <div class="lk__block">
+                            <div class="lk__block-header">
+                                <h2 class="lk__block-title title-sm">
+                                    Учетная запись
+                                </h2>
+                            </div>
+                            <div class="lk__card">
+                                <div class="lk__card-header">
+                                    <h3 class="lk__card-title title-sm icon-lock">Учетные данные</h3>
+                                    <button type="button" class="lk__card-more icon-dotts"></button>
+                                </div>
+                                <div class="lk__card-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="lk__card-caption">Телефон для атворизации</div>
+                                            <div class="lk__card-value">+7 920 223 45 14</div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="lk__card-caption">Пароль</div>
+                                            <div class="lk__card-value">******</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lk__card-footer">
+                                    <a href="lk-account-change.html" class="lk__card-change">Изменить учетные данные</a>
+                                </div>
+                            </div>
+                            <div class="lk__card">
+                                <div class="lk__card-header">
+                                    <h3 class="lk__card-title title-sm icon-logout">Управление аккаунтом</h3>
+                                    <button type="button" class="lk__card-more icon-dotts"></button>
+                                </div>
+                                <div class="lk__card-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="lk__card-caption">Вы с нами с 28 Июня 2020 года</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lk__card-footer">
+                                    <a href="" class="lk__card-logout">Выйти из аккаунта</a>
+                                </div>
+                            </div>
+                            <div class="lk__card">
+                                <div class="lk__card-header">
+                                    <h3 class="lk__card-title title-sm icon-devices">Сеансы и устройства</h3>
+                                    <button type="button" class="lk__card-more icon-dotts"></button>
+                                </div>
+                                <div class="lk__card-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="lk__card-caption">Вы уже заходили в профиль на этих устройствах</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="lk__sessions">
+                                    <li class="lk__sessions-item">
+                                        <div class="lk__sessions-main">
+                                            <div class="lk__sessions-caption">Windows Браузер Chrome</div>
+                                            <div class="lk__sessions-info">
+                                                <div class="lk__sessions-info-item">
+                                                    20 мая 2024 в 18:37
+                                                </div>
+                                                <div class="lk__sessions-info-item">
+                                                    Люберцы, Россия
+                                                </div>
+                                                <div class="lk__sessions-info-item">
+                                                    91.245.130.30
+                                                </div>
+                                                <div class="lk__sessions-info-item green-color">
+                                                    Текущий сеанс
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="" class="lk__sessions-logout">Выйти</a>
+                                    </li>
+                                    <li class="lk__sessions-item">
+                                        <div class="lk__sessions-main">
+                                            <div class="lk__sessions-caption">Android Приложение Ozon (версия 2366 0)</div>
+                                            <div class="lk__sessions-info">
+                                                <div class="lk__sessions-info-item">
+                                                    20 мая 2024 в 18:37
+                                                </div>
+                                                <div class="lk__sessions-info-item">
+                                                    Люберцы, Россия
+                                                </div>
+                                                <div class="lk__sessions-info-item">
+                                                    91.245.130.30
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="" class="lk__sessions-logout">Выйти</a>
+                                    </li>
+                                    <li class="lk__sessions-item">
+                                        <div class="lk__sessions-main">
+                                            <div class="lk__sessions-caption">Windows Браузер Chrome</div>
+                                            <div class="lk__sessions-info">
+                                                <div class="lk__sessions-info-item">
+                                                    20 мая 2024 в 18:37
+                                                </div>
+                                                <div class="lk__sessions-info-item">
+                                                    Люберцы, Россия
+                                                </div>
+                                                <div class="lk__sessions-info-item">
+                                                    91.245.130.30
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="" class="lk__sessions-logout">Выйти</a>
+                                    </li>
+                                    <li class="lk__sessions-item">
+                                        <div class="lk__sessions-main">
+                                            <div class="lk__sessions-caption">Android Приложение Ozon (версия 2303 0)</div>
+                                            <div class="lk__sessions-info">
+                                                <div class="lk__sessions-info-item">
+                                                    20 мая 2024 в 18:37
+                                                </div>
+                                                <div class="lk__sessions-info-item">
+                                                    Люберцы, Россия
+                                                </div>
+                                                <div class="lk__sessions-info-item">
+                                                    91.245.130.30
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="" class="lk__sessions-logout">Выйти</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

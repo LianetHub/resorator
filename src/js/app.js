@@ -512,6 +512,17 @@ $(function () {
             $target.closest('.complex__btns').next('.complex__options').find('.complex__option').eq($target.index()).addClass('active fade').siblings().removeClass('active fade');
         }
 
+
+        // get visible password
+        if ($target.is('.btn-toggle-pass')) {
+            $target.toggleClass('active');
+            if ($target.hasClass('active')) {
+                $target.prev().attr('type', 'text');
+            } else {
+                $target.prev().attr('type', 'password');
+            }
+        }
+
     });
 
 

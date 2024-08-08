@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор | Личный кабинет пользователя'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('./html/_lk-header.html')
+            <main class="page">
+                <div class="lk">
+                    @@include('./html/_lk-sidebar.html', {
+                    "active": 4
+                    })
+                    <div class="lk__content">
+                        <div class="lk__block">
+                            <div class="lk__block-header">
+                                <h2 class="lk__block-title title-sm">
+                                    Изменить профиль
+                                </h2>
+                            </div>
+                            <div class="lk__card">
+                                <h3 class="lk__card-title title-sm icon-user">Личные данные</h3>
+                                <div class="lk__card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="lk__card-caption">ФИО</div>
+                                            <div class="lk__card-value">Заварин Николай Владимирович</div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="lk__card-caption">Телефон для связи</div>
+                                            <div class="lk__card-value">+7 964 448 44 43</div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="lk__card-caption">Почта</div>
+                                            <div class="lk__card-value red-color">Не указана</div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="lk__card-caption">Дополнительный телефон</div>
+                                            <div class="lk__card-value">+7 964 448 44 43</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lk__card-footer">
+                                    <a href="lk-user-change.html" class="lk__card-change">Изменить личные данные</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>
