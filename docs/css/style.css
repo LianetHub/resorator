@@ -31,18 +31,10 @@
 }
 
 @font-face {
-  font-family: "icons";
+  font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
   font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
   font-style: normal;
 }
 
@@ -55,9 +47,17 @@
 }
 
 @font-face {
-  font-family: "DinPro";
+  font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -11306,7 +11306,7 @@ table td button {
   font-size: 0.8125rem;
 }
 
-.lk__card-change {
+.lk__card-link {
   color: #1e6ba3;
   font-size: 0.8125rem;
   text-decoration: underline;
@@ -11450,6 +11450,60 @@ table td button {
   color: #1e6ba3;
   font-size: 0.8125rem;
   text-decoration: underline;
+}
+
+.lk__addresses {
+  margin-top: 1.87rem;
+}
+
+.lk__addresses-title {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.lk__addresses-list {
+  margin-top: 1.25rem;
+}
+
+.lk__addresses-item {
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #e8e8e8;
+  padding: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+}
+
+.lk__addresses-item:not(:last-child) {
+  margin-bottom: 0.62rem;
+}
+
+.lk__addresses-caption {
+  color: #475569;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.lk__addresses-desc {
+  margin-top: 0.62rem;
+  color: #94a3b8;
+  font-size: 0.8125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.25rem;
+  row-gap: 0.63rem;
 }
 
 @media (min-width: 375px) {
@@ -16613,7 +16667,7 @@ table td button {
     color: #f7ce46;
   }
 
-  .lk__card-change:hover {
+  .lk__card-link:hover {
     text-decoration: none;
   }
 
@@ -16636,6 +16690,10 @@ table td button {
 
   .lk__company-edit:hover {
     text-decoration: none;
+  }
+
+  .lk__addresses-item:hover {
+    background: #f2f5f9;
   }
 }
 

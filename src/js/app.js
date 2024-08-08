@@ -523,6 +523,11 @@ $(function () {
             }
         }
 
+        // get visible add address form - LK
+        if ($target.is('.btn-add-address')) {
+            $('.lk__card-form').toggleClass('hidden').prev('.btn-add-address').toggleClass('hidden');
+        }
+
     });
 
 

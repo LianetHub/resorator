@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор | Личный кабинет пользователя'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('./html/_lk-header.html')
+            <main class="page">
+                <div class="lk">
+                    @@include('./html/_lk-sidebar.html', {
+                    "active": 7
+                    })
+                    <div class="lk__content">
+                        <div class="lk__block">
+                            <div class="lk__block-header">
+                                <h2 class="lk__block-title title-sm">
+                                    Мои адреса
+                                </h2>
+                            </div>
+                            <div class="lk__card">
+                                <div class="lk__card-header">
+                                    <h3 class="lk__card-title title-sm icon-location">Адреса</h3>
+                                    <button type="button" class="lk__card-more icon-dotts"></button>
+                                </div>
+                                <div class="lk__card-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button type="button" class="lk__card-link btn-add-address">
+                                                Добавить адрес
+                                            </button>
+                                            <form action="#" class="lk__card-form hidden">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-6">
+                                                        <div class="form__field">
+                                                            <div class="form__label">Город*</div>
+                                                            <input type="text" name="city" placeholder="Название города" class="form__input" value="Москва, Люберецкий МО">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-6">
+                                                        <div class="form__field">
+                                                            <div class="form__label">Улица*</div>
+                                                            <input type="text" name="street" placeholder="Название улицы" class="form__input" value="Строительная">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-6">
+                                                        <div class="form__field">
+                                                            <div class="form__label">Дом*</div>
+                                                            <input type="text" name="home" placeholder="Номер" class="form__input" value="6">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-6">
+                                                        <div class="form__field">
+                                                            <div class="form__label">Квартира/Офис</div>
+                                                            <input type="text" name="flat" placeholder="Номер" class="form__input" value="316">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-6">
+                                                        <div class="form__field">
+                                                            <div class="form__label">Подъезд</div>
+                                                            <input type="text" name="entrance" placeholder="Подъезд" class="form__input" value="316">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-6">
+                                                        <div class="form__field">
+                                                            <div class="form__label">Этаж</div>
+                                                            <input type="text" name="floor" placeholder="Подъезд" class="form__input" value="2">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lk__card-footer">
+                                                    <div class="form__btns">
+                                                        <button type="button" class="btn btn-gray-outline btn-add-address">Отмена</button>
+                                                        <button type="submit" class="btn btn-primary-outline">Добавить адрес</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lk__addresses">
+                                    <div class="lk__addresses-title">Добавленные адреса</div>
+                                    <ul class="lk__addresses-list">
+                                        <li class="lk__addresses-item">
+                                            <div class="lk__addresses-main">
+                                                <div class="lk__addresses-caption">Москва, Люберецкий МО</div>
+                                                <div class="lk__addresses-desc">
+                                                    <div class="lk__addresses-info">Строительная</div>
+                                                    <div class="lk__addresses-info">дом 6</div>
+                                                    <div class="lk__addresses-info">квартира 316</div>
+                                                    <div class="lk__addresses-info">этаж 2</div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="lk__card-more icon-dotts"></button>
+                                        </li>
+                                        <li class="lk__addresses-item">
+                                            <div class="lk__addresses-main">
+                                                <div class="lk__addresses-caption">Москва, Люберецкий МО</div>
+                                                <div class="lk__addresses-desc">
+                                                    <div class="lk__addresses-info">Строительная</div>
+                                                    <div class="lk__addresses-info">дом 6</div>
+                                                    <div class="lk__addresses-info">квартира 316</div>
+                                                    <div class="lk__addresses-info">этаж 2</div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="lk__card-more icon-dotts"></button>
+                                        </li>
+                                        <li class="lk__addresses-item">
+                                            <div class="lk__addresses-main">
+                                                <div class="lk__addresses-caption">Москва, Люберецкий МО</div>
+                                                <div class="lk__addresses-desc">
+                                                    <div class="lk__addresses-info">Строительная</div>
+                                                    <div class="lk__addresses-info">дом 6</div>
+                                                    <div class="lk__addresses-info">квартира 316</div>
+                                                    <div class="lk__addresses-info">этаж 2</div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="lk__card-more icon-dotts"></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>
