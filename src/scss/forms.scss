@@ -339,6 +339,49 @@
 			}
 		}
 	}
+	// .form__attach
+	&__attach {
+	}
+	// .form__attach-item
+	&__attach-item {
+		display: flex;
+		align-items: center;
+		gap: rem(15);
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+	// .form__attach-delete
+	&__attach-delete {
+		width: 1rem;
+		height: 1rem;
+		color: $lightBlue;
+		font-size: 0.75rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+	// .form__attach-body
+	&__attach-body {
+		font-size: 0.8125rem;
+	}
+	// .form__attach-name
+	&__attach-name {
+		color: $blue;
+		font-size: 0.8125rem;
+		text-decoration: underline;
+	}
+	// .form__attach-format
+	&__attach-format {
+		margin-top: 0.31rem;
+		color: $lightBlue;
+	}
 }
 
 .toggler {

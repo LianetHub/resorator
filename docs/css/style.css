@@ -1,6 +1,14 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
   src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
@@ -15,34 +23,10 @@
 }
 
 @font-face {
-  font-family: "DinPro";
-  font-display: swap;
-  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DinPro";
-  font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -57,15 +41,23 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
+  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -75,6 +67,14 @@
   font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -2938,6 +2938,53 @@ table td button {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
+}
+
+.form__attach-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.9375rem;
+}
+
+.form__attach-item:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+
+.form__attach-delete {
+  width: 1rem;
+  height: 1rem;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.form__attach-body {
+  font-size: 0.8125rem;
+}
+
+.form__attach-name {
+  color: #1e6ba3;
+  font-size: 0.8125rem;
+  text-decoration: underline;
+}
+
+.form__attach-format {
+  margin-top: 0.31rem;
+  color: #94a3b8;
 }
 
 .toggler__input:disabled + .toggler__btn {
@@ -11554,6 +11601,28 @@ table td button {
   margin-bottom: 0.63rem;
 }
 
+.lk__messages-item .lk__message-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 5;
+  line-height: 140%;
+}
+
+.lk__messages-block {
+  border-bottom: 0.0625rem solid #e8e8e8;
+  padding-bottom: 1.25rem;
+}
+
+.lk__messages-block:not(:last-child) {
+  margin-bottom: 1.88rem;
+}
+
+.lk__messages-block .lk__message-text {
+  padding: 0em 0em 0em 0.62rem;
+}
+
 .lk__message {
   border-radius: 0.3125rem;
   border: 0.0625rem solid #e8e8e8;
@@ -11614,12 +11683,50 @@ table td button {
 .lk__message-text {
   margin-top: 0.62rem;
   font-size: 0.8125rem;
-  line-height: 140%;
+  line-height: 125%;
+}
+
+.lk__message-attachment {
+  margin-top: 0.62rem;
   display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.62rem;
+}
+
+.lk__message-image {
+  width: 8.95rem;
+}
+
+.lk__message-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  -webkit-line-clamp: 5;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0.62rem;
+}
+
+.lk__message-link {
+  color: #1e6ba3;
+  font-size: 0.8125rem;
+  text-decoration: underline;
+}
+
+.lk__message-format {
+  margin-top: 0.31rem;
+  color: #94a3b8;
+  font-size: 0.8125rem;
 }
 
 .lk__orders {
@@ -13357,7 +13464,7 @@ table td button {
     gap: 1.25rem;
   }
 
-  .lk__message-text {
+  .lk__messages-item .lk__message-text {
     -webkit-line-clamp: 3;
   }
 }
@@ -15077,7 +15184,7 @@ table td button {
     background-position: 35% bottom;
   }
 
-  .lk__message-text {
+  .lk__messages-item .lk__message-text {
     -webkit-line-clamp: 2;
   }
 }
@@ -16374,6 +16481,10 @@ table td button {
     background-color: #f2f5f9;
   }
 
+  .form__attach-delete:hover {
+    color: #ef4444;
+  }
+
   .checkbox__content a:hover {
     text-decoration: none;
   }
@@ -16878,6 +16989,10 @@ table td button {
   .lk__message:hover {
     background: #f2f5f9;
     border: 0.0625rem solid #f2f5f9;
+  }
+
+  .lk__message-link:hover {
+    text-decoration: none;
   }
 
   .lk__orders-btn:hover {
