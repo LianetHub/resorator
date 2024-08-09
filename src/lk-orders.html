@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор | Личный кабинет пользователя'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('./html/_lk-header.html')
+            <main class="page">
+                <div class="lk">
+                    @@include('./html/_lk-sidebar.html', {
+                    "active": 1
+                    })
+                    <div class="lk__content">
+                        <div class="lk__block">
+                            <div class="lk__block-header">
+                                <h2 class="lk__block-title title-sm">
+                                    Мои заказы
+                                </h2>
+                            </div>
+                            <div class="lk__orders">
+                                <div class="lk__orders-filter">
+                                    <div class="lk__orders-select">
+                                        <select name="orders-sort">
+                                            <option value="completed" selected>Выполненные</option>
+                                            <option value="active">Активные</option>
+                                            <option value="canseled">Отмененные</option>
+                                        </select>
+                                    </div>
+                                    <div class="lk__orders-sort">
+                                        <label class="lk__orders-option">
+                                            <input type="radio" name="years" value="all" checked class="lk__orders-input hidden" hidden>
+                                            <span class="lk__orders-btn">Все года</span>
+                                        </label>
+                                        <label class="lk__orders-option">
+                                            <input type="radio" name="years" value="2024" class="lk__orders-input hidden" hidden>
+                                            <span class="lk__orders-btn">2024</span>
+                                        </label>
+                                        <label class="lk__orders-option">
+                                            <input type="radio" name="years" value="2023" class="lk__orders-input hidden" hidden>
+                                            <span class="lk__orders-btn">2023</span>
+                                        </label>
+                                        <label class="lk__orders-option">
+                                            <input type="radio" name="years" value="2022" class="lk__orders-input hidden" hidden>
+                                            <span class="lk__orders-btn">2022</span>
+                                        </label>
+                                        <label class="lk__orders-option">
+                                            <input type="radio" name="years" value="2021" class="lk__orders-input hidden" hidden>
+                                            <span class="lk__orders-btn">2021</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

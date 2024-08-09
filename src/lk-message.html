@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор | Личный кабинет пользователя'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('./html/_lk-header.html')
+            <main class="page">
+                <div class="lk">
+                    @@include('./html/_lk-sidebar.html', {
+                    "active": 3
+                    })
+                    <div class="lk__content">
+                        <div class="lk__block">
+                            <div class="lk__block-header">
+                                <a href="" class="lk__block-back icon-arrow-circle"></a>
+                                <h2 class="lk__block-title title-sm">
+                                    Создать тему
+                                </h2>
+                            </div>
+                            <div class="lk__card">
+                                <h3 class="lk__card-title title-sm icon-message gray-color">Написать сообщение</h3>
+                                <form action="#" class="lk__card-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form__field">
+                                                <div class="form__label">Тема обращения</div>
+                                                <input type="text" name="theme" placeholder="Укажите тему обращения" class="form__input">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form__field">
+                                                <div class="form__label">Сообщение</div>
+                                                <textarea name="message" class="form__textarea" placeholder="Дополнительная информация"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form__btns">
+                                                <button type="submit" class="btn btn-gray-outline btn-md">Создать тему</button>
+                                                <label class="form__file">
+                                                    <input type="file" name="attachment" class="form__file-input hidden" hidden>
+                                                    <span class="form__file-btn btn btn-primary-outline icon-attach btn-md">Загрузить</span>
+                                                </label>
+                                                <div class="form__hint icon-info">
+                                                    Вы можете прикрепить файл к Вашему сообщению
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

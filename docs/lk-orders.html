@@ -171,7 +171,7 @@
 							<h3 class="lk__menu-caption">Товары</h3>
 							<ul class="lk__menu-list">
 								<li class="lk__menu-item">
-									<a href="lk-orders.html" class="lk__menu-link icon-bag">
+									<a href="lk-orders.html" class="lk__menu-link icon-bag active">
 										<span class="lk__menu-text">Мои заказы</span>
 										<span class="lk__menu-quantity">(24)</span>
 									</a>
@@ -209,7 +209,7 @@
 									</a>
 								</li>
 								<li class="lk__menu-item">
-									<a href="lk-companies.html" class="lk__menu-link icon-users active">
+									<a href="lk-companies.html" class="lk__menu-link icon-users">
 										<span class="lk__menu-text">Мои компании</span>
 									</a>
 								</li>
@@ -245,93 +245,39 @@
 				<div class="lk__content">
 					<div class="lk__block">
 						<div class="lk__block-header">
-							<h2 class="lk__block-title title-sm"> Мои компании </h2>
+							<h2 class="lk__block-title title-sm"> Мои заказы </h2>
 						</div>
-						<div class="lk__card">
-							<h3 class="lk__card-title title-sm icon-plus">Добавьте компанию</h3>
-							<form class="lk__card-body">
-								<div class="row">
-									<div class="col-12">
-										<div class="form__field">
-											<div class="form__label"> ИНН компании </div>
-											<div class="form__field-row">
-												<input type="text" name="inn" placeholder="Введите ИНН компании" class="form__input">
-												<button type="submit" class="form__field-btn icon-search"></button>
-											</div>
-										</div>
-									</div>
+						<div class="lk__orders">
+							<div class="lk__orders-filter">
+								<div class="lk__orders-select">
+									<select name="orders-sort">
+										<option value="completed" selected>Выполненные</option>
+										<option value="active">Активные</option>
+										<option value="canseled">Отмененные</option>
+									</select>
 								</div>
-							</form>
-						</div>
-						<div class="lk__companies">
-							<div class="lk__company">
-								<div class="lk__company-header">
-									<div class="lk__company-name title-sm">ООО “Русхорека”</div>
-									<button type="button" class="lk__card-more icon-dotts"></button>
+								<div class="lk__orders-sort">
+									<label class="lk__orders-option">
+										<input type="radio" name="years" value="all" checked class="lk__orders-input hidden" hidden>
+										<span class="lk__orders-btn">Все года</span>
+									</label>
+									<label class="lk__orders-option">
+										<input type="radio" name="years" value="2024" class="lk__orders-input hidden" hidden>
+										<span class="lk__orders-btn">2024</span>
+									</label>
+									<label class="lk__orders-option">
+										<input type="radio" name="years" value="2023" class="lk__orders-input hidden" hidden>
+										<span class="lk__orders-btn">2023</span>
+									</label>
+									<label class="lk__orders-option">
+										<input type="radio" name="years" value="2022" class="lk__orders-input hidden" hidden>
+										<span class="lk__orders-btn">2022</span>
+									</label>
+									<label class="lk__orders-option">
+										<input type="radio" name="years" value="2021" class="lk__orders-input hidden" hidden>
+										<span class="lk__orders-btn">2021</span>
+									</label>
 								</div>
-								<div class="lk__company-info">
-									<div class="lk__company-info-item">
-										<div class="lk__company-info-caption">ИНН</div>
-										<div class="lk__company-info-value">3664069397</div>
-									</div>
-									<div class="lk__company-info-item">
-										<div class="lk__company-info-caption">КПП</div>
-										<div class="lk__company-info-value">366601001</div>
-									</div>
-								</div>
-								<div class="lk__company-info">
-									<div class="lk__company-info-item">
-										<div class="lk__company-info-caption">Адрес</div>
-										<div class="lk__company-info-value">Воронежская обл, г.о. город Воронеж, г Воронеж, ул Средне-Московская, д. 7/9, помещ. 1/1</div>
-									</div>
-								</div>
-								<a href="" class="lk__company-edit">Редактировать</a>
-							</div>
-							<div class="lk__company">
-								<div class="lk__company-header">
-									<div class="lk__company-name title-sm">ООО “Ресторатор”</div>
-									<button type="button" class="lk__card-more icon-dotts"></button>
-								</div>
-								<div class="lk__company-info">
-									<div class="lk__company-info-item">
-										<div class="lk__company-info-caption">ИНН</div>
-										<div class="lk__company-info-value">3664069397</div>
-									</div>
-									<div class="lk__company-info-item">
-										<div class="lk__company-info-caption">КПП</div>
-										<div class="lk__company-info-value">366601001</div>
-									</div>
-								</div>
-								<div class="lk__company-info">
-									<div class="lk__company-info-item">
-										<div class="lk__company-info-caption">Адрес</div>
-										<div class="lk__company-info-value">Воронежская обл, г.о. город Воронеж, г Воронеж, ул Средне-Московская, д. 7/9, помещ. 1/1</div>
-									</div>
-								</div>
-								<a href="" class="lk__company-edit">Редактировать</a>
-							</div>
-							<div class="lk__company">
-								<div class="lk__company-header">
-									<div class="lk__company-name title-sm">ООО “Длинное название компании”</div>
-									<button type="button" class="lk__card-more icon-dotts"></button>
-								</div>
-								<div class="lk__company-info">
-									<div class="lk__company-info-item">
-										<div class="lk__company-info-caption">ИНН</div>
-										<div class="lk__company-info-value">3664069397</div>
-									</div>
-									<div class="lk__company-info-item">
-										<div class="lk__company-info-caption">КПП</div>
-										<div class="lk__company-info-value">366601001</div>
-									</div>
-								</div>
-								<div class="lk__company-info">
-									<div class="lk__company-info-item">
-										<div class="lk__company-info-caption">Адрес</div>
-										<div class="lk__company-info-value">Воронежская обл, г.о. город Воронеж, г Воронеж, ул Средне-Московская, д. 7/9, помещ. 1/1</div>
-									</div>
-								</div>
-								<a href="" class="lk__company-edit">Редактировать</a>
 							</div>
 						</div>
 					</div>

@@ -207,6 +207,20 @@
 	&__block-header {
 		border-bottom: rem(1) solid $grayStroke;
 		padding-bottom: 0.25rem;
+		display: flex;
+		align-items: center;
+		gap: rem(20);
+	}
+	// .lk__block-back
+	&__block-back {
+		font-size: 1.5rem;
+		color: $darkBlue;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellow;
+			}
+		}
 	}
 	// .lk__block-title
 	&__block-title {
@@ -557,6 +571,49 @@
 		}
 		@media (min-width: $md2) {
 			-webkit-line-clamp: 2;
+		}
+	}
+	// .lk__orders
+	&__orders {
+		margin-top: 1.25rem;
+	}
+	// .lk__orders-filter
+	&__orders-filter {
+	}
+	// .lk__orders-select
+	&__orders-select {
+		max-width: 21.5rem;
+	}
+	// .lk__orders-sort
+	&__orders-sort {
+		margin-top: 0.63rem;
+		display: flex;
+		gap: 0.62rem;
+	}
+	// .lk__orders-option
+	&__orders-option {
+	}
+	// .lk__orders-input
+	&__orders-input {
+		&:checked {
+			& + .lk__orders-btn {
+				background: $yellow;
+			}
+		}
+	}
+	// .lk__orders-btn
+	&__orders-btn {
+		border-radius: 0.3125rem;
+		background: $lightGray;
+		color: $darkBlue;
+		font-size: 0.8125rem;
+		padding: 0.69rem 1.25rem;
+		display: block;
+		transition: background-color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background: $yellow;
+			}
 		}
 	}
 }

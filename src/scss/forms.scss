@@ -189,7 +189,7 @@
 		width: 100%;
 		min-height: rem(54);
 	}
-
+	// .form__hint
 	&__hint {
 		margin-top: 0.5rem;
 		margin-bottom: 0.75rem;
@@ -211,6 +211,7 @@
 	// .form__file-btn
 	&__file-btn {
 		cursor: pointer;
+		width: 100%;
 		&.btn.btn-primary-outline {
 			color: inherit;
 			font-size: 0.875rem;
@@ -312,10 +313,30 @@
 	&__btns {
 		display: flex;
 		gap: rem(30);
+		row-gap: rem(21);
 		flex-direction: column;
 		@media (min-width: $md5) {
 			flex-wrap: wrap;
 			flex-direction: row;
+			.form__file {
+				min-width: rem(200);
+			}
+		}
+		.form__hint {
+			margin-bottom: 0;
+			order: -2;
+			flex: 0 0 100%;
+			@media (min-width: $md3) {
+				margin-top: 0rem;
+				flex: 0 1 auto;
+				order: 0;
+			}
+		}
+		.form__file {
+			order: -1;
+			@media (min-width: $md3) {
+				order: 0;
+			}
 		}
 	}
 }

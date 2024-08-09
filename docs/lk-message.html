@@ -188,7 +188,7 @@
 							<h3 class="lk__menu-caption">Обратная связь</h3>
 							<ul class="lk__menu-list">
 								<li class="lk__menu-item">
-									<a href="lk-messages.html" class="lk__menu-link icon-dialog">
+									<a href="lk-messages.html" class="lk__menu-link icon-dialog active">
 										<span class="lk__menu-text">Сообщения</span>
 										<span class="lk__menu-quantity">(24)</span>
 									</a>
@@ -209,7 +209,7 @@
 									</a>
 								</li>
 								<li class="lk__menu-item">
-									<a href="lk-companies.html" class="lk__menu-link icon-users active">
+									<a href="lk-companies.html" class="lk__menu-link icon-users">
 										<span class="lk__menu-text">Мои компании</span>
 									</a>
 								</li>
@@ -245,94 +245,37 @@
 				<div class="lk__content">
 					<div class="lk__block">
 						<div class="lk__block-header">
-							<h2 class="lk__block-title title-sm"> Мои компании </h2>
+							<a href="" class="lk__block-back icon-arrow-circle"></a>
+							<h2 class="lk__block-title title-sm"> Создать тему </h2>
 						</div>
 						<div class="lk__card">
-							<h3 class="lk__card-title title-sm icon-plus">Добавьте компанию</h3>
-							<form class="lk__card-body">
+							<h3 class="lk__card-title title-sm icon-message gray-color">Написать сообщение</h3>
+							<form action="#" class="lk__card-body">
 								<div class="row">
 									<div class="col-12">
 										<div class="form__field">
-											<div class="form__label"> ИНН компании </div>
-											<div class="form__field-row">
-												<input type="text" name="inn" placeholder="Введите ИНН компании" class="form__input">
-												<button type="submit" class="form__field-btn icon-search"></button>
-											</div>
+											<div class="form__label">Тема обращения</div>
+											<input type="text" name="theme" placeholder="Укажите тему обращения" class="form__input">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form__field">
+											<div class="form__label">Сообщение</div>
+											<textarea name="message" class="form__textarea" placeholder="Дополнительная информация"></textarea>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form__btns">
+											<button type="submit" class="btn btn-gray-outline btn-md">Создать тему</button>
+											<label class="form__file">
+												<input type="file" name="attachment" class="form__file-input hidden" hidden>
+												<span class="form__file-btn btn btn-primary-outline icon-attach btn-md">Загрузить</span>
+											</label>
+											<div class="form__hint icon-info"> Вы можете прикрепить файл к Вашему сообщению </div>
 										</div>
 									</div>
 								</div>
 							</form>
-						</div>
-						<div class="lk__companies">
-							<div class="lk__company">
-								<div class="lk__company-header">
-									<div class="lk__company-name title-sm">ООО “Русхорека”</div>
-									<button type="button" class="lk__card-more icon-dotts"></button>
-								</div>
-								<div class="lk__company-info">
-									<div class="lk__company-info-item">
-										<div class="lk__company-info-caption">ИНН</div>
-										<div class="lk__company-info-value">3664069397</div>
-									</div>
-									<div class="lk__company-info-item">
-										<div class="lk__company-info-caption">КПП</div>
-										<div class="lk__company-info-value">366601001</div>
-									</div>
-								</div>
-								<div class="lk__company-info">
-									<div class="lk__company-info-item">
-										<div class="lk__company-info-caption">Адрес</div>
-										<div class="lk__company-info-value">Воронежская обл, г.о. город Воронеж, г Воронеж, ул Средне-Московская, д. 7/9, помещ. 1/1</div>
-									</div>
-								</div>
-								<a href="" class="lk__company-edit">Редактировать</a>
-							</div>
-							<div class="lk__company">
-								<div class="lk__company-header">
-									<div class="lk__company-name title-sm">ООО “Ресторатор”</div>
-									<button type="button" class="lk__card-more icon-dotts"></button>
-								</div>
-								<div class="lk__company-info">
-									<div class="lk__company-info-item">
-										<div class="lk__company-info-caption">ИНН</div>
-										<div class="lk__company-info-value">3664069397</div>
-									</div>
-									<div class="lk__company-info-item">
-										<div class="lk__company-info-caption">КПП</div>
-										<div class="lk__company-info-value">366601001</div>
-									</div>
-								</div>
-								<div class="lk__company-info">
-									<div class="lk__company-info-item">
-										<div class="lk__company-info-caption">Адрес</div>
-										<div class="lk__company-info-value">Воронежская обл, г.о. город Воронеж, г Воронеж, ул Средне-Московская, д. 7/9, помещ. 1/1</div>
-									</div>
-								</div>
-								<a href="" class="lk__company-edit">Редактировать</a>
-							</div>
-							<div class="lk__company">
-								<div class="lk__company-header">
-									<div class="lk__company-name title-sm">ООО “Длинное название компании”</div>
-									<button type="button" class="lk__card-more icon-dotts"></button>
-								</div>
-								<div class="lk__company-info">
-									<div class="lk__company-info-item">
-										<div class="lk__company-info-caption">ИНН</div>
-										<div class="lk__company-info-value">3664069397</div>
-									</div>
-									<div class="lk__company-info-item">
-										<div class="lk__company-info-caption">КПП</div>
-										<div class="lk__company-info-value">366601001</div>
-									</div>
-								</div>
-								<div class="lk__company-info">
-									<div class="lk__company-info-item">
-										<div class="lk__company-info-caption">Адрес</div>
-										<div class="lk__company-info-value">Воронежская обл, г.о. город Воронеж, г Воронеж, ул Средне-Московская, д. 7/9, помещ. 1/1</div>
-									</div>
-								</div>
-								<a href="" class="lk__company-edit">Редактировать</a>
-							</div>
 						</div>
 					</div>
 				</div>
