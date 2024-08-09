@@ -528,6 +528,18 @@ $(function () {
             $('.lk__card-form').toggleClass('hidden').prev('.btn-add-address').toggleClass('hidden');
         }
 
+        // open full list orders - LK
+        if ($target.is('.lk__card-loadmore')) {
+            $target.toggleClass('active');
+            $target.prev().toggleClass('active');
+
+            if ($target.hasClass('active')) {
+                $target.find('span').text('Свернуть');
+            } else {
+                $target.find('span').text('Развернуть');
+            }
+        }
+
     });
 
 

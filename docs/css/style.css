@@ -9,8 +9,8 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/DinPro-Light.woff2") format("woff2"), url("../fonts/DinPro-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -19,6 +19,38 @@
   font-display: swap;
   src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -33,32 +65,8 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DinPro";
-  font-display: swap;
-  src: url("../fonts/DinPro-Light.woff2") format("woff2"), url("../fonts/DinPro-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -67,14 +75,6 @@
   font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -8333,9 +8333,18 @@ table td button {
 }
 
 .cart__item-price-current {
-  margin-top: 0.31rem;
   font-size: 1rem;
   font-weight: 600;
+}
+
+.cart__item-price-current:not(:first-child) {
+  margin-top: 0.31rem;
+}
+
+.cart__item-price-quantity {
+  margin-top: 0.63rem;
+  color: #475569;
+  font-size: 0.8125rem;
 }
 
 .cart__item-quantity {
@@ -8564,6 +8573,71 @@ table td button {
 
 .cart__order {
   margin-top: 1rem;
+}
+
+.cart__item-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.62rem;
+}
+
+.cart__item-block:not(:last-child) {
+  margin-bottom: 0.63rem;
+}
+
+.cart__item-column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.cart__item-code {
+  font-size: 0.8125rem;
+  color: #475569;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.62rem;
+}
+
+.cart__item-code::before {
+  content: "";
+  height: 0.0625rem;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #94a3b8), color-stop(50%, transparent)) 0 0/0.5rem 0.0625rem repeat-x;
+  background: linear-gradient(90deg, #94a3b8 50%, transparent 50%) 0 0/0.5rem 0.0625rem repeat-x;
+}
+
+.cart__item-code-text {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  white-space: nowrap;
+}
+
+.cart__item-code-value {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.cart__item-label {
+  margin-top: 0.63rem;
+  border-radius: 0.3125rem;
+  display: inline-block;
+  background: #f1f2f4;
+  color: #475569;
+  padding: 0.69rem 1.25rem;
 }
 
 .purchase {
@@ -11369,6 +11443,7 @@ table td button {
 }
 
 .lk__card-more {
+  margin-left: auto;
   color: #475569;
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
@@ -11758,10 +11833,140 @@ table td button {
   display: block;
   -webkit-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.lk__orders-list {
+  margin-top: 1.25rem;
+}
+
+.lk__orders-more {
+  margin-top: 1.25rem;
+  display: inline-block;
+  color: #94a3b8;
+  font-size: 0.8125rem;
+  text-decoration: underline;
+}
+
+.lk__order {
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #e8e8e8;
+  padding: 1.25rem;
+}
+
+.lk__order:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.lk__order-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+
+.lk__order-num {
+  color: #475569;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.lk__order-date {
+  color: #94a3b8;
+  font-size: 0.8125rem;
+}
+
+.lk__order-items {
+  margin-top: 1.41rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.62rem;
+}
+
+.lk__order-items.active {
+  gap: 1.25rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.lk__order-items:not(.active) .lk__order-item > *:not(.cart__item-image) {
+  display: none;
+}
+
+.lk__order-items:not(.active) .lk__order-item .cart__item-image {
+  width: 7.5rem;
+}
+
+.lk__order-items:not(.active) .lk__order-item.cart__item {
+  padding: 0;
+}
+
+.lk__order-item:not(:last-child) {
+  margin-bottom: 0;
 }
 
 .lk__catalog {
   margin-top: 1.25rem;
+}
+
+.lk__card-loadmore {
+  margin-top: 1.25rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  display: inline-block;
+  color: #94a3b8;
+  font-size: 0.8125rem;
+  padding-right: 1.5rem;
+  position: relative;
+  text-decoration: underline;
+}
+
+.lk__card-loadmore::before {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: rotate(90deg) translateX(-50%);
+      -ms-transform: rotate(90deg) translateX(-50%);
+          transform: rotate(90deg) translateX(-50%);
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lk__card-loadmore span {
+  pointer-events: none;
+}
+
+.lk__card-loadmore.active::before {
+  -webkit-transform: rotate(-90deg) translateX(50%);
+      -ms-transform: rotate(-90deg) translateX(50%);
+          transform: rotate(-90deg) translateX(50%);
 }
 
 @media (min-width: 375px) {
@@ -13304,6 +13509,11 @@ table td button {
 
   .cart__item-info {
     display: contents;
+  }
+
+  .cart__item-block {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 
   .compare__filters {
@@ -17001,6 +17211,14 @@ table td button {
 
   .lk__orders-btn:hover {
     background: #f7ce46;
+  }
+
+  .lk__orders-more:hover {
+    text-decoration: none;
+  }
+
+  .lk__card-loadmore:hover {
+    text-decoration: none;
   }
 }
 
