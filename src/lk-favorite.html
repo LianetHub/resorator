@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор | Личный кабинет пользователя'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('./html/_lk-header.html')
+            <main class="page">
+                <div class="lk">
+                    @@include('./html/_lk-sidebar.html', {
+                    "active": 2
+                    })
+                    <div class="lk__content">
+                        <div class="lk__block">
+                            <div class="lk__block-header">
+                                <h2 class="lk__block-title title-sm">
+                                    Избранное
+                                </h2>
+                            </div>
+                            <section class="lk__catalog catalog">
+                                <div class="catalog__header">
+                                    <div class="catalog__title title-sm">
+                                        Избранные товары
+                                        <span class="catalog__quantity">
+                                            (7)
+                                        </span>
+                                    </div>
+                                    <div class="catalog__actions">
+                                        <label class="catalog__actions-item">
+                                            <input type="radio" checked name="views" value="grid" class="catalog__actions-input hidden" hidden>
+                                            <span class="catalog__actions-btn icon-grid"></span>
+                                        </label>
+                                        <label class="catalog__actions-item">
+                                            <input type="radio" name="views" value="rows" class="catalog__actions-input hidden" hidden>
+                                            <span class="catalog__actions-btn icon-rows"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="catalog__grid">
+                                    @@loop('./html/_product-active-fav.html', './html/products-favorite.json')
+                                </div>
+                                <div class="product-card__products">
+                                    <div class="product-card__products-header">
+                                        <div class="product-card__caption">
+                                            Подобрано для вас
+                                            <span class="product-card__quantity">(124)</span>
+                                        </div>
+                                        <div class="product-card__contorls">
+                                            <div class="product-card__prev swiper-button-prev"></div>
+                                            <div class="product-card__pagination"></div>
+                                            <div class="product-card__next swiper-button-next"></div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card__items swiper">
+                                        <div class="swiper-wrapper">
+                                            @@loop('./html/_product.html', './html/products-slider.json')
+                                        </div>
+                                    </div>
+                                    <button type="button" class="product-card__loadmore icon-chevron btn-all-products"><span>Развернуть</span> все товары</button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>
