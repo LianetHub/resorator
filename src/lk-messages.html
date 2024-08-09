@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ресторатор | Личный кабинет пользователя'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('./html/_lk-header.html')
+            <main class="page">
+                <div class="lk">
+                    @@include('./html/_lk-sidebar.html', {
+                    "active": 3
+                    })
+                    <div class="lk__content">
+                        <div class="lk__block">
+                            <div class="lk__block-header">
+                                <h2 class="lk__block-title title-sm">
+                                    Сообщения
+                                </h2>
+                            </div>
+                            <div class="lk__card">
+                                <h3 class="lk__card-title title-sm icon-dialog gray-color">Ваши диалоги</h3>
+                                <ul class="lk__messages">
+                                    <li class="lk__messages-item">
+                                        <a href="" class="lk__message">
+                                            <span class="lk__message-header">
+                                                <span class="lk__message-name">
+                                                    Артем Даниелян
+                                                </span>
+                                                <time datetime="2024-08-04T12:31" class="lk__message-time icon-clock">4 авг. 12:31</time>
+                                            </span>
+                                            <span class="lk__message-caption">Тема обращения</span>
+                                            <span class="lk__message-text">
+                                                Здравствуйте, Николай. <br>
+                                                Нажмите, пожалуйста, на «899» (см. скрин) и откроется меню, где можно будет выбрать Стандартный тариф за 399 рублей...
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="lk__messages-item">
+                                        <a href="" class="lk__message">
+                                            <span class="lk__message-header">
+                                                <span class="lk__message-name">
+                                                    Артем Даниелян
+                                                </span>
+                                                <time datetime="2024-08-04T12:31" class="lk__message-time icon-clock">4 авг. 12:31</time>
+                                            </span>
+                                            <span class="lk__message-caption">Вопросы по продлению доменного имени</span>
+                                            <span class="lk__message-text">
+                                                Продление домена <br>
+                                                Здравствуйте, почему продление домена стало стоить 900р? Раньше были настройки где можно было отключить все дополнительные опции, сейчас оно отсутствует...
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="lk__messages-item">
+                                        <a href="" class="lk__message">
+                                            <span class="lk__message-header">
+                                                <span class="lk__message-name">
+                                                    Артем Даниелян
+                                                </span>
+                                                <time datetime="2024-08-04T12:31" class="lk__message-time icon-clock">4 авг. 12:31</time>
+                                            </span>
+                                            <span class="lk__message-caption">Тема обращения</span>
+                                            <span class="lk__message-text">
+                                                Здравствуйте, Николай. <br>
+                                                Нажмите, пожалуйста, на «899» (см. скрин) и откроется меню, где можно будет выбрать Стандартный тариф за 399 рублей...
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="lk__card-footer">
+                                    <a href="" class="btn btn-primary-outline btn-md">Создать тему</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

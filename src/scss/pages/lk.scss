@@ -182,7 +182,7 @@
 	&__menu-person {
 		margin-top: rem(10);
 		@media (min-width: $md3) {
-			margin-top: 2.5rem;
+			margin-top: 2.35rem;
 		}
 	}
 	// .lk__content
@@ -485,5 +485,78 @@
 	}
 	// .lk__card-more
 	&__card-more {
+	}
+	// .lk__messages
+	&__messages {
+		margin-top: 1.5rem;
+	}
+	// .lk__messages-item
+	&__messages-item {
+		&:not(:last-child) {
+			margin-bottom: 0.63rem;
+		}
+	}
+	// .lk__message
+	&__message {
+		border-radius: 0.3125rem;
+		border: rem(1) solid $grayStroke;
+		padding: 1.25rem;
+		display: flex;
+		flex-direction: column;
+		transition: background-color 0.3s ease 0s, border-color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background: $lightBg;
+				border: rem(1) solid $lightBg;
+			}
+		}
+	}
+	// .lk__message-header
+	&__message-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	// .lk__message-name
+	&__message-name {
+		color: $darkBlue;
+		font-size: 0.875rem;
+		font-weight: 600;
+	}
+	// .lk__message-time
+	&__message-time {
+		color: $lightBlue;
+		font-size: 0.8125rem;
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		gap: 0.31rem;
+		&::before {
+			font-size: 1rem;
+		}
+	}
+	// .lk__message-caption
+	&__message-caption {
+		margin-top: 0.62rem;
+		color: $lightBlue;
+		font-size: 0.875rem;
+		font-weight: 600;
+	}
+	// .lk__message-text
+	&__message-text {
+		margin-top: 0.62rem;
+		font-size: 0.8125rem;
+		line-height: 140%;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		-webkit-line-clamp: 5;
+		@media (min-width: $md4) {
+			-webkit-line-clamp: 3;
+		}
+		@media (min-width: $md2) {
+			-webkit-line-clamp: 2;
+		}
 	}
 }
