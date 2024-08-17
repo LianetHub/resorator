@@ -17,39 +17,7 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DinPro";
-  font-display: swap;
   src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
@@ -65,7 +33,23 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
+  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -78,6 +62,22 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 .blog__item-image[data-fancybox]::before,
 .purchase__bank-input:checked + .purchase__bank-logo::before,
 .delivery__warning-list li::before,
@@ -85,6 +85,10 @@
 .goods__sidebar-link::before,
 .product-card__desc-list li::before,
 .product-card__characteristics-name::before,
+.goods-catalog__sidebar-link.active::before,
+.goods-catalog__sidebar-link::before,
+.header__catalog.active::before,
+.header__catalog::before,
 .checkbox__input:checked + .checkbox__content::before,
 .swiper-button-next,
 .swiper-button-prev,
@@ -179,12 +183,14 @@
 }
 
 .icon-minus:before,
-.goods__sidebar-link.active:before {
+.goods__sidebar-link.active:before,
+.goods-catalog__sidebar-link.active:before {
   content: "\e91e";
 }
 
 .icon-plus:before,
-.goods__sidebar-link:before {
+.goods__sidebar-link:before,
+.goods-catalog__sidebar-link:before {
   content: "\e91f";
 }
 
@@ -251,6 +257,7 @@
 }
 
 .icon-close:before,
+.header__catalog.active:before,
 .popup__close:before {
   content: "\e90a";
 }
@@ -278,7 +285,8 @@
   content: "\e90f";
 }
 
-.icon-burger:before {
+.icon-burger:before,
+.header__catalog:before {
   content: "\e90d";
 }
 
@@ -3347,6 +3355,7 @@ table td button {
 }
 
 .header {
+  position: relative;
   padding: 1.25rem 0;
   background: #fff;
 }
@@ -3512,6 +3521,26 @@ table td button {
 
 .header__catalog {
   display: none;
+}
+
+.header__catalog::before {
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.header__catalog.active::before {
+  font-size: 0.75rem;
 }
 
 .header__search {
@@ -3831,6 +3860,221 @@ table td button {
   -webkit-transform: rotate(-225deg);
       -ms-transform: rotate(-225deg);
           transform: rotate(-225deg);
+}
+
+.goods-catalog {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 6;
+  display: none;
+  border-bottom: 0.0625rem solid #e8e8e8;
+  padding: 1.25rem 0;
+}
+
+.goods-catalog__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.goods-catalog__sidebar {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  border-radius: 0.3125rem;
+  padding: 1.88rem;
+  border: 0.0625rem solid #e8e8e8;
+}
+
+.goods-catalog__sidebar-list + .banners__item {
+  margin-top: 1.25rem;
+}
+
+.goods-catalog__sidebar-item:not(:last-child) {
+  margin-bottom: 1.88rem;
+}
+
+.goods-catalog__sidebar-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.63rem;
+  color: #475569;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+  font-size: 0.8125rem;
+}
+
+.goods-catalog__sidebar-link::before {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  font-size: 1.5rem;
+  margin-left: auto;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.goods-catalog__sidebar-link.active {
+  color: #475569;
+}
+
+.goods-catalog__sidebar-link.active .goods-catalog__sidebar-main::before {
+  color: #475569;
+}
+
+.goods-catalog__sidebar-main::before {
+  display: none;
+}
+
+.goods-catalog__sidebar-text {
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-family: "DinPro";
+}
+
+.goods-catalog__sidebar-quantity {
+  color: #94a3b8;
+  font-size: 0.8125rem;
+}
+
+.goods-catalog__sidebar-categories {
+  margin-top: 1.25rem;
+  display: none;
+}
+
+.goods-catalog__sidebar-categories.initial-block {
+  display: block;
+}
+
+.goods-catalog__sidebar-category {
+  font-size: 0.875rem;
+}
+
+.goods-catalog__sidebar-category:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.goods-catalog__sidebar-category a {
+  color: #475569;
+}
+
+.goods-catalog__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.goods-catalog__category {
+  display: none;
+}
+
+.goods-catalog__category:not(:last-child) {
+  margin-bottom: 1.88rem;
+}
+
+.goods-catalog__category.active {
+  display: block;
+}
+
+.goods-catalog__title {
+  font-family: "DinPro";
+  font-weight: 700;
+  line-height: 100%;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.goods-catalog__body {
+  margin-top: 1.88rem;
+}
+
+.goods-catalog__body .row {
+  --gutter-y: 1.88rem;
+}
+
+.goods-catalog__caption {
+  color: #1d1d1d;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.goods-catalog__list {
+  margin-top: 1.25rem;
+}
+
+.goods-catalog__list:not(.active) .goods-catalog__item:not(:nth-child(1),
+:nth-child(2),
+:nth-child(3),
+:nth-child(4),
+:nth-child(5)) {
+  display: none;
+}
+
+.goods-catalog__item {
+  color: #475569;
+  font-size: 0.8125rem;
+}
+
+.goods-catalog__item:not(:last-child) {
+  margin-bottom: 0.62rem;
+}
+
+.goods-catalog__item-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.62rem;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.goods-catalog__item-quantity {
+  color: #94a3b8;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.goods-catalog__more {
+  margin-top: 1.25rem;
+  color: #1e6ba3;
+  display: inline-block;
+  font-size: 0.8125rem;
+  text-decoration: underline;
+}
+
+.goods-catalog__products {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 14.375rem;
+          flex: 0 0 14.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
 }
 
 .footer {
@@ -12164,6 +12408,10 @@ table td button {
             transform: translateY(-0.375rem);
   }
 
+  .goods-catalog {
+    padding: 1.875rem 0;
+  }
+
   .footer {
     display: block;
   }
@@ -14177,6 +14425,107 @@ table td button {
 
   .submenu {
     display: none !important;
+  }
+
+  .goods-catalog__container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .goods-catalog__sidebar {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 16.25rem;
+            flex: 0 0 16.25rem;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    position: sticky;
+    top: 1rem;
+  }
+
+  .goods-catalog__sidebar-item:not(:last-child) {
+    margin-bottom: 0.94rem;
+  }
+
+  .goods-catalog__sidebar-link.active .goods-catalog__sidebar-text {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .goods-catalog__sidebar-main {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .goods-catalog__sidebar-main::before {
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 1.25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #94a3b8;
+    -webkit-transition: color 0.3s ease 0s;
+    transition: color 0.3s ease 0s;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+
+  .goods-catalog__sidebar-text {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 0.8125rem;
+  }
+
+  .goods-catalog__sidebar-category {
+    padding-left: 2rem;
+    font-size: 0.75rem;
+  }
+
+  .goods-catalog__sidebar-category:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
+
+  .goods-catalog__content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .goods-catalog__content:not(:first-child) {
+    padding-left: 1.25rem;
+    border-left: 0.0625rem solid #e8e8e8;
+  }
+
+  .goods-catalog__categories {
+    margin-top: 1.88rem;
+  }
+
+  .goods-catalog__category:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .goods-catalog__title {
+    color: #475569;
+    color: #1d1d1d;
   }
 
   .promo__slide {
@@ -16321,6 +16670,16 @@ table td button {
             flex: 0 0 100%;
   }
 
+  .goods-catalog__content.goods__content_lg {
+    display: contents;
+  }
+
+  .goods-catalog__content.goods__content_lg .banners__item {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+
   .about__clients-body .row {
     --gutter-y: 0.625rem;
   }
@@ -16721,6 +17080,46 @@ table td button {
 
   .menu__link:hover {
     text-decoration: underline;
+  }
+
+  .goods-catalog__sidebar-link:hover {
+    color: #475569;
+  }
+
+  .goods-catalog__sidebar-link:hover::before {
+    color: #475569;
+  }
+
+  .goods-catalog__sidebar-link:hover .goods__sidebar-text {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .goods-catalog__sidebar-category a:hover {
+    color: #1e6ba3;
+    text-decoration: underline;
+  }
+
+  .goods-catalog__title a:hover {
+    color: #1e6ba3;
+    text-decoration: underline;
+  }
+
+  .goods-catalog__caption a:hover {
+    text-decoration: underline;
+    color: #1e6ba3;
+  }
+
+  .goods-catalog__item-link:hover {
+    color: #1e6ba3;
+  }
+
+  .goods-catalog__item-link:hover .goods-catalog__item-text {
+    text-decoration: underline;
+  }
+
+  .goods-catalog__more:hover {
+    text-decoration: none;
   }
 
   .footer__menu-link:hover {

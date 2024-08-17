@@ -65,7 +65,6 @@
 			// }
 		}
 	}
-
 	// .goods__sidebar-header
 	&__sidebar-header {
 		display: flex;
@@ -262,6 +261,7 @@
 			}
 		}
 	}
+	// .goods__heading
 	&__heading {
 		@media (max-width: $md5) {
 			font-size: 1.9375rem;

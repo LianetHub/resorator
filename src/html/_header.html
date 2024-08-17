@@ -96,9 +96,9 @@
             <a href="/index.html" class="header__logo">
                 <img src="@img/logo.svg" alt="Логотип">
             </a>
-            <a href="/catalog.html" class="header__catalog icon-burger">
+            <button type="button" class="header__catalog">
                 Каталог
-            </a>
+            </button>
             <form action="#" role="search" class="header__search">
                 <input type="text" readonly="readonly" class="search__form-input" placeholder="Поиск по товарам и брендам">
                 <button type="button" aria-label="Открыть" data-tooltip title="Искать товар" class="search__btn icon-search"></button>
@@ -112,7 +112,7 @@
                     </span>
                     <span class="actions__item-desc">Меню</span>
                 </button>
-                <a href="catalog.html" data-tooltip title="Каталог" class="actions__item icon-catalog mobile-sm-only">
+                <a href="catalog.html" data-tooltip title="Каталог" class="actions__item icon-catalog mobile-sm-only ">
                     <span class="actions__item-desc">Каталог</span>
                 </a>
                 <a href="#mobile-search" data-fancybox class="actions__item search-btn-toggler icon-search">
@@ -135,4 +135,5 @@
             <a href="tel:88003551555" class="header__phone">8 (800) 355-15-55</a>
         </div>
     </div>
+    @@include('./_goods.html',{})
 </header>

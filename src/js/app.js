@@ -540,6 +540,53 @@ $(function () {
             }
         }
 
+        // toggle visible catalog
+        if ($target.is('.header__catalog')) {
+            $('.header__catalog').toggleClass("active");
+            $('.goods-catalog').slideToggle()
+        }
+
+        // get visible category block
+        if ($target[0].closest('.goods-catalog__sidebar-link')) {
+            e.preventDefault();
+
+            let $link = $target.closest('.goods-catalog__sidebar-link');
+
+            if (!$link.hasClass('active')) {
+                let targetId = $link.attr('href');
+
+                $('.goods-catalog__sidebar-link').removeClass('active');
+                $link.addClass('active');
+
+                $('.goods-catalog__sidebar-categories').slideUp();
+                $link.next('.goods-catalog__sidebar-categories').slideDown();
+
+                if ($('.goods-catalog__category').length > 0) {
+                    $('.goods-catalog__category').removeClass('active');
+                    $(targetId).addClass('active');
+                }
+
+                if ($('.goods-catalog__sidebar-title').length > 0) {
+                    $('.goods-catalog__sidebar-title').text($link.text().trim())
+                }
+            } else {
+                $link.removeClass('active');
+                $link.next('.goods-catalog__sidebar-categories').slideUp();
+            }
+        }
+
+
+        // get all subcategories - goods catalog
+        if ($target.is('.goods-catalog__more')) {
+            $target.toggleClass('active');
+            $target.prev().toggleClass('active');
+            if ($target.hasClass('active')) {
+                $target.text('Скрыть');
+            } else {
+                $target.text('Показать все');
+            }
+        }
+
     });
 
 
