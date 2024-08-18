@@ -795,7 +795,7 @@ $(function () {
         if (scrollY > catalogBottom) {
             $('.goods-catalog').slideUp();
             $('.header__catalog').removeClass('active');
-            $(window).off('scroll', onScroll);
+            $(window).off('scroll', onScrollCatalog);
         }
     }
 
