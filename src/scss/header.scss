@@ -199,7 +199,7 @@
 			.header__catalog-icon {
 				& span {
 					transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
-					&::before {
+					& svg {
 						transition: transform 0.45s ease 0.35s, width 0.3s ease 0s;
 					}
 					&:first-child {
@@ -207,7 +207,7 @@
 						@media (min-width: $md5) {
 							transform: translate3d(0, rem(6), -1px);
 						}
-						&::before {
+						& svg {
 							transform: rotate(-135deg);
 						}
 					}
@@ -219,7 +219,7 @@
 						@media (min-width: $md5) {
 							transform: translate3d(0, rem(-6), -1px);
 						}
-						&::before {
+						& svg {
 							transform: rotate(-225deg);
 						}
 					}
@@ -252,13 +252,11 @@
 			will-change: transform;
 			backface-visibility: hidden;
 			pointer-events: none;
-			&::before {
-				content: "";
+			& svg {
 				display: block;
 				height: 2px;
 				width: 100%;
 				margin-left: auto;
-				background: currentColor;
 				transition: transform 0.3s ease 0s;
 				will-change: transform;
 				backface-visibility: hidden;

@@ -97,6 +97,9 @@ body {
 			overflow: visible;
 		}
 	}
+	&.lock-catalog {
+		overflow: hidden;
+	}
 }
 // ==================ОБОЛОЧКА==============================
 .wrapper {

@@ -543,7 +543,8 @@ $(function () {
         // toggle visible catalog
         if ($target.is('.header__catalog')) {
             $('.header__catalog').toggleClass("active");
-            $('.goods-catalog').slideToggle()
+            $('body').toggleClass('lock-catalog');
+            $('.goods-catalog').slideToggle();
         }
 
         // get visible category block
