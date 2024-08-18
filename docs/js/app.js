@@ -542,9 +542,16 @@ $(function () {
 
         // toggle visible catalog
         if ($target.is('.header__catalog')) {
-            $('.header__catalog').toggleClass("active");
-            $('body').toggleClass('lock-catalog');
-            $('.goods-catalog').slideToggle();
+            let $catalog = $('.goods-catalog');
+            let $headerCatalog = $('.header__catalog');
+
+            $headerCatalog.toggleClass("active");
+            $catalog.slideToggle();
+            if ($catalog.is(':visible')) {
+                $(window).on('scroll', onScrollCatalog);
+            } else {
+                $(window).off('scroll', onScrollCatalog);
+            }
         }
 
         // get visible category block
@@ -778,6 +785,17 @@ $(function () {
                 spaceBetween: 10,
                 grabCursor: true,
             })
+        }
+    }
+
+    function onScrollCatalog() {
+        let catalogBottom = $('.goods-catalog').offset().top + $('.goods-catalog').outerHeight();
+        let scrollY = window.scrollY || window.pageYOffset;
+
+        if (scrollY > catalogBottom) {
+            $('.goods-catalog').slideUp();
+            $('.header__catalog').removeClass('active');
+            $(window).off('scroll', onScroll);
         }
     }
 
