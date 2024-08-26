@@ -183,7 +183,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		@media (min-width: $md5) {
-			grid-template-columns: repeat(auto-fit, minmax(rem(210), 1fr));
+			grid-template-columns: repeat(auto-fill, minmax(rem(210), 1fr));
 		}
 		@media (min-width: $md3) {
 			gap: rem(20);
