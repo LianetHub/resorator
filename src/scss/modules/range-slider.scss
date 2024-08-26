@@ -27,11 +27,5 @@
 .noUi-horizontal .noUi-handle {
 	width: 1rem;
 	height: 1rem;
-}
-
-.noUi-horizontal .noUi-handle-upper {
-	right: 0;
-}
-.noUi-horizontal .noUi-handle-lower {
-	right: rem(-16);
+	right: -0.5rem;
 }

@@ -1578,7 +1578,6 @@ $(function () {
                 start: [parseNumber(startInput.val()), parseNumber(endInput.val())],
                 connect: true,
                 step: 1000,
-                // margin: 1000,
                 range: {
                     'min': [parseInt(startInput.attr('min'))],
                     'max': [parseInt(endInput.attr('max')) || 1000000]
