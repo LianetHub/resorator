@@ -101,12 +101,6 @@ $(function () {
             $('body').toggleClass('lock-catalog-filter')
         }
 
-        // spoller services - on about page
-        if ($target.hasClass('about__services-caption')) {
-            $target.toggleClass('active');
-            $target.next().slideToggle();
-        }
-
         // product open all filters on mobile
         if ($target.hasClass('product-card__filters-more')) {
             $target.toggleClass('active');
