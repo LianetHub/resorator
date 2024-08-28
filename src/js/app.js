@@ -1572,11 +1572,15 @@ $(function () {
                 start: [parseNumber(startInput.val()), parseNumber(endInput.val())],
                 connect: true,
                 step: 1000,
+                margin: 3200,
                 range: {
                     'min': [parseInt(startInput.attr('min'))],
                     'max': [parseInt(endInput.attr('max')) || 1000000]
                 }
             });
+
+            console.log(rangeSlider.noUiSlider);
+
 
             rangeSlider.noUiSlider.on('update', function (values, handle) {
                 inputs[handle].val(formatNumber(Math.round(values[handle])));
