@@ -129,7 +129,7 @@
 				}
 				&.swiper-pagination-bullet-active {
 					&::before {
-						animation: countingBar var(--counting-speed, 8s) linear 0s forwards;
+						animation: countingBar var(--counting-speed, 8.8s) linear 0s forwards;
 					}
 				}
 				@keyframes countingBar {

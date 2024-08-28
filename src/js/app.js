@@ -1101,6 +1101,7 @@ $(function () {
     }
 
     if ($(".promo__slider").length > 0) {
+
         new Swiper('.promo__slider', {
             slidesPerView: 1,
             speed: 800,
@@ -1118,10 +1119,10 @@ $(function () {
                 clickable: true,
             },
             on: {
-                init: (swiper) => {
+                beforeInit: (swiper) => {
                     let speed = swiper.params.speed;
                     let autoplaySpeed = swiper.params.autoplay.delay;
-                    $(swiper.pagination.el).css('--counting-speed', (speed + autoplaySpeed) + "ms");
+                    $(swiper.pagination.el).css('--counting-speed', ((speed + autoplaySpeed) / 1000) + "s");
                 }
             }
         })
@@ -1578,9 +1579,6 @@ $(function () {
                     'max': [parseInt(endInput.attr('max')) || 1000000]
                 }
             });
-
-            console.log(rangeSlider.noUiSlider);
-
 
             rangeSlider.noUiSlider.on('update', function (values, handle) {
                 inputs[handle].val(formatNumber(Math.round(values[handle])));

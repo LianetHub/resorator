@@ -15,6 +15,14 @@
 }
 
 @font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "DinPro";
   font-display: swap;
   src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
@@ -35,14 +43,6 @@
   font-display: swap;
   src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
   font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -4335,8 +4335,8 @@ table td button {
 }
 
 .promo__pagination.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
-  -webkit-animation: countingBar var(--counting-speed, 8s) linear 0s forwards;
-          animation: countingBar var(--counting-speed, 8s) linear 0s forwards;
+  -webkit-animation: countingBar var(--counting-speed, 8.8s) linear 0s forwards;
+          animation: countingBar var(--counting-speed, 8.8s) linear 0s forwards;
 }
 
 @-webkit-keyframes countingBar {
