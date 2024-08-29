@@ -589,6 +589,11 @@ $(function () {
             }
         }
 
+        // 
+        if ($target.is('.lk__card-more-btn')) {
+            $target.parent().toggleClass('active')
+        }
+
     });
 
 
