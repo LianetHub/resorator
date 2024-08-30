@@ -222,6 +222,7 @@ $(function () {
             if (!$link.hasClass('active')) {
                 let targetId = $link.attr('href');
 
+
                 $('.goods__sidebar-link').removeClass('active');
                 $link.addClass('active');
 
@@ -230,13 +231,17 @@ $(function () {
 
                 if ($('.goods__category').length > 0) {
                     $('.goods__category').removeClass('active');
-                    $(targetId).addClass('active');
+                    $(`.goods__category${targetId}`).addClass('active');
+
                 }
 
                 if ($('.goods__sidebar-title').length > 0) {
                     $('.goods__sidebar-title').text($link.text().trim())
                 }
+
+
             } else {
+
                 $link.removeClass('active');
                 $link.next('.goods__sidebar-categories').slideUp();
             }

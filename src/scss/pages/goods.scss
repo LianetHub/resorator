@@ -173,12 +173,16 @@
 				}
 				.goods__sidebar-text {
 					font-weight: 600;
-					text-decoration: underline;
+					// text-decoration: underline;
 				}
 			}
 		}
 		&.active {
 			color: $darkBlue;
+			background: $lightBg;
+			margin: -0.5rem -1rem;
+			padding: 0.5rem 1rem;
+			border-radius: 0.25rem;
 			.goods__sidebar-main {
 				&::before {
 					color: $darkBlue;
@@ -187,7 +191,7 @@
 			.goods__sidebar-text {
 				@media (min-width: $md3) {
 					font-weight: 600;
-					text-decoration: underline;
+					// text-decoration: underline;
 				}
 			}
 			&::before {
