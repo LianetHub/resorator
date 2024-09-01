@@ -148,6 +148,14 @@
 					text-decoration: underline;
 				}
 			}
+			&.active {
+				background: $lightBg;
+				margin: -0.5rem -1rem;
+				padding: 0.5rem 1rem;
+				border-radius: 0.25rem;
+				width: 100%;
+				display: block;
+			}
 		}
 	}
 	// .goods__sidebar-link
@@ -179,10 +187,10 @@
 		}
 		&.active {
 			color: $darkBlue;
-			background: $lightBg;
-			margin: -0.5rem -1rem;
-			padding: 0.5rem 1rem;
-			border-radius: 0.25rem;
+			// background: $lightBg;
+			// margin: -0.5rem -1rem;
+			// padding: 0.5rem 1rem;
+			// border-radius: 0.25rem;
 			.goods__sidebar-main {
 				&::before {
 					color: $darkBlue;
@@ -191,7 +199,7 @@
 			.goods__sidebar-text {
 				@media (min-width: $md3) {
 					font-weight: 600;
-					// text-decoration: underline;
+					text-decoration: underline;
 				}
 			}
 			&::before {
