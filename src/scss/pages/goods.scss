@@ -367,15 +367,16 @@
 	}
 	// .goods__card-image
 	&__card-image {
-		position: relative;
-		height: 0;
-		padding-bottom: 100%;
 		border-radius: rem(10);
 		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		aspect-ratio: 1;
 		& img {
-			position: absolute;
-			top: 0;
-			left: 0;
+			max-height: 100%;
+			max-width: 100%;
 			transition: transform 0.3s ease 0s;
 		}
 	}
