@@ -1138,19 +1138,6 @@ $(function () {
         })
     }
 
-    if ($(".product__labels").length > 0) {
-        $(".product__labels").each((function (index, slider) {
-
-            new Swiper(slider, {
-                slidesPerView: "auto",
-                speed: 800,
-                grabCursor: true,
-                spaceBetween: 10,
-            })
-        }));
-
-    }
-
     if ($(".product-card__slider").length > 0) {
 
         $(".product-card__slider").each((function (index, slider) {

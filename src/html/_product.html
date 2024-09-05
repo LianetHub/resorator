@@ -1,22 +1,22 @@
 @@if(wrapper==true){ <div class="@@className">
     <div class="product"> }
         @@if(wrapper==false){ <div class="product@@className"> }
-
-            @@if(labels===true) {
-            <div class="product__labels swiper">
-                <div class="swiper-wrapper">
-                    @@if(sale===true) {
-                    <div class="swiper-slide product__label label red">Распродажа</div>
-                    }
-                    @@if(novinka===true) {
-                    <div class="swiper-slide product__label label yellow">Новинка</div>
-                    }
-                    @@if(hit===true) {
-                    <div class="swiper-slide product__label label green">Хит продаж</div>
-                    }
+            <div class="product__caption">
+                @@if(labels===true) {
+                @@if(sale===true) {
+                <div class="product__label label red">Распродажа</div>
+                }
+                @@if(novinka===true) {
+                <div class="product__label label yellow">Новинка</div>
+                }
+                @@if(hit===true) {
+                <div class="product__label label green">Хит продаж</div>
+                }
+                }
+                <div class="product__articul">
+                    Арт: <a href="" class="product__articul-num">125RFD14</a>
                 </div>
             </div>
-            }
 
             <div class="product__header">
                 <a href="/product.html" class="product__image">

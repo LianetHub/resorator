@@ -414,9 +414,13 @@
 	// .catalog__filters-range
 	&__filters-range {
 		grid-column: span 2;
+		padding: 0 0.5rem;
 	}
 	// .catalog__filters-checkbox
 	&__filters-checkbox {
+		.checkbox__content {
+			font-size: rem(13);
+		}
 	}
 	// .catalog__filters-btn
 	&__filters-btn {
