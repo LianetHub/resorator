@@ -127,6 +127,7 @@ $(function () {
         if ($target.hasClass('product-card__cart') || $target.hasClass('product__cart')) {
             let $cartActions = $target.next();
             $target.addClass('hidden');
+            $target.prev().addClass('hidden');
             $cartActions.removeClass('hidden');
             $cartActions.find('.quantity-block__input').val(1);
         }
@@ -147,7 +148,7 @@ $(function () {
                     let $cartActions = $target.parent().parent();
 
                     $cartActions.addClass('hidden');
-                    $cartActions.prev().removeClass('hidden');
+                    $cartActions.prev().removeClass('hidden').prev().removeClass('hidden');
                 }
             }
         }

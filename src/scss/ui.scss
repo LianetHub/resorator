@@ -1,13 +1,23 @@
 //============ МОДУЛИ ====================
-@import "modules/search";
-@import "modules/breadcrumbs";
-@import "modules/tooltip";
-@import "modules/popup";
-@import "modules/select";
-@import "modules/range-slider";
-@import "modules/range-input";
+@import 'modules/search';
+@import 'modules/breadcrumbs';
+@import 'modules/tooltip';
+@import 'modules/popup';
+@import 'modules/select';
+@import 'modules/range-slider';
+@import 'modules/range-input';
 
 //============ МОДУЛИ ====================
+
+a:not([class]) {
+	text-decoration: underline;
+	@media (any-hover: hover) {
+		&:hover {
+			text-decoration: none;
+			color: $blue;
+		}
+	}
+}
 
 .title {
 	font-family: $font-din;
@@ -92,7 +102,10 @@
 
 .label {
 	padding: 0.5rem 0.62rem;
-	font-size: 0.625rem;
+	font-size: 0.5rem;
+	@media (min-width: $md6) {
+		font-size: 0.625rem;
+	}
 	font-weight: 500;
 	text-transform: uppercase;
 	border-radius: 0.3125rem;
@@ -118,7 +131,7 @@
 	@media (any-hover: hover) {
 		&:hover {
 			.card__image img {
-				transform: scale(1.015);
+				transform: scale(1.02) translate3d(0, 0, 0);
 			}
 			.card__desc {
 				text-decoration: underline;
@@ -152,6 +165,7 @@
 			top: 0;
 			left: 0;
 			border-radius: rem(5);
+			will-change: transform;
 			transition: transform 0.3s ease 0s;
 		}
 	}
@@ -261,7 +275,7 @@
 		display: none;
 	}
 	&:disabled,
-	&[aria-disabled="true"] {
+	&[aria-disabled='true'] {
 		opacity: 0.5;
 		color: $dark;
 	}
@@ -477,7 +491,7 @@ table {
 		}
 	}
 	&::after {
-		content: "";
+		content: '';
 		position: absolute;
 		bottom: 0;
 		left: var(--underline-left);
@@ -497,7 +511,7 @@ table {
 
 [data-underline-filters] ._loading {
 	&::after {
-		content: "";
+		content: '';
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -508,7 +522,7 @@ table {
 		z-index: 2;
 	}
 	&::before {
-		content: "";
+		content: '';
 		position: absolute;
 		top: 50%;
 		left: 50%;

@@ -17,16 +17,8 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -41,8 +33,24 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
   src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
   font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
+  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -55,10 +63,10 @@
 }
 
 @font-face {
-  font-family: "DinPro";
+  font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -67,14 +75,6 @@
   font-display: swap;
   src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
   font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
-  font-weight: 600;
   font-style: normal;
 }
 
@@ -1953,6 +1953,10 @@ body.lock-catalog-filter {
   background: #f7ce46;
 }
 
+a:not([class]) {
+  text-decoration: underline;
+}
+
 .title {
   font-family: "DinPro";
   font-weight: 700;
@@ -2041,7 +2045,7 @@ body.lock-catalog-filter {
 
 .label {
   padding: 0.5rem 0.62rem;
-  font-size: 0.625rem;
+  font-size: 0.5rem;
   font-weight: 500;
   text-transform: uppercase;
   border-radius: 0.3125rem;
@@ -2099,6 +2103,7 @@ body.lock-catalog-filter {
   top: 0;
   left: 0;
   border-radius: 0.3125rem;
+  will-change: transform;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
@@ -4851,17 +4856,18 @@ table td button {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.625rem;
+  margin-bottom: auto;
 }
 
 .product__articul {
-  font-size: 0.8125rem;
   line-height: 1.2307692308;
   color: #94a3b8;
-  white-space: nowrap;
   margin-left: auto;
+  font-size: 0.625rem;
 }
 
 .product__articul-num {
+  font-size: inherit;
   text-decoration: underline;
 }
 
@@ -4873,6 +4879,7 @@ table td button {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  text-align: center;
 }
 
 .product__header {
@@ -5082,6 +5089,8 @@ table td button {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+  -ms-hyphens: auto;
+      hyphens: auto;
 }
 
 .product__footer {
@@ -5094,6 +5103,7 @@ table td button {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.5rem;
+  min-height: 2.5rem;
 }
 
 .product__avaibility {
@@ -12431,6 +12441,12 @@ table td button {
   }
 }
 
+@media (min-width: 389.98px) {
+  .label {
+    font-size: 0.625rem;
+  }
+}
+
 @media (min-width: 575.98px) {
   [class*=__container] {
     max-width: 36rem;
@@ -12692,6 +12708,11 @@ table td button {
         -ms-grid-row-align: start;
         align-self: start;
     margin-top: 0.63rem;
+  }
+
+  .product__articul {
+    font-size: 0.8125rem;
+    white-space: nowrap;
   }
 
   .product__image {
@@ -17217,14 +17238,18 @@ table td button {
     text-decoration: none;
   }
 
+  a:not([class]):hover {
+    text-decoration: none;
+    color: #1e6ba3;
+  }
+
   .btn-copy:hover {
     color: #1d1d1d;
   }
 
   .card:hover .card__image img {
-    -webkit-transform: scale(1.015);
-        -ms-transform: scale(1.015);
-            transform: scale(1.015);
+    -webkit-transform: scale(1.02) translate3d(0, 0, 0);
+            transform: scale(1.02) translate3d(0, 0, 0);
   }
 
   .card:hover .card__desc {
@@ -17392,7 +17417,7 @@ table td button {
   }
 
   .product__name:hover {
-    color: #f7ce46;
+    color: #1e6ba3;
   }
 
   .product-card__slide:hover img {
