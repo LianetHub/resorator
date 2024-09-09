@@ -308,9 +308,16 @@
 	&__slide {
 		width: auto;
 		padding: rem(18) rem(19);
+		filter: grayscale(1);
 		& img {
 			height: rem(40);
 			width: auto;
+		}
+		transition: filter 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				filter: grayscale(0);
+			}
 		}
 	}
 }

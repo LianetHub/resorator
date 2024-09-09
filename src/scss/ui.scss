@@ -9,15 +9,15 @@
 
 //============ МОДУЛИ ====================
 
-a:not([class]) {
-	text-decoration: underline;
-	@media (any-hover: hover) {
-		&:hover {
-			text-decoration: none;
-			color: $blue;
-		}
-	}
-}
+// a:not([class]) {
+// 	text-decoration: underline;
+// 	@media (any-hover: hover) {
+// 		&:hover {
+// 			text-decoration: none;
+// 			color: $blue;
+// 		}
+// 	}
+// }
 
 .title {
 	font-family: $font-din;

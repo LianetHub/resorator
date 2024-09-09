@@ -1,22 +1,6 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Light.woff2") format("woff2"), url("../fonts/DinPro-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DinPro";
-  font-display: swap;
   src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
@@ -25,24 +9,8 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/DinPro-Light.woff2") format("woff2"), url("../fonts/DinPro-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -59,6 +27,38 @@
   font-display: swap;
   src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
   font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -81,8 +81,6 @@
 .blog__item-image[data-fancybox]::before,
 .purchase__bank-input:checked + .purchase__bank-logo::before,
 .delivery__warning-list li::before,
-.goods__sidebar-link.active::before,
-.goods__sidebar-link::before,
 .product-card__desc-list li::before,
 .product-card__characteristics-name::before,
 .goods-catalog__sidebar-link.active::before,
@@ -181,13 +179,11 @@
 }
 
 .icon-minus:before,
-.goods__sidebar-link.active:before,
 .goods-catalog__sidebar-link.active:before {
   content: "\e91e";
 }
 
 .icon-plus:before,
-.goods__sidebar-link:before,
 .goods-catalog__sidebar-link:before {
   content: "\e91f";
 }
@@ -1951,10 +1947,6 @@ body.lock-catalog-filter {
   height: calc(0.25rem + 1px);
   border-radius: 0.125rem 0 0 0.125rem;
   background: #f7ce46;
-}
-
-a:not([class]) {
-  text-decoration: underline;
 }
 
 .title {
@@ -4554,6 +4546,12 @@ table td button {
 .companies__slide {
   width: auto;
   padding: 1.125rem 1.1875rem;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: -webkit-filter 0.3s ease 0s;
+  transition: -webkit-filter 0.3s ease 0s;
+  transition: filter 0.3s ease 0s;
+  transition: filter 0.3s ease 0s, -webkit-filter 0.3s ease 0s;
 }
 
 .companies__slide img {
@@ -7859,16 +7857,6 @@ table td button {
   font-size: 0.8125rem;
 }
 
-.goods__sidebar-link::before {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  font-size: 1.5rem;
-  margin-left: auto;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-
 .goods__sidebar-link.active {
   color: #475569;
 }
@@ -7892,6 +7880,21 @@ table td button {
   font-size: 1.125rem;
   font-weight: 700;
   font-family: "DinPro";
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.goods__sidebar-text::before {
+  content: "";
+  position: absolute;
+  inset: -0.5rem -1rem;
+  background: #f2f5f9;
+  z-index: -1;
+  border-radius: 0.25rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
 }
 
 .goods__sidebar-quantity {
@@ -15167,9 +15170,8 @@ table td button {
     margin-bottom: 0.75rem;
   }
 
-  .goods__sidebar-link.active .goods__sidebar-text {
-    font-weight: 600;
-    text-decoration: underline;
+  .goods__sidebar-link.active .goods__sidebar-text::before {
+    opacity: 1;
   }
 
   .goods__sidebar-main {
@@ -15199,12 +15201,6 @@ table td button {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-  }
-
-  .goods__sidebar-text {
-    font-family: "Inter";
-    font-weight: 400;
-    font-size: 0.8125rem;
   }
 
   .goods__content {
@@ -17240,11 +17236,6 @@ table td button {
     text-decoration: none;
   }
 
-  a:not([class]):hover {
-    text-decoration: none;
-    color: #1e6ba3;
-  }
-
   .btn-copy:hover {
     color: #1d1d1d;
   }
@@ -17390,6 +17381,11 @@ table td button {
 
   .companies__more:hover {
     text-decoration: underline;
+  }
+
+  .companies__slide:hover {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
   }
 
   .products__selection-btn:hover {
@@ -17568,8 +17564,8 @@ table td button {
     color: #475569;
   }
 
-  .goods__sidebar-link:hover .goods__sidebar-text {
-    font-weight: 600;
+  .goods__sidebar-link:hover .goods__sidebar-text::before {
+    opacity: 1;
   }
 
   .goods__title a:hover {

@@ -167,13 +167,13 @@
 		color: $darkBlue;
 		transition: color 0.3s ease 0s;
 		font-size: 0.8125rem;
-		&::before {
-			order: 1;
-			@extend %ic, .icon-plus;
-			font-size: 1.5rem;
-			margin-left: auto;
-			flex-shrink: 0;
-		}
+		// &::before {
+		// 	order: 1;
+		// 	@extend %ic, .icon-plus;
+		// 	font-size: 1.5rem;
+		// 	margin-left: auto;
+		// 	flex-shrink: 0;
+		// }
 		@media (any-hover: hover) {
 			&:hover {
 				color: $darkBlue;
@@ -181,17 +181,14 @@
 					color: $darkBlue;
 				}
 				.goods__sidebar-text {
-					font-weight: 600;
-					// text-decoration: underline;
+					&::before {
+						opacity: 1;
+					}
 				}
 			}
 		}
 		&.active {
 			color: $darkBlue;
-			// background: $lightBg;
-			// margin: -0.5rem -1rem;
-			// padding: 0.5rem 1rem;
-			// border-radius: 0.25rem;
 			.goods__sidebar-main {
 				&::before {
 					color: $darkBlue;
@@ -199,13 +196,14 @@
 			}
 			.goods__sidebar-text {
 				@media (min-width: $md3) {
-					font-weight: 600;
-					text-decoration: underline;
+					&::before {
+						opacity: 1;
+					}
 				}
 			}
-			&::before {
-				@extend %ic, .icon-minus;
-			}
+			// &::before {
+			// 	@extend %ic, .icon-minus;
+			// }
 		}
 	}
 	&__sidebar-caption {
@@ -243,12 +241,21 @@
 		font-size: 1.125rem;
 		font-weight: 700;
 		font-family: $font-din;
-		@media (min-width: $md3) {
-			font-family: $fontfamily;
-			font-weight: 400;
-			font-size: 0.8125rem;
+		position: relative;
+		width: 100%;
+		display: block;
+		&::before {
+			content: '';
+			position: absolute;
+			inset: rem(-8) rem(-16);
+			background: $lightBg;
+			z-index: -1;
+			border-radius: 0.25rem;
+			opacity: 0;
+			transition: opacity 0.3s ease 0s;
 		}
 	}
+
 	// .goods__sidebar-quantity
 	&__sidebar-quantity {
 		color: $lightBlue;
