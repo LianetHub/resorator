@@ -340,7 +340,6 @@
 		gap: rem(10);
 		@media (min-width: $md4) {
 			gap: rem(20);
-			row-gap: rem(10);
 			grid-template-columns: repeat(3, 1fr);
 		}
 		@media (min-width: $md1) {
@@ -349,14 +348,25 @@
 	}
 	// .goods__card
 	&__card {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		gap: rem(10);
 		text-align: center;
+		&::before {
+			content: '';
+			position: absolute;
+			inset: rem(-10);
+			transition: box-shadow 0.3s ease 0s;
+			border-radius: 0.75rem;
+		}
 		@media (any-hover: hover) {
 			&:hover {
+				&::before {
+					box-shadow: 0 rem(2) rem(18) rgba(0, 0, 0, 0.2);
+				}
 				.goods__card-image img {
-					transform: scale(1.025);
+					transform: scale(1.0125);
 				}
 				.goods__card-name {
 					color: $blue;

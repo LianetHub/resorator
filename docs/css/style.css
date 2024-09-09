@@ -1,24 +1,8 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DinPro";
-  font-display: swap;
   src: url("../fonts/DinPro-Light.woff2") format("woff2"), url("../fonts/DinPro-Light.woff") format("woff");
   font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DinPro";
-  font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
   font-style: normal;
 }
 
@@ -27,6 +11,22 @@
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
+  src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -41,8 +41,8 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -51,6 +51,14 @@
   font-display: swap;
   src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -67,14 +75,6 @@
   font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
   font-style: normal;
 }
 
@@ -5589,21 +5589,12 @@ table td button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 0.62rem;
   color: #475569;
   font-size: 0.8125rem;
-}
-
-.product-card__info-item::before {
-  content: "";
-  width: 100%;
-  height: 0.0625rem;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #f1f2f4), color-stop(50%, transparent));
-  background-image: linear-gradient(90deg, #f1f2f4 50%, transparent 50%);
-  background-repeat: repeat-x;
-  background-size: 0.5rem 0.0625rem;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
 }
 
 .product-card__info-item:not(:last-child) {
@@ -7958,6 +7949,7 @@ table td button {
 }
 
 .goods__card {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7967,6 +7959,17 @@ table td button {
           flex-direction: column;
   gap: 0.625rem;
   text-align: center;
+}
+
+.goods__card::before {
+  content: "";
+  position: absolute;
+  inset: -0.625rem;
+  -webkit-transition: -webkit-box-shadow 0.3s ease 0s;
+  transition: -webkit-box-shadow 0.3s ease 0s;
+  transition: box-shadow 0.3s ease 0s;
+  transition: box-shadow 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+  border-radius: 0.75rem;
 }
 
 .goods__card-image {
@@ -13996,7 +13999,6 @@ table td button {
 
   .goods__grid {
     gap: 1.25rem;
-    row-gap: 0.625rem;
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
   }
@@ -17575,10 +17577,15 @@ table td button {
     text-decoration: underline;
   }
 
+  .goods__card:hover::before {
+    -webkit-box-shadow: 0 0.125rem 1.125rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0.125rem 1.125rem rgba(0, 0, 0, 0.2);
+  }
+
   .goods__card:hover .goods__card-image img {
-    -webkit-transform: scale(1.025);
-        -ms-transform: scale(1.025);
-            transform: scale(1.025);
+    -webkit-transform: scale(1.0125);
+        -ms-transform: scale(1.0125);
+            transform: scale(1.0125);
   }
 
   .goods__card:hover .goods__card-name {

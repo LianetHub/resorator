@@ -341,19 +341,20 @@
 	// .product-card__info-item
 	&__info-item {
 		display: flex;
+		justify-content: space-between;
 		gap: 0.62rem;
 		color: $darkBlue;
 		font-size: 0.8125rem;
 
-		&::before {
-			content: "";
-			width: 100%;
-			height: rem(1);
-			background-image: linear-gradient(90deg, $lightGray 50%, transparent 50%);
-			background-repeat: repeat-x;
-			background-size: rem(8) rem(1);
-			align-self: flex-end;
-		}
+		// &::before {
+		// 	content: "";
+		// 	width: 100%;
+		// 	height: rem(1);
+		// 	background-image: linear-gradient(90deg, $lightGray 50%, transparent 50%);
+		// 	background-repeat: repeat-x;
+		// 	background-size: rem(8) rem(1);
+		// 	align-self: flex-end;
+		// }
 		&:not(:last-child) {
 			margin-bottom: 0.63rem;
 		}
