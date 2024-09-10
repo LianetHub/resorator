@@ -49,14 +49,6 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
   src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
@@ -75,6 +67,14 @@
   font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -4545,9 +4545,18 @@ table td button {
 
 .companies__slide {
   width: auto;
-  padding: 1.125rem 1.1875rem;
+  padding: 0.625rem 1.1875rem;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: -webkit-filter 0.3s ease 0s;
   transition: -webkit-filter 0.3s ease 0s;
   transition: filter 0.3s ease 0s;
@@ -4555,7 +4564,7 @@ table td button {
 }
 
 .companies__slide img {
-  height: 2.5rem;
+  max-height: 5rem;
   width: auto;
 }
 

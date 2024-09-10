@@ -307,10 +307,13 @@
 	// .companies__slide
 	&__slide {
 		width: auto;
-		padding: rem(18) rem(19);
+		padding: rem(10) rem(19);
 		filter: grayscale(1);
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		& img {
-			height: rem(40);
+			max-height: rem(80);
 			width: auto;
 		}
 		transition: filter 0.3s ease 0s;
