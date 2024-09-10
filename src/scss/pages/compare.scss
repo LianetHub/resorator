@@ -30,7 +30,7 @@
 				height: 0;
 				display: none;
 			}
-			scrollbar-width: 0;
+			scrollbar-width: none;
 		}
 		&::after {
 			@media (max-width: $md4) {

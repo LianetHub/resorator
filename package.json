@@ -61,6 +61,7 @@
     "imask": "^7.1.3",
     "jquery": "^3.7.1",
     "smooth-scroll": "^16.1.3",
-    "smooth-scrollbar": "^8.8.1"
+    "smooth-scrollbar": "^8.8.1",
+    "sticky-sidebar": "^3.3.1"
   }
 }

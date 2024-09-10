@@ -221,11 +221,16 @@
 			transition: none;
 			top: 1rem;
 			position: sticky;
-			overflow-y: visible;
+			overflow-y: scroll;
 			background: none;
 			height: auto;
-			width: auto;
+			max-height: calc(100vh - 2vh);
+			width: 100%;
 			padding: 0;
+			scrollbar-width: none;
+			&::-webkit-scrollbar {
+				display: none;
+			}
 		}
 		.banners__item {
 			margin-top: 0.62rem;

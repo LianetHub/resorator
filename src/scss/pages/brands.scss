@@ -82,7 +82,7 @@
 			height: 0;
 			display: none;
 		}
-		scrollbar-width: 0;
+		scrollbar-width: none;
 		margin-right: -1rem;
 		padding-right: 1rem;
 		@media (min-width: $md5) {
@@ -153,7 +153,7 @@
 				color: $dark;
 			}
 		}
-		&[name="alphabet"] {
+		&[name='alphabet'] {
 			& + .brands__actions-btn {
 				padding-inline: 0.875rem;
 			}

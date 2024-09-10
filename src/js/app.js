@@ -817,13 +817,13 @@ $(function () {
             }
         });
     }
+
     $(document).on('mouseover', '[data-underline-filter]', function (e) {
         let $target = $(e.target);
         if ($target.is('[data-underline-filter]')) {
             moveUnderline($target);
         }
     });
-
 
     $(document).on('mouseout', '[data-underline-filter]', function (e) {
         let $target = $(e.target);
@@ -835,7 +835,6 @@ $(function () {
             }
         }
     });
-
 
 
     // change grid layout
@@ -922,8 +921,6 @@ $(function () {
 
         setSideProductHeight();
     }
-
-
 
 
     $('#language-form').on('submit', function (e) {
@@ -1037,12 +1034,6 @@ $(function () {
         }
     };
 
-
-
-
-
-
-
     // tooltip
     $('[data-tooltip]').on('mouseenter', function () {
         var $this = $(this);
@@ -1087,10 +1078,6 @@ $(function () {
         var title = $this.data('title');
         $this.attr('title', title);
     });
-
-
-
-
 
     // sliders
 
@@ -1505,9 +1492,6 @@ $(function () {
 
     }
 
-
-
-
     function getResponsiveSlider(sliderName, options, minWidth, maxWidth) {
         let init = false;
         let swiper = null;
@@ -1529,10 +1513,6 @@ $(function () {
         getSwiper();
         window.addEventListener("resize", getSwiper);
     }
-
-
-
-
 
     // range slider
 
@@ -1642,10 +1622,6 @@ $(function () {
     }
 
 
-
-
-
-
     // input mask telephone russia
     var phoneInputs = document.querySelectorAll('input[type="tel"]');
 
@@ -1719,13 +1695,11 @@ $(function () {
     }
 
 
-
     // push
 
     $('input[name="push"]').on('input', function () {
         this.value = this.value.replace(/\D/g, '');
     });
-
 
 
     // validation fields
@@ -1865,8 +1839,6 @@ $(function () {
             return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
         }
     }
-
-
 
 
 

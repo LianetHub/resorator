@@ -25,22 +25,6 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
   src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
@@ -59,6 +43,22 @@
   font-display: swap;
   src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
   font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -3974,7 +3974,7 @@ table td button {
   padding: 1.25rem 0;
   max-height: calc(100vh - 100%);
   overflow-y: auto;
-  scrollbar-width: 0;
+  scrollbar-width: none;
 }
 
 .goods-catalog::-webkit-scrollbar {
@@ -7948,7 +7948,6 @@ table td button {
   display: grid;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.625rem;
 }
 
 .goods__card {
@@ -7962,17 +7961,18 @@ table td button {
           flex-direction: column;
   gap: 0.625rem;
   text-align: center;
-}
-
-.goods__card::before {
-  content: "";
-  position: absolute;
-  inset: -0.625rem;
+  border-right: 0.0625rem solid #e8e8e8;
+  border-bottom: 0.0625rem solid #e8e8e8;
+  padding: 1.5625rem;
+  margin: -0.0625rem;
   -webkit-transition: -webkit-box-shadow 0.3s ease 0s;
   transition: -webkit-box-shadow 0.3s ease 0s;
   transition: box-shadow 0.3s ease 0s;
   transition: box-shadow 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
-  border-radius: 0.75rem;
+}
+
+.goods__card:nth-child(4n+4) {
+  border-right: 0;
 }
 
 .goods__card-image {
@@ -8124,7 +8124,7 @@ table td button {
       flex-wrap: nowrap;
   gap: 1.275rem;
   overflow-y: auto;
-  scrollbar-width: 0;
+  scrollbar-width: none;
   margin-right: -1rem;
   padding-right: 1rem;
 }
@@ -12995,7 +12995,7 @@ table td button {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    scrollbar-width: 0;
+    scrollbar-width: none;
     overflow-x: auto;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -13945,11 +13945,17 @@ table td button {
     transition: none;
     top: 1rem;
     position: sticky;
-    overflow-y: visible;
+    overflow-y: scroll;
     background: none;
     height: auto;
-    width: auto;
+    max-height: 98vh;
+    width: 100%;
     padding: 0;
+    scrollbar-width: none;
+  }
+
+  .catalog__sidebar::-webkit-scrollbar {
+    display: none;
   }
 
   .catalog__sidebar .banners__item {
@@ -14001,7 +14007,6 @@ table td button {
   }
 
   .goods__grid {
-    gap: 1.25rem;
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
   }
@@ -14031,7 +14036,7 @@ table td button {
     gap: 2.5rem;
     padding-right: 1.5rem;
     margin-right: -1.5rem;
-    scrollbar-width: 0;
+    scrollbar-width: none;
   }
 
   .compare__filters::-webkit-scrollbar {
@@ -14106,7 +14111,7 @@ table td button {
         -ms-flex-direction: row;
             flex-direction: row;
     overflow-x: auto;
-    scrollbar-width: 0;
+    scrollbar-width: none;
   }
 
   .works__filters::-webkit-scrollbar {
@@ -17573,7 +17578,7 @@ table td button {
     text-decoration: underline;
   }
 
-  .goods__card:hover::before {
+  .goods__card:hover {
     -webkit-box-shadow: 0 0.125rem 1.125rem rgba(0, 0, 0, 0.2);
             box-shadow: 0 0.125rem 1.125rem rgba(0, 0, 0, 0.2);
   }

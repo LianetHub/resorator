@@ -344,9 +344,9 @@
 		margin-top: 1.88rem;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: rem(10);
+		// gap: rem(10);
 		@media (min-width: $md4) {
-			gap: rem(20);
+			// gap: rem(20);
 			grid-template-columns: repeat(3, 1fr);
 		}
 		@media (min-width: $md1) {
@@ -360,18 +360,18 @@
 		flex-direction: column;
 		gap: rem(10);
 		text-align: center;
-		&::before {
-			content: '';
-			position: absolute;
-			inset: rem(-10);
-			transition: box-shadow 0.3s ease 0s;
-			border-radius: 0.75rem;
+		border-right: rem(1) solid $grayStroke;
+		border-bottom: rem(1) solid $grayStroke;
+		&:nth-child(4n + 4) {
+			border-right: 0;
 		}
+		
+		padding: rem(25);
+		margin: rem(-1);
+		transition: box-shadow 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
-				&::before {
-					box-shadow: 0 rem(2) rem(18) rgba(0, 0, 0, 0.2);
-				}
+				box-shadow: 0 rem(2) rem(18) rgba(0, 0, 0, 0.2);
 				.goods__card-image img {
 					transform: scale(1.0125);
 				}
