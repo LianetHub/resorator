@@ -112,7 +112,7 @@
 	// .goods__sidebar-item
 	&__sidebar-item {
 		&:not(:last-child) {
-			margin-bottom: 1.88rem;
+			margin-bottom: 0.94rem;
 		}
 	}
 	// .goods__sidebar-categories
@@ -173,9 +173,8 @@
 					color: $darkBlue;
 				}
 				.goods__sidebar-text {
-					&::before {
-						opacity: 1;
-					}
+					color: $blue;
+					text-decoration: underline;
 				}
 			}
 		}
@@ -234,8 +233,7 @@
 	}
 	// .goods__sidebar-text
 	&__sidebar-text {
-		font-size: 1.125rem;
-		font-weight: 700;
+		font-size: 0.8125rem;
 		font-family: $font-din;
 		position: relative;
 		width: 100%;
@@ -365,8 +363,7 @@
 				border-right: 0;
 			}
 		}
-
-		padding: rem(35);
+		padding: rem(20);
 		transition: box-shadow 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
@@ -383,13 +380,13 @@
 	}
 	// .goods__card-image
 	&__card-image {
-		border-radius: rem(10);
 		overflow: hidden;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
 		aspect-ratio: 1;
+		padding: rem(20);
 		& img {
 			max-height: 100%;
 			max-width: 100%;

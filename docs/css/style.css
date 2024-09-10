@@ -17,8 +17,8 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -47,17 +47,17 @@
 }
 
 @font-face {
-  font-family: "DinPro";
+  font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
@@ -7857,7 +7857,7 @@ table td button {
 }
 
 .goods__sidebar-item:not(:last-child) {
-  margin-bottom: 1.88rem;
+  margin-bottom: 0.94rem;
 }
 
 .goods__sidebar-categories {
@@ -7942,8 +7942,7 @@ table td button {
 }
 
 .goods__sidebar-text {
-  font-size: 1.125rem;
-  font-weight: 700;
+  font-size: 0.8125rem;
   font-family: "DinPro";
   position: relative;
   width: 100%;
@@ -8016,7 +8015,7 @@ table td button {
   text-align: center;
   border-right: 0.0625rem solid #e8e8e8;
   border-bottom: 0.0625rem solid #e8e8e8;
-  padding: 2.1875rem;
+  padding: 1.25rem;
   -webkit-transition: -webkit-box-shadow 0.3s ease 0s;
   transition: -webkit-box-shadow 0.3s ease 0s;
   transition: box-shadow 0.3s ease 0s;
@@ -8024,7 +8023,6 @@ table td button {
 }
 
 .goods__card-image {
-  border-radius: 0.625rem;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8037,6 +8035,7 @@ table td button {
           align-items: center;
   text-align: center;
   aspect-ratio: 1;
+  padding: 1.25rem;
 }
 
 .goods__card-image img {
@@ -17720,8 +17719,9 @@ table td button {
     color: #475569;
   }
 
-  .goods__sidebar-link:hover .goods__sidebar-text::before {
-    opacity: 1;
+  .goods__sidebar-link:hover .goods__sidebar-text {
+    color: #1e6ba3;
+    text-decoration: underline;
   }
 
   .goods__title a:hover {
