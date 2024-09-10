@@ -113,9 +113,6 @@
 	&__sidebar-item {
 		&:not(:last-child) {
 			margin-bottom: 1.88rem;
-			@media (min-width: $md3) {
-				margin-bottom: 0.94rem;
-			}
 		}
 	}
 	// .goods__sidebar-categories
@@ -161,19 +158,14 @@
 	}
 	// .goods__sidebar-link
 	&__sidebar-link {
+		position: relative;
 		display: flex;
 		align-items: center;
 		gap: 0.63rem;
 		color: $darkBlue;
 		transition: color 0.3s ease 0s;
 		font-size: 0.8125rem;
-		// &::before {
-		// 	order: 1;
-		// 	@extend %ic, .icon-plus;
-		// 	font-size: 1.5rem;
-		// 	margin-left: auto;
-		// 	flex-shrink: 0;
-		// }
+
 		@media (any-hover: hover) {
 			&:hover {
 				color: $darkBlue;
@@ -187,6 +179,17 @@
 				}
 			}
 		}
+		&::before {
+			content: '';
+			position: absolute;
+			inset: rem(-8) rem(-16);
+			background: $lightBg;
+			z-index: -1;
+			border-radius: 0.25rem;
+			opacity: 0;
+			transition: opacity 0.3s ease 0s;
+		}
+
 		&.active {
 			color: $darkBlue;
 			.goods__sidebar-main {
@@ -194,16 +197,9 @@
 					color: $darkBlue;
 				}
 			}
-			.goods__sidebar-text {
-				@media (min-width: $md3) {
-					&::before {
-						opacity: 1;
-					}
-				}
+			&::before {
+				opacity: 1;
 			}
-			// &::before {
-			// 	@extend %ic, .icon-minus;
-			// }
 		}
 	}
 	&__sidebar-caption {
@@ -244,16 +240,6 @@
 		position: relative;
 		width: 100%;
 		display: block;
-		&::before {
-			content: '';
-			position: absolute;
-			inset: rem(-8) rem(-16);
-			background: $lightBg;
-			z-index: -1;
-			border-radius: 0.25rem;
-			opacity: 0;
-			transition: opacity 0.3s ease 0s;
-		}
 	}
 
 	// .goods__sidebar-quantity
@@ -344,9 +330,8 @@
 		margin-top: 1.88rem;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		// gap: rem(10);
+
 		@media (min-width: $md4) {
-			// gap: rem(20);
 			grid-template-columns: repeat(3, 1fr);
 		}
 		@media (min-width: $md1) {
@@ -362,12 +347,26 @@
 		text-align: center;
 		border-right: rem(1) solid $grayStroke;
 		border-bottom: rem(1) solid $grayStroke;
-		&:nth-child(4n + 4) {
-			border-right: 0;
+
+		@media (max-width: $md4) {
+			&:nth-child(2n) {
+				border-right: 0;
+			}
 		}
-		
-		padding: rem(25);
-		margin: rem(-1);
+		@media (min-width: $md4) {
+			@media (max-width: $md1) {
+				&:nth-child(3n) {
+					border-right: 0;
+				}
+			}
+		}
+		@media (min-width: $md1) {
+			&:nth-child(4n) {
+				border-right: 0;
+			}
+		}
+
+		padding: rem(35);
 		transition: box-shadow 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {

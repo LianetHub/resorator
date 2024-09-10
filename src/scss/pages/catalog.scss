@@ -191,6 +191,9 @@
 		&.row-layout {
 			grid-template-columns: 1fr;
 		}
+		& .product__image img {
+			z-index: 0 !important;
+		}
 	}
 	// .catalog__sidebar
 	&__sidebar {
@@ -431,6 +434,15 @@
 	&__filters-btn {
 		width: 100%;
 		margin-top: 1.25rem;
+		&.small {
+			padding: 0.3em;
+			display: inline-block;
+			width: 100px;
+			font-size: rem(14);
+			position: absolute;
+			left: -50%;
+			z-index: 15;
+		}
 	}
 	&__filters-toggler {
 		color: $darkBlue;

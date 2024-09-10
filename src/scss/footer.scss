@@ -36,7 +36,7 @@
 	// .footer__menu-item
 	&__menu-item {
 		&:not(:last-child) {
-			margin-bottom: 0.35rem;
+			margin-bottom: 0.15rem;
 		}
 	}
 	// .footer__menu-link
@@ -90,5 +90,8 @@
 	}
 	// .footer__payment
 	&__payment {
+	}
+	&__hint {
+		font-size: 0.75rem;
 	}
 }

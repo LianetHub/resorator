@@ -144,9 +144,10 @@
 			padding-bottom: 104%;
 		}
 		.card__desc {
-			font-size: 1rem;
+			font-size: 0.95rem;
 		}
 	}
+
 	// .card__image
 	&__image {
 		position: relative;
@@ -173,9 +174,7 @@
 	&__desc {
 		color: $darkBlue;
 		margin-top: 0.25rem;
-
 		line-height: 1.2;
-
 		padding: rem(5) 0;
 		font-size: 1rem;
 		@media (min-width: $md2) {

@@ -775,7 +775,13 @@
 		color: $darkBlue;
 		transition: all 0.25s linear 0s;
 		will-change: contents;
-
+		&[href] {
+			&:focus,
+			&:hover {
+				color: #475569;
+				text-decoration: none;
+			}
+		}
 		@media (hover: hover) {
 			opacity: 0;
 			visibility: hidden;
@@ -934,6 +940,7 @@
 		}
 		&.btn {
 			width: 100%;
+			font-weight: 400;
 			padding: 0.62rem 0rem;
 		}
 	}
@@ -948,7 +955,8 @@
 			}
 		}
 		.product__cart-link {
-			font-size: 0.85rem;
+			font-size: 0.65rem;
+			white-space: nowrap;
 		}
 	}
 	// .product__remove

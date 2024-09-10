@@ -1866,6 +1866,27 @@ $(function () {
     }
 
 
+    // catalog grid layout
+    const $grid = $('.goods__grid');
+
+    if ($grid.length > 0) {
+        $('.goods__grid').each(function () {
+            const $grid = $(this);
+            const $cards = $grid.find('.goods__card');
+
+            $cards.css('border-bottom', '');
+
+            const totalItems = $cards.length;
+            const columns = $grid.css('grid-template-columns').split(' ').length;
+
+            const itemsInLastRow = totalItems % columns || columns;
+            const startIndex = totalItems - itemsInLastRow;
+
+            $cards.slice(startIndex).css('border-bottom', '0');
+        });
+
+    }
+
 });
 
 

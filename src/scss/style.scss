@@ -1,24 +1,24 @@
 // Использование модулей SASS
-@use "sass:math";
+@use 'sass:math';
 // Использование модулей SASS
 // ======================================МИКСИНЫ==============================================
-@import "mixins";
+@import 'mixins';
 // ======================================МИКСИНЫ==============================================
 
 // ======================================ШРИФТЫ===============================================
 
 // &display=swap&subset=cyrillic-ext
-@import "fonts";
+@import 'fonts';
 
 // ======================================ШРИФТЫ===============================================
 // ======================================ИКОНОЧНЫЙ ШРИФТ======================================
-@import "icons";
+@import 'icons';
 
 // ======================================ИКОНОЧНЫЙ ШРИФТ======================================
 
 // Шрифт по умолчанию
-$fontfamily: "Inter";
-$font-din: "DinPro";
+$fontfamily: 'Inter';
+$font-din: 'DinPro';
 
 // Шрифт по умолчанию
 
@@ -118,7 +118,7 @@ body {
 //=============== ОСНОВНАЯ СЕТКА===============================
 
 // Отзывчивая
-[class*="__container"] {
+[class*='__container'] {
 	margin: 0 auto;
 	box-sizing: content-box;
 	max-width: 100%;
@@ -147,12 +147,12 @@ body {
 
 //=================Подключаем файлы стилей
 //================Общий файл для элементов страницы
-@import "grid";
-@import "ui";
-@import "forms";
+@import 'grid';
+@import 'ui';
+@import 'forms';
 //================Общий файл для элементов страницы
-@import "header";
-@import "footer";
+@import 'header';
+@import 'footer';
 //=======================================
 
 // =======================ОСНОВНОЙ БЛОК==================
@@ -165,21 +165,99 @@ body {
 }
 // ========================================================
 
-@import "pages/home";
-@import "pages/auth";
-@import "pages/product-card";
-@import "pages/catalog";
-@import "pages/service-page";
-@import "pages/about";
-@import "pages/goods";
-@import "pages/brands";
-@import "pages/brand";
-@import "pages/delivery";
-@import "pages/cart";
-@import "pages/compare";
-@import "pages/blog";
-@import "pages/contacts";
-@import "pages/leasing";
-@import "pages/works";
-@import "pages/complex";
-@import "pages/lk";
+@import 'pages/home';
+@import 'pages/auth';
+@import 'pages/product-card';
+@import 'pages/catalog';
+@import 'pages/service-page';
+@import 'pages/about';
+@import 'pages/goods';
+@import 'pages/brands';
+@import 'pages/brand';
+@import 'pages/delivery';
+@import 'pages/cart';
+@import 'pages/compare';
+@import 'pages/blog';
+@import 'pages/contacts';
+@import 'pages/leasing';
+@import 'pages/works';
+@import 'pages/complex';
+@import 'pages/lk';
+
+.errortext {
+	font-size: rem(12);
+}
+.fopper {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	width: 100%;
+	.popup__action {
+		display: inline-block;
+	}
+}
+
+.searth_conteyner_pod {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	gap: 0.625rem;
+}
+.searth_conteyner_pod .search__queries-name {
+	padding: 0.69rem 1.25rem 0.69rem 1.25rem;
+}
+.footer__menu-link {
+	font-size: 0.75rem;
+}
+.header__top {
+	font-weight: 400;
+	font-size: 0.75rem;
+}
+.menu__list {
+	font-size: 0.75rem;
+	-webkit-box-direction: normal;
+}
+.goods-catalog__item {
+	color: #475569;
+	font-size: 0.75rem;
+}
+.product__avaibility {
+	text-transform: none;
+	font-weight: 400;
+}
+.quantity-block__input {
+	font-size: 0.75rem;
+}
+.goods-catalog__more {
+	font-size: 0.75rem;
+}
+.card {
+	font-size: 0.4rem;
+	font-weight: 400;
+}
+.card__desc {
+	margin-top: 10px;
+	font-size: 0.95rem;
+}
+.products__selection-caption {
+	font-size: 0.95rem;
+}
+.product__props-row {
+	color: #94a3b8;
+	font-size: 0.625rem;
+}
+
+.product__props-row:not(:last-child) {
+	margin-bottom: 0.33rem;
+}
+.catalog__filters-prop {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.25rem;
+	row-gap: 1.4rem;
+}
