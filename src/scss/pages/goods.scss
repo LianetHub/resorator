@@ -170,11 +170,7 @@
 			&:hover {
 				color: $darkBlue;
 				&::before {
-					color: $darkBlue;
-				}
-				.goods__sidebar-text {
-					color: $blue;
-					text-decoration: underline;
+					opacity: 1;
 				}
 			}
 		}
