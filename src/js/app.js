@@ -1840,7 +1840,32 @@ $(function () {
         }
     }
 
+    // sticky sidebar catalog
+    if ($('.catalog__sidebar').length > 0) {
+        function initStickySidebar() {
+            if ($(window).width() >= 768) {
+                if (!$('.catalog__sidebar').data('sticky-init')) {
+                    $('.catalog__sidebar').data('sticky-init', true);
+                    $('.catalog__sidebar').stickySidebar({
+                        topSpacing: 16,
+                        bottomSpacing: 16,
+                        containerSelector: '.catalog__container',
+                        resizeSensor: true
+                    });
+                }
+            } else {
+                if ($('.catalog__sidebar').data('sticky-init')) {
+                    $('.catalog__sidebar').stickySidebar('destroy');
+                    $('.catalog__sidebar').removeData('sticky-init');
+                }
+            }
+        }
+
+        $(window).on('resize', initStickySidebar);
+        initStickySidebar()
+    }
 
 
 });
+
 

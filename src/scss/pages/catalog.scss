@@ -219,12 +219,12 @@
 			opacity: 1;
 			visibility: visible;
 			transition: none;
-			top: 1rem;
-			position: sticky;
-			overflow-y: scroll;
+			// top: 1rem;
+			// position: sticky;
+			overflow-y: visible;
 			background: none;
 			height: auto;
-			max-height: calc(100vh - 2vh);
+			position: static;
 			width: 100%;
 			padding: 0;
 			scrollbar-width: none;
