@@ -473,7 +473,7 @@
 	position: relative;
 	border-radius: 0.3125rem;
 	border: rem(1) solid $grayStroke;
-	overflow: hidden;
+	// overflow: hidden;
 	padding: 0.62rem;
 	display: flex;
 	flex-direction: column;
@@ -674,6 +674,13 @@
 			&:hover {
 				text-decoration: none;
 				color: $blue;
+			}
+		}
+		& .tooltip {
+			background: $grayStroke;
+			color: $darkBlue;
+			&::after {
+				border-top: rem(5) solid $grayStroke !important;
 			}
 		}
 	}

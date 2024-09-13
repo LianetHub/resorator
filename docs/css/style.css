@@ -1,24 +1,16 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DinPro";
-  font-display: swap;
   src: url("../fonts/DinPro-Light.woff2") format("woff2"), url("../fonts/DinPro-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "icons";
+  font-family: "DinPro";
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/DinPro-Bold.woff2") format("woff2"), url("../fonts/DinPro-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -33,6 +25,22 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
   src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
@@ -41,8 +49,8 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -51,14 +59,6 @@
   font-display: swap;
   src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
   font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
   font-style: normal;
 }
 
@@ -4712,7 +4712,6 @@ table td button {
   position: relative;
   border-radius: 0.3125rem;
   border: 0.0625rem solid #e8e8e8;
-  overflow: hidden;
   padding: 0.62rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4889,6 +4888,15 @@ table td button {
 .product__articul-num {
   font-size: inherit;
   text-decoration: underline;
+}
+
+.product__articul-num .tooltip {
+  background: #e8e8e8;
+  color: #475569;
+}
+
+.product__articul-num .tooltip::after {
+  border-top: 0.3125rem solid #e8e8e8 !important;
 }
 
 .product__label {
@@ -8036,7 +8044,7 @@ table td button {
           align-items: center;
   text-align: center;
   aspect-ratio: 1;
-  padding: 1.25rem;
+  padding: 1.875rem;
 }
 
 .goods__card-image img {
@@ -8664,6 +8672,16 @@ table td button {
   font-size: 1rem;
   font-weight: 500;
   line-height: 100%;
+}
+
+.cart__empty {
+  margin-top: 1rem;
+}
+
+.cart__empty a {
+  text-decoration: underline;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
 }
 
 .cart__list {
@@ -17791,6 +17809,11 @@ table td button {
 
   .delivery__contacts-link:hover {
     color: #f7ce46;
+  }
+
+  .cart__empty a:hover {
+    color: #1e6ba3;
+    text-decoration: none;
   }
 
   .cart__item-delete:hover {
