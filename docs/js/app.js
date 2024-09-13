@@ -1888,9 +1888,9 @@ $(function () {
     }
 
 
-    Fancybox.show([{
-        src: "#product-fast"
-    }])
+    // Fancybox.show([{
+    //     src: "#product-fast"
+    // }])
 
 });
 
