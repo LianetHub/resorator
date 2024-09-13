@@ -17,6 +17,14 @@
 @font-face {
   font-family: "DinPro";
   font-display: swap;
+  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
   src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -33,24 +41,24 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DinPro";
-  font-display: swap;
-  src: url("../fonts/DinPro-Medium.woff2") format("woff2"), url("../fonts/DinPro-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -65,16 +73,8 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -1518,7 +1518,7 @@ body.lock-catalog-filter {
 }
 
 .popup__product {
-  padding: 1.875rem 0;
+  padding: 0.625rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1568,15 +1568,23 @@ body.lock-catalog-filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.5rem;
+}
+
+.popup__product-header .popup__close {
+  font-size: 0.875rem;
+  margin-left: 0.65rem;
 }
 
 .popup__product-content {
@@ -1595,6 +1603,15 @@ body.lock-catalog-filter {
   width: auto;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  min-height: 4rem;
+}
+
+.popup__product-btn.btn {
+  padding: 1em 1.25em;
+}
+
+.popup__product-btn::before {
+  font-size: 1.25rem;
 }
 
 .popup__phone {
@@ -5530,15 +5547,16 @@ table td button {
   display: -ms-flexbox;
   display: flex;
   gap: 0.62rem;
+  margin-left: auto;
 }
 
 .product-card__info-action {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 2.375rem;
-  height: 2.375rem;
-  padding: 0.4375rem 1rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  padding: 0.4375rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -5925,6 +5943,10 @@ table td button {
           align-items: center;
 }
 
+.product-card__characteristics-name.no-label::before {
+  display: none;
+}
+
 .product-card__characteristics-value {
   text-align: right;
 }
@@ -5938,7 +5960,7 @@ table td button {
 }
 
 .product-card__price {
-  margin-top: 1.87rem;
+  margin-top: 1.875rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

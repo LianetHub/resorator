@@ -1887,6 +1887,11 @@ $(function () {
 
     }
 
+
+    Fancybox.show([{
+        src: "#product-fast"
+    }])
+
 });
 
 

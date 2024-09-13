@@ -305,7 +305,7 @@
 	}
 	// .popup__product
 	&__product {
-		padding: rem(30) 0;
+		padding: rem(10) 0;
 		display: flex;
 		flex-direction: column;
 		.product-card__info-header {
@@ -339,12 +339,17 @@
 	// .ppopup__product-header
 	&__product-header {
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
-		margin-bottom: 0.5rem;
+		margin-bottom: 0.25rem;
 		flex-direction: column;
 		gap: 0.5rem;
 		@media (min-width: $md5) {
 			flex-direction: row;
+		}
+		.popup__close {
+			font-size: 0.875rem;
+			margin-left: 0.65rem;
 		}
 	}
 	// .popup__product-title
@@ -402,6 +407,13 @@
 		margin-top: rem(20);
 		width: auto;
 		align-self: flex-start;
+		min-height: rem(64);
+		&.btn {
+			padding: 1em 1.25em;
+		}
+		&::before {
+			font-size: 1.25rem;
+		}
 	}
 	// .popup__phone
 	&__phone {
