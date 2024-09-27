@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
     @@include('html/_head.html', {
-    'title': 'Ресторатор | Корзина'
+    'title': 'Ресторатор | Пустое избранное'
     })
     <body>
         <div class="wrapper">
@@ -22,16 +22,10 @@
                                 <meta itemprop="position" content="1">
                             </li>
                             <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                <a href="/lk" class="breadcrumbs__link" itemprop="item">
-                                    <span itemprop="name">Личный кабинет</span>
+                                <a class="breadcrumbs__link active" itemprop="item">
+                                    <span itemprop="name">Страница не найдена</span>
                                 </a>
                                 <meta itemprop="position" content="2">
-                            </li>
-                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                <a class="breadcrumbs__link active" itemprop="item">
-                                    <span itemprop="name">Корзина</span>
-                                </a>
-                                <meta itemprop="position" content="3">
                             </li>
                         </ul>
                     </div>
@@ -40,14 +34,15 @@
                     <div class="service-page__container">
                         <div class="service-page__body">
                             <div class="service-page__image">
-                                <img src="@img/error-cart.svg" alt="404">
+                                <img src="@img/error-favorite.svg" alt="404">
                             </div>
                             <div class="service-page__content">
+
                                 <h1 class="service-page__title title-md">
-                                    Ваша корзина пуста
+                                    В списке пока нет ни одного избранного товара.
                                 </h1>
                                 <p class="service-page__subtitle">
-                                    Для добавления товаров в Корзину перейдите в <a href="catalog.html">каталог</a>
+                                    Для добавления товаров в Избранное перейдите в <a href="catalog.html">каталог</a>
                                 </p>
                                 <div class="service-page__btns">
                                     <a href="/" class="service-page__btn btn btn-md btn-secondary icon-arrow-left">Вернуться</a>

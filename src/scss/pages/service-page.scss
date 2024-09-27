@@ -46,6 +46,15 @@
 		margin-top: 1.25rem;
 		color: $darkBlue;
 		font-size: 0.8125rem;
+		& a {
+			color: $blue;
+			text-decoration: underline;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
 	}
 	// .service-page__btns
 	&__btns {
