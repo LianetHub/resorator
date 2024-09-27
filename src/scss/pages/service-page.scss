@@ -30,7 +30,11 @@
 	}
 	// .service-page__image
 	&__image {
-		// text-align: center;
+		text-align: center;
+		@media (min-width:$md4) {
+			margin-left: rem(60);
+			text-align: left;
+		}
 		
 	}
 	// .service-page__content
