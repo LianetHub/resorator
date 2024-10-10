@@ -930,9 +930,20 @@
 			margin-top: 1.88rem;
 		}
 
-		.row {
-			--gutter-y: 1.88rem;
+		column-gap: 1.88rem;
+		@media (min-width: $md5) {
+			columns: 2;
 		}
+		@media (min-width: $md1) {
+			columns: 4;
+		}
+	}
+	&__block {
+		--gutter-y: 1.88rem;
+		&:not(:first-child) {
+			margin-top: var(--gutter-y);
+		}
+		break-inside: avoid;
 	}
 	// .goods-catalog__caption
 	&__caption {
