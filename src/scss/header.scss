@@ -930,12 +930,15 @@
 			margin-top: 1.88rem;
 		}
 
-		column-gap: 1.88rem;
-		@media (min-width: $md5) {
-			columns: 2;
-		}
-		@media (min-width: $md1) {
-			columns: 4;
+		// column-gap: 1.88rem;
+		// @media (min-width: $md5) {
+		// 	columns: 2;
+		// }
+		// @media (min-width: $md1) {
+		// 	columns: 4;
+		// }
+		.row {
+			--gutter-y: 1.88rem;
 		}
 	}
 	&__block {
