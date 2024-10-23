@@ -576,8 +576,12 @@
 				.about__directions-image img {
 					transform: scale(1.025);
 				}
+				.about__directions-text, 
+				.about__directions-btn {
+					opacity: 1;
+				}
 				&::before {
-					background: rgba(23, 24, 27, 0.2);
+					background: rgba(23, 24, 27, 0.8);
 				}
 			}
 		}
@@ -595,18 +599,59 @@
 			transition: transform 0.3s ease 0s;
 		}
 	}
-	// .about__directions-name
-	&__directions-name {
+	// .about__directions-desc
+	&__directions-desc {
 		position: absolute;
 		top: 0;
 		left: 0;
+		bottom: 0;
 		width: 100%;
 		padding: 1.88rem;
 		color: $white;
 		font-size: 1.3125rem;
 		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 	}
-
+	// .about__directions-name
+	&__directions-name {
+	}
+	// .about__directions-text
+	&__directions-text {
+		margin-top: 1.25rem;
+		max-width: 32rem;
+		font-size: 0.65rem;
+		@media (min-width: $md3) {
+			font-size: 1rem;
+		}
+		@media (hover: hover) {
+			transition: opacity 0.3s ease 0s;
+			opacity: 0;
+		}
+	}
+	// .about__directions-btn
+	&__directions-btn {
+		margin-top: auto;
+		border-radius: 0.3125rem;
+		border: rem(1) solid $yellow;
+		padding: 0.69rem 1rem;
+		color: $yellow;
+		transition: background-color 0.3s ease 0s, color 0.3s ease 0s, opacity 0.3s ease 0s;
+		font-size: 0.725rem;
+		@media (min-width: $md3) {
+			font-size: 0.8125rem;
+		}
+		@media (hover: hover) {
+			opacity: 0;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: $yellow;
+				color: $dark;
+			}
+		}
+	}
 	// .about__geography
 	&__geography {
 		padding: rem(20) 0;

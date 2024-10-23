@@ -31,9 +31,9 @@
 }
 
 @font-face {
-  font-family: "DinPro";
+  font-family: "icons";
   font-display: swap;
-  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -49,24 +49,16 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
   src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
   font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinPro";
+  font-display: swap;
+  src: url("../fonts/DinPro-Regular.woff2") format("woff2"), url("../fonts/DinPro-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -75,6 +67,14 @@
   font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -7561,15 +7561,43 @@ table td button {
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 
-.about__directions-name {
+.about__directions-desc {
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
   width: 100%;
   padding: 1.88rem;
   color: #fff;
   font-size: 1.3125rem;
   z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.about__directions-text {
+  margin-top: 1.25rem;
+  max-width: 32rem;
+  font-size: 0.65rem;
+}
+
+.about__directions-btn {
+  margin-top: auto;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #f7ce46;
+  padding: 0.69rem 1rem;
+  color: #f7ce46;
+  -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s, opacity 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s, color 0.3s ease 0s, opacity 0.3s ease 0s;
+  font-size: 0.725rem;
 }
 
 .about__geography {
@@ -15317,6 +15345,14 @@ table td button {
     grid-column: span 3;
   }
 
+  .about__directions-text {
+    font-size: 1rem;
+  }
+
+  .about__directions-btn {
+    font-size: 0.8125rem;
+  }
+
   .about__services-item {
     height: 22.1875rem;
   }
@@ -17779,8 +17815,18 @@ table td button {
             transform: scale(1.025);
   }
 
+  .about__directions-link:hover .about__directions-text,
+  .about__directions-link:hover .about__directions-btn {
+    opacity: 1;
+  }
+
   .about__directions-link:hover::before {
-    background: rgba(23, 24, 27, 0.2);
+    background: rgba(23, 24, 27, 0.8);
+  }
+
+  .about__directions-btn:hover {
+    background: #f7ce46;
+    color: #1d1d1d;
   }
 
   .about__geography-image svg .map-point:hover {
@@ -18154,6 +18200,16 @@ table td button {
   .product__action {
     opacity: 0;
     visibility: hidden;
+  }
+
+  .about__directions-text {
+    -webkit-transition: opacity 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s;
+    opacity: 0;
+  }
+
+  .about__directions-btn {
+    opacity: 0;
   }
 
   .complex__services-desc {
