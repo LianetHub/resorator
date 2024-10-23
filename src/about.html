@@ -308,53 +308,69 @@
                                 <span>Все города</span>
                             </div>
                         </div>
-                        <div id="services" class=" about__services">
+                        <div id="services" class="about__services">
                             <h2 class="about__services-title title-lg">Полный цикл услуг</h2>
                             <div class="about__services-body">
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <a href="#callback" data-fancybox class="about__services-item">
-                                            <span class="about__services-caption">
-                                                Консультация <br>
-                                                и подбор оборудования
-                                            </span>
-                                            <span class="about__services-image">
+                                        <div class="complex__services-item">
+                                            <div class="complex__services-body">
+                                                <a href="#consult" data-fancybox class="complex__services-caption">
+                                                    Консультация <br>
+                                                    и подбор оборудования
+                                                </a>
+                                                <div class="complex__services-desc">Дизайн проект это комплект документов, разработанных в соответствии с техническим заданием выявляющих логику пространства, создающий индивидуальный дизайн интерьера. Хорошо разработанный дизайн проект помогает решить много вопросов, которые возникают при строительстве.</div>
+                                                <a href="#consult" data-fancybox class="complex__services-btn">Написать менеджеру</a>
+                                            </div>
+                                            <div class="complex__services-image">
                                                 <img src="@img/about-services/01.jpg" class="cover-image" alt="Постер">
-                                            </span>
-                                        </a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <a href="#callback" data-fancybox class="about__services-item">
-                                            <span class="about__services-caption">
-                                                Проектирование <br>
-                                                и дизайн помещения
-                                            </span>
-                                            <span class="about__services-image">
+                                        <div class="complex__services-item">
+                                            <div class="complex__services-body">
+                                                <a href="#design" data-fancybox class="complex__services-caption">
+                                                    Проектирование <br>
+                                                    и дизайн помещения
+                                                </a>
+                                                <div class="complex__services-desc">Дизайн проект это комплект документов, разработанных в соответствии с техническим заданием выявляющих логику пространства, создающий индивидуальный дизайн интерьера. Хорошо разработанный дизайн проект помогает решить много вопросов, которые возникают при строительстве.</div>
+                                                <a href="#design" data-fancybox class="complex__services-btn">Написать менеджеру</a>
+                                            </div>
+                                            <div class="complex__services-image">
                                                 <img src="@img/about-services/02.jpg" class="cover-image" alt="Постер">
-                                            </span>
-                                        </a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <a href="#callback" data-fancybox class="about__services-item">
-                                            <span class="about__services-caption">
-                                                Услуги по логистике <br>
-                                                и такелажным работам
-                                            </span>
-                                            <span class="about__services-image">
+                                        <div class="complex__services-item">
+                                            <div class="complex__services-body">
+                                                <a href="#our-services" data-fancybox class="complex__services-caption">
+                                                    Услуги по логистике <br>
+                                                    и такелажным работам
+                                                </a>
+                                                <div class="complex__services-desc">Дизайн проект это комплект документов, разработанных в соответствии с техническим заданием выявляющих логику пространства, создающий индивидуальный дизайн интерьера. Хорошо разработанный дизайн проект помогает решить много вопросов, которые возникают при строительстве.</div>
+                                                <a href="#our-services" data-fancybox class="complex__services-btn">Написать менеджеру</a>
+                                            </div>
+                                            <div class="complex__services-image">
                                                 <img src="@img/about-services/03.jpg" class="cover-image" alt="Постер">
-                                            </span>
-                                        </a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-md-8">
-                                        <a href="#callback" data-fancybox class="about__services-item">
-                                            <span class="about__services-caption">
-                                                Монтажные <br>
-                                                и пусконаладочные работы
-                                            </span>
-                                            <span class="about__services-image">
+                                        <div class="complex__services-item">
+                                            <div class="complex__services-body">
+                                                <a href="#installation" data-fancybox class="complex__services-caption">
+                                                    Монтажные <br>
+                                                    и пусконаладочные работы
+                                                </a>
+                                                <div class="complex__services-desc">Дизайн проект это комплект документов, разработанных в соответствии с техническим заданием выявляющих логику пространства, создающий индивидуальный дизайн интерьера. Хорошо разработанный дизайн проект помогает решить много вопросов, которые возникают при строительстве.</div>
+                                                <a href="#installation" data-fancybox class="complex__services-btn">Написать менеджеру</a>
+                                            </div>
+                                            <div class="complex__services-image">
                                                 <img src="@img/about-services/04.jpg" class="cover-image" alt="Постер">
-                                            </span>
-                                        </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -574,6 +590,150 @@
             @@include('html/_footer.html', {})
         </div>
         @@include('html/_modal.html', {})
+        <div id="consult" class="popup popup_md">
+            <div class="popup__header">
+                <h3 class="popup__title title-sm">Консультация и подбор оборудования</h3>
+                <button type="button" class="popup__close" data-fancybox-close></button>
+            </div>
+
+            <form action="#" class="popup__form form">
+                <div class="form__field">
+                    <div class="form__label">Ваше имя *</div>
+                    <input type="text" name="name" required placeholder="Имя" class="form__input">
+                </div>
+                <div class="form__field">
+                    <div class="form__label">Телефон *</div>
+                    <input type="tel" name="phone" required placeholder="+7" class="form__input">
+                </div>
+                <div class="form__field">
+                    <div class="form__label">E-mail *</div>
+                    <input type="email" name="e-mail" required placeholder="mail@example.ru" class="form__input">
+                </div>
+                <div class="form__field">
+                    <div class="form__label">Сообщение</div>
+                    <textarea name="message" class="form__textarea" placeholder="Дополнительная информация"></textarea>
+                </div>
+                <div class="form__field">
+                    <label class="form__file">
+                        <input type="file" name="attachment" class="form__file-input hidden" hidden>
+                        <span class="form__file-btn btn btn-primary-outline icon-attach full-width">Загрузить</span>
+                    </label>
+                </div>
+                <div class="form__hint icon-info">
+                    Вы можете прикрепить файл к Вашему сообщению
+                </div>
+                <button type="submit" class="form__btn btn btn-primary">Отправить</button>
+            </form>
+
+        </div>
+        <div id="design" class="popup popup_md">
+            <div class="popup__header">
+                <h3 class="popup__title title-sm"> Проектирование и дизайн помещения</h3>
+                <button type="button" class="popup__close" data-fancybox-close></button>
+            </div>
+
+            <form action="#" class="popup__form form">
+                <div class="form__field">
+                    <div class="form__label">Ваше имя *</div>
+                    <input type="text" name="name" required placeholder="Имя" class="form__input">
+                </div>
+                <div class="form__field">
+                    <div class="form__label">Телефон *</div>
+                    <input type="tel" name="phone" required placeholder="+7" class="form__input">
+                </div>
+                <div class="form__field">
+                    <div class="form__label">E-mail *</div>
+                    <input type="email" name="e-mail" required placeholder="mail@example.ru" class="form__input">
+                </div>
+                <div class="form__field">
+                    <div class="form__label">Сообщение</div>
+                    <textarea name="message" class="form__textarea" placeholder="Дополнительная информация"></textarea>
+                </div>
+                <div class="form__field">
+                    <label class="form__file">
+                        <input type="file" name="attachment" class="form__file-input hidden" hidden>
+                        <span class="form__file-btn btn btn-primary-outline icon-attach full-width">Загрузить</span>
+                    </label>
+                </div>
+                <div class="form__hint icon-info">
+                    Вы можете прикрепить файл к Вашему сообщению
+                </div>
+                <button type="submit" class="form__btn btn btn-primary">Отправить</button>
+            </form>
+
+        </div>
+        <div id="our-services" class="popup popup_md">
+            <div class="popup__header">
+                <h3 class="popup__title title-sm"> Услуги по логистике и такелажным работам</h3>
+                <button type="button" class="popup__close" data-fancybox-close></button>
+            </div>
+
+            <form action="#" class="popup__form form">
+                <div class="form__field">
+                    <div class="form__label">Ваше имя *</div>
+                    <input type="text" name="name" required placeholder="Имя" class="form__input">
+                </div>
+                <div class="form__field">
+                    <div class="form__label">Телефон *</div>
+                    <input type="tel" name="phone" required placeholder="+7" class="form__input">
+                </div>
+                <div class="form__field">
+                    <div class="form__label">E-mail *</div>
+                    <input type="email" name="e-mail" required placeholder="mail@example.ru" class="form__input">
+                </div>
+                <div class="form__field">
+                    <div class="form__label">Сообщение</div>
+                    <textarea name="message" class="form__textarea" placeholder="Дополнительная информация"></textarea>
+                </div>
+                <div class="form__field">
+                    <label class="form__file">
+                        <input type="file" name="attachment" class="form__file-input hidden" hidden>
+                        <span class="form__file-btn btn btn-primary-outline icon-attach full-width">Загрузить</span>
+                    </label>
+                </div>
+                <div class="form__hint icon-info">
+                    Вы можете прикрепить файл к Вашему сообщению
+                </div>
+                <button type="submit" class="form__btn btn btn-primary">Отправить</button>
+            </form>
+
+        </div>
+        <div id="installation" class="popup popup_md">
+            <div class="popup__header">
+                <h3 class="popup__title title-sm">Монтажные и пусконаладочные работы</h3>
+                <button type="button" class="popup__close" data-fancybox-close></button>
+            </div>
+
+            <form action="#" class="popup__form form">
+                <div class="form__field">
+                    <div class="form__label">Ваше имя *</div>
+                    <input type="text" name="name" required placeholder="Имя" class="form__input">
+                </div>
+                <div class="form__field">
+                    <div class="form__label">Телефон *</div>
+                    <input type="tel" name="phone" required placeholder="+7" class="form__input">
+                </div>
+                <div class="form__field">
+                    <div class="form__label">E-mail *</div>
+                    <input type="email" name="e-mail" required placeholder="mail@example.ru" class="form__input">
+                </div>
+                <div class="form__field">
+                    <div class="form__label">Сообщение</div>
+                    <textarea name="message" class="form__textarea" placeholder="Дополнительная информация"></textarea>
+                </div>
+                <div class="form__field">
+                    <label class="form__file">
+                        <input type="file" name="attachment" class="form__file-input hidden" hidden>
+                        <span class="form__file-btn btn btn-primary-outline icon-attach full-width">Загрузить</span>
+                    </label>
+                </div>
+                <div class="form__hint icon-info">
+                    Вы можете прикрепить файл к Вашему сообщению
+                </div>
+                <button type="submit" class="form__btn btn btn-primary">Отправить</button>
+            </form>
+
+        </div>
         @@include('html/_js.html', {})
     </body>
 </html>

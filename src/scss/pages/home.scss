@@ -483,7 +483,6 @@
 	position: relative;
 	border-radius: 0.3125rem;
 	border: rem(1) solid $grayStroke;
-	// overflow: hidden;
 	padding: 0.62rem;
 	display: flex;
 	flex-direction: column;
@@ -637,11 +636,8 @@
 	}
 	// .product__labels
 	&__labels {
-		// margin-left: 0;
-		// overflow: visible;
 		height: 1.75rem;
 		order: -1;
-
 		width: auto;
 		@media (min-width: $md4) {
 			max-width: 100%;
@@ -850,7 +846,8 @@
 		align-items: flex-start;
 		min-height: rem(50);
 		@media (min-width: $md5) {
-			margin-top: 0.69rem;
+			padding-top: 0.69rem;
+			margin-top: 0;
 		}
 	}
 	// .product__price-value
@@ -878,7 +875,10 @@
 		font-weight: 600;
 		text-transform: uppercase;
 		transition: color 0.3s ease 0s;
-
+		@media (min-width: $md5) {
+			padding-top: 0.63rem;
+			margin-top: 0;
+		}
 		& small {
 			text-transform: none;
 			font-size: 0.75rem;

@@ -41,14 +41,14 @@
                     <small>Пароконвектомат</small>
                     @@name
                 </a>
-                <div class="product__price">
+                <a href="/product.html" class="product__price">
                     @@if(oldPrice===true) {
-                    <div class="product__price-old">
+                    <span class="product__price-old">
                         @@oldPriceValue ₽
-                    </div>
+                    </span>
                     }
-                    <div class="product__price-value">@@price ₽</div>
-                </div>
+                    <span class="product__price-value">@@price ₽</span>
+                </a>
                 <ul class="product__props">
                     <li class="product__props-row">
                         <div class="product__props-name">
