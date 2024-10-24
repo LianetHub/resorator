@@ -1888,6 +1888,48 @@ $(function () {
     }
 
 
+    function setMinHeightForBlocks() {
+        $('.goods-catalog__body').each(function() {
+          var $parent = $(this);
+          var maxHeight = 0;
+          
+          var $blocks = $parent.find('.goods-catalog__block').filter(function() {
+            return !$(this).find('.goods-catalog__list').hasClass('active');
+          });
+          
+          $blocks.css('min-height', 'auto');
+          
+          $blocks.each(function() {
+            var blockHeight = getHiddenElementHeight($(this));
+            if (blockHeight > maxHeight) {
+              maxHeight = blockHeight;
+            }
+          });
+    
+          $blocks.css('min-height', maxHeight + 'px');
+        });
+      }
+
+      function getHiddenElementHeight($element) {
+        let $clone = $element.clone().css({
+            visibility: 'hidden',
+            maxWidth: "213px",
+            display: 'block',
+            position: 'absolute'
+        }).appendTo('body');
+        let height = $clone.height();
+        // $clone.remove();
+        return height;
+    }
+    
+      setMinHeightForBlocks();
+    
+    
+
+
+
+
+
 
 });
 
